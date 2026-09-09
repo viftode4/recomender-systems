@@ -1,0 +1,22 @@
+# Claude Code / plugin state
+.remember/
+.omc/
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Data and outputs
+data/raw/
+*.zip
+*.parquet
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
