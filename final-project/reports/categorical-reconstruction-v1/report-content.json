@@ -1,0 +1,203 @@
+{
+  "audit_sha256": "23c881501441b1518349c50f8eaa909fd9f40f2bda352836da4ab19ac7e55e73",
+  "discussion": "The standalone nDCG gain over expanded binary is small (+0.0015); real minus shuffled categories is +0.0018. MRR declines from 0.4318 to 0.4303. The real-category hybrid gain is negligible (+0.00007); shuffled augmentation gives +0.00005. Real categories do not consistently beat the shuffled hybrid across splits. Real categories select binary fallback in 1/3 splits; an added duplicate expert can change regularization. The 45-choice categorical searches have more tuning opportunities than the nine-choice binary search. Self-item exclusion prevents copying the target; itemwise shuffling preserves item rating histograms. Group results describe accuracy and exposure, not causal fairness. All choices were sealed before this evaluation, but validation reuse after earlier TEST exposure precludes fresh confirmation.",
+  "evaluation": "Equal means of three overlapping splits; 471 meta-fit / 472 development users each. All ratings are relevant for All; rating >=4 defines Liked (444/434/433 users). Full-catalog top-10 excludes TRAIN. References retain their original tuning; no score probabilities are claimed.",
+  "evidence_sha256": {
+    "RESULTS.md": "b5b495cf0a8c833b4eb089b27720932cfa57eefa9f95bc77a40060983a156ed1",
+    "SHA256.json": "262f478c98ed78e05f54803dd46be00d16e2d62a71b5aabb99967e588a3a6ce8",
+    "aggregates.json": "502e6db268d1d42ba8bed84db6447efef8693be82907cfefe38773d11530def4",
+    "protocol.json": "9d22f49e2b7780811514c43486d64b28e5ee4549353a077a5d45f8fb0ab6a225",
+    "provenance.json": "69b6e5461d2b3878dbbb62dee009f7c8f51bdaca3c4cfe740886634934be4718"
+  },
+  "group": "24",
+  "group_denominators": {
+    "item_groups": {
+      "head": [
+        462,
+        462,
+        467
+      ],
+      "tail": [
+        335,
+        352,
+        343
+      ]
+    },
+    "user_groups": {
+      "dense": [
+        148,
+        151,
+        147
+      ],
+      "medium": [
+        155,
+        166,
+        167
+      ],
+      "sparse": [
+        169,
+        155,
+        158
+      ]
+    }
+  },
+  "group_note": "nD/div: nDCG and genre-Jaccard diversity. R/exp: conditional recall and exposure share. TRAIN activity terciles; head = top 20% by frequency. User counts (seed order): sparse 169/155/158; medium 155/166/167; dense 148/151/147. Item-group positive users: head 462/462/467; tail 335/352/343.",
+  "members": [
+    "Vlad George Iftode"
+  ],
+  "method": "One ridge model reconstructs binary record presence from binary history and five TRAIN-centered rating channels; all six target-item channels are excluded. Binary-only is EASE. Hybrids use calibrated sum-to-one ridge; weights may be negative.",
+  "schema_version": 1,
+  "scope": "Post-test exploratory research; reused development only",
+  "selection_freeze_sha256": "3f96e3605ea2fa096fe16337f181db4505294e7f240d931f728b24fe50d27641",
+  "source_note": "Independent implementation; EASE/FEASE and categorical-feedback prior art are documented in RELATED_WORK.md. Audit and source fingerprints accompany the report.",
+  "source_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "exploratory/categorical_reconstruction/PROTOCOL.md": "1f65576ce366fe0e6e337aa66652d01671247384b20d07cdbbe9ff835a10ef54",
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "exploratory/categorical_reconstruction/hybrid.py": "154807a25f7946251fec21aa3697a5af929aa74bce53c9796ad3018be6007079",
+    "exploratory/categorical_reconstruction/model.py": "fac13a6303e50c10cc975a04155e0bc6f8b8cb6837880aa61fdd5eaf5eb4a0ee",
+    "exploratory/categorical_reconstruction/run_experiment.py": "0cfcd87f84b2003461cc7393c1849b44009ce63a5ef06c7de65f343d5d7b217a",
+    "field_reference_comparison.py": "60fa86b8adedd10705aea9073437f35e6252d4703bd8da7fd4ed7a95f3be78fd",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "status": "REVIEW DRAFT",
+  "tables": [
+    {
+      "caption": "Task 2.4/2.6: standalone and hybrid controls",
+      "columns": [
+        "Model",
+        "All nDCG",
+        "Liked nDCG",
+        "Coverage %"
+      ],
+      "rows": [
+        [
+          "Binary: original grid",
+          "0.2618",
+          "0.2450",
+          "18.9"
+        ],
+        [
+          "Binary: expanded grid",
+          "0.2617",
+          "0.2453",
+          "18.4"
+        ],
+        [
+          "Categorical",
+          "0.2632",
+          "0.2467",
+          "18.5"
+        ],
+        [
+          "Shuffled categories",
+          "0.2614",
+          "0.2452",
+          "18.3"
+        ],
+        [
+          "Hybrid: binary + SLIM",
+          "0.2656",
+          "0.2502",
+          "19.1"
+        ],
+        [
+          "Hybrid + categorical",
+          "0.2657",
+          "0.2505",
+          "19.1"
+        ],
+        [
+          "Hybrid + shuffled",
+          "0.2656",
+          "0.2503",
+          "19.1"
+        ],
+        [
+          "Locked EASE",
+          "0.2618",
+          "0.2450",
+          "18.9"
+        ],
+        [
+          "Locked SLIM",
+          "0.2580",
+          "0.2427",
+          "24.1"
+        ],
+        [
+          "Locked PositiveEASE",
+          "0.2370",
+          "0.2575",
+          "15.9"
+        ]
+      ],
+      "widths": [
+        0.46,
+        0.18,
+        0.18,
+        0.18
+      ]
+    },
+    {
+      "caption": "Task 2.5: TRAIN activity / item popularity groups",
+      "columns": [
+        "Group / metric",
+        "Binary",
+        "Category",
+        "Hybrid 2",
+        "Hybrid 3"
+      ],
+      "rows": [
+        [
+          "Sparse nD/div",
+          "0.240/0.798",
+          "0.242/0.797",
+          "0.247/0.798",
+          "0.247/0.798"
+        ],
+        [
+          "Medium nD/div",
+          "0.219/0.807",
+          "0.219/0.806",
+          "0.221/0.806",
+          "0.221/0.805"
+        ],
+        [
+          "Dense nD/div",
+          "0.332/0.817",
+          "0.334/0.818",
+          "0.333/0.819",
+          "0.334/0.820"
+        ],
+        [
+          "Head R/exp",
+          "0.329/0.990",
+          "0.332/0.989",
+          "0.334/0.987",
+          "0.334/0.987"
+        ],
+        [
+          "Tail R/exp",
+          "0.009/0.010",
+          "0.010/0.011",
+          "0.012/0.013",
+          "0.012/0.013"
+        ]
+      ],
+      "widths": [
+        0.28,
+        0.18,
+        0.18,
+        0.18,
+        0.18
+      ]
+    }
+  ],
+  "title": "Task 2 supplement: categorical reconstruction"
+}

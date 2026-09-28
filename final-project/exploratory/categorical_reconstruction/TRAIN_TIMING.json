@@ -1,0 +1,76 @@
+{
+  "data_sha256": {
+    "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+    "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+    "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+  },
+  "development_evaluated": false,
+  "model_sha256": "fac13a6303e50c10cc975a04155e0bc6f8b8cb6837880aa61fdd5eaf5eb4a0ee",
+  "preparation_seconds": 0.13356429201667197,
+  "purpose": "TRAIN-only computational timing; no model selection",
+  "runs": [
+    {
+      "category_ratio": null,
+      "diagnostics": {
+        "category_ratio": null,
+        "fallback_count": 0,
+        "fallback_items": [],
+        "feature_nnz": 80808,
+        "forced_svd": false,
+        "lambda_binary": 250.0,
+        "lambda_category": null,
+        "maximum_fallback_relative_stationarity": 0.0,
+        "maximum_regular_dual_relative_residual": 5.032802120969029e-15,
+        "minimum_relative_schur_eigenvalue": 0.5761787727173016,
+        "n_features": 1683,
+        "n_items": 1683,
+        "n_users": 943,
+        "smoothing": 20.0,
+        "solver": "user-space Cholesky with item-block Schur correction"
+      },
+      "fit_seconds": 0.19279650002135895,
+      "lambda_binary": 250.0,
+      "predict_seconds": 0.1152579159825109,
+      "score_sha256": "465f46d7b19bd50013d39950c941467c72d9255f54032d9d06f4e88b9cc650cf"
+    },
+    {
+      "category_ratio": 1.0,
+      "diagnostics": {
+        "category_ratio": 1.0,
+        "fallback_count": 0,
+        "fallback_items": [],
+        "feature_nnz": 484848,
+        "forced_svd": false,
+        "lambda_binary": 250.0,
+        "lambda_category": 250.0,
+        "maximum_fallback_relative_stationarity": 0.0,
+        "maximum_regular_dual_relative_residual": 5.02093387929484e-15,
+        "minimum_relative_schur_eigenvalue": 0.6076207371461354,
+        "n_features": 10098,
+        "n_items": 1683,
+        "n_users": 943,
+        "smoothing": 20.0,
+        "solver": "user-space Cholesky with item-block Schur correction"
+      },
+      "fit_seconds": 0.4138159170106519,
+      "lambda_binary": 250.0,
+      "predict_seconds": 0.20233037500292994,
+      "score_sha256": "2493a287fabd8922fc6fa87d03e90e7cf0896c417e20d740be54b22f201afaee"
+    }
+  ],
+  "runtime": {
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.17.1",
+    "threads": 1
+  },
+  "shape": [
+    943,
+    1683
+  ],
+  "source_manifest_sha256": "1a5d389c0928fbe3aa11177efc7408a139a9447e88973de5068db156971b47d9",
+  "status": "complete",
+  "test_read": false,
+  "train_sha256": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+  "validation_read": false
+}

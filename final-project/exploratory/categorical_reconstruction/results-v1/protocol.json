@@ -1,0 +1,99 @@
+{
+  "candidate_budgets": {
+    "binary_expanded": 9,
+    "binary_original_grid": 3,
+    "categorical": 45,
+    "hybrid_baseline2": 4,
+    "hybrid_real3": 4,
+    "hybrid_shuffled3": 4,
+    "shuffled_categories": 45,
+    "unique_fits_per_seed": 81
+  },
+  "category_ratios": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "claims": "Exploratory reused-validation evidence with unequal tuning opportunities; no fresh confirmation or proven novelty.",
+  "cohorts": "Original seeded half-user partition: 471 reused meta-fit and 472 disjoint reused development users in MovieLens100K.",
+  "dataset_test_previously_evaluated": true,
+  "fresh_confirmation": false,
+  "groups": "TRAIN activity terciles from all original users; all-observed nDCG/recall and genre-Jaccard diversity. TRAIN popularity head top20% versus tail: conditional recall and exposure. Groups never select models.",
+  "hybrid_penalties": [
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "hybrids": "Secondary baseline2=binary+SLIM, real3=baseline2+categorical, shuffled3=baseline2+shuffled; calibrated sum-to-one ridge, same inner meta235/236 split, declared hybrid_penalties, then refit all471 meta users. Inner split is not an unbiased nested expert evaluation because experts were selected on all meta users.",
+  "inference": "Original TRAIN only; no validation context assimilation. Scores are ranking values, not probabilities.",
+  "inputs": "TRAIN observation indicator plus five TRAIN-centered categorical one-hot channels; no metadata or pretrained scores.",
+  "lambdas": [
+    10.0,
+    30.0,
+    50.0,
+    100.0,
+    250.0,
+    300.0,
+    1000.0,
+    3000.0,
+    10000.0
+  ],
+  "missing_records": "Zeros are the explicit implicit-reconstruction target convention, not confirmed dislikes.",
+  "models": [
+    "binary_original_grid",
+    "binary_expanded",
+    "categorical",
+    "shuffled_categories",
+    "hybrid_baseline2",
+    "hybrid_real3",
+    "hybrid_shuffled3"
+  ],
+  "original_binary_lambdas": [
+    50.0,
+    250.0,
+    1000.0
+  ],
+  "ranking": "One selected raw reconstruction score for both relevance endpoints; exclude PAD and original TRAIN observations; k=10.",
+  "runtime": {
+    "machine": "arm64",
+    "numerical_threads": 1,
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.17.1",
+    "system": "Darwin"
+  },
+  "schema_version": 1,
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "selection_boundary": "Every declared seed selection manifest is hash-sealed in SELECTIONS-FROZEN.json before any development evaluation.",
+  "selection_metric": "meta_fit_all_observed_ndcg@10",
+  "selection_rule": "Exact maximum; ties retain the earlier declared candidate. Cached binary candidates precede categorical candidates.",
+  "shuffle": "Permute observed TRAIN category values independently within each item, RNG seed+17011; preserve X and exact per-item rating histogram. Use shuffled features for fit and query.",
+  "smoothing": 20.0,
+  "source_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "exploratory/categorical_reconstruction/PROTOCOL.md": "1f65576ce366fe0e6e337aa66652d01671247384b20d07cdbbe9ff835a10ef54",
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "exploratory/categorical_reconstruction/hybrid.py": "154807a25f7946251fec21aa3697a5af929aa74bce53c9796ad3018be6007079",
+    "exploratory/categorical_reconstruction/model.py": "fac13a6303e50c10cc975a04155e0bc6f8b8cb6837880aa61fdd5eaf5eb4a0ee",
+    "exploratory/categorical_reconstruction/run_experiment.py": "0cfcd87f84b2003461cc7393c1849b44009ce63a5ef06c7de65f343d5d7b217a",
+    "field_reference_comparison.py": "60fa86b8adedd10705aea9073437f35e6252d4703bd8da7fd4ed7a95f3be78fd",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "stage": "reused_development",
+  "study_kind": "post_final_test_exploratory",
+  "test_evaluated": false,
+  "test_read": false,
+  "training_objective": "Constrained regularized least-squares reconstruction; every own-item input channel is excluded.",
+  "training_target": "Original TRAIN observation indicator for every item."
+}

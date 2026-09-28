@@ -1,0 +1,14 @@
+{
+  "archive_bytes": 3256174,
+  "archive_entries": 254,
+  "archive_sha256": "61c89bc8411ee196c7679b860647a80bf199c31155258db89e1c5be3e3b48de3",
+  "artifact_hashes_verified": 253,
+  "current_new_source_and_evidence_files_verified": 25,
+  "extracted_rebuild_verified_byte_identical": true,
+  "extracted_test_log_verified": true,
+  "original_report_unchanged": true,
+  "safe_paths_and_crc_verified": true,
+  "status": "complete",
+  "submission_performed": false,
+  "supplement_matches_current_report": true
+}

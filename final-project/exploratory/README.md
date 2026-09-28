@@ -5,6 +5,12 @@ and structural learning after the original final test was already opened.
 MovieLens100K development results here are exploratory. The original report,
 code freeze and review archive remain unchanged.
 
+- [Completed categorical reconstruction study](categorical_reconstruction/FINDINGS.md):
+  our exact constrained model, 243 candidate fits, shuffled-rating controls and
+  matched hybrid/group analyses. Mean development nDCG rises from 0.261688 to
+  0.263154 versus expanded binary EASE; MRR declines and hybrid gains are
+  negligible. [Independent numerical audit](categorical_reconstruction/audit-v2/RESULTS.md)
+  verifies predictions, hybrid fitting and ranking metrics.
 - [Diagnosis of the earlier field](field-diagnosis-v1/FINDINGS.md): compact
   useful predictions exist, but the previous field had not learned them or
   reached convergence. The measurements separate evidence from hypotheses.
@@ -38,5 +44,6 @@ code freeze and review archive remain unchanged.
   control. Focused acquisition helps earlier in the shared fixture but exposes
   an assumption the current learner cannot repair in the no-sharing fixture.
 
-The current files establish implementations, diagnostics and a running research
-process. Novelty and a real-data advantage remain questions to answer.
+These studies establish implementations, diagnostics and narrowly scoped
+empirical findings. The categorical reconstruction gain is small and exploratory;
+conceptual novelty and a broad real-data advantage remain unestablished.

@@ -1,0 +1,42 @@
+{
+  "archive_sha256": "61c89bc8411ee196c7679b860647a80bf199c31155258db89e1c5be3e3b48de3",
+  "extracted_dir": "/var/folders/4z/q1r8_58566b6g0bmk8mpcs7m0000gn/T/categorical-review-extracted-jdgbn1zs",
+  "hashed_artifacts": 253,
+  "checks": [
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "exploratory/categorical_reconstruction",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "/var/folders/4z/q1r8_58566b6g0bmk8mpcs7m0000gn/T/categorical-review-extracted-jdgbn1zs/check-0.log"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "exploratory/categorical_reconstruction/render_supplement.py",
+        "--evidence",
+        "../evidence/categorical-reconstruction-v1",
+        "--audit",
+        "../research/evidence-audit.json",
+        "--out",
+        "../rebuilt-supplement",
+        "--group",
+        "24",
+        "--member",
+        "Vlad George Iftode"
+      ],
+      "exit_code": 0,
+      "log": "/var/folders/4z/q1r8_58566b6g0bmk8mpcs7m0000gn/T/categorical-review-extracted-jdgbn1zs/check-1.log"
+    }
+  ],
+  "supplement_rebuild_byte_identical": true,
+  "supplement_sha256": "113bb2eddd22d2424680dadf880fb57e15a8d55b282d525fa0fa849169785830"
+}

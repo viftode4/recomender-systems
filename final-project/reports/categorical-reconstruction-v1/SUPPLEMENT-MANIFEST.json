@@ -1,0 +1,49 @@
+{
+  "artifact_sha256": {
+    "evidence-audit.json": "23c881501441b1518349c50f8eaa909fd9f40f2bda352836da4ab19ac7e55e73",
+    "report-content.json": "59d21143a1819848ea1e95cb4170f369106aa35e0a45640e1370a98289f0555e",
+    "research-supplement.md": "cabf99f9c9404614b5fa59bf1da90e23cc948fb436d209d722fdb291d82fdd7e",
+    "research-supplement.pdf": "113bb2eddd22d2424680dadf880fb57e15a8d55b282d525fa0fa849169785830"
+  },
+  "audit_sha256": "23c881501441b1518349c50f8eaa909fd9f40f2bda352836da4ab19ac7e55e73",
+  "contributors_supplied": false,
+  "discussion_words": 110,
+  "evidence_sha256": {
+    "RESULTS.md": "b5b495cf0a8c833b4eb089b27720932cfa57eefa9f95bc77a40060983a156ed1",
+    "SHA256.json": "262f478c98ed78e05f54803dd46be00d16e2d62a71b5aabb99967e588a3a6ce8",
+    "aggregates.json": "502e6db268d1d42ba8bed84db6447efef8693be82907cfefe38773d11530def4",
+    "protocol.json": "9d22f49e2b7780811514c43486d64b28e5ee4549353a077a5d45f8fb0ab6a225",
+    "provenance.json": "69b6e5461d2b3878dbbb62dee009f7c8f51bdaca3c4cfe740886634934be4718"
+  },
+  "evidence_stage": "Post-test exploratory research; reused development only",
+  "generator_sha256": "2cd2a6ddb2c911775444bcb24dd462e35396ef887012b1a2d1afd33219815560",
+  "group": "24",
+  "layout": {
+    "bottom_pt": 149.29,
+    "font": "Times New Roman",
+    "font_sha256": {
+      "bold": "50f5b1f27b7d34621090e437e8b1dd4510a22d2823fc876b3286bed327b64bbb",
+      "regular": "f3b4ffff71c2a0c7227d37497683b2498fb2d0a4e8beae26f022e3ccfcaabfa3"
+    },
+    "font_size": 12,
+    "line_spacing": 1.15,
+    "pages": 1
+  },
+  "schema_version": 1,
+  "source_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "exploratory/categorical_reconstruction/PROTOCOL.md": "1f65576ce366fe0e6e337aa66652d01671247384b20d07cdbbe9ff835a10ef54",
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "exploratory/categorical_reconstruction/hybrid.py": "154807a25f7946251fec21aa3697a5af929aa74bce53c9796ad3018be6007079",
+    "exploratory/categorical_reconstruction/model.py": "fac13a6303e50c10cc975a04155e0bc6f8b8cb6837880aa61fdd5eaf5eb4a0ee",
+    "exploratory/categorical_reconstruction/run_experiment.py": "0cfcd87f84b2003461cc7393c1849b44009ce63a5ef06c7de65f343d5d7b217a",
+    "field_reference_comparison.py": "60fa86b8adedd10705aea9073437f35e6252d4703bd8da7fd4ed7a95f3be78fd",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "status": "REVIEW DRAFT"
+}

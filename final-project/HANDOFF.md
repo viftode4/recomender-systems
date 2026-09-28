@@ -9,6 +9,8 @@ member names and the group's actual contributions have not been supplied.
 
 1. [Held-out report](reports/final-review-v1/report.pdf) and
    [review archive](packages/final-review-v1/24.zip).
+   The newer [research review bundle](packages/categorical-reconstruction-v1/24-review.zip)
+   preserves that report and adds a [measured categorical-reconstruction supplement](reports/categorical-reconstruction-v1/research-supplement.pdf).
 2. [Primary paired comparisons](evidence/final-comparisons-v3/SUMMARY.md) and
    [custom models against strong references](evidence/final-field-comparisons-v1/RESULTS.md).
 3. [Research questions](RESEARCH.md), [categorical model](ADAPTIVE_RESEARCH.md),
@@ -108,6 +110,19 @@ absence of defects or establishes a particular grade.
 
 The completed assignment artifacts above remain unchanged. New work is indexed
 in [exploratory/README.md](exploratory/README.md).
+
+The latest [categorical reconstruction study](exploratory/categorical_reconstruction/FINDINGS.md)
+is complete: an exact custom solver, 243 predeclared candidate fits, shuffled
+rating controls, three hybrid arms and user/item group analysis. Mean development
+nDCG@10 is 0.263154 versus 0.261688 for expanded-grid binary EASE, a 0.56%
+relative gain. Precision and recall improve slightly while MRR declines. The
+hybrid gain is negligible and does not consistently beat the shuffled control.
+All three seeds' selections were sealed before development evaluation, but
+these cohorts were reused after prior TEST exposure. This is exploratory
+evidence, not fresh confirmation or an established scientific breakthrough.
+The [independent numerical audit](exploratory/categorical_reconstruction/audit-v2/RESULTS.md)
+reproduces selected predictions, hybrid calibration/fitting and ranking metrics;
+the new review bundle keeps the original frozen study separate from this work.
 
 The addressed-evidence training study has completed all six fits. Its pair
 extension fails the primary joint-NLL comparison and both variants remain below

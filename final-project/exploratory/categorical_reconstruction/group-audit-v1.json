@@ -1,0 +1,333 @@
+{
+  "artifact_sha256": {
+    "aggregates.json": "502e6db268d1d42ba8bed84db6447efef8693be82907cfefe38773d11530def4",
+    "protocol.json": "9d22f49e2b7780811514c43486d64b28e5ee4549353a077a5d45f8fb0ab6a225",
+    "provenance.json": "69b6e5461d2b3878dbbb62dee009f7c8f51bdaca3c4cfe740886634934be4718"
+  },
+  "barrier_verifier_sha256": "c10b39407ae5e31962a2c634174914f2fd880341b0e39e126a43607d34e08eab",
+  "completed_manifest_sha256": "6026ab24394d7f3f18404246bee62063ba7edb6738d4fea28d2fda05a248300b",
+  "fresh_confirmation": false,
+  "scope": "All numeric user/item group, diversity, JSD, novelty and exposure fields; seven selected models, three seeds. Independent formulas and rankings; no model fitting.",
+  "seeds": {
+    "2026": {
+      "binary_expanded": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 335
+        },
+        "maximum_absolute_error": 7.105427357601002e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 148,
+          "medium": 155,
+          "sparse": 169
+        },
+        "users": 472
+      },
+      "binary_original_grid": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 335
+        },
+        "maximum_absolute_error": 7.105427357601002e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 148,
+          "medium": 155,
+          "sparse": 169
+        },
+        "users": 472
+      },
+      "categorical": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 335
+        },
+        "maximum_absolute_error": 1.0658141036401503e-14,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 148,
+          "medium": 155,
+          "sparse": 169
+        },
+        "users": 472
+      },
+      "hybrid_baseline2": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 335
+        },
+        "maximum_absolute_error": 5.329070518200751e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 148,
+          "medium": 155,
+          "sparse": 169
+        },
+        "users": 472
+      },
+      "hybrid_real3": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 335
+        },
+        "maximum_absolute_error": 7.993605777301127e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 148,
+          "medium": 155,
+          "sparse": 169
+        },
+        "users": 472
+      },
+      "hybrid_shuffled3": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 335
+        },
+        "maximum_absolute_error": 5.329070518200751e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 148,
+          "medium": 155,
+          "sparse": 169
+        },
+        "users": 472
+      },
+      "shuffled_categories": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 335
+        },
+        "maximum_absolute_error": 8.881784197001252e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 148,
+          "medium": 155,
+          "sparse": 169
+        },
+        "users": 472
+      }
+    },
+    "2027": {
+      "binary_expanded": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 352
+        },
+        "maximum_absolute_error": 3.552713678800501e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 151,
+          "medium": 166,
+          "sparse": 155
+        },
+        "users": 472
+      },
+      "binary_original_grid": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 352
+        },
+        "maximum_absolute_error": 3.552713678800501e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 151,
+          "medium": 166,
+          "sparse": 155
+        },
+        "users": 472
+      },
+      "categorical": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 352
+        },
+        "maximum_absolute_error": 5.329070518200751e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 151,
+          "medium": 166,
+          "sparse": 155
+        },
+        "users": 472
+      },
+      "hybrid_baseline2": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 352
+        },
+        "maximum_absolute_error": 1.1546319456101628e-14,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 151,
+          "medium": 166,
+          "sparse": 155
+        },
+        "users": 472
+      },
+      "hybrid_real3": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 352
+        },
+        "maximum_absolute_error": 6.217248937900877e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 151,
+          "medium": 166,
+          "sparse": 155
+        },
+        "users": 472
+      },
+      "hybrid_shuffled3": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 352
+        },
+        "maximum_absolute_error": 6.217248937900877e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 151,
+          "medium": 166,
+          "sparse": 155
+        },
+        "users": 472
+      },
+      "shuffled_categories": {
+        "item_group_positive_users": {
+          "head": 462,
+          "tail": 352
+        },
+        "maximum_absolute_error": 3.552713678800501e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 151,
+          "medium": 166,
+          "sparse": 155
+        },
+        "users": 472
+      }
+    },
+    "2028": {
+      "binary_expanded": {
+        "item_group_positive_users": {
+          "head": 467,
+          "tail": 343
+        },
+        "maximum_absolute_error": 5.329070518200751e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 147,
+          "medium": 167,
+          "sparse": 158
+        },
+        "users": 472
+      },
+      "binary_original_grid": {
+        "item_group_positive_users": {
+          "head": 467,
+          "tail": 343
+        },
+        "maximum_absolute_error": 7.105427357601002e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 147,
+          "medium": 167,
+          "sparse": 158
+        },
+        "users": 472
+      },
+      "categorical": {
+        "item_group_positive_users": {
+          "head": 467,
+          "tail": 343
+        },
+        "maximum_absolute_error": 5.329070518200751e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 147,
+          "medium": 167,
+          "sparse": 158
+        },
+        "users": 472
+      },
+      "hybrid_baseline2": {
+        "item_group_positive_users": {
+          "head": 467,
+          "tail": 343
+        },
+        "maximum_absolute_error": 7.105427357601002e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 147,
+          "medium": 167,
+          "sparse": 158
+        },
+        "users": 472
+      },
+      "hybrid_real3": {
+        "item_group_positive_users": {
+          "head": 467,
+          "tail": 343
+        },
+        "maximum_absolute_error": 7.105427357601002e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 147,
+          "medium": 167,
+          "sparse": 158
+        },
+        "users": 472
+      },
+      "hybrid_shuffled3": {
+        "item_group_positive_users": {
+          "head": 467,
+          "tail": 343
+        },
+        "maximum_absolute_error": 7.105427357601002e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 147,
+          "medium": 167,
+          "sparse": 158
+        },
+        "users": 472
+      },
+      "shuffled_categories": {
+        "item_group_positive_users": {
+          "head": 467,
+          "tail": 343
+        },
+        "maximum_absolute_error": 5.329070518200751e-15,
+        "numeric_fields_verified": 86,
+        "user_group_counts": {
+          "dense": 147,
+          "medium": 167,
+          "sparse": 158
+        },
+        "users": 472
+      }
+    }
+  },
+  "selection_freeze_sha256": "3f96e3605ea2fa096fe16337f181db4505294e7f240d931f728b24fe50d27641",
+  "source_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "exploratory/categorical_reconstruction/PROTOCOL.md": "1f65576ce366fe0e6e337aa66652d01671247384b20d07cdbbe9ff835a10ef54",
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "exploratory/categorical_reconstruction/hybrid.py": "154807a25f7946251fec21aa3697a5af929aa74bce53c9796ad3018be6007079",
+    "exploratory/categorical_reconstruction/model.py": "fac13a6303e50c10cc975a04155e0bc6f8b8cb6837880aa61fdd5eaf5eb4a0ee",
+    "exploratory/categorical_reconstruction/run_experiment.py": "0cfcd87f84b2003461cc7393c1849b44009ce63a5ef06c7de65f343d5d7b217a",
+    "field_reference_comparison.py": "60fa86b8adedd10705aea9073437f35e6252d4703bd8da7fd4ed7a95f3be78fd",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "stage": "reused_development",
+  "status": "complete",
+  "test_read": false,
+  "verifier_sha256": "4536bec36cca9e09ebcc44614d256c627841f7cd32f9a09f7ad00b27b1e1a50b"
+}
