@@ -1,0 +1,44 @@
+{
+  "2026": {
+    "development_retention": {
+      "0": 0.9431575077599619,
+      "1": 0.9899687054563953,
+      "2": 0.9827470807181267
+    },
+    "fit_retention_floor": 0.95,
+    "note": "Fitted using meta-fit labels, including labels used for hybrid fitting; development audit is essential.",
+    "strengths": {
+      "0": 0.5,
+      "1": 0.5,
+      "2": 0.5
+    }
+  },
+  "2027": {
+    "development_retention": {
+      "0": 0.9180546830724597,
+      "1": 0.9632822902190795,
+      "2": 0.9744925794631885
+    },
+    "fit_retention_floor": 0.95,
+    "note": "Fitted using meta-fit labels, including labels used for hybrid fitting; development audit is essential.",
+    "strengths": {
+      "0": 0.5,
+      "1": 0.5,
+      "2": 0.5
+    }
+  },
+  "2028": {
+    "development_retention": {
+      "0": 0.9391960509187066,
+      "1": 0.9549369007703453,
+      "2": 1.0000200036165674
+    },
+    "fit_retention_floor": 0.95,
+    "note": "Fitted using meta-fit labels, including labels used for hybrid fitting; development audit is essential.",
+    "strengths": {
+      "0": 0.5,
+      "1": 0.5,
+      "2": 0.5
+    }
+  }
+}

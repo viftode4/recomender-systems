@@ -1,0 +1,13 @@
+{
+  "best_expert": "2026-EASE-1",
+  "families": {
+    "context": "context-ridge-0.1",
+    "context-pairwise": "context-pairwise-1",
+    "disagreement": "disagreement-ridge-0.01",
+    "item": "item-ridge-0.1",
+    "static": "static-ridge-0.01",
+    "static-pairwise": "static-pairwise-1",
+    "user": "user-ridge-0.1"
+  },
+  "metric": "ndcg@10"
+}

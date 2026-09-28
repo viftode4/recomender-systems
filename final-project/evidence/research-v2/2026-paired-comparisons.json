@@ -1,0 +1,79 @@
+{
+  "context": {
+    "candidate": "context-ridge-0.1",
+    "descriptive_95_percent_interval": [
+      0.001226822278109643,
+      0.012514618999489526
+    ],
+    "fraction_users_harmed": 0.24152542372881355,
+    "fraction_users_improved": 0.3283898305084746,
+    "mean_difference": 0.006672142112322736,
+    "reference": "2026-EASE-1"
+  },
+  "context-pairwise": {
+    "candidate": "context-pairwise-1",
+    "descriptive_95_percent_interval": [
+      -0.005161704042664977,
+      0.010975577632487543
+    ],
+    "fraction_users_harmed": 0.3305084745762712,
+    "fraction_users_improved": 0.3559322033898305,
+    "mean_difference": 0.0026604167217728074,
+    "reference": "2026-EASE-1"
+  },
+  "disagreement": {
+    "candidate": "disagreement-ridge-0.01",
+    "descriptive_95_percent_interval": [
+      0.0019725838419852705,
+      0.00856054455334542
+    ],
+    "fraction_users_harmed": 0.16101694915254236,
+    "fraction_users_improved": 0.288135593220339,
+    "mean_difference": 0.005243205689462365,
+    "reference": "2026-EASE-1"
+  },
+  "item": {
+    "candidate": "item-ridge-0.1",
+    "descriptive_95_percent_interval": [
+      0.0010717748017092471,
+      0.010663569028177814
+    ],
+    "fraction_users_harmed": 0.2245762711864407,
+    "fraction_users_improved": 0.3114406779661017,
+    "mean_difference": 0.005712564250446823,
+    "reference": "2026-EASE-1"
+  },
+  "static": {
+    "candidate": "static-ridge-0.01",
+    "descriptive_95_percent_interval": [
+      0.0021120477217601357,
+      0.008692745289964807
+    ],
+    "fraction_users_harmed": 0.16101694915254236,
+    "fraction_users_improved": 0.288135593220339,
+    "mean_difference": 0.005186373360847227,
+    "reference": "2026-EASE-1"
+  },
+  "static-pairwise": {
+    "candidate": "static-pairwise-1",
+    "descriptive_95_percent_interval": [
+      -0.0017123740359582936,
+      0.012038285303022953
+    ],
+    "fraction_users_harmed": 0.298728813559322,
+    "fraction_users_improved": 0.3580508474576271,
+    "mean_difference": 0.0051524966099221435,
+    "reference": "2026-EASE-1"
+  },
+  "user": {
+    "candidate": "user-ridge-0.1",
+    "descriptive_95_percent_interval": [
+      0.0007512863067047882,
+      0.010705106301219434
+    ],
+    "fraction_users_harmed": 0.2097457627118644,
+    "fraction_users_improved": 0.298728813559322,
+    "mean_difference": 0.005546905440658461,
+    "reference": "2026-EASE-1"
+  }
+}

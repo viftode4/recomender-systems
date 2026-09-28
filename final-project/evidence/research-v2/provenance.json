@@ -1,0 +1,1217 @@
+{
+  "2026": {
+    "coefficients_sha256": "2ef68501dfee8a0820c0e837e4327f394630167f137d4cd042850e1420355e83",
+    "cohorts_sha256": "0899a08e0192d3001f149c20336307fa45393b9aa3d69e01b733e55833f9ff2f",
+    "manifest": {
+      "development_users": 472,
+      "k": 10,
+      "limitations": [
+        "Development results, not unbiased generalization estimates.",
+        "Expert training used validation for selection: False.",
+        "Hybrid coefficients fit only meta-fit users; model choices use development users.",
+        "User cohorts share training interactions; not a user cold-start experiment.",
+        "Unobserved sampled pairs are assumed negative; some may be future positives.",
+        "Catalog exposure parity is a chosen diagnostic, not a universal fairness definition.",
+        "Rerank-before-RRF promotes top-k then preserves the full remaining ranking; both orderings retain full support."
+      ],
+      "meta_fit_users": 471,
+      "metadata_sha256": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+      "metrics_source_sha256": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+      "negative_ratio": 5,
+      "numpy": "1.26.4",
+      "seconds": 10.36653420800576,
+      "seed": 2026,
+      "sources": {
+        "2026-BPR-1": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "BPR",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 60,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 100,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2026,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "35a26a905e9a559e4badca9a241df49f0a88c044a0dbcadb200dfbe5dd6a98bc",
+              "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+              "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "7639ca9960c1ad14193942dc45060cad80e1ee4bd3d487bd1acd573ad1c20dae"
+        },
+        "2026-EASE-1": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "EASE",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 20,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 100,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2026,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "35a26a905e9a559e4badca9a241df49f0a88c044a0dbcadb200dfbe5dd6a98bc",
+              "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+              "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "9f7807608f9e7bc00d5b2ab61d629e5d417b1dfd37f4ec13ea44796bf2d458bc"
+        },
+        "2026-ExactPop-0": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "ExactPop",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 20,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 100,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2026,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "35a26a905e9a559e4badca9a241df49f0a88c044a0dbcadb200dfbe5dd6a98bc",
+              "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+              "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "dbcc83b0127f1b65361e1bc956aefec27256c63af188d3650275b428fe2d0825"
+        },
+        "2026-ItemKNN-2": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "ItemKNN",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 20,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 200,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2026,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "35a26a905e9a559e4badca9a241df49f0a88c044a0dbcadb200dfbe5dd6a98bc",
+              "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+              "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "d1c0ee65d64913d0623628859205321faf6df2fe30d3696ee659f30fd60d5178"
+        },
+        "2026-Random-0": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "Random",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 20,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 100,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2026,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "35a26a905e9a559e4badca9a241df49f0a88c044a0dbcadb200dfbe5dd6a98bc",
+              "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+              "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "416a4fdd5ba22895548fb564b0077baaaa90f28f035d59fffa76415329718ce3"
+        }
+      },
+      "status": "complete",
+      "study_source_sha256": "7ac6bd3d2dbda59c8308eb723528d138b7dc273107aa6e89140e2617efd0eb7a",
+      "test_read": false
+    },
+    "results_sha256": "2ec3f708f4701d2221090d1e93d0b7ab79a5da85aff501660a94c515e57747c8"
+  },
+  "2027": {
+    "coefficients_sha256": "271396f05ce241a1ea68ca97f10c8643fe2b0d0ad1f53c443dfa6e299b58f93f",
+    "cohorts_sha256": "960aa84c5e08c4725ed4f7265776aa7b45ae264341e654f5a08804d6e4eb9ef8",
+    "manifest": {
+      "development_users": 472,
+      "k": 10,
+      "limitations": [
+        "Development results, not unbiased generalization estimates.",
+        "Expert training used validation for selection: False.",
+        "Hybrid coefficients fit only meta-fit users; model choices use development users.",
+        "User cohorts share training interactions; not a user cold-start experiment.",
+        "Unobserved sampled pairs are assumed negative; some may be future positives.",
+        "Catalog exposure parity is a chosen diagnostic, not a universal fairness definition.",
+        "Rerank-before-RRF promotes top-k then preserves the full remaining ranking; both orderings retain full support."
+      ],
+      "meta_fit_users": 471,
+      "metadata_sha256": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+      "metrics_source_sha256": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+      "negative_ratio": 5,
+      "numpy": "1.26.4",
+      "seconds": 10.356061958009377,
+      "seed": 2027,
+      "sources": {
+        "2027-BPR-1": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "BPR",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 60,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 100,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2027,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "49af66f7b495e82553c4861522d416002b5a0129934951f94f29709fa701bb7d",
+              "train": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+              "valid": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "3fb1b5cab3836b918706e756f25c23e7aa6bea691f1c54618c78e7f0e4cb62a3"
+        },
+        "2027-EASE-1": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "EASE",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 20,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 100,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2027,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "49af66f7b495e82553c4861522d416002b5a0129934951f94f29709fa701bb7d",
+              "train": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+              "valid": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "cc5e61cf3f61d7e1ff7e19fc381ae8d04458280cf16149e2ae2aeb0990cd9ac0"
+        },
+        "2027-ExactPop-0": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "ExactPop",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 20,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 100,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2027,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "49af66f7b495e82553c4861522d416002b5a0129934951f94f29709fa701bb7d",
+              "train": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+              "valid": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "b373caa7f9219be56f1cd1e45675cc16ddca9a21dc66066defa74fe6ea18d4f4"
+        },
+        "2027-ItemKNN-2": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "ItemKNN",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 20,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 200,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2027,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "49af66f7b495e82553c4861522d416002b5a0129934951f94f29709fa701bb7d",
+              "train": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+              "valid": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "6e3e40ca80ef5d92a0f8e217d3e0d85dcad26a97fe4dc225cd87bd02a70bd9b3"
+        },
+        "2027-Random-0": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "Random",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 20,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 100,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2027,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "49af66f7b495e82553c4861522d416002b5a0129934951f94f29709fa701bb7d",
+              "train": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+              "valid": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "cbbcd40428a6ba5ba1d5357608ae80a4319566f69ca7ce5cbf3f51f716a5eb65"
+        }
+      },
+      "status": "complete",
+      "study_source_sha256": "7ac6bd3d2dbda59c8308eb723528d138b7dc273107aa6e89140e2617efd0eb7a",
+      "test_read": false
+    },
+    "results_sha256": "146923b9c7179362294bf8abd32ccf79808ea9486f6070726e1dbc153b5de06e"
+  },
+  "2028": {
+    "coefficients_sha256": "c0e8023d55016b3443a088303b7fe6e65c5af3bc40088335c534213526b48b85",
+    "cohorts_sha256": "b93da3c65f810f7242fada164d0b0ba42ec3f2fd48833e54defc9ac295d51400",
+    "manifest": {
+      "development_users": 472,
+      "k": 10,
+      "limitations": [
+        "Development results, not unbiased generalization estimates.",
+        "Expert training used validation for selection: False.",
+        "Hybrid coefficients fit only meta-fit users; model choices use development users.",
+        "User cohorts share training interactions; not a user cold-start experiment.",
+        "Unobserved sampled pairs are assumed negative; some may be future positives.",
+        "Catalog exposure parity is a chosen diagnostic, not a universal fairness definition.",
+        "Rerank-before-RRF promotes top-k then preserves the full remaining ranking; both orderings retain full support."
+      ],
+      "meta_fit_users": 471,
+      "metadata_sha256": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+      "metrics_source_sha256": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+      "negative_ratio": 5,
+      "numpy": "1.26.4",
+      "seconds": 10.644868957984727,
+      "seed": 2028,
+      "sources": {
+        "2028-BPR-2": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "BPR",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 128,
+              "epochs": 100,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 100,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2028,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "832ef7b818dfb816b1449c00590114b356b20e8c12e1352c365e00e2cb93e571",
+              "train": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+              "valid": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "bdad4c9bf4063fe60a6de800bb4a89c64f50e1c5a37e87c7f3320b26f4fdf228"
+        },
+        "2028-EASE-1": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "EASE",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 20,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 100,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2028,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "832ef7b818dfb816b1449c00590114b356b20e8c12e1352c365e00e2cb93e571",
+              "train": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+              "valid": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "c65952e320a6bac5e87b1c640b53d0cb8c14cf69853316e15930569f9c0a8db8"
+        },
+        "2028-ExactPop-0": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "ExactPop",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 20,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 100,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2028,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "832ef7b818dfb816b1449c00590114b356b20e8c12e1352c365e00e2cb93e571",
+              "train": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+              "valid": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "6765eb78819d32903f070172e730c9b62def86942beab5f6762b54585babea2a"
+        },
+        "2028-ItemKNN-2": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "ItemKNN",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 20,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 200,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2028,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "832ef7b818dfb816b1449c00590114b356b20e8c12e1352c365e00e2cb93e571",
+              "train": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+              "valid": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "da1d2c4309703db4ffd698ba54631bf863e6053efa682cb58cdf64b43d93928b"
+        },
+        "2028-Random-0": {
+          "manifest": {
+            "data_sha256": {
+              "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+              "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+              "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+            },
+            "model": "Random",
+            "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+            "python": "3.11.15 (main, May  4 2026, 21:04:48) [Clang 22.1.3 ]",
+            "settings": {
+              "dataset": "ml-100k",
+              "embedding_size": 64,
+              "epochs": 20,
+              "eval_args": {
+                "group_by": "user",
+                "mode": "full",
+                "order": "RO",
+                "split": {
+                  "RS": [
+                    0.8,
+                    0.1,
+                    0.1
+                  ]
+                }
+              },
+              "eval_step": 1,
+              "k": 100,
+              "knn_method": "item",
+              "metrics": [
+                "Recall",
+                "MRR",
+                "NDCG",
+                "Hit",
+                "Precision"
+              ],
+              "reg_weight": 250.0,
+              "reproducibility": true,
+              "seed": 2028,
+              "show_progress": false,
+              "stopping_step": 5,
+              "topk": [
+                10
+              ],
+              "train_batch_size": 2048,
+              "use_gpu": false,
+              "valid_metric": "MRR@10",
+              "worker": 0
+            },
+            "source_sha256": {
+              "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+              "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+            },
+            "split_sha256": {
+              "test": "832ef7b818dfb816b1449c00590114b356b20e8c12e1352c365e00e2cb93e571",
+              "train": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+              "valid": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+            },
+            "split_sizes": {
+              "test": 9596,
+              "train": 80808,
+              "valid": 9596
+            },
+            "status": "complete",
+            "test_evaluated": false,
+            "validation_used_for_training": false,
+            "versions": {
+              "numpy": "1.26.4",
+              "recbole": "1.2.1",
+              "scipy": "1.17.1",
+              "torch": "2.14.0"
+            }
+          },
+          "scores_sha256": "fc45c5a3b241ffbc2d9ce29e61994cea52d56b5e4574bcae78ce320849f6976c"
+        }
+      },
+      "status": "complete",
+      "study_source_sha256": "7ac6bd3d2dbda59c8308eb723528d138b7dc273107aa6e89140e2617efd0eb7a",
+      "test_read": false
+    },
+    "results_sha256": "9c1312260f9b2a2ccfbc80e4cc300e4b414b47d7b8ec6c3c93a31399fa1f3a10"
+  }
+}

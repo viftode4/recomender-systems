@@ -1,0 +1,70 @@
+{
+  "artifact_sha256": {
+    "2026-coefficients.json": "2ef68501dfee8a0820c0e837e4327f394630167f137d4cd042850e1420355e83",
+    "2026-paired-comparisons.json": "b4a73ea20fa1cce9252e2e8ff12b995b182f8d98245ee955b27f76e1c06c74db",
+    "2026-selection.json": "c63dd8ba566d3b84e9e37bb1f10f7c8d06b48605819638fcd7f375d8ce43dedd",
+    "2026-switching.json": "6258fd28c682dc8b9d3840055c1616a99dc546a3a1d2ac3ddedf3651be27baea",
+    "2027-coefficients.json": "271396f05ce241a1ea68ca97f10c8643fe2b0d0ad1f53c443dfa6e299b58f93f",
+    "2027-paired-comparisons.json": "2cee476a747f4391c6c21513b6005ff0b4176553ef29698e4ecb89a0ccdfe1a8",
+    "2027-selection.json": "5643ab83817ac98f96fd057b575f3ae43aff05cd7001eed346ab0d5318561b72",
+    "2027-switching.json": "30fd3a970dd4640e62e4b502a94d4b89d5d6e998d807bb18c9231a1f8a546529",
+    "2028-coefficients.json": "c0e8023d55016b3443a088303b7fe6e65c5af3bc40088335c534213526b48b85",
+    "2028-paired-comparisons.json": "e148acbbbb95a7aa3402e15eafb056ccaa45c38beab185466d94dee9022490a9",
+    "2028-selection.json": "f1aac70bf9fcb120234326246d6eb8aab5a0f8c342d2c62a12262162e855e3f9",
+    "2028-switching.json": "54d5fa608c58e897f74cbaa0b8575e4b108473783a30d325cd56f73c24a44dfc",
+    "RESULTS.md": "cbdefede1c607bd09368d18db28158a3b917776a3e37d5e1caf7cd70d4f8de0a",
+    "aggregates.json": "8783757ed0d217a0c286e18e96dae6854d4ebbe7ff2151f6fb8939bf22e46ec8",
+    "candidate-budgets.json": "6227b31775397d88b864dbf9028a4f884638e45e09a9498a9a43f11a5e902055",
+    "candidate-feasibility.json": "edea8c7fbbd7c07e91e0acc1a87a4e2a292490d3a480e5eb6ca806bee5266488",
+    "group-policies.json": "3b924a1c722d08c565613fb69af27f20ffd71e7ec5666c8ad503fc1b48442f0d",
+    "provenance.json": "2033a7cbb9d303c1fa8aa97d61eb1ec37b7ce6199719cc79dfc4d587e90a64c6",
+    "research-figures.pdf": "d5588afed2612ccbb89670a454ff6cffd9832651a1a44276d66bd1eec753880e",
+    "research-figures.png": "2c9b09f0211567c59f45514830212e52d70478faf9462bd70e0e4fbbff86a664",
+    "selected.json": "d23f98c52d41a2a85ad9cde6a94129bf88cb90e0ad004425ae3caaae072e7c00"
+  },
+  "generator_sha256": "6cab4c7deb463bb0a48c05d0c13c720b125b65546b39b1eabcc651744fc4a576",
+  "plan": {
+    "grids": {
+      "BPR": [
+        [
+          32,
+          20
+        ],
+        [
+          64,
+          60
+        ],
+        [
+          128,
+          100
+        ]
+      ],
+      "EASE": [
+        50.0,
+        250.0,
+        1000.0
+      ],
+      "ItemKNN": [
+        50,
+        100,
+        200
+      ]
+    },
+    "models": [
+      "ExactPop",
+      "Random",
+      "EASE",
+      "ItemKNN",
+      "BPR"
+    ],
+    "protocol": "Fixed expert budget; meta-fit/development user partition; no test evaluation.",
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "status": "complete",
+    "test_evaluated": false,
+    "tune_experts": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "2026": {
+    "fraction_expanded": 0.2733050847457627,
+    "max_pool": 248,
+    "mean_pool": 110.6822033898305,
+    "median_pool": 100.0,
+    "same_topk_as_full": 1.0,
+    "target_tail_items": 8
+  },
+  "2027": {
+    "fraction_expanded": 0.2775423728813559,
+    "max_pool": 213,
+    "mean_pool": 109.47669491525424,
+    "median_pool": 100.0,
+    "same_topk_as_full": 1.0,
+    "target_tail_items": 8
+  },
+  "2028": {
+    "fraction_expanded": 0.2669491525423729,
+    "max_pool": 233,
+    "mean_pool": 109.52542372881356,
+    "median_pool": 100.0,
+    "same_topk_as_full": 1.0,
+    "target_tail_items": 8
+  }
+}

@@ -1,0 +1,474 @@
+{
+  "context-pairwise-0.001": {
+    "intercept": 0.0,
+    "objective": "mean squared positive-negative score margin error + L2",
+    "penalty": 0.001,
+    "training_pairs": 24880,
+    "weights": {
+      "2028-BPR-2": 0.12158846391011384,
+      "2028-BPR-2*activity": 0.012229169900977922,
+      "2028-BPR-2*genre_entropy": -0.017844337955432627,
+      "2028-BPR-2*item_popularity": 0.05954803484511743,
+      "2028-EASE-1": 0.25173458992436676,
+      "2028-EASE-1*activity": 0.013250852169288029,
+      "2028-EASE-1*genre_entropy": -0.010270130568831077,
+      "2028-EASE-1*item_popularity": -0.12704466760624153,
+      "2028-ExactPop-0": -0.05065704431002899,
+      "2028-ExactPop-0*activity": -0.020583153509126664,
+      "2028-ExactPop-0*genre_entropy": -2.5290209413010472e-05,
+      "2028-ExactPop-0*item_popularity": 0.08395466742989117,
+      "2028-ItemKNN-2": 0.12279685521172361,
+      "2028-ItemKNN-2*activity": -0.0036441128178885786,
+      "2028-ItemKNN-2*genre_entropy": 0.03308125158299292,
+      "2028-ItemKNN-2*item_popularity": -0.06566554743179144,
+      "expert_disagreement": -0.1385079710244093
+    }
+  },
+  "context-pairwise-0.01": {
+    "intercept": 0.0,
+    "objective": "mean squared positive-negative score margin error + L2",
+    "penalty": 0.01,
+    "training_pairs": 24880,
+    "weights": {
+      "2028-BPR-2": 0.12373082767212526,
+      "2028-BPR-2*activity": 0.012314996126087914,
+      "2028-BPR-2*genre_entropy": -0.016944287852895652,
+      "2028-BPR-2*item_popularity": 0.05945130321412199,
+      "2028-EASE-1": 0.23679882955453627,
+      "2028-EASE-1*activity": 0.015193859609977843,
+      "2028-EASE-1*genre_entropy": -0.009943168499110821,
+      "2028-EASE-1*item_popularity": -0.1202884788544631,
+      "2028-ExactPop-0": -0.04097902639765244,
+      "2028-ExactPop-0*activity": -0.02152108056657617,
+      "2028-ExactPop-0*genre_entropy": 0.0004252996207759145,
+      "2028-ExactPop-0*item_popularity": 0.07551278935419897,
+      "2028-ItemKNN-2": 0.12148182284519934,
+      "2028-ItemKNN-2*activity": -0.003651943625939986,
+      "2028-ItemKNN-2*genre_entropy": 0.03152040087284825,
+      "2028-ItemKNN-2*item_popularity": -0.06305464678829656,
+      "expert_disagreement": -0.11824580036462218
+    }
+  },
+  "context-pairwise-0.1": {
+    "intercept": 0.0,
+    "objective": "mean squared positive-negative score margin error + L2",
+    "penalty": 0.1,
+    "training_pairs": 24880,
+    "weights": {
+      "2028-BPR-2": 0.13006043204707235,
+      "2028-BPR-2*activity": 0.015247413359251456,
+      "2028-BPR-2*genre_entropy": -0.010606892808187305,
+      "2028-BPR-2*item_popularity": 0.053711563079853614,
+      "2028-EASE-1": 0.16604103924441482,
+      "2028-EASE-1*activity": 0.022776696039057947,
+      "2028-EASE-1*genre_entropy": -0.007506041288943996,
+      "2028-EASE-1*item_popularity": -0.08569096229860887,
+      "2028-ExactPop-0": 0.0032729670451859746,
+      "2028-ExactPop-0*activity": -0.02448537686596982,
+      "2028-ExactPop-0*genre_entropy": 0.002685315372244664,
+      "2028-ExactPop-0*item_popularity": 0.03572182055658367,
+      "2028-ItemKNN-2": 0.11522052150292345,
+      "2028-ItemKNN-2*activity": -0.003624997410102299,
+      "2028-ItemKNN-2*genre_entropy": 0.02100816293568686,
+      "2028-ItemKNN-2*item_popularity": -0.046554018779624555,
+      "expert_disagreement": -0.03765987107321477
+    }
+  },
+  "context-pairwise-1": {
+    "intercept": 0.0,
+    "objective": "mean squared positive-negative score margin error + L2",
+    "penalty": 1.0,
+    "training_pairs": 24880,
+    "weights": {
+      "2028-BPR-2": 0.106018221694405,
+      "2028-BPR-2*activity": 0.03032669208473401,
+      "2028-BPR-2*genre_entropy": 0.0035504747857809573,
+      "2028-BPR-2*item_popularity": 0.02343347093251965,
+      "2028-EASE-1": 0.0856518336105389,
+      "2028-EASE-1*activity": 0.019314076364283318,
+      "2028-EASE-1*genre_entropy": -0.0036879280950119116,
+      "2028-EASE-1*item_popularity": -0.0275950449725877,
+      "2028-ExactPop-0": 0.031720476754036074,
+      "2028-ExactPop-0*activity": -0.016269476770454417,
+      "2028-ExactPop-0*genre_entropy": 0.003581288828268348,
+      "2028-ExactPop-0*item_popularity": -0.005732961574094009,
+      "2028-ItemKNN-2": 0.09283050136352888,
+      "2028-ItemKNN-2*activity": 0.00549012896735657,
+      "2028-ItemKNN-2*genre_entropy": 0.0035565220888865642,
+      "2028-ItemKNN-2*item_popularity": -0.004310730063957445,
+      "expert_disagreement": 0.007008053378771787
+    }
+  },
+  "context-ridge-0.001": {
+    "intercept": 0.07238043228212891,
+    "penalty": 0.001,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.04229523100663743,
+      "2028-BPR-2*activity": -0.0019925848868094557,
+      "2028-BPR-2*genre_entropy": -0.007326634506746125,
+      "2028-BPR-2*item_popularity": 0.025727397307425303,
+      "2028-EASE-1": 0.09618746138711437,
+      "2028-EASE-1*activity": 0.028234909196104323,
+      "2028-EASE-1*genre_entropy": -0.0024665378961607185,
+      "2028-EASE-1*item_popularity": -0.01926068476722442,
+      "2028-ExactPop-0": -0.02066798636032677,
+      "2028-ExactPop-0*activity": -0.00964667129261563,
+      "2028-ExactPop-0*genre_entropy": 0.011980328728624614,
+      "2028-ExactPop-0*item_popularity": 0.00919746636262729,
+      "2028-ItemKNN-2": 0.03594514636932684,
+      "2028-ItemKNN-2*activity": -0.00851146399166678,
+      "2028-ItemKNN-2*genre_entropy": 0.0015826829669066806,
+      "2028-ItemKNN-2*item_popularity": 0.007599407175759597,
+      "expert_disagreement": 0.025044212475855896
+    }
+  },
+  "context-ridge-0.01": {
+    "intercept": 0.07300365891086968,
+    "penalty": 0.01,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.042417713016927316,
+      "2028-BPR-2*activity": -0.0012503965919872728,
+      "2028-BPR-2*genre_entropy": -0.007065396748517424,
+      "2028-BPR-2*item_popularity": 0.025682052876122987,
+      "2028-EASE-1": 0.08853240642104986,
+      "2028-EASE-1*activity": 0.028573117797282787,
+      "2028-EASE-1*genre_entropy": -0.0020815990681641305,
+      "2028-EASE-1*item_popularity": -0.014458902915274274,
+      "2028-ExactPop-0": -0.017136587284195662,
+      "2028-ExactPop-0*activity": -0.009674938392179712,
+      "2028-ExactPop-0*genre_entropy": 0.011827759484146924,
+      "2028-ExactPop-0*item_popularity": 0.006425309898204575,
+      "2028-ItemKNN-2": 0.03811037515895545,
+      "2028-ItemKNN-2*activity": -0.00878649647610487,
+      "2028-ItemKNN-2*genre_entropy": 0.0008092024360644275,
+      "2028-ItemKNN-2*item_popularity": 0.006799488577712285,
+      "expert_disagreement": 0.024165986277433726
+    }
+  },
+  "context-ridge-0.1": {
+    "intercept": 0.07704803284035765,
+    "penalty": 0.1,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.0417199078879937,
+      "2028-BPR-2*activity": 0.0021718710840235474,
+      "2028-BPR-2*genre_entropy": -0.005315701820221345,
+      "2028-BPR-2*item_popularity": 0.022085781678381784,
+      "2028-EASE-1": 0.06168365108609081,
+      "2028-EASE-1*activity": 0.026310245082735387,
+      "2028-EASE-1*genre_entropy": -0.00010661519720118886,
+      "2028-EASE-1*item_popularity": 0.0035560248220481328,
+      "2028-ExactPop-0": -0.0024480456273829475,
+      "2028-ExactPop-0*activity": -0.009079330057283324,
+      "2028-ExactPop-0*genre_entropy": 0.009766855973020384,
+      "2028-ExactPop-0*item_popularity": -0.003810764601203451,
+      "2028-ItemKNN-2": 0.04019963944979994,
+      "2028-ItemKNN-2*activity": -0.006032885420178246,
+      "2028-ItemKNN-2*genre_entropy": -0.002131793652551481,
+      "2028-ItemKNN-2*item_popularity": 0.008001976527405773,
+      "expert_disagreement": 0.016089073301455255
+    }
+  },
+  "context-ridge-1": {
+    "intercept": 0.08097159251889273,
+    "penalty": 1.0,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.028501327518172314,
+      "2028-BPR-2*activity": 0.008735870363939512,
+      "2028-BPR-2*genre_entropy": -0.00018702466892743747,
+      "2028-BPR-2*item_popularity": 0.010875198665000953,
+      "2028-EASE-1": 0.0357863575341291,
+      "2028-EASE-1*activity": 0.014860927320954072,
+      "2028-EASE-1*genre_entropy": 0.0011877206175281239,
+      "2028-EASE-1*item_popularity": 0.02061892774228125,
+      "2028-ExactPop-0": 0.007161238471659951,
+      "2028-ExactPop-0*activity": -0.003419468043322841,
+      "2028-ExactPop-0*genre_entropy": 0.002771188892514479,
+      "2028-ExactPop-0*item_popularity": -0.0032439258048986286,
+      "2028-ItemKNN-2": 0.029312499178843855,
+      "2028-ItemKNN-2*activity": 0.004490426885829102,
+      "2028-ItemKNN-2*genre_entropy": -0.00045489876579959823,
+      "2028-ItemKNN-2*item_popularity": 0.01371427818737786,
+      "expert_disagreement": 0.006069029566945796
+    }
+  },
+  "disagreement-ridge-0.001": {
+    "intercept": 0.10535161327444442,
+    "penalty": 0.001,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.02722761866423362,
+      "2028-EASE-1": 0.09817155045945428,
+      "2028-ExactPop-0": -0.0003881850294847798,
+      "2028-ItemKNN-2": 0.04529982497870553,
+      "expert_disagreement": -0.004296446814689731
+    }
+  },
+  "disagreement-ridge-0.01": {
+    "intercept": 0.10470351316995614,
+    "penalty": 0.01,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.02745126420411172,
+      "2028-EASE-1": 0.09706053930187611,
+      "2028-ExactPop-0": 1.7030258411909273e-05,
+      "2028-ItemKNN-2": 0.04540199490415795,
+      "expert_disagreement": -0.002217608749473019
+    }
+  },
+  "disagreement-ridge-0.1": {
+    "intercept": 0.10335655320335843,
+    "penalty": 0.1,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.029069085390216347,
+      "2028-EASE-1": 0.0890201495214597,
+      "2028-ExactPop-0": 0.0046312897336041325,
+      "2028-ItemKNN-2": 0.0456965440739973,
+      "expert_disagreement": 0.004596130886338816
+    }
+  },
+  "disagreement-ridge-1": {
+    "intercept": 0.11083658117484504,
+    "penalty": 1.0,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.029837548078304854,
+      "2028-EASE-1": 0.06150565775476224,
+      "2028-ExactPop-0": 0.020699834181315983,
+      "2028-ItemKNN-2": 0.040878586420342394,
+      "expert_disagreement": 0.007522846369418138
+    }
+  },
+  "item-ridge-0.001": {
+    "intercept": 0.08436128630973327,
+    "penalty": 0.001,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.03592997618470824,
+      "2028-BPR-2*item_popularity": 0.02873409540213878,
+      "2028-EASE-1": 0.13648015572505262,
+      "2028-EASE-1*item_popularity": -0.03783396363851634,
+      "2028-ExactPop-0": -0.022191374175860173,
+      "2028-ExactPop-0*item_popularity": 0.017204860749171488,
+      "2028-ItemKNN-2": 0.026522256404675985,
+      "2028-ItemKNN-2*item_popularity": 0.006755178518536745
+    }
+  },
+  "item-ridge-0.01": {
+    "intercept": 0.08455833904138943,
+    "penalty": 0.01,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.03772507014442549,
+      "2028-BPR-2*item_popularity": 0.02902549107498135,
+      "2028-EASE-1": 0.12500484175956694,
+      "2028-EASE-1*item_popularity": -0.030773546544550483,
+      "2028-ExactPop-0": -0.01826403152822629,
+      "2028-ExactPop-0*item_popularity": 0.013777009057151055,
+      "2028-ItemKNN-2": 0.030073296842530392,
+      "2028-ItemKNN-2*item_popularity": 0.004812608399864855
+    }
+  },
+  "item-ridge-0.1": {
+    "intercept": 0.08580171509711011,
+    "penalty": 0.1,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.04316018557482697,
+      "2028-BPR-2*item_popularity": 0.024758713094631686,
+      "2028-EASE-1": 0.08068132977406742,
+      "2028-EASE-1*item_popularity": -0.0038167230491713113,
+      "2028-ExactPop-0": -0.000750968613952438,
+      "2028-ExactPop-0*item_popularity": -0.0002224060655306456,
+      "2028-ItemKNN-2": 0.039092432350780144,
+      "2028-ItemKNN-2*item_popularity": 0.0039952367720481425
+    }
+  },
+  "item-ridge-1": {
+    "intercept": 0.08612418890924689,
+    "penalty": 1.0,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.033955553681495894,
+      "2028-BPR-2*item_popularity": 0.009914186085176906,
+      "2028-EASE-1": 0.04138771728511672,
+      "2028-EASE-1*item_popularity": 0.018298145204536133,
+      "2028-ExactPop-0": 0.011629637666684551,
+      "2028-ExactPop-0*item_popularity": -0.0018411232013454957,
+      "2028-ItemKNN-2": 0.034057903757091085,
+      "2028-ItemKNN-2*item_popularity": 0.012814240784021632
+    }
+  },
+  "static-pairwise-0.001": {
+    "intercept": 0.0,
+    "objective": "mean squared positive-negative score margin error + L2",
+    "penalty": 0.001,
+    "training_pairs": 24880,
+    "weights": {
+      "2028-BPR-2": 0.2367669596098949,
+      "2028-EASE-1": 0.017261439387512897,
+      "2028-ExactPop-0": 0.005166385225264752,
+      "2028-ItemKNN-2": 0.10320244298527154
+    }
+  },
+  "static-pairwise-0.01": {
+    "intercept": 0.0,
+    "objective": "mean squared positive-negative score margin error + L2",
+    "penalty": 0.01,
+    "training_pairs": 24880,
+    "weights": {
+      "2028-BPR-2": 0.2345472463032869,
+      "2028-EASE-1": 0.017891853039480734,
+      "2028-ExactPop-0": 0.005294658754936043,
+      "2028-ItemKNN-2": 0.10373313963531224
+    }
+  },
+  "static-pairwise-0.1": {
+    "intercept": 0.0,
+    "objective": "mean squared positive-negative score margin error + L2",
+    "penalty": 0.1,
+    "training_pairs": 24880,
+    "weights": {
+      "2028-BPR-2": 0.2154932010574396,
+      "2028-EASE-1": 0.02389217278519739,
+      "2028-ExactPop-0": 0.00672221936523041,
+      "2028-ItemKNN-2": 0.107071784837148
+    }
+  },
+  "static-pairwise-1": {
+    "intercept": 0.0,
+    "objective": "mean squared positive-negative score margin error + L2",
+    "penalty": 1.0,
+    "training_pairs": 24880,
+    "weights": {
+      "2028-BPR-2": 0.13553223057909822,
+      "2028-EASE-1": 0.05583093617546707,
+      "2028-ExactPop-0": 0.020291576429412383,
+      "2028-ItemKNN-2": 0.09998432065269748
+    }
+  },
+  "static-ridge-0.001": {
+    "intercept": 0.1037466563712359,
+    "penalty": 0.001,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.02726068773040968,
+      "2028-EASE-1": 0.09774577211225052,
+      "2028-ExactPop-0": -0.0008494459789614031,
+      "2028-ItemKNN-2": 0.0452964242428154
+    }
+  },
+  "static-ridge-0.01": {
+    "intercept": 0.10387492816681869,
+    "penalty": 0.01,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.027467557434005908,
+      "2028-EASE-1": 0.09684365690757131,
+      "2028-ExactPop-0": -0.00021838222519267176,
+      "2028-ItemKNN-2": 0.04539566928533102
+    }
+  },
+  "static-ridge-0.1": {
+    "intercept": 0.10507778254310907,
+    "penalty": 0.1,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.02905652426908186,
+      "2028-EASE-1": 0.08942670658799688,
+      "2028-ExactPop-0": 0.005074801940324077,
+      "2028-ItemKNN-2": 0.04577059945375627
+    }
+  },
+  "static-ridge-1": {
+    "intercept": 0.11371416521094435,
+    "penalty": 1.0,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.029973132961321793,
+      "2028-EASE-1": 0.06198001316029609,
+      "2028-ExactPop-0": 0.02116322616712883,
+      "2028-ItemKNN-2": 0.041146601119370144
+    }
+  },
+  "user-ridge-0.001": {
+    "intercept": 0.10317139000075,
+    "penalty": 0.001,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.023288907893144247,
+      "2028-BPR-2*activity": 0.0003052031676823909,
+      "2028-BPR-2*genre_entropy": -0.0100783339995079,
+      "2028-EASE-1": 0.08421241578938084,
+      "2028-EASE-1*activity": 0.03359332238435966,
+      "2028-EASE-1*genre_entropy": -0.0025366634563729444,
+      "2028-ExactPop-0": -0.002397503072710309,
+      "2028-ExactPop-0*activity": -0.008631779180490393,
+      "2028-ExactPop-0*genre_entropy": 0.012207112283951696,
+      "2028-ItemKNN-2": 0.05784267330645669,
+      "2028-ItemKNN-2*activity": -0.01811104816766628,
+      "2028-ItemKNN-2*genre_entropy": 0.0026463260796344514
+    }
+  },
+  "user-ridge-0.01": {
+    "intercept": 0.10330756950609526,
+    "penalty": 0.01,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.0243988115029782,
+      "2028-BPR-2*activity": -0.0004109643341327157,
+      "2028-BPR-2*genre_entropy": -0.009572052607926821,
+      "2028-EASE-1": 0.08415022906006181,
+      "2028-EASE-1*activity": 0.03271629926832098,
+      "2028-EASE-1*genre_entropy": -0.002028971105189645,
+      "2028-ExactPop-0": -0.0016033740468420297,
+      "2028-ExactPop-0*activity": -0.008778366308181662,
+      "2028-ExactPop-0*genre_entropy": 0.011999590178037535,
+      "2028-ItemKNN-2": 0.056061274606318365,
+      "2028-ItemKNN-2*activity": -0.016341970290638025,
+      "2028-ItemKNN-2*genre_entropy": 0.001785997460926105
+    }
+  },
+  "user-ridge-0.1": {
+    "intercept": 0.10451970225736515,
+    "penalty": 0.1,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.02804046699346247,
+      "2028-BPR-2*activity": -0.002033261936388596,
+      "2028-BPR-2*genre_entropy": -0.007383445569364872,
+      "2028-EASE-1": 0.08102342195743066,
+      "2028-EASE-1*activity": 0.0277056585028363,
+      "2028-EASE-1*genre_entropy": 0.0006030667234187762,
+      "2028-ExactPop-0": 0.0041959384740329845,
+      "2028-ExactPop-0*activity": -0.008995416433376069,
+      "2028-ExactPop-0*genre_entropy": 0.009771864896022277,
+      "2028-ItemKNN-2": 0.04886332489240905,
+      "2028-ItemKNN-2*activity": -0.008398086819487949,
+      "2028-ItemKNN-2*genre_entropy": -0.001285969236009975
+    }
+  },
+  "user-ridge-1": {
+    "intercept": 0.11274521401222161,
+    "penalty": 1.0,
+    "training_examples": 29856,
+    "weights": {
+      "2028-BPR-2": 0.026630484573024134,
+      "2028-BPR-2*activity": 0.002491022827987552,
+      "2028-BPR-2*genre_entropy": -0.002456568790534044,
+      "2028-EASE-1": 0.058660660430070705,
+      "2028-EASE-1*activity": 0.0161606535916381,
+      "2028-EASE-1*genre_entropy": 0.0029217516791895247,
+      "2028-ExactPop-0": 0.017284642181377333,
+      "2028-ExactPop-0*activity": -0.0022955003412036285,
+      "2028-ExactPop-0*genre_entropy": 0.003657753942755862,
+      "2028-ItemKNN-2": 0.037987573438011464,
+      "2028-ItemKNN-2*activity": 0.002506497965264257,
+      "2028-ItemKNN-2*genre_entropy": -0.0004404947763456593
+    }
+  }
+}

@@ -1,20 +1,28 @@
-# Recommender Systems final-project starter
+# Recommender Systems: hybrid research project
 
-A working base for DSAIT4335's MovieLens 100K hybrid recommendation project.
-The group still needs to agree on model choices, ownership, and experiment scope.
-This is infrastructure and initial baselines, not a completed project submission.
+A runnable DSAIT4335 project base with an original implementation of contextual
+regression fusion, controlled ablations, reranking and empirical analysis.
+This is a development research checkpoint, not a finished graded submission.
 
-## Included
+Start with [the five-person plan](PLAN.md), [research design](RESEARCH.md), and
+[results with figures](evidence/research-v2/RESULTS.md).
 
-- One shared RecBole split/configuration; CPU execution and seed 2026.
-- ExactPop (exact training frequency), Random (independent per-user scores),
-  and training adapters for EASE, ItemKNN and BPR.
-- Independent Precision, Recall, nDCG, MRR and Hit metrics; catalog coverage
-  and training-frequency novelty. Per-user results support later group analysis.
-- Original-ID split exports, split/data/source fingerprints, environment versions,
-  full score matrices for future hybrids, recommendations and metrics.
-- Validation-only evaluation by default; explicit `--test` opt-in.
-- Refusal to overwrite a run directory; completion status in each run manifest.
+## What works
+
+- RecBole training for EASE, ItemKNN and BPR; independent Random and exact
+  training-frequency popularity baselines.
+- Predeclared expert tuning grids; shared splits; three data seeds; no test
+  evaluation in the development pipeline.
+- Regression-weighted hybrids with static, user, item, disagreement and full
+  contextual features; static/contextual pairwise regression variants.
+- Reciprocal-rank fusion and user-activity-group expert switching.
+- Independent accuracy, novelty, coverage, genre diversity, calibration,
+  activity-group utility and head/tail exposure/recall metrics.
+- Diversity, calibration and exposure rerankers; rerank-before/after-fusion
+  comparisons; a group utility-budget policy with development-cohort audits.
+- Candidate-pool feasibility bounds and selective expansion experiments.
+- Score/split/config exports, input hashes, coefficient artifacts, paired
+  descriptive intervals, figures and aggregate evidence suitable for review.
 
 ## Setup
 
@@ -29,83 +37,105 @@ git -C vendor/RecBole_DSAIT4335 checkout 081c3f6edf8e466d3ed5e163631a1afb6fe892b
 .venv/bin/python -m pip install -e vendor/RecBole_DSAIT4335
 ```
 
-The commit is the instructor checkout used for the local smoke checks. It is not
-claimed to be the latest version announced September 25. Review any upstream
-updates as a team and repeat the checks before changing the shared dependency.
-A fresh installation has not yet been tested; this is not a dependency lockfile.
-Data, vendor code, model checkpoints and experiment outputs are ignored by Git.
+This is the instructor checkout used locally, not a claim that it is the latest
+version announced September 25. Review upstream changes and repeat checks before
+changing the shared dependency. A fresh installation has not been tested; these
+commands are not a verified cross-platform lockfile. Existing course environments
+can run these scripts directly with their Python and local dataset directory.
 
-If the course environment is already installed, use its Python directly and pass
-the existing `dataset/` path. No copies of assignment reports or instructor PDFs
-are needed in this repository.
-
-## Run
+## One-command experiment suite
 
 ```sh
-python3 -m unittest discover -s tests -p 'test_metrics.py' -v
 .venv/bin/python -m unittest discover -s tests -v
-.venv/bin/python run.py --model ExactPop --data-path vendor/RecBole_DSAIT4335/dataset --out runs/exact-pop
-.venv/bin/python run.py --model Random --data-path vendor/RecBole_DSAIT4335/dataset --out runs/random
-.venv/bin/python run.py --model EASE --data-path vendor/RecBole_DSAIT4335/dataset --out runs/ease
+.venv/bin/python experiment.py \
+  --data-path vendor/RecBole_DSAIT4335/dataset \
+  --out runs/research-v2 \
+  --tune-experts
 ```
 
-`--data-path` is the parent of `ml-100k/`, not the dataset folder itself. Model
-choices are ExactPop, Random, EASE, ItemKNN, BPR. Copy `config.json` for a tuning
-variant and pass `--config path.json`. Keep split, seed and data processing the
-same across candidates. Compare all three split fingerprints before combining
-runs; also check identical user and item IDs in the score archives.
+This runs seeds 2026, 2027 and 2028. Use `--seeds 2026` for a shorter first check.
+The output directory must not already exist. The suite stops on failure and keeps
+logs/artifacts; it does not overwrite, resume or silently reuse previous results.
 
-Run directories contain `effective-config.txt` with resolved model defaults.
-The initial EASE/ItemKNN/BPR defaults are not a hyperparameter search. Preserve
-configs for each candidate; select using validation MRR@10. The starter does
-not automatically choose or freeze the winning model.
+Expert grids: EASE regularization 50/250/1000, ItemKNN neighbors 50/100/200,
+BPR dimension/epoch pairs (32,20), (64,60), (128,100). BPR configurations vary two
+factors together; they are not an isolated embedding-dimension ablation.
 
-After documenting frozen settings, a separate output directory plus `--test`
-trains that configuration and evaluates test as well. This flag is a deliberate
-workflow safeguard, not an access-control mechanism: test split IDs are exported
-for reproducibility. Do not tune after viewing test results. Seed 2026 differs
-from Assignment 3's 2020 but reuses MovieLens, so this is not a new independent
-population or untouched confirmatory benchmark.
+Training uses fixed budgets. The validation users are deterministically divided
+into 471 meta-fit and 472 development users. Expert variants and regression
+coefficients/group policies use meta-fit users. Hybrid settings are selected on
+development users, so their reported development metrics are selection-biased.
+No test labels are read by the hybrid study. See RESEARCH.md for the full protocol.
 
-## Evaluation contract
+## Smaller runs and studies
 
-All observed ratings are implicit positives (no threshold). Use full-catalog
-ranking with k=10, excluding padding and training interactions during validation;
-test also excludes validation interactions. Each evaluated user needs at least k
-unseen candidates and at least one positive. Macro averages include every user
-in that held-out split. Ties use stable internal item order; IDs are exported.
+```sh
+.venv/bin/python run.py --model EASE \
+  --data-path vendor/RecBole_DSAIT4335/dataset --out runs/ease --fixed-epochs
+.venv/bin/python run.py --model ItemKNN \
+  --data-path vendor/RecBole_DSAIT4335/dataset --out runs/itemknn --fixed-epochs
+.venv/bin/python study.py --runs runs/ease runs/itemknn \
+  --items vendor/RecBole_DSAIT4335/dataset/ml-100k/ml-100k.item --out runs/study
+```
 
-Novelty is the average `-log2((training_count + 1) / (training_interactions +
-catalog_size))`. Coverage is distinct recommended items divided by the complete
-real-item catalog. These are initial beyond-accuracy measures; diversity,
-calibration and fairness remain to implement.
+`--data-path` is the parent of `ml-100k/`. `run.py --config custom.json` accepts
+another shared RecBole configuration. Without `--fixed-epochs`, the runner uses
+validation early stopping, recorded in its manifest. This mode is supported for
+exploration but excluded from primary multi-seed evidence by `summarize.py`.
 
-`*-scores.npz` contains unmasked full-catalog scores, original-ID `users` and
-`items`. Column zero is padding; exclude it and each user's history before
-ranking or fitting hybrid features. Load with NumPy's default `allow_pickle=False`.
-Do not fit a regression hybrid and report its performance on the same labels:
-agree on an inner split or out-of-fold training protocol first (see PLAN.md).
+The individual-model runner supports deliberate `--test` evaluation after final
+configuration freeze. The hybrid development script does not have a test mode.
+A frozen hybrid inference/export path remains to build before final evaluation;
+do not retrain it on test labels. Test split IDs are exported for reproducibility,
+so workflow discipline remains necessary even though test metrics are off by default.
 
-ExactPop and Random are independent reference implementations using the RecBole
-split. They are deliberately labelled: the instructor fork's Pop training uses
-batch count updates, and its Random full-sort path shares scores within a batch.
-Our baselines are not exact replays of those implementations.
+## Generate shareable evidence
 
-## Verification and limitations
+The plotting Python needs Matplotlib (locally verified with 3.9.4), independently
+of the training environment:
 
-Local verification uses the existing course environment, not a fresh install.
-Observed versions: RecBole 1.2.1, NumPy 1.26.4, SciPy 1.17.1, PyTorch 2.14.0,
-pandas 3.0.6. The upstream data loader emits pandas chained-assignment and
-non-writable-array warnings on this environment. No upstream code is patched by
-this starter. The local source may have coursework edits; the commit alone is
-not a complete environment lock.
+```sh
+python3 summarize.py --runs runs/research-v2 --out evidence/research-v2
+```
 
-See PLAN.md for the task mapping, feedback questions and report constraints.
-AI assistance was used to scaffold this base; every team member should review
-and understand their contributions and follow the course's disclosure rules.
+Use a new output path if the checked-in evidence folder already exists. This
+creates Markdown, PNG/PDF figures, aggregate/group metrics, coefficient and
+selection records, and manifests. Individual user histories and recommendations
+stay under ignored `runs/`. Do not compare runs without matching split/data hashes
+and score ID order; `study.py` checks these and rejects incomplete/test-evaluated inputs.
 
-Verified locally on September 28, 2026: 8 unit tests passed. ExactPop, Random and
-EASE completed full-catalog validation runs for all 943 users with matching split
-fingerprints and 943 × 1683 raw score matrices (including padding column). No
-MovieLens test metrics were produced. These are smoke checks, not tuned results.
-ItemKNN and BPR adapters have not yet received end-to-end checks.
+## Data and metric contract
+
+All observed ratings are implicit positives; no rating threshold. Ranking uses
+all real items, excluding padding and previously seen interactions. Validation
+history is training only; the individual-model test path masks training and
+validation. Scores are exported unmasked for hybrid feature construction.
+`*-scores.npz` contains `scores`, original-ID `users` and `items`; padding is column
+zero. Load with NumPy's default `allow_pickle=False` and apply history masks.
+
+Metrics macro-average users with held-out positives. Novelty uses training counts
+with Laplace smoothing; diversity is pairwise genre Jaccard distance; calibration
+is genre JSD. Activity groups and head/tail definitions use training interactions.
+See RESEARCH.md for equations, normalization, fairness choices and limitations.
+
+ExactPop and Random deliberately differ from the supplied RecBole implementations:
+exact interaction counts and independent per-user scores, respectively. This is
+labelled in the outputs; they are not exact replays of supplied Pop/Random behavior.
+
+## Verification and remaining work
+
+The existing local course environment has RecBole 1.2.1, NumPy 1.26.4, SciPy 1.17.1,
+PyTorch 2.14.0 and pandas 3.0.6. Upstream loading emits pandas chained-assignment
+and non-writable-array warnings. This starter does not patch upstream code.
+The source checkout may have coursework edits; its commit alone is not an
+installation lock. Inspect evidence provenance before treating a replay as identical.
+
+Tests include hand-computed metrics, duplicate/seen-item rejection, score ID/split
+mismatch rejection, cohort isolation, regression recovery, divergence and reranking
+limits. The multi-seed development suite exercises the complete pipeline.
+Remaining: independent review, clean setup verification, temporal sensitivity,
+lecturer feedback, frozen final test evaluation, task-formatted report and peer
+feedback. More complexity is retained only when the evidence supports its value.
+
+AI assistance was used to implement this base. Review and understand the work,
+record actual contributions, and follow the course's assistance-disclosure rules.

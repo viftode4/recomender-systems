@@ -56,6 +56,7 @@ def main():
     parser.add_argument("--data-path", type=Path, required=True, help="Parent containing ml-100k atomic files")
     parser.add_argument("--out", type=Path, required=True, help="New run directory; existing paths are refused")
     parser.add_argument("--config", type=Path, default=ROOT / "config.json")
+    parser.add_argument("--fixed-epochs", action="store_true", help="Train fixed budget without consulting validation labels")
     parser.add_argument("--test", action="store_true", help="Explicitly evaluate held-out test after settings are frozen")
     args = parser.parse_args()
     settings = json.loads(args.config.read_text())
@@ -95,7 +96,7 @@ def main():
     manifest = {
         "model": args.model, "settings": settings, "split_sha256": fingerprints,
         "split_sizes": {key: len(value) for key, value in splits.items()},
-        "test_evaluated": args.test, "python": sys.version,
+        "test_evaluated": args.test, "validation_used_for_training": not baseline and not args.fixed_epochs, "python": sys.version,
         "versions": {p: importlib.metadata.version(p) for p in ["recbole", "numpy", "torch", "scipy"]},
         "source_sha256": {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
                           for p in [ROOT / "run.py", ROOT / "metrics.py"]},
@@ -110,7 +111,7 @@ def main():
         init_seed(config["seed"], config["reproducibility"])
         model = get_model(config["model"])(config, train.dataset).to(config["device"])
         trainer = get_trainer(config["MODEL_TYPE"], config["model"])(config, model)
-        trainer.fit(train, valid, saved=True, show_progress=False)
+        trainer.fit(train, None if args.fixed_epochs else valid, saved=True, show_progress=False)
         # Only deserialize the checkpoint produced by this process.
         checkpoint = torch.load(trainer.saved_model_file, map_location=config["device"], weights_only=False)
         model.load_state_dict(checkpoint["state_dict"])
