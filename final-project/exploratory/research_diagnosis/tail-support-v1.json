@@ -1,0 +1,2332 @@
+{
+  "definitions": {
+    "averaging": "Pooled recall is hits/positive pairs; conditional macro recall averages users with positives in that stratum. Empty strata use null.",
+    "bins": [
+      "0",
+      "1-5",
+      "6-20",
+      "21-50",
+      "51+"
+    ],
+    "coobservation": "Maximum over this user's TRAIN context items of the number of TRAIN users observing both source and target. The evaluated user never observes target in TRAIN.",
+    "genre": "Provided catalog genre tokens; fraction of target genres present in union of TRAIN-history genres, and maximum source-item genre Jaccard. This is descriptive overlap, not a fitted content predictor.",
+    "head": "Top ceil(20% of real catalog) by TRAIN count, ties by original item token; tail is complement.",
+    "limits": "Available cooccurrence or broad genre overlap is not proof of useful identifiable preference signal. Overlapping seed splits are not independent observations.",
+    "relevance": "Every original VALID record for the unchanged472 development users; no rating threshold.",
+    "support": "Number of distinct TRAIN users observing the target item, regardless of rating."
+  },
+  "diagnostic_source_sha256": "cb62f20c46a7fbf3ffea0f724872cf6c29c5551027074bcb9a716d5e249b8d35",
+  "earlier_diagnosis_sha256": "551e1f52fec75af317a10efcc0ffefbf78853cd7ad747d2b34fbe850481f9c55",
+  "fitting_performed": false,
+  "fresh_confirmation": false,
+  "metadata_sha256": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+  "raw_ratings_read": false,
+  "schema_version": 1,
+  "seeds": {
+    "2026": {
+      "TRAIN_observations": 80808,
+      "all_catalog": {
+        "available_evidence_all_positives": {
+          "fraction_with_any_shared_TRAIN_user": 0.9989258861439313,
+          "fraction_with_any_shared_genre": 0.9961331901181525,
+          "fraction_with_max_coobservation_at_least_5": 0.98796992481203,
+          "mean_max_context_item_genre_Jaccard": 0.8731865377730039,
+          "mean_max_coobservation": 91.72738990332975,
+          "mean_number_of_coobserved_context_items": 151.87475832438238,
+          "mean_target_genre_coverage_by_TRAIN_history": 0.988095238095238,
+          "median_max_coobservation": 81.0,
+          "pairs": 4655
+        },
+        "catalog_items": 1682,
+        "distinct_positive_items": 1026,
+        "hit_intersection": {
+          "binary_only": 8,
+          "both": 796,
+          "categorical_only": 24,
+          "neither": 3827
+        },
+        "models": {
+          "binary_expanded": {
+            "available_evidence_missed_positives": {
+              "fraction_with_any_shared_TRAIN_user": 0.9987016359387172,
+              "fraction_with_any_shared_genre": 0.9953258893793819,
+              "fraction_with_max_coobservation_at_least_5": 0.9854583225136329,
+              "mean_max_context_item_genre_Jaccard": 0.8768328572665108,
+              "mean_max_coobservation": 76.633601661906,
+              "mean_number_of_coobserved_context_items": 157.6634640353155,
+              "mean_target_genre_coverage_by_TRAIN_history": 0.9881199688392626,
+              "median_max_coobservation": 68.0,
+              "pairs": 3851
+            },
+            "hits@10": 804,
+            "macro_conditional_recall@10": 0.24332796217296543,
+            "median_positive_rank": 57.0,
+            "misses@10": 3851,
+            "pooled_recall@10": 0.17271750805585392,
+            "recommendation_slots": 4720
+          },
+          "categorical": {
+            "available_evidence_missed_positives": {
+              "fraction_with_any_shared_TRAIN_user": 0.9986962190352021,
+              "fraction_with_any_shared_genre": 0.9953063885267275,
+              "fraction_with_max_coobservation_at_least_5": 0.9853976531942633,
+              "mean_max_context_item_genre_Jaccard": 0.8771186440677965,
+              "mean_max_coobservation": 76.28161668839635,
+              "mean_number_of_coobserved_context_items": 157.64276401564538,
+              "mean_target_genre_coverage_by_TRAIN_history": 0.9880704041720991,
+              "median_max_coobservation": 68.0,
+              "pairs": 3835
+            },
+            "hits@10": 820,
+            "macro_conditional_recall@10": 0.2456088798199398,
+            "median_positive_rank": 56.0,
+            "misses@10": 3835,
+            "pooled_recall@10": 0.1761546723952739,
+            "recommendation_slots": 4720
+          }
+        },
+        "positive_pairs": 4655,
+        "users_with_positives": 472
+      },
+      "bins_all_catalog": {
+        "0": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 0.0,
+            "fraction_with_any_shared_genre": 1.0,
+            "fraction_with_max_coobservation_at_least_5": 0.0,
+            "mean_max_context_item_genre_Jaccard": 0.9,
+            "mean_max_coobservation": 0.0,
+            "mean_number_of_coobserved_context_items": 0.0,
+            "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+            "median_max_coobservation": 0.0,
+            "pairs": 5
+          },
+          "catalog_items": 23,
+          "distinct_positive_items": 5,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 5
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 0.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.0,
+                "mean_max_context_item_genre_Jaccard": 0.9,
+                "mean_max_coobservation": 0.0,
+                "mean_number_of_coobserved_context_items": 0.0,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 0.0,
+                "pairs": 5
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 1170.0,
+              "misses@10": 5,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 0.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.0,
+                "mean_max_context_item_genre_Jaccard": 0.9,
+                "mean_max_coobservation": 0.0,
+                "mean_number_of_coobserved_context_items": 0.0,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 0.0,
+                "pairs": 5
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 1179.0,
+              "misses@10": 5,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 5,
+          "users_with_positives": 5
+        },
+        "1-5": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9821428571428571,
+            "fraction_with_max_coobservation_at_least_5": 0.10714285714285714,
+            "mean_max_context_item_genre_Jaccard": 0.9300595238095237,
+            "mean_max_coobservation": 3.232142857142857,
+            "mean_number_of_coobserved_context_items": 106.82142857142857,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9821428571428571,
+            "median_max_coobservation": 3.0,
+            "pairs": 56
+          },
+          "catalog_items": 422,
+          "distinct_positive_items": 55,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 56
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9821428571428571,
+                "fraction_with_max_coobservation_at_least_5": 0.10714285714285714,
+                "mean_max_context_item_genre_Jaccard": 0.9300595238095237,
+                "mean_max_coobservation": 3.232142857142857,
+                "mean_number_of_coobserved_context_items": 106.82142857142857,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9821428571428571,
+                "median_max_coobservation": 3.0,
+                "pairs": 56
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 791.5,
+              "misses@10": 56,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9821428571428571,
+                "fraction_with_max_coobservation_at_least_5": 0.10714285714285714,
+                "mean_max_context_item_genre_Jaccard": 0.9300595238095237,
+                "mean_max_coobservation": 3.232142857142857,
+                "mean_number_of_coobserved_context_items": 106.82142857142857,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9821428571428571,
+                "median_max_coobservation": 3.0,
+                "pairs": 56
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 801.0,
+              "misses@10": 56,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 56,
+          "users_with_positives": 41
+        },
+        "21-50": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9902597402597403,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.8948322510822512,
+            "mean_max_coobservation": 27.13798701298701,
+            "mean_number_of_coobserved_context_items": 169.0633116883117,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9840367965367964,
+            "median_max_coobservation": 27.0,
+            "pairs": 616
+          },
+          "catalog_items": 336,
+          "distinct_positive_items": 272,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 2,
+            "categorical_only": 0,
+            "neither": 614
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.990228013029316,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8944896851248644,
+                "mean_max_coobservation": 27.136807817589577,
+                "mean_number_of_coobserved_context_items": 169.44625407166123,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9839847991313789,
+                "median_max_coobservation": 27.0,
+                "pairs": 614
+              },
+              "hits@10": 2,
+              "macro_conditional_recall@10": 0.008264462809917356,
+              "median_positive_rank": 218.5,
+              "misses@10": 614,
+              "pooled_recall@10": 0.003246753246753247,
+              "recommendation_slots": 11
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.990228013029316,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8944896851248644,
+                "mean_max_coobservation": 27.136807817589577,
+                "mean_number_of_coobserved_context_items": 169.44625407166123,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9839847991313789,
+                "median_max_coobservation": 27.0,
+                "pairs": 614
+              },
+              "hits@10": 2,
+              "macro_conditional_recall@10": 0.008264462809917356,
+              "median_positive_rank": 218.0,
+              "misses@10": 614,
+              "pooled_recall@10": 0.003246753246753247,
+              "recommendation_slots": 12
+            }
+          },
+          "positive_pairs": 616,
+          "users_with_positives": 242
+        },
+        "51+": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9978465679676986,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.8654104979811574,
+            "mean_max_coobservation": 109.6021534320323,
+            "mean_number_of_coobserved_context_items": 148.78519515477794,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9889412292507851,
+            "median_max_coobservation": 97.0,
+            "pairs": 3715
+          },
+          "catalog_items": 518,
+          "distinct_positive_items": 513,
+          "hit_intersection": {
+            "binary_only": 8,
+            "both": 794,
+            "categorical_only": 24,
+            "neither": 2889
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9972536903535874,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8681771369721936,
+                "mean_max_coobservation": 94.52523171987642,
+                "mean_number_of_coobserved_context_items": 155.5183659457604,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9892150131594004,
+                "median_max_coobservation": 86.0,
+                "pairs": 2913
+              },
+              "hits@10": 802,
+              "macro_conditional_recall@10": 0.28406421884518906,
+              "median_positive_rank": 37.0,
+              "misses@10": 2913,
+              "pooled_recall@10": 0.2158815612382234,
+              "recommendation_slots": 4709
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9972385226095961,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8685076515936025,
+                "mean_max_coobservation": 94.15809458060062,
+                "mean_number_of_coobserved_context_items": 155.47911632723506,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9891554481647682,
+                "median_max_coobservation": 85.0,
+                "pairs": 2897
+              },
+              "hits@10": 818,
+              "macro_conditional_recall@10": 0.2869060304705576,
+              "median_positive_rank": 37.0,
+              "misses@10": 2897,
+              "pooled_recall@10": 0.22018842530282637,
+              "recommendation_slots": 4708
+            }
+          },
+          "positive_pairs": 3715,
+          "users_with_positives": 468
+        },
+        "6-20": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9885931558935361,
+            "fraction_with_max_coobservation_at_least_5": 0.9961977186311787,
+            "mean_max_context_item_genre_Jaccard": 0.9197084917617236,
+            "mean_max_coobservation": 11.106463878326997,
+            "mean_number_of_coobserved_context_items": 167.73764258555133,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9866920152091255,
+            "median_max_coobservation": 11.0,
+            "pairs": 263
+          },
+          "catalog_items": 383,
+          "distinct_positive_items": 181,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 263
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9885931558935361,
+                "fraction_with_max_coobservation_at_least_5": 0.9961977186311787,
+                "mean_max_context_item_genre_Jaccard": 0.9197084917617236,
+                "mean_max_coobservation": 11.106463878326997,
+                "mean_number_of_coobserved_context_items": 167.73764258555133,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9866920152091255,
+                "median_max_coobservation": 11.0,
+                "pairs": 263
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 424.0,
+              "misses@10": 263,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9885931558935361,
+                "fraction_with_max_coobservation_at_least_5": 0.9961977186311787,
+                "mean_max_context_item_genre_Jaccard": 0.9197084917617236,
+                "mean_max_coobservation": 11.106463878326997,
+                "mean_number_of_coobserved_context_items": 167.73764258555133,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9866920152091255,
+                "median_max_coobservation": 11.0,
+                "pairs": 263
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 415.0,
+              "misses@10": 263,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 263,
+          "users_with_positives": 137
+        }
+      },
+      "bins_tail": {
+        "0": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 0.0,
+            "fraction_with_any_shared_genre": 1.0,
+            "fraction_with_max_coobservation_at_least_5": 0.0,
+            "mean_max_context_item_genre_Jaccard": 0.9,
+            "mean_max_coobservation": 0.0,
+            "mean_number_of_coobserved_context_items": 0.0,
+            "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+            "median_max_coobservation": 0.0,
+            "pairs": 5
+          },
+          "catalog_items": 23,
+          "distinct_positive_items": 5,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 5
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 0.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.0,
+                "mean_max_context_item_genre_Jaccard": 0.9,
+                "mean_max_coobservation": 0.0,
+                "mean_number_of_coobserved_context_items": 0.0,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 0.0,
+                "pairs": 5
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 1170.0,
+              "misses@10": 5,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 0.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.0,
+                "mean_max_context_item_genre_Jaccard": 0.9,
+                "mean_max_coobservation": 0.0,
+                "mean_number_of_coobserved_context_items": 0.0,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 0.0,
+                "pairs": 5
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 1179.0,
+              "misses@10": 5,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 5,
+          "users_with_positives": 5
+        },
+        "1-5": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9821428571428571,
+            "fraction_with_max_coobservation_at_least_5": 0.10714285714285714,
+            "mean_max_context_item_genre_Jaccard": 0.9300595238095237,
+            "mean_max_coobservation": 3.232142857142857,
+            "mean_number_of_coobserved_context_items": 106.82142857142857,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9821428571428571,
+            "median_max_coobservation": 3.0,
+            "pairs": 56
+          },
+          "catalog_items": 422,
+          "distinct_positive_items": 55,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 56
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9821428571428571,
+                "fraction_with_max_coobservation_at_least_5": 0.10714285714285714,
+                "mean_max_context_item_genre_Jaccard": 0.9300595238095237,
+                "mean_max_coobservation": 3.232142857142857,
+                "mean_number_of_coobserved_context_items": 106.82142857142857,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9821428571428571,
+                "median_max_coobservation": 3.0,
+                "pairs": 56
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 791.5,
+              "misses@10": 56,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9821428571428571,
+                "fraction_with_max_coobservation_at_least_5": 0.10714285714285714,
+                "mean_max_context_item_genre_Jaccard": 0.9300595238095237,
+                "mean_max_coobservation": 3.232142857142857,
+                "mean_number_of_coobserved_context_items": 106.82142857142857,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9821428571428571,
+                "median_max_coobservation": 3.0,
+                "pairs": 56
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 801.0,
+              "misses@10": 56,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 56,
+          "users_with_positives": 41
+        },
+        "21-50": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9902597402597403,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.8948322510822512,
+            "mean_max_coobservation": 27.13798701298701,
+            "mean_number_of_coobserved_context_items": 169.0633116883117,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9840367965367964,
+            "median_max_coobservation": 27.0,
+            "pairs": 616
+          },
+          "catalog_items": 336,
+          "distinct_positive_items": 272,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 2,
+            "categorical_only": 0,
+            "neither": 614
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.990228013029316,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8944896851248644,
+                "mean_max_coobservation": 27.136807817589577,
+                "mean_number_of_coobserved_context_items": 169.44625407166123,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9839847991313789,
+                "median_max_coobservation": 27.0,
+                "pairs": 614
+              },
+              "hits@10": 2,
+              "macro_conditional_recall@10": 0.008264462809917356,
+              "median_positive_rank": 218.5,
+              "misses@10": 614,
+              "pooled_recall@10": 0.003246753246753247,
+              "recommendation_slots": 11
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.990228013029316,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8944896851248644,
+                "mean_max_coobservation": 27.136807817589577,
+                "mean_number_of_coobserved_context_items": 169.44625407166123,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9839847991313789,
+                "median_max_coobservation": 27.0,
+                "pairs": 614
+              },
+              "hits@10": 2,
+              "macro_conditional_recall@10": 0.008264462809917356,
+              "median_positive_rank": 218.0,
+              "misses@10": 614,
+              "pooled_recall@10": 0.003246753246753247,
+              "recommendation_slots": 12
+            }
+          },
+          "positive_pairs": 616,
+          "users_with_positives": 242
+        },
+        "51+": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9955882352941177,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.8905147058823528,
+            "mean_max_coobservation": 46.733823529411765,
+            "mean_number_of_coobserved_context_items": 168.475,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9871323529411765,
+            "median_max_coobservation": 46.0,
+            "pairs": 680
+          },
+          "catalog_items": 181,
+          "distinct_positive_items": 176,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 4,
+            "categorical_only": 0,
+            "neither": 676
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9955621301775148,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8902366863905324,
+                "mean_max_coobservation": 46.744082840236686,
+                "mean_number_of_coobserved_context_items": 169.05029585798817,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9870562130177515,
+                "median_max_coobservation": 46.0,
+                "pairs": 676
+              },
+              "hits@10": 4,
+              "macro_conditional_recall@10": 0.00984251968503937,
+              "median_positive_rank": 120.0,
+              "misses@10": 676,
+              "pooled_recall@10": 0.0058823529411764705,
+              "recommendation_slots": 40
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9955621301775148,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8902366863905324,
+                "mean_max_coobservation": 46.744082840236686,
+                "mean_number_of_coobserved_context_items": 169.05029585798817,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9870562130177515,
+                "median_max_coobservation": 46.0,
+                "pairs": 676
+              },
+              "hits@10": 4,
+              "macro_conditional_recall@10": 0.00984251968503937,
+              "median_positive_rank": 119.0,
+              "misses@10": 676,
+              "pooled_recall@10": 0.0058823529411764705,
+              "recommendation_slots": 40
+            }
+          },
+          "positive_pairs": 680,
+          "users_with_positives": 254
+        },
+        "6-20": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9885931558935361,
+            "fraction_with_max_coobservation_at_least_5": 0.9961977186311787,
+            "mean_max_context_item_genre_Jaccard": 0.9197084917617236,
+            "mean_max_coobservation": 11.106463878326997,
+            "mean_number_of_coobserved_context_items": 167.73764258555133,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9866920152091255,
+            "median_max_coobservation": 11.0,
+            "pairs": 263
+          },
+          "catalog_items": 383,
+          "distinct_positive_items": 181,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 263
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9885931558935361,
+                "fraction_with_max_coobservation_at_least_5": 0.9961977186311787,
+                "mean_max_context_item_genre_Jaccard": 0.9197084917617236,
+                "mean_max_coobservation": 11.106463878326997,
+                "mean_number_of_coobserved_context_items": 167.73764258555133,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9866920152091255,
+                "median_max_coobservation": 11.0,
+                "pairs": 263
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 424.0,
+              "misses@10": 263,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9885931558935361,
+                "fraction_with_max_coobservation_at_least_5": 0.9961977186311787,
+                "mean_max_context_item_genre_Jaccard": 0.9197084917617236,
+                "mean_max_coobservation": 11.106463878326997,
+                "mean_number_of_coobserved_context_items": 167.73764258555133,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9866920152091255,
+                "median_max_coobservation": 11.0,
+                "pairs": 263
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 415.0,
+              "misses@10": 263,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 263,
+          "users_with_positives": 137
+        }
+      },
+      "development_users": 472,
+      "head_min_TRAIN_support": 81,
+      "recommendation_slots_per_model": 4720,
+      "tail": {
+        "available_evidence_all_positives": {
+          "fraction_with_any_shared_TRAIN_user": 0.9969135802469136,
+          "fraction_with_any_shared_genre": 0.9919753086419754,
+          "fraction_with_max_coobservation_at_least_5": 0.9654320987654321,
+          "mean_max_context_item_genre_Jaccard": 0.8982921810699587,
+          "mean_max_coobservation": 31.850617283950616,
+          "mean_number_of_coobserved_context_items": 165.92777777777778,
+          "mean_target_genre_coverage_by_TRAIN_history": 0.9857510288065843,
+          "median_max_coobservation": 32.5,
+          "pairs": 1620
+        },
+        "catalog_items": 1345,
+        "distinct_positive_items": 689,
+        "hit_intersection": {
+          "binary_only": 0,
+          "both": 6,
+          "categorical_only": 0,
+          "neither": 1614
+        },
+        "models": {
+          "binary_expanded": {
+            "available_evidence_missed_positives": {
+              "fraction_with_any_shared_TRAIN_user": 0.9969021065675341,
+              "fraction_with_any_shared_genre": 0.9919454770755886,
+              "fraction_with_max_coobservation_at_least_5": 0.9653035935563816,
+              "mean_max_context_item_genre_Jaccard": 0.8980689797604294,
+              "mean_max_coobservation": 31.823420074349443,
+              "mean_number_of_coobserved_context_items": 166.30421313506815,
+              "mean_target_genre_coverage_by_TRAIN_history": 0.9856980586534488,
+              "median_max_coobservation": 32.5,
+              "pairs": 1614
+            },
+            "hits@10": 6,
+            "macro_conditional_recall@10": 0.007711442786069651,
+            "median_positive_rank": 198.0,
+            "misses@10": 1614,
+            "pooled_recall@10": 0.003703703703703704,
+            "recommendation_slots": 51
+          },
+          "categorical": {
+            "available_evidence_missed_positives": {
+              "fraction_with_any_shared_TRAIN_user": 0.9969021065675341,
+              "fraction_with_any_shared_genre": 0.9919454770755886,
+              "fraction_with_max_coobservation_at_least_5": 0.9653035935563816,
+              "mean_max_context_item_genre_Jaccard": 0.8980689797604294,
+              "mean_max_coobservation": 31.823420074349443,
+              "mean_number_of_coobserved_context_items": 166.30421313506815,
+              "mean_target_genre_coverage_by_TRAIN_history": 0.9856980586534488,
+              "median_max_coobservation": 32.5,
+              "pairs": 1614
+            },
+            "hits@10": 6,
+            "macro_conditional_recall@10": 0.007711442786069651,
+            "median_positive_rank": 198.0,
+            "misses@10": 1614,
+            "pooled_recall@10": 0.003703703703703704,
+            "recommendation_slots": 52
+          }
+        },
+        "positive_pairs": 1620,
+        "users_with_positives": 335
+      },
+      "tail_max_TRAIN_support": 80
+    },
+    "2027": {
+      "TRAIN_observations": 80808,
+      "all_catalog": {
+        "available_evidence_all_positives": {
+          "fraction_with_any_shared_TRAIN_user": 0.9991273996509599,
+          "fraction_with_any_shared_genre": 0.9971640488656196,
+          "fraction_with_max_coobservation_at_least_5": 0.9890924956369983,
+          "mean_max_context_item_genre_Jaccard": 0.8662402351865702,
+          "mean_max_coobservation": 94.6151832460733,
+          "mean_number_of_coobserved_context_items": 147.4945462478185,
+          "mean_target_genre_coverage_by_TRAIN_history": 0.9900996218731821,
+          "median_max_coobservation": 84.5,
+          "pairs": 4584
+        },
+        "catalog_items": 1682,
+        "distinct_positive_items": 996,
+        "hit_intersection": {
+          "binary_only": 20,
+          "both": 808,
+          "categorical_only": 29,
+          "neither": 3727
+        },
+        "models": {
+          "binary_expanded": {
+            "available_evidence_missed_positives": {
+              "fraction_with_any_shared_TRAIN_user": 0.9989350372736954,
+              "fraction_with_any_shared_genre": 0.9965388711395101,
+              "fraction_with_max_coobservation_at_least_5": 0.9866879659211928,
+              "mean_max_context_item_genre_Jaccard": 0.870139839748466,
+              "mean_max_coobservation": 78.66453674121406,
+              "mean_number_of_coobserved_context_items": 153.18423855165068,
+              "mean_target_genre_coverage_by_TRAIN_history": 0.9899982250621229,
+              "median_max_coobservation": 71.0,
+              "pairs": 3756
+            },
+            "hits@10": 828,
+            "macro_conditional_recall@10": 0.23577020597318202,
+            "median_positive_rank": 53.0,
+            "misses@10": 3756,
+            "pooled_recall@10": 0.1806282722513089,
+            "recommendation_slots": 4720
+          },
+          "categorical": {
+            "available_evidence_missed_positives": {
+              "fraction_with_any_shared_TRAIN_user": 0.9989324793167867,
+              "fraction_with_any_shared_genre": 0.996530557779557,
+              "fraction_with_max_coobservation_at_least_5": 0.9866559914598345,
+              "mean_max_context_item_genre_Jaccard": 0.8703438941629494,
+              "mean_max_coobservation": 78.85641846810782,
+              "mean_number_of_coobserved_context_items": 153.19749132639444,
+              "mean_target_genre_coverage_by_TRAIN_history": 0.9901076416688906,
+              "median_max_coobservation": 71.0,
+              "pairs": 3747
+            },
+            "hits@10": 837,
+            "macro_conditional_recall@10": 0.23974489187061973,
+            "median_positive_rank": 53.0,
+            "misses@10": 3747,
+            "pooled_recall@10": 0.18259162303664922,
+            "recommendation_slots": 4720
+          }
+        },
+        "positive_pairs": 4584,
+        "users_with_positives": 472
+      },
+      "bins_all_catalog": {
+        "0": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 0.0,
+            "fraction_with_any_shared_genre": 1.0,
+            "fraction_with_max_coobservation_at_least_5": 0.0,
+            "mean_max_context_item_genre_Jaccard": 1.0,
+            "mean_max_coobservation": 0.0,
+            "mean_number_of_coobserved_context_items": 0.0,
+            "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+            "median_max_coobservation": 0.0,
+            "pairs": 4
+          },
+          "catalog_items": 27,
+          "distinct_positive_items": 4,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 4
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 0.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.0,
+                "mean_max_context_item_genre_Jaccard": 1.0,
+                "mean_max_coobservation": 0.0,
+                "mean_number_of_coobserved_context_items": 0.0,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 0.0,
+                "pairs": 4
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 1152.0,
+              "misses@10": 4,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 0.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.0,
+                "mean_max_context_item_genre_Jaccard": 1.0,
+                "mean_max_coobservation": 0.0,
+                "mean_number_of_coobserved_context_items": 0.0,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 0.0,
+                "pairs": 4
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 1145.5,
+              "misses@10": 4,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 4,
+          "users_with_positives": 4
+        },
+        "1-5": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 1.0,
+            "fraction_with_max_coobservation_at_least_5": 0.15384615384615385,
+            "mean_max_context_item_genre_Jaccard": 0.9102564102564101,
+            "mean_max_coobservation": 3.173076923076923,
+            "mean_number_of_coobserved_context_items": 94.0576923076923,
+            "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+            "median_max_coobservation": 3.0,
+            "pairs": 52
+          },
+          "catalog_items": 417,
+          "distinct_positive_items": 46,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 52
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.15384615384615385,
+                "mean_max_context_item_genre_Jaccard": 0.9102564102564101,
+                "mean_max_coobservation": 3.173076923076923,
+                "mean_number_of_coobserved_context_items": 94.0576923076923,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 3.0,
+                "pairs": 52
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 815.5,
+              "misses@10": 52,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.15384615384615385,
+                "mean_max_context_item_genre_Jaccard": 0.9102564102564101,
+                "mean_max_coobservation": 3.173076923076923,
+                "mean_number_of_coobserved_context_items": 94.0576923076923,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 3.0,
+                "pairs": 52
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 821.5,
+              "misses@10": 52,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 52,
+          "users_with_positives": 44
+        },
+        "21-50": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9967793880837359,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.8956713442220688,
+            "mean_max_coobservation": 27.164251207729468,
+            "mean_number_of_coobserved_context_items": 165.71497584541063,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9923510466988728,
+            "median_max_coobservation": 27.0,
+            "pairs": 621
+          },
+          "catalog_items": 343,
+          "distinct_positive_items": 274,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 1,
+            "neither": 620
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9967793880837359,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8956713442220688,
+                "mean_max_coobservation": 27.164251207729468,
+                "mean_number_of_coobserved_context_items": 165.71497584541063,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9923510466988728,
+                "median_max_coobservation": 27.0,
+                "pairs": 621
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 212.0,
+              "misses@10": 621,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 6
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9967741935483871,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8955030721966205,
+                "mean_max_coobservation": 27.166129032258066,
+                "mean_number_of_coobserved_context_items": 165.88709677419354,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9923387096774193,
+                "median_max_coobservation": 27.0,
+                "pairs": 620
+              },
+              "hits@10": 1,
+              "macro_conditional_recall@10": 0.001976284584980237,
+              "median_positive_rank": 206.0,
+              "misses@10": 620,
+              "pooled_recall@10": 0.001610305958132045,
+              "recommendation_slots": 7
+            }
+          },
+          "positive_pairs": 621,
+          "users_with_positives": 253
+        },
+        "51+": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.997557003257329,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.8568675352877306,
+            "mean_max_coobservation": 112.44598262757872,
+            "mean_number_of_coobserved_context_items": 143.68105320304016,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9895132102786827,
+            "median_max_coobservation": 101.0,
+            "pairs": 3684
+          },
+          "catalog_items": 519,
+          "distinct_positive_items": 515,
+          "hit_intersection": {
+            "binary_only": 20,
+            "both": 808,
+            "categorical_only": 28,
+            "neither": 2828
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9968487394957983,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.859278711484594,
+                "mean_max_coobservation": 96.63830532212886,
+                "mean_number_of_coobserved_context_items": 150.0581232492997,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9892098506069095,
+                "median_max_coobservation": 90.0,
+                "pairs": 2856
+              },
+              "hits@10": 828,
+              "macro_conditional_recall@10": 0.28435131920011064,
+              "median_positive_rank": 36.0,
+              "misses@10": 2856,
+              "pooled_recall@10": 0.2247557003257329,
+              "recommendation_slots": 4714
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9968398876404494,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.859562265917603,
+                "mean_max_coobservation": 96.92275280898876,
+                "mean_number_of_coobserved_context_items": 150.03370786516854,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9893551029962547,
+                "median_max_coobservation": 90.0,
+                "pairs": 2848
+              },
+              "hits@10": 836,
+              "macro_conditional_recall@10": 0.28731276675073014,
+              "median_positive_rank": 36.5,
+              "misses@10": 2848,
+              "pooled_recall@10": 0.2269272529858849,
+              "recommendation_slots": 4713
+            }
+          },
+          "positive_pairs": 3684,
+          "users_with_positives": 469
+        },
+        "6-20": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9910313901345291,
+            "fraction_with_max_coobservation_at_least_5": 0.9910313901345291,
+            "mean_max_context_item_genre_Jaccard": 0.9264573991031391,
+            "mean_max_coobservation": 10.90134529147982,
+            "mean_number_of_coobserved_context_items": 174.8609865470852,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9910313901345291,
+            "median_max_coobservation": 11.0,
+            "pairs": 223
+          },
+          "catalog_items": 376,
+          "distinct_positive_items": 157,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 223
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9910313901345291,
+                "fraction_with_max_coobservation_at_least_5": 0.9910313901345291,
+                "mean_max_context_item_genre_Jaccard": 0.9264573991031391,
+                "mean_max_coobservation": 10.90134529147982,
+                "mean_number_of_coobserved_context_items": 174.8609865470852,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9910313901345291,
+                "median_max_coobservation": 11.0,
+                "pairs": 223
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 480.0,
+              "misses@10": 223,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9910313901345291,
+                "fraction_with_max_coobservation_at_least_5": 0.9910313901345291,
+                "mean_max_context_item_genre_Jaccard": 0.9264573991031391,
+                "mean_max_coobservation": 10.90134529147982,
+                "mean_number_of_coobserved_context_items": 174.8609865470852,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9910313901345291,
+                "median_max_coobservation": 11.0,
+                "pairs": 223
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 483.0,
+              "misses@10": 223,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 223,
+          "users_with_positives": 124
+        }
+      },
+      "bins_tail": {
+        "0": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 0.0,
+            "fraction_with_any_shared_genre": 1.0,
+            "fraction_with_max_coobservation_at_least_5": 0.0,
+            "mean_max_context_item_genre_Jaccard": 1.0,
+            "mean_max_coobservation": 0.0,
+            "mean_number_of_coobserved_context_items": 0.0,
+            "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+            "median_max_coobservation": 0.0,
+            "pairs": 4
+          },
+          "catalog_items": 27,
+          "distinct_positive_items": 4,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 4
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 0.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.0,
+                "mean_max_context_item_genre_Jaccard": 1.0,
+                "mean_max_coobservation": 0.0,
+                "mean_number_of_coobserved_context_items": 0.0,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 0.0,
+                "pairs": 4
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 1152.0,
+              "misses@10": 4,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 0.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.0,
+                "mean_max_context_item_genre_Jaccard": 1.0,
+                "mean_max_coobservation": 0.0,
+                "mean_number_of_coobserved_context_items": 0.0,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 0.0,
+                "pairs": 4
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 1145.5,
+              "misses@10": 4,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 4,
+          "users_with_positives": 4
+        },
+        "1-5": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 1.0,
+            "fraction_with_max_coobservation_at_least_5": 0.15384615384615385,
+            "mean_max_context_item_genre_Jaccard": 0.9102564102564101,
+            "mean_max_coobservation": 3.173076923076923,
+            "mean_number_of_coobserved_context_items": 94.0576923076923,
+            "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+            "median_max_coobservation": 3.0,
+            "pairs": 52
+          },
+          "catalog_items": 417,
+          "distinct_positive_items": 46,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 52
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.15384615384615385,
+                "mean_max_context_item_genre_Jaccard": 0.9102564102564101,
+                "mean_max_coobservation": 3.173076923076923,
+                "mean_number_of_coobserved_context_items": 94.0576923076923,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 3.0,
+                "pairs": 52
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 815.5,
+              "misses@10": 52,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.15384615384615385,
+                "mean_max_context_item_genre_Jaccard": 0.9102564102564101,
+                "mean_max_coobservation": 3.173076923076923,
+                "mean_number_of_coobserved_context_items": 94.0576923076923,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 3.0,
+                "pairs": 52
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 821.5,
+              "misses@10": 52,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 52,
+          "users_with_positives": 44
+        },
+        "21-50": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9967793880837359,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.8956713442220688,
+            "mean_max_coobservation": 27.164251207729468,
+            "mean_number_of_coobserved_context_items": 165.71497584541063,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9923510466988728,
+            "median_max_coobservation": 27.0,
+            "pairs": 621
+          },
+          "catalog_items": 343,
+          "distinct_positive_items": 274,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 1,
+            "neither": 620
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9967793880837359,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8956713442220688,
+                "mean_max_coobservation": 27.164251207729468,
+                "mean_number_of_coobserved_context_items": 165.71497584541063,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9923510466988728,
+                "median_max_coobservation": 27.0,
+                "pairs": 621
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 212.0,
+              "misses@10": 621,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 6
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9967741935483871,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8955030721966205,
+                "mean_max_coobservation": 27.166129032258066,
+                "mean_number_of_coobserved_context_items": 165.88709677419354,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9923387096774193,
+                "median_max_coobservation": 27.0,
+                "pairs": 620
+              },
+              "hits@10": 1,
+              "macro_conditional_recall@10": 0.001976284584980237,
+              "median_positive_rank": 206.0,
+              "misses@10": 620,
+              "pooled_recall@10": 0.001610305958132045,
+              "recommendation_slots": 7
+            }
+          },
+          "positive_pairs": 621,
+          "users_with_positives": 253
+        },
+        "51+": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9968,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.8954400000000001,
+            "mean_max_coobservation": 46.952,
+            "mean_number_of_coobserved_context_items": 164.2352,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9895466666666667,
+            "median_max_coobservation": 46.0,
+            "pairs": 625
+          },
+          "catalog_items": 182,
+          "distinct_positive_items": 179,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 8,
+            "categorical_only": 1,
+            "neither": 616
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9967585089141004,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8948136142625607,
+                "mean_max_coobservation": 46.93517017828201,
+                "mean_number_of_coobserved_context_items": 165.27714748784442,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.989411129119395,
+                "median_max_coobservation": 46.0,
+                "pairs": 617
+              },
+              "hits@10": 8,
+              "macro_conditional_recall@10": 0.016728624535315983,
+              "median_positive_rank": 112.0,
+              "misses@10": 617,
+              "pooled_recall@10": 0.0128,
+              "recommendation_slots": 31
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9967532467532467,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8946428571428572,
+                "mean_max_coobservation": 46.91233766233766,
+                "mean_number_of_coobserved_context_items": 165.44480519480518,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9893939393939395,
+                "median_max_coobservation": 46.0,
+                "pairs": 616
+              },
+              "hits@10": 9,
+              "macro_conditional_recall@10": 0.020446096654275093,
+              "median_positive_rank": 113.0,
+              "misses@10": 616,
+              "pooled_recall@10": 0.0144,
+              "recommendation_slots": 36
+            }
+          },
+          "positive_pairs": 625,
+          "users_with_positives": 269
+        },
+        "6-20": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9910313901345291,
+            "fraction_with_max_coobservation_at_least_5": 0.9910313901345291,
+            "mean_max_context_item_genre_Jaccard": 0.9264573991031391,
+            "mean_max_coobservation": 10.90134529147982,
+            "mean_number_of_coobserved_context_items": 174.8609865470852,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9910313901345291,
+            "median_max_coobservation": 11.0,
+            "pairs": 223
+          },
+          "catalog_items": 376,
+          "distinct_positive_items": 157,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 223
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9910313901345291,
+                "fraction_with_max_coobservation_at_least_5": 0.9910313901345291,
+                "mean_max_context_item_genre_Jaccard": 0.9264573991031391,
+                "mean_max_coobservation": 10.90134529147982,
+                "mean_number_of_coobserved_context_items": 174.8609865470852,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9910313901345291,
+                "median_max_coobservation": 11.0,
+                "pairs": 223
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 480.0,
+              "misses@10": 223,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9910313901345291,
+                "fraction_with_max_coobservation_at_least_5": 0.9910313901345291,
+                "mean_max_context_item_genre_Jaccard": 0.9264573991031391,
+                "mean_max_coobservation": 10.90134529147982,
+                "mean_number_of_coobserved_context_items": 174.8609865470852,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9910313901345291,
+                "median_max_coobservation": 11.0,
+                "pairs": 223
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 483.0,
+              "misses@10": 223,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 223,
+          "users_with_positives": 124
+        }
+      },
+      "development_users": 472,
+      "head_min_TRAIN_support": 82,
+      "recommendation_slots_per_model": 4720,
+      "tail": {
+        "available_evidence_all_positives": {
+          "fraction_with_any_shared_TRAIN_user": 0.9973770491803279,
+          "fraction_with_any_shared_genre": 0.9960655737704918,
+          "fraction_with_max_coobservation_at_least_5": 0.9672131147540983,
+          "mean_max_context_item_genre_Jaccard": 0.9008493364558938,
+          "mean_max_coobservation": 32.006557377049184,
+          "mean_number_of_coobserved_context_items": 163.56786885245901,
+          "mean_target_genre_coverage_by_TRAIN_history": 0.9912896174863388,
+          "median_max_coobservation": 32.0,
+          "pairs": 1525
+        },
+        "catalog_items": 1345,
+        "distinct_positive_items": 660,
+        "hit_intersection": {
+          "binary_only": 0,
+          "both": 8,
+          "categorical_only": 2,
+          "neither": 1515
+        },
+        "models": {
+          "binary_expanded": {
+            "available_evidence_missed_positives": {
+              "fraction_with_any_shared_TRAIN_user": 0.997363216875412,
+              "fraction_with_any_shared_genre": 0.996044825313118,
+              "fraction_with_max_coobservation_at_least_5": 0.9670402109426499,
+              "mean_max_context_item_genre_Jaccard": 0.9006230969645604,
+              "mean_max_coobservation": 31.92089650626236,
+              "mean_number_of_coobserved_context_items": 163.98813447593935,
+              "mean_target_genre_coverage_by_TRAIN_history": 0.9912436827070974,
+              "median_max_coobservation": 32.0,
+              "pairs": 1517
+            },
+            "hits@10": 8,
+            "macro_conditional_recall@10": 0.007634943181818182,
+            "median_positive_rank": 195.0,
+            "misses@10": 1517,
+            "pooled_recall@10": 0.005245901639344262,
+            "recommendation_slots": 37
+          },
+          "categorical": {
+            "available_evidence_missed_positives": {
+              "fraction_with_any_shared_TRAIN_user": 0.9973597359735974,
+              "fraction_with_any_shared_genre": 0.996039603960396,
+              "fraction_with_max_coobservation_at_least_5": 0.966996699669967,
+              "mean_max_context_item_genre_Jaccard": 0.9004919063334905,
+              "mean_max_coobservation": 31.905610561056104,
+              "mean_number_of_coobserved_context_items": 164.12475247524753,
+              "mean_target_genre_coverage_by_TRAIN_history": 0.9912321232123212,
+              "median_max_coobservation": 32.0,
+              "pairs": 1515
+            },
+            "hits@10": 10,
+            "macro_conditional_recall@10": 0.010475852272727272,
+            "median_positive_rank": 194.0,
+            "misses@10": 1515,
+            "pooled_recall@10": 0.006557377049180328,
+            "recommendation_slots": 43
+          }
+        },
+        "positive_pairs": 1525,
+        "users_with_positives": 352
+      },
+      "tail_max_TRAIN_support": 81
+    },
+    "2028": {
+      "TRAIN_observations": 80808,
+      "all_catalog": {
+        "available_evidence_all_positives": {
+          "fraction_with_any_shared_TRAIN_user": 0.9980519480519481,
+          "fraction_with_any_shared_genre": 0.9978354978354979,
+          "fraction_with_max_coobservation_at_least_5": 0.9852813852813853,
+          "mean_max_context_item_genre_Jaccard": 0.8740517419088848,
+          "mean_max_coobservation": 92.56450216450216,
+          "mean_number_of_coobserved_context_items": 149.91190476190476,
+          "mean_target_genre_coverage_by_TRAIN_history": 0.9898088023088022,
+          "median_max_coobservation": 82.0,
+          "pairs": 4620
+        },
+        "catalog_items": 1682,
+        "distinct_positive_items": 1026,
+        "hit_intersection": {
+          "binary_only": 0,
+          "both": 843,
+          "categorical_only": 0,
+          "neither": 3777
+        },
+        "models": {
+          "binary_expanded": {
+            "available_evidence_missed_positives": {
+              "fraction_with_any_shared_TRAIN_user": 0.9976171564733916,
+              "fraction_with_any_shared_genre": 0.9973523960815462,
+              "fraction_with_max_coobservation_at_least_5": 0.9819962933545142,
+              "mean_max_context_item_genre_Jaccard": 0.8814321015671294,
+              "mean_max_coobservation": 76.62404024357956,
+              "mean_number_of_coobserved_context_items": 154.9684935133704,
+              "mean_target_genre_coverage_by_TRAIN_history": 0.990111199364575,
+              "median_max_coobservation": 68.0,
+              "pairs": 3777
+            },
+            "hits@10": 843,
+            "macro_conditional_recall@10": 0.24613977666574988,
+            "median_positive_rank": 54.0,
+            "misses@10": 3777,
+            "pooled_recall@10": 0.18246753246753247,
+            "recommendation_slots": 4720
+          },
+          "categorical": {
+            "available_evidence_missed_positives": {
+              "fraction_with_any_shared_TRAIN_user": 0.9976171564733916,
+              "fraction_with_any_shared_genre": 0.9973523960815462,
+              "fraction_with_max_coobservation_at_least_5": 0.9819962933545142,
+              "mean_max_context_item_genre_Jaccard": 0.8814321015671294,
+              "mean_max_coobservation": 76.62404024357956,
+              "mean_number_of_coobserved_context_items": 154.9684935133704,
+              "mean_target_genre_coverage_by_TRAIN_history": 0.990111199364575,
+              "median_max_coobservation": 68.0,
+              "pairs": 3777
+            },
+            "hits@10": 843,
+            "macro_conditional_recall@10": 0.24613977666574988,
+            "median_positive_rank": 54.0,
+            "misses@10": 3777,
+            "pooled_recall@10": 0.18246753246753247,
+            "recommendation_slots": 4720
+          }
+        },
+        "positive_pairs": 4620,
+        "users_with_positives": 472
+      },
+      "bins_all_catalog": {
+        "0": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 0.0,
+            "fraction_with_any_shared_genre": 1.0,
+            "fraction_with_max_coobservation_at_least_5": 0.0,
+            "mean_max_context_item_genre_Jaccard": 0.9444444444444444,
+            "mean_max_coobservation": 0.0,
+            "mean_number_of_coobserved_context_items": 0.0,
+            "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+            "median_max_coobservation": 0.0,
+            "pairs": 9
+          },
+          "catalog_items": 33,
+          "distinct_positive_items": 9,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 9
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 0.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.0,
+                "mean_max_context_item_genre_Jaccard": 0.9444444444444444,
+                "mean_max_coobservation": 0.0,
+                "mean_number_of_coobserved_context_items": 0.0,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 0.0,
+                "pairs": 9
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 1137.0,
+              "misses@10": 9,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 0.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.0,
+                "mean_max_context_item_genre_Jaccard": 0.9444444444444444,
+                "mean_max_coobservation": 0.0,
+                "mean_number_of_coobserved_context_items": 0.0,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 0.0,
+                "pairs": 9
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 1137.0,
+              "misses@10": 9,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 9,
+          "users_with_positives": 8
+        },
+        "1-5": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9861111111111112,
+            "fraction_with_max_coobservation_at_least_5": 0.18055555555555555,
+            "mean_max_context_item_genre_Jaccard": 0.9432870370370371,
+            "mean_max_coobservation": 3.1944444444444446,
+            "mean_number_of_coobserved_context_items": 96.86111111111111,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9791666666666666,
+            "median_max_coobservation": 3.0,
+            "pairs": 72
+          },
+          "catalog_items": 409,
+          "distinct_positive_items": 65,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 72
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9861111111111112,
+                "fraction_with_max_coobservation_at_least_5": 0.18055555555555555,
+                "mean_max_context_item_genre_Jaccard": 0.9432870370370371,
+                "mean_max_coobservation": 3.1944444444444446,
+                "mean_number_of_coobserved_context_items": 96.86111111111111,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9791666666666666,
+                "median_max_coobservation": 3.0,
+                "pairs": 72
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 760.0,
+              "misses@10": 72,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9861111111111112,
+                "fraction_with_max_coobservation_at_least_5": 0.18055555555555555,
+                "mean_max_context_item_genre_Jaccard": 0.9432870370370371,
+                "mean_max_coobservation": 3.1944444444444446,
+                "mean_number_of_coobserved_context_items": 96.86111111111111,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9791666666666666,
+                "median_max_coobservation": 3.0,
+                "pairs": 72
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 760.0,
+              "misses@10": 72,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 72,
+          "users_with_positives": 47
+        },
+        "21-50": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9953416149068323,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.9119306418219462,
+            "mean_max_coobservation": 27.17080745341615,
+            "mean_number_of_coobserved_context_items": 163.86801242236024,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9910973084886128,
+            "median_max_coobservation": 27.5,
+            "pairs": 644
+          },
+          "catalog_items": 351,
+          "distinct_positive_items": 279,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 1,
+            "categorical_only": 0,
+            "neither": 643
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.995334370139969,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.9124157594608606,
+                "mean_max_coobservation": 27.171073094867808,
+                "mean_number_of_coobserved_context_items": 164.07931570762054,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9917055469155004,
+                "median_max_coobservation": 28.0,
+                "pairs": 643
+              },
+              "hits@10": 1,
+              "macro_conditional_recall@10": 0.001968503937007874,
+              "median_positive_rank": 205.0,
+              "misses@10": 643,
+              "pooled_recall@10": 0.0015527950310559005,
+              "recommendation_slots": 15
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.995334370139969,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.9124157594608606,
+                "mean_max_coobservation": 27.171073094867808,
+                "mean_number_of_coobserved_context_items": 164.07931570762054,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9917055469155004,
+                "median_max_coobservation": 28.0,
+                "pairs": 643
+              },
+              "hits@10": 1,
+              "macro_conditional_recall@10": 0.001968503937007874,
+              "median_positive_rank": 205.0,
+              "misses@10": 643,
+              "pooled_recall@10": 0.0015527950310559005,
+              "recommendation_slots": 15
+            }
+          },
+          "positive_pairs": 644,
+          "users_with_positives": 254
+        },
+        "51+": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9983624454148472,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.8632966833021418,
+            "mean_max_coobservation": 111.17958515283843,
+            "mean_number_of_coobserved_context_items": 147.048307860262,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9896470160116448,
+            "median_max_coobservation": 100.0,
+            "pairs": 3664
+          },
+          "catalog_items": 510,
+          "distinct_positive_items": 506,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 842,
+            "categorical_only": 0,
+            "neither": 2822
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9978738483345145,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8698685498295703,
+                "mean_max_coobservation": 95.3756201275691,
+                "mean_number_of_coobserved_context_items": 152.91849751948973,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9898653437278525,
+                "median_max_coobservation": 87.0,
+                "pairs": 2822
+              },
+              "hits@10": 842,
+              "macro_conditional_recall@10": 0.2977086289699264,
+              "median_positive_rank": 35.0,
+              "misses@10": 2822,
+              "pooled_recall@10": 0.22980349344978165,
+              "recommendation_slots": 4705
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9978738483345145,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8698685498295703,
+                "mean_max_coobservation": 95.3756201275691,
+                "mean_number_of_coobserved_context_items": 152.91849751948973,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9898653437278525,
+                "median_max_coobservation": 87.0,
+                "pairs": 2822
+              },
+              "hits@10": 842,
+              "macro_conditional_recall@10": 0.2977086289699264,
+              "median_positive_rank": 35.0,
+              "misses@10": 2822,
+              "pooled_recall@10": 0.22980349344978165,
+              "recommendation_slots": 4705
+            }
+          },
+          "positive_pairs": 3664,
+          "users_with_positives": 471
+        },
+        "6-20": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 1.0,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.9147186147186148,
+            "mean_max_coobservation": 11.073593073593074,
+            "mean_number_of_coobserved_context_items": 178.8008658008658,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9917027417027418,
+            "median_max_coobservation": 11.0,
+            "pairs": 231
+          },
+          "catalog_items": 379,
+          "distinct_positive_items": 167,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 231
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.9147186147186148,
+                "mean_max_coobservation": 11.073593073593074,
+                "mean_number_of_coobserved_context_items": 178.8008658008658,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9917027417027418,
+                "median_max_coobservation": 11.0,
+                "pairs": 231
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 438.0,
+              "misses@10": 231,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.9147186147186148,
+                "mean_max_coobservation": 11.073593073593074,
+                "mean_number_of_coobserved_context_items": 178.8008658008658,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9917027417027418,
+                "median_max_coobservation": 11.0,
+                "pairs": 231
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 438.0,
+              "misses@10": 231,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 231,
+          "users_with_positives": 120
+        }
+      },
+      "bins_tail": {
+        "0": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 0.0,
+            "fraction_with_any_shared_genre": 1.0,
+            "fraction_with_max_coobservation_at_least_5": 0.0,
+            "mean_max_context_item_genre_Jaccard": 0.9444444444444444,
+            "mean_max_coobservation": 0.0,
+            "mean_number_of_coobserved_context_items": 0.0,
+            "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+            "median_max_coobservation": 0.0,
+            "pairs": 9
+          },
+          "catalog_items": 33,
+          "distinct_positive_items": 9,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 9
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 0.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.0,
+                "mean_max_context_item_genre_Jaccard": 0.9444444444444444,
+                "mean_max_coobservation": 0.0,
+                "mean_number_of_coobserved_context_items": 0.0,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 0.0,
+                "pairs": 9
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 1137.0,
+              "misses@10": 9,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 0.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 0.0,
+                "mean_max_context_item_genre_Jaccard": 0.9444444444444444,
+                "mean_max_coobservation": 0.0,
+                "mean_number_of_coobserved_context_items": 0.0,
+                "mean_target_genre_coverage_by_TRAIN_history": 1.0,
+                "median_max_coobservation": 0.0,
+                "pairs": 9
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 1137.0,
+              "misses@10": 9,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 9,
+          "users_with_positives": 8
+        },
+        "1-5": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9861111111111112,
+            "fraction_with_max_coobservation_at_least_5": 0.18055555555555555,
+            "mean_max_context_item_genre_Jaccard": 0.9432870370370371,
+            "mean_max_coobservation": 3.1944444444444446,
+            "mean_number_of_coobserved_context_items": 96.86111111111111,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9791666666666666,
+            "median_max_coobservation": 3.0,
+            "pairs": 72
+          },
+          "catalog_items": 409,
+          "distinct_positive_items": 65,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 72
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9861111111111112,
+                "fraction_with_max_coobservation_at_least_5": 0.18055555555555555,
+                "mean_max_context_item_genre_Jaccard": 0.9432870370370371,
+                "mean_max_coobservation": 3.1944444444444446,
+                "mean_number_of_coobserved_context_items": 96.86111111111111,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9791666666666666,
+                "median_max_coobservation": 3.0,
+                "pairs": 72
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 760.0,
+              "misses@10": 72,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9861111111111112,
+                "fraction_with_max_coobservation_at_least_5": 0.18055555555555555,
+                "mean_max_context_item_genre_Jaccard": 0.9432870370370371,
+                "mean_max_coobservation": 3.1944444444444446,
+                "mean_number_of_coobserved_context_items": 96.86111111111111,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9791666666666666,
+                "median_max_coobservation": 3.0,
+                "pairs": 72
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 760.0,
+              "misses@10": 72,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 72,
+          "users_with_positives": 47
+        },
+        "21-50": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9953416149068323,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.9119306418219462,
+            "mean_max_coobservation": 27.17080745341615,
+            "mean_number_of_coobserved_context_items": 163.86801242236024,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9910973084886128,
+            "median_max_coobservation": 27.5,
+            "pairs": 644
+          },
+          "catalog_items": 351,
+          "distinct_positive_items": 279,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 1,
+            "categorical_only": 0,
+            "neither": 643
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.995334370139969,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.9124157594608606,
+                "mean_max_coobservation": 27.171073094867808,
+                "mean_number_of_coobserved_context_items": 164.07931570762054,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9917055469155004,
+                "median_max_coobservation": 28.0,
+                "pairs": 643
+              },
+              "hits@10": 1,
+              "macro_conditional_recall@10": 0.001968503937007874,
+              "median_positive_rank": 205.0,
+              "misses@10": 643,
+              "pooled_recall@10": 0.0015527950310559005,
+              "recommendation_slots": 15
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.995334370139969,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.9124157594608606,
+                "mean_max_coobservation": 27.171073094867808,
+                "mean_number_of_coobserved_context_items": 164.07931570762054,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9917055469155004,
+                "median_max_coobservation": 28.0,
+                "pairs": 643
+              },
+              "hits@10": 1,
+              "macro_conditional_recall@10": 0.001968503937007874,
+              "median_positive_rank": 205.0,
+              "misses@10": 643,
+              "pooled_recall@10": 0.0015527950310559005,
+              "recommendation_slots": 15
+            }
+          },
+          "positive_pairs": 644,
+          "users_with_positives": 254
+        },
+        "51+": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 0.9936808846761453,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.8952080042127437,
+            "mean_max_coobservation": 47.317535545023695,
+            "mean_number_of_coobserved_context_items": 173.0047393364929,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9883096366508689,
+            "median_max_coobservation": 48.0,
+            "pairs": 633
+          },
+          "catalog_items": 173,
+          "distinct_positive_items": 169,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 10,
+            "categorical_only": 0,
+            "neither": 623
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9935794542536116,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8946495452113428,
+                "mean_max_coobservation": 47.25521669341894,
+                "mean_number_of_coobserved_context_items": 174.18780096308186,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9881219903691815,
+                "median_max_coobservation": 48.0,
+                "pairs": 623
+              },
+              "hits@10": 10,
+              "macro_conditional_recall@10": 0.02198509485094851,
+              "median_positive_rank": 118.0,
+              "misses@10": 623,
+              "pooled_recall@10": 0.01579778830963665,
+              "recommendation_slots": 45
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 0.9935794542536116,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.8946495452113428,
+                "mean_max_coobservation": 47.25521669341894,
+                "mean_number_of_coobserved_context_items": 174.18780096308186,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9881219903691815,
+                "median_max_coobservation": 48.0,
+                "pairs": 623
+              },
+              "hits@10": 10,
+              "macro_conditional_recall@10": 0.02198509485094851,
+              "median_positive_rank": 118.0,
+              "misses@10": 623,
+              "pooled_recall@10": 0.01579778830963665,
+              "recommendation_slots": 45
+            }
+          },
+          "positive_pairs": 633,
+          "users_with_positives": 246
+        },
+        "6-20": {
+          "available_evidence_all_positives": {
+            "fraction_with_any_shared_TRAIN_user": 1.0,
+            "fraction_with_any_shared_genre": 1.0,
+            "fraction_with_max_coobservation_at_least_5": 1.0,
+            "mean_max_context_item_genre_Jaccard": 0.9147186147186148,
+            "mean_max_coobservation": 11.073593073593074,
+            "mean_number_of_coobserved_context_items": 178.8008658008658,
+            "mean_target_genre_coverage_by_TRAIN_history": 0.9917027417027418,
+            "median_max_coobservation": 11.0,
+            "pairs": 231
+          },
+          "catalog_items": 379,
+          "distinct_positive_items": 167,
+          "hit_intersection": {
+            "binary_only": 0,
+            "both": 0,
+            "categorical_only": 0,
+            "neither": 231
+          },
+          "models": {
+            "binary_expanded": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.9147186147186148,
+                "mean_max_coobservation": 11.073593073593074,
+                "mean_number_of_coobserved_context_items": 178.8008658008658,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9917027417027418,
+                "median_max_coobservation": 11.0,
+                "pairs": 231
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 438.0,
+              "misses@10": 231,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            },
+            "categorical": {
+              "available_evidence_missed_positives": {
+                "fraction_with_any_shared_TRAIN_user": 1.0,
+                "fraction_with_any_shared_genre": 1.0,
+                "fraction_with_max_coobservation_at_least_5": 1.0,
+                "mean_max_context_item_genre_Jaccard": 0.9147186147186148,
+                "mean_max_coobservation": 11.073593073593074,
+                "mean_number_of_coobserved_context_items": 178.8008658008658,
+                "mean_target_genre_coverage_by_TRAIN_history": 0.9917027417027418,
+                "median_max_coobservation": 11.0,
+                "pairs": 231
+              },
+              "hits@10": 0,
+              "macro_conditional_recall@10": 0.0,
+              "median_positive_rank": 438.0,
+              "misses@10": 231,
+              "pooled_recall@10": 0.0,
+              "recommendation_slots": 0
+            }
+          },
+          "positive_pairs": 231,
+          "users_with_positives": 120
+        }
+      },
+      "development_users": 472,
+      "head_min_TRAIN_support": 81,
+      "recommendation_slots_per_model": 4720,
+      "tail": {
+        "available_evidence_all_positives": {
+          "fraction_with_any_shared_TRAIN_user": 0.9943360604153556,
+          "fraction_with_any_shared_genre": 0.9949653870358716,
+          "fraction_with_max_coobservation_at_least_5": 0.9572057898049088,
+          "mean_max_context_item_genre_Jaccard": 0.9072792112439688,
+          "mean_max_coobservation": 31.61611076148521,
+          "mean_number_of_coobserved_context_items": 165.71428571428572,
+          "mean_target_genre_coverage_by_TRAIN_history": 0.9895846444304593,
+          "median_max_coobservation": 32.0,
+          "pairs": 1589
+        },
+        "catalog_items": 1345,
+        "distinct_positive_items": 689,
+        "hit_intersection": {
+          "binary_only": 0,
+          "both": 11,
+          "categorical_only": 0,
+          "neither": 1578
+        },
+        "models": {
+          "binary_expanded": {
+            "available_evidence_missed_positives": {
+              "fraction_with_any_shared_TRAIN_user": 0.9942965779467681,
+              "fraction_with_any_shared_genre": 0.9949302915082383,
+              "fraction_with_max_coobservation_at_least_5": 0.9569074778200254,
+              "mean_max_context_item_genre_Jaccard": 0.9073299535276721,
+              "mean_max_coobservation": 31.49493029150824,
+              "mean_number_of_coobserved_context_items": 166.22243346007605,
+              "mean_target_genre_coverage_by_TRAIN_history": 0.989765525982256,
+              "median_max_coobservation": 32.0,
+              "pairs": 1578
+            },
+            "hits@10": 11,
+            "macro_conditional_recall@10": 0.010812624369475683,
+            "median_positive_rank": 198.0,
+            "misses@10": 1578,
+            "pooled_recall@10": 0.006922592825676526,
+            "recommendation_slots": 60
+          },
+          "categorical": {
+            "available_evidence_missed_positives": {
+              "fraction_with_any_shared_TRAIN_user": 0.9942965779467681,
+              "fraction_with_any_shared_genre": 0.9949302915082383,
+              "fraction_with_max_coobservation_at_least_5": 0.9569074778200254,
+              "mean_max_context_item_genre_Jaccard": 0.9073299535276721,
+              "mean_max_coobservation": 31.49493029150824,
+              "mean_number_of_coobserved_context_items": 166.22243346007605,
+              "mean_target_genre_coverage_by_TRAIN_history": 0.989765525982256,
+              "median_max_coobservation": 32.0,
+              "pairs": 1578
+            },
+            "hits@10": 11,
+            "macro_conditional_recall@10": 0.010812624369475683,
+            "median_positive_rank": 198.0,
+            "misses@10": 1578,
+            "pooled_recall@10": 0.006922592825676526,
+            "recommendation_slots": 60
+          }
+        },
+        "positive_pairs": 1589,
+        "users_with_positives": 343
+      },
+      "tail_max_TRAIN_support": 81
+    }
+  },
+  "selection_performed": false,
+  "source_manifest_sha256": "6026ab24394d7f3f18404246bee62063ba7edb6738d4fea28d2fda05a248300b",
+  "stage": "reused_development_support_diagnosis",
+  "test_read": false
+}

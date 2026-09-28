@@ -5,6 +5,15 @@ and structural learning after the original final test was already opened.
 MovieLens100K development results here are exploratory. The original report,
 code freeze and review archive remain unchanged.
 
+- [Why the gains remain small](research_diagnosis/README.md): prediction overlap,
+  error locations, item support, comparison with published evaluation protocols,
+  and a controlled data-volume experiment. With fixed query histories, increasing
+  donor users from 88 to 353 raised mean nDCG from 0.200030 to 0.237810. This
+  reduced-data sensitivity is not a gain over the full-data baseline.
+- [Completed independent pair-interaction study](context_interactions/FINDINGS.md):
+  exact target-excluded unary and pair coefficients, 135 declared configurations,
+  and an independent audit. Added interaction capacity under the same
+  reconstruction objective produced no meaningful ranking improvement.
 - [Completed categorical reconstruction study](categorical_reconstruction/FINDINGS.md):
   our exact constrained model, 243 candidate fits, shuffled-rating controls and
   matched hybrid/group analyses. Mean development nDCG rises from 0.261688 to

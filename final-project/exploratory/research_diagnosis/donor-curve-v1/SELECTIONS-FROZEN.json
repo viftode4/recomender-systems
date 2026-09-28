@@ -1,0 +1,25 @@
+{
+  "development_evaluated": false,
+  "protocol_sha256": "a83a864f9e717ef87e7ae74531e726e10b0e2dd8b4f403bf655aea9a1a8e7e3c",
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "selection_count": 12,
+  "selection_manifest_sha256": {
+    "2026": "9505d55f1f05775dc584e16b3a9f6177aebbb3f94dccf16e2d8217d9f9e2aaa3",
+    "2027": "0cbe1f03932684959745e4f0a36f217221a64e5c5ec816d77ddf61fb4a025e06",
+    "2028": "fbf9f91130250e5cc46f2726c0b852e84c429ebabae1ae2ee0fe951f5a8b4c35"
+  },
+  "source_sha256": {
+    "exploratory/categorical_reconstruction/model.py": "fac13a6303e50c10cc975a04155e0bc6f8b8cb6837880aa61fdd5eaf5eb4a0ee",
+    "exploratory/categorical_reconstruction/verify_results.py": "c10b39407ae5e31962a2c634174914f2fd880341b0e39e126a43607d34e08eab",
+    "exploratory/research_diagnosis/PROTOCOL_DATA_SCALING.md": "17f5de5ceaad8365cd69c5823a64ae161b6a544060904469f182026749c2497a",
+    "exploratory/research_diagnosis/data_scaling.py": "e3af1726dd66172f12c0c2b1ed164500056e44d1ad40f57965c5e27958dc74f9",
+    "exploratory/research_diagnosis/diagnostics.py": "c2db5dc11d38d6708866173447be659afcdb84eba5044877f120ef34fd8e8e73"
+  },
+  "source_study_manifest_sha256": "6026ab24394d7f3f18404246bee62063ba7edb6738d4fea28d2fda05a248300b",
+  "status": "all_selections_frozen",
+  "test_read": false
+}

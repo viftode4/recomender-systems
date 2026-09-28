@@ -1,0 +1,78 @@
+{
+  "candidate_fits": 108,
+  "development_users": 472,
+  "donor_counts": [
+    88,
+    176,
+    264,
+    353
+  ],
+  "fractions": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "fresh_confirmation": false,
+  "inner_query_users": 118,
+  "input_signature_sha256": {
+    "2026": "4ddc123234a7fda7da3ed2f436d3556cdaa9486f9d24df1dc2e6065844396b91",
+    "2027": "cbb7f22230a01ea3cebe701ec2d123460258c803d6c01f29da537a9c38b4d8ae",
+    "2028": "09d12db41cf31ced11c0d73a6b2bca280a62f78cb616763a39095a6f159d0710"
+  },
+  "lambdas": [
+    10.0,
+    30.0,
+    50.0,
+    100.0,
+    250.0,
+    300.0,
+    1000.0,
+    3000.0,
+    10000.0
+  ],
+  "original_training_source_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "exploratory/categorical_reconstruction/PROTOCOL.md": "1f65576ce366fe0e6e337aa66652d01671247384b20d07cdbbe9ff835a10ef54",
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "exploratory/categorical_reconstruction/hybrid.py": "154807a25f7946251fec21aa3697a5af929aa74bce53c9796ad3018be6007079",
+    "exploratory/categorical_reconstruction/model.py": "fac13a6303e50c10cc975a04155e0bc6f8b8cb6837880aa61fdd5eaf5eb4a0ee",
+    "exploratory/categorical_reconstruction/run_experiment.py": "0cfcd87f84b2003461cc7393c1849b44009ce63a5ef06c7de65f343d5d7b217a",
+    "field_reference_comparison.py": "60fa86b8adedd10705aea9073437f35e6252d4703bd8da7fd4ed7a95f3be78fd",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "query_history": "complete original TRAIN, unchanged at every donor count",
+  "runtime": {
+    "machine": "arm64",
+    "numerical_threads": 1,
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.17.1",
+    "system": "Darwin"
+  },
+  "schema_version": 1,
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "selection_metric": "inner_query_all_observed_ndcg_at_10",
+  "selection_tie": "first declared lambda",
+  "source_selection_freeze_sha256": "3f96e3605ea2fa096fe16337f181db4505294e7f240d931f728b24fe50d27641",
+  "source_sha256": {
+    "exploratory/categorical_reconstruction/model.py": "fac13a6303e50c10cc975a04155e0bc6f8b8cb6837880aa61fdd5eaf5eb4a0ee",
+    "exploratory/categorical_reconstruction/verify_results.py": "c10b39407ae5e31962a2c634174914f2fd880341b0e39e126a43607d34e08eab",
+    "exploratory/research_diagnosis/PROTOCOL_DATA_SCALING.md": "17f5de5ceaad8365cd69c5823a64ae161b6a544060904469f182026749c2497a",
+    "exploratory/research_diagnosis/data_scaling.py": "e3af1726dd66172f12c0c2b1ed164500056e44d1ad40f57965c5e27958dc74f9",
+    "exploratory/research_diagnosis/diagnostics.py": "c2db5dc11d38d6708866173447be659afcdb84eba5044877f120ef34fd8e8e73"
+  },
+  "source_study_manifest_sha256": "6026ab24394d7f3f18404246bee62063ba7edb6738d4fea28d2fda05a248300b",
+  "split_rng_offset": 30011,
+  "study_kind": "post_final_test_fixed_query_donor_sensitivity",
+  "test_read": false
+}

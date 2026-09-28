@@ -1,0 +1,313 @@
+{
+  "candidate_budgets": {
+    "binary": 9,
+    "nested": 45,
+    "pair_only": 36,
+    "unique_fits_per_seed": 45
+  },
+  "claims": "Descriptive reused-development evidence, unequal family search budgets, overlapping seeds, no fresh confirmation or architectural priority claim.",
+  "cohorts": "Reuse original seeded half-user meta-fit/development partition; only meta-fit validation pairs reach candidate scoring.",
+  "dataset_test_previously_evaluated": true,
+  "fresh_confirmation": false,
+  "groups": "TRAIN activity terciles over every source user and TRAIN top20% popularity head versus tail; frozen definitions, no group metric selects a model. Each endpoint uses its own eligible user cohort.",
+  "inference": "Original TRAIN only; no validation context assimilation.",
+  "lambdas": [
+    10.0,
+    30.0,
+    50.0,
+    100.0,
+    250.0,
+    300.0,
+    1000.0,
+    3000.0,
+    10000.0
+  ],
+  "models": [
+    "binary",
+    "pair_only",
+    "nested"
+  ],
+  "normalization": "TRAIN-only nu=sum_u choose(history_size_u,2)/sum_u history_size_u; beta=0 is the exact binary submodel.",
+  "ordered_candidates": [
+    {
+      "candidate_id": "lambda-10-beta-0",
+      "pair_weight": 0.0,
+      "penalty": 10.0
+    },
+    {
+      "candidate_id": "lambda-30-beta-0",
+      "pair_weight": 0.0,
+      "penalty": 30.0
+    },
+    {
+      "candidate_id": "lambda-50-beta-0",
+      "pair_weight": 0.0,
+      "penalty": 50.0
+    },
+    {
+      "candidate_id": "lambda-100-beta-0",
+      "pair_weight": 0.0,
+      "penalty": 100.0
+    },
+    {
+      "candidate_id": "lambda-250-beta-0",
+      "pair_weight": 0.0,
+      "penalty": 250.0
+    },
+    {
+      "candidate_id": "lambda-300-beta-0",
+      "pair_weight": 0.0,
+      "penalty": 300.0
+    },
+    {
+      "candidate_id": "lambda-1000-beta-0",
+      "pair_weight": 0.0,
+      "penalty": 1000.0
+    },
+    {
+      "candidate_id": "lambda-3000-beta-0",
+      "pair_weight": 0.0,
+      "penalty": 3000.0
+    },
+    {
+      "candidate_id": "lambda-10000-beta-0",
+      "pair_weight": 0.0,
+      "penalty": 10000.0
+    },
+    {
+      "candidate_id": "lambda-10-beta-0.01",
+      "pair_weight": 0.01,
+      "penalty": 10.0
+    },
+    {
+      "candidate_id": "lambda-10-beta-0.1",
+      "pair_weight": 0.1,
+      "penalty": 10.0
+    },
+    {
+      "candidate_id": "lambda-10-beta-1",
+      "pair_weight": 1.0,
+      "penalty": 10.0
+    },
+    {
+      "candidate_id": "lambda-10-beta-10",
+      "pair_weight": 10.0,
+      "penalty": 10.0
+    },
+    {
+      "candidate_id": "lambda-30-beta-0.01",
+      "pair_weight": 0.01,
+      "penalty": 30.0
+    },
+    {
+      "candidate_id": "lambda-30-beta-0.1",
+      "pair_weight": 0.1,
+      "penalty": 30.0
+    },
+    {
+      "candidate_id": "lambda-30-beta-1",
+      "pair_weight": 1.0,
+      "penalty": 30.0
+    },
+    {
+      "candidate_id": "lambda-30-beta-10",
+      "pair_weight": 10.0,
+      "penalty": 30.0
+    },
+    {
+      "candidate_id": "lambda-50-beta-0.01",
+      "pair_weight": 0.01,
+      "penalty": 50.0
+    },
+    {
+      "candidate_id": "lambda-50-beta-0.1",
+      "pair_weight": 0.1,
+      "penalty": 50.0
+    },
+    {
+      "candidate_id": "lambda-50-beta-1",
+      "pair_weight": 1.0,
+      "penalty": 50.0
+    },
+    {
+      "candidate_id": "lambda-50-beta-10",
+      "pair_weight": 10.0,
+      "penalty": 50.0
+    },
+    {
+      "candidate_id": "lambda-100-beta-0.01",
+      "pair_weight": 0.01,
+      "penalty": 100.0
+    },
+    {
+      "candidate_id": "lambda-100-beta-0.1",
+      "pair_weight": 0.1,
+      "penalty": 100.0
+    },
+    {
+      "candidate_id": "lambda-100-beta-1",
+      "pair_weight": 1.0,
+      "penalty": 100.0
+    },
+    {
+      "candidate_id": "lambda-100-beta-10",
+      "pair_weight": 10.0,
+      "penalty": 100.0
+    },
+    {
+      "candidate_id": "lambda-250-beta-0.01",
+      "pair_weight": 0.01,
+      "penalty": 250.0
+    },
+    {
+      "candidate_id": "lambda-250-beta-0.1",
+      "pair_weight": 0.1,
+      "penalty": 250.0
+    },
+    {
+      "candidate_id": "lambda-250-beta-1",
+      "pair_weight": 1.0,
+      "penalty": 250.0
+    },
+    {
+      "candidate_id": "lambda-250-beta-10",
+      "pair_weight": 10.0,
+      "penalty": 250.0
+    },
+    {
+      "candidate_id": "lambda-300-beta-0.01",
+      "pair_weight": 0.01,
+      "penalty": 300.0
+    },
+    {
+      "candidate_id": "lambda-300-beta-0.1",
+      "pair_weight": 0.1,
+      "penalty": 300.0
+    },
+    {
+      "candidate_id": "lambda-300-beta-1",
+      "pair_weight": 1.0,
+      "penalty": 300.0
+    },
+    {
+      "candidate_id": "lambda-300-beta-10",
+      "pair_weight": 10.0,
+      "penalty": 300.0
+    },
+    {
+      "candidate_id": "lambda-1000-beta-0.01",
+      "pair_weight": 0.01,
+      "penalty": 1000.0
+    },
+    {
+      "candidate_id": "lambda-1000-beta-0.1",
+      "pair_weight": 0.1,
+      "penalty": 1000.0
+    },
+    {
+      "candidate_id": "lambda-1000-beta-1",
+      "pair_weight": 1.0,
+      "penalty": 1000.0
+    },
+    {
+      "candidate_id": "lambda-1000-beta-10",
+      "pair_weight": 10.0,
+      "penalty": 1000.0
+    },
+    {
+      "candidate_id": "lambda-3000-beta-0.01",
+      "pair_weight": 0.01,
+      "penalty": 3000.0
+    },
+    {
+      "candidate_id": "lambda-3000-beta-0.1",
+      "pair_weight": 0.1,
+      "penalty": 3000.0
+    },
+    {
+      "candidate_id": "lambda-3000-beta-1",
+      "pair_weight": 1.0,
+      "penalty": 3000.0
+    },
+    {
+      "candidate_id": "lambda-3000-beta-10",
+      "pair_weight": 10.0,
+      "penalty": 3000.0
+    },
+    {
+      "candidate_id": "lambda-10000-beta-0.01",
+      "pair_weight": 0.01,
+      "penalty": 10000.0
+    },
+    {
+      "candidate_id": "lambda-10000-beta-0.1",
+      "pair_weight": 0.1,
+      "penalty": 10000.0
+    },
+    {
+      "candidate_id": "lambda-10000-beta-1",
+      "pair_weight": 1.0,
+      "penalty": 10000.0
+    },
+    {
+      "candidate_id": "lambda-10000-beta-10",
+      "pair_weight": 10.0,
+      "penalty": 10000.0
+    }
+  ],
+  "pair_weights": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "ranking": "One unbounded score array for all-observed and liked-record endpoints; exclude PAD and original TRAIN records; k=10.",
+  "references": [
+    "locked_binary",
+    "locked_categorical"
+  ],
+  "references_policy": "Previously selected expanded binary and categorical reconstruction scores are frozen context, never inputs or tuning targets.",
+  "runtime": {
+    "machine": "arm64",
+    "numerical_threads": 1,
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.17.1",
+    "system": "Darwin"
+  },
+  "schema_version": 1,
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "selection_boundary": "All declared seed manifests and locked reference scores are hash-sealed before any development rating is parsed or metric computed.",
+  "selection_metric": "meta_fit_all_observed_ndcg@10",
+  "selection_rule": "Binary candidates in declared lambda order, then pair candidates in lambda-major pair-weight order; exact ties retain the first maximum.",
+  "source_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "exploratory/categorical_reconstruction/PROTOCOL.md": "1f65576ce366fe0e6e337aa66652d01671247384b20d07cdbbe9ff835a10ef54",
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "exploratory/categorical_reconstruction/hybrid.py": "154807a25f7946251fec21aa3697a5af929aa74bce53c9796ad3018be6007079",
+    "exploratory/categorical_reconstruction/model.py": "fac13a6303e50c10cc975a04155e0bc6f8b8cb6837880aa61fdd5eaf5eb4a0ee",
+    "exploratory/categorical_reconstruction/run_experiment.py": "0cfcd87f84b2003461cc7393c1849b44009ce63a5ef06c7de65f343d5d7b217a",
+    "exploratory/context_interactions/PROTOCOL.md": "13346bcd248876c5ca90a63a8c020142256659e7ede2677bbc8d65bc65cdf9fc",
+    "exploratory/context_interactions/model.py": "87f5af9e8a08407ad2b70d5f62f179b715e7e76ce6fdae87e51c2597bdeb16af",
+    "exploratory/context_interactions/run_experiment.py": "5114943ca22425625b1bd8cde8cb016e6b6c752fba8379169474f91d15987c73",
+    "field_reference_comparison.py": "60fa86b8adedd10705aea9073437f35e6252d4703bd8da7fd4ed7a95f3be78fd",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "package_project.py": "1c43860d30dd33894ac283f1bb2c1aa75c3488ae33839d54b9516dbe0b684052",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "stage": "reused_development",
+  "study_kind": "post_final_test_exploratory",
+  "target_mask": "Exclude every target own-item binary feature and every pair containing that target.",
+  "test_evaluated": false,
+  "test_read": false,
+  "training_inputs": "Binary TRAIN histories and all distinct unordered item conjunctions; no ratings, metadata or pretrained scores enter model fitting.",
+  "training_target": "Original TRAIN observation indicator; missing records are reconstruction zeros, not confirmed dislikes."
+}

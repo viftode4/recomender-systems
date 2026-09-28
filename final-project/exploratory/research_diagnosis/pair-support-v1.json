@@ -1,0 +1,122 @@
+{
+  "interpretation": "Support counts measure available examples for conjunctions. They do not establish a prediction ceiling or prove that more users will improve accuracy. Rare pairs can share information through other features.",
+  "seeds": [
+    {
+      "all_distinct_item_pairs": 1413721,
+      "density": 0.0509467721984256,
+      "items_without_padding": 1682,
+      "observed_distinct_item_pairs": 857888,
+      "observed_source_pair_support_quantiles": {
+        "0": 1.0,
+        "0.25": 1.0,
+        "0.5": 3.0,
+        "0.75": 8.0,
+        "0.9": 19.0,
+        "0.99": 65.0,
+        "1": 337.0
+      },
+      "observed_source_pairs_supported_by_at_most": {
+        "1": {
+          "count": 281001,
+          "fraction": 0.32754975008392706
+        },
+        "10": {
+          "count": 689921,
+          "fraction": 0.8042087078966019
+        },
+        "2": {
+          "count": 403716,
+          "fraction": 0.47059289790741915
+        },
+        "5": {
+          "count": 574617,
+          "fraction": 0.6698042168674698
+        }
+      },
+      "observed_training_pairs": 80808,
+      "seed": 2026,
+      "source_manifest_sha256": "1a5d389c0928fbe3aa11177efc7408a139a9447e88973de5068db156971b47d9",
+      "train_sha256": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+      "users": 943
+    },
+    {
+      "all_distinct_item_pairs": 1413721,
+      "density": 0.0509467721984256,
+      "items_without_padding": 1682,
+      "observed_distinct_item_pairs": 855931,
+      "observed_source_pair_support_quantiles": {
+        "0": 1.0,
+        "0.25": 1.0,
+        "0.5": 3.0,
+        "0.75": 8.0,
+        "0.9": 19.0,
+        "0.99": 65.0,
+        "1": 325.0
+      },
+      "observed_source_pairs_supported_by_at_most": {
+        "1": {
+          "count": 277960,
+          "fraction": 0.3247458031079608
+        },
+        "10": {
+          "count": 688144,
+          "fraction": 0.803971348157737
+        },
+        "2": {
+          "count": 402085,
+          "fraction": 0.46976333372666723
+        },
+        "5": {
+          "count": 572651,
+          "fraction": 0.6690387426089253
+        }
+      },
+      "observed_training_pairs": 80808,
+      "seed": 2027,
+      "source_manifest_sha256": "f8742f1f7783c61d3eba430075ff9f8be57b0a47bbf6e5a7818d5364f9f179ee",
+      "train_sha256": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+      "users": 943
+    },
+    {
+      "all_distinct_item_pairs": 1413721,
+      "density": 0.0509467721984256,
+      "items_without_padding": 1682,
+      "observed_distinct_item_pairs": 852658,
+      "observed_source_pair_support_quantiles": {
+        "0": 1.0,
+        "0.25": 1.0,
+        "0.5": 3.0,
+        "0.75": 8.0,
+        "0.9": 19.0,
+        "0.99": 65.0,
+        "1": 301.0
+      },
+      "observed_source_pairs_supported_by_at_most": {
+        "1": {
+          "count": 275201,
+          "fraction": 0.3227566034682135
+        },
+        "10": {
+          "count": 684611,
+          "fraction": 0.8029139467406627
+        },
+        "2": {
+          "count": 396722,
+          "fraction": 0.46527681673074084
+        },
+        "5": {
+          "count": 568299,
+          "fraction": 0.6665028651581291
+        }
+      },
+      "observed_training_pairs": 80808,
+      "seed": 2028,
+      "source_manifest_sha256": "f57ee23ce094b51ab774ca5b4bc228f89480d053e49e128264628ec285075cd3",
+      "train_sha256": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+      "users": 943
+    }
+  ],
+  "stage": "TRAIN-only descriptive diagnosis",
+  "test_read": false,
+  "validation_read": false
+}

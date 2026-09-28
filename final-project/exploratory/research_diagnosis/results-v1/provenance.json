@@ -1,0 +1,46 @@
+{
+  "diagnostic_source_sha256": {
+    "exploratory/categorical_reconstruction/verify_results.py": "c10b39407ae5e31962a2c634174914f2fd880341b0e39e126a43607d34e08eab",
+    "exploratory/research_diagnosis/diagnostics.py": "c2db5dc11d38d6708866173447be659afcdb84eba5044877f120ef34fd8e8e73"
+  },
+  "elapsed_seconds": 6.527270750026219,
+  "fitting_performed": false,
+  "fresh_confirmation": false,
+  "independent_ndcg_replay": "All eight selected score arrays reproduce saved development nDCG@10 within 2e-12 for every seed.",
+  "input_boundary": "Only sealed source code/metadata, TRAIN categories/pairs, VALID pair IDs and already selected development scores. No raw .inter join, TEST split, or final-test output.",
+  "runtime": {
+    "machine": "arm64",
+    "numerical_threads": 1,
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.17.1",
+    "system": "Darwin"
+  },
+  "schema_version": 1,
+  "selection_performed": false,
+  "source_aggregates_sha256": "502e6db268d1d42ba8bed84db6447efef8693be82907cfefe38773d11530def4",
+  "source_selection_freeze_sha256": "3f96e3605ea2fa096fe16337f181db4505294e7f240d931f728b24fe50d27641",
+  "source_selection_manifest_sha256": {
+    "2026": "d7454d373c6a31c6812c31c9635c48d0ca2f4084377e60c86021c126a30212c2",
+    "2027": "37c00531243cc595d0c3aa0237f281cec04259fa87c9a4f6e0351562cacc23c8",
+    "2028": "cdd65d5b4977ec349cb18dc9a946de43435e26530d239bbb16089f653ec7117f"
+  },
+  "source_study_manifest_sha256": "6026ab24394d7f3f18404246bee62063ba7edb6738d4fea28d2fda05a248300b",
+  "source_training_and_selection_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "exploratory/categorical_reconstruction/PROTOCOL.md": "1f65576ce366fe0e6e337aa66652d01671247384b20d07cdbbe9ff835a10ef54",
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "exploratory/categorical_reconstruction/hybrid.py": "154807a25f7946251fec21aa3697a5af929aa74bce53c9796ad3018be6007079",
+    "exploratory/categorical_reconstruction/model.py": "fac13a6303e50c10cc975a04155e0bc6f8b8cb6837880aa61fdd5eaf5eb4a0ee",
+    "exploratory/categorical_reconstruction/run_experiment.py": "0cfcd87f84b2003461cc7393c1849b44009ce63a5ef06c7de65f343d5d7b217a",
+    "field_reference_comparison.py": "60fa86b8adedd10705aea9073437f35e6252d4703bd8da7fd4ed7a95f3be78fd",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "stage": "reused_development",
+  "test_read": false
+}
