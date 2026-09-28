@@ -1,0 +1,70 @@
+{
+  "data_sha256": {
+    "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+    "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+    "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+  },
+  "dataset_test_previously_evaluated": true,
+  "estimate_caution": "Excludes checkpoint prediction/evaluation/replay and process contention; three workers may reduce wall time.",
+  "estimate_epochs": 100,
+  "estimated_three_seed_2000_epoch_serial_fit_seconds": 43426.986503996886,
+  "estimated_three_seed_serial_fit_seconds": 2171.3493251998443,
+  "graph_seconds": 0.12235824999515899,
+  "items": 1682,
+  "neighbors_sha256": "423f8d1cd2f7328d9bccc1db4c109fd757d1888c8cf9041cb66cd8f9073301a5",
+  "purpose": "TRAIN-only runtime estimate; no validation metrics read or evaluated.",
+  "runtime": {
+    "machine": "arm64",
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.17.1",
+    "system": "Darwin",
+    "torch": "2.14.0"
+  },
+  "seed": 2026,
+  "source_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "exploratory/addressed_evidence/PROTOCOL.md": "5c869a9b6772c4816006e80a05687155bab0d978da7749f8b7f4fc98cf23618c",
+    "exploratory/addressed_evidence/model.py": "7677a451e9eeb2b197ab9312b2fa744ae3b211131dbff2329c88402e01214a1d",
+    "exploratory/addressed_evidence/run_experiment.py": "4ece6169ab4e658622c28beb322e4a8d791ecd805bc517cc9613f678cb92e006",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "joint_field_experiment.py": "e2228dd51c4ac909c587eb98cff795872d23232dd68e3790ce97957c40e28c0f",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "status": "complete",
+  "test_read": false,
+  "train_sha256": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+  "training_categories_sha256": "43d7f13ef3ee6eb3b92cd0039832d19348c9e89ba6f21bd2a61bd376983c99ca",
+  "users": 943,
+  "validation_read": false,
+  "variants": {
+    "additive": {
+      "epoch_seconds": 3.1851143749954645,
+      "initial_state_sha256": "98b1db8ad827b4c08470656e7079e97affbd4fe104c4226805a53b6980684baa",
+      "parameter_count": 2709630,
+      "training_diagnostic": {
+        "batch_order_sha256": "f5eba2ca6cd800b7d2d7bbbc9d1ce11f77afef9746e020431c6277272acc72d5",
+        "context_sha256": "c10c436c7200cec330fc80a0e92aa27a2dbd8a361beeafeb4bc8f3b62d1694cd",
+        "epoch": 1,
+        "macro_train_joint_probe_nll": 8.989034648664683,
+        "probe_mask_sha256": "644b1defa3087d0c80b5fc34e108cef64b199cbf7d7fa61f60a58bdf3cf368bd"
+      }
+    },
+    "pair": {
+      "epoch_seconds": 4.052716709004017,
+      "initial_state_sha256": "98b1db8ad827b4c08470656e7079e97affbd4fe104c4226805a53b6980684baa",
+      "parameter_count": 2709630,
+      "training_diagnostic": {
+        "batch_order_sha256": "f5eba2ca6cd800b7d2d7bbbc9d1ce11f77afef9746e020431c6277272acc72d5",
+        "context_sha256": "c10c436c7200cec330fc80a0e92aa27a2dbd8a361beeafeb4bc8f3b62d1694cd",
+        "epoch": 1,
+        "macro_train_joint_probe_nll": 8.989189521126125,
+        "probe_mask_sha256": "644b1defa3087d0c80b5fc34e108cef64b199cbf7d7fa61f60a58bdf3cf368bd"
+      }
+    }
+  }
+}

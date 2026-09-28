@@ -1,0 +1,31 @@
+{
+  "automatic_results_directory": "exploratory/addressed_evidence/results-v1",
+  "benchmark_note": "One TRAIN-only epoch per variant, weights discarded. Benchmark predates final runner guards; its recorded source hashes identify that timing snapshot.",
+  "command_documentation": "exploratory/addressed_evidence/RUN.md",
+  "console_log": "runs/addressed-evidence-v1.log",
+  "launched_at_utc": "2026-09-28T14:35:23.211180+00:00",
+  "preflight": {
+    "independent_review": "PASS",
+    "model_tests": 11,
+    "runner_tests": 9,
+    "status": "PASS"
+  },
+  "progress_command": "python3 -m exploratory.addressed_evidence.status --run runs/addressed-evidence-v1",
+  "protocol_sha256": "e82eaab30de58c342cf658d16591849d5e30344acd5f7a70561eda06150ee621",
+  "record_kind": "launch_receipt_not_live_status",
+  "result_status_at_launch": "No completed comparison; training just started.",
+  "source_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "exploratory/addressed_evidence/PROTOCOL.md": "5c869a9b6772c4816006e80a05687155bab0d978da7749f8b7f4fc98cf23618c",
+    "exploratory/addressed_evidence/model.py": "7677a451e9eeb2b197ab9312b2fa744ae3b211131dbff2329c88402e01214a1d",
+    "exploratory/addressed_evidence/run_experiment.py": "8abeb6fb5cde0048f250b0f83b2f8446cd2e2f35edad488550c7f14a1645c6f1",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "joint_field_experiment.py": "e2228dd51c4ac909c587eb98cff795872d23232dd68e3790ce97957c40e28c0f",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "study_directory": "runs/addressed-evidence-v1"
+}

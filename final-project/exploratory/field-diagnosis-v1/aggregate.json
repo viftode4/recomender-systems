@@ -1,0 +1,1089 @@
+{
+  "protocol": {
+    "compression": "SVD of double-centered TRAIN-fitted EASE full-catalog scores, retaining row/item means. Includes known-position scores in SVD; evaluated only on original TRAIN-unseen candidates.",
+    "diagnostic_sample": "Uniform sample of development users, generator seed split_seed+9101; no outcome selection.",
+    "diagnostic_users_per_seed": 128,
+    "new_model_training": false,
+    "rank_grid": [
+      0,
+      8,
+      16,
+      32,
+      64,
+      128,
+      943
+    ],
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "source_sha256": {
+      "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+      "exploratory/diagnose_field.py": "aeefb409e93efdff8dd45c94d8a3bf52b7b5bebf62c4a9828aace576287a75ec"
+    },
+    "stage": "post_test_exploratory_train_development_diagnosis",
+    "test_labels_or_metrics_read": false
+  },
+  "seeds": {
+    "2026": {
+      "adaptive": {
+        "checkpoint_epoch": 400,
+        "config": {
+          "damping": 0.5,
+          "dim": 8,
+          "n_items": 1683,
+          "ports": 16,
+          "steps": 4,
+          "variant": "adaptive"
+        },
+        "development_all_observed": {
+          "coverage@10": 0.2140309155766944,
+          "hit@10": 0.7627118644067796,
+          "mrr@10": 0.4116701977401129,
+          "ndcg@10": 0.2398479814508455,
+          "novelty@10": 8.595872063150884,
+          "precision@10": 0.15911016949152562,
+          "recall@10": 0.22377395406094308
+        },
+        "meta_fit_checkpoint_curve": [
+          {
+            "epoch": 10,
+            "meta_fit_macro_joint_nll": 7.7160165104995615
+          },
+          {
+            "epoch": 30,
+            "meta_fit_macro_joint_nll": 7.511565113939657
+          },
+          {
+            "epoch": 60,
+            "meta_fit_macro_joint_nll": 7.1175711896193965
+          },
+          {
+            "epoch": 100,
+            "meta_fit_macro_joint_nll": 6.9494015945086645
+          },
+          {
+            "epoch": 200,
+            "meta_fit_macro_joint_nll": 6.846551256238119
+          },
+          {
+            "epoch": 300,
+            "meta_fit_macro_joint_nll": 6.781000449423804
+          },
+          {
+            "epoch": 400,
+            "meta_fit_macro_joint_nll": 6.758817355291632
+          }
+        ],
+        "parameters": 14654,
+        "score_diagnostics": {
+          "centered_score_spectrum": {
+            "components_for_90pct_energy": 17,
+            "components_for_99pct_energy": 283,
+            "energy_entropy_rank": 10.01881452208951,
+            "energy_participation_rank": 3.8084650340073694,
+            "energy_share": {
+              "1": 0.46748383985230735,
+              "128": 0.9675480293898642,
+              "16": 0.899642056609296,
+              "32": 0.9216662677258742,
+              "64": 0.9438514247679678,
+              "8": 0.8653555516850423
+            }
+          },
+          "interaction_energy_fraction_after_row_centering": 0.42666822633251034,
+          "scope": "Double-centered finite full-catalog score matrix, including masked TRAIN positions; nonlinear scores need not have architecture-bounded linear rank."
+        },
+        "selected_inference": {
+          "saved_logits_replay_exact": true,
+          "steps": {
+            "0": {
+              "decoder_tanh_abs_over_095_fraction": 0.1466800601612087,
+              "decoder_tanh_mean_derivative": 0.5515770546996657,
+              "mean_candidate_state_coordinate_sd": 0.049178771558217704,
+              "normalized_down_entropy_unseen": 0.5054320171638966,
+              "normalized_up_entropy": 0.8262830617459258,
+              "source_gate": 0.360323905222548,
+              "source_gate_above_095_fraction": 0.07839155158407798,
+              "source_gate_below_005_fraction": 0.20115759545085296,
+              "up_port_pair_cosine": 0.404489219716811
+            },
+            "1": {
+              "decoder_tanh_abs_over_095_fraction": 0.11967566002102722,
+              "decoder_tanh_mean_derivative": 0.5870585043523027,
+              "mean_candidate_state_coordinate_sd": 0.07651026896201074,
+              "normalized_down_entropy_unseen": 0.41596389269293516,
+              "normalized_up_entropy": 0.8188617226114729,
+              "source_gate": 0.6467552950416989,
+              "source_gate_above_095_fraction": 0.18694151096669376,
+              "source_gate_below_005_fraction": 0.009951259138911454,
+              "up_port_pair_cosine": 0.38549309660381825
+            },
+            "2": {
+              "decoder_tanh_abs_over_095_fraction": 0.12930552986643823,
+              "decoder_tanh_mean_derivative": 0.5832558498794509,
+              "mean_candidate_state_coordinate_sd": 0.10965039400616661,
+              "normalized_down_entropy_unseen": 0.458509567963306,
+              "normalized_up_entropy": 0.8351409707829589,
+              "source_gate": 0.6224387437404965,
+              "source_gate_above_095_fraction": 0.17221770917952883,
+              "source_gate_below_005_fraction": 0.004264825345247766,
+              "up_port_pair_cosine": 0.41069263014962115
+            },
+            "3": {
+              "decoder_tanh_abs_over_095_fraction": 0.13549109750399127,
+              "decoder_tanh_mean_derivative": 0.580594775643304,
+              "mean_candidate_state_coordinate_sd": 0.12721366944606416,
+              "normalized_down_entropy_unseen": 0.46264243568593333,
+              "normalized_up_entropy": 0.8382685394026339,
+              "source_gate": 0.5894025965488027,
+              "source_gate_above_095_fraction": 0.1606417546709992,
+              "source_gate_below_005_fraction": 0.005686433793663688,
+              "up_port_pair_cosine": 0.4206727241193979
+            }
+          },
+          "users": 128
+        },
+        "training_epoch281_300_mean": 6.722012728623343,
+        "training_first20_mean": 7.921855186859851,
+        "training_last20_mean": 6.654535919813438,
+        "training_loss_caution": "Changing TRAIN probe episodes and shorter contexts differ from validation inference; raw TRAIN/validation loss gaps do not isolate overfitting."
+      },
+      "development_users": 472,
+      "ease": {
+        "compression_development_all_observed": {
+          "0": {
+            "coverage@10": 0.029131985731272295,
+            "hit@10": 0.559322033898305,
+            "mrr@10": 0.21788068334678504,
+            "ndcg@10": 0.12059281973232536,
+            "novelty@10": 7.8576408412666545,
+            "precision@10": 0.09088983050847492,
+            "recall@10": 0.11655800088515421
+          },
+          "128": {
+            "coverage@10": 0.2027348394768133,
+            "hit@10": 0.7944915254237288,
+            "mrr@10": 0.4224366088243205,
+            "ndcg@10": 0.2632155001646522,
+            "novelty@10": 8.524867117156422,
+            "precision@10": 0.1733050847457626,
+            "recall@10": 0.24993500850608638
+          },
+          "16": {
+            "coverage@10": 0.17063020214030916,
+            "hit@10": 0.7754237288135594,
+            "mrr@10": 0.44646304143126175,
+            "ndcg@10": 0.264746067169363,
+            "novelty@10": 8.424553482710134,
+            "precision@10": 0.17351694915254237,
+            "recall@10": 0.23956063800540392
+          },
+          "32": {
+            "coverage@10": 0.18252080856123662,
+            "hit@10": 0.7817796610169492,
+            "mrr@10": 0.4432405165456012,
+            "ndcg@10": 0.2646923251714329,
+            "novelty@10": 8.470877617680793,
+            "precision@10": 0.1726694915254238,
+            "recall@10": 0.2425667964360329
+          },
+          "64": {
+            "coverage@10": 0.20035671819262782,
+            "hit@10": 0.7796610169491526,
+            "mrr@10": 0.4394101425881084,
+            "ndcg@10": 0.2637287483475158,
+            "novelty@10": 8.511324929797293,
+            "precision@10": 0.1720338983050847,
+            "recall@10": 0.24276520425340303
+          },
+          "8": {
+            "coverage@10": 0.1403091557669441,
+            "hit@10": 0.7351694915254238,
+            "mrr@10": 0.41669777374226535,
+            "ndcg@10": 0.2403824909722365,
+            "novelty@10": 8.339498574695824,
+            "precision@10": 0.16101694915254244,
+            "recall@10": 0.21814460630309626
+          },
+          "943": {
+            "coverage@10": 0.19143876337693222,
+            "hit@10": 0.777542372881356,
+            "mrr@10": 0.42180605999461934,
+            "ndcg@10": 0.2595629655329885,
+            "novelty@10": 8.502724377267972,
+            "precision@10": 0.17118644067796596,
+            "recall@10": 0.24346977198056782
+          }
+        },
+        "score_diagnostics": {
+          "centered_score_spectrum": {
+            "components_for_90pct_energy": 55,
+            "components_for_99pct_energy": 199,
+            "energy_entropy_rank": 22.97893068752286,
+            "energy_participation_rank": 6.683602034700231,
+            "energy_share": {
+              "1": 0.34939985159925935,
+              "128": 0.9725841725119991,
+              "16": 0.7772759280083549,
+              "32": 0.845003364941864,
+              "64": 0.915555512858545,
+              "8": 0.703310379685369
+            }
+          },
+          "interaction_energy_fraction_after_row_centering": 0.6915287725547322,
+          "scope": "Double-centered finite full-catalog score matrix, including masked TRAIN positions; nonlinear scores need not have architecture-bounded linear rank."
+        }
+      },
+      "fixed_flow": {
+        "checkpoint_epoch": 400,
+        "config": {
+          "damping": 0.5,
+          "dim": 8,
+          "n_items": 1683,
+          "ports": 16,
+          "steps": 4,
+          "variant": "fixed_flow"
+        },
+        "development_all_observed": {
+          "coverage@10": 0.1991676575505351,
+          "hit@10": 0.7584745762711864,
+          "mrr@10": 0.3979166666666666,
+          "ndcg@10": 0.23312004851487633,
+          "novelty@10": 8.535364020442495,
+          "precision@10": 0.15656779661016962,
+          "recall@10": 0.21861325431246464
+        },
+        "meta_fit_checkpoint_curve": [
+          {
+            "epoch": 10,
+            "meta_fit_macro_joint_nll": 7.7179046023914015
+          },
+          {
+            "epoch": 30,
+            "meta_fit_macro_joint_nll": 7.512834525405825
+          },
+          {
+            "epoch": 60,
+            "meta_fit_macro_joint_nll": 7.166711031913793
+          },
+          {
+            "epoch": 100,
+            "meta_fit_macro_joint_nll": 6.982402505689094
+          },
+          {
+            "epoch": 200,
+            "meta_fit_macro_joint_nll": 6.866199228206745
+          },
+          {
+            "epoch": 300,
+            "meta_fit_macro_joint_nll": 6.79980741600126
+          },
+          {
+            "epoch": 400,
+            "meta_fit_macro_joint_nll": 6.790887603816198
+          }
+        ],
+        "parameters": 14654,
+        "score_diagnostics": {
+          "centered_score_spectrum": {
+            "components_for_90pct_energy": 22,
+            "components_for_99pct_energy": 317,
+            "energy_entropy_rank": 10.039587484108269,
+            "energy_participation_rank": 3.6848245397754225,
+            "energy_share": {
+              "1": 0.4742041645260905,
+              "128": 0.961026377173755,
+              "16": 0.8909959759266416,
+              "32": 0.9125696297582511,
+              "64": 0.9351249892472071,
+              "8": 0.8603201605400503
+            }
+          },
+          "interaction_energy_fraction_after_row_centering": 0.4207842740500276,
+          "scope": "Double-centered finite full-catalog score matrix, including masked TRAIN positions; nonlinear scores need not have architecture-bounded linear rank."
+        },
+        "selected_inference": {
+          "saved_logits_replay_exact": true,
+          "steps": {
+            "0": {
+              "decoder_tanh_abs_over_095_fraction": 0.08532907353685604,
+              "decoder_tanh_mean_derivative": 0.6441632526939425,
+              "mean_candidate_state_coordinate_sd": 0.08379754751513246,
+              "normalized_down_entropy_unseen": 0.5033894811890507,
+              "normalized_up_entropy": 0.7857656442029111,
+              "source_gate": 0.706473083826195,
+              "source_gate_above_095_fraction": 0.09220146222583266,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.3628978082371285
+            },
+            "1": {
+              "decoder_tanh_abs_over_095_fraction": 0.105190851212959,
+              "decoder_tanh_mean_derivative": 0.6161915119464311,
+              "mean_candidate_state_coordinate_sd": 0.12126243437523954,
+              "normalized_down_entropy_unseen": 0.5033894811890507,
+              "normalized_up_entropy": 0.7857656442029111,
+              "source_gate": 0.706473083826195,
+              "source_gate_above_095_fraction": 0.09220146222583266,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.3628978082371285
+            },
+            "2": {
+              "decoder_tanh_abs_over_095_fraction": 0.11501602595303921,
+              "decoder_tanh_mean_derivative": 0.6039413866606893,
+              "mean_candidate_state_coordinate_sd": 0.13665159593801945,
+              "normalized_down_entropy_unseen": 0.5033894811890507,
+              "normalized_up_entropy": 0.7857656442029111,
+              "source_gate": 0.706473083826195,
+              "source_gate_above_095_fraction": 0.09220146222583266,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.3628978082371285
+            },
+            "3": {
+              "decoder_tanh_abs_over_095_fraction": 0.11924185195280558,
+              "decoder_tanh_mean_derivative": 0.5985793825006303,
+              "mean_candidate_state_coordinate_sd": 0.1424452874925919,
+              "normalized_down_entropy_unseen": 0.5033894811890507,
+              "normalized_up_entropy": 0.7857656442029111,
+              "source_gate": 0.706473083826195,
+              "source_gate_above_095_fraction": 0.09220146222583266,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.3628978082371285
+            }
+          },
+          "users": 128
+        },
+        "training_epoch281_300_mean": 6.734258643415295,
+        "training_first20_mean": 7.9238774235402785,
+        "training_last20_mean": 6.670914738327423,
+        "training_loss_caution": "Changing TRAIN probe episodes and shorter contexts differ from validation inference; raw TRAIN/validation loss gaps do not isolate overfitting."
+      },
+      "input_sha256": {
+        "runs/joint-field-convergence-v1/2026/adaptive/epoch-400.pt": "5acf8230e5a967d2a8c8fd9e04beabc3d025158772f1755e54dc75d90df4a1df",
+        "runs/joint-field-convergence-v1/2026/adaptive/selected-logits.npz": "2c85602b006f7b09084131e7ff6b38a50edee20345529e22b6a997ad3df0747e",
+        "runs/joint-field-convergence-v1/2026/adaptive/selection-grid.json": "a40d3fcfce5dc0d8fa345e5782aeffcf834c512138fa1b3ac7f2370fa549ae18",
+        "runs/joint-field-convergence-v1/2026/adaptive/selection.json": "bb604e7ff04e8f1f776d1953407fadd6c393dda7efdb15feeb988c16feda2127",
+        "runs/joint-field-convergence-v1/2026/adaptive/training-trace.json": "769d4a5bc69562bffed58445e5c2d88f16a13fe72106e74245323fbab1b34673",
+        "runs/joint-field-convergence-v1/2026/cohorts.json": "78c4bca86aba2284b8a0784a34a28e0ed3c1bef1a3e8a40d47a13572d991948e",
+        "runs/joint-field-convergence-v1/2026/fixed_flow/epoch-400.pt": "ab7af893d195114305893763d0c4c8f185f65071ef0881ec89a8e21155d4b4df",
+        "runs/joint-field-convergence-v1/2026/fixed_flow/selected-logits.npz": "f3d6234957eb9e32bdc652b11cceb1ad8234dc53c37cc93d4df1cd73f68da1ea",
+        "runs/joint-field-convergence-v1/2026/fixed_flow/selection-grid.json": "bd9ebfc7b1dfa20fddc2a49ce45bb9b7bd767289cfe06a90b9a02560de724916",
+        "runs/joint-field-convergence-v1/2026/fixed_flow/selection.json": "53fc164a7a92b117fc024caa645be3bde3dc57f96a1dd9d8f53bf3c294373077",
+        "runs/joint-field-convergence-v1/2026/fixed_flow/training-trace.json": "e444ff9db97a1dc0378aa7925416131b750495b49a18f1ac1774173e826ab29f",
+        "runs/joint-field-convergence-v1/2026/protocol.json": "dfb1f18bcd9adf3606c68548202f6537ce8c07a545a5e6edb8af13608b6dd6e0",
+        "runs/joint-field-convergence-v1/2026/training-categories.npz": "73c55b56c465ab58d75d377085fab5f01733f9867e6261153ac1ca5f7d24e91d",
+        "runs/joint-field-convergence-v1/2026/valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0",
+        "runs/research-v2/2026-EASE-1/valid-scores.npz": "9f7807608f9e7bc00d5b2ab61d629e5d417b1dfd37f4ec13ea44796bf2d458bc"
+      },
+      "seed": 2026,
+      "users": 943
+    },
+    "2027": {
+      "adaptive": {
+        "checkpoint_epoch": 400,
+        "config": {
+          "damping": 0.5,
+          "dim": 8,
+          "n_items": 1683,
+          "ports": 16,
+          "steps": 4,
+          "variant": "adaptive"
+        },
+        "development_all_observed": {
+          "coverage@10": 0.1807372175980975,
+          "hit@10": 0.7478813559322034,
+          "mrr@10": 0.3637316720473501,
+          "ndcg@10": 0.20761389014102322,
+          "novelty@10": 8.450068518399254,
+          "precision@10": 0.14279661016949197,
+          "recall@10": 0.20032442650191937
+        },
+        "meta_fit_checkpoint_curve": [
+          {
+            "epoch": 10,
+            "meta_fit_macro_joint_nll": 7.746364907049699
+          },
+          {
+            "epoch": 30,
+            "meta_fit_macro_joint_nll": 7.409697935647425
+          },
+          {
+            "epoch": 60,
+            "meta_fit_macro_joint_nll": 7.101534529266878
+          },
+          {
+            "epoch": 100,
+            "meta_fit_macro_joint_nll": 7.004069874767435
+          },
+          {
+            "epoch": 200,
+            "meta_fit_macro_joint_nll": 6.8929625963371945
+          },
+          {
+            "epoch": 300,
+            "meta_fit_macro_joint_nll": 6.838645386640721
+          },
+          {
+            "epoch": 400,
+            "meta_fit_macro_joint_nll": 6.798748896032405
+          }
+        ],
+        "parameters": 14654,
+        "score_diagnostics": {
+          "centered_score_spectrum": {
+            "components_for_90pct_energy": 165,
+            "components_for_99pct_energy": 475,
+            "energy_entropy_rank": 31.76519816026739,
+            "energy_participation_rank": 5.7540547697304065,
+            "energy_share": {
+              "1": 0.387962996871713,
+              "128": 0.8706913907617208,
+              "16": 0.6952794063410876,
+              "32": 0.7363286665043534,
+              "64": 0.794776099246816,
+              "8": 0.6585001941648361
+            }
+          },
+          "interaction_energy_fraction_after_row_centering": 0.43275295326906027,
+          "scope": "Double-centered finite full-catalog score matrix, including masked TRAIN positions; nonlinear scores need not have architecture-bounded linear rank."
+        },
+        "selected_inference": {
+          "saved_logits_replay_exact": true,
+          "steps": {
+            "0": {
+              "decoder_tanh_abs_over_095_fraction": 0.095077956321066,
+              "decoder_tanh_mean_derivative": 0.6214816392158206,
+              "mean_candidate_state_coordinate_sd": 0.10851839775568806,
+              "normalized_down_entropy_unseen": 0.44590334036816087,
+              "normalized_up_entropy": 0.6889109016901784,
+              "source_gate": 0.9715113751532257,
+              "source_gate_above_095_fraction": 0.9430661263220322,
+              "source_gate_below_005_fraction": 0.007215577740436889,
+              "up_port_pair_cosine": 0.2777574159061552
+            },
+            "1": {
+              "decoder_tanh_abs_over_095_fraction": 0.11660428211464136,
+              "decoder_tanh_mean_derivative": 0.6132750369431234,
+              "mean_candidate_state_coordinate_sd": 0.15936777595197782,
+              "normalized_down_entropy_unseen": 0.4266417714312213,
+              "normalized_up_entropy": 0.6972517149160922,
+              "source_gate": 0.9760812954797002,
+              "source_gate_above_095_fraction": 0.9413857863002867,
+              "source_gate_below_005_fraction": 0.004052584758327567,
+              "up_port_pair_cosine": 0.28418498449141283
+            },
+            "2": {
+              "decoder_tanh_abs_over_095_fraction": 0.1258404247023331,
+              "decoder_tanh_mean_derivative": 0.6058925223134995,
+              "mean_candidate_state_coordinate_sd": 0.18238279476645403,
+              "normalized_down_entropy_unseen": 0.42810473885548495,
+              "normalized_up_entropy": 0.6981916960930903,
+              "source_gate": 0.97645316459098,
+              "source_gate_above_095_fraction": 0.9410892557082139,
+              "source_gate_below_005_fraction": 0.003953741227636651,
+              "up_port_pair_cosine": 0.2856168603329775
+            },
+            "3": {
+              "decoder_tanh_abs_over_095_fraction": 0.13006722179170382,
+              "decoder_tanh_mean_derivative": 0.6011566892654092,
+              "mean_candidate_state_coordinate_sd": 0.19213924097130075,
+              "normalized_down_entropy_unseen": 0.4359003741292956,
+              "normalized_up_entropy": 0.698592133467173,
+              "source_gate": 0.9763718110772316,
+              "source_gate_above_095_fraction": 0.9404961945240684,
+              "source_gate_below_005_fraction": 0.004052584758327567,
+              "up_port_pair_cosine": 0.28617334289691004
+            }
+          },
+          "users": 128
+        },
+        "training_epoch281_300_mean": 6.800973052892553,
+        "training_first20_mean": 7.889809629444352,
+        "training_last20_mean": 6.743267100057066,
+        "training_loss_caution": "Changing TRAIN probe episodes and shorter contexts differ from validation inference; raw TRAIN/validation loss gaps do not isolate overfitting."
+      },
+      "development_users": 472,
+      "ease": {
+        "compression_development_all_observed": {
+          "0": {
+            "coverage@10": 0.03032104637336504,
+            "hit@10": 0.5466101694915254,
+            "mrr@10": 0.24260912698412704,
+            "ndcg@10": 0.12421421883283217,
+            "novelty@10": 7.855941095569508,
+            "precision@10": 0.09131355932203425,
+            "recall@10": 0.11188745541449135
+          },
+          "128": {
+            "coverage@10": 0.19143876337693222,
+            "hit@10": 0.798728813559322,
+            "mrr@10": 0.4325775154694645,
+            "ndcg@10": 0.2644188473749046,
+            "novelty@10": 8.485487352809724,
+            "precision@10": 0.17987288135593216,
+            "recall@10": 0.24383315663008226
+          },
+          "16": {
+            "coverage@10": 0.16468489892984542,
+            "hit@10": 0.798728813559322,
+            "mrr@10": 0.419164480764057,
+            "ndcg@10": 0.256136130696242,
+            "novelty@10": 8.381035362434723,
+            "precision@10": 0.17881355932203377,
+            "recall@10": 0.23726143344281825
+          },
+          "32": {
+            "coverage@10": 0.18014268727705113,
+            "hit@10": 0.788135593220339,
+            "mrr@10": 0.4227081651869786,
+            "ndcg@10": 0.2570738189352169,
+            "novelty@10": 8.450139270159216,
+            "precision@10": 0.17923728813559314,
+            "recall@10": 0.23496341604018448
+          },
+          "64": {
+            "coverage@10": 0.19441141498216408,
+            "hit@10": 0.7838983050847458,
+            "mrr@10": 0.4325153013182673,
+            "ndcg@10": 0.26095839291683115,
+            "novelty@10": 8.48350531457324,
+            "precision@10": 0.1779661016949153,
+            "recall@10": 0.23519217458670086
+          },
+          "8": {
+            "coverage@10": 0.133769322235434,
+            "hit@10": 0.7584745762711864,
+            "mrr@10": 0.38951775625504415,
+            "ndcg@10": 0.22873352019179366,
+            "novelty@10": 8.315160451507715,
+            "precision@10": 0.15932203389830524,
+            "recall@10": 0.2109321397167974
+          },
+          "943": {
+            "coverage@10": 0.1848989298454221,
+            "hit@10": 0.7923728813559322,
+            "mrr@10": 0.4467388014527843,
+            "ndcg@10": 0.2620414838303139,
+            "novelty@10": 8.479106353276983,
+            "precision@10": 0.17521186440677963,
+            "recall@10": 0.23340978907409674
+          }
+        },
+        "score_diagnostics": {
+          "centered_score_spectrum": {
+            "components_for_90pct_energy": 55,
+            "components_for_99pct_energy": 199,
+            "energy_entropy_rank": 22.934229827703362,
+            "energy_participation_rank": 6.650605642534727,
+            "energy_share": {
+              "1": 0.3512190102281664,
+              "128": 0.9724884024979573,
+              "16": 0.7768359713990722,
+              "32": 0.8454275340145265,
+              "64": 0.9157105801287008,
+              "8": 0.7037457665787445
+            }
+          },
+          "interaction_energy_fraction_after_row_centering": 0.6905664727133124,
+          "scope": "Double-centered finite full-catalog score matrix, including masked TRAIN positions; nonlinear scores need not have architecture-bounded linear rank."
+        }
+      },
+      "fixed_flow": {
+        "checkpoint_epoch": 400,
+        "config": {
+          "damping": 0.5,
+          "dim": 8,
+          "n_items": 1683,
+          "ports": 16,
+          "steps": 4,
+          "variant": "fixed_flow"
+        },
+        "development_all_observed": {
+          "coverage@10": 0.178359096313912,
+          "hit@10": 0.7436440677966102,
+          "mrr@10": 0.38918482647296193,
+          "ndcg@10": 0.22086354542682907,
+          "novelty@10": 8.471084110219028,
+          "precision@10": 0.1455508474576275,
+          "recall@10": 0.20317304221622173
+        },
+        "meta_fit_checkpoint_curve": [
+          {
+            "epoch": 10,
+            "meta_fit_macro_joint_nll": 7.736269902057591
+          },
+          {
+            "epoch": 30,
+            "meta_fit_macro_joint_nll": 7.503369806136443
+          },
+          {
+            "epoch": 60,
+            "meta_fit_macro_joint_nll": 7.128961230154711
+          },
+          {
+            "epoch": 100,
+            "meta_fit_macro_joint_nll": 6.981577375671062
+          },
+          {
+            "epoch": 200,
+            "meta_fit_macro_joint_nll": 6.859105249415643
+          },
+          {
+            "epoch": 300,
+            "meta_fit_macro_joint_nll": 6.816093698185819
+          },
+          {
+            "epoch": 400,
+            "meta_fit_macro_joint_nll": 6.777604275264535
+          }
+        ],
+        "parameters": 14654,
+        "score_diagnostics": {
+          "centered_score_spectrum": {
+            "components_for_90pct_energy": 8,
+            "components_for_99pct_energy": 275,
+            "energy_entropy_rank": 7.514746599150268,
+            "energy_participation_rank": 3.1873093248084037,
+            "energy_share": {
+              "1": 0.5200953573539946,
+              "128": 0.9735342639142245,
+              "16": 0.9290099521628776,
+              "32": 0.9440615681870544,
+              "64": 0.9577904169970135,
+              "8": 0.9000865133604414
+            }
+          },
+          "interaction_energy_fraction_after_row_centering": 0.4108502369663723,
+          "scope": "Double-centered finite full-catalog score matrix, including masked TRAIN positions; nonlinear scores need not have architecture-bounded linear rank."
+        },
+        "selected_inference": {
+          "saved_logits_replay_exact": true,
+          "steps": {
+            "0": {
+              "decoder_tanh_abs_over_095_fraction": 0.06982013266464891,
+              "decoder_tanh_mean_derivative": 0.6375580194215965,
+              "mean_candidate_state_coordinate_sd": 0.08037437630991917,
+              "normalized_down_entropy_unseen": 0.5292423993799497,
+              "normalized_up_entropy": 0.7410575705907831,
+              "source_gate": 0.9997880837009325,
+              "source_gate_above_095_fraction": 0.9991104082237817,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.28438972350199676
+            },
+            "1": {
+              "decoder_tanh_abs_over_095_fraction": 0.0888967681877775,
+              "decoder_tanh_mean_derivative": 0.6156492470341104,
+              "mean_candidate_state_coordinate_sd": 0.12056088200188242,
+              "normalized_down_entropy_unseen": 0.5292423993799497,
+              "normalized_up_entropy": 0.7410575705907831,
+              "source_gate": 0.9997880837009325,
+              "source_gate_above_095_fraction": 0.9991104082237817,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.28438972350199676
+            },
+            "2": {
+              "decoder_tanh_abs_over_095_fraction": 0.1019317279058773,
+              "decoder_tanh_mean_derivative": 0.6010439320493463,
+              "mean_candidate_state_coordinate_sd": 0.14065416069934145,
+              "normalized_down_entropy_unseen": 0.5292423993799497,
+              "normalized_up_entropy": 0.7410575705907831,
+              "source_gate": 0.9997880837009325,
+              "source_gate_above_095_fraction": 0.9991104082237817,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.28438972350199676
+            },
+            "3": {
+              "decoder_tanh_abs_over_095_fraction": 0.10943554164899917,
+              "decoder_tanh_mean_derivative": 0.5930211542415871,
+              "mean_candidate_state_coordinate_sd": 0.15070090754306875,
+              "normalized_down_entropy_unseen": 0.5292423993799497,
+              "normalized_up_entropy": 0.7410575705907831,
+              "source_gate": 0.9997880837009325,
+              "source_gate_above_095_fraction": 0.9991104082237817,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.28438972350199676
+            }
+          },
+          "users": 128
+        },
+        "training_epoch281_300_mean": 6.750560225130771,
+        "training_first20_mean": 7.889202564594477,
+        "training_last20_mean": 6.696777419674815,
+        "training_loss_caution": "Changing TRAIN probe episodes and shorter contexts differ from validation inference; raw TRAIN/validation loss gaps do not isolate overfitting."
+      },
+      "input_sha256": {
+        "runs/joint-field-convergence-v1/2027/adaptive/epoch-400.pt": "f2320fad1ae023ea2685374cadc354e3c4ef0d08d4b5e236909c058d5e3b5839",
+        "runs/joint-field-convergence-v1/2027/adaptive/selected-logits.npz": "e00baa89ce94d2f93dc7f34a7f8b6fc73b905ca09c4a946d7035b603237f68f6",
+        "runs/joint-field-convergence-v1/2027/adaptive/selection-grid.json": "4c02b7b3614b74594660b2b028ea23f198c0e7bb36c3183041815aa20a9814d6",
+        "runs/joint-field-convergence-v1/2027/adaptive/selection.json": "20c877fdb8dc524957b06d4c2acf915f98cdcf69e045de6ee9bb77f66a58ef09",
+        "runs/joint-field-convergence-v1/2027/adaptive/training-trace.json": "b2c1c751dbd1fa87589aac3a226577e03387a6c16373be275131e20da7f807cb",
+        "runs/joint-field-convergence-v1/2027/cohorts.json": "0940911bad5197a657fc9ed170e83fed7aa98a523d57996ac607d58d8b7d0ea2",
+        "runs/joint-field-convergence-v1/2027/fixed_flow/epoch-400.pt": "2c9e591c4a5bb1d671cf76577dc3750bd67d172d925e2d22e80fbcae9a5c7ce1",
+        "runs/joint-field-convergence-v1/2027/fixed_flow/selected-logits.npz": "d27130fcfc2ebb49dd9c28b9459b0cb5c47df4d9f977953426ce7b074f82019c",
+        "runs/joint-field-convergence-v1/2027/fixed_flow/selection-grid.json": "cc22127ddec03ba45f28435e794345a9aa55e9d763b389920463f97d66ec4077",
+        "runs/joint-field-convergence-v1/2027/fixed_flow/selection.json": "cc3e6fea3021376faa98507a042604ff733a8f9b11977b2655ce81714e85a236",
+        "runs/joint-field-convergence-v1/2027/fixed_flow/training-trace.json": "04dd916eb260b3ec0ce5c5b1e2e94c3dc6f922f1f1c5cad14bf643c8daef0738",
+        "runs/joint-field-convergence-v1/2027/protocol.json": "a9380f8ec654b34cbdd2c6e7083b9a255a68e884216291fa16c8a21581045ba6",
+        "runs/joint-field-convergence-v1/2027/training-categories.npz": "7ee35d5203c19879ad3d2a3ff02a05887d6d19cc621b4cc67acb25e88a3505a8",
+        "runs/joint-field-convergence-v1/2027/valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7",
+        "runs/research-v2/2027-EASE-1/valid-scores.npz": "cc5e61cf3f61d7e1ff7e19fc381ae8d04458280cf16149e2ae2aeb0990cd9ac0"
+      },
+      "seed": 2027,
+      "users": 943
+    },
+    "2028": {
+      "adaptive": {
+        "checkpoint_epoch": 400,
+        "config": {
+          "damping": 0.5,
+          "dim": 8,
+          "n_items": 1683,
+          "ports": 16,
+          "steps": 4,
+          "variant": "adaptive"
+        },
+        "development_all_observed": {
+          "coverage@10": 0.20392390011890607,
+          "hit@10": 0.7415254237288136,
+          "mrr@10": 0.36822370191014236,
+          "ndcg@10": 0.21832164310825744,
+          "novelty@10": 8.520712647796792,
+          "precision@10": 0.1461864406779665,
+          "recall@10": 0.2093635861831133
+        },
+        "meta_fit_checkpoint_curve": [
+          {
+            "epoch": 10,
+            "meta_fit_macro_joint_nll": 7.774827467521231
+          },
+          {
+            "epoch": 30,
+            "meta_fit_macro_joint_nll": 7.624064808790125
+          },
+          {
+            "epoch": 60,
+            "meta_fit_macro_joint_nll": 7.215247891616628
+          },
+          {
+            "epoch": 100,
+            "meta_fit_macro_joint_nll": 7.076849057648549
+          },
+          {
+            "epoch": 200,
+            "meta_fit_macro_joint_nll": 6.944811453670725
+          },
+          {
+            "epoch": 300,
+            "meta_fit_macro_joint_nll": 6.846752288452403
+          },
+          {
+            "epoch": 400,
+            "meta_fit_macro_joint_nll": 6.819375992814457
+          }
+        ],
+        "parameters": 14654,
+        "score_diagnostics": {
+          "centered_score_spectrum": {
+            "components_for_90pct_energy": 9,
+            "components_for_99pct_energy": 320,
+            "energy_entropy_rank": 8.122488235275982,
+            "energy_participation_rank": 3.4417099311490644,
+            "energy_share": {
+              "1": 0.49053015558689417,
+              "128": 0.9677976053561261,
+              "16": 0.9259216631923645,
+              "32": 0.9392435813449371,
+              "64": 0.9516687184456945,
+              "8": 0.8954091159301282
+            }
+          },
+          "interaction_energy_fraction_after_row_centering": 0.4097159249484772,
+          "scope": "Double-centered finite full-catalog score matrix, including masked TRAIN positions; nonlinear scores need not have architecture-bounded linear rank."
+        },
+        "selected_inference": {
+          "saved_logits_replay_exact": true,
+          "steps": {
+            "0": {
+              "decoder_tanh_abs_over_095_fraction": 0.15304777564473002,
+              "decoder_tanh_mean_derivative": 0.5669122831263341,
+              "mean_candidate_state_coordinate_sd": 0.06104010694252793,
+              "normalized_down_entropy_unseen": 0.6014339999226836,
+              "normalized_up_entropy": 0.8220244266558439,
+              "source_gate": 0.6671888601961672,
+              "source_gate_above_095_fraction": 0.009727976941091695,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.4224620345836797
+            },
+            "1": {
+              "decoder_tanh_abs_over_095_fraction": 0.16134778690852816,
+              "decoder_tanh_mean_derivative": 0.569476957728887,
+              "mean_candidate_state_coordinate_sd": 0.105238996387925,
+              "normalized_down_entropy_unseen": 0.5549799163859935,
+              "normalized_up_entropy": 0.8237037786038854,
+              "source_gate": 0.7643700005472179,
+              "source_gate_above_095_fraction": 0.04665825977301387,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.4270509460345257
+            },
+            "2": {
+              "decoder_tanh_abs_over_095_fraction": 0.16664881191416006,
+              "decoder_tanh_mean_derivative": 0.5620579727740066,
+              "mean_candidate_state_coordinate_sd": 0.12388961578835733,
+              "normalized_down_entropy_unseen": 0.5373694011967185,
+              "normalized_up_entropy": 0.8238619605708664,
+              "source_gate": 0.7446536824370242,
+              "source_gate_above_095_fraction": 0.037110430553053506,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.42812883995638534
+            },
+            "3": {
+              "decoder_tanh_abs_over_095_fraction": 0.16779110796595395,
+              "decoder_tanh_mean_derivative": 0.5594927571549437,
+              "mean_candidate_state_coordinate_sd": 0.13218393249553628,
+              "normalized_down_entropy_unseen": 0.5286824792161657,
+              "normalized_up_entropy": 0.8239610975888354,
+              "source_gate": 0.7491197764351387,
+              "source_gate_above_095_fraction": 0.04062331111511439,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.42894180446922975
+            }
+          },
+          "users": 128
+        },
+        "training_epoch281_300_mean": 6.7756184666938015,
+        "training_first20_mean": 7.925943309302546,
+        "training_last20_mean": 6.699927661224235,
+        "training_loss_caution": "Changing TRAIN probe episodes and shorter contexts differ from validation inference; raw TRAIN/validation loss gaps do not isolate overfitting."
+      },
+      "development_users": 472,
+      "ease": {
+        "compression_development_all_observed": {
+          "0": {
+            "coverage@10": 0.029131985731272295,
+            "hit@10": 0.548728813559322,
+            "mrr@10": 0.23274145816518715,
+            "ndcg@10": 0.1263065107642554,
+            "novelty@10": 7.857252955623612,
+            "precision@10": 0.08877118644067826,
+            "recall@10": 0.12180270635975689
+          },
+          "128": {
+            "coverage@10": 0.1985731272294887,
+            "hit@10": 0.7860169491525424,
+            "mrr@10": 0.42350517890772127,
+            "ndcg@10": 0.2672814809686402,
+            "novelty@10": 8.5021966302722,
+            "precision@10": 0.1805084745762712,
+            "recall@10": 0.2498511807282991
+          },
+          "16": {
+            "coverage@10": 0.1700356718192628,
+            "hit@10": 0.7838983050847458,
+            "mrr@10": 0.4188029661016949,
+            "ndcg@10": 0.2597009462102482,
+            "novelty@10": 8.417617263671083,
+            "precision@10": 0.17605932203389818,
+            "recall@10": 0.24183533976848495
+          },
+          "32": {
+            "coverage@10": 0.1848989298454221,
+            "hit@10": 0.7690677966101694,
+            "mrr@10": 0.42073833064299165,
+            "ndcg@10": 0.26233322700652806,
+            "novelty@10": 8.465122806938727,
+            "precision@10": 0.17754237288135585,
+            "recall@10": 0.24070189647793364
+          },
+          "64": {
+            "coverage@10": 0.20332936979785968,
+            "hit@10": 0.7817796610169492,
+            "mrr@10": 0.43282805353779913,
+            "ndcg@10": 0.26540409554944894,
+            "novelty@10": 8.497320946041365,
+            "precision@10": 0.1771186440677966,
+            "recall@10": 0.24354506877466092
+          },
+          "8": {
+            "coverage@10": 0.13495838287752676,
+            "hit@10": 0.7457627118644068,
+            "mrr@10": 0.39794861447403823,
+            "ndcg@10": 0.23627606054638825,
+            "novelty@10": 8.339085930347052,
+            "precision@10": 0.1593220338983051,
+            "recall@10": 0.2173988636278697
+          },
+          "943": {
+            "coverage@10": 0.1902497027348395,
+            "hit@10": 0.7733050847457628,
+            "mrr@10": 0.4259231234866825,
+            "ndcg@10": 0.2638780354365254,
+            "novelty@10": 8.488021132877067,
+            "precision@10": 0.17902542372881336,
+            "recall@10": 0.2455997839772482
+          }
+        },
+        "score_diagnostics": {
+          "centered_score_spectrum": {
+            "components_for_90pct_energy": 56,
+            "components_for_99pct_energy": 199,
+            "energy_entropy_rank": 22.867329460993776,
+            "energy_participation_rank": 6.643384307895975,
+            "energy_share": {
+              "1": 0.35084112717621585,
+              "128": 0.9724753746469774,
+              "16": 0.7781469378120631,
+              "32": 0.8452708835361741,
+              "64": 0.914807085518125,
+              "8": 0.7050300646039517
+            }
+          },
+          "interaction_energy_fraction_after_row_centering": 0.6908000016180397,
+          "scope": "Double-centered finite full-catalog score matrix, including masked TRAIN positions; nonlinear scores need not have architecture-bounded linear rank."
+        }
+      },
+      "fixed_flow": {
+        "checkpoint_epoch": 400,
+        "config": {
+          "damping": 0.5,
+          "dim": 8,
+          "n_items": 1683,
+          "ports": 16,
+          "steps": 4,
+          "variant": "fixed_flow"
+        },
+        "development_all_observed": {
+          "coverage@10": 0.19143876337693222,
+          "hit@10": 0.7161016949152542,
+          "mrr@10": 0.37653601694915223,
+          "ndcg@10": 0.22368463829986546,
+          "novelty@10": 8.523825074306135,
+          "precision@10": 0.14851694915254268,
+          "recall@10": 0.20732439135417172
+        },
+        "meta_fit_checkpoint_curve": [
+          {
+            "epoch": 10,
+            "meta_fit_macro_joint_nll": 7.772128149564573
+          },
+          {
+            "epoch": 30,
+            "meta_fit_macro_joint_nll": 7.6261427359201495
+          },
+          {
+            "epoch": 60,
+            "meta_fit_macro_joint_nll": 7.212420935149286
+          },
+          {
+            "epoch": 100,
+            "meta_fit_macro_joint_nll": 7.066606591453656
+          },
+          {
+            "epoch": 200,
+            "meta_fit_macro_joint_nll": 6.906222194471675
+          },
+          {
+            "epoch": 300,
+            "meta_fit_macro_joint_nll": 6.837764566694961
+          },
+          {
+            "epoch": 400,
+            "meta_fit_macro_joint_nll": 6.814243138239107
+          }
+        ],
+        "parameters": 14654,
+        "score_diagnostics": {
+          "centered_score_spectrum": {
+            "components_for_90pct_energy": 10,
+            "components_for_99pct_energy": 315,
+            "energy_entropy_rank": 8.711536440378051,
+            "energy_participation_rank": 3.697538318215418,
+            "energy_share": {
+              "1": 0.46040243563129013,
+              "128": 0.9667550145417584,
+              "16": 0.9221453576602693,
+              "32": 0.9357300416713417,
+              "64": 0.949280350362861,
+              "8": 0.8920594406068428
+            }
+          },
+          "interaction_energy_fraction_after_row_centering": 0.40672447077067586,
+          "scope": "Double-centered finite full-catalog score matrix, including masked TRAIN positions; nonlinear scores need not have architecture-bounded linear rank."
+        },
+        "selected_inference": {
+          "saved_logits_replay_exact": true,
+          "steps": {
+            "0": {
+              "decoder_tanh_abs_over_095_fraction": 0.16390570976620272,
+              "decoder_tanh_mean_derivative": 0.5619019428161257,
+              "mean_candidate_state_coordinate_sd": 0.06851011233084137,
+              "normalized_down_entropy_unseen": 0.5854587378359003,
+              "normalized_up_entropy": 0.7823303644399857,
+              "source_gate": 0.7108204938971959,
+              "source_gate_above_095_fraction": 0.009637903080526032,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.33196939784369495
+            },
+            "1": {
+              "decoder_tanh_abs_over_095_fraction": 0.16406242347963212,
+              "decoder_tanh_mean_derivative": 0.5624460110337535,
+              "mean_candidate_state_coordinate_sd": 0.11258997549884953,
+              "normalized_down_entropy_unseen": 0.5854587378359003,
+              "normalized_up_entropy": 0.7823303644399857,
+              "source_gate": 0.7108204938971959,
+              "source_gate_above_095_fraction": 0.009637903080526032,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.33196939784369495
+            },
+            "2": {
+              "decoder_tanh_abs_over_095_fraction": 0.15447564570947236,
+              "decoder_tanh_mean_derivative": 0.5713968064821313,
+              "mean_candidate_state_coordinate_sd": 0.1334685086621903,
+              "normalized_down_entropy_unseen": 0.5854587378359003,
+              "normalized_up_entropy": 0.7823303644399857,
+              "source_gate": 0.7108204938971959,
+              "source_gate_above_095_fraction": 0.009637903080526032,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.33196939784369495
+            },
+            "3": {
+              "decoder_tanh_abs_over_095_fraction": 0.15056698531788398,
+              "decoder_tanh_mean_derivative": 0.5747660601859637,
+              "mean_candidate_state_coordinate_sd": 0.14214178075781092,
+              "normalized_down_entropy_unseen": 0.5854587378359003,
+              "normalized_up_entropy": 0.7823303644399857,
+              "source_gate": 0.7108204938971959,
+              "source_gate_above_095_fraction": 0.009637903080526032,
+              "source_gate_below_005_fraction": 0.0,
+              "up_port_pair_cosine": 0.33196939784369495
+            }
+          },
+          "users": 128
+        },
+        "training_epoch281_300_mean": 6.755930648932148,
+        "training_first20_mean": 7.923299309810423,
+        "training_last20_mean": 6.695713044072512,
+        "training_loss_caution": "Changing TRAIN probe episodes and shorter contexts differ from validation inference; raw TRAIN/validation loss gaps do not isolate overfitting."
+      },
+      "input_sha256": {
+        "runs/joint-field-convergence-v1/2028/adaptive/epoch-400.pt": "7ba28c7031100b4c1575c29554b8ad79187af1aa6b6ebd8f266d8a5a08593c17",
+        "runs/joint-field-convergence-v1/2028/adaptive/selected-logits.npz": "ee859306bc5117edb9c40c90488f017cf0f6b3fe557794ed8534942003567492",
+        "runs/joint-field-convergence-v1/2028/adaptive/selection-grid.json": "191df8c9b8293019eb40f72fbad383b984f0901a42438247a9537e9c5a035e0c",
+        "runs/joint-field-convergence-v1/2028/adaptive/selection.json": "9ff01b7f6f4a7360d79f0596f4b5f8c983383c4567bfa8597480900f57b34d21",
+        "runs/joint-field-convergence-v1/2028/adaptive/training-trace.json": "16226546c243ce5b6837029c1d0f7c262fd23565df16aabbff132e0f10fb18a8",
+        "runs/joint-field-convergence-v1/2028/cohorts.json": "8841dac2a52146ae60dc017abfbbccf41b2d4921171a1a4e4d36e29abc235c07",
+        "runs/joint-field-convergence-v1/2028/fixed_flow/epoch-400.pt": "1ea0620c3b1773763419d884b2b596981a5211e7c290609060eafecb7fa5bb29",
+        "runs/joint-field-convergence-v1/2028/fixed_flow/selected-logits.npz": "8bd905574c786319edb1566651b88d6314d0984e6c183e4d68913efa55e6c648",
+        "runs/joint-field-convergence-v1/2028/fixed_flow/selection-grid.json": "dc6c5442e4c0c2c7660e9367338b30310740e4f0be2cb818f6c1c33c54594af2",
+        "runs/joint-field-convergence-v1/2028/fixed_flow/selection.json": "29ee71fad9ca157ca0d66e849822cbfaba278dca04144ca984557063c5938209",
+        "runs/joint-field-convergence-v1/2028/fixed_flow/training-trace.json": "db0d3bc080bf28b462558ecef401534d555d5a2bfbf77e7661791e7f2f40f6be",
+        "runs/joint-field-convergence-v1/2028/protocol.json": "743e08c096f5b9c661cdeff5de117b87a2e1703d3d1e9995dd41126ce887e412",
+        "runs/joint-field-convergence-v1/2028/training-categories.npz": "c904699aefdb2a90e8b1d9bab6e7b93158fd380270a7decd46fcb2a53a6ac183",
+        "runs/joint-field-convergence-v1/2028/valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae",
+        "runs/research-v2/2028-EASE-1/valid-scores.npz": "c65952e320a6bac5e87b1c640b53d0cb8c14cf69853316e15930569f9c0a8db8"
+      },
+      "seed": 2028,
+      "users": 943
+    }
+  }
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "case": "no_signal-16-3103",
+    "events": [
+      {
+        "objective_unchanged": true,
+        "original_error": "calibration failed: ABNORMAL: ",
+        "projected_gradient_residual": 3.0936364581179987e-12,
+        "solver": "SLSQP",
+        "solver_success": true,
+        "tree": "max(a2,a5)"
+      },
+      {
+        "objective_unchanged": true,
+        "original_error": "calibration failed: ABNORMAL: ",
+        "projected_gradient_residual": 3.0938585027229237e-12,
+        "solver": "SLSQP",
+        "solver_success": true,
+        "tree": "max(a4,a5)"
+      },
+      {
+        "objective_unchanged": true,
+        "original_error": "calibration failed: ABNORMAL: ",
+        "projected_gradient_residual": 3.0938585027229237e-12,
+        "solver": "SLSQP",
+        "solver_success": true,
+        "tree": "max(a2,a3)"
+      },
+      {
+        "objective_unchanged": true,
+        "original_error": "calibration failed: ABNORMAL: ",
+        "projected_gradient_residual": 3.0938585027229237e-12,
+        "solver": "SLSQP",
+        "solver_success": true,
+        "tree": "max(distinct(a1*a4),max(a4,a5))"
+      },
+      {
+        "objective_unchanged": true,
+        "original_error": "calibration failed: ABNORMAL: ",
+        "projected_gradient_residual": 3.0938585027229237e-12,
+        "solver": "SLSQP",
+        "solver_success": true,
+        "tree": "max(distinct(a0*a2),max(a2,a3))"
+      },
+      {
+        "objective_unchanged": true,
+        "original_error": "calibration failed: ABNORMAL: ",
+        "projected_gradient_residual": 3.0936364581179987e-12,
+        "solver": "SLSQP",
+        "solver_success": true,
+        "tree": "max(distinct(a0*a0),max(a2,a5))"
+      },
+      {
+        "objective_unchanged": true,
+        "original_error": "calibration failed: ABNORMAL: ",
+        "projected_gradient_residual": 3.0938585027229237e-12,
+        "solver": "SLSQP",
+        "solver_success": true,
+        "tree": "max(distinct(a5*a5),max(a4,a5))"
+      },
+      {
+        "objective_unchanged": true,
+        "original_error": "calibration failed: ABNORMAL: ",
+        "projected_gradient_residual": 3.0936364581179987e-12,
+        "solver": "SLSQP",
+        "solver_success": true,
+        "tree": "max(distinct(a4*a4),max(a2,a5))"
+      },
+      {
+        "objective_unchanged": true,
+        "original_error": "calibration failed: ABNORMAL: ",
+        "projected_gradient_residual": 3.0938585027229237e-12,
+        "solver": "SLSQP",
+        "solver_success": true,
+        "tree": "max(distinct(a5*a5),max(a2,a3))"
+      },
+      {
+        "objective_unchanged": true,
+        "original_error": "calibration failed: ABNORMAL: ",
+        "projected_gradient_residual": 3.0937474804204612e-12,
+        "solver": "SLSQP",
+        "solver_success": true,
+        "tree": "max(distinct(a3*a4),max(a1,a5))"
+      }
+    ]
+  }
+]

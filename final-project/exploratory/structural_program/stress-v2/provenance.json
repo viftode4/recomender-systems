@@ -1,0 +1,31 @@
+{
+  "artifact_sha256": {
+    "PROTOCOL.md": "b2b1c810a18d48c620d8b2d0e39ee6ccde27fd599edd1250ecade6e27c91392d",
+    "RESULTS.md": "68d47435860b21323c917a7799690bf4396ee63dc09ef68347631aa45d1cacba",
+    "aggregates.json": "c0ae7cc9a36c7bcabc9b4e56ef0cc801014d28103a01befaca760631a5692d26",
+    "all-results.json": "07c2eac316de7ccbb680b5c28222c08c7519cb980d512dc23e24fa5bff4fadaf",
+    "numerical-fallbacks.json": "082eacdcddc7042d23dad20ea5175ab150615787ceeda83b992deb04b3e21d89",
+    "prefix-replay.json": "4a120cc8355aa419c107a7b346c1c4cdc16a2ef2c86ca0e469b3bfd4da6fe944",
+    "protocol.json": "9a02854a331006e4a7bc22bde7ca5268e253129fd65114909f18718b2b11dd7a",
+    "stress_nll_difference.pdf": "3f62bb97165f644326956dba2153672a5d7ebfb1f6ff96ef8844783190535aa4",
+    "stress_nll_difference.png": "bcd09b464b1e0aa276448e3b53d3b9847e2a260cc5be2a3b296d85dd885f0096"
+  },
+  "complete_run": "runs/structural-program-stress-v2",
+  "completed_cases": 90,
+  "movielens_read": false,
+  "old_test_read": false,
+  "original_incomplete_run": "runs/structural-program-stress-v1",
+  "plot_runtime": "system Python3.9, matplotlib3.9.4; plotting reads only saved JSON, no fitting",
+  "prior_cases_replayed": 77,
+  "run_manifest_sha256": "9eab2610c72a3329f0bdf6ae29f192f2ca736808ba85b63d8c5d74a3607150f9",
+  "source_sha256": {
+    "core.py": "89a140f4173cae38e9c55e446c8b99c4c0cba3a11ee4f4284c348871f0a78f97",
+    "stress_plot.py": "118e6b1c472e331f2ff8b98601495bafccbbc1f107d836a9fb7e1d4c8815c960",
+    "stress_proof.py": "5c031b4bc4fe4c4894638808add49915bcccd37fda882c99ec18f1d6c061c7b4",
+    "stress_protocol.md": "b2b1c810a18d48c620d8b2d0e39ee6ccde27fd599edd1250ecade6e27c91392d",
+    "stress_verify.py": "d73946f08080a0dfd99b321da7c4144a4f5bf463d874ae14d6d9d19a2c75d068",
+    "synthetic_proof.py": "91d436782e67208684ad93a562ffbfac463a95289564313f68160591b13cb739",
+    "test_stress_proof.py": "9d7e52d0da36679121759ce3471ae774243b58c985c3b16d1540866f8b0b6428"
+  },
+  "stage": "synthetic_exploration"
+}

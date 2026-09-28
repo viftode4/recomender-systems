@@ -1,0 +1,353 @@
+{
+  "adaptive": {
+    "checkpoint_epoch": 400,
+    "config": {
+      "damping": 0.5,
+      "dim": 8,
+      "n_items": 1683,
+      "ports": 16,
+      "steps": 4,
+      "variant": "adaptive"
+    },
+    "development_all_observed": {
+      "coverage@10": 0.20392390011890607,
+      "hit@10": 0.7415254237288136,
+      "mrr@10": 0.36822370191014236,
+      "ndcg@10": 0.21832164310825744,
+      "novelty@10": 8.520712647796792,
+      "precision@10": 0.1461864406779665,
+      "recall@10": 0.2093635861831133
+    },
+    "meta_fit_checkpoint_curve": [
+      {
+        "epoch": 10,
+        "meta_fit_macro_joint_nll": 7.774827467521231
+      },
+      {
+        "epoch": 30,
+        "meta_fit_macro_joint_nll": 7.624064808790125
+      },
+      {
+        "epoch": 60,
+        "meta_fit_macro_joint_nll": 7.215247891616628
+      },
+      {
+        "epoch": 100,
+        "meta_fit_macro_joint_nll": 7.076849057648549
+      },
+      {
+        "epoch": 200,
+        "meta_fit_macro_joint_nll": 6.944811453670725
+      },
+      {
+        "epoch": 300,
+        "meta_fit_macro_joint_nll": 6.846752288452403
+      },
+      {
+        "epoch": 400,
+        "meta_fit_macro_joint_nll": 6.819375992814457
+      }
+    ],
+    "parameters": 14654,
+    "score_diagnostics": {
+      "centered_score_spectrum": {
+        "components_for_90pct_energy": 9,
+        "components_for_99pct_energy": 320,
+        "energy_entropy_rank": 8.122488235275982,
+        "energy_participation_rank": 3.4417099311490644,
+        "energy_share": {
+          "1": 0.49053015558689417,
+          "128": 0.9677976053561261,
+          "16": 0.9259216631923645,
+          "32": 0.9392435813449371,
+          "64": 0.9516687184456945,
+          "8": 0.8954091159301282
+        }
+      },
+      "interaction_energy_fraction_after_row_centering": 0.4097159249484772,
+      "scope": "Double-centered finite full-catalog score matrix, including masked TRAIN positions; nonlinear scores need not have architecture-bounded linear rank."
+    },
+    "selected_inference": {
+      "saved_logits_replay_exact": true,
+      "steps": {
+        "0": {
+          "decoder_tanh_abs_over_095_fraction": 0.15304777564473002,
+          "decoder_tanh_mean_derivative": 0.5669122831263341,
+          "mean_candidate_state_coordinate_sd": 0.06104010694252793,
+          "normalized_down_entropy_unseen": 0.6014339999226836,
+          "normalized_up_entropy": 0.8220244266558439,
+          "source_gate": 0.6671888601961672,
+          "source_gate_above_095_fraction": 0.009727976941091695,
+          "source_gate_below_005_fraction": 0.0,
+          "up_port_pair_cosine": 0.4224620345836797
+        },
+        "1": {
+          "decoder_tanh_abs_over_095_fraction": 0.16134778690852816,
+          "decoder_tanh_mean_derivative": 0.569476957728887,
+          "mean_candidate_state_coordinate_sd": 0.105238996387925,
+          "normalized_down_entropy_unseen": 0.5549799163859935,
+          "normalized_up_entropy": 0.8237037786038854,
+          "source_gate": 0.7643700005472179,
+          "source_gate_above_095_fraction": 0.04665825977301387,
+          "source_gate_below_005_fraction": 0.0,
+          "up_port_pair_cosine": 0.4270509460345257
+        },
+        "2": {
+          "decoder_tanh_abs_over_095_fraction": 0.16664881191416006,
+          "decoder_tanh_mean_derivative": 0.5620579727740066,
+          "mean_candidate_state_coordinate_sd": 0.12388961578835733,
+          "normalized_down_entropy_unseen": 0.5373694011967185,
+          "normalized_up_entropy": 0.8238619605708664,
+          "source_gate": 0.7446536824370242,
+          "source_gate_above_095_fraction": 0.037110430553053506,
+          "source_gate_below_005_fraction": 0.0,
+          "up_port_pair_cosine": 0.42812883995638534
+        },
+        "3": {
+          "decoder_tanh_abs_over_095_fraction": 0.16779110796595395,
+          "decoder_tanh_mean_derivative": 0.5594927571549437,
+          "mean_candidate_state_coordinate_sd": 0.13218393249553628,
+          "normalized_down_entropy_unseen": 0.5286824792161657,
+          "normalized_up_entropy": 0.8239610975888354,
+          "source_gate": 0.7491197764351387,
+          "source_gate_above_095_fraction": 0.04062331111511439,
+          "source_gate_below_005_fraction": 0.0,
+          "up_port_pair_cosine": 0.42894180446922975
+        }
+      },
+      "users": 128
+    },
+    "training_epoch281_300_mean": 6.7756184666938015,
+    "training_first20_mean": 7.925943309302546,
+    "training_last20_mean": 6.699927661224235,
+    "training_loss_caution": "Changing TRAIN probe episodes and shorter contexts differ from validation inference; raw TRAIN/validation loss gaps do not isolate overfitting."
+  },
+  "development_users": 472,
+  "ease": {
+    "compression_development_all_observed": {
+      "0": {
+        "coverage@10": 0.029131985731272295,
+        "hit@10": 0.548728813559322,
+        "mrr@10": 0.23274145816518715,
+        "ndcg@10": 0.1263065107642554,
+        "novelty@10": 7.857252955623612,
+        "precision@10": 0.08877118644067826,
+        "recall@10": 0.12180270635975689
+      },
+      "128": {
+        "coverage@10": 0.1985731272294887,
+        "hit@10": 0.7860169491525424,
+        "mrr@10": 0.42350517890772127,
+        "ndcg@10": 0.2672814809686402,
+        "novelty@10": 8.5021966302722,
+        "precision@10": 0.1805084745762712,
+        "recall@10": 0.2498511807282991
+      },
+      "16": {
+        "coverage@10": 0.1700356718192628,
+        "hit@10": 0.7838983050847458,
+        "mrr@10": 0.4188029661016949,
+        "ndcg@10": 0.2597009462102482,
+        "novelty@10": 8.417617263671083,
+        "precision@10": 0.17605932203389818,
+        "recall@10": 0.24183533976848495
+      },
+      "32": {
+        "coverage@10": 0.1848989298454221,
+        "hit@10": 0.7690677966101694,
+        "mrr@10": 0.42073833064299165,
+        "ndcg@10": 0.26233322700652806,
+        "novelty@10": 8.465122806938727,
+        "precision@10": 0.17754237288135585,
+        "recall@10": 0.24070189647793364
+      },
+      "64": {
+        "coverage@10": 0.20332936979785968,
+        "hit@10": 0.7817796610169492,
+        "mrr@10": 0.43282805353779913,
+        "ndcg@10": 0.26540409554944894,
+        "novelty@10": 8.497320946041365,
+        "precision@10": 0.1771186440677966,
+        "recall@10": 0.24354506877466092
+      },
+      "8": {
+        "coverage@10": 0.13495838287752676,
+        "hit@10": 0.7457627118644068,
+        "mrr@10": 0.39794861447403823,
+        "ndcg@10": 0.23627606054638825,
+        "novelty@10": 8.339085930347052,
+        "precision@10": 0.1593220338983051,
+        "recall@10": 0.2173988636278697
+      },
+      "943": {
+        "coverage@10": 0.1902497027348395,
+        "hit@10": 0.7733050847457628,
+        "mrr@10": 0.4259231234866825,
+        "ndcg@10": 0.2638780354365254,
+        "novelty@10": 8.488021132877067,
+        "precision@10": 0.17902542372881336,
+        "recall@10": 0.2455997839772482
+      }
+    },
+    "score_diagnostics": {
+      "centered_score_spectrum": {
+        "components_for_90pct_energy": 56,
+        "components_for_99pct_energy": 199,
+        "energy_entropy_rank": 22.867329460993776,
+        "energy_participation_rank": 6.643384307895975,
+        "energy_share": {
+          "1": 0.35084112717621585,
+          "128": 0.9724753746469774,
+          "16": 0.7781469378120631,
+          "32": 0.8452708835361741,
+          "64": 0.914807085518125,
+          "8": 0.7050300646039517
+        }
+      },
+      "interaction_energy_fraction_after_row_centering": 0.6908000016180397,
+      "scope": "Double-centered finite full-catalog score matrix, including masked TRAIN positions; nonlinear scores need not have architecture-bounded linear rank."
+    }
+  },
+  "fixed_flow": {
+    "checkpoint_epoch": 400,
+    "config": {
+      "damping": 0.5,
+      "dim": 8,
+      "n_items": 1683,
+      "ports": 16,
+      "steps": 4,
+      "variant": "fixed_flow"
+    },
+    "development_all_observed": {
+      "coverage@10": 0.19143876337693222,
+      "hit@10": 0.7161016949152542,
+      "mrr@10": 0.37653601694915223,
+      "ndcg@10": 0.22368463829986546,
+      "novelty@10": 8.523825074306135,
+      "precision@10": 0.14851694915254268,
+      "recall@10": 0.20732439135417172
+    },
+    "meta_fit_checkpoint_curve": [
+      {
+        "epoch": 10,
+        "meta_fit_macro_joint_nll": 7.772128149564573
+      },
+      {
+        "epoch": 30,
+        "meta_fit_macro_joint_nll": 7.6261427359201495
+      },
+      {
+        "epoch": 60,
+        "meta_fit_macro_joint_nll": 7.212420935149286
+      },
+      {
+        "epoch": 100,
+        "meta_fit_macro_joint_nll": 7.066606591453656
+      },
+      {
+        "epoch": 200,
+        "meta_fit_macro_joint_nll": 6.906222194471675
+      },
+      {
+        "epoch": 300,
+        "meta_fit_macro_joint_nll": 6.837764566694961
+      },
+      {
+        "epoch": 400,
+        "meta_fit_macro_joint_nll": 6.814243138239107
+      }
+    ],
+    "parameters": 14654,
+    "score_diagnostics": {
+      "centered_score_spectrum": {
+        "components_for_90pct_energy": 10,
+        "components_for_99pct_energy": 315,
+        "energy_entropy_rank": 8.711536440378051,
+        "energy_participation_rank": 3.697538318215418,
+        "energy_share": {
+          "1": 0.46040243563129013,
+          "128": 0.9667550145417584,
+          "16": 0.9221453576602693,
+          "32": 0.9357300416713417,
+          "64": 0.949280350362861,
+          "8": 0.8920594406068428
+        }
+      },
+      "interaction_energy_fraction_after_row_centering": 0.40672447077067586,
+      "scope": "Double-centered finite full-catalog score matrix, including masked TRAIN positions; nonlinear scores need not have architecture-bounded linear rank."
+    },
+    "selected_inference": {
+      "saved_logits_replay_exact": true,
+      "steps": {
+        "0": {
+          "decoder_tanh_abs_over_095_fraction": 0.16390570976620272,
+          "decoder_tanh_mean_derivative": 0.5619019428161257,
+          "mean_candidate_state_coordinate_sd": 0.06851011233084137,
+          "normalized_down_entropy_unseen": 0.5854587378359003,
+          "normalized_up_entropy": 0.7823303644399857,
+          "source_gate": 0.7108204938971959,
+          "source_gate_above_095_fraction": 0.009637903080526032,
+          "source_gate_below_005_fraction": 0.0,
+          "up_port_pair_cosine": 0.33196939784369495
+        },
+        "1": {
+          "decoder_tanh_abs_over_095_fraction": 0.16406242347963212,
+          "decoder_tanh_mean_derivative": 0.5624460110337535,
+          "mean_candidate_state_coordinate_sd": 0.11258997549884953,
+          "normalized_down_entropy_unseen": 0.5854587378359003,
+          "normalized_up_entropy": 0.7823303644399857,
+          "source_gate": 0.7108204938971959,
+          "source_gate_above_095_fraction": 0.009637903080526032,
+          "source_gate_below_005_fraction": 0.0,
+          "up_port_pair_cosine": 0.33196939784369495
+        },
+        "2": {
+          "decoder_tanh_abs_over_095_fraction": 0.15447564570947236,
+          "decoder_tanh_mean_derivative": 0.5713968064821313,
+          "mean_candidate_state_coordinate_sd": 0.1334685086621903,
+          "normalized_down_entropy_unseen": 0.5854587378359003,
+          "normalized_up_entropy": 0.7823303644399857,
+          "source_gate": 0.7108204938971959,
+          "source_gate_above_095_fraction": 0.009637903080526032,
+          "source_gate_below_005_fraction": 0.0,
+          "up_port_pair_cosine": 0.33196939784369495
+        },
+        "3": {
+          "decoder_tanh_abs_over_095_fraction": 0.15056698531788398,
+          "decoder_tanh_mean_derivative": 0.5747660601859637,
+          "mean_candidate_state_coordinate_sd": 0.14214178075781092,
+          "normalized_down_entropy_unseen": 0.5854587378359003,
+          "normalized_up_entropy": 0.7823303644399857,
+          "source_gate": 0.7108204938971959,
+          "source_gate_above_095_fraction": 0.009637903080526032,
+          "source_gate_below_005_fraction": 0.0,
+          "up_port_pair_cosine": 0.33196939784369495
+        }
+      },
+      "users": 128
+    },
+    "training_epoch281_300_mean": 6.755930648932148,
+    "training_first20_mean": 7.923299309810423,
+    "training_last20_mean": 6.695713044072512,
+    "training_loss_caution": "Changing TRAIN probe episodes and shorter contexts differ from validation inference; raw TRAIN/validation loss gaps do not isolate overfitting."
+  },
+  "input_sha256": {
+    "runs/joint-field-convergence-v1/2028/adaptive/epoch-400.pt": "7ba28c7031100b4c1575c29554b8ad79187af1aa6b6ebd8f266d8a5a08593c17",
+    "runs/joint-field-convergence-v1/2028/adaptive/selected-logits.npz": "ee859306bc5117edb9c40c90488f017cf0f6b3fe557794ed8534942003567492",
+    "runs/joint-field-convergence-v1/2028/adaptive/selection-grid.json": "191df8c9b8293019eb40f72fbad383b984f0901a42438247a9537e9c5a035e0c",
+    "runs/joint-field-convergence-v1/2028/adaptive/selection.json": "9ff01b7f6f4a7360d79f0596f4b5f8c983383c4567bfa8597480900f57b34d21",
+    "runs/joint-field-convergence-v1/2028/adaptive/training-trace.json": "16226546c243ce5b6837029c1d0f7c262fd23565df16aabbff132e0f10fb18a8",
+    "runs/joint-field-convergence-v1/2028/cohorts.json": "8841dac2a52146ae60dc017abfbbccf41b2d4921171a1a4e4d36e29abc235c07",
+    "runs/joint-field-convergence-v1/2028/fixed_flow/epoch-400.pt": "1ea0620c3b1773763419d884b2b596981a5211e7c290609060eafecb7fa5bb29",
+    "runs/joint-field-convergence-v1/2028/fixed_flow/selected-logits.npz": "8bd905574c786319edb1566651b88d6314d0984e6c183e4d68913efa55e6c648",
+    "runs/joint-field-convergence-v1/2028/fixed_flow/selection-grid.json": "dc6c5442e4c0c2c7660e9367338b30310740e4f0be2cb818f6c1c33c54594af2",
+    "runs/joint-field-convergence-v1/2028/fixed_flow/selection.json": "29ee71fad9ca157ca0d66e849822cbfaba278dca04144ca984557063c5938209",
+    "runs/joint-field-convergence-v1/2028/fixed_flow/training-trace.json": "db0d3bc080bf28b462558ecef401534d555d5a2bfbf77e7661791e7f2f40f6be",
+    "runs/joint-field-convergence-v1/2028/protocol.json": "743e08c096f5b9c661cdeff5de117b87a2e1703d3d1e9995dd41126ce887e412",
+    "runs/joint-field-convergence-v1/2028/training-categories.npz": "c904699aefdb2a90e8b1d9bab6e7b93158fd380270a7decd46fcb2a53a6ac183",
+    "runs/joint-field-convergence-v1/2028/valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae",
+    "runs/research-v2/2028-EASE-1/valid-scores.npz": "c65952e320a6bac5e87b1c640b53d0cb8c14cf69853316e15930569f9c0a8db8"
+  },
+  "seed": 2028,
+  "users": 943
+}

@@ -1,0 +1,26 @@
+{
+  "compression": "SVD of double-centered TRAIN-fitted EASE full-catalog scores, retaining row/item means. Includes known-position scores in SVD; evaluated only on original TRAIN-unseen candidates.",
+  "diagnostic_sample": "Uniform sample of development users, generator seed split_seed+9101; no outcome selection.",
+  "diagnostic_users_per_seed": 128,
+  "new_model_training": false,
+  "rank_grid": [
+    0,
+    8,
+    16,
+    32,
+    64,
+    128,
+    943
+  ],
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "source_sha256": {
+    "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+    "exploratory/diagnose_field.py": "aeefb409e93efdff8dd45c94d8a3bf52b7b5bebf62c4a9828aace576287a75ec"
+  },
+  "stage": "post_test_exploratory_train_development_diagnosis",
+  "test_labels_or_metrics_read": false
+}

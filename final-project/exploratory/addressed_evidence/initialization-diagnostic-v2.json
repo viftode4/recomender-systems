@@ -1,0 +1,126 @@
+{
+  "caution": "Adam rescales gradients; small raw gradients alone do not prove starvation. Feature RMS determines bounded branch influence, and epsilon affects very small gradients.",
+  "episode": {
+    "context_fraction": 0.8,
+    "epoch": 1001,
+    "seed": 2026
+  },
+  "model_config": {
+    "init_scale": 0.01,
+    "k": 64,
+    "n_items": 1683,
+    "pair_bound": 1.0,
+    "pair_vote_scale": 0.01,
+    "seed": 2026,
+    "variant": "pair"
+  },
+  "normalizations": {
+    "pair_mean": {
+      "direct_pair_correlation": 0.004185824770560439,
+      "direct_pair_covariance": 2.2713128769870995e-12,
+      "direct_rms": 0.0023148584360278474,
+      "multiplier_from_pair_mean": 1.0,
+      "pair_rms": 2.3440807321136902e-07,
+      "pair_to_direct_rms": 0.0001012623794021714,
+      "parameter_gradients": {
+        "bias": {
+          "fraction_abs_below_adam_epsilon_1e8": 0.0005941770647653001,
+          "l2_norm": 0.047894154283485944,
+          "max_abs": 0.00946805626153946,
+          "nonzero_fraction": 0.9994058229352347,
+          "rms": 0.0005221021104430588
+        },
+        "pair_raw": {
+          "fraction_abs_below_adam_epsilon_1e8": 1.0,
+          "l2_norm": 1.8327427311327525e-08,
+          "max_abs": 6.300238108991607e-09,
+          "nonzero_fraction": 0.8924539512774807,
+          "rms": 1.9979032141580623e-10
+        },
+        "potentials": {
+          "fraction_abs_below_adam_epsilon_1e8": 0.713931595365419,
+          "l2_norm": 0.017862064453319833,
+          "max_abs": 0.0008767075487412512,
+          "nonzero_fraction": 0.2860684046345811,
+          "rms": 1.088502931057845e-05
+        }
+      }
+    },
+    "pair_rms_count": {
+      "direct_pair_correlation": 0.004185824873349058,
+      "direct_pair_covariance": 1.019816942679016e-10,
+      "direct_rms": 0.0023148584360278474,
+      "multiplier_from_pair_mean": 44.8998886412873,
+      "pair_rms": 1.05248960243878e-05,
+      "pair_to_direct_rms": 0.004546669403442167,
+      "parameter_gradients": {
+        "bias": {
+          "fraction_abs_below_adam_epsilon_1e8": 0.0005941770647653001,
+          "l2_norm": 0.047894154283485944,
+          "max_abs": 0.00946805626153946,
+          "nonzero_fraction": 0.9994058229352347,
+          "rms": 0.0005221021104430588
+        },
+        "pair_raw": {
+          "fraction_abs_below_adam_epsilon_1e8": 0.948306595365419,
+          "l2_norm": 8.228994023779582e-07,
+          "max_abs": 2.828799665621773e-07,
+          "nonzero_fraction": 0.8924539512774807,
+          "rms": 8.9705627146235e-09
+        },
+        "potentials": {
+          "fraction_abs_below_adam_epsilon_1e8": 0.713931595365419,
+          "l2_norm": 0.017862064453319833,
+          "max_abs": 0.0008767075487412512,
+          "nonzero_fraction": 0.2860684046345811,
+          "rms": 1.088502931057845e-05
+        }
+      }
+    },
+    "pair_rms_count_and_fixed_vote_scale": {
+      "direct_pair_correlation": 0.004185824871329813,
+      "direct_pair_covariance": 1.0198169554913837e-08,
+      "direct_rms": 0.0023148584360278474,
+      "multiplier_from_pair_mean": 4489.98886412873,
+      "pair_rms": 0.001052489616169334,
+      "pair_to_direct_rms": 0.45466694627570425,
+      "parameter_gradients": {
+        "bias": {
+          "fraction_abs_below_adam_epsilon_1e8": 0.0005941770647653001,
+          "l2_norm": 0.047894154283485944,
+          "max_abs": 0.00946805626153946,
+          "nonzero_fraction": 0.9994058229352347,
+          "rms": 0.0005221021104430588
+        },
+        "pair_raw": {
+          "fraction_abs_below_adam_epsilon_1e8": 0.6254307783719548,
+          "l2_norm": 8.228994022009382e-05,
+          "max_abs": 2.828799551934935e-05,
+          "nonzero_fraction": 0.8924539512774807,
+          "rms": 8.970562712693794e-07
+        },
+        "potentials": {
+          "fraction_abs_below_adam_epsilon_1e8": 0.713931595365419,
+          "l2_norm": 0.017862064453319833,
+          "max_abs": 0.0008767075487412512,
+          "nonzero_fraction": 0.2860684046345811,
+          "rms": 1.088502931057845e-05
+        }
+      }
+    }
+  },
+  "optimizer_steps": 0,
+  "parameters": 2709630,
+  "same_initial_outputs_loss_and_direct_gradients": true,
+  "sample_seed": 20269101,
+  "sample_users": 64,
+  "source_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "diagnose_initialization.py": "657d99dec93614f597acf0628d21a0ca6ce1ff99ca48b1f6659ccdd31294cf36",
+    "model.py": "7677a451e9eeb2b197ab9312b2fa744ae3b211131dbff2329c88402e01214a1d"
+  },
+  "stage": "post_test_exploratory_train_only_initialization_diagnostic",
+  "test_read": false,
+  "training_categories_sha256": "73c55b56c465ab58d75d377085fab5f01733f9867e6261153ac1ca5f7d24e91d",
+  "validation_read": false
+}

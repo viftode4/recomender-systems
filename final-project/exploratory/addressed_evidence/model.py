@@ -1,0 +1,125 @@
+"""Direct item-addressed categorical evidence, without fitted expert inputs.
+
+The pair variant adds products between distinct source contributions. These are
+computational interactions, not identified psychological agreement/conflict.
+Both variants are members of established categorical/higher-order model families;
+independent implementation does not establish novelty.
+"""
+import math
+
+import numpy as np
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+
+VARIANTS = ('additive', 'pair')
+
+
+def build_neighbors(training_categories, k=64):
+    """TRAIN-only positive co-observation cosine; exact ties use source index.
+
+    Rows are candidates, columns are directed context-source slots. Exclude
+    self edges and padding. Fewer than k positive co-observation neighbors are
+    padded with zero, whose category must always be absent at inference.
+    """
+    matrix = np.asarray(training_categories)
+    if (type(k) is not int or k < 1 or matrix.ndim != 2 or not len(matrix)
+            or matrix.shape[1] < 2 or not np.isfinite(matrix).all()
+            or np.any(matrix < 0) or np.any(matrix > 5)
+            or not np.equal(matrix, np.floor(matrix)).all() or np.any(matrix[:, 0])):
+        raise ValueError('Require valid TRAIN categories with an empty padding column and positive k')
+    present = (matrix != 0).astype(np.float64)
+    counts = present.sum(0)
+    coobserved = present.T @ present
+    denominator = np.sqrt(counts[:, None] * counts[None, :])
+    cosine = np.divide(coobserved, denominator, out=np.zeros_like(coobserved), where=denominator > 0)
+    np.fill_diagonal(cosine, 0.)
+    cosine[:, 0] = 0.
+    result = np.zeros((matrix.shape[1], k), dtype=np.int64)
+    for candidate in range(1, matrix.shape[1]):
+        sources = np.flatnonzero(cosine[candidate] > 0)
+        ordered = sources[np.lexsort((sources, -cosine[candidate, sources]))][:k]
+        result[candidate, :len(ordered)] = ordered
+    return result
+
+
+class AddressedEvidenceModel(nn.Module):
+    """Predict five logits per item from item/category-specific source tables.
+
+    A fresh fit supplies ``neighbors``. To restore, instantiate ``**config`` then
+    load the strict state dict, which includes the graph. Ratings are Long[B,M]
+    in 0..5; 0 is absent evidence, not a dislike. PAD item zero must be absent.
+
+    Each table has dimensions [candidate, source slot, source category, output
+    category]. Direct sums use fixed sqrt(k) scaling, preserving context-count
+    information. Pair sums use fixed pair_vote_scale*sqrt(k*(k-1)/2), with a
+    minimum pair count of one. This retains evidence-count information too.
+    ``pair_raw`` is allocated in both variants and initialized to zero. Thus
+    equal-seed variants have identical initial states and predictions.
+    """
+
+    def __init__(self, n_items, k=64, variant='additive', seed=2026,
+                 init_scale=.01, pair_bound=1., pair_vote_scale=.01, neighbors=None):
+        super().__init__()
+        if (type(n_items) is not int or n_items < 2 or type(k) is not int or k < 1
+                or type(seed) is not int or variant not in VARIANTS
+                or not math.isfinite(init_scale) or init_scale < 0
+                or not math.isfinite(pair_bound) or pair_bound <= 0
+                or not math.isfinite(pair_vote_scale) or pair_vote_scale <= 0):
+            raise ValueError('Invalid addressed-evidence configuration')
+        graph = torch.zeros((n_items, k), dtype=torch.long) if neighbors is None else torch.as_tensor(neighbors)
+        if (graph.dtype not in (torch.int32, torch.int64) or graph.shape != (n_items, k)
+                or torch.any(graph < 0) or torch.any(graph >= n_items) or torch.any(graph[0])):
+            raise ValueError('Invalid candidate/source graph')
+        for candidate, sources in enumerate(graph.tolist()):
+            nonpadding = [s for s in sources if s]
+            if candidate in nonpadding or len(set(nonpadding)) != len(nonpadding):
+                raise ValueError('Graph must exclude self edges and repeated real sources')
+        self.config = dict(n_items=n_items, k=k, variant=variant, seed=seed,
+                           init_scale=float(init_scale), pair_bound=float(pair_bound),
+                           pair_vote_scale=float(pair_vote_scale))
+        self.n_items, self.k, self.variant = n_items, k, variant
+        self.pair_bound = float(pair_bound)
+        self.pair_vote_scale = float(pair_vote_scale)
+        self.register_buffer('neighbors', graph.long().clone())
+        self.register_buffer('_edge_offsets', torch.arange(n_items*k).reshape(n_items, k)*5,
+                             persistent=False)
+        mask = torch.ones((n_items, 1))
+        mask[0] = 0
+        self.register_buffer('_candidate_mask', mask, persistent=False)
+        self.potentials = nn.Parameter(torch.empty(n_items, k, 5, 5))
+        self.bias = nn.Parameter(torch.zeros(n_items, 5))
+        self.pair_raw = nn.Parameter(torch.zeros(n_items, 5))
+        generator = torch.Generator(device='cpu').manual_seed(seed)
+        nn.init.normal_(self.potentials, std=init_scale, generator=generator)
+        with torch.no_grad():
+            self.potentials[0].zero_()
+
+    def forward(self, context_ratings, return_diagnostics=False):
+        if (context_ratings.dtype != torch.long or context_ratings.ndim != 2
+                or context_ratings.shape[1] != self.n_items or not len(context_ratings)
+                or torch.any(context_ratings < 0) or torch.any(context_ratings > 5)
+                or torch.any(context_ratings[:, 0])):
+            raise ValueError('Require nonempty Long[B,M] categories 0..5 and absent PAD')
+        source_categories = context_ratings[:, self.neighbors]
+        present = source_categories != 0
+        indices = self._edge_offsets[None] + source_categories.clamp_min(1) - 1
+        # Embedding gather backpropagates to a compact [M*K*5,5] table, avoiding
+        # a broadcast [B,M,K,5,5] gather-gradient allocation.
+        values = F.embedding(indices, self.potentials.reshape(-1, 5)) * present[..., None]
+        total = values.sum(dim=2)
+        direct = total / math.sqrt(self.k)
+        pair_sum = (total.square() - values.square().sum(dim=2)) / 2
+        pair_count = max(self.k*(self.k-1)/2, 1)
+        pair_feature = pair_sum / (self.pair_vote_scale * math.sqrt(pair_count))
+        coefficient = self.pair_bound * self.pair_raw.tanh()
+        logits = self.bias[None] + direct
+        if self.variant == 'pair':
+            logits = logits + coefficient[None] * pair_feature
+        result = {'rating_logits': logits * self._candidate_mask[None]}
+        if return_diagnostics:
+            result['diagnostics'] = {'direct': direct, 'distinct_pair_feature': pair_feature,
+                'distinct_pair_mean': pair_sum / pair_count,
+                'pair_coefficients': coefficient, 'observed_neighbors': present.sum(dim=2)}
+        return result
