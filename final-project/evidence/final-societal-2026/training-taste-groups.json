@@ -1,0 +1,36 @@
+{
+  "definition": "Training-only genre contradiction proxy; no held-out labels define membership.",
+  "group_counts": {
+    "activity": {
+      "active": 316,
+      "medium": 314,
+      "sparse": 313
+    },
+    "contradiction": {
+      "has-contradictory-likes": 278,
+      "insufficient-evidence": 201,
+      "no-contradictory-likes": 464
+    },
+    "taste_breadth": {
+      "broad": 314,
+      "insufficient-evidence": 2,
+      "medium": 313,
+      "narrow": 314
+    }
+  },
+  "thresholds": {
+    "activity_terciles": [
+      34.0,
+      92.0
+    ],
+    "dislike_rating_max": 2.0,
+    "entropy_terciles": [
+      2.908377330096745,
+      3.228505604927613
+    ],
+    "like_rating_min": 4.0,
+    "min_dislikes": 3,
+    "min_likes": 3,
+    "min_negative_genre_mass": 1.0
+  }
+}

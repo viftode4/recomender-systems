@@ -1,0 +1,2666 @@
+{
+  "protocol": {
+    "field_tracks": [
+      "conditional",
+      "joint"
+    ],
+    "frequency_cohort": "all development users, no outcome-conditioned subgroup",
+    "frequency_diagnostics": [
+      "slot mean training count",
+      "slot median training count",
+      "zero-training-count slot share",
+      "head slot share"
+    ],
+    "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+    "k": 10,
+    "metrics": [
+      "all_observed",
+      "liked_ratings"
+    ],
+    "references": [
+      "EASE",
+      "SLIMElastic",
+      "PositiveEASE"
+    ],
+    "scope": "Exploratory comparison of already selected models; reused validation users, unequal objectives and tuning budgets, no causal interpretation.",
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "source_sha256": {
+      "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+      "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+      "field_reference_comparison.py": "60fa86b8adedd10705aea9073437f35e6252d4703bd8da7fd4ed7a95f3be78fd",
+      "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+      "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+      "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+    },
+    "stage": "validation_development",
+    "status": "written_before_comparison",
+    "test_evaluated": false,
+    "test_read": false,
+    "training_or_selection_performed": false
+  },
+  "seeds": {
+    "2026": {
+      "cohort_file_sha256": "78c4bca86aba2284b8a0784a34a28e0ed3c1bef1a3e8a40d47a13572d991948e",
+      "cohorts": {
+        "development": 472,
+        "meta_fit": 471
+      },
+      "data_sha256": {
+        "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+        "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+        "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+      },
+      "details_sha256": "e53bce01dc11c336b75afe0882ff7575edab09658684804dc06026d155366f1e",
+      "field_manifest_sha256": {
+        "conditional": "bf66bb066ca69f853dd34c23ff91f8b1c73f934fab224ab76c975e3a9372f844",
+        "joint": "dc1451ad845d39366273a4cfc0228d45786bb83d605321bd0b16da37e001772d"
+      },
+      "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+      "provenance": {
+        "Conditional-adaptive": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "c3881c182eef774cf0b5249f6f4a91d97c2b474ec5ed9480f16dbbd906e10d6c",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "c7e7e7971bf7fa747302ad694314bbe601b70e2d2b5358edab96072a31d5e8e9",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "c3881c182eef774cf0b5249f6f4a91d97c2b474ec5ed9480f16dbbd906e10d6c",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "c7e7e7971bf7fa747302ad694314bbe601b70e2d2b5358edab96072a31d5e8e9",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          }
+        },
+        "Conditional-fixed_flow": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "9adb13d6476760bfdd6b91e590f5299620a31907a5bd4822928e2794e94fa96e",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "62bd7eb52cbfd2cdcde0845a896c5241d1158ed54026379306d37e88dfd40d96",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "9adb13d6476760bfdd6b91e590f5299620a31907a5bd4822928e2794e94fa96e",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "62bd7eb52cbfd2cdcde0845a896c5241d1158ed54026379306d37e88dfd40d96",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          }
+        },
+        "Conditional-hard_clamp": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "e1773946ae578c4792eefa22c7ae65b5ad8fd3232149bdd8542bcbc87daab5d7",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "68970a96ec8117b0d5a072ddf20f9b8f1dc3c43d73ba35ca6e01982f3652b58f",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "e1773946ae578c4792eefa22c7ae65b5ad8fd3232149bdd8542bcbc87daab5d7",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "68970a96ec8117b0d5a072ddf20f9b8f1dc3c43d73ba35ca6e01982f3652b58f",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          }
+        },
+        "EASE": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "1a5d389c0928fbe3aa11177efc7408a139a9447e88973de5068db156971b47d9",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": false,
+            "score_file_sha256": "9f7807608f9e7bc00d5b2ab61d629e5d417b1dfd37f4ec13ea44796bf2d458bc",
+            "score_space": "original model full-catalog score"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "1a5d389c0928fbe3aa11177efc7408a139a9447e88973de5068db156971b47d9",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": false,
+            "score_file_sha256": "9f7807608f9e7bc00d5b2ab61d629e5d417b1dfd37f4ec13ea44796bf2d458bc",
+            "score_space": "original model full-catalog score"
+          }
+        },
+        "Joint-adaptive": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "78abc9e6551d0658036ad4e9d276bba156c5f037007129df7576be23129e533c",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "07ba08f8ccec8e16d0c6d4df3b32426afacacdca44e9cfa12c2d95713ca4fd66",
+            "score_space": "logsumexp(all five rating logits)"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "2ce24837f25f69d4a801c697887669f38ec1d4f1e7c879f6e1071b82b174f7a4",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "8dd68b9381b1cc227a94d04626527f79cef46748dc41737fd6a856b972ee238f",
+            "score_space": "logsumexp(rating 4 and 5 logits)"
+          }
+        },
+        "Joint-fixed_flow": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "3120edb40d57023df4ca84c5be19455c3965a6b39850aa7ced27bd4c08945b01",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "1c47268c9cc1fe10a8a089c102888b75370718bc6f49a2147d43e023ab5faf13",
+            "score_space": "logsumexp(all five rating logits)"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "731343d2117ee9d80a406301a41428652cb259350ed6948a55b8b891e2e4ab86",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "9d4f75ed8e5217ae5e9be71080a8c93d933a461b748d521c47a18b0139d64cf9",
+            "score_space": "logsumexp(rating 4 and 5 logits)"
+          }
+        },
+        "PositiveEASE": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "4edc1d8f0c4cdae319a79fe70119e445eedafd5fd49c356c29df15c903da8620",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "a3c75ce087aae01bd9671ec06273183da5f76a5d78f7e4b6965bc9b6e796a31d",
+            "score_space": "unmasked finite scores aligned to source original IDs"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "4edc1d8f0c4cdae319a79fe70119e445eedafd5fd49c356c29df15c903da8620",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "a3c75ce087aae01bd9671ec06273183da5f76a5d78f7e4b6965bc9b6e796a31d",
+            "score_space": "unmasked finite scores aligned to source original IDs"
+          }
+        },
+        "SLIMElastic": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "70c2fb6d9d9be21abe7dc769aa6599f78e00d0f8c5bf6c4bcad58afd058a4597",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": false,
+            "score_file_sha256": "acbb0506ffad43000e7105bfbcefcf49b172b457646ad117d9fd6f823e876214",
+            "score_space": "model-native score"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "70c2fb6d9d9be21abe7dc769aa6599f78e00d0f8c5bf6c4bcad58afd058a4597",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": false,
+            "score_file_sha256": "acbb0506ffad43000e7105bfbcefcf49b172b457646ad117d9fd6f823e876214",
+            "score_space": "model-native score"
+          }
+        }
+      },
+      "rows": {
+        "Conditional-adaptive": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 61,
+                "recommended_known_dislikes": 3,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.000635593220338983,
+              "metrics": {
+                "coverage@10": 0.04102259215219976,
+                "hit@10": 0.11652542372881355,
+                "mrr@10": 0.02043903013182673,
+                "ndcg@10": 0.011622217614793413,
+                "novelty@10": 11.668300958639717,
+                "precision@10": 0.012923728813559313,
+                "recall@10": 0.011507978606141432
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.3989406779661017,
+                "mean_training_count": 72.87330508474577,
+                "median_training_count": 48.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 61,
+                "recommended_known_dislikes": 3,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.000635593220338983,
+              "metrics": {
+                "coverage@10": 0.04102259215219976,
+                "hit@10": 0.10585585585585586,
+                "mrr@10": 0.01878485628485628,
+                "ndcg@10": 0.011704481216370688,
+                "novelty@10": 11.679022997801534,
+                "precision@10": 0.011711711711711708,
+                "recall@10": 0.0154845613316639
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.3989406779661017,
+                "mean_training_count": 72.87330508474577,
+                "median_training_count": 48.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-60.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "b6410dbf05eb3d46af91112307a1d97fc79be38761047510cab86639b9c59725",
+            "elapsed_seconds": 144.33542520800256,
+            "epoch": 60,
+            "initial_state_sha256": "1076e3254c569b7b9cacb2d6b660c151ae114d41c7b3fc5dd2de5665e0c213ce",
+            "meta_fit_macro_cross_entropy": 1.2702130266988767,
+            "parameter_count": 14654,
+            "probability_array_sha256": "6cff5b8613c5fbbcf3989ef5d037a2e384346c9729ad7adf8be86cd71144a887",
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_cross_entropy"
+          }
+        },
+        "Conditional-fixed_flow": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 59,
+                "recommended_known_dislikes": 2,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.000423728813559322,
+              "metrics": {
+                "coverage@10": 0.039239001189060645,
+                "hit@10": 0.1059322033898305,
+                "mrr@10": 0.018443973634651598,
+                "ndcg@10": 0.011026622242267102,
+                "novelty@10": 11.820768126991183,
+                "precision@10": 0.012499999999999995,
+                "recall@10": 0.011055290505793632
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.3802966101694915,
+                "mean_training_count": 68.89978813559323,
+                "median_training_count": 38.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 59,
+                "recommended_known_dislikes": 2,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.000423728813559322,
+              "metrics": {
+                "coverage@10": 0.03864447086801427,
+                "hit@10": 0.0990990990990991,
+                "mrr@10": 0.01732982982982983,
+                "ndcg@10": 0.011398023204974718,
+                "novelty@10": 11.828079550904317,
+                "precision@10": 0.011486486486486485,
+                "recall@10": 0.015293486995347947
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.3802966101694915,
+                "mean_training_count": 68.89978813559323,
+                "median_training_count": 38.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-60.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "d4152b9748b9b34ed7b7a3b7bdab8dba43e0eaf0cb24f283f08eb3324df54e31",
+            "elapsed_seconds": 75.13667775000795,
+            "epoch": 60,
+            "initial_state_sha256": "1076e3254c569b7b9cacb2d6b660c151ae114d41c7b3fc5dd2de5665e0c213ce",
+            "meta_fit_macro_cross_entropy": 1.2699667783944202,
+            "parameter_count": 14654,
+            "probability_array_sha256": "f941c5a922e2e32e2f535726687911941a529aa2f37dfe8b0e007c98e11cff34",
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_cross_entropy"
+          }
+        },
+        "Conditional-hard_clamp": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 62,
+                "recommended_known_dislikes": 3,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.000635593220338983,
+              "metrics": {
+                "coverage@10": 0.03864447086801427,
+                "hit@10": 0.11440677966101695,
+                "mrr@10": 0.02503867366155501,
+                "ndcg@10": 0.012714042546714705,
+                "novelty@10": 11.402042631026628,
+                "precision@10": 0.013135593220338974,
+                "recall@10": 0.010823598726607812
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.4235169491525424,
+                "mean_training_count": 75.68601694915255,
+                "median_training_count": 59.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 62,
+                "recommended_known_dislikes": 3,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.000635593220338983,
+              "metrics": {
+                "coverage@10": 0.03804994054696789,
+                "hit@10": 0.10585585585585586,
+                "mrr@10": 0.021753896753896745,
+                "ndcg@10": 0.012233725709262958,
+                "novelty@10": 11.41534355526293,
+                "precision@10": 0.011936936936936935,
+                "recall@10": 0.014343838083742512
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.4235169491525424,
+                "mean_training_count": 75.68601694915255,
+                "median_training_count": 59.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-60.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "7e940478d0f913ef41036497243252f3d1a32ba488ad8b8b017c20274bcfccbc",
+            "elapsed_seconds": 157.40759258301114,
+            "epoch": 60,
+            "initial_state_sha256": "1076e3254c569b7b9cacb2d6b660c151ae114d41c7b3fc5dd2de5665e0c213ce",
+            "meta_fit_macro_cross_entropy": 1.2702164056911271,
+            "parameter_count": 14654,
+            "probability_array_sha256": "169896993a5f25ffa1fd663d72d383e3607b643f836b0815b805172ca44d6e76",
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_cross_entropy"
+          }
+        },
+        "EASE": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 808,
+                "recommended_known_dislikes": 74,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.015677966101694914,
+              "metrics": {
+                "coverage@10": 0.19143876337693222,
+                "hit@10": 0.777542372881356,
+                "mrr@10": 0.4218060599946191,
+                "ndcg@10": 0.2595629655329885,
+                "novelty@10": 8.502724377267972,
+                "precision@10": 0.1711864406779663,
+                "recall@10": 0.24346977198056788
+              },
+              "score_space": "original model full-catalog score",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9877118644067797,
+                "mean_training_count": 244.51101694915255,
+                "median_training_count": 232.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 808,
+                "recommended_known_dislikes": 74,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.015677966101694914,
+              "metrics": {
+                "coverage@10": 0.18549346016646848,
+                "hit@10": 0.6936936936936937,
+                "mrr@10": 0.35612040612040596,
+                "ndcg@10": 0.24043865828779315,
+                "novelty@10": 8.498424164167856,
+                "precision@10": 0.12522522522522564,
+                "recall@10": 0.2852729048531816
+              },
+              "score_space": "original model full-catalog score",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9877118644067797,
+                "mean_training_count": 244.51101694915255,
+                "median_training_count": 232.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "selection_cohort": "meta_fit",
+            "selection_file_sha256": "a91b45d5d848241faac21aee0198bc97fa88ae0bbb77bac8224cbcfffc42aea5",
+            "selection_metric": "meta-fit all-observed nDCG@10",
+            "selection_value": 0.27035243807114334,
+            "settings": {
+              "reg_weight": 250.0
+            }
+          }
+        },
+        "Joint-adaptive": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 665,
+                "recommended_known_dislikes": 63,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.013347457627118644,
+              "metrics": {
+                "coverage@10": 0.1117717003567182,
+                "hit@10": 0.722457627118644,
+                "mrr@10": 0.37003295668549896,
+                "ndcg@10": 0.21139188547518506,
+                "novelty@10": 8.318387913038281,
+                "precision@10": 0.14088983050847495,
+                "recall@10": 0.20234859579830133
+              },
+              "score_space": "logsumexp(all five rating logits)",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9919491525423729,
+                "mean_training_count": 274.27457627118645,
+                "median_training_count": 258.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 648,
+                "recommended_known_dislikes": 45,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.009533898305084746,
+              "metrics": {
+                "coverage@10": 0.0980975029726516,
+                "hit@10": 0.6328828828828829,
+                "mrr@10": 0.3154922779922779,
+                "ndcg@10": 0.2009913909387197,
+                "novelty@10": 8.301078399233715,
+                "precision@10": 0.10765765765765799,
+                "recall@10": 0.24088733554358152
+              },
+              "score_space": "logsumexp(rating 4 and 5 logits)",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9938559322033899,
+                "mean_training_count": 277.1082627118644,
+                "median_training_count": 258.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-100.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "b3c5e48dba2b36b263e13ffcda80319d93d4a93b13846bc5c9ca1f2d816ea9eb",
+            "elapsed_seconds": 161.5214362500119,
+            "epoch": 100,
+            "initial_state_sha256": "1076e3254c569b7b9cacb2d6b660c151ae114d41c7b3fc5dd2de5665e0c213ce",
+            "logits_array_sha256": "62ce8d7ae550216661d70c94c4393dbbd6d5db8a2dba1b4be6d472ecd4ef72e3",
+            "meta_fit_macro_joint_nll": 6.9494015945086645,
+            "parameter_count": 14654,
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_joint_nll"
+          }
+        },
+        "Joint-fixed_flow": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 609,
+                "recommended_known_dislikes": 57,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.012076271186440678,
+              "metrics": {
+                "coverage@10": 0.09869203329369798,
+                "hit@10": 0.6800847457627118,
+                "mrr@10": 0.3522699757869249,
+                "ndcg@10": 0.19516206394200467,
+                "novelty@10": 8.265511999428027,
+                "precision@10": 0.1290254237288139,
+                "recall@10": 0.17990175253059204
+              },
+              "score_space": "logsumexp(all five rating logits)",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9957627118644068,
+                "mean_training_count": 280.9989406779661,
+                "median_training_count": 267.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 589,
+                "recommended_known_dislikes": 52,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.011016949152542373,
+              "metrics": {
+                "coverage@10": 0.08382877526753864,
+                "hit@10": 0.5833333333333334,
+                "mrr@10": 0.30659766909766883,
+                "ndcg@10": 0.18628002276433558,
+                "novelty@10": 8.277934437754078,
+                "precision@10": 0.09662162162162187,
+                "recall@10": 0.21185049692520425
+              },
+              "score_space": "logsumexp(rating 4 and 5 logits)",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9985169491525424,
+                "mean_training_count": 279.0141949152542,
+                "median_training_count": 258.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-100.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "322812f1f1e4e15ccfa41c879f19a6e4c6a1c4480f54ef047547e349c53e9cb5",
+            "elapsed_seconds": 85.31459720799467,
+            "epoch": 100,
+            "initial_state_sha256": "1076e3254c569b7b9cacb2d6b660c151ae114d41c7b3fc5dd2de5665e0c213ce",
+            "logits_array_sha256": "bed6a98575f41ba5d4ee165cb00e6feef2cc61ea3c75f736ed5ce68adcc7eaa3",
+            "meta_fit_macro_joint_nll": 6.982402505689094,
+            "parameter_count": 14654,
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_joint_nll"
+          }
+        },
+        "PositiveEASE": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 733,
+                "recommended_known_dislikes": 39,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.00826271186440678,
+              "metrics": {
+                "coverage@10": 0.16230677764565993,
+                "hit@10": 0.722457627118644,
+                "mrr@10": 0.3842808380414309,
+                "ndcg@10": 0.23017997229069315,
+                "novelty@10": 8.49257805222566,
+                "precision@10": 0.1552966101694917,
+                "recall@10": 0.21384696668940298
+              },
+              "score_space": "unmasked finite scores aligned to source original IDs",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9906779661016949,
+                "mean_training_count": 245.5811440677966,
+                "median_training_count": 234.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 733,
+                "recommended_known_dislikes": 39,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.00826271186440678,
+              "metrics": {
+                "coverage@10": 0.15873959571938168,
+                "hit@10": 0.6824324324324325,
+                "mrr@10": 0.35916273416273403,
+                "ndcg@10": 0.24824668446108383,
+                "novelty@10": 8.487063984995432,
+                "precision@10": 0.13310810810810852,
+                "recall@10": 0.2953306258619899
+              },
+              "score_space": "unmasked finite scores aligned to source original IDs",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9906779661016949,
+                "mean_training_count": 245.5811440677966,
+                "median_training_count": 234.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "model": "positive_ease",
+            "penalty": 250.0,
+            "seed": 2026,
+            "selection_cohort": "meta_fit",
+            "selection_ndcg": 0.26268126143118176,
+            "selection_objective": "liked_ratings"
+          }
+        },
+        "SLIMElastic": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 802,
+                "recommended_known_dislikes": 74,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.015677966101694914,
+              "metrics": {
+                "coverage@10": 0.2294887039239001,
+                "hit@10": 0.760593220338983,
+                "mrr@10": 0.41420668549905826,
+                "ndcg@10": 0.25462809261732444,
+                "novelty@10": 8.631721176861333,
+                "precision@10": 0.1699152542372883,
+                "recall@10": 0.23545225074744752
+              },
+              "score_space": "model-native score",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9654661016949152,
+                "mean_training_count": 228.88898305084746,
+                "median_training_count": 220.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 444,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 802,
+                "recommended_known_dislikes": 74,
+                "users_without_liked_validation_excluded_from_liked_metrics": 28,
+                "validation_dislikes": 795,
+                "validation_likes": 2607,
+                "validation_observations": 4655
+              },
+              "known_dislike_rate_per_slot": 0.015677966101694914,
+              "metrics": {
+                "coverage@10": 0.22473246135552913,
+                "hit@10": 0.6734234234234234,
+                "mrr@10": 0.35165880165880165,
+                "ndcg@10": 0.23579621803307468,
+                "novelty@10": 8.62575385896545,
+                "precision@10": 0.12725225225225262,
+                "recall@10": 0.2702019189487222
+              },
+              "score_space": "model-native score",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9654661016949152,
+                "mean_training_count": 228.88898305084746,
+                "median_training_count": 220.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "selection_cohort": "meta_fit",
+            "selection_file_sha256": "e27ea6f1319e86e29d534223be28ba687d341b8a2f1f59c0263b73ea9fd96d33",
+            "selection_metric": "meta-fit all-observed nDCG@10",
+            "selection_value": 0.2639679997247766,
+            "settings": {
+              "alpha": 0.01,
+              "hide_item": true,
+              "l1_ratio": 0.5,
+              "positive_only": true
+            }
+          }
+        }
+      },
+      "seed": 2026,
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2027": {
+      "cohort_file_sha256": "0940911bad5197a657fc9ed170e83fed7aa98a523d57996ac607d58d8b7d0ea2",
+      "cohorts": {
+        "development": 472,
+        "meta_fit": 471
+      },
+      "data_sha256": {
+        "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+        "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+        "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+      },
+      "details_sha256": "296b2600af2d4582d57e326541c1f8a7dfe39410a65bfe95e27acf89b6f28a47",
+      "field_manifest_sha256": {
+        "conditional": "dea5c200eb68072c3b058718e2e84960ca6fe652da47cd6401049d08f95d6249",
+        "joint": "db9bf24f2feb2696fac580e268cea3c922655d546ec6dcc8b300636f8cc19d71"
+      },
+      "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+      "provenance": {
+        "Conditional-adaptive": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "53f2f4e0b74357752459087bd7f824799ed1a1edad417b808e237eba18e175e9",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "ce8c487c5971a93378dd2a146c9686c4887effbe35373ea841a4437356c4c770",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "53f2f4e0b74357752459087bd7f824799ed1a1edad417b808e237eba18e175e9",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "ce8c487c5971a93378dd2a146c9686c4887effbe35373ea841a4437356c4c770",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          }
+        },
+        "Conditional-fixed_flow": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "bc8a817f6f818e8cf0441a496cbc58a1f3a9b6f7bdbc866725e45f623f018ba5",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "42b3c18224f9cc512162d2707676553a5b032bb92efb651ae6d6642a8f2f12a1",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "bc8a817f6f818e8cf0441a496cbc58a1f3a9b6f7bdbc866725e45f623f018ba5",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "42b3c18224f9cc512162d2707676553a5b032bb92efb651ae6d6642a8f2f12a1",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          }
+        },
+        "Conditional-hard_clamp": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "4437d071bf72fa5b0c2f298bd70d551ccef00c3df8a5f3a99eccb8ea9006e615",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "8af5d5647af451ca79adfa73ae838489942f5cc30bb59c33366311019f78477a",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "4437d071bf72fa5b0c2f298bd70d551ccef00c3df8a5f3a99eccb8ea9006e615",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "8af5d5647af451ca79adfa73ae838489942f5cc30bb59c33366311019f78477a",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          }
+        },
+        "EASE": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "f8742f1f7783c61d3eba430075ff9f8be57b0a47bbf6e5a7818d5364f9f179ee",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": false,
+            "score_file_sha256": "cc5e61cf3f61d7e1ff7e19fc381ae8d04458280cf16149e2ae2aeb0990cd9ac0",
+            "score_space": "original model full-catalog score"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "f8742f1f7783c61d3eba430075ff9f8be57b0a47bbf6e5a7818d5364f9f179ee",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": false,
+            "score_file_sha256": "cc5e61cf3f61d7e1ff7e19fc381ae8d04458280cf16149e2ae2aeb0990cd9ac0",
+            "score_space": "original model full-catalog score"
+          }
+        },
+        "Joint-adaptive": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "77a9663d42816dcbd3eef3a90f358af74426ae160434c647606abf5964745e46",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "cbd04d38c7e832c298d9b9183cac8e072d29a9e251b64d5944d0d86e6c5feff3",
+            "score_space": "logsumexp(all five rating logits)"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "9a5dd795918873c31fc3315186a28173714d6e265bd624d2a7dc80830970b587",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "48d7362e7ae4fb99346bf2934803854980038fb0540519f0bb2b19c32fccb78d",
+            "score_space": "logsumexp(rating 4 and 5 logits)"
+          }
+        },
+        "Joint-fixed_flow": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "3d5bfd90414f3882087b9e2f672f4927c50d919349acb3878f64609179ca50e0",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "0284589c4f9de7fa3a25c671a1d2bf36131e4157a0d17e80ecd05be8d6039b2b",
+            "score_space": "logsumexp(all five rating logits)"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "f936430e5dbcb613c599d628c418a6f8f1afd6d77c7c7d012bb17492e639b3d1",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "b4fc5866cd2edd9081a6a4443ab1eb61869881cf8fe0403cb371f96f58dc6c9a",
+            "score_space": "logsumexp(rating 4 and 5 logits)"
+          }
+        },
+        "PositiveEASE": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "dd1209784290a82d1c5cf4a5df01328445d3b7cb69e708db72e82f63913e8cf8",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "6e28e5b5d15ab87aaf6a0756abb7d8f793cb7b78a3dec3a474332a1207f9d57c",
+            "score_space": "unmasked finite scores aligned to source original IDs"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "dd1209784290a82d1c5cf4a5df01328445d3b7cb69e708db72e82f63913e8cf8",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "6e28e5b5d15ab87aaf6a0756abb7d8f793cb7b78a3dec3a474332a1207f9d57c",
+            "score_space": "unmasked finite scores aligned to source original IDs"
+          }
+        },
+        "SLIMElastic": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "5699498619508f92279c640548c0e93ea24ab850142282cf047be677671002ab",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": false,
+            "score_file_sha256": "f5a587e1d7f4a7a030ead98f41c672d83194d91f1447946b07a3651d043fbbc5",
+            "score_space": "model-native score"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "5699498619508f92279c640548c0e93ea24ab850142282cf047be677671002ab",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": false,
+            "score_file_sha256": "f5a587e1d7f4a7a030ead98f41c672d83194d91f1447946b07a3651d043fbbc5",
+            "score_space": "model-native score"
+          }
+        }
+      },
+      "rows": {
+        "Conditional-adaptive": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 32,
+                "recommended_known_dislikes": 2,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.000423728813559322,
+              "metrics": {
+                "coverage@10": 0.02794292508917955,
+                "hit@10": 0.0614406779661017,
+                "mrr@10": 0.015429109496906108,
+                "ndcg@10": 0.006761711968536828,
+                "novelty@10": 12.536034677430978,
+                "precision@10": 0.006779661016949157,
+                "recall@10": 0.005536164488647713
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.13686440677966102,
+                "mean_training_count": 37.16504237288136,
+                "median_training_count": 10.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 32,
+                "recommended_known_dislikes": 2,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.000423728813559322,
+              "metrics": {
+                "coverage@10": 0.0267538644470868,
+                "hit@10": 0.0576036866359447,
+                "mrr@10": 0.012325360251627534,
+                "ndcg@10": 0.006679394415860177,
+                "novelty@10": 12.54366080058554,
+                "precision@10": 0.006451612903225809,
+                "recall@10": 0.008078505909878696
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.13686440677966102,
+                "mean_training_count": 37.16504237288136,
+                "median_training_count": 10.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-60.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "77f39db13e4cab0c0f544e21ee33bfad693bd296f1c10d9266a00542481fc454",
+            "elapsed_seconds": 146.70283620801638,
+            "epoch": 60,
+            "initial_state_sha256": "420e629dc17805313c851705486234325fb4bd61395ba45f3de8421653e1f7ab",
+            "meta_fit_macro_cross_entropy": 1.2995198386251987,
+            "parameter_count": 14654,
+            "probability_array_sha256": "fce0438c0c8c9accae585706b129e70f62d2d3d65655b9ab427f3c8a5aa41bb6",
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_cross_entropy"
+          }
+        },
+        "Conditional-fixed_flow": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 33,
+                "recommended_known_dislikes": 2,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.000423728813559322,
+              "metrics": {
+                "coverage@10": 0.02794292508917955,
+                "hit@10": 0.06567796610169492,
+                "mrr@10": 0.01588814904492871,
+                "ndcg@10": 0.0070266681606858125,
+                "novelty@10": 12.522269222328136,
+                "precision@10": 0.006991525423728817,
+                "recall@10": 0.006234996793206317
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.13156779661016949,
+                "mean_training_count": 37.03156779661017,
+                "median_training_count": 10.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 33,
+                "recommended_known_dislikes": 2,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.000423728813559322,
+              "metrics": {
+                "coverage@10": 0.026159334126040427,
+                "hit@10": 0.059907834101382486,
+                "mrr@10": 0.013643844634628043,
+                "ndcg@10": 0.00692714482300722,
+                "novelty@10": 12.533128914794387,
+                "precision@10": 0.006451612903225809,
+                "recall@10": 0.008034300882954776
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.13156779661016949,
+                "mean_training_count": 37.03156779661017,
+                "median_training_count": 10.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-60.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "06259db52e048600cbc40e8cf214960d75a942b19401f12bc7ead939f431b87f",
+            "elapsed_seconds": 77.1297473750019,
+            "epoch": 60,
+            "initial_state_sha256": "420e629dc17805313c851705486234325fb4bd61395ba45f3de8421653e1f7ab",
+            "meta_fit_macro_cross_entropy": 1.3001580359540517,
+            "parameter_count": 14654,
+            "probability_array_sha256": "a2b9340e4c5b87ab88d16a2ed8e452580470a995cdbebdb5d8ccae44db8fa563",
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_cross_entropy"
+          }
+        },
+        "Conditional-hard_clamp": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 35,
+                "recommended_known_dislikes": 2,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.000423728813559322,
+              "metrics": {
+                "coverage@10": 0.02794292508917955,
+                "hit@10": 0.07203389830508475,
+                "mrr@10": 0.011661790422383637,
+                "ndcg@10": 0.006432655220811796,
+                "novelty@10": 12.504705986438285,
+                "precision@10": 0.007415254237288139,
+                "recall@10": 0.0062968962120198155
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.18559322033898304,
+                "mean_training_count": 45.099152542372885,
+                "median_training_count": 17.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 35,
+                "recommended_known_dislikes": 2,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.000423728813559322,
+              "metrics": {
+                "coverage@10": 0.02794292508917955,
+                "hit@10": 0.07142857142857142,
+                "mrr@10": 0.011165971765050105,
+                "ndcg@10": 0.006885905865782503,
+                "novelty@10": 12.512296947226508,
+                "precision@10": 0.007373271889400925,
+                "recall@10": 0.009259076704504793
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.18559322033898304,
+                "mean_training_count": 45.099152542372885,
+                "median_training_count": 17.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-60.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "3e2ee6e3164832df30f1856eebafa06193ec58bc38c406ac074de356adc4c0e2",
+            "elapsed_seconds": 168.54342779199942,
+            "epoch": 60,
+            "initial_state_sha256": "420e629dc17805313c851705486234325fb4bd61395ba45f3de8421653e1f7ab",
+            "meta_fit_macro_cross_entropy": 1.2987574153211254,
+            "parameter_count": 14654,
+            "probability_array_sha256": "3822cb304c75c9a4383d1e790ee5bb1a6504907699428584c371dc2c5bf3be9f",
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_cross_entropy"
+          }
+        },
+        "EASE": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 827,
+                "recommended_known_dislikes": 62,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.013135593220338982,
+              "metrics": {
+                "coverage@10": 0.1848989298454221,
+                "hit@10": 0.7923728813559322,
+                "mrr@10": 0.44673880145278416,
+                "ndcg@10": 0.2620414838303137,
+                "novelty@10": 8.479106353276977,
+                "precision@10": 0.17521186440677955,
+                "recall@10": 0.23340978907409665
+              },
+              "score_space": "original model full-catalog score",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9904661016949152,
+                "mean_training_count": 248.1281779661017,
+                "median_training_count": 239.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 827,
+                "recommended_known_dislikes": 62,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.013135593220338982,
+              "metrics": {
+                "coverage@10": 0.18192627824019025,
+                "hit@10": 0.728110599078341,
+                "mrr@10": 0.3861257406188278,
+                "ndcg@10": 0.2420793660377152,
+                "novelty@10": 8.473433632279825,
+                "precision@10": 0.13525345622119864,
+                "recall@10": 0.2764174187561387
+              },
+              "score_space": "original model full-catalog score",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9904661016949152,
+                "mean_training_count": 248.1281779661017,
+                "median_training_count": 239.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "selection_cohort": "meta_fit",
+            "selection_file_sha256": "1a72dce88e82bfbbbfcf056c9a0720d808dd1e2615bbd1e23ca64a9f7aa66443",
+            "selection_metric": "meta-fit all-observed nDCG@10",
+            "selection_value": 0.26633752409317973,
+            "settings": {
+              "reg_weight": 250.0
+            }
+          }
+        },
+        "Joint-adaptive": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 632,
+                "recommended_known_dislikes": 52,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.011016949152542373,
+              "metrics": {
+                "coverage@10": 0.10642092746730084,
+                "hit@10": 0.7097457627118644,
+                "mrr@10": 0.3373940677966098,
+                "ndcg@10": 0.19462719199275688,
+                "novelty@10": 8.259775954060242,
+                "precision@10": 0.13389830508474612,
+                "recall@10": 0.18334272804713286
+              },
+              "score_space": "logsumexp(all five rating logits)",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9963983050847458,
+                "mean_training_count": 282.88898305084746,
+                "median_training_count": 269.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 613,
+                "recommended_known_dislikes": 45,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.009533898305084746,
+              "metrics": {
+                "coverage@10": 0.09988109393579073,
+                "hit@10": 0.6129032258064516,
+                "mrr@10": 0.28924182576256297,
+                "ndcg@10": 0.17807344290534674,
+                "novelty@10": 8.262712097623883,
+                "precision@10": 0.10414746543778837,
+                "recall@10": 0.20936651547685087
+              },
+              "score_space": "logsumexp(rating 4 and 5 logits)",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.996822033898305,
+                "mean_training_count": 281.0031779661017,
+                "median_training_count": 266.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-100.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "0e42b893c0d916370abcc6e3e9099ec01ba20c334d0503b6ca200fb5f2c6180e",
+            "elapsed_seconds": 162.10985770798288,
+            "epoch": 100,
+            "initial_state_sha256": "420e629dc17805313c851705486234325fb4bd61395ba45f3de8421653e1f7ab",
+            "logits_array_sha256": "dc8e584c820362fa5d8bdee80757ef080cfbff25c694bd71764b44030d8901ff",
+            "meta_fit_macro_joint_nll": 7.004069874767435,
+            "parameter_count": 14654,
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_joint_nll"
+          }
+        },
+        "Joint-fixed_flow": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 632,
+                "recommended_known_dislikes": 55,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.011652542372881356,
+              "metrics": {
+                "coverage@10": 0.09036860879904875,
+                "hit@10": 0.711864406779661,
+                "mrr@10": 0.3460721011568467,
+                "ndcg@10": 0.19494224106057706,
+                "novelty@10": 8.237381625720397,
+                "precision@10": 0.13389830508474604,
+                "recall@10": 0.18234681875368966
+              },
+              "score_space": "logsumexp(all five rating logits)",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9983050847457627,
+                "mean_training_count": 285.61101694915254,
+                "median_training_count": 280.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 615,
+                "recommended_known_dislikes": 47,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.009957627118644067,
+              "metrics": {
+                "coverage@10": 0.08561236623067776,
+                "hit@10": 0.6267281105990783,
+                "mrr@10": 0.30257662204666813,
+                "ndcg@10": 0.17996949991109398,
+                "novelty@10": 8.252205228753148,
+                "precision@10": 0.10414746543778837,
+                "recall@10": 0.2077865805802463
+              },
+              "score_space": "logsumexp(rating 4 and 5 logits)",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9987288135593221,
+                "mean_training_count": 281.2158898305085,
+                "median_training_count": 266.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-100.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "489b9895a81550e5640bea347cd0a532589cd8b466a5759753bbba6a5aefbcb2",
+            "elapsed_seconds": 85.45842624999932,
+            "epoch": 100,
+            "initial_state_sha256": "420e629dc17805313c851705486234325fb4bd61395ba45f3de8421653e1f7ab",
+            "logits_array_sha256": "c1c507e67fe034a5bf00fe2781dd3b64d99b92945a4c4f997ad40ce7d7d247e6",
+            "meta_fit_macro_joint_nll": 6.981577375671062,
+            "parameter_count": 14654,
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_joint_nll"
+          }
+        },
+        "PositiveEASE": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 776,
+                "recommended_known_dislikes": 29,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.00614406779661017,
+              "metrics": {
+                "coverage@10": 0.15576694411414982,
+                "hit@10": 0.7711864406779662,
+                "mrr@10": 0.4226459510357815,
+                "ndcg@10": 0.24272473198758596,
+                "novelty@10": 8.48336124282439,
+                "precision@10": 0.16440677966101708,
+                "recall@10": 0.217024475003336
+              },
+              "score_space": "unmasked finite scores aligned to source original IDs",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9913135593220339,
+                "mean_training_count": 247.69216101694914,
+                "median_training_count": 238.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 776,
+                "recommended_known_dislikes": 29,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.00614406779661017,
+              "metrics": {
+                "coverage@10": 0.15338882282996433,
+                "hit@10": 0.7488479262672811,
+                "mrr@10": 0.417693475239558,
+                "ndcg@10": 0.26781023107750634,
+                "novelty@10": 8.469241922803763,
+                "precision@10": 0.14585253456221242,
+                "recall@10": 0.294010882918385
+              },
+              "score_space": "unmasked finite scores aligned to source original IDs",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9913135593220339,
+                "mean_training_count": 247.69216101694914,
+                "median_training_count": 238.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "model": "positive_ease",
+            "penalty": 250.0,
+            "seed": 2027,
+            "selection_cohort": "meta_fit",
+            "selection_ndcg": 0.2394633829782982,
+            "selection_objective": "liked_ratings"
+          }
+        },
+        "SLIMElastic": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 810,
+                "recommended_known_dislikes": 75,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.015889830508474576,
+              "metrics": {
+                "coverage@10": 0.24197384066587396,
+                "hit@10": 0.7902542372881356,
+                "mrr@10": 0.44874646892655357,
+                "ndcg@10": 0.26072246555514467,
+                "novelty@10": 8.612633992039951,
+                "precision@10": 0.17161016949152552,
+                "recall@10": 0.2374528926761541
+              },
+              "score_space": "model-native score",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9663135593220339,
+                "mean_training_count": 232.1800847457627,
+                "median_training_count": 220.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 434,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 810,
+                "recommended_known_dislikes": 75,
+                "users_without_liked_validation_excluded_from_liked_metrics": 38,
+                "validation_dislikes": 724,
+                "validation_likes": 2626,
+                "validation_observations": 4584
+              },
+              "known_dislike_rate_per_slot": 0.015889830508474576,
+              "metrics": {
+                "coverage@10": 0.23662306777645659,
+                "hit@10": 0.7211981566820277,
+                "mrr@10": 0.3949436763952894,
+                "ndcg@10": 0.24161646628779235,
+                "novelty@10": 8.60586211590093,
+                "precision@10": 0.13110599078341054,
+                "recall@10": 0.2714770084922756
+              },
+              "score_space": "model-native score",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9663135593220339,
+                "mean_training_count": 232.1800847457627,
+                "median_training_count": 220.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "selection_cohort": "meta_fit",
+            "selection_file_sha256": "119c58c21539f7d6773b15cc9138f2bfd8f94065186069a3ac6d784f861ce921",
+            "selection_metric": "meta-fit all-observed nDCG@10",
+            "selection_value": 0.2618483126858154,
+            "settings": {
+              "alpha": 0.01,
+              "hide_item": true,
+              "l1_ratio": 0.1,
+              "positive_only": true
+            }
+          }
+        }
+      },
+      "seed": 2027,
+      "split_sha256": {
+        "train": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+        "valid": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+      }
+    },
+    "2028": {
+      "cohort_file_sha256": "8841dac2a52146ae60dc017abfbbccf41b2d4921171a1a4e4d36e29abc235c07",
+      "cohorts": {
+        "development": 472,
+        "meta_fit": 471
+      },
+      "data_sha256": {
+        "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+        "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+        "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+      },
+      "details_sha256": "803fd3467da0bb5d17a2a624b923a9facf00f64d3b2cb84a59df1e24b4f19db4",
+      "field_manifest_sha256": {
+        "conditional": "05b57f4f67973d1d2e2e2f98c389d50fa0570127f14e18e6cb7f4b28d7c9ba86",
+        "joint": "d1337a62b35eb4ab7d8c9d808063400b2f51bf45e6dbdfd69d3c756a17a96420"
+      },
+      "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+      "provenance": {
+        "Conditional-adaptive": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "b4d959268c9c5917a3c7d3338c5a312b3a7a908b749a18ba37e874025d4df532",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "28a74cdb6e5339d0d49cb1f758add875387b8c0d7793eb69d6dce94a0f184a24",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "b4d959268c9c5917a3c7d3338c5a312b3a7a908b749a18ba37e874025d4df532",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "28a74cdb6e5339d0d49cb1f758add875387b8c0d7793eb69d6dce94a0f184a24",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          }
+        },
+        "Conditional-fixed_flow": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "80cdc5a4f0c659e1014aaf1b34c89923e2a480a0ba201a3536ff12dfc4f87212",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "86bee1ec4ee6db3b711fffce3cf77627c2152d84116f9d749e451f9198e6599c",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "80cdc5a4f0c659e1014aaf1b34c89923e2a480a0ba201a3536ff12dfc4f87212",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "86bee1ec4ee6db3b711fffce3cf77627c2152d84116f9d749e451f9198e6599c",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          }
+        },
+        "Conditional-hard_clamp": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "5f3af1ca55997eb4cf2d70df1a8283ca89046101f01638275aabcf8c1bb6ebd8",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "a9b5bc29e59a739c46ab284f8339e7f6829f51257a9fb283f950face9f357780",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "5f3af1ca55997eb4cf2d70df1a8283ca89046101f01638275aabcf8c1bb6ebd8",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "a9b5bc29e59a739c46ab284f8339e7f6829f51257a9fb283f950face9f357780",
+            "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference"
+          }
+        },
+        "EASE": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "f57ee23ce094b51ab774ca5b4bc228f89480d053e49e128264628ec285075cd3",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": false,
+            "score_file_sha256": "c65952e320a6bac5e87b1c640b53d0cb8c14cf69853316e15930569f9c0a8db8",
+            "score_space": "original model full-catalog score"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "f57ee23ce094b51ab774ca5b4bc228f89480d053e49e128264628ec285075cd3",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": false,
+            "score_file_sha256": "c65952e320a6bac5e87b1c640b53d0cb8c14cf69853316e15930569f9c0a8db8",
+            "score_space": "original model full-catalog score"
+          }
+        },
+        "Joint-adaptive": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "e079c5794baa1cffeb0f388b5d309165938618b2308973947cf995a90fad7dee",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "7a46c02c60573e5cf38f441fb1452f6a6f553dfcb1be3ec3ea89c06ebf1fd2b3",
+            "score_space": "logsumexp(all five rating logits)"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "349fc99356592d44de6e2aedd38f9a5ca76521cb2b7e75e8b34e2ad1fd1e4b63",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "5b6254866ce5130609a0ec6711413eb8395af066d78e0c8647a0e81f25a08496",
+            "score_space": "logsumexp(rating 4 and 5 logits)"
+          }
+        },
+        "Joint-fixed_flow": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "76e5236654b9809cfb29cb14056b4548409247e58c70f91ab5d91737fa985d95",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "5a486c99fb81b0006b2065a56c9be40816d2f07593d34786842cd121b5c99823",
+            "score_space": "logsumexp(all five rating logits)"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "bba9ba4b5fd5084a7ff98f2c16a7bcf4c2f76edb77faba074767fb0e40a01aee",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "865c5844238b2bc063a6041f19519503e89c2dc2ac07c11e7799090c2c804a31",
+            "score_space": "logsumexp(rating 4 and 5 logits)"
+          }
+        },
+        "PositiveEASE": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "464447d8cf23ccb70d33d63ec770e6350ddaab327dcedcaf91dcb267f24af71f",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "c8f760f8628b54e7d51bc20e6cdf1e79b949c1107b67db8884cce1ad3a6ad34c",
+            "score_space": "unmasked finite scores aligned to source original IDs"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "464447d8cf23ccb70d33d63ec770e6350ddaab327dcedcaf91dcb267f24af71f",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": true,
+            "score_file_sha256": "c8f760f8628b54e7d51bc20e6cdf1e79b949c1107b67db8884cce1ad3a6ad34c",
+            "score_space": "unmasked finite scores aligned to source original IDs"
+          }
+        },
+        "SLIMElastic": {
+          "all_observed": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "e119d1a826ceec8b6e13e6ec02d62312e8e84d9a648c0bf82f7b9997d2060dd2",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": false,
+            "score_file_sha256": "866ac4be47f1f1bdc5e124014128353fc052623850c5617550ea3ed9d73fceea",
+            "score_space": "model-native score"
+          },
+          "liked_ratings": {
+            "ids_file_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest_sha256": "e119d1a826ceec8b6e13e6ec02d62312e8e84d9a648c0bf82f7b9997d2060dd2",
+            "ordered_identity_sha256": "977d69e228ca8668039cb909fee369b02adbedc177c631949b3cc69c552cda9e",
+            "preexisting_export_hash_available": false,
+            "score_file_sha256": "866ac4be47f1f1bdc5e124014128353fc052623850c5617550ea3ed9d73fceea",
+            "score_space": "model-native score"
+          }
+        }
+      },
+      "rows": {
+        "Conditional-adaptive": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 102,
+                "recommended_known_dislikes": 2,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.000423728813559322,
+              "metrics": {
+                "coverage@10": 0.03388822829964328,
+                "hit@10": 0.1885593220338983,
+                "mrr@10": 0.04096801856335752,
+                "ndcg@10": 0.020854747188434136,
+                "novelty@10": 10.704609271226092,
+                "precision@10": 0.02161016949152539,
+                "recall@10": 0.018729078385679148
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.5872881355932204,
+                "mean_training_count": 94.19978813559322,
+                "median_training_count": 93.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 102,
+                "recommended_known_dislikes": 2,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.000423728813559322,
+              "metrics": {
+                "coverage@10": 0.03388822829964328,
+                "hit@10": 0.18013856812933027,
+                "mrr@10": 0.038924630668279614,
+                "ndcg@10": 0.02244450120402091,
+                "novelty@10": 10.70687491018533,
+                "precision@10": 0.020323325635103903,
+                "recall@10": 0.028287919145747374
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.5872881355932204,
+                "mean_training_count": 94.19978813559322,
+                "median_training_count": 93.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-60.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "6fe6eed0977254f59a387c3f7f3231cc787671b26e11a017650a168be5322878",
+            "elapsed_seconds": 157.2770315829839,
+            "epoch": 60,
+            "initial_state_sha256": "1f4ace8139ed320d134bda503749a0a6561def715b4264fbabef3edf165df2e9",
+            "meta_fit_macro_cross_entropy": 1.3029058053303415,
+            "parameter_count": 14654,
+            "probability_array_sha256": "781ac3d27338a6c5eafea9101af0dcd8d10119617050fd99da340cc1ff5ac8cc",
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_cross_entropy"
+          }
+        },
+        "Conditional-fixed_flow": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 111,
+                "recommended_known_dislikes": 3,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.000635593220338983,
+              "metrics": {
+                "coverage@10": 0.03507728894173603,
+                "hit@10": 0.19915254237288135,
+                "mrr@10": 0.0440804075867635,
+                "ndcg@10": 0.02305880124339009,
+                "novelty@10": 10.342143794001734,
+                "precision@10": 0.02351694915254233,
+                "recall@10": 0.021804356478435746
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.6307203389830508,
+                "mean_training_count": 104.33580508474576,
+                "median_training_count": 98.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 111,
+                "recommended_known_dislikes": 3,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.000635593220338983,
+              "metrics": {
+                "coverage@10": 0.03507728894173603,
+                "hit@10": 0.18937644341801385,
+                "mrr@10": 0.0412194361963415,
+                "ndcg@10": 0.023997761797884317,
+                "novelty@10": 10.348237836752476,
+                "precision@10": 0.021709006928406438,
+                "recall@10": 0.030880197921628924
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.6307203389830508,
+                "mean_training_count": 104.33580508474576,
+                "median_training_count": 98.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-60.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "a5d9e0133653620049a145f6478cbb8c478022dca900e7650f809bdca31b053d",
+            "elapsed_seconds": 81.55925291599124,
+            "epoch": 60,
+            "initial_state_sha256": "1f4ace8139ed320d134bda503749a0a6561def715b4264fbabef3edf165df2e9",
+            "meta_fit_macro_cross_entropy": 1.3023604611259192,
+            "parameter_count": 14654,
+            "probability_array_sha256": "220d1c25e015c7e1acac96497a619634bdb1c4082b719d4cd951a0d9dabcfe01",
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_cross_entropy"
+          }
+        },
+        "Conditional-hard_clamp": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 93,
+                "recommended_known_dislikes": 3,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.000635593220338983,
+              "metrics": {
+                "coverage@10": 0.02140309155766944,
+                "hit@10": 0.17372881355932204,
+                "mrr@10": 0.03467934490180251,
+                "ndcg@10": 0.01816287374693982,
+                "novelty@10": 10.739101784228005,
+                "precision@10": 0.01970338983050845,
+                "recall@10": 0.017146048682671215
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.6099576271186441,
+                "mean_training_count": 93.47266949152542,
+                "median_training_count": 98.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 93,
+                "recommended_known_dislikes": 3,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.000635593220338983,
+              "metrics": {
+                "coverage@10": 0.02140309155766944,
+                "hit@10": 0.16628175519630484,
+                "mrr@10": 0.03197789508413062,
+                "ndcg@10": 0.01986407013510482,
+                "novelty@10": 10.758529197292425,
+                "precision@10": 0.018706697459584278,
+                "recall@10": 0.027467886158907103
+              },
+              "score_space": "P(rating>=4), unmasked full catalog; categorical TRAIN-only inference",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.6099576271186441,
+                "mean_training_count": 93.47266949152542,
+                "median_training_count": 98.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-60.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "a0464c086dcfe10f801b3bec08ed876ce3cbb617202cca5f43e796725dfd7be7",
+            "elapsed_seconds": 168.38529812500929,
+            "epoch": 60,
+            "initial_state_sha256": "1f4ace8139ed320d134bda503749a0a6561def715b4264fbabef3edf165df2e9",
+            "meta_fit_macro_cross_entropy": 1.3023879197758348,
+            "parameter_count": 14654,
+            "probability_array_sha256": "de303cef9bcdf503c220d809064f6fbc211317c5389445aef3afe68a54a61860",
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_cross_entropy"
+          }
+        },
+        "EASE": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 845,
+                "recommended_known_dislikes": 93,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.019703389830508476,
+              "metrics": {
+                "coverage@10": 0.1902497027348395,
+                "hit@10": 0.7733050847457628,
+                "mrr@10": 0.4259231234866825,
+                "ndcg@10": 0.26387803543652555,
+                "novelty@10": 8.488021132877066,
+                "precision@10": 0.17902542372881358,
+                "recall@10": 0.24559978397724794
+              },
+              "score_space": "original model full-catalog score",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.986864406779661,
+                "mean_training_count": 247.57436440677967,
+                "median_training_count": 236.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 845,
+                "recommended_known_dislikes": 93,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.019703389830508476,
+              "metrics": {
+                "coverage@10": 0.18370986920332938,
+                "hit@10": 0.7020785219399538,
+                "mrr@10": 0.36686095531361085,
+                "ndcg@10": 0.2524645975548391,
+                "novelty@10": 8.475062266984274,
+                "precision@10": 0.14018475750577414,
+                "recall@10": 0.29099798636147683
+              },
+              "score_space": "original model full-catalog score",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.986864406779661,
+                "mean_training_count": 247.57436440677967,
+                "median_training_count": 236.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "selection_cohort": "meta_fit",
+            "selection_file_sha256": "62eafbf9bda4e387b0900763a5e876b1ccf20bdb0c571ab7b9be7b1ced8cd5a3",
+            "selection_metric": "meta-fit all-observed nDCG@10",
+            "selection_value": 0.2698029414064216,
+            "settings": {
+              "reg_weight": 250.0
+            }
+          }
+        },
+        "Joint-adaptive": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 601,
+                "recommended_known_dislikes": 73,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.015466101694915255,
+              "metrics": {
+                "coverage@10": 0.08323424494649227,
+                "hit@10": 0.6822033898305084,
+                "mrr@10": 0.3190703188054885,
+                "ndcg@10": 0.1860986334982383,
+                "novelty@10": 8.229929287803982,
+                "precision@10": 0.1273305084745767,
+                "recall@10": 0.18542728513574938
+              },
+              "score_space": "logsumexp(all five rating logits)",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.999364406779661,
+                "mean_training_count": 286.6177966101695,
+                "median_training_count": 278.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 594,
+                "recommended_known_dislikes": 59,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.0125,
+              "metrics": {
+                "coverage@10": 0.07728894173602854,
+                "hit@10": 0.5958429561200924,
+                "mrr@10": 0.2772132409545805,
+                "ndcg@10": 0.17417058969497543,
+                "novelty@10": 8.250561934200336,
+                "precision@10": 0.09907621247113188,
+                "recall@10": 0.20458256006460473
+              },
+              "score_space": "logsumexp(rating 4 and 5 logits)",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9995762711864407,
+                "mean_training_count": 282.0667372881356,
+                "median_training_count": 267.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-100.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "96705ec7c5fee0cbb2141eb144c7059b5fdfe8656a9c807c900b1666aada12d6",
+            "elapsed_seconds": 157.0368085829832,
+            "epoch": 100,
+            "initial_state_sha256": "1f4ace8139ed320d134bda503749a0a6561def715b4264fbabef3edf165df2e9",
+            "logits_array_sha256": "5c5235d4c3da4b3dd65ed6ef088b22b460f585633d2045cf98190170a374e83c",
+            "meta_fit_macro_joint_nll": 7.076849057648549,
+            "parameter_count": 14654,
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_joint_nll"
+          }
+        },
+        "Joint-fixed_flow": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 605,
+                "recommended_known_dislikes": 72,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.015254237288135594,
+              "metrics": {
+                "coverage@10": 0.07907253269916766,
+                "hit@10": 0.684322033898305,
+                "mrr@10": 0.3264115886467581,
+                "ndcg@10": 0.18942505116435543,
+                "novelty@10": 8.221816896818126,
+                "precision@10": 0.12817796610169532,
+                "recall@10": 0.18511854981280934
+              },
+              "score_space": "logsumexp(all five rating logits)",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9995762711864407,
+                "mean_training_count": 288.10317796610167,
+                "median_training_count": 278.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 599,
+                "recommended_known_dislikes": 63,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.013347457627118644,
+              "metrics": {
+                "coverage@10": 0.07431629013079667,
+                "hit@10": 0.5889145496535797,
+                "mrr@10": 0.27601176729352256,
+                "ndcg@10": 0.17419026566872414,
+                "novelty@10": 8.241409764885315,
+                "precision@10": 0.1006928406466515,
+                "recall@10": 0.2027631301549018
+              },
+              "score_space": "logsumexp(rating 4 and 5 logits)",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9997881355932203,
+                "mean_training_count": 283.37436440677965,
+                "median_training_count": 268.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "checkpoint": "epoch-100.pt",
+            "checkpoint_replay_exact": true,
+            "checkpoint_sha256": "711d00080300803a6f88d60c67507b994045705f0219aa639a2276b4129911b8",
+            "elapsed_seconds": 79.41658137500053,
+            "epoch": 100,
+            "initial_state_sha256": "1f4ace8139ed320d134bda503749a0a6561def715b4264fbabef3edf165df2e9",
+            "logits_array_sha256": "6527597e0bd5e6d2fbd5d0d7d1d2930d68bb7f4d67cd582442b947909a32b13d",
+            "meta_fit_macro_joint_nll": 7.066606591453656,
+            "parameter_count": 14654,
+            "selection_cohort": "meta_fit",
+            "selection_metric": "meta_fit_macro_joint_nll"
+          }
+        },
+        "PositiveEASE": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 742,
+                "recommended_known_dislikes": 52,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.011016949152542373,
+              "metrics": {
+                "coverage@10": 0.1581450653983353,
+                "hit@10": 0.7415254237288136,
+                "mrr@10": 0.40776415792305604,
+                "ndcg@10": 0.23798738497788083,
+                "novelty@10": 8.501906388670681,
+                "precision@10": 0.15720338983050855,
+                "recall@10": 0.21423566133642893
+              },
+              "score_space": "unmasked finite scores aligned to source original IDs",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9930084745762712,
+                "mean_training_count": 244.4885593220339,
+                "median_training_count": 232.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 742,
+                "recommended_known_dislikes": 52,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.011016949152542373,
+              "metrics": {
+                "coverage@10": 0.15101070154577884,
+                "hit@10": 0.6928406466512702,
+                "mrr@10": 0.39268209978371615,
+                "ndcg@10": 0.2564104475207375,
+                "novelty@10": 8.48619342356603,
+                "precision@10": 0.134872979214781,
+                "recall@10": 0.2775257921612654
+              },
+              "score_space": "unmasked finite scores aligned to source original IDs",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9930084745762712,
+                "mean_training_count": 244.4885593220339,
+                "median_training_count": 232.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "model": "positive_ease",
+            "penalty": 250.0,
+            "seed": 2028,
+            "selection_cohort": "meta_fit",
+            "selection_ndcg": 0.2460920104564697,
+            "selection_objective": "liked_ratings"
+          }
+        },
+        "SLIMElastic": {
+          "endpoints": {
+            "all_observed": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 814,
+                "recommended_known_dislikes": 89,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.01885593220338983,
+              "metrics": {
+                "coverage@10": 0.2502972651605232,
+                "hit@10": 0.7860169491525424,
+                "mrr@10": 0.4183573782620392,
+                "ndcg@10": 0.2585105335952571,
+                "novelty@10": 8.643299788286809,
+                "precision@10": 0.17245762711864424,
+                "recall@10": 0.24770142902544245
+              },
+              "score_space": "model-native score",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9540254237288136,
+                "mean_training_count": 230.12881355932203,
+                "median_training_count": 214.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            },
+            "liked_ratings": {
+              "denominators": {
+                "all_observed_users": 472,
+                "liked_ratings_users": 433,
+                "recommendation_slots": 4720,
+                "recommended_items_with_validation_rating": 814,
+                "recommended_known_dislikes": 89,
+                "users_without_liked_validation_excluded_from_liked_metrics": 39,
+                "validation_dislikes": 842,
+                "validation_likes": 2582,
+                "validation_observations": 4620
+              },
+              "known_dislike_rate_per_slot": 0.01885593220338983,
+              "metrics": {
+                "coverage@10": 0.24256837098692033,
+                "hit@10": 0.7228637413394919,
+                "mrr@10": 0.3671569705634368,
+                "ndcg@10": 0.25075931977938154,
+                "novelty@10": 8.621774058016332,
+                "precision@10": 0.13256351039261016,
+                "recall@10": 0.2909224680804773
+              },
+              "score_space": "model-native score",
+              "training_frequency": {
+                "catalog_items": 1682,
+                "head_catalog_size": 337,
+                "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+                "head_slot_share": 0.9540254237288136,
+                "mean_training_count": 230.12881355932203,
+                "median_training_count": 214.0,
+                "recommendation_slots": 4720,
+                "training_count_definition": "Every observed original TRAIN user-item pair, irrespective of rating category.",
+                "users": 472,
+                "zero_training_count_slot_share": 0.0
+              }
+            }
+          },
+          "selection": {
+            "selection_cohort": "meta_fit",
+            "selection_file_sha256": "bb62878946c4f1fc73d757146f7f35c44f8d6b31ba423d9f1e32ef9ecc69e2aa",
+            "selection_metric": "meta-fit all-observed nDCG@10",
+            "selection_value": 0.2612996770400783,
+            "settings": {
+              "alpha": 0.01,
+              "hide_item": true,
+              "l1_ratio": 0.1,
+              "positive_only": true
+            }
+          }
+        }
+      },
+      "seed": 2028,
+      "split_sha256": {
+        "train": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+        "valid": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+      }
+    }
+  }
+}

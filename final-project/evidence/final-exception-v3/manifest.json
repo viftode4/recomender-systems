@@ -1,0 +1,21 @@
+{
+  "code_sha256": {
+    "exception_evaluation.py": "3bfa0e5f23a58a77a9833b0fb866e48acb60e910ba31b27d6b351158083794a0",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "frozen_manifest_sha256": "423322868a3bd1bc2ea9b8ea41878e97809a4f4d41f24a1701dc4afbd93cf51c",
+  "output_sha256": {
+    "2026/metrics.json": "85c7e8f9a6bbb362e7d9884ae94d9302dd4df0e0a70558ebc428619d4fccec6f",
+    "2027/metrics.json": "461b1e4b8fc3b6dda6b0ea84964b90ffb78c72b903c8c711800532a87237a36c",
+    "2028/metrics.json": "386efebba7822e196b77c7642a7acb878732bb069b40cc53d5ff4034a415fa8a",
+    "summary.json": "df81a9b046854b39f8efc98bde179138aa111fd3f869f9196e1f17514f58bd68"
+  },
+  "selection_after_test": false,
+  "status": "complete",
+  "test_evaluated": true,
+  "test_read": true
+}

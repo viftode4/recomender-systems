@@ -1,0 +1,1024 @@
+{
+  "schema_version": 1,
+  "seeds": {
+    "2026": {
+      "models": {
+        "adaptive": {
+          "categorical": {
+            "macro_brier": 0.6766717800325467,
+            "macro_category_accuracy": 0.4373314567809076,
+            "macro_cross_entropy": 1.2858386166121454,
+            "macro_expected_rating_rmse": 0.97493758443182,
+            "observations": 9596,
+            "pooled_brier": 0.6670518010614035,
+            "pooled_category_accuracy": 0.44435181325552314,
+            "pooled_cross_entropy": 1.2553785848047496,
+            "pooled_expected_rating_rmse": 0.9404915879959236,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.04280618311533888,
+              "hit@10": 0.12301166489925769,
+              "mrr@10": 0.023499385614974156,
+              "ndcg@10": 0.012950681010609037,
+              "novelty@10": 11.710923778409306,
+              "precision@10": 0.01431601272534462,
+              "recall@10": 0.01179566739395404
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 882,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 135,
+              "recommended_known_dislikes": 4,
+              "test_dislikes": 1673,
+              "test_likes": 5335,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 61
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.02962962962962963,
+            "known_dislike_rate_per_slot": 0.0004241781548250265,
+            "liked_ratings": {
+              "coverage@10": 0.04221165279429251,
+              "hit@10": 0.11337868480725624,
+              "mrr@10": 0.02154284994421048,
+              "ndcg@10": 0.013173297641034523,
+              "novelty@10": 11.720667394882176,
+              "precision@10": 0.012925170068027188,
+              "recall@10": 0.01708089229937911
+            }
+          }
+        },
+        "fixed_flow": {
+          "categorical": {
+            "macro_brier": 0.6766193604336769,
+            "macro_category_accuracy": 0.4347777575334528,
+            "macro_cross_entropy": 1.2853645903639612,
+            "macro_expected_rating_rmse": 0.9739804699793168,
+            "observations": 9596,
+            "pooled_brier": 0.6670824633013545,
+            "pooled_category_accuracy": 0.44268445185493954,
+            "pooled_cross_entropy": 1.255528332826379,
+            "pooled_expected_rating_rmse": 0.9402368187125083,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.04280618311533888,
+              "hit@10": 0.12301166489925769,
+              "mrr@10": 0.021424363311956088,
+              "ndcg@10": 0.012451300632185648,
+              "novelty@10": 11.855510157554123,
+              "precision@10": 0.014316012725344617,
+              "recall@10": 0.011707217279377563
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 882,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 135,
+              "recommended_known_dislikes": 5,
+              "test_dislikes": 1673,
+              "test_likes": 5335,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 61
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.037037037037037035,
+            "known_dislike_rate_per_slot": 0.0005302226935312832,
+            "liked_ratings": {
+              "coverage@10": 0.04221165279429251,
+              "hit@10": 0.1145124716553288,
+              "mrr@10": 0.01999559082892414,
+              "ndcg@10": 0.012917625190784236,
+              "novelty@10": 11.867240865509519,
+              "precision@10": 0.013038548752834443,
+              "recall@10": 0.017592820532395775
+            }
+          }
+        },
+        "global_histogram": {
+          "categorical": {
+            "macro_brier": 0.748900629217244,
+            "macro_category_accuracy": 0.34062368576386604,
+            "macro_cross_entropy": 1.4669464641325654,
+            "macro_expected_rating_rmse": 1.1336643957775436,
+            "observations": 9596,
+            "pooled_brier": 0.7490281730894541,
+            "pooled_category_accuracy": 0.3380575239683201,
+            "pooled_cross_entropy": 1.469789235766069,
+            "pooled_expected_rating_rmse": 1.1305807541297481,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.0178359096313912,
+              "hit@10": 0.19618239660657477,
+              "mrr@10": 0.06440564560925122,
+              "ndcg@10": 0.031263009370538754,
+              "novelty@10": 9.789765601748917,
+              "precision@10": 0.023966065747614035,
+              "recall@10": 0.025503224171790562
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 882,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 226,
+              "recommended_known_dislikes": 27,
+              "test_dislikes": 1673,
+              "test_likes": 5335,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 61
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.11946902654867257,
+            "known_dislike_rate_per_slot": 0.002863202545068929,
+            "liked_ratings": {
+              "coverage@10": 0.0178359096313912,
+              "hit@10": 0.13945578231292516,
+              "mrr@10": 0.048859464420688926,
+              "ndcg@10": 0.027144478227464883,
+              "novelty@10": 9.79342976218007,
+              "precision@10": 0.015532879818594074,
+              "recall@10": 0.030280179761017687
+            }
+          }
+        },
+        "hard_clamp": {
+          "categorical": {
+            "macro_brier": 0.676847580662026,
+            "macro_category_accuracy": 0.43749015291794796,
+            "macro_cross_entropy": 1.2864222484057495,
+            "macro_expected_rating_rmse": 0.9752205922263125,
+            "observations": 9596,
+            "pooled_brier": 0.6671850275438982,
+            "pooled_category_accuracy": 0.44664443518132557,
+            "pooled_cross_entropy": 1.2561414532144062,
+            "pooled_expected_rating_rmse": 0.9410735844487442,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.04221165279429251,
+              "hit@10": 0.13361611876988336,
+              "mrr@10": 0.03133363631772963,
+              "ndcg@10": 0.015509693403643289,
+              "novelty@10": 11.430563752127416,
+              "precision@10": 0.01590668080593846,
+              "recall@10": 0.013714554354058411
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 882,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 150,
+              "recommended_known_dislikes": 7,
+              "test_dislikes": 1673,
+              "test_likes": 5335,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 61
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.04666666666666667,
+            "known_dislike_rate_per_slot": 0.0007423117709437964,
+            "liked_ratings": {
+              "coverage@10": 0.04221165279429251,
+              "hit@10": 0.12018140589569161,
+              "mrr@10": 0.027534823453190804,
+              "ndcg@10": 0.015520602011821372,
+              "novelty@10": 11.449691464244394,
+              "precision@10": 0.014058956916099749,
+              "recall@10": 0.019915388447244085
+            }
+          }
+        },
+        "item_histogram": {
+          "categorical": {
+            "macro_brier": 0.7148786751986086,
+            "macro_category_accuracy": 0.38399894249239525,
+            "macro_cross_entropy": 1.377108268681015,
+            "macro_expected_rating_rmse": 1.0344187896113537,
+            "observations": 9596,
+            "pooled_brier": 0.7153884377343174,
+            "pooled_category_accuracy": 0.38047102959566487,
+            "pooled_cross_entropy": 1.3756758429381826,
+            "pooled_expected_rating_rmse": 1.0269215562493286,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.02497027348394768,
+              "hit@10": 0.30116648992576883,
+              "mrr@10": 0.11707443316669192,
+              "ndcg@10": 0.051515350891475006,
+              "novelty@10": 9.084608513533425,
+              "precision@10": 0.04241781548250279,
+              "recall@10": 0.039081016573455155
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 882,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 400,
+              "recommended_known_dislikes": 16,
+              "test_dislikes": 1673,
+              "test_likes": 5335,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 61
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.04,
+            "known_dislike_rate_per_slot": 0.001696712619300106,
+            "liked_ratings": {
+              "coverage@10": 0.02497027348394768,
+              "hit@10": 0.28458049886621317,
+              "mrr@10": 0.10664210128495852,
+              "ndcg@10": 0.05355358030970215,
+              "novelty@10": 9.098747882623217,
+              "precision@10": 0.03832199546485275,
+              "recall@10": 0.05880076314977509
+            }
+          }
+        },
+        "item_user_product": {
+          "categorical": {
+            "macro_brier": 0.6802259639339588,
+            "macro_category_accuracy": 0.43169303997385994,
+            "macro_cross_entropy": 1.2944169715189424,
+            "macro_expected_rating_rmse": 0.9823152988675375,
+            "observations": 9596,
+            "pooled_brier": 0.6717834744958068,
+            "pooled_category_accuracy": 0.4373697373905794,
+            "pooled_cross_entropy": 1.2688805104861103,
+            "pooled_expected_rating_rmse": 0.9549607113977192,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.029131985731272295,
+              "hit@10": 0.2926829268292683,
+              "mrr@10": 0.10846630981837771,
+              "ndcg@10": 0.04846026453602235,
+              "novelty@10": 9.153146665683726,
+              "precision@10": 0.040827147401908945,
+              "recall@10": 0.038218160983860786
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 882,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 385,
+              "recommended_known_dislikes": 15,
+              "test_dislikes": 1673,
+              "test_likes": 5335,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 61
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.03896103896103896,
+            "known_dislike_rate_per_slot": 0.0015906680805938495,
+            "liked_ratings": {
+              "coverage@10": 0.029131985731272295,
+              "hit@10": 0.2789115646258503,
+              "mrr@10": 0.09831326710578414,
+              "ndcg@10": 0.0501137040060204,
+              "novelty@10": 9.169836021433662,
+              "precision@10": 0.03684807256235841,
+              "recall@10": 0.0575569972694967
+            }
+          }
+        }
+      },
+      "selections": {
+        "adaptive": {
+          "checkpoint": "epoch-60.pt",
+          "checkpoint_replay_exact": true,
+          "checkpoint_sha256": "b6410dbf05eb3d46af91112307a1d97fc79be38761047510cab86639b9c59725",
+          "elapsed_seconds": 144.33542520800256,
+          "epoch": 60,
+          "initial_state_sha256": "1076e3254c569b7b9cacb2d6b660c151ae114d41c7b3fc5dd2de5665e0c213ce",
+          "meta_fit_macro_cross_entropy": 1.2702130266988767,
+          "parameter_count": 14654,
+          "probability_array_sha256": "6cff5b8613c5fbbcf3989ef5d037a2e384346c9729ad7adf8be86cd71144a887",
+          "selection_cohort": "meta_fit",
+          "selection_metric": "meta_fit_macro_cross_entropy"
+        },
+        "fixed_flow": {
+          "checkpoint": "epoch-60.pt",
+          "checkpoint_replay_exact": true,
+          "checkpoint_sha256": "d4152b9748b9b34ed7b7a3b7bdab8dba43e0eaf0cb24f283f08eb3324df54e31",
+          "elapsed_seconds": 75.13667775000795,
+          "epoch": 60,
+          "initial_state_sha256": "1076e3254c569b7b9cacb2d6b660c151ae114d41c7b3fc5dd2de5665e0c213ce",
+          "meta_fit_macro_cross_entropy": 1.2699667783944202,
+          "parameter_count": 14654,
+          "probability_array_sha256": "f941c5a922e2e32e2f535726687911941a529aa2f37dfe8b0e007c98e11cff34",
+          "selection_cohort": "meta_fit",
+          "selection_metric": "meta_fit_macro_cross_entropy"
+        },
+        "hard_clamp": {
+          "checkpoint": "epoch-60.pt",
+          "checkpoint_replay_exact": true,
+          "checkpoint_sha256": "7e940478d0f913ef41036497243252f3d1a32ba488ad8b8b017c20274bcfccbc",
+          "elapsed_seconds": 157.40759258301114,
+          "epoch": 60,
+          "initial_state_sha256": "1076e3254c569b7b9cacb2d6b660c151ae114d41c7b3fc5dd2de5665e0c213ce",
+          "meta_fit_macro_cross_entropy": 1.2702164056911271,
+          "parameter_count": 14654,
+          "probability_array_sha256": "169896993a5f25ffa1fd663d72d383e3607b643f836b0815b805172ca44d6e76",
+          "selection_cohort": "meta_fit",
+          "selection_metric": "meta_fit_macro_cross_entropy"
+        }
+      }
+    },
+    "2027": {
+      "models": {
+        "adaptive": {
+          "categorical": {
+            "macro_brier": 0.6827122375642,
+            "macro_category_accuracy": 0.4237017863253841,
+            "macro_cross_entropy": 1.2936312082711297,
+            "macro_expected_rating_rmse": 0.9768330832400708,
+            "observations": 9596,
+            "pooled_brier": 0.668819595550469,
+            "pooled_category_accuracy": 0.4417465610671113,
+            "pooled_cross_entropy": 1.261729505379472,
+            "pooled_expected_rating_rmse": 0.9470111758650183,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.03983353151010702,
+              "hit@10": 0.06256627783669141,
+              "mrr@10": 0.014712838122170037,
+              "ndcg@10": 0.007638565713249942,
+              "novelty@10": 12.538993622120987,
+              "precision@10": 0.006680805938494162,
+              "recall@10": 0.007494568687767365
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 882,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 63,
+              "recommended_known_dislikes": 7,
+              "test_dislikes": 1709,
+              "test_likes": 5316,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 61
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.1111111111111111,
+            "known_dislike_rate_per_slot": 0.0007423117709437964,
+            "liked_ratings": {
+              "coverage@10": 0.03983353151010702,
+              "hit@10": 0.05442176870748299,
+              "mrr@10": 0.01171534751466724,
+              "ndcg@10": 0.007519369372861603,
+              "novelty@10": 12.540616152972051,
+              "precision@10": 0.005555555555555555,
+              "recall@10": 0.009878441368686588
+            }
+          }
+        },
+        "fixed_flow": {
+          "categorical": {
+            "macro_brier": 0.6827040042439313,
+            "macro_category_accuracy": 0.42291204827641005,
+            "macro_cross_entropy": 1.2935009991382518,
+            "macro_expected_rating_rmse": 0.9766822043622599,
+            "observations": 9596,
+            "pooled_brier": 0.6690081216916464,
+            "pooled_category_accuracy": 0.4414339308045019,
+            "pooled_cross_entropy": 1.2621183318052336,
+            "pooled_expected_rating_rmse": 0.9470295450932171,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.03983353151010702,
+              "hit@10": 0.061505832449628844,
+              "mrr@10": 0.01574508912790991,
+              "ndcg@10": 0.007895529676160801,
+              "novelty@10": 12.522959776625667,
+              "precision@10": 0.006786850477200419,
+              "recall@10": 0.0077245074122454654
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 882,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 64,
+              "recommended_known_dislikes": 7,
+              "test_dislikes": 1709,
+              "test_likes": 5316,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 61
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.109375,
+            "known_dislike_rate_per_slot": 0.0007423117709437964,
+            "liked_ratings": {
+              "coverage@10": 0.03983353151010702,
+              "hit@10": 0.05442176870748299,
+              "mrr@10": 0.014020264190332215,
+              "ndcg@10": 0.008243408351773129,
+              "novelty@10": 12.529243938306779,
+              "precision@10": 0.005782312925170067,
+              "recall@10": 0.010165781579496184
+            }
+          }
+        },
+        "global_histogram": {
+          "categorical": {
+            "macro_brier": 0.7456068841407256,
+            "macro_category_accuracy": 0.3483733690320779,
+            "macro_cross_entropy": 1.4591428339843306,
+            "macro_expected_rating_rmse": 1.122556925887895,
+            "observations": 9596,
+            "pooled_brier": 0.7486935395545027,
+            "pooled_category_accuracy": 0.3432680283451438,
+            "pooled_cross_entropy": 1.4705705497902855,
+            "pooled_expected_rating_rmse": 1.1293903886180578,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.017241379310344827,
+              "hit@10": 0.18451749734888653,
+              "mrr@10": 0.05192395091652786,
+              "ndcg@10": 0.02663883496796703,
+              "novelty@10": 9.834798325555454,
+              "precision@10": 0.02248144220572642,
+              "recall@10": 0.022410848013342127
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 882,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 212,
+              "recommended_known_dislikes": 25,
+              "test_dislikes": 1709,
+              "test_likes": 5316,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 61
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.1179245283018868,
+            "known_dislike_rate_per_slot": 0.002651113467656416,
+            "liked_ratings": {
+              "coverage@10": 0.017241379310344827,
+              "hit@10": 0.13718820861678005,
+              "mrr@10": 0.03726199474498795,
+              "ndcg@10": 0.021363741828181085,
+              "novelty@10": 9.838245411616569,
+              "precision@10": 0.015419501133786817,
+              "recall@10": 0.025142479946866608
+            }
+          }
+        },
+        "hard_clamp": {
+          "categorical": {
+            "macro_brier": 0.682407876950836,
+            "macro_category_accuracy": 0.42254143670392197,
+            "macro_cross_entropy": 1.2930431791954664,
+            "macro_expected_rating_rmse": 0.9770160805167015,
+            "observations": 9596,
+            "pooled_brier": 0.6691124416135757,
+            "pooled_category_accuracy": 0.44268445185493954,
+            "pooled_cross_entropy": 1.262266079600749,
+            "pooled_expected_rating_rmse": 0.9474125031402145,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.03804994054696789,
+              "hit@10": 0.07741251325556733,
+              "mrr@10": 0.012142941305189444,
+              "ndcg@10": 0.007752569331527649,
+              "novelty@10": 12.514621799817608,
+              "precision@10": 0.008589607635206777,
+              "recall@10": 0.009519388497462044
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 882,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 81,
+              "recommended_known_dislikes": 9,
+              "test_dislikes": 1709,
+              "test_likes": 5316,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 61
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.1111111111111111,
+            "known_dislike_rate_per_slot": 0.0009544008483563097,
+            "liked_ratings": {
+              "coverage@10": 0.03804994054696789,
+              "hit@10": 0.06462585034013606,
+              "mrr@10": 0.009672731526473024,
+              "ndcg@10": 0.007205563867689546,
+              "novelty@10": 12.516418512692912,
+              "precision@10": 0.006802721088435369,
+              "recall@10": 0.012338198165178078
+            }
+          }
+        },
+        "item_histogram": {
+          "categorical": {
+            "macro_brier": 0.715824480051194,
+            "macro_category_accuracy": 0.3817711392633629,
+            "macro_cross_entropy": 1.3821257280988732,
+            "macro_expected_rating_rmse": 1.038997322233265,
+            "observations": 9596,
+            "pooled_brier": 0.7164859267139743,
+            "pooled_category_accuracy": 0.38088786994581075,
+            "pooled_cross_entropy": 1.3836896852089944,
+            "pooled_expected_rating_rmse": 1.0314927635051467,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.02497027348394768,
+              "hit@10": 0.27465535524920465,
+              "mrr@10": 0.10983899745829759,
+              "ndcg@10": 0.04662809367588517,
+              "novelty@10": 9.110763693819267,
+              "precision@10": 0.03838812301166505,
+              "recall@10": 0.03344247849176517
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 882,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 362,
+              "recommended_known_dislikes": 13,
+              "test_dislikes": 1709,
+              "test_likes": 5316,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 61
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.03591160220994475,
+            "known_dislike_rate_per_slot": 0.001378579003181336,
+            "liked_ratings": {
+              "coverage@10": 0.02497027348394768,
+              "hit@10": 0.25736961451247165,
+              "mrr@10": 0.10449330525861139,
+              "ndcg@10": 0.04959436919596252,
+              "novelty@10": 9.121823544660796,
+              "precision@10": 0.03526077097505677,
+              "recall@10": 0.050525173769550485
+            }
+          }
+        },
+        "item_user_product": {
+          "categorical": {
+            "macro_brier": 0.6868337828125123,
+            "macro_category_accuracy": 0.4122451063537424,
+            "macro_cross_entropy": 1.3017013356431406,
+            "macro_expected_rating_rmse": 0.9825738535088094,
+            "observations": 9596,
+            "pooled_brier": 0.6754490515562956,
+            "pooled_category_accuracy": 0.43215923301375575,
+            "pooled_cross_entropy": 1.2764147285743361,
+            "pooled_expected_rating_rmse": 0.9592102966446909,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.03151010701545779,
+              "hit@10": 0.26935312831389185,
+              "mrr@10": 0.09951985389419123,
+              "ndcg@10": 0.04315956601389677,
+              "novelty@10": 9.168782181771336,
+              "precision@10": 0.03669141039236489,
+              "recall@10": 0.032539042203864964
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 882,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 346,
+              "recommended_known_dislikes": 13,
+              "test_dislikes": 1709,
+              "test_likes": 5316,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 61
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.03757225433526012,
+            "known_dislike_rate_per_slot": 0.001378579003181336,
+            "liked_ratings": {
+              "coverage@10": 0.03151010701545779,
+              "hit@10": 0.25056689342403626,
+              "mrr@10": 0.09356081056761334,
+              "ndcg@10": 0.04529255048923976,
+              "novelty@10": 9.178993360750079,
+              "precision@10": 0.03367346938775518,
+              "recall@10": 0.04710727596492975
+            }
+          }
+        }
+      },
+      "selections": {
+        "adaptive": {
+          "checkpoint": "epoch-60.pt",
+          "checkpoint_replay_exact": true,
+          "checkpoint_sha256": "77f39db13e4cab0c0f544e21ee33bfad693bd296f1c10d9266a00542481fc454",
+          "elapsed_seconds": 146.70283620801638,
+          "epoch": 60,
+          "initial_state_sha256": "420e629dc17805313c851705486234325fb4bd61395ba45f3de8421653e1f7ab",
+          "meta_fit_macro_cross_entropy": 1.2995198386251987,
+          "parameter_count": 14654,
+          "probability_array_sha256": "fce0438c0c8c9accae585706b129e70f62d2d3d65655b9ab427f3c8a5aa41bb6",
+          "selection_cohort": "meta_fit",
+          "selection_metric": "meta_fit_macro_cross_entropy"
+        },
+        "fixed_flow": {
+          "checkpoint": "epoch-60.pt",
+          "checkpoint_replay_exact": true,
+          "checkpoint_sha256": "06259db52e048600cbc40e8cf214960d75a942b19401f12bc7ead939f431b87f",
+          "elapsed_seconds": 77.1297473750019,
+          "epoch": 60,
+          "initial_state_sha256": "420e629dc17805313c851705486234325fb4bd61395ba45f3de8421653e1f7ab",
+          "meta_fit_macro_cross_entropy": 1.3001580359540517,
+          "parameter_count": 14654,
+          "probability_array_sha256": "a2b9340e4c5b87ab88d16a2ed8e452580470a995cdbebdb5d8ccae44db8fa563",
+          "selection_cohort": "meta_fit",
+          "selection_metric": "meta_fit_macro_cross_entropy"
+        },
+        "hard_clamp": {
+          "checkpoint": "epoch-60.pt",
+          "checkpoint_replay_exact": true,
+          "checkpoint_sha256": "3e2ee6e3164832df30f1856eebafa06193ec58bc38c406ac074de356adc4c0e2",
+          "elapsed_seconds": 168.54342779199942,
+          "epoch": 60,
+          "initial_state_sha256": "420e629dc17805313c851705486234325fb4bd61395ba45f3de8421653e1f7ab",
+          "meta_fit_macro_cross_entropy": 1.2987574153211254,
+          "parameter_count": 14654,
+          "probability_array_sha256": "3822cb304c75c9a4383d1e790ee5bb1a6504907699428584c371dc2c5bf3be9f",
+          "selection_cohort": "meta_fit",
+          "selection_metric": "meta_fit_macro_cross_entropy"
+        }
+      }
+    },
+    "2028": {
+      "models": {
+        "adaptive": {
+          "categorical": {
+            "macro_brier": 0.6777125767442288,
+            "macro_category_accuracy": 0.4189324998465115,
+            "macro_cross_entropy": 1.2750095303368025,
+            "macro_expected_rating_rmse": 0.9639157690851679,
+            "observations": 9596,
+            "pooled_brier": 0.6729442690882556,
+            "pooled_category_accuracy": 0.42694872863693206,
+            "pooled_cross_entropy": 1.267052198417364,
+            "pooled_expected_rating_rmse": 0.9446081580759188,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.03864447086801427,
+              "hit@10": 0.15482502651113467,
+              "mrr@10": 0.039985103267181764,
+              "ndcg@10": 0.020701794002039642,
+              "novelty@10": 10.72009823427733,
+              "precision@10": 0.019618239660657472,
+              "recall@10": 0.01856857322038087
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 884,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 185,
+              "recommended_known_dislikes": 6,
+              "test_dislikes": 1712,
+              "test_likes": 5255,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 59
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.032432432432432434,
+            "known_dislike_rate_per_slot": 0.0006362672322375398,
+            "liked_ratings": {
+              "coverage@10": 0.03864447086801427,
+              "hit@10": 0.14592760180995476,
+              "mrr@10": 0.03851405946994181,
+              "ndcg@10": 0.022692912231366977,
+              "novelty@10": 10.735263502974387,
+              "precision@10": 0.017986425339366476,
+              "recall@10": 0.027773965772259296
+            }
+          }
+        },
+        "fixed_flow": {
+          "categorical": {
+            "macro_brier": 0.6765960352126593,
+            "macro_category_accuracy": 0.42344554515646465,
+            "macro_cross_entropy": 1.273091689802994,
+            "macro_expected_rating_rmse": 0.9618095937579257,
+            "observations": 9596,
+            "pooled_brier": 0.6724451554530211,
+            "pooled_category_accuracy": 0.43007503126302626,
+            "pooled_cross_entropy": 1.2663387050012433,
+            "pooled_expected_rating_rmse": 0.9434355825550453,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.04042806183115339,
+              "hit@10": 0.1728525980911983,
+              "mrr@10": 0.04267282734939155,
+              "ndcg@10": 0.023021352795279695,
+              "novelty@10": 10.371464000960858,
+              "precision@10": 0.021845174973488875,
+              "recall@10": 0.021472084490912993
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 884,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 206,
+              "recommended_known_dislikes": 6,
+              "test_dislikes": 1712,
+              "test_likes": 5255,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 59
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.02912621359223301,
+            "known_dislike_rate_per_slot": 0.0006362672322375398,
+            "liked_ratings": {
+              "coverage@10": 0.04042806183115339,
+              "hit@10": 0.16402714932126697,
+              "mrr@10": 0.04114998563527975,
+              "ndcg@10": 0.024702804297354757,
+              "novelty@10": 10.386384946714168,
+              "precision@10": 0.020022624434389118,
+              "recall@10": 0.03063378547611925
+            }
+          }
+        },
+        "global_histogram": {
+          "categorical": {
+            "macro_brier": 0.7474604206087597,
+            "macro_category_accuracy": 0.3374937790204449,
+            "macro_cross_entropy": 1.463125892697843,
+            "macro_expected_rating_rmse": 1.1313265259963434,
+            "observations": 9596,
+            "pooled_brier": 0.7497955351371846,
+            "pooled_category_accuracy": 0.336702792830346,
+            "pooled_cross_entropy": 1.4726038478523524,
+            "pooled_expected_rating_rmse": 1.1304302241640418,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.017241379310344827,
+              "hit@10": 0.1633085896076352,
+              "mrr@10": 0.04869969196586378,
+              "ndcg@10": 0.023904985070366935,
+              "novelty@10": 9.79019886099786,
+              "precision@10": 0.01930010604453869,
+              "recall@10": 0.020262148398581512
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 884,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 182,
+              "recommended_known_dislikes": 23,
+              "test_dislikes": 1712,
+              "test_likes": 5255,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 59
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.12637362637362637,
+            "known_dislike_rate_per_slot": 0.0024390243902439024,
+            "liked_ratings": {
+              "coverage@10": 0.017241379310344827,
+              "hit@10": 0.11877828054298642,
+              "mrr@10": 0.03973730517848165,
+              "ndcg@10": 0.021619571378252794,
+              "novelty@10": 9.794119323470765,
+              "precision@10": 0.013122171945701328,
+              "recall@10": 0.024515580891257802
+            }
+          }
+        },
+        "hard_clamp": {
+          "categorical": {
+            "macro_brier": 0.677301571774086,
+            "macro_category_accuracy": 0.4200568509692882,
+            "macro_cross_entropy": 1.2745373271502698,
+            "macro_expected_rating_rmse": 0.9632394668186679,
+            "observations": 9596,
+            "pooled_brier": 0.6726461286978603,
+            "pooled_category_accuracy": 0.4313255523134639,
+            "pooled_cross_entropy": 1.2670818405336175,
+            "pooled_expected_rating_rmse": 0.9438610598851199,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.02437574316290131,
+              "hit@10": 0.1474019088016967,
+              "mrr@10": 0.033229392852934726,
+              "ndcg@10": 0.01860466531903246,
+              "novelty@10": 10.78547120221791,
+              "precision@10": 0.018451749734888633,
+              "recall@10": 0.01776089627704341
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 884,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 174,
+              "recommended_known_dislikes": 8,
+              "test_dislikes": 1712,
+              "test_likes": 5255,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 59
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.04597701149425287,
+            "known_dislike_rate_per_slot": 0.000848356309650053,
+            "liked_ratings": {
+              "coverage@10": 0.022592152199762187,
+              "hit@10": 0.13574660633484162,
+              "mrr@10": 0.03177565898154132,
+              "ndcg@10": 0.01987147960981623,
+              "novelty@10": 10.808685317190049,
+              "precision@10": 0.016515837104072367,
+              "recall@10": 0.02565390510731575
+            }
+          }
+        },
+        "item_histogram": {
+          "categorical": {
+            "macro_brier": 0.7148052177107687,
+            "macro_category_accuracy": 0.38342576529912636,
+            "macro_cross_entropy": 1.372776209626001,
+            "macro_expected_rating_rmse": 1.0324807414799153,
+            "observations": 9596,
+            "pooled_brier": 0.7153532785267784,
+            "pooled_category_accuracy": 0.3799499791579825,
+            "pooled_cross_entropy": 1.3761360288241804,
+            "pooled_expected_rating_rmse": 1.0238662204416455,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.02794292508917955,
+              "hit@10": 0.2757158006362672,
+              "mrr@10": 0.10890984530963321,
+              "ndcg@10": 0.050637231684041266,
+              "novelty@10": 9.008303268675501,
+              "precision@10": 0.04220572640509025,
+              "recall@10": 0.038042096863989176
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 884,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 398,
+              "recommended_known_dislikes": 15,
+              "test_dislikes": 1712,
+              "test_likes": 5255,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 59
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.03768844221105527,
+            "known_dislike_rate_per_slot": 0.0015906680805938495,
+            "liked_ratings": {
+              "coverage@10": 0.02794292508917955,
+              "hit@10": 0.26131221719457015,
+              "mrr@10": 0.10281413847590327,
+              "ndcg@10": 0.05287872781249036,
+              "novelty@10": 9.017368512079635,
+              "precision@10": 0.038800904977375664,
+              "recall@10": 0.05574418340474736
+            }
+          }
+        },
+        "item_user_product": {
+          "categorical": {
+            "macro_brier": 0.680910199717142,
+            "macro_category_accuracy": 0.4218586302107698,
+            "macro_cross_entropy": 1.29173651485372,
+            "macro_expected_rating_rmse": 0.9780110580899787,
+            "observations": 9596,
+            "pooled_brier": 0.6771760934379003,
+            "pooled_category_accuracy": 0.42767819924968736,
+            "pooled_cross_entropy": 1.2828935480548749,
+            "pooled_expected_rating_rmse": 0.9578289665271172,
+            "scope": "Conditional on observed rating entries; missing ratings are unknown.",
+            "users": 943
+          },
+          "ranking": {
+            "all_observed": {
+              "coverage@10": 0.030915576694411414,
+              "hit@10": 0.2735949098621421,
+              "mrr@10": 0.1061337507785016,
+              "ndcg@10": 0.04901040333280919,
+              "novelty@10": 9.017527846444612,
+              "precision@10": 0.04103923647932143,
+              "recall@10": 0.03780240853688551
+            },
+            "caution": "Missing ratings are unknown. Per-slot dislike rate counts only known held-out dislikes; observed-rating conditional rate is selection-biased.",
+            "denominators": {
+              "all_observed_users": 943,
+              "liked_ratings_users": 884,
+              "recommendation_slots": 9430,
+              "recommended_items_with_test_rating": 387,
+              "recommended_known_dislikes": 17,
+              "test_dislikes": 1712,
+              "test_likes": 5255,
+              "test_observations": 9596,
+              "users_without_liked_test_excluded_from_liked_metrics": 59
+            },
+            "dislike_rate_among_test_rated_recommendations": 0.04392764857881137,
+            "known_dislike_rate_per_slot": 0.0018027571580063627,
+            "liked_ratings": {
+              "coverage@10": 0.030915576694411414,
+              "hit@10": 0.2579185520361991,
+              "mrr@10": 0.09705657904187323,
+              "ndcg@10": 0.05043590848404438,
+              "novelty@10": 9.025892771665509,
+              "precision@10": 0.03744343891402723,
+              "recall@10": 0.05356340656698813
+            }
+          }
+        }
+      },
+      "selections": {
+        "adaptive": {
+          "checkpoint": "epoch-60.pt",
+          "checkpoint_replay_exact": true,
+          "checkpoint_sha256": "6fe6eed0977254f59a387c3f7f3231cc787671b26e11a017650a168be5322878",
+          "elapsed_seconds": 157.2770315829839,
+          "epoch": 60,
+          "initial_state_sha256": "1f4ace8139ed320d134bda503749a0a6561def715b4264fbabef3edf165df2e9",
+          "meta_fit_macro_cross_entropy": 1.3029058053303415,
+          "parameter_count": 14654,
+          "probability_array_sha256": "781ac3d27338a6c5eafea9101af0dcd8d10119617050fd99da340cc1ff5ac8cc",
+          "selection_cohort": "meta_fit",
+          "selection_metric": "meta_fit_macro_cross_entropy"
+        },
+        "fixed_flow": {
+          "checkpoint": "epoch-60.pt",
+          "checkpoint_replay_exact": true,
+          "checkpoint_sha256": "a5d9e0133653620049a145f6478cbb8c478022dca900e7650f809bdca31b053d",
+          "elapsed_seconds": 81.55925291599124,
+          "epoch": 60,
+          "initial_state_sha256": "1f4ace8139ed320d134bda503749a0a6561def715b4264fbabef3edf165df2e9",
+          "meta_fit_macro_cross_entropy": 1.3023604611259192,
+          "parameter_count": 14654,
+          "probability_array_sha256": "220d1c25e015c7e1acac96497a619634bdb1c4082b719d4cd951a0d9dabcfe01",
+          "selection_cohort": "meta_fit",
+          "selection_metric": "meta_fit_macro_cross_entropy"
+        },
+        "hard_clamp": {
+          "checkpoint": "epoch-60.pt",
+          "checkpoint_replay_exact": true,
+          "checkpoint_sha256": "a0464c086dcfe10f801b3bec08ed876ce3cbb617202cca5f43e796725dfd7be7",
+          "elapsed_seconds": 168.38529812500929,
+          "epoch": 60,
+          "initial_state_sha256": "1f4ace8139ed320d134bda503749a0a6561def715b4264fbabef3edf165df2e9",
+          "meta_fit_macro_cross_entropy": 1.3023879197758348,
+          "parameter_count": 14654,
+          "probability_array_sha256": "de303cef9bcdf503c220d809064f6fbc211317c5389445aef3afe68a54a61860",
+          "selection_cohort": "meta_fit",
+          "selection_metric": "meta_fit_macro_cross_entropy"
+        }
+      }
+    }
+  },
+  "stage": "test",
+  "test_read": true
+}

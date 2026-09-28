@@ -1,0 +1,3 @@
+# Authenticated course attachments remain local; cite their source and hashes.
+*.pdf
+*.xlsx

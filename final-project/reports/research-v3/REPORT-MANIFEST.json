@@ -1,0 +1,45 @@
+{
+  "artifact_sha256": {
+    "report-content.json": "ba99efc295c5e68f5ee792b54a767e4dbd37967626ff656754b6cae87ddc79b0",
+    "report.md": "beb35a04abec02b441383ee6a1b93b759b42c7b962b90f73da1aa4e2878e0ac0",
+    "report.pdf": "0869e69b7ad1c205df00fb8d2221270a55df73d0f77406c45b4f9f8fb6350b52"
+  },
+  "contributors_supplied": false,
+  "discussion_words": {
+    "1": 98,
+    "2": 97,
+    "3": 119
+  },
+  "final_evaluation": null,
+  "generator_sha256": "0d2b85908caaf2da0ce1584dc82409ed79c5e5f0ef83899061cbd722ce0b8617",
+  "group": "24",
+  "layout": {
+    "font": "Times New Roman",
+    "font_sha256": {
+      "bold": "50f5b1f27b7d34621090e437e8b1dd4510a22d2823fc876b3286bed327b64bbb",
+      "regular": "f3b4ffff71c2a0c7227d37497683b2498fb2d0a4e8beae26f022e3ccfcaabfa3"
+    },
+    "font_size": 12,
+    "line_spacing": 1.15,
+    "page_bottoms_pt": [
+      241.89,
+      116.89,
+      79.09,
+      266.89
+    ],
+    "pages": 4
+  },
+  "schema_version": 1,
+  "source_sha256": {
+    "2026-coefficients.json": "75de1391f1d680ae8c25900c0992aec7824c307e820e32340a705dbfe8c077e0",
+    "2027-coefficients.json": "28dd00c0c97a57cf34d1b78ecc403457b4af8aca9a1aec6bce2d7f643d77789b",
+    "2028-coefficients.json": "eb7277d2db67f000c83f73c15079603a5e2d434ff1a4d75e59fbf259d579fdf4",
+    "aggregates.json": "e021bcbeec018e5752f8623d920045b376e773ac1b03e646cd260e337b4936ff",
+    "candidate-budgets.json": "51fb5fc6bfd6f6a0099497efff8b7214c31219a99739f51b56e3ced0ff367668",
+    "exception-v2/aggregates.json": "bd51966ef88d73928934bbd5e460c0b8066ff11e686d71a7f45e93f2073e8308",
+    "group-policies.json": "fc73b0013bbddf38a5a32716c2994b88a45518093a559d282ed01f9aa97d56fa",
+    "provenance.json": "9c76b28a33635af7775d5632fde86b5d5cc48f7ebc05404b2ec4f0f503b84e6c",
+    "selected.json": "dbd2b4d65bb197c320145652ea8776da96d2191ee7fcdca21bb1c5844a123996"
+  },
+  "status": "DRAFT"
+}

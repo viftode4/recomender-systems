@@ -1,0 +1,28 @@
+{
+  "code_sha256": {
+    "ADAPTIVE_RESEARCH.md": "4e709088012bb7bc474ac0c7e310ea2774eb54a5770605b30a01c96c68c7390f",
+    "categorical_evaluation.py": "1488bd6b3c216a224300b001ad942369477fe8568575416fe54f24f0d04e232f",
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+    "exception_evaluation.py": "3bfa0e5f23a58a77a9833b0fb866e48acb60e910ba31b27d6b351158083794a0",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "frozen_manifest_sha256": "c7c985f1b8b8bf1b68e8fb82c84c159b17b0cec815d394950184595cdb3a7d4d",
+  "output_sha256": {
+    "2026/metrics.json": "f27db235bb7d73877e32165011e832b05b26a558158207375cfee966be88073c",
+    "2026/recommendations.json": "b890d5a8166a15979176a6676921124959f866c3fa25f5c00ba99a5abf0c541e",
+    "2027/metrics.json": "aa30b49e715e0eb5ef581fb28c13e01bf9b1d3c9221a96cbf7502083aba26c27",
+    "2027/recommendations.json": "7c5303fcecb6a43fbe5f353693c801a92ebea6b4ebe925e433a6df3c836b8db2",
+    "2028/metrics.json": "f857982a050fa74886e411ca619edcc0b42ad97648229005745ca52b2e312f9c",
+    "2028/recommendations.json": "fa360287950bac3fe3174eee5ea760be5c35b1eee8208a7197d566d1d4026b88",
+    "aggregates.json": "9d04698ca30d403845d23bb99c1f73afd1a136a2df5effbdd48d2e7e39d4b0a0"
+  },
+  "selection_after_test": false,
+  "status": "complete",
+  "test_evaluated": true,
+  "test_read": true
+}

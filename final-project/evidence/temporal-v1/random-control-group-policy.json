@@ -1,0 +1,208 @@
+{
+  "development_retention": {
+    "0": 1.0,
+    "1": 1.0034897836068355,
+    "2": 0.9993717260063477
+  },
+  "fit_retention_floor": 0.95,
+  "independent_calibration": {
+    "baseline": "0.0",
+    "bonferroni_comparisons": 18,
+    "bootstrap_expected_lower_tail_draws": 13.8888888888889,
+    "bootstrap_resamples": 5000,
+    "bound_method": "bootstrap",
+    "calibration_user_count": 236,
+    "confidence": 0.95,
+    "groups": {
+      "0": {
+        "candidates": {
+          "0.0": {
+            "admissible": true,
+            "lower_difference_bound": 0.0,
+            "lower_retention_margin_bound": 0.0,
+            "mean_difference": 0.0,
+            "mean_retention_margin": 0.013380402756166804,
+            "mean_utility": 0.26760805512333574,
+            "paired_difference_95_percent_interval": [
+              0.0,
+              0.0
+            ],
+            "secondary_mean": 0.7642969528819706
+          },
+          "0.2": {
+            "admissible": true,
+            "lower_difference_bound": -0.00858776241105896,
+            "lower_retention_margin_bound": 0.00446906472061737,
+            "mean_difference": -0.0017771375493222078,
+            "mean_retention_margin": 0.011603265206844597,
+            "mean_utility": 0.26583091757401356,
+            "paired_difference_95_percent_interval": [
+              -0.0057580040529806665,
+              0.00044624168589890804
+            ],
+            "secondary_mean": 0.7622767508617687
+          },
+          "0.5": {
+            "admissible": false,
+            "lower_difference_bound": -0.04384773639227985,
+            "lower_retention_margin_bound": -0.029012431292413265,
+            "mean_difference": -0.02214647940967025,
+            "mean_retention_margin": -0.008766076653503442,
+            "mean_utility": 0.24546157571366545,
+            "paired_difference_95_percent_interval": [
+              -0.037118277611050035,
+              -0.008724180698334647
+            ],
+            "secondary_mean": 0.7097514983365162
+          },
+          "0.8": {
+            "admissible": false,
+            "lower_difference_bound": -0.1540731090890997,
+            "lower_retention_margin_bound": -0.1382102453954015,
+            "mean_difference": -0.11290676299781738,
+            "mean_retention_margin": -0.09952636024165055,
+            "mean_utility": 0.1547012921255184,
+            "paired_difference_95_percent_interval": [
+              -0.14216862948061587,
+              -0.08483433984709221
+            ],
+            "secondary_mean": 0.356259383369966
+          }
+        },
+        "selected": "0.2",
+        "users": 99
+      },
+      "1": {
+        "candidates": {
+          "0.0": {
+            "admissible": true,
+            "lower_difference_bound": 0.0,
+            "lower_retention_margin_bound": 0.0,
+            "mean_difference": 0.0,
+            "mean_retention_margin": 0.010558630480173246,
+            "mean_utility": 0.21117260960346473,
+            "paired_difference_95_percent_interval": [
+              0.0,
+              0.0
+            ],
+            "secondary_mean": 0.7716432818073722
+          },
+          "0.2": {
+            "admissible": true,
+            "lower_difference_bound": -0.0019409030914489401,
+            "lower_retention_margin_bound": 0.00770364996429211,
+            "mean_difference": -0.0004607800644790501,
+            "mean_retention_margin": 0.010097850415694196,
+            "mean_utility": 0.21071182953898568,
+            "paired_difference_95_percent_interval": [
+              -0.0013458104985497148,
+              7.35805899468911e-05
+            ],
+            "secondary_mean": 0.7663099484740388
+          },
+          "0.5": {
+            "admissible": false,
+            "lower_difference_bound": -0.02646636954180149,
+            "lower_retention_margin_bound": -0.014759776898347196,
+            "mean_difference": -0.012173749898280715,
+            "mean_retention_margin": -0.0016151194181074698,
+            "mean_utility": 0.198998859705184,
+            "paired_difference_95_percent_interval": [
+              -0.022150417184830164,
+              -0.001845038243062076
+            ],
+            "secondary_mean": 0.7276527942925088
+          },
+          "0.8": {
+            "admissible": false,
+            "lower_difference_bound": -0.08122894396568477,
+            "lower_retention_margin_bound": -0.06875375396394778,
+            "mean_difference": -0.05220905558180626,
+            "mean_retention_margin": -0.04165042510163301,
+            "mean_utility": 0.1589635540216585,
+            "paired_difference_95_percent_interval": [
+              -0.07363275704598063,
+              -0.029294284942269464
+            ],
+            "secondary_mean": 0.4076623067776457
+          }
+        },
+        "selected": "0.2",
+        "users": 75
+      },
+      "2": {
+        "candidates": {
+          "0.0": {
+            "admissible": true,
+            "lower_difference_bound": 0.0,
+            "lower_retention_margin_bound": 0.0,
+            "mean_difference": 0.0,
+            "mean_retention_margin": 0.01647471154553613,
+            "mean_utility": 0.3294942309107222,
+            "paired_difference_95_percent_interval": [
+              0.0,
+              0.0
+            ],
+            "secondary_mean": 0.7867400560009202
+          },
+          "0.2": {
+            "admissible": true,
+            "lower_difference_bound": -0.0003387362339211913,
+            "lower_retention_margin_bound": 0.013507505497197213,
+            "mean_difference": -6.343064778359118e-05,
+            "mean_retention_margin": 0.016411280897752536,
+            "mean_utility": 0.32943080026293864,
+            "paired_difference_95_percent_interval": [
+              -0.0002542855821205992,
+              8.494952436894695e-05
+            ],
+            "secondary_mean": 0.7835142495493075
+          },
+          "0.5": {
+            "admissible": false,
+            "lower_difference_bound": -0.025016002023901092,
+            "lower_retention_margin_bound": -0.007739878033694531,
+            "mean_difference": -0.0006724556888522406,
+            "mean_retention_margin": 0.015802255856683885,
+            "mean_utility": 0.32882177522187,
+            "paired_difference_95_percent_interval": [
+              -0.017963591120716205,
+              0.017014370770807828
+            ],
+            "secondary_mean": 0.7206110237428562
+          },
+          "0.8": {
+            "admissible": false,
+            "lower_difference_bound": -0.11728425684442018,
+            "lower_retention_margin_bound": -0.09958914124298508,
+            "mean_difference": -0.07215673393646584,
+            "mean_retention_margin": -0.0556820223909297,
+            "mean_utility": 0.25733749697425645,
+            "paired_difference_95_percent_interval": [
+              -0.10367125418939994,
+              -0.03969984752066953
+            ],
+            "secondary_mean": 0.3577308120133483
+          }
+        },
+        "selected": "0.2",
+        "users": 62
+      }
+    },
+    "note": "Frozen options, independent policy calibration, and separate audit required. Bootstrap bounds are approximate; no holdout or real-world guarantee.",
+    "objective": "exposure",
+    "per_comparison_alpha": 0.00277777777777778,
+    "policy": {
+      "0": "0.2",
+      "1": "0.2",
+      "2": "0.2"
+    },
+    "retention_target": 0.95
+  },
+  "note": "Fitted on independent calibration users with approximate Bonferroni-adjusted bootstrap bounds. Development selected the base model; reserved test is the final audit.",
+  "strengths": {
+    "0": 0.2,
+    "1": 0.2,
+    "2": 0.2
+  }
+}

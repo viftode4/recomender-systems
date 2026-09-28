@@ -1,0 +1,809 @@
+{
+  "2026": {
+    "linear_vs_equal_grid_observed": {
+      "positive_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.008519582359739715,
+          0.023887910070095775
+        ],
+        "mean_delta": 0.007808026173290283,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "signed_channels": {
+        "descriptive_bootstrap_interval_95": [
+          -0.00819786963557617,
+          0.02429028226324524
+        ],
+        "mean_delta": 0.007971184142125075,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "signed_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.032177728903895454,
+          0.0072047818253873795
+        ],
+        "mean_delta": -0.01206486559684072,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      }
+    },
+    "matched_vs_exact_permutation": {
+      "all_observed": {
+        "descriptive_bootstrap_interval_95": [
+          0.0024582855017241064,
+          0.010237331622972452
+        ],
+        "mean_delta": 0.0062336306968931035,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "liked_ratings": {
+        "descriptive_bootstrap_interval_95": [
+          0.0013828099604878013,
+          0.008527195084480906
+        ],
+        "mean_delta": 0.0050589198979821455,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      }
+    },
+    "primary": {
+      "all_observed:contrast_minus_anchor_only": {
+        "descriptive_bootstrap_interval_95": [
+          -0.08210241279608015,
+          -0.048847338323698225
+        ],
+        "mean_delta": -0.06488403975896836,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_first_moment": {
+        "descriptive_bootstrap_interval_95": [
+          -0.020529503101187247,
+          -0.002439394972320152
+        ],
+        "mean_delta": -0.011751641074550758,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_random_partners": {
+        "descriptive_bootstrap_interval_95": [
+          -0.006355833655554597,
+          0.009069390772598988
+        ],
+        "mean_delta": 0.0012287525052294159,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_signed_geometry": {
+        "descriptive_bootstrap_interval_95": [
+          -0.0748661516742908,
+          -0.04292431388639497
+        ],
+        "mean_delta": -0.058863084986967386,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_signed_knn": {
+        "descriptive_bootstrap_interval_95": [
+          -0.08993412392374028,
+          -0.05970481632251146
+        ],
+        "mean_delta": -0.07518513849295284,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_unordered_pairs": {
+        "descriptive_bootstrap_interval_95": [
+          -0.047616368116795184,
+          -0.016609018037045117
+        ],
+        "mean_delta": -0.031723356751265884,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_pair_anchor": {
+        "descriptive_bootstrap_interval_95": [
+          0.0040315028317249755,
+          0.024021461704488253
+        ],
+        "mean_delta": 0.013834758160262263,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_pair_gate_random": {
+        "descriptive_bootstrap_interval_95": [
+          0.002708959187080162,
+          0.016623004632988183
+        ],
+        "mean_delta": 0.009738136584141638,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_pair_signed": {
+        "descriptive_bootstrap_interval_95": [
+          0.011689175908315884,
+          0.03289473325809498
+        ],
+        "mean_delta": 0.022515026063667457,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_positive_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.159727177174257,
+          -0.12313309427842174
+        ],
+        "mean_delta": -0.1406520115779105,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_signed_channels": {
+        "descriptive_bootstrap_interval_95": [
+          -0.16297781178195359,
+          -0.12559455211321047
+        ],
+        "mean_delta": -0.1439187461436105,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_signed_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.13490197941246634,
+          -0.10047683985227532
+        ],
+        "mean_delta": -0.1165212118017474,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "liked_ratings:contrast_minus_anchor_only": {
+        "descriptive_bootstrap_interval_95": [
+          -0.09506637164056146,
+          -0.052962429756582774
+        ],
+        "mean_delta": -0.07380069569520571,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "liked_ratings:contrast_minus_first_moment": {
+        "descriptive_bootstrap_interval_95": [
+          -0.023274456738054547,
+          -0.000954626163742616
+        ],
+        "mean_delta": -0.012117493648941184,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "liked_ratings:contrast_minus_random_partners": {
+        "descriptive_bootstrap_interval_95": [
+          -0.011928112380725423,
+          0.007542520771861601
+        ],
+        "mean_delta": -0.0026596706197384505,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "liked_ratings:contrast_minus_signed_geometry": {
+        "descriptive_bootstrap_interval_95": [
+          -0.09136530301598743,
+          -0.05279819075711383
+        ],
+        "mean_delta": -0.0724569846206789,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "liked_ratings:contrast_minus_signed_knn": {
+        "descriptive_bootstrap_interval_95": [
+          -0.10599647663993628,
+          -0.0707666194954331
+        ],
+        "mean_delta": -0.0880183897236416,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "liked_ratings:contrast_minus_unordered_pairs": {
+        "descriptive_bootstrap_interval_95": [
+          -0.04686674450868256,
+          -0.015940451022315606
+        ],
+        "mean_delta": -0.03134701909956268,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "liked_ratings:pair_gate_minus_pair_anchor": {
+        "descriptive_bootstrap_interval_95": [
+          0.007982411666567138,
+          0.024566702534742905
+        ],
+        "mean_delta": 0.016387470269200698,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "liked_ratings:pair_gate_minus_pair_gate_random": {
+        "descriptive_bootstrap_interval_95": [
+          0.0033409474789150187,
+          0.016459278338536547
+        ],
+        "mean_delta": 0.009891978110909241,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "liked_ratings:pair_gate_minus_pair_signed": {
+        "descriptive_bootstrap_interval_95": [
+          0.015133012912973908,
+          0.04512646396699217
+        ],
+        "mean_delta": 0.030191158373021693,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "liked_ratings:pair_gate_minus_positive_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.1737775276657284,
+          -0.1293246185313637
+        ],
+        "mean_delta": -0.1514606308673321,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "liked_ratings:pair_gate_minus_signed_channels": {
+        "descriptive_bootstrap_interval_95": [
+          -0.1748581968340952,
+          -0.1289113183089306
+        ],
+        "mean_delta": -0.15162378883616687,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      },
+      "liked_ratings:pair_gate_minus_signed_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.15311820034960494,
+          -0.10969737170224513
+        ],
+        "mean_delta": -0.13158773909720106,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 444
+      }
+    }
+  },
+  "2027": {
+    "linear_vs_equal_grid_observed": {
+      "positive_ease": {
+        "descriptive_bootstrap_interval_95": [
+          0.01035526750144708,
+          0.041318325504925736
+        ],
+        "mean_delta": 0.02573086503979118,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "signed_channels": {
+        "descriptive_bootstrap_interval_95": [
+          0.008274396379194048,
+          0.03911062647511737
+        ],
+        "mean_delta": 0.023694996113362485,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "signed_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.023849246508478302,
+          0.012041710940658982
+        ],
+        "mean_delta": -0.0059940087215641985,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      }
+    },
+    "matched_vs_exact_permutation": {
+      "all_observed": {
+        "descriptive_bootstrap_interval_95": [
+          0.002722734093433457,
+          0.008804485044694964
+        ],
+        "mean_delta": 0.005709353720935564,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "liked_ratings": {
+        "descriptive_bootstrap_interval_95": [
+          0.0020296755866163166,
+          0.009878914320870862
+        ],
+        "mean_delta": 0.005917091052636616,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      }
+    },
+    "primary": {
+      "all_observed:contrast_minus_anchor_only": {
+        "descriptive_bootstrap_interval_95": [
+          -0.07506756852307324,
+          -0.04264424418651076
+        ],
+        "mean_delta": -0.058019153279643444,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_first_moment": {
+        "descriptive_bootstrap_interval_95": [
+          -0.013417540324069907,
+          0.013496959188146118
+        ],
+        "mean_delta": 0.000164506954200622,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_random_partners": {
+        "descriptive_bootstrap_interval_95": [
+          -0.006498813919559165,
+          0.008159683985059328
+        ],
+        "mean_delta": 0.0008775092214109741,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_signed_geometry": {
+        "descriptive_bootstrap_interval_95": [
+          -0.07299925206703407,
+          -0.04518746474299145
+        ],
+        "mean_delta": -0.05831737185596635,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_signed_knn": {
+        "descriptive_bootstrap_interval_95": [
+          -0.09801435007531133,
+          -0.06747976094853278
+        ],
+        "mean_delta": -0.08190605435752489,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_unordered_pairs": {
+        "descriptive_bootstrap_interval_95": [
+          -0.05061747261298198,
+          -0.017656748318152934
+        ],
+        "mean_delta": -0.0338352957808067,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_pair_anchor": {
+        "descriptive_bootstrap_interval_95": [
+          0.004964031540128184,
+          0.017081605600931967
+        ],
+        "mean_delta": 0.011144513098717402,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_pair_gate_random": {
+        "descriptive_bootstrap_interval_95": [
+          0.0009722740032108729,
+          0.009525483442991737
+        ],
+        "mean_delta": 0.005219887362257613,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_pair_signed": {
+        "descriptive_bootstrap_interval_95": [
+          0.0023622901175204647,
+          0.02423756710026888
+        ],
+        "mean_delta": 0.013105756449159576,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_positive_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.18317533323290844,
+          -0.14591858040926683
+        ],
+        "mean_delta": -0.16448306554044365,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_signed_channels": {
+        "descriptive_bootstrap_interval_95": [
+          -0.18366188324957558,
+          -0.14657010619332295
+        ],
+        "mean_delta": -0.16537580039218372,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_signed_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.1576140459728335,
+          -0.1190381200652589
+        ],
+        "mean_delta": -0.13798069166274493,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "liked_ratings:contrast_minus_anchor_only": {
+        "descriptive_bootstrap_interval_95": [
+          -0.09046846764929094,
+          -0.05221880830889949
+        ],
+        "mean_delta": -0.07093199476202348,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "liked_ratings:contrast_minus_first_moment": {
+        "descriptive_bootstrap_interval_95": [
+          -0.008914568249238352,
+          0.021712100256771588
+        ],
+        "mean_delta": 0.006401611347685475,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "liked_ratings:contrast_minus_random_partners": {
+        "descriptive_bootstrap_interval_95": [
+          -0.0066821136463947545,
+          0.012550683974207954
+        ],
+        "mean_delta": 0.0026366781560164844,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "liked_ratings:contrast_minus_signed_geometry": {
+        "descriptive_bootstrap_interval_95": [
+          -0.06267336554579159,
+          -0.02683678408556608
+        ],
+        "mean_delta": -0.04432494238912859,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "liked_ratings:contrast_minus_signed_knn": {
+        "descriptive_bootstrap_interval_95": [
+          -0.10411870867240043,
+          -0.06783958008762846
+        ],
+        "mean_delta": -0.08499701010203461,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "liked_ratings:contrast_minus_unordered_pairs": {
+        "descriptive_bootstrap_interval_95": [
+          -0.04758202212787815,
+          -0.014143388149156092
+        ],
+        "mean_delta": -0.029854154361313882,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "liked_ratings:pair_gate_minus_pair_anchor": {
+        "descriptive_bootstrap_interval_95": [
+          0.005268853058011064,
+          0.01959570704435931
+        ],
+        "mean_delta": 0.012428020537635125,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "liked_ratings:pair_gate_minus_pair_gate_random": {
+        "descriptive_bootstrap_interval_95": [
+          -0.0004645946799021351,
+          0.00989192027670672
+        ],
+        "mean_delta": 0.00480909666983121,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "liked_ratings:pair_gate_minus_pair_signed": {
+        "descriptive_bootstrap_interval_95": [
+          0.0027537788091581,
+          0.029439819957094767
+        ],
+        "mean_delta": 0.01584688374173968,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "liked_ratings:pair_gate_minus_positive_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.20867650612255337,
+          -0.16373896170900634
+        ],
+        "mean_delta": -0.18564727190609812,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "liked_ratings:pair_gate_minus_signed_channels": {
+        "descriptive_bootstrap_interval_95": [
+          -0.20556204150658575,
+          -0.1618477339647641
+        ],
+        "mean_delta": -0.18361140297966944,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      },
+      "liked_ratings:pair_gate_minus_signed_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.17630969424030865,
+          -0.13086073730043757
+        ],
+        "mean_delta": -0.15392239814474276,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 434
+      }
+    }
+  },
+  "2028": {
+    "linear_vs_equal_grid_observed": {
+      "positive_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.012036104246586965,
+          0.019828207135608414
+        ],
+        "mean_delta": 0.0039458499658983565,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "signed_channels": {
+        "descriptive_bootstrap_interval_95": [
+          -0.008677340569556135,
+          0.022977450506069096
+        ],
+        "mean_delta": 0.0071737861663185775,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "signed_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.058669807565799544,
+          -0.01774499103258411
+        ],
+        "mean_delta": -0.037579603028003304,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      }
+    },
+    "matched_vs_exact_permutation": {
+      "all_observed": {
+        "descriptive_bootstrap_interval_95": [
+          -0.0019779111044722487,
+          0.007192145360733243
+        ],
+        "mean_delta": 0.002407890638856489,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "liked_ratings": {
+        "descriptive_bootstrap_interval_95": [
+          -0.004739004062789143,
+          0.006851951086525056
+        ],
+        "mean_delta": 0.0010038734855529672,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      }
+    },
+    "primary": {
+      "all_observed:contrast_minus_anchor_only": {
+        "descriptive_bootstrap_interval_95": [
+          -0.08769576386698655,
+          -0.053867008527490455
+        ],
+        "mean_delta": -0.07103660639226031,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_first_moment": {
+        "descriptive_bootstrap_interval_95": [
+          -0.01904822604130519,
+          0.0002939153574744985
+        ],
+        "mean_delta": -0.009146481365796245,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_random_partners": {
+        "descriptive_bootstrap_interval_95": [
+          -0.008211553840331275,
+          0.007269707584764706
+        ],
+        "mean_delta": -0.000166380441994237,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_signed_geometry": {
+        "descriptive_bootstrap_interval_95": [
+          -0.08485950091579561,
+          -0.056432907021724835
+        ],
+        "mean_delta": -0.07026701628959062,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_signed_knn": {
+        "descriptive_bootstrap_interval_95": [
+          -0.09632844261637842,
+          -0.0663626137585839
+        ],
+        "mean_delta": -0.0811518895008339,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:contrast_minus_unordered_pairs": {
+        "descriptive_bootstrap_interval_95": [
+          -0.062074897562968356,
+          -0.030991593406573606
+        ],
+        "mean_delta": -0.0465267389621761,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_pair_anchor": {
+        "descriptive_bootstrap_interval_95": [
+          -0.001965001936643608,
+          0.018547851227051014
+        ],
+        "mean_delta": 0.008520068736641621,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_pair_gate_random": {
+        "descriptive_bootstrap_interval_95": [
+          -0.0037885129935250348,
+          0.014217203415205177
+        ],
+        "mean_delta": 0.005410935376078161,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_pair_signed": {
+        "descriptive_bootstrap_interval_95": [
+          0.009906020326436256,
+          0.028208185444175332
+        ],
+        "mean_delta": 0.019086181189810012,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_positive_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.1733913860947113,
+          -0.13495250245171644
+        ],
+        "mean_delta": -0.153578395012974,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_signed_channels": {
+        "descriptive_bootstrap_interval_95": [
+          -0.17250632881445258,
+          -0.13495553593449422
+        ],
+        "mean_delta": -0.1528846529804679,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "all_observed:pair_gate_minus_signed_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.12854899863236488,
+          -0.09424117056352986
+        ],
+        "mean_delta": -0.1107610918912588,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 472
+      },
+      "liked_ratings:contrast_minus_anchor_only": {
+        "descriptive_bootstrap_interval_95": [
+          -0.10166994517036138,
+          -0.05861560785255552
+        ],
+        "mean_delta": -0.07945977499973951,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "liked_ratings:contrast_minus_first_moment": {
+        "descriptive_bootstrap_interval_95": [
+          -0.023038651797984307,
+          -0.0002127566461357792
+        ],
+        "mean_delta": -0.011580646361844794,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "liked_ratings:contrast_minus_random_partners": {
+        "descriptive_bootstrap_interval_95": [
+          -0.008796842300288764,
+          0.010917153415941534
+        ],
+        "mean_delta": 0.0008157045981118489,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "liked_ratings:contrast_minus_signed_geometry": {
+        "descriptive_bootstrap_interval_95": [
+          -0.0995477813895139,
+          -0.0626486455286805
+        ],
+        "mean_delta": -0.0804993446822353,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "liked_ratings:contrast_minus_signed_knn": {
+        "descriptive_bootstrap_interval_95": [
+          -0.11001057991303195,
+          -0.07207329385732979
+        ],
+        "mean_delta": -0.09064593808269232,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "liked_ratings:contrast_minus_unordered_pairs": {
+        "descriptive_bootstrap_interval_95": [
+          -0.06911258382451714,
+          -0.03124462363287101
+        ],
+        "mean_delta": -0.05010947043720041,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "liked_ratings:pair_gate_minus_pair_anchor": {
+        "descriptive_bootstrap_interval_95": [
+          -0.003845565877954475,
+          0.022707781518347205
+        ],
+        "mean_delta": 0.009244575364629033,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "liked_ratings:pair_gate_minus_pair_gate_random": {
+        "descriptive_bootstrap_interval_95": [
+          -0.007387420314538274,
+          0.015476263366325328
+        ],
+        "mean_delta": 0.004124607834337114,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "liked_ratings:pair_gate_minus_pair_signed": {
+        "descriptive_bootstrap_interval_95": [
+          0.006938189564291498,
+          0.028872521494203305
+        ],
+        "mean_delta": 0.017408264047203352,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "liked_ratings:pair_gate_minus_positive_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.18881612805012032,
+          -0.13753088425718832
+        ],
+        "mean_delta": -0.16289781620847918,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "liked_ratings:pair_gate_minus_signed_channels": {
+        "descriptive_bootstrap_interval_95": [
+          -0.19162896165550974,
+          -0.14189731324459068
+        ],
+        "mean_delta": -0.16612575240889943,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      },
+      "liked_ratings:pair_gate_minus_signed_ease": {
+        "descriptive_bootstrap_interval_95": [
+          -0.14474483921495784,
+          -0.0991733978370793
+        ],
+        "mean_delta": -0.12137236321457749,
+        "scope": "Frozen meta-fit choices on development users; exploratory repeated-split evidence, not independent replications or multiplicity-adjusted inference.",
+        "users": 433
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "baseline": "2027-SLIMElastic-1",
+  "code_sha256": {
+    "audit_study.py": "93aacd392a4b1b799c98eb4da5f358e9af092372182780ccf0ae4816d31cafb1",
+    "compare_frozen.py": "2e367a3142f3fb38b7e0a527c37340c71888977f1c58529cfe06e9cfa5d08901",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "evaluation_phase": "final",
+  "individual_user_data_exported": false,
+  "inputs_sha256": {
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/final-v3/2027/manifest.json": "6eec8f3033ecbd14a3b74beae9d5d249c481c5034931c3dd42b5a56ed8b87c8c",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/final-v3/2027/recommendations.json": "99d5239b6e11a041cfea8dc552b72ce0db29d93901fe40ba7994784d34f0cef6",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/final-v3/2027/results.json": "c3f58da3271129fd5eeadccc5ce02eb50c484ad1e652585646e92c07e2ab633e",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/freeze.json": "7b2fc4cc8a4dd74fd8296d953855168f2e245fe05508cdcfd2811e654d716788",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/freeze.sha256": "aa4a17aaeb00de1da2420cf04d7719878bf23f755959129e3c234518fbe2dedf",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/frozen.npz": "73b4c6c0cfb872c3eb1338b2b681ae9334c9f64129e1983d19b7b87635611870",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+    "/Users/vliftode/personal/recommender-systems/assignment-3/RecBole_DSAIT4335/dataset/ml-100k/ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+    "/Users/vliftode/personal/recommender-systems/assignment-3/RecBole_DSAIT4335/dataset/ml-100k/ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532"
+  },
+  "interpretation": "No new performance estimate; descriptive audit of existing study predictions.",
+  "output_sha256": {
+    "SUMMARY.md": "2bc1b5ad0524a50ca363804b4447c67b9c282398df2983ba9a6d5f20bd493d39",
+    "societal-audit.json": "64d95b0a55954d46942cae3beb0ec1704497e9dbf90e37c8bc59123e8207882f",
+    "training-taste-groups.json": "770f44844ef37de00d2e7c944ce806d8c731f0a3f64fd9f9b14b2ccab47c7023"
+  },
+  "source_run": "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027",
+  "status": "complete",
+  "study_source": "/Users/vliftode/personal/recomender-systems/final-project/runs/final-v3/2027",
+  "test_derived_metrics_read": true,
+  "test_interactions_opened": false,
+  "test_read": false,
+  "training_only_groups": true,
+  "training_ratings": 80808
+}

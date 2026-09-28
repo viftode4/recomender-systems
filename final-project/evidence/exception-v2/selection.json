@@ -1,0 +1,902 @@
+{
+  "2026": {
+    "anchor_only:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "anchor_only",
+      "neighbors": 20,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.21267737319329966,
+      "selection_objective": "all_observed"
+    },
+    "anchor_only:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "anchor_only",
+      "neighbors": 20,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.22162925791509674,
+      "selection_objective": "liked_ratings"
+    },
+    "contrast_transfer:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "contrast_transfer",
+      "neighbors": 80,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.14125842084417795,
+      "selection_objective": "all_observed"
+    },
+    "contrast_transfer:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "contrast_transfer",
+      "neighbors": 80,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.1470176515947505,
+      "selection_objective": "liked_ratings"
+    },
+    "first_moment:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "first_moment",
+      "neighbors": 80,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.1425877506853441,
+      "selection_objective": "all_observed"
+    },
+    "first_moment:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "first_moment",
+      "neighbors": 80,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.14432708986465484,
+      "selection_objective": "liked_ratings"
+    },
+    "observed_ease": {
+      "grid": [
+        {
+          "meta_fit_liked_ndcg": 0.21803649517863177,
+          "penalty": 50.0,
+          "source": "runs/research-v2/2026-EASE-0"
+        },
+        {
+          "meta_fit_liked_ndcg": 0.24493245202137084,
+          "penalty": 250.0,
+          "source": "runs/research-v2/2026-EASE-1"
+        },
+        {
+          "meta_fit_liked_ndcg": 0.24414392054673964,
+          "penalty": 1000.0,
+          "source": "runs/research-v2/2026-EASE-2"
+        }
+      ],
+      "meta_fit_liked_ndcg": 0.24493245202137084,
+      "objective": "liked_ratings",
+      "penalty": 250.0,
+      "selection_cohort": "meta_fit",
+      "source": "runs/research-v2/2026-EASE-1",
+      "test_evaluated": false,
+      "test_read": false
+    },
+    "pair_anchor:all_observed": {
+      "model": "pair_anchor",
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.07369644927578411,
+      "selection_objective": "all_observed",
+      "temperature": 0.1
+    },
+    "pair_anchor:liked_ratings": {
+      "model": "pair_anchor",
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.07481855644206253,
+      "selection_objective": "liked_ratings",
+      "temperature": 0.1
+    },
+    "pair_gate:all_observed": {
+      "model": "pair_gate",
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.0862419405830366,
+      "selection_objective": "all_observed",
+      "temperature": 0.1
+    },
+    "pair_gate:liked_ratings": {
+      "model": "pair_gate",
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.08620931469738456,
+      "selection_objective": "liked_ratings",
+      "temperature": 0.5
+    },
+    "pair_gate_permuted": {
+      "all_observed": {
+        "seed": 2026,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.07815265026321852,
+        "selection_objective": "all_observed",
+        "temperature": 0.1
+      },
+      "liked_ratings": {
+        "seed": 2026,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.07921421578957137,
+        "selection_objective": "liked_ratings",
+        "temperature": 0.5
+      }
+    },
+    "pair_gate_random:all_observed": {
+      "model": "pair_gate_random",
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.07874884208748713,
+      "selection_objective": "all_observed",
+      "temperature": 0.1
+    },
+    "pair_gate_random:liked_ratings": {
+      "model": "pair_gate_random",
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.07874669287400739,
+      "selection_objective": "liked_ratings",
+      "temperature": 0.5
+    },
+    "pair_signed:all_observed": {
+      "model": "pair_signed",
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.06083658434699532,
+      "selection_objective": "all_observed",
+      "temperature": 0.1
+    },
+    "pair_signed:liked_ratings": {
+      "model": "pair_signed",
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.05992309607912455,
+      "selection_objective": "liked_ratings",
+      "temperature": 0.1
+    },
+    "positive_ease:all_observed": {
+      "model": "positive_ease",
+      "penalty": 250.0,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.2534724507226289,
+      "selection_objective": "all_observed"
+    },
+    "positive_ease:liked_ratings": {
+      "model": "positive_ease",
+      "penalty": 250.0,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.26268126143118176,
+      "selection_objective": "liked_ratings"
+    },
+    "positive_knn:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "positive_knn",
+      "neighbors": 80,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.23359799458730732,
+      "selection_objective": "all_observed"
+    },
+    "positive_knn:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "positive_knn",
+      "neighbors": 20,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.23840689856832226,
+      "selection_objective": "liked_ratings"
+    },
+    "random_partners:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "random_partners",
+      "neighbors": 80,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.14972552375330567,
+      "selection_objective": "all_observed"
+    },
+    "random_partners:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "random_partners",
+      "neighbors": 80,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.15799110072941672,
+      "selection_objective": "liked_ratings"
+    },
+    "signed_channels:all_observed": {
+      "model": "signed_channels",
+      "penalty": 250.0,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.2544964641406362,
+      "selection_objective": "all_observed"
+    },
+    "signed_channels:liked_ratings": {
+      "model": "signed_channels",
+      "penalty": 250.0,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.26232582115685465,
+      "selection_objective": "liked_ratings"
+    },
+    "signed_ease:all_observed": {
+      "model": "signed_ease",
+      "penalty": 250.0,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.21621556013171908,
+      "selection_objective": "all_observed"
+    },
+    "signed_ease:liked_ratings": {
+      "model": "signed_ease",
+      "penalty": 250.0,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.22984537746717656,
+      "selection_objective": "liked_ratings"
+    },
+    "signed_geometry:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "signed_geometry",
+      "neighbors": 20,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.20240232153585966,
+      "selection_objective": "all_observed"
+    },
+    "signed_geometry:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "signed_geometry",
+      "neighbors": 20,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.2151021575938951,
+      "selection_objective": "liked_ratings"
+    },
+    "signed_knn:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "signed_knn",
+      "neighbors": 80,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.22391998667545895,
+      "selection_objective": "all_observed"
+    },
+    "signed_knn:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "signed_knn",
+      "neighbors": 80,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.23884046928216215,
+      "selection_objective": "liked_ratings"
+    },
+    "unordered_pairs:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "unordered_pairs",
+      "neighbors": 20,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.17256642142967496,
+      "selection_objective": "all_observed"
+    },
+    "unordered_pairs:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "unordered_pairs",
+      "neighbors": 80,
+      "seed": 2026,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.1778756132413785,
+      "selection_objective": "liked_ratings"
+    }
+  },
+  "2027": {
+    "anchor_only:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "anchor_only",
+      "neighbors": 20,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.19544086310038974,
+      "selection_objective": "all_observed"
+    },
+    "anchor_only:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "anchor_only",
+      "neighbors": 80,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.2073315530192985,
+      "selection_objective": "liked_ratings"
+    },
+    "contrast_transfer:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "contrast_transfer",
+      "neighbors": 80,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.11820359647368543,
+      "selection_objective": "all_observed"
+    },
+    "contrast_transfer:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "contrast_transfer",
+      "neighbors": 80,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.12021230976714875,
+      "selection_objective": "liked_ratings"
+    },
+    "first_moment:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "first_moment",
+      "neighbors": 20,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.13265869123582336,
+      "selection_objective": "all_observed"
+    },
+    "first_moment:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "first_moment",
+      "neighbors": 20,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.13599361909138202,
+      "selection_objective": "liked_ratings"
+    },
+    "observed_ease": {
+      "grid": [
+        {
+          "meta_fit_liked_ndcg": 0.2164393926411514,
+          "penalty": 50.0,
+          "source": "runs/research-v2/2027-EASE-0"
+        },
+        {
+          "meta_fit_liked_ndcg": 0.23505270628349612,
+          "penalty": 250.0,
+          "source": "runs/research-v2/2027-EASE-1"
+        },
+        {
+          "meta_fit_liked_ndcg": 0.2264827026779861,
+          "penalty": 1000.0,
+          "source": "runs/research-v2/2027-EASE-2"
+        }
+      ],
+      "meta_fit_liked_ndcg": 0.23505270628349612,
+      "objective": "liked_ratings",
+      "penalty": 250.0,
+      "selection_cohort": "meta_fit",
+      "source": "runs/research-v2/2027-EASE-1",
+      "test_evaluated": false,
+      "test_read": false
+    },
+    "pair_anchor:all_observed": {
+      "model": "pair_anchor",
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.07655478219095431,
+      "selection_objective": "all_observed",
+      "temperature": 0.1
+    },
+    "pair_anchor:liked_ratings": {
+      "model": "pair_anchor",
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.0857013240799673,
+      "selection_objective": "liked_ratings",
+      "temperature": 0.1
+    },
+    "pair_gate:all_observed": {
+      "model": "pair_gate",
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.08359764390549697,
+      "selection_objective": "all_observed",
+      "temperature": 0.5
+    },
+    "pair_gate:liked_ratings": {
+      "model": "pair_gate",
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.09267302241032105,
+      "selection_objective": "liked_ratings",
+      "temperature": 0.5
+    },
+    "pair_gate_permuted": {
+      "all_observed": {
+        "seed": 2027,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.0770526311251294,
+        "selection_objective": "all_observed",
+        "temperature": 0.5
+      },
+      "liked_ratings": {
+        "seed": 2027,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.08709820868612526,
+        "selection_objective": "liked_ratings",
+        "temperature": 0.5
+      }
+    },
+    "pair_gate_random:all_observed": {
+      "model": "pair_gate_random",
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.07309482862940243,
+      "selection_objective": "all_observed",
+      "temperature": 0.5
+    },
+    "pair_gate_random:liked_ratings": {
+      "model": "pair_gate_random",
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.08350427333798399,
+      "selection_objective": "liked_ratings",
+      "temperature": 0.5
+    },
+    "pair_signed:all_observed": {
+      "model": "pair_signed",
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.059621213399316905,
+      "selection_objective": "all_observed",
+      "temperature": 0.1
+    },
+    "pair_signed:liked_ratings": {
+      "model": "pair_signed",
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.06349949671424951,
+      "selection_objective": "liked_ratings",
+      "temperature": 0.1
+    },
+    "positive_ease:all_observed": {
+      "model": "positive_ease",
+      "penalty": 250.0,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.22609542347285594,
+      "selection_objective": "all_observed"
+    },
+    "positive_ease:liked_ratings": {
+      "model": "positive_ease",
+      "penalty": 250.0,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.2394633829782982,
+      "selection_objective": "liked_ratings"
+    },
+    "positive_knn:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "positive_knn",
+      "neighbors": 80,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.2066581642962179,
+      "selection_objective": "all_observed"
+    },
+    "positive_knn:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "positive_knn",
+      "neighbors": 80,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.21405583975689038,
+      "selection_objective": "liked_ratings"
+    },
+    "random_partners:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "random_partners",
+      "neighbors": 80,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.1265026804158261,
+      "selection_objective": "all_observed"
+    },
+    "random_partners:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "random_partners",
+      "neighbors": 80,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.1280049927125242,
+      "selection_objective": "liked_ratings"
+    },
+    "signed_channels:all_observed": {
+      "model": "signed_channels",
+      "penalty": 250.0,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.227317835767006,
+      "selection_objective": "all_observed"
+    },
+    "signed_channels:liked_ratings": {
+      "model": "signed_channels",
+      "penalty": 250.0,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.2392890779418029,
+      "selection_objective": "liked_ratings"
+    },
+    "signed_ease:all_observed": {
+      "model": "signed_ease",
+      "penalty": 250.0,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.18895236831879675,
+      "selection_objective": "all_observed"
+    },
+    "signed_ease:liked_ratings": {
+      "model": "signed_ease",
+      "penalty": 1000.0,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.20525204867417854,
+      "selection_objective": "liked_ratings"
+    },
+    "signed_geometry:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "signed_geometry",
+      "neighbors": 80,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.18315310131588955,
+      "selection_objective": "all_observed"
+    },
+    "signed_geometry:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "signed_geometry",
+      "neighbors": 20,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.19811417592438288,
+      "selection_objective": "liked_ratings"
+    },
+    "signed_knn:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "signed_knn",
+      "neighbors": 80,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.19375299255535694,
+      "selection_objective": "all_observed"
+    },
+    "signed_knn:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "signed_knn",
+      "neighbors": 80,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.20419909185709972,
+      "selection_objective": "liked_ratings"
+    },
+    "unordered_pairs:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "unordered_pairs",
+      "neighbors": 20,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.16851971903590499,
+      "selection_objective": "all_observed"
+    },
+    "unordered_pairs:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "unordered_pairs",
+      "neighbors": 80,
+      "seed": 2027,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.17496038946867037,
+      "selection_objective": "liked_ratings"
+    }
+  },
+  "2028": {
+    "anchor_only:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "anchor_only",
+      "neighbors": 20,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.19390589637603922,
+      "selection_objective": "all_observed"
+    },
+    "anchor_only:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "anchor_only",
+      "neighbors": 20,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.19951164259688117,
+      "selection_objective": "liked_ratings"
+    },
+    "contrast_transfer:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "contrast_transfer",
+      "neighbors": 80,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.13932036250816732,
+      "selection_objective": "all_observed"
+    },
+    "contrast_transfer:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "contrast_transfer",
+      "neighbors": 80,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.13960602844285777,
+      "selection_objective": "liked_ratings"
+    },
+    "first_moment:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "first_moment",
+      "neighbors": 80,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.15210132159528655,
+      "selection_objective": "all_observed"
+    },
+    "first_moment:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "first_moment",
+      "neighbors": 80,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.1517427221946762,
+      "selection_objective": "liked_ratings"
+    },
+    "observed_ease": {
+      "grid": [
+        {
+          "meta_fit_liked_ndcg": 0.22714281113213988,
+          "penalty": 50.0,
+          "source": "runs/research-v2/2028-EASE-0"
+        },
+        {
+          "meta_fit_liked_ndcg": 0.25659199816537837,
+          "penalty": 250.0,
+          "source": "runs/research-v2/2028-EASE-1"
+        },
+        {
+          "meta_fit_liked_ndcg": 0.24458776276760533,
+          "penalty": 1000.0,
+          "source": "runs/research-v2/2028-EASE-2"
+        }
+      ],
+      "meta_fit_liked_ndcg": 0.25659199816537837,
+      "objective": "liked_ratings",
+      "penalty": 250.0,
+      "selection_cohort": "meta_fit",
+      "source": "runs/research-v2/2028-EASE-1",
+      "test_evaluated": false,
+      "test_read": false
+    },
+    "pair_anchor:all_observed": {
+      "model": "pair_anchor",
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.06462921333486242,
+      "selection_objective": "all_observed",
+      "temperature": 0.1
+    },
+    "pair_anchor:liked_ratings": {
+      "model": "pair_anchor",
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.06604380176247265,
+      "selection_objective": "liked_ratings",
+      "temperature": 0.1
+    },
+    "pair_gate:all_observed": {
+      "model": "pair_gate",
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.08507834836274471,
+      "selection_objective": "all_observed",
+      "temperature": 0.1
+    },
+    "pair_gate:liked_ratings": {
+      "model": "pair_gate",
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.08902559626004031,
+      "selection_objective": "liked_ratings",
+      "temperature": 0.1
+    },
+    "pair_gate_permuted": {
+      "all_observed": {
+        "seed": 2028,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.0805130671960896,
+        "selection_objective": "all_observed",
+        "temperature": 0.1
+      },
+      "liked_ratings": {
+        "seed": 2028,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.08408966592164989,
+        "selection_objective": "liked_ratings",
+        "temperature": 0.1
+      }
+    },
+    "pair_gate_random:all_observed": {
+      "model": "pair_gate_random",
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.07315196630920438,
+      "selection_objective": "all_observed",
+      "temperature": 0.5
+    },
+    "pair_gate_random:liked_ratings": {
+      "model": "pair_gate_random",
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.07647818278444377,
+      "selection_objective": "liked_ratings",
+      "temperature": 0.5
+    },
+    "pair_signed:all_observed": {
+      "model": "pair_signed",
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.059869381696763334,
+      "selection_objective": "all_observed",
+      "temperature": 0.1
+    },
+    "pair_signed:liked_ratings": {
+      "model": "pair_signed",
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.0607990121734954,
+      "selection_objective": "liked_ratings",
+      "temperature": 0.1
+    },
+    "positive_ease:all_observed": {
+      "model": "positive_ease",
+      "penalty": 250.0,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.2303421817031676,
+      "selection_objective": "all_observed"
+    },
+    "positive_ease:liked_ratings": {
+      "model": "positive_ease",
+      "penalty": 250.0,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.2460920104564697,
+      "selection_objective": "liked_ratings"
+    },
+    "positive_knn:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "positive_knn",
+      "neighbors": 80,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.21996161810633275,
+      "selection_objective": "all_observed"
+    },
+    "positive_knn:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "positive_knn",
+      "neighbors": 80,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.22835344737529434,
+      "selection_objective": "liked_ratings"
+    },
+    "random_partners:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "random_partners",
+      "neighbors": 80,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.14874006560267186,
+      "selection_objective": "all_observed"
+    },
+    "random_partners:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "random_partners",
+      "neighbors": 80,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.14961408931623993,
+      "selection_objective": "liked_ratings"
+    },
+    "signed_channels:all_observed": {
+      "model": "signed_channels",
+      "penalty": 250.0,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.22965335272262902,
+      "selection_objective": "all_observed"
+    },
+    "signed_channels:liked_ratings": {
+      "model": "signed_channels",
+      "penalty": 250.0,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.24640738027199097,
+      "selection_objective": "liked_ratings"
+    },
+    "signed_ease:all_observed": {
+      "model": "signed_ease",
+      "penalty": 1000.0,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.19656824283111282,
+      "selection_objective": "all_observed"
+    },
+    "signed_ease:liked_ratings": {
+      "model": "signed_ease",
+      "penalty": 1000.0,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.21598480107558318,
+      "selection_objective": "liked_ratings"
+    },
+    "signed_geometry:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "signed_geometry",
+      "neighbors": 80,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.18784092894998222,
+      "selection_objective": "all_observed"
+    },
+    "signed_geometry:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "signed_geometry",
+      "neighbors": 80,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.19325778745024197,
+      "selection_objective": "liked_ratings"
+    },
+    "signed_knn:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "signed_knn",
+      "neighbors": 80,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.20871000530480485,
+      "selection_objective": "all_observed"
+    },
+    "signed_knn:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "signed_knn",
+      "neighbors": 80,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.21998871372047382,
+      "selection_objective": "liked_ratings"
+    },
+    "unordered_pairs:all_observed": {
+      "dislike_weight": 0.0,
+      "model": "unordered_pairs",
+      "neighbors": 20,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.17356126933569724,
+      "selection_objective": "all_observed"
+    },
+    "unordered_pairs:liked_ratings": {
+      "dislike_weight": 0.0,
+      "model": "unordered_pairs",
+      "neighbors": 20,
+      "seed": 2028,
+      "selection_cohort": "meta_fit",
+      "selection_ndcg": 0.1680212162836699,
+      "selection_objective": "liked_ratings"
+    }
+  }
+}

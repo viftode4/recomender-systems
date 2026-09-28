@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "scope": "Embedded JavaScript change handlers and displayed numeric values with a minimal DOM harness; not a browser layout or accessibility-engine check",
+  "scenarios": [
+    {
+      "rating": 0,
+      "candidates": 6,
+      "status": "No rating supplied for GoldenEye. Six forecasts updated.",
+      "diagnostic_steps": 4
+    },
+    {
+      "rating": 1,
+      "candidates": 6,
+      "status": "1 / 5 for GoldenEye. Six forecasts updated.",
+      "diagnostic_steps": 4
+    },
+    {
+      "rating": 2,
+      "candidates": 6,
+      "status": "2 / 5 for GoldenEye. Six forecasts updated.",
+      "diagnostic_steps": 4
+    },
+    {
+      "rating": 3,
+      "candidates": 6,
+      "status": "3 / 5 for GoldenEye. Six forecasts updated.",
+      "diagnostic_steps": 4
+    },
+    {
+      "rating": 4,
+      "candidates": 6,
+      "status": "4 / 5 for GoldenEye. Six forecasts updated.",
+      "diagnostic_steps": 4
+    },
+    {
+      "rating": 5,
+      "candidates": 6,
+      "status": "5 / 5 for GoldenEye. Six forecasts updated.",
+      "diagnostic_steps": 4
+    }
+  ],
+  "browser_visual_check": {
+    "status": "unavailable",
+    "reason": "Installed Chrome aborted with SIGABRT before loading a local page in two isolated-profile attempts."
+  }
+}

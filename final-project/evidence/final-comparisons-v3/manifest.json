@@ -1,0 +1,43 @@
+{
+  "analysis_sha256": "2e367a3142f3fb38b7e0a527c37340c71888977f1c58529cfe06e9cfa5d08901",
+  "bootstrap_random_seed": 2026,
+  "bootstrap_requested_resamples": 20000,
+  "confidence": 0.95,
+  "individual_user_data_exported": false,
+  "inputs": [
+    {
+      "evaluation_directory": "2026",
+      "evaluation_manifest_sha256": "75fe2eff0b5d93d46185b7334cc85c7d39a73d1f4c6a0b713c7dc4e76daeb929",
+      "freeze_directory": "2026",
+      "freeze_sha256": "a9c1516e60519d54861b393899d48657a5edf294aa04b849019eea3334aa9f47",
+      "results_sha256": "c460100b05cef5b454e8d21326361fe954bb1d5eb92c02c053eb234d63b6d60f",
+      "test_interactions_opened": false
+    },
+    {
+      "evaluation_directory": "2027",
+      "evaluation_manifest_sha256": "6eec8f3033ecbd14a3b74beae9d5d249c481c5034931c3dd42b5a56ed8b87c8c",
+      "freeze_directory": "2027",
+      "freeze_sha256": "7b2fc4cc8a4dd74fd8296d953855168f2e245fe05508cdcfd2811e654d716788",
+      "results_sha256": "c3f58da3271129fd5eeadccc5ce02eb50c484ad1e652585646e92c07e2ab633e",
+      "test_interactions_opened": false
+    },
+    {
+      "evaluation_directory": "2028",
+      "evaluation_manifest_sha256": "07fecc41fcd24eaa8dbf1d40f5a731f7bd6ea95824710893af44c3cafbbd8286",
+      "freeze_directory": "2028",
+      "freeze_sha256": "f9e3b71968c9496d06c01a013ab12f9bcb7e934f8b71f90cc04e1f2d2cab572d",
+      "results_sha256": "0fba65490c9bf2b16da710c5dced64c7309d7bed1b8cc5d8513c377ed5db0444",
+      "test_interactions_opened": false
+    }
+  ],
+  "interpretation": "Descriptive paired percentile-bootstrap intervals conditional on the frozen models and this dataset; approximate simultaneous coverage is adjusted within each seed, not across seeds. Repeated splits share users and items, and one MovieLens dataset does not establish population-level or cross-dataset gains. No model or parameter is selected using these evaluation outcomes.",
+  "numpy": "1.26.4",
+  "output_sha256": {
+    "SUMMARY.md": "4bdadaff56cedb29a6b5a00da0b30667837f5b817c01a932aded4fd2f2aa8bc0",
+    "aggregate.json": "493828d6c44c6b5128a4ad7c374b0e1277e388edcdaac04bc107d7a6d259c9e4",
+    "per-seed-comparisons.json": "1ac0ea9c4184d8fa77d99291a591515547570f1dd29078e3eda2d7f1e9434bde"
+  },
+  "status": "complete",
+  "test_interactions_opened": false,
+  "test_model_selection": false
+}

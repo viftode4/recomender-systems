@@ -1,0 +1,73 @@
+{
+  "cohorts": "471 meta-fit users select;472 development users evaluate; explicit-liked metrics include only users with held-out likes. Repeated random splits share users and are not independent populations.",
+  "control_distinction": "Random-pool control changes disliked item identities/reuse. Exact permutation control preserves each user liked anchors and disliked counterpart multiset, changing only pair alignment.",
+  "denominators": {
+    "2026": {
+      "all_observed_users": 472,
+      "liked_ratings_users": 444,
+      "recommendation_slots": 4720,
+      "recommended_items_with_validation_rating": 733,
+      "recommended_known_dislikes": 39,
+      "users_without_liked_validation_excluded_from_liked_metrics": 28,
+      "validation_dislikes": 795,
+      "validation_likes": 2607,
+      "validation_observations": 4655
+    },
+    "2027": {
+      "all_observed_users": 472,
+      "liked_ratings_users": 434,
+      "recommendation_slots": 4720,
+      "recommended_items_with_validation_rating": 776,
+      "recommended_known_dislikes": 29,
+      "users_without_liked_validation_excluded_from_liked_metrics": 38,
+      "validation_dislikes": 724,
+      "validation_likes": 2626,
+      "validation_observations": 4584
+    },
+    "2028": {
+      "all_observed_users": 472,
+      "liked_ratings_users": 433,
+      "recommendation_slots": 4720,
+      "recommended_items_with_validation_rating": 742,
+      "recommended_known_dislikes": 52,
+      "users_without_liked_validation_excluded_from_liked_metrics": 39,
+      "validation_dislikes": 842,
+      "validation_likes": 2582,
+      "validation_observations": 4620
+    }
+  },
+  "interpretation": "Matched liked-disliked pairs are operational contrasts, not proven exceptions or emotions. Missing ratings are unknown; known dislike rate is a lower bound over recommendation slots. Novelty unestablished.",
+  "pair_diagnostics": {
+    "2026": {
+      "development_fallback_users": 23,
+      "fallback_users": 47,
+      "pairs_total": 39652,
+      "shared_exact_pair_neighbor_fraction": 0.033612291259993744,
+      "users": 943,
+      "users_with_matched_pairs": 896,
+      "users_without_training_dislikes": 44
+    },
+    "2027": {
+      "development_fallback_users": 23,
+      "fallback_users": 50,
+      "pairs_total": 39806,
+      "shared_exact_pair_neighbor_fraction": 0.034535396586311475,
+      "users": 943,
+      "users_with_matched_pairs": 893,
+      "users_without_training_dislikes": 45
+    },
+    "2028": {
+      "development_fallback_users": 23,
+      "fallback_users": 39,
+      "pairs_total": 39733,
+      "shared_exact_pair_neighbor_fraction": 0.033180007790108365,
+      "users": 943,
+      "users_with_matched_pairs": 904,
+      "users_without_training_dislikes": 35
+    }
+  },
+  "selection": "Each model and each relevance definition selects settings using only meta-fit labels. Fixed grids neighbors20/80,negative vote0/1,ridge50/250/1000,pair gate temperature.1/.5.",
+  "stages": "Revision2 and control corrections respond to development results. Tests are frozen separately and must not select models.",
+  "status": "development evidence only; final test unopened when curated",
+  "training": "Train-only ratings>=4 likes,<=2 dislikes,3 neutral; all training observations masked. Item geometry signed SVD32 + genres. RBF gamma1, random Fourier128 for relation-neighbor model."
+}

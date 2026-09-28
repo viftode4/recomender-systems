@@ -1,0 +1,14 @@
+{
+  "chronological_user_order": {
+    "training_interactions": 80808,
+    "validation_fraction_items_unseen_in_training": 0.0034389328887036263,
+    "validation_interactions": 9596,
+    "validation_target_mean_training_frequency": 106.35421008753647
+  },
+  "random_user_order": {
+    "training_interactions": 80808,
+    "validation_fraction_items_unseen_in_training": 0.0011463109629012088,
+    "validation_interactions": 9596,
+    "validation_target_mean_training_frequency": 134.41850771154648
+  }
+}

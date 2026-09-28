@@ -1,0 +1,43 @@
+{
+  "archive": "packages/final-review-v1/24.zip",
+  "archive_layout": {
+    "aggregate_evidence": "evidence/",
+    "editable_report": "report-content.json",
+    "entry_hashes": "PACKAGE-MANIFEST.json",
+    "report": "report.pdf",
+    "source": "code/",
+    "synthetic_demo": "demo/index.html"
+  },
+  "bytes": 2913268,
+  "documentation_note": "code/README.md retains full-project checkout paths. Inside the ZIP, use the archive_layout paths above; execute tests from code/, with aggregate evidence in the sibling evidence/ directory.",
+  "evidence_directories": [
+    "evidence/research-v2",
+    "evidence/research-v3",
+    "evidence/exception-v2",
+    "evidence/adaptive-v1",
+    "evidence/joint-field-v1",
+    "evidence/joint-field-convergence-v1",
+    "evidence/negative-information-v2",
+    "evidence/field-reference-v1",
+    "evidence/field-reference-convergence-v1",
+    "evidence/joint-learning-curves",
+    "evidence/temporal-v1",
+    "evidence/environment-check",
+    "evidence/final-primary-v3",
+    "evidence/final-exception-v3",
+    "evidence/final-adaptive-v1",
+    "evidence/final-joint-field-v1",
+    "evidence/final-joint-field-convergence-v1",
+    "evidence/final-field-references-v1",
+    "evidence/final-comparisons-v3",
+    "evidence/final-field-comparisons-v1",
+    "evidence/final-societal-2026",
+    "evidence/final-societal-2027",
+    "evidence/final-societal-2028",
+    "evidence/final-verification"
+  ],
+  "files": 225,
+  "report_manifest_sha256": "7e63c72dce4b20df2ec026583411edb9a730a4598b9edf7513ae6f59836f3dee",
+  "sha256": "7e1d86708471b0d70a4be375ff7211f69a12505802d626e951f2a0fdbc4fd0bb",
+  "status": "DRAFT"
+}

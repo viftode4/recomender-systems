@@ -1,0 +1,70 @@
+{
+  "archive_verification": "Performed separately after assembly; package receipt is stored next to the local archive to avoid a self-referential archive hash.",
+  "batch": {
+    "analysis_jobs": 5,
+    "evaluation_jobs": 8,
+    "output_manifest_sha256": {
+      "conditional": "f3da5c6b90d65cdd0cd17eb30f4895264050218dde77bd6570e1798a9ef3877c",
+      "exception": "90a64d6b2cd7f8aa44f8dee8bbf9399e0940a751101bc08d56f056d49512382e",
+      "field-comparisons": "7f1592d3af53952ce4866cb322a534d97792dcaefc30b86854166bf1a4c24901",
+      "joint100": "15afd16a4de31462c79f8379f91832287d0cf32d00dd6d3005387fc6f848e1f2",
+      "joint400": "552206f3ca89632e4c5df346924c03d16bc6b35f6e36058946822ac87a3dd700",
+      "primary-2026": "75fe2eff0b5d93d46185b7334cc85c7d39a73d1f4c6a0b713c7dc4e76daeb929",
+      "primary-2027": "6eec8f3033ecbd14a3b74beae9d5d249c481c5034931c3dd42b5a56ed8b87c8c",
+      "primary-2028": "07fecc41fcd24eaa8dbf1d40f5a731f7bd6ea95824710893af44c3cafbbd8286",
+      "primary-comparisons": "47a867852f07cc3baafbebbfb0c01077bf108682e34b3fbd1ca435ba947572b2",
+      "references": "f3ae8bb61e10de0e98ed3a4986964fd601dccc29451604039aa247ea9c80562b",
+      "societal-2026": "f23960c23de0bae9a79e206e335f21b87b96603677534cc660fe401f1a6358b0",
+      "societal-2027": "62d6f91dce7a3d2da8583bff839d00989391ec253d64d40c3cf8ddeacb1d1718",
+      "societal-2028": "e3fbde771e3d6ed1988af62f25add95c2d81e61175438c26f3658ad4b658eaff"
+    },
+    "plan_sha256": "a3a562b1a48365236c8224c6740204f196892974083d38ad1a1efbd263aed372",
+    "selection_after_test": false,
+    "status": "complete"
+  },
+  "date": "2026-09-28",
+  "demo": {
+    "browser_limitation": "Chrome aborted before page loading",
+    "browser_visual_verification": false,
+    "fixed_scenarios": 6,
+    "functional_validation": "PASS",
+    "synthetic_only": true
+  },
+  "limitations": [
+    "Local macOS runtime verification, not a fresh network installation on every platform",
+    "Three overlapping splits of one dataset",
+    "Four member names and actual contributions pending",
+    "Individual real peer feedback pending",
+    "No GitHub push or Brightspace submission performed"
+  ],
+  "report": {
+    "all_pages_visually_inspected": true,
+    "font": "Times New Roman",
+    "font_points": 12,
+    "line_spacing": 1.15,
+    "main_task_discussion_words": [
+      94,
+      122,
+      113
+    ],
+    "pages": 7,
+    "pdf_sha256": "08888a2ce58b6fe9ae8200c785e185bdaa0acba247c26f8e719123a8759d2fe0"
+  },
+  "stage": "completed_frozen_test_review",
+  "tests": {
+    "report_environment": {
+      "failures": 0,
+      "includes_all_five_training_environment_skips": true,
+      "log_sha256": "04d1e907bc3623c07deb5813b686a9dc6e067862f6dfdbd7a6f2e221e465d10d",
+      "passed": 23,
+      "skipped": 0
+    },
+    "training_environment": {
+      "discovered": 216,
+      "failures": 0,
+      "log_sha256": "22c65181d07eddb9a7ffa9150a765d608696d2c766f61e3e3b627d80d471a9d4",
+      "passed": 211,
+      "skipped_pdf_renderer": 5
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "seeds": {
+    "2026": {
+      "research_manifest_sha256": "f229c31f8fc71747613c3fca085958da9c2b3f1e230c609ff2f3c85eb6109220",
+      "variants": {
+        "adaptive": {
+          "grid": [
+            {
+              "epoch": 10,
+              "meta_fit_macro_joint_nll": 7.7160165104995615
+            },
+            {
+              "epoch": 30,
+              "meta_fit_macro_joint_nll": 7.511565113939657
+            },
+            {
+              "epoch": 60,
+              "meta_fit_macro_joint_nll": 7.1175711896193965
+            },
+            {
+              "epoch": 100,
+              "meta_fit_macro_joint_nll": 6.9494015945086645
+            },
+            {
+              "epoch": 200,
+              "meta_fit_macro_joint_nll": 6.846551256238119
+            },
+            {
+              "epoch": 300,
+              "meta_fit_macro_joint_nll": 6.781000449423804
+            },
+            {
+              "epoch": 400,
+              "meta_fit_macro_joint_nll": 6.758817355291632
+            }
+          ],
+          "selected_epoch": 400
+        },
+        "fixed_flow": {
+          "grid": [
+            {
+              "epoch": 10,
+              "meta_fit_macro_joint_nll": 7.7179046023914015
+            },
+            {
+              "epoch": 30,
+              "meta_fit_macro_joint_nll": 7.512834525405825
+            },
+            {
+              "epoch": 60,
+              "meta_fit_macro_joint_nll": 7.166711031913793
+            },
+            {
+              "epoch": 100,
+              "meta_fit_macro_joint_nll": 6.982402505689094
+            },
+            {
+              "epoch": 200,
+              "meta_fit_macro_joint_nll": 6.866199228206745
+            },
+            {
+              "epoch": 300,
+              "meta_fit_macro_joint_nll": 6.79980741600126
+            },
+            {
+              "epoch": 400,
+              "meta_fit_macro_joint_nll": 6.790887603816198
+            }
+          ],
+          "selected_epoch": 400
+        }
+      }
+    },
+    "2027": {
+      "research_manifest_sha256": "8e8971330590e252efdd8fef3e2a3e6059ce54af5d83ddb93c6d5469b8977416",
+      "variants": {
+        "adaptive": {
+          "grid": [
+            {
+              "epoch": 10,
+              "meta_fit_macro_joint_nll": 7.746364907049699
+            },
+            {
+              "epoch": 30,
+              "meta_fit_macro_joint_nll": 7.409697935647425
+            },
+            {
+              "epoch": 60,
+              "meta_fit_macro_joint_nll": 7.101534529266878
+            },
+            {
+              "epoch": 100,
+              "meta_fit_macro_joint_nll": 7.004069874767435
+            },
+            {
+              "epoch": 200,
+              "meta_fit_macro_joint_nll": 6.8929625963371945
+            },
+            {
+              "epoch": 300,
+              "meta_fit_macro_joint_nll": 6.838645386640721
+            },
+            {
+              "epoch": 400,
+              "meta_fit_macro_joint_nll": 6.798748896032405
+            }
+          ],
+          "selected_epoch": 400
+        },
+        "fixed_flow": {
+          "grid": [
+            {
+              "epoch": 10,
+              "meta_fit_macro_joint_nll": 7.736269902057591
+            },
+            {
+              "epoch": 30,
+              "meta_fit_macro_joint_nll": 7.503369806136443
+            },
+            {
+              "epoch": 60,
+              "meta_fit_macro_joint_nll": 7.128961230154711
+            },
+            {
+              "epoch": 100,
+              "meta_fit_macro_joint_nll": 6.981577375671062
+            },
+            {
+              "epoch": 200,
+              "meta_fit_macro_joint_nll": 6.859105249415643
+            },
+            {
+              "epoch": 300,
+              "meta_fit_macro_joint_nll": 6.816093698185819
+            },
+            {
+              "epoch": 400,
+              "meta_fit_macro_joint_nll": 6.777604275264535
+            }
+          ],
+          "selected_epoch": 400
+        }
+      }
+    },
+    "2028": {
+      "research_manifest_sha256": "697a6bb9f171b18af593367bc83a17f8455d05ff0a7b35c313fd75686dd1e424",
+      "variants": {
+        "adaptive": {
+          "grid": [
+            {
+              "epoch": 10,
+              "meta_fit_macro_joint_nll": 7.774827467521231
+            },
+            {
+              "epoch": 30,
+              "meta_fit_macro_joint_nll": 7.624064808790125
+            },
+            {
+              "epoch": 60,
+              "meta_fit_macro_joint_nll": 7.215247891616628
+            },
+            {
+              "epoch": 100,
+              "meta_fit_macro_joint_nll": 7.076849057648549
+            },
+            {
+              "epoch": 200,
+              "meta_fit_macro_joint_nll": 6.944811453670725
+            },
+            {
+              "epoch": 300,
+              "meta_fit_macro_joint_nll": 6.846752288452403
+            },
+            {
+              "epoch": 400,
+              "meta_fit_macro_joint_nll": 6.819375992814457
+            }
+          ],
+          "selected_epoch": 400
+        },
+        "fixed_flow": {
+          "grid": [
+            {
+              "epoch": 10,
+              "meta_fit_macro_joint_nll": 7.772128149564573
+            },
+            {
+              "epoch": 30,
+              "meta_fit_macro_joint_nll": 7.6261427359201495
+            },
+            {
+              "epoch": 60,
+              "meta_fit_macro_joint_nll": 7.212420935149286
+            },
+            {
+              "epoch": 100,
+              "meta_fit_macro_joint_nll": 7.066606591453656
+            },
+            {
+              "epoch": 200,
+              "meta_fit_macro_joint_nll": 6.906222194471675
+            },
+            {
+              "epoch": 300,
+              "meta_fit_macro_joint_nll": 6.837764566694961
+            },
+            {
+              "epoch": 400,
+              "meta_fit_macro_joint_nll": 6.814243138239107
+            }
+          ],
+          "selected_epoch": 400
+        }
+      }
+    }
+  },
+  "stage": "meta_fit_validation",
+  "test_read": false
+}

@@ -1,0 +1,56 @@
+{
+  "development_figures_sha256": {
+    "development-results.pdf": "27a708a6c917599c180cd3b7cee9315188a5ba07c2984bb6a0778a414b5ba9fa",
+    "development-results.png": "cfcd69dc12d0a49d85a47a7b553b07db3f54d98802715be655c6716043a84955"
+  },
+  "focused_tests_passed": 21,
+  "model_equivalence": {
+    "2026": {
+      "bundle_byte_identical": true,
+      "model_state_sha256": "cdcf2bcf38a6ba79edd286ecf41b78e1a8b14d58241ca9614ff35a073fb2fd2c",
+      "models": 20
+    },
+    "2027": {
+      "bundle_byte_identical": true,
+      "model_state_sha256": "53e151068043d16a11b8a827ab8e605c93ad796bb00c1815eedb8b20b009e433",
+      "models": 20
+    },
+    "2028": {
+      "bundle_byte_identical": true,
+      "model_state_sha256": "7d63cf6b1a8ccdfa4f6624fe49d9e617ef401fdb938b130fac299861cb434b11",
+      "models": 20
+    }
+  },
+  "original_model_fingerprints": {
+    "2026": {
+      "model_state_sha256": "cdcf2bcf38a6ba79edd286ecf41b78e1a8b14d58241ca9614ff35a073fb2fd2c",
+      "models": 20
+    },
+    "2027": {
+      "model_state_sha256": "53e151068043d16a11b8a827ab8e605c93ad796bb00c1815eedb8b20b009e433",
+      "models": 20
+    },
+    "2028": {
+      "model_state_sha256": "7d63cf6b1a8ccdfa4f6624fe49d9e617ef401fdb938b130fac299861cb434b11",
+      "models": 20
+    }
+  },
+  "reason": "Shared study.py and hybrid_constraints.py change for main hybrid controls. Exception model choices, training and score archives are not being changed.",
+  "replacement_bundle": "runs/frozen-exception-v3",
+  "replacement_bundle_test_opened": false,
+  "replacement_code_sha256": {
+    "exception_evaluation.py": "3bfa0e5f23a58a77a9833b0fb866e48acb60e910ba31b27d6b351158083794a0",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "replacement_manifest_sha256": "423322868a3bd1bc2ea9b8ea41878e97809a4f4d41f24a1701dc4afbd93cf51c",
+  "replacement_target": "runs/frozen-exception-v3",
+  "required_verification": "Exact equality of every source score hash, selection and model identity to unopenedv2; only code fingerprint may change.",
+  "status": "replacement_frozen_preflight_passed_test_unopened",
+  "superseded_bundle": "runs/frozen-exception-v2",
+  "superseded_bundle_test_opened": false,
+  "superseded_manifest_sha256": "bc9b9a22be7275087a9923081ec9f5a4a2317fb38657ea5333fd05b2b7296888"
+}

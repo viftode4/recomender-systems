@@ -1,0 +1,5696 @@
+{
+  "2026": {
+    "BPR": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.09496022906686016,
+        "calibration_jsd": 0.1641740995373609,
+        "coverage@10": 0.18906064209274673,
+        "diversity": 0.7944744865931307,
+        "exposure_entropy": 0.6696231692171026,
+        "exposure_gini": 0.9344142078062566,
+        "head_exposure": 0.9601694915254239,
+        "head_exposure_gap": 0.7598127733327961,
+        "head_recall": 0.2828456038438422,
+        "hit@10": 0.7245762711864406,
+        "item_group_exposure_gap": 0.012904284586256316,
+        "mrr@10": 0.41679950228679036,
+        "ndcg@10": 0.24175000330245272,
+        "novelty@10": 8.579193002389026,
+        "popularity_jsd": 0.1334050484378815,
+        "precision@10": 0.1699152542372883,
+        "recall@10": 0.21044780655362202,
+        "tail_recall": 0.004177531508039982,
+        "worst_activity_ndcg": 0.20274984842086477
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.17263037550680282,
+          "diversity": 0.7943397581254725,
+          "head_exposure": 0.9685714285714285,
+          "hit@10": 0.5285714285714286,
+          "mrr@10": 0.24051020408163265,
+          "ndcg@10": 0.20274984842086477,
+          "novelty@10": 8.509662243890574,
+          "popularity_jsd": 0.11530690296588048,
+          "precision@10": 0.06857142857142856,
+          "recall@10": 0.29047619047619044,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.15494114060033742,
+          "diversity": 0.7959070767195768,
+          "head_exposure": 0.9412499999999999,
+          "hit@10": 0.7125,
+          "mrr@10": 0.39982638888888894,
+          "ndcg@10": 0.21571805907467434,
+          "novelty@10": 8.61232696673641,
+          "popularity_jsd": 0.11234660575165792,
+          "precision@10": 0.14750000000000002,
+          "recall@10": 0.21605564574314573,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.1658798832245812,
+          "diversity": 0.7932515073212748,
+          "head_exposure": 0.9709302325581395,
+          "hit@10": 0.8953488372093024,
+          "mrr@10": 0.5760797342192692,
+          "ndcg@10": 0.29771007748772493,
+          "novelty@10": 8.60496551340182,
+          "popularity_jsd": 0.16772534608832296,
+          "precision@10": 0.27325581395348836,
+          "recall@10": 0.1400918296961602,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.17565642912466,
+        "gini": 0.9344142078062566,
+        "group_mean_exposure_gap": 0.012904284586256316,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9657134769868475,
+            "items": 337,
+            "mean_item_exposure": 0.0130201082678972
+          },
+          "tail": {
+            "fraction_total_exposure": 0.03428652301315232,
+            "items": 1345,
+            "mean_item_exposure": 0.00011582368164088419
+          }
+        },
+        "normalized_entropy": 0.6696231692171026,
+        "users": 236
+      },
+      "model": "BPR",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2026-BPR-1",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 60,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2026,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "ContrastTransfer:all_observed": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.18344747957450458,
+        "calibration_jsd": 0.1751600605961562,
+        "coverage@10": 0.061236623067776455,
+        "diversity": 0.8069186620034078,
+        "exposure_entropy": 0.4973098905617956,
+        "exposure_gini": 0.9820131877178842,
+        "head_exposure": 1.0,
+        "head_exposure_gap": 0.7996432818073722,
+        "head_recall": 0.14888693347882365,
+        "hit@10": 0.5508474576271186,
+        "item_group_exposure_gap": 0.013482371923110819,
+        "mrr@10": 0.29594599139090677,
+        "ndcg@10": 0.1458953137190849,
+        "novelty@10": 8.206291745151574,
+        "popularity_jsd": 0.1708741749223199,
+        "precision@10": 0.11186440677966102,
+        "recall@10": 0.10700362998646966,
+        "tail_recall": 0.0,
+        "worst_activity_ndcg": 0.06651533295399444
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.19870483977444323,
+          "diversity": 0.792095238095238,
+          "head_exposure": 1.0,
+          "hit@10": 0.22857142857142856,
+          "mrr@10": 0.08365079365079364,
+          "ndcg@10": 0.06651533295399444,
+          "novelty@10": 8.085779020072865,
+          "popularity_jsd": 0.1458461387562842,
+          "precision@10": 0.022857142857142857,
+          "recall@10": 0.10357142857142858,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.16236177685964168,
+          "diversity": 0.8038951719576719,
+          "head_exposure": 1.0,
+          "hit@10": 0.4625,
+          "mrr@10": 0.220515873015873,
+          "ndcg@10": 0.10348023566841895,
+          "novelty@10": 8.165128152229824,
+          "popularity_jsd": 0.15938060305283114,
+          "precision@10": 0.07125000000000001,
+          "recall@10": 0.10764430014430015,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.16790108567105233,
+          "diversity": 0.8217967884828351,
+          "head_exposure": 1.0,
+          "hit@10": 0.8953488372093024,
+          "mrr@10": 0.5389119601328904,
+          "ndcg@10": 0.249962812528499,
+          "novelty@10": 8.342675212468437,
+          "popularity_jsd": 0.20193752702908263,
+          "precision@10": 0.22209302325581393,
+          "recall@10": 0.10920131006119581,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 5.3291538846381465,
+        "gini": 0.9820131877178842,
+        "group_mean_exposure_gap": 0.013482371923110819,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 1.0,
+            "items": 337,
+            "mean_item_exposure": 0.013482371923110819
+          },
+          "tail": {
+            "fraction_total_exposure": 0.0,
+            "items": 1345,
+            "mean_item_exposure": 0.0
+          }
+        },
+        "normalized_entropy": 0.4973098905617956,
+        "users": 236
+      },
+      "model": "ContrastTransfer",
+      "protocol": "Training ratings >=4 likes, <=2 dislikes, 3 neutral. Training-history masks include every observed rating. Parameters selected only on meta-fit validation users.",
+      "run": "contrast-all_observed",
+      "selection": {
+        "dislike_weight": 0.0,
+        "model": "contrast_transfer",
+        "neighbors": 80,
+        "seed": 2026,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.14125842084417795,
+        "selection_objective": "all_observed"
+      },
+      "settings": {
+        "dislike_weight": 0.0,
+        "model": "contrast_transfer",
+        "neighbors": 80,
+        "seed": 2026,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.14125842084417795,
+        "selection_objective": "all_observed"
+      },
+      "timing_seconds": null
+    },
+    "EASE": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.08133360342614934,
+        "calibration_jsd": 0.143286132782245,
+        "coverage@10": 0.1611177170035672,
+        "diversity": 0.8089086180611605,
+        "exposure_entropy": 0.6625055532893165,
+        "exposure_gini": 0.9387346717804669,
+        "head_exposure": 0.9906779661016949,
+        "head_exposure_gap": 0.7903212479090671,
+        "head_recall": 0.3090494199142592,
+        "hit@10": 0.75,
+        "item_group_exposure_gap": 0.013364853958919046,
+        "mrr@10": 0.42001277912294843,
+        "ndcg@10": 0.2559469260542892,
+        "novelty@10": 8.490976567986483,
+        "popularity_jsd": 0.16010470431224674,
+        "precision@10": 0.1796610169491526,
+        "recall@10": 0.22612199553158344,
+        "tail_recall": 0.0011589164131537012,
+        "worst_activity_ndcg": 0.2254628909149338
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.15794591115472514,
+          "diversity": 0.7963272864701434,
+          "head_exposure": 0.9857142857142858,
+          "hit@10": 0.5285714285714286,
+          "mrr@10": 0.26519274376417235,
+          "ndcg@10": 0.22831349660406314,
+          "novelty@10": 8.466523222372594,
+          "popularity_jsd": 0.1320746794629039,
+          "precision@10": 0.07285714285714286,
+          "recall@10": 0.31190476190476196,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.1314748351478162,
+          "diversity": 0.8167440476190475,
+          "head_exposure": 0.99,
+          "hit@10": 0.7625,
+          "mrr@10": 0.3837847222222222,
+          "ndcg@10": 0.2254628909149338,
+          "novelty@10": 8.486636092353216,
+          "popularity_jsd": 0.1477472607415992,
+          "precision@10": 0.16125,
+          "recall@10": 0.23810921717171718,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.1423410086506251,
+          "diversity": 0.8118604651162792,
+          "head_exposure": 0.9953488372093022,
+          "hit@10": 0.9186046511627907,
+          "mrr@10": 0.5797296050203027,
+          "ndcg@10": 0.30679649434108314,
+          "novelty@10": 8.514918105703133,
+          "popularity_jsd": 0.1944151371623142,
+          "precision@10": 0.2837209302325581,
+          "recall@10": 0.14514790974863906,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.099384327381269,
+        "gini": 0.9387346717804669,
+        "group_mean_exposure_gap": 0.013364853958919046,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9930299763948401,
+            "items": 337,
+            "mean_item_exposure": 0.013388399472553188
+          },
+          "tail": {
+            "fraction_total_exposure": 0.0069700236051599635,
+            "items": 1345,
+            "mean_item_exposure": 2.3545513634141844e-05
+          }
+        },
+        "normalized_entropy": 0.6625055532893165,
+        "users": 236
+      },
+      "model": "EASE",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2026-EASE-1",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2026,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "ExactPop": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.0847693170681677,
+        "calibration_jsd": 0.1940997650928908,
+        "coverage@10": 0.02497027348394768,
+        "diversity": 0.8294502735180702,
+        "exposure_entropy": 0.40924516409159123,
+        "exposure_gini": 0.9906490246990133,
+        "head_exposure": 1.0,
+        "head_exposure_gap": 0.7996432818073722,
+        "head_recall": 0.15294175670288526,
+        "hit@10": 0.6101694915254238,
+        "item_group_exposure_gap": 0.01348237192311081,
+        "mrr@10": 0.2556833467850419,
+        "ndcg@10": 0.12921449353104006,
+        "novelty@10": 7.866503627559658,
+        "popularity_jsd": 0.1708741749223199,
+        "precision@10": 0.09830508474576277,
+        "recall@10": 0.11805551951351281,
+        "tail_recall": 0.0,
+        "worst_activity_ndcg": 0.08735965197998766
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.23669835886390075,
+          "diversity": 0.8370041572184429,
+          "head_exposure": 1.0,
+          "hit@10": 0.32857142857142857,
+          "mrr@10": 0.09451247165532879,
+          "ndcg@10": 0.08735965197998766,
+          "novelty@10": 7.794345170681363,
+          "popularity_jsd": 0.1458461387562842,
+          "precision@10": 0.03571428571428572,
+          "recall@10": 0.15714285714285714,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.1838365857109991,
+          "diversity": 0.8294632936507936,
+          "head_exposure": 1.0,
+          "hit@10": 0.575,
+          "mrr@10": 0.25341765873015876,
+          "ndcg@10": 0.11970441870731188,
+          "novelty@10": 7.851075905474554,
+          "popularity_jsd": 0.15938060305283114,
+          "precision@10": 0.08249999999999999,
+          "recall@10": 0.12234307359307359,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.16897363470429366,
+          "diversity": 0.8232896517780238,
+          "head_exposure": 1.0,
+          "hit@10": 0.872093023255814,
+          "mrr@10": 0.3889765596160945,
+          "ndcg@10": 0.17212896904815536,
+          "novelty@10": 7.939588624632799,
+          "popularity_jsd": 0.20193752702908263,
+          "precision@10": 0.16395348837209303,
+          "recall@10": 0.08225182229933876,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 4.385455623101221,
+        "gini": 0.9906490246990133,
+        "group_mean_exposure_gap": 0.01348237192311081,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 1.0,
+            "items": 337,
+            "mean_item_exposure": 0.01348237192311081
+          },
+          "tail": {
+            "fraction_total_exposure": 0.0,
+            "items": 1345,
+            "mean_item_exposure": 0.0
+          }
+        },
+        "normalized_entropy": 0.40924516409159123,
+        "users": 236
+      },
+      "model": "ExactPop",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2026-ExactPop-0",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2026,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "FISMCorrected": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.07070829368026554,
+        "calibration_jsd": 0.15632952502773123,
+        "coverage@10": 0.23543400713436385,
+        "diversity": 0.7967885167249574,
+        "exposure_entropy": 0.7009048419386961,
+        "exposure_gini": 0.9141977177606562,
+        "head_exposure": 0.9105932203389832,
+        "head_exposure_gap": 0.7102365021463554,
+        "head_recall": 0.26684373216799606,
+        "hit@10": 0.7796610169491526,
+        "item_group_exposure_gap": 0.012149635516661997,
+        "mrr@10": 0.41770581113801436,
+        "ndcg@10": 0.23477273246715555,
+        "novelty@10": 8.775044838890075,
+        "popularity_jsd": 0.09041565758917315,
+        "precision@10": 0.16186440677966119,
+        "recall@10": 0.2078349704345366,
+        "tail_recall": 0.0280982905982906,
+        "worst_activity_ndcg": 0.20880235475941117
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.17040199373672918,
+          "diversity": 0.7864070294784581,
+          "head_exposure": 0.9342857142857144,
+          "hit@10": 0.5714285714285714,
+          "mrr@10": 0.25616213151927436,
+          "ndcg@10": 0.20948943879548,
+          "novelty@10": 8.623896912007675,
+          "popularity_jsd": 0.0889455852007421,
+          "precision@10": 0.06857142857142857,
+          "recall@10": 0.29642857142857143,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.1435944873054954,
+          "diversity": 0.8039176587301586,
+          "head_exposure": 0.9349999999999999,
+          "hit@10": 0.7625,
+          "mrr@10": 0.38875992063492065,
+          "ndcg@10": 0.20880235475941117,
+          "novelty@10": 8.689120203221568,
+          "popularity_jsd": 0.10029256164606884,
+          "precision@10": 0.14625000000000002,
+          "recall@10": 0.2148268398268398,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.1567217367503941,
+          "diversity": 0.7986068044788978,
+          "head_exposure": 0.8686046511627908,
+          "hit@10": 0.9651162790697675,
+          "mrr@10": 0.5761212624584717,
+          "ndcg@10": 0.2795106484396767,
+          "novelty@10": 8.978002114881342,
+          "popularity_jsd": 0.08242441041055128,
+          "precision@10": 0.2523255813953489,
+          "recall@10": 0.12921983530701653,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.510869645000857,
+        "gini": 0.9141977177606562,
+        "group_mean_exposure_gap": 0.012149635516661997,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.920955027801146,
+            "items": 337,
+            "mean_item_exposure": 0.012416658209273918
+          },
+          "tail": {
+            "fraction_total_exposure": 0.07904497219885362,
+            "items": 1345,
+            "mean_item_exposure": 0.00026702269261192203
+          }
+        },
+        "normalized_entropy": 0.7009048419386961,
+        "users": 236
+      },
+      "model": "FISMCorrected",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2026-FISMCorrected-0",
+      "selection": null,
+      "settings": {
+        "alpha": 0.0,
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weights": [
+          0.001,
+          0.001
+        ],
+        "reproducibility": true,
+        "seed": 2026,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 55.950063666008646,
+        "inference": {
+          "valid": 0.5637685420224443
+        },
+        "total": 57.253557499992894
+      }
+    },
+    "GenreContent": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.02241319474092448,
+        "calibration_jsd": 0.2572682943492261,
+        "coverage@10": 0.1426872770511296,
+        "diversity": 0.1563344094700027,
+        "exposure_entropy": 0.6039654694354004,
+        "exposure_gini": 0.9593163988228861,
+        "head_exposure": 0.289406779661017,
+        "head_exposure_gap": 0.0890500614683892,
+        "head_recall": 0.026519383602670605,
+        "hit@10": 0.18220338983050846,
+        "item_group_exposure_gap": 0.0018096084630793252,
+        "mrr@10": 0.060838714016680104,
+        "ndcg@10": 0.02512884497702185,
+        "novelty@10": 11.221436484708207,
+        "popularity_jsd": 0.16764313225874256,
+        "precision@10": 0.01991525423728814,
+        "recall@10": 0.023486187962991602,
+        "tail_recall": 0.011741303266726996,
+        "worst_activity_ndcg": 0.01663275127925995
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.2399649293768162,
+          "diversity": 0.13969349962207106,
+          "head_exposure": 0.3257142857142857,
+          "hit@10": 0.07142857142857142,
+          "mrr@10": 0.016547619047619047,
+          "ndcg@10": 0.01663275127925995,
+          "novelty@10": 11.006511720768174,
+          "popularity_jsd": 0.1787596038056729,
+          "precision@10": 0.007142857142857143,
+          "recall@10": 0.03095238095238095,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.2484965354571406,
+          "diversity": 0.1848266093474427,
+          "head_exposure": 0.3225,
+          "hit@10": 0.1375,
+          "mrr@10": 0.038105158730158725,
+          "ndcg@10": 0.01760204334116374,
+          "novelty@10": 11.1360280285306,
+          "popularity_jsd": 0.16234047309552121,
+          "precision@10": 0.013750000000000002,
+          "recall@10": 0.022247474747474745,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.27951220434266244,
+          "diversity": 0.14337496411139825,
+          "head_exposure": 0.22906976744186044,
+          "hit@10": 0.313953488372093,
+          "mrr@10": 0.11803709856035437,
+          "ndcg@10": 0.03904594602018443,
+          "novelty@10": 11.475824972731596,
+          "popularity_jsd": 0.16352754766307498,
+          "precision@10": 0.03604651162790698,
+          "recall@10": 0.01856134549769037,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.472071013896356,
+        "gini": 0.9593163988228861,
+        "group_mean_exposure_gap": 0.0018096084630793252,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.3076851065841906,
+            "items": 337,
+            "mean_item_exposure": 0.004148325042170059
+          },
+          "tail": {
+            "fraction_total_exposure": 0.6923148934158083,
+            "items": 1345,
+            "mean_item_exposure": 0.0023387165790907335
+          }
+        },
+        "normalized_entropy": 0.6039654694354004,
+        "users": 236
+      },
+      "model": "GenreContent",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2026-GenreContent-1",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "genre_idf_power": 1.0,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reproducibility": true,
+        "seed": 2026,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 0.05465274999733083,
+        "inference": {
+          "valid": 2.620958374987822
+        },
+        "total": 3.400850916019408
+      }
+    },
+    "ItemKNN": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.10195998652913082,
+        "calibration_jsd": 0.15605649480893466,
+        "coverage@10": 0.14863258026159334,
+        "diversity": 0.8070981302125371,
+        "exposure_entropy": 0.6590044572433551,
+        "exposure_gini": 0.9409446984080738,
+        "head_exposure": 0.9851694915254238,
+        "head_exposure_gap": 0.784812773332796,
+        "head_recall": 0.2706051270629509,
+        "hit@10": 0.7161016949152542,
+        "item_group_exposure_gap": 0.013256706090532443,
+        "mrr@10": 0.4108303066989507,
+        "ndcg@10": 0.23441853503449786,
+        "novelty@10": 8.542338565767082,
+        "popularity_jsd": 0.1563763175106732,
+        "precision@10": 0.1627118644067798,
+        "recall@10": 0.19951348036708227,
+        "tail_recall": 0.003766478342749529,
+        "worst_activity_ndcg": 0.19217837656158956
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.16383926337809462,
+          "diversity": 0.7913480725623583,
+          "head_exposure": 0.9757142857142859,
+          "hit@10": 0.45714285714285713,
+          "mrr@10": 0.22019274376417233,
+          "ndcg@10": 0.19217837656158956,
+          "novelty@10": 8.594455709116025,
+          "popularity_jsd": 0.12931204505211322,
+          "precision@10": 0.061428571428571416,
+          "recall@10": 0.2642857142857143,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.13852942483087655,
+          "diversity": 0.8169966931216932,
+          "head_exposure": 0.9800000000000001,
+          "hit@10": 0.7,
+          "mrr@10": 0.35895337301587305,
+          "ndcg@10": 0.20717985853785317,
+          "novelty@10": 8.556148983466343,
+          "popularity_jsd": 0.1342836120885998,
+          "precision@10": 0.14625,
+          "recall@10": 0.21639339826839826,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.1660259343252538,
+          "diversity": 0.8107099790820721,
+          "head_exposure": 0.9976744186046511,
+          "hit@10": 0.9418604651162791,
+          "mrr@10": 0.6142580287929125,
+          "ndcg@10": 0.2941383630907204,
+          "novelty@10": 8.487070734948851,
+          "popularity_jsd": 0.19895673036956948,
+          "precision@10": 0.26046511627906976,
+          "recall@10": 0.13108964540883192,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.061866715228515,
+        "gini": 0.9409446984080738,
+        "group_mean_exposure_gap": 0.013256706090532443,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9866156958149589,
+            "items": 337,
+            "mean_item_exposure": 0.013301919756156053
+          },
+          "tail": {
+            "fraction_total_exposure": 0.013384304185040576,
+            "items": 1345,
+            "mean_item_exposure": 4.521366562361047e-05
+          }
+        },
+        "normalized_entropy": 0.6590044572433551,
+        "users": 236
+      },
+      "model": "ItemKNN",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2026-ItemKNN-2",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 200,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2026,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "LightGCN": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.11219887152194943,
+        "calibration_jsd": 0.15881836106424682,
+        "coverage@10": 0.2146254458977408,
+        "diversity": 0.7830987131198995,
+        "exposure_entropy": 0.6930307729701904,
+        "exposure_gini": 0.9214278434415885,
+        "head_exposure": 0.9415254237288135,
+        "head_exposure_gap": 0.7411687055361857,
+        "head_recall": 0.272196257695769,
+        "hit@10": 0.7245762711864406,
+        "item_group_exposure_gap": 0.012628171738152207,
+        "mrr@10": 0.4273002421307506,
+        "ndcg@10": 0.24361815082953314,
+        "novelty@10": 8.688188911230691,
+        "popularity_jsd": 0.12570908922251328,
+        "precision@10": 0.1716101694915256,
+        "recall@10": 0.2048482393290066,
+        "tail_recall": 0.01584111118009423,
+        "worst_activity_ndcg": 0.19432729416890768
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.16507020401913253,
+          "diversity": 0.7717082388510959,
+          "head_exposure": 0.9428571428571428,
+          "hit@10": 0.5,
+          "mrr@10": 0.2453741496598639,
+          "ndcg@10": 0.19432729416890768,
+          "novelty@10": 8.657636134800848,
+          "popularity_jsd": 0.10317696472141763,
+          "precision@10": 0.06285714285714286,
+          "recall@10": 0.26190476190476186,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.15152398882269055,
+          "diversity": 0.7865591931216931,
+          "head_exposure": 0.9175000000000001,
+          "hit@10": 0.725,
+          "mrr@10": 0.41666666666666663,
+          "ndcg@10": 0.2191215344316566,
+          "novelty@10": 8.713370446288199,
+          "popularity_jsd": 0.10474495898814558,
+          "precision@10": 0.14875,
+          "recall@10": 0.2224549062049062,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.16051511423264792,
+          "diversity": 0.7891509782207456,
+          "head_exposure": 0.9627906976744187,
+          "hit@10": 0.9069767441860465,
+          "mrr@10": 0.5852713178294574,
+          "ndcg@10": 0.3065261656908571,
+          "novelty@10": 8.689632766410773,
+          "popularity_jsd": 0.16355070705770064,
+          "precision@10": 0.2813953488372093,
+          "recall@10": 0.14202858897581078,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.426491421225703,
+        "gini": 0.9214278434415885,
+        "group_mean_exposure_gap": 0.012628171738152207,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9493371460811043,
+            "items": 337,
+            "mean_item_exposure": 0.01279931648389005
+          },
+          "tail": {
+            "fraction_total_exposure": 0.050662853918894524,
+            "items": 1345,
+            "mean_item_exposure": 0.00017114474573784322
+          }
+        },
+        "normalized_entropy": 0.6930307729701904,
+        "users": 236
+      },
+      "model": "LightGCN",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2026-LightGCN-200",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 200,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "n_layers": 2,
+        "reg_weight": 1e-05,
+        "reproducibility": true,
+        "seed": 2026,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 176.91197420901153,
+        "inference": {
+          "valid": 0.26714870901196264
+        },
+        "total": 177.95714316601516
+      }
+    },
+    "NGCF": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.13317847153782952,
+        "calibration_jsd": 0.16158026038399467,
+        "coverage@10": 0.16825208085612367,
+        "diversity": 0.7960622365707112,
+        "exposure_entropy": 0.6474472071950077,
+        "exposure_gini": 0.9442693984926347,
+        "head_exposure": 0.9800847457627119,
+        "head_exposure_gap": 0.7797280275700841,
+        "head_recall": 0.2718061149857664,
+        "hit@10": 0.7288135593220338,
+        "item_group_exposure_gap": 0.013164920785911112,
+        "mrr@10": 0.4292995022867905,
+        "ndcg@10": 0.24172967919607796,
+        "novelty@10": 8.47540892096604,
+        "popularity_jsd": 0.1572377579714341,
+        "precision@10": 0.16906779661016968,
+        "recall@10": 0.20251755365854118,
+        "tail_recall": 0.0029076385008588394,
+        "worst_activity_ndcg": 0.18925322938635225
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.17256373846849019,
+          "diversity": 0.7928832199546485,
+          "head_exposure": 0.9685714285714287,
+          "hit@10": 0.4857142857142857,
+          "mrr@10": 0.21747732426303854,
+          "ndcg@10": 0.18925322938635225,
+          "novelty@10": 8.503995326269127,
+          "popularity_jsd": 0.13532170731234713,
+          "precision@10": 0.06428571428571428,
+          "recall@10": 0.27619047619047615,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.15187301211270332,
+          "diversity": 0.7976435185185186,
+          "head_exposure": 0.97625,
+          "hit@10": 0.7,
+          "mrr@10": 0.39216765873015874,
+          "ndcg@10": 0.2008918994218761,
+          "novelty@10": 8.461719932900055,
+          "popularity_jsd": 0.13847569165645215,
+          "precision@10": 0.135,
+          "recall@10": 0.19957251082251082,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.16167021847456015,
+          "diversity": 0.7971788482834993,
+          "head_exposure": 0.9930232558139536,
+          "hit@10": 0.9534883720930233,
+          "mrr@10": 0.6362541528239203,
+          "ndcg@10": 0.3224317009241818,
+          "novelty@10": 8.464874859036527,
+          "popularity_jsd": 0.1925294888009067,
+          "precision@10": 0.286046511627907,
+          "recall@10": 0.14529079609629647,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.938019662998549,
+        "gini": 0.9442693984926347,
+        "group_mean_exposure_gap": 0.013164920785911112,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9811718835074765,
+            "items": 337,
+            "mean_item_exposure": 0.013228524253946963
+          },
+          "tail": {
+            "fraction_total_exposure": 0.01882811649252335,
+            "items": 1345,
+            "mean_item_exposure": 6.360346803585104e-05
+          }
+        },
+        "normalized_entropy": 0.6474472071950077,
+        "users": 236
+      },
+      "model": "NGCF",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2026-NGCF-1",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 60,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "hidden_size_list": [
+          64,
+          64,
+          64
+        ],
+        "message_dropout": 0.1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "node_dropout": 0.0,
+        "reg_weight": 1e-05,
+        "reproducibility": true,
+        "seed": 2026,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 106.47091666699271,
+        "inference": {
+          "valid": 0.24373229101183824
+        },
+        "total": 107.46623849999742
+      }
+    },
+    "NeuMF": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.10943254106864295,
+        "calibration_jsd": 0.16613879254561054,
+        "coverage@10": 0.20035671819262782,
+        "diversity": 0.7887599766837055,
+        "exposure_entropy": 0.6877580580151813,
+        "exposure_gini": 0.925035771303086,
+        "head_exposure": 0.9385593220338984,
+        "head_exposure_gap": 0.7382026038412706,
+        "head_recall": 0.2692035805858516,
+        "hit@10": 0.7457627118644068,
+        "item_group_exposure_gap": 0.012477739420787224,
+        "mrr@10": 0.3916952515469464,
+        "ndcg@10": 0.22347205008391288,
+        "novelty@10": 8.702287527798346,
+        "popularity_jsd": 0.11570673171543848,
+        "precision@10": 0.16271186440677982,
+        "recall@10": 0.20143831132817172,
+        "tail_recall": 0.011635727737422651,
+        "worst_activity_ndcg": 0.1725526318986674
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.1800095657961904,
+          "diversity": 0.792745275888133,
+          "head_exposure": 0.9414285714285715,
+          "hit@10": 0.5428571428571428,
+          "mrr@10": 0.19132086167800452,
+          "ndcg@10": 0.1725526318986674,
+          "novelty@10": 8.584495938479352,
+          "popularity_jsd": 0.08814779819303555,
+          "precision@10": 0.06428571428571428,
+          "recall@10": 0.27738095238095234,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.1566130703685223,
+          "diversity": 0.7824308862433862,
+          "head_exposure": 0.9199999999999999,
+          "hit@10": 0.7375,
+          "mrr@10": 0.4035515873015873,
+          "ndcg@10": 0.20512493389635048,
+          "novelty@10": 8.760658453957866,
+          "popularity_jsd": 0.09784598545198904,
+          "precision@10": 0.13875,
+          "recall@10": 0.20742559523809523,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.16370976518080205,
+          "diversity": 0.7914036544850498,
+          "head_exposure": 0.9534883720930234,
+          "hit@10": 0.9186046511627907,
+          "mrr@10": 0.5437615356220008,
+          "ndcg@10": 0.28198517296731035,
+          "novelty@10": 8.743865866863088,
+          "popularity_jsd": 0.15475306947874273,
+          "precision@10": 0.2651162790697674,
+          "recall@10": 0.1340549672992353,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.369989208182375,
+        "gini": 0.925035771303086,
+        "group_mean_exposure_gap": 0.012477739420787224,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9404149629049072,
+            "items": 337,
+            "mean_item_exposure": 0.012679024291942427
+          },
+          "tail": {
+            "fraction_total_exposure": 0.05958503709509241,
+            "items": 1345,
+            "mean_item_exposure": 0.0002012848711552029
+          }
+        },
+        "normalized_entropy": 0.6877580580151813,
+        "users": 236
+      },
+      "model": "NeuMF",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2026-NeuMF-0",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "mf_embedding_size": 64,
+        "mlp_embedding_size": 64,
+        "mlp_hidden_size": [
+          128,
+          64
+        ],
+        "reproducibility": true,
+        "seed": 2026,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "use_pretrain": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 30.881882916000905,
+        "inference": {
+          "valid": 2.7117851249931846
+        },
+        "total": 34.542626124981325
+      }
+    },
+    "PositiveEASE:all_observed": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.10624253172900694,
+        "calibration_jsd": 0.1547353942165908,
+        "coverage@10": 0.13495838287752676,
+        "diversity": 0.7950791408842256,
+        "exposure_entropy": 0.6386245409137288,
+        "exposure_gini": 0.9488617760009668,
+        "head_exposure": 0.9927966101694916,
+        "head_exposure_gap": 0.7924398919768638,
+        "head_recall": 0.26960240409494945,
+        "hit@10": 0.7245762711864406,
+        "item_group_exposure_gap": 0.013381471117208601,
+        "mrr@10": 0.3912244417541027,
+        "ndcg@10": 0.22550673598337195,
+        "novelty@10": 8.485160749128934,
+        "popularity_jsd": 0.16536207340159598,
+        "precision@10": 0.16228813559322042,
+        "recall@10": 0.1992169766852237,
+        "tail_recall": 0.0008071025020177562,
+        "worst_activity_ndcg": 0.17079652322819217
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.17140132281786663,
+          "diversity": 0.7722932728647015,
+          "head_exposure": 0.982857142857143,
+          "hit@10": 0.5142857142857142,
+          "mrr@10": 0.20428004535147393,
+          "ndcg@10": 0.17079652322819217,
+          "novelty@10": 8.512350579971375,
+          "popularity_jsd": 0.13477627553817212,
+          "precision@10": 0.06142857142857142,
+          "recall@10": 0.26309523809523805,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.14100312208123697,
+          "diversity": 0.7932850529100529,
+          "head_exposure": 0.9949999999999999,
+          "hit@10": 0.7125,
+          "mrr@10": 0.40943948412698405,
+          "ndcg@10": 0.21798092924728998,
+          "novelty@10": 8.45242653953488,
+          "popularity_jsd": 0.15441216191646426,
+          "precision@10": 0.15125000000000002,
+          "recall@10": 0.21979978354978352,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.15394431013216048,
+          "diversity": 0.8152946966900455,
+          "head_exposure": 0.9988372093023257,
+          "hit@10": 0.9069767441860465,
+          "mrr@10": 0.5264442598744924,
+          "ndcg@10": 0.2770390549571991,
+          "novelty@10": 8.493479918995837,
+          "popularity_jsd": 0.20044345443938916,
+          "precision@10": 0.2546511627906977,
+          "recall@10": 0.12807624589608652,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.843476306475659,
+        "gini": 0.9488617760009668,
+        "group_mean_exposure_gap": 0.013381471117208601,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.994015544740288,
+            "items": 337,
+            "mean_item_exposure": 0.013401687271542161
+          },
+          "tail": {
+            "fraction_total_exposure": 0.005984455259712272,
+            "items": 1345,
+            "mean_item_exposure": 2.0216154333559564e-05
+          }
+        },
+        "normalized_entropy": 0.6386245409137288,
+        "users": 236
+      },
+      "model": "PositiveEASE",
+      "protocol": "Training ratings >=4 likes, <=2 dislikes, 3 neutral. Training-history masks include every observed rating. Parameters selected only on meta-fit validation users.",
+      "run": "positive_ease-all_observed",
+      "selection": {
+        "model": "positive_ease",
+        "penalty": 250.0,
+        "seed": 2026,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.2534724507226289,
+        "selection_objective": "all_observed"
+      },
+      "settings": {
+        "model": "positive_ease",
+        "penalty": 250.0,
+        "seed": 2026,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.2534724507226289,
+        "selection_objective": "all_observed"
+      },
+      "timing_seconds": null
+    },
+    "Random": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.013289217339484275,
+        "calibration_jsd": 0.23753767501183332,
+        "coverage@10": 0.751486325802616,
+        "diversity": 0.816099266134577,
+        "exposure_entropy": 0.9380233960608665,
+        "exposure_gini": 0.4976067745224486,
+        "head_exposure": 0.16694915254237291,
+        "head_exposure_gap": 0.033407565650254906,
+        "head_recall": 0.00316876963616094,
+        "hit@10": 0.0635593220338983,
+        "item_group_exposure_gap": 0.0005290890423958806,
+        "mrr@10": 0.01811440677966102,
+        "ndcg@10": 0.006894857561740873,
+        "novelty@10": 12.1758537830706,
+        "popularity_jsd": 0.277865441019246,
+        "precision@10": 0.006779661016949154,
+        "recall@10": 0.0053173940779872985,
+        "tail_recall": 0.008501479687920366,
+        "worst_activity_ndcg": 0.001937885334749254
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.2564348950324809,
+          "diversity": 0.832840136054422,
+          "head_exposure": 0.18142857142857138,
+          "hit@10": 0.014285714285714285,
+          "mrr@10": 0.0014285714285714286,
+          "ndcg@10": 0.001937885334749254,
+          "novelty@10": 12.088725585383166,
+          "popularity_jsd": 0.30033249504160875,
+          "precision@10": 0.0014285714285714286,
+          "recall@10": 0.0047619047619047615,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.2292313642345544,
+          "diversity": 0.8107700617283949,
+          "head_exposure": 0.19125,
+          "hit@10": 0.025,
+          "mrr@10": 0.0043749999999999995,
+          "ndcg@10": 0.002275044764428933,
+          "novelty@10": 12.037692368266452,
+          "popularity_jsd": 0.2650048924934605,
+          "precision@10": 0.0025,
+          "recall@10": 0.002922077922077922,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.2298830175785424,
+          "diversity": 0.8074303761125468,
+          "head_exposure": 0.1325581395348837,
+          "hit@10": 0.13953488372093023,
+          "mrr@10": 0.04447674418604651,
+          "ndcg@10": 0.01522710267423353,
+          "novelty@10": 12.375294329843285,
+          "popularity_jsd": 0.2715416049785187,
+          "precision@10": 0.015116279069767445,
+          "recall@10": 0.007997737619830643,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 10.051823058158291,
+        "gini": 0.4976067745224486,
+        "group_mean_exposure_gap": 0.0005290890423958806,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.16897629784503784,
+            "items": 337,
+            "mean_item_exposure": 0.0022782012937371497
+          },
+          "tail": {
+            "fraction_total_exposure": 0.8310237021549625,
+            "items": 1345,
+            "mean_item_exposure": 0.0028072903361330303
+          }
+        },
+        "normalized_entropy": 0.9380233960608665,
+        "users": 236
+      },
+      "model": "Random",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2026-Random-0",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2026,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "SLIMElastic": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.10029274838757349,
+        "calibration_jsd": 0.14459089159707486,
+        "coverage@10": 0.18906064209274673,
+        "diversity": 0.8106256165366335,
+        "exposure_entropy": 0.6907368791140699,
+        "exposure_gini": 0.924020069676476,
+        "head_exposure": 0.9716101694915255,
+        "head_exposure_gap": 0.7712534512988977,
+        "head_recall": 0.2873556329052885,
+        "hit@10": 0.7542372881355932,
+        "item_group_exposure_gap": 0.013081070807152494,
+        "mrr@10": 0.41893327952649995,
+        "ndcg@10": 0.24612818532836164,
+        "novelty@10": 8.614587481798429,
+        "popularity_jsd": 0.14039663738060612,
+        "precision@10": 0.17711864406779673,
+        "recall@10": 0.21282967403914102,
+        "tail_recall": 0.007963411353241861,
+        "worst_activity_ndcg": 0.20481851310834828
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.15912196800786688,
+          "diversity": 0.793020030234316,
+          "head_exposure": 0.9557142857142858,
+          "hit@10": 0.5285714285714286,
+          "mrr@10": 0.25054988662131517,
+          "ndcg@10": 0.20481851310834828,
+          "novelty@10": 8.663952324700679,
+          "popularity_jsd": 0.10275845495445775,
+          "precision@10": 0.06714285714285713,
+          "recall@10": 0.27976190476190477,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.13845791238215346,
+          "diversity": 0.8137989417989419,
+          "head_exposure": 0.9662499999999999,
+          "hit@10": 0.75,
+          "mrr@10": 0.3931894841269841,
+          "ndcg@10": 0.21886734164074592,
+          "novelty@10": 8.623290592214037,
+          "popularity_jsd": 0.12301447543342141,
+          "precision@10": 0.15625,
+          "recall@10": 0.2277674062049062,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.1384683682068222,
+          "diversity": 0.8220038144456747,
+          "head_exposure": 0.9895348837209301,
+          "hit@10": 0.9418604651162791,
+          "mrr@10": 0.579937246216316,
+          "ndcg@10": 0.30511126149592177,
+          "novelty@10": 8.566310879049528,
+          "popularity_jsd": 0.1872018202364801,
+          "precision@10": 0.286046511627907,
+          "recall@10": 0.14445438655245826,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.4019101418538344,
+        "gini": 0.924020069676476,
+        "group_mean_exposure_gap": 0.013081070807152494,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.976198717615273,
+            "items": 337,
+            "mean_item_exposure": 0.013161474181752944
+          },
+          "tail": {
+            "fraction_total_exposure": 0.023801282384727035,
+            "items": 1345,
+            "mean_item_exposure": 8.040337460044921e-05
+          }
+        },
+        "normalized_entropy": 0.6907368791140699,
+        "users": 236
+      },
+      "model": "SLIMElastic",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2026-SLIMElastic-2",
+      "selection": null,
+      "settings": {
+        "alpha": 0.01,
+        "dataset": "ml-100k",
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "hide_item": true,
+        "l1_ratio": 0.5,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "positive_only": true,
+        "reproducibility": true,
+        "seed": 2026,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 8.214995999995153,
+        "inference": {
+          "valid": 0.3515592500043567
+        },
+        "total": 9.251179042010335
+      }
+    },
+    "SignedChannelsLinear:all_observed": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.10513540506683688,
+        "calibration_jsd": 0.15573052382119645,
+        "coverage@10": 0.13258026159334127,
+        "diversity": 0.7999114429199173,
+        "exposure_entropy": 0.6358610452542265,
+        "exposure_gini": 0.9498746101641896,
+        "head_exposure": 0.9944915254237288,
+        "head_exposure_gap": 0.794134807231101,
+        "head_recall": 0.2739312165960626,
+        "hit@10": 0.7330508474576272,
+        "item_group_exposure_gap": 0.013409037674724284,
+        "mrr@10": 0.4108521657250472,
+        "ndcg@10": 0.23211731031387758,
+        "novelty@10": 8.472724151855626,
+        "popularity_jsd": 0.16529590878037118,
+        "precision@10": 0.164406779661017,
+        "recall@10": 0.20290611807872846,
+        "tail_recall": 0.0008071025020177562,
+        "worst_activity_ndcg": 0.18332267400102537
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.17482476278989384,
+          "diversity": 0.774156462585034,
+          "head_exposure": 0.9885714285714288,
+          "hit@10": 0.5428571428571428,
+          "mrr@10": 0.21372448979591838,
+          "ndcg@10": 0.18332267400102537,
+          "novelty@10": 8.487508895217468,
+          "popularity_jsd": 0.13455320624375702,
+          "precision@10": 0.06571428571428571,
+          "recall@10": 0.28214285714285714,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.13982466128063292,
+          "diversity": 0.8029923941798941,
+          "head_exposure": 0.9949999999999999,
+          "hit@10": 0.7,
+          "mrr@10": 0.41430059523809526,
+          "ndcg@10": 0.2142462906770895,
+          "novelty@10": 8.441951261722128,
+          "popularity_jsd": 0.15441216191646426,
+          "precision@10": 0.14500000000000002,
+          "recall@10": 0.20849522005772006,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.15498485260533912,
+          "diversity": 0.8180087978343793,
+          "head_exposure": 0.9988372093023257,
+          "hit@10": 0.9186046511627907,
+          "mrr@10": 0.5680970837947582,
+          "ndcg@10": 0.28845807906786225,
+          "novelty@10": 8.489316002731805,
+          "popularity_jsd": 0.20044345443938916,
+          "precision@10": 0.2627906976744186,
+          "recall@10": 0.13321193327863137,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.813862792028197,
+        "gini": 0.9498746101641896,
+        "group_mean_exposure_gap": 0.013409037674724284,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9956505250423952,
+            "items": 337,
+            "mean_item_exposure": 0.013423730684062133
+          },
+          "tail": {
+            "fraction_total_exposure": 0.0043494749576049475,
+            "items": 1345,
+            "mean_item_exposure": 1.4693009337849345e-05
+          }
+        },
+        "normalized_entropy": 0.6358610452542265,
+        "users": 236
+      },
+      "model": "SignedChannelsLinear",
+      "protocol": "Training ratings >=4 likes, <=2 dislikes, 3 neutral. Training-history masks include every observed rating. Parameters selected only on meta-fit validation users.",
+      "run": "signed_channels-all_observed",
+      "selection": {
+        "model": "signed_channels",
+        "penalty": 250.0,
+        "seed": 2026,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.2544964641406362,
+        "selection_objective": "all_observed"
+      },
+      "settings": {
+        "model": "signed_channels",
+        "penalty": 250.0,
+        "seed": 2026,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.2544964641406362,
+        "selection_objective": "all_observed"
+      },
+      "timing_seconds": null
+    },
+    "UserKNN": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.1201423295637205,
+        "calibration_jsd": 0.16665052065812697,
+        "coverage@10": 0.11712247324613555,
+        "diversity": 0.8106948928347234,
+        "exposure_entropy": 0.6235952606319255,
+        "exposure_gini": 0.954204086951128,
+        "head_exposure": 0.9974576271186439,
+        "head_exposure_gap": 0.7971009089260161,
+        "head_recall": 0.28510292679011773,
+        "hit@10": 0.7203389830508474,
+        "item_group_exposure_gap": 0.013454082102270297,
+        "mrr@10": 0.3997814097390368,
+        "ndcg@10": 0.23332765155143323,
+        "novelty@10": 8.391651591309088,
+        "popularity_jsd": 0.1676803405738142,
+        "precision@10": 0.16949152542372892,
+        "recall@10": 0.20625200399415786,
+        "tail_recall": 0.0,
+        "worst_activity_ndcg": 0.18471232000712884
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.18060880171154606,
+          "diversity": 0.8105668934240363,
+          "head_exposure": 0.9971428571428571,
+          "hit@10": 0.5,
+          "mrr@10": 0.1962358276643991,
+          "ndcg@10": 0.18471232000712884,
+          "novelty@10": 8.339483075698178,
+          "popularity_jsd": 0.14225269613751784,
+          "precision@10": 0.06714285714285713,
+          "recall@10": 0.28809523809523807,
+          "users": 70
+        },
+        "1": {
+          "calibration_jsd": 0.15325845016039724,
+          "diversity": 0.8106617063492063,
+          "head_exposure": 0.9962499999999999,
+          "hit@10": 0.675,
+          "mrr@10": 0.3494940476190476,
+          "ndcg@10": 0.19897454378182694,
+          "novelty@10": 8.377102367383548,
+          "popularity_jsd": 0.15491740110644586,
+          "precision@10": 0.14375,
+          "recall@10": 0.20776109307359308,
+          "users": 80
+        },
+        "2": {
+          "calibration_jsd": 0.1677468691009065,
+          "diversity": 0.8108299495508796,
+          "head_exposure": 0.9988372093023257,
+          "hit@10": 0.9418604651162791,
+          "mrr@10": 0.6122369878183832,
+          "ndcg@10": 0.30485464957084935,
+          "novelty@10": 8.447648498364986,
+          "popularity_jsd": 0.20024976229393301,
+          "precision@10": 0.27674418604651163,
+          "recall@10": 0.13823161430310582,
+          "users": 86
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.682423110234963,
+        "gini": 0.954204086951128,
+        "group_mean_exposure_gap": 0.013454082102270297,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9983221227460813,
+            "items": 337,
+            "mean_item_exposure": 0.013459750157932162
+          },
+          "tail": {
+            "fraction_total_exposure": 0.0016778772539186386,
+            "items": 1345,
+            "mean_item_exposure": 5.668055661864728e-06
+          }
+        },
+        "normalized_entropy": 0.6235952606319255,
+        "users": 236
+      },
+      "model": "UserKNN",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2026-UserKNN-0",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 50,
+        "knn_method": "user",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reproducibility": true,
+        "seed": 2026,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 1.3274444580019917,
+        "inference": {
+          "valid": 0.278759708016878
+        },
+        "total": 2.3139697080187034
+      }
+    }
+  },
+  "2027": {
+    "BPR": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.1534348839822812,
+        "calibration_jsd": 0.16391244265556928,
+        "coverage@10": 0.17122473246135553,
+        "diversity": 0.799045601291364,
+        "exposure_entropy": 0.642769889523299,
+        "exposure_gini": 0.945332094227952,
+        "head_exposure": 0.9716101694915255,
+        "head_exposure_gap": 0.7712534512988977,
+        "head_recall": 0.2824561490883835,
+        "hit@10": 0.7627118644067796,
+        "item_group_exposure_gap": 0.013076819141490541,
+        "mrr@10": 0.36980764057035254,
+        "ndcg@10": 0.22019178109936038,
+        "novelty@10": 8.487087191549803,
+        "popularity_jsd": 0.1347377639223008,
+        "precision@10": 0.1597457627118647,
+        "recall@10": 0.20671432665372244,
+        "tail_recall": 0.016980524651332103,
+        "worst_activity_ndcg": 0.16597253872080794
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.18659927576102264,
+          "diversity": 0.7956776556776557,
+          "head_exposure": 0.9730769230769232,
+          "hit@10": 0.5897435897435898,
+          "mrr@10": 0.22515771265771264,
+          "ndcg@10": 0.1824869605498759,
+          "novelty@10": 8.458918378831815,
+          "popularity_jsd": 0.11736941532717991,
+          "precision@10": 0.06666666666666665,
+          "recall@10": 0.2799145299145299,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.15264812837196648,
+          "diversity": 0.8008153247912283,
+          "head_exposure": 0.9831325301204819,
+          "hit@10": 0.7590361445783133,
+          "mrr@10": 0.30487186842608527,
+          "ndcg@10": 0.16597253872080794,
+          "novelty@10": 8.39127866244753,
+          "popularity_jsd": 0.12074015547638829,
+          "precision@10": 0.12289156626506022,
+          "recall@10": 0.1941319390114571,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.15278397736641833,
+          "diversity": 0.8005897707231041,
+          "head_exposure": 0.9573333333333335,
+          "hit@10": 0.9466666666666667,
+          "mrr@10": 0.5921058201058201,
+          "ndcg@10": 0.31940742270308914,
+          "novelty@10": 8.62241086231637,
+          "popularity_jsd": 0.1682915331413697,
+          "precision@10": 0.29733333333333334,
+          "recall@10": 0.14451062425325614,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.887897704612171,
+        "gini": 0.945332094227952,
+        "group_mean_exposure_gap": 0.013076819141490541,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9759465501255714,
+            "items": 337,
+            "mean_item_exposure": 0.013158074365869871
+          },
+          "tail": {
+            "fraction_total_exposure": 0.024053449874428187,
+            "items": 1345,
+            "mean_item_exposure": 8.125522437932951e-05
+          }
+        },
+        "normalized_entropy": 0.642769889523299,
+        "users": 236
+      },
+      "model": "BPR",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2027-BPR-1",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 60,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2027,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "ContrastTransfer:all_observed": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.19110673786901183,
+        "calibration_jsd": 0.1889348351461777,
+        "coverage@10": 0.06777645659928656,
+        "diversity": 0.8035732221325442,
+        "exposure_entropy": 0.49801819642854694,
+        "exposure_gini": 0.9818887261869519,
+        "head_exposure": 0.9995762711864407,
+        "head_exposure_gap": 0.7992195529938129,
+        "head_recall": 0.13779048551196627,
+        "hit@10": 0.5,
+        "item_group_exposure_gap": 0.01347763854088514,
+        "mrr@10": 0.2900390099542643,
+        "ndcg@10": 0.1431177025306504,
+        "novelty@10": 8.189838354426545,
+        "popularity_jsd": 0.16211181941987177,
+        "precision@10": 0.1055084745762712,
+        "recall@10": 0.09866554156395349,
+        "tail_recall": 0.0,
+        "worst_activity_ndcg": 0.08190005959907731
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.20563969680027208,
+          "diversity": 0.7818243793243794,
+          "head_exposure": 0.9987179487179488,
+          "hit@10": 0.21794871794871795,
+          "mrr@10": 0.13124745624745623,
+          "ndcg@10": 0.08190005959907731,
+          "novelty@10": 8.07643093516136,
+          "popularity_jsd": 0.13732226558680494,
+          "precision@10": 0.02435897435897436,
+          "recall@10": 0.09294871794871794,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.17832916755991743,
+          "diversity": 0.8134126984126984,
+          "head_exposure": 1.0,
+          "hit@10": 0.4457831325301205,
+          "mrr@10": 0.15683687129470258,
+          "ndcg@10": 0.08327787154697304,
+          "novelty@10": 8.178431729764464,
+          "popularity_jsd": 0.14025103084666402,
+          "precision@10": 0.06265060240963854,
+          "recall@10": 0.09599523635668214,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.18329871782138094,
+          "diversity": 0.8153029982363316,
+          "head_exposure": 1.0,
+          "hit@10": 0.8533333333333334,
+          "mrr@10": 0.6025925925925927,
+          "ndcg@10": 0.27300679746808915,
+          "novelty@10": 8.320405401755053,
+          "popularity_jsd": 0.21208556142727783,
+          "precision@10": 0.23733333333333334,
+          "recall@10": 0.10756617588651227,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 5.336744063383729,
+        "gini": 0.9818887261869519,
+        "group_mean_exposure_gap": 0.01347763854088514,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9997192617650237,
+            "items": 337,
+            "mean_item_exposure": 0.013478586905813827
+          },
+          "tail": {
+            "fraction_total_exposure": 0.00028073823497622467,
+            "items": 1345,
+            "mean_item_exposure": 9.483649286874841e-07
+          }
+        },
+        "normalized_entropy": 0.49801819642854694,
+        "users": 236
+      },
+      "model": "ContrastTransfer",
+      "protocol": "Training ratings >=4 likes, <=2 dislikes, 3 neutral. Training-history masks include every observed rating. Parameters selected only on meta-fit validation users.",
+      "run": "contrast-all_observed",
+      "selection": {
+        "dislike_weight": 0.0,
+        "model": "contrast_transfer",
+        "neighbors": 80,
+        "seed": 2027,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.11820359647368543,
+        "selection_objective": "all_observed"
+      },
+      "settings": {
+        "dislike_weight": 0.0,
+        "model": "contrast_transfer",
+        "neighbors": 80,
+        "seed": 2027,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.11820359647368543,
+        "selection_objective": "all_observed"
+      },
+      "timing_seconds": null
+    },
+    "EASE": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.147976008618697,
+        "calibration_jsd": 0.14045563637999367,
+        "coverage@10": 0.15695600475624258,
+        "diversity": 0.812829006367142,
+        "exposure_entropy": 0.6517080971829297,
+        "exposure_gini": 0.9428404916889204,
+        "head_exposure": 0.9902542372881356,
+        "head_exposure_gap": 0.7898975190955078,
+        "head_recall": 0.3067175784886929,
+        "hit@10": 0.788135593220339,
+        "item_group_exposure_gap": 0.013349516841143189,
+        "mrr@10": 0.42661084207694383,
+        "ndcg@10": 0.25300792558990576,
+        "novelty@10": 8.457829468131015,
+        "popularity_jsd": 0.15256129199472596,
+        "precision@10": 0.17415254237288155,
+        "recall@10": 0.22055024141432994,
+        "tail_recall": 0.012023809523809523,
+        "worst_activity_ndcg": 0.2041671316115035
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.15386224125302084,
+          "diversity": 0.8081729073395741,
+          "head_exposure": 0.9884615384615384,
+          "hit@10": 0.5769230769230769,
+          "mrr@10": 0.28098799348799347,
+          "ndcg@10": 0.20965721792561437,
+          "novelty@10": 8.446925710438556,
+          "popularity_jsd": 0.12912352715278866,
+          "precision@10": 0.06794871794871794,
+          "recall@10": 0.2799145299145299,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.12886454855664928,
+          "diversity": 0.8132638490469816,
+          "head_exposure": 0.989156626506024,
+          "hit@10": 0.8072289156626506,
+          "mrr@10": 0.37680244788678524,
+          "ndcg@10": 0.2041671316115035,
+          "novelty@10": 8.420508226345165,
+          "popularity_jsd": 0.12955874046712673,
+          "precision@10": 0.1397590361445783,
+          "recall@10": 0.220012517602879,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.13934023783654656,
+          "diversity": 0.8171901234567901,
+          "head_exposure": 0.9933333333333333,
+          "hit@10": 0.9866666666666667,
+          "mrr@10": 0.6331798941798942,
+          "ndcg@10": 0.3521431402302005,
+          "novelty@10": 8.510471550374188,
+          "popularity_jsd": 0.2023927244542172,
+          "precision@10": 0.32266666666666666,
+          "recall@10": 0.15940646239212725,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.98367919815378,
+        "gini": 0.9428404916889204,
+        "group_mean_exposure_gap": 0.013349516841143189,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9921203276133274,
+            "items": 337,
+            "mean_item_exposure": 0.013376135249361435
+          },
+          "tail": {
+            "fraction_total_exposure": 0.007879672386672396,
+            "items": 1345,
+            "mean_item_exposure": 2.6618408218247042e-05
+          }
+        },
+        "normalized_entropy": 0.6517080971829297,
+        "users": 236
+      },
+      "model": "EASE",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2027-EASE-1",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2027,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "ExactPop": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.0965907964771943,
+        "calibration_jsd": 0.19036963377424124,
+        "coverage@10": 0.0267538644470868,
+        "diversity": 0.8313589588377724,
+        "exposure_entropy": 0.4065677432010817,
+        "exposure_gini": 0.9907903956010268,
+        "head_exposure": 1.0,
+        "head_exposure_gap": 0.7996432818073722,
+        "head_recall": 0.15243281809830644,
+        "hit@10": 0.5296610169491526,
+        "item_group_exposure_gap": 0.013482371923110813,
+        "mrr@10": 0.23279694646220078,
+        "ndcg@10": 0.12033481904600055,
+        "novelty@10": 7.860846145041119,
+        "popularity_jsd": 0.16248207402776668,
+        "precision@10": 0.08559322033898306,
+        "recall@10": 0.10796552187611454,
+        "tail_recall": 0.0,
+        "worst_activity_ndcg": 0.08173488875517172
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.2188759985328857,
+          "diversity": 0.8431925790259124,
+          "head_exposure": 1.0,
+          "hit@10": 0.358974358974359,
+          "mrr@10": 0.14373219373219376,
+          "ndcg@10": 0.10564865558653089,
+          "novelty@10": 7.789690766740789,
+          "popularity_jsd": 0.13844252311838445,
+          "precision@10": 0.037179487179487186,
+          "recall@10": 0.1549145299145299,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.18081768691989264,
+          "diversity": 0.8310661694396635,
+          "head_exposure": 1.0,
+          "hit@10": 0.5180722891566265,
+          "mrr@10": 0.16639414802065403,
+          "ndcg@10": 0.08173488875517172,
+          "novelty@10": 7.851001632691785,
+          "popularity_jsd": 0.14025103084666402,
+          "precision@10": 0.06506024096385543,
+          "recall@10": 0.0954315095881361,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.17129383561073003,
+          "diversity": 0.8193760141093474,
+          "head_exposure": 1.0,
+          "hit@10": 0.72,
+          "mrr@10": 0.39891005291005294,
+          "ndcg@10": 0.17832568523236603,
+          "novelty@10": 7.945742332140071,
+          "popularity_jsd": 0.21208556142727783,
+          "precision@10": 0.15866666666666665,
+          "recall@10": 0.07300952711485867,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 4.356764482606605,
+        "gini": 0.9907903956010268,
+        "group_mean_exposure_gap": 0.013482371923110813,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 1.0,
+            "items": 337,
+            "mean_item_exposure": 0.013482371923110813
+          },
+          "tail": {
+            "fraction_total_exposure": 0.0,
+            "items": 1345,
+            "mean_item_exposure": 0.0
+          }
+        },
+        "normalized_entropy": 0.4065677432010817,
+        "users": 236
+      },
+      "model": "ExactPop",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2027-ExactPop-0",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2027,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "FISMCorrected": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.10893533815062559,
+        "calibration_jsd": 0.14857542790719547,
+        "coverage@10": 0.21878715814506539,
+        "diversity": 0.7976867545511613,
+        "exposure_entropy": 0.6697187482614643,
+        "exposure_gini": 0.9303228288224914,
+        "head_exposure": 0.9347457627118645,
+        "head_exposure_gap": 0.7343890445192367,
+        "head_recall": 0.27652706890129125,
+        "hit@10": 0.7669491525423728,
+        "item_group_exposure_gap": 0.012518618798399756,
+        "mrr@10": 0.3538690476190477,
+        "ndcg@10": 0.21505024966512717,
+        "novelty@10": 8.632898998670498,
+        "popularity_jsd": 0.1069451353319857,
+        "precision@10": 0.15423728813559354,
+        "recall@10": 0.20276720527927872,
+        "tail_recall": 0.015540440925534091,
+        "worst_activity_ndcg": 0.17979684084195904
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.1561094751652071,
+          "diversity": 0.7934065934065934,
+          "head_exposure": 0.9615384615384616,
+          "hit@10": 0.5384615384615384,
+          "mrr@10": 0.21986670736670733,
+          "ndcg@10": 0.17979684084195904,
+          "novelty@10": 8.505277203753879,
+          "popularity_jsd": 0.10858425291299384,
+          "precision@10": 0.0641025641025641,
+          "recall@10": 0.26816239316239315,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.1444984023864994,
+          "diversity": 0.8034251290877797,
+          "head_exposure": 0.9662650602409639,
+          "hit@10": 0.8192771084337349,
+          "mrr@10": 0.3489672977624785,
+          "ndcg@10": 0.18159990254040198,
+          "novelty@10": 8.49899304275898,
+          "popularity_jsd": 0.11143147098299684,
+          "precision@10": 0.12409638554216866,
+          "recall@10": 0.19742085224012929,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.145251927001767,
+          "diversity": 0.7957876543209876,
+          "head_exposure": 0.8720000000000001,
+          "hit@10": 0.9466666666666667,
+          "mrr@10": 0.4986560846560847,
+          "ndcg@10": 0.28873217899258463,
+          "novelty@10": 8.91381492325918,
+          "popularity_jsd": 0.10027557492728487,
+          "precision@10": 0.2813333333333333,
+          "recall@10": 0.14067284057749804,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.176680650531105,
+        "gini": 0.9303228288224914,
+        "group_mean_exposure_gap": 0.012518618798399756,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9428395303221799,
+            "items": 337,
+            "mean_item_exposure": 0.012711713211614755
+          },
+          "tail": {
+            "fraction_total_exposure": 0.05716046967781956,
+            "items": 1345,
+            "mean_item_exposure": 0.00019309441321499856
+          }
+        },
+        "normalized_entropy": 0.6697187482614643,
+        "users": 236
+      },
+      "model": "FISMCorrected",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2027-FISMCorrected-0",
+      "selection": null,
+      "settings": {
+        "alpha": 0.0,
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weights": [
+          0.001,
+          0.001
+        ],
+        "reproducibility": true,
+        "seed": 2027,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 98.87355887499871,
+        "inference": {
+          "valid": 0.5656085830123629
+        },
+        "total": 102.06607775000157
+      }
+    },
+    "GenreContent": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.02622844723913927,
+        "calibration_jsd": 0.2534624626297874,
+        "coverage@10": 0.13436385255648037,
+        "diversity": 0.15559744268077602,
+        "exposure_entropy": 0.5976536071814542,
+        "exposure_gini": 0.9615301124655816,
+        "head_exposure": 0.2970338983050847,
+        "head_exposure_gap": 0.09667718011245688,
+        "head_recall": 0.02349651663849256,
+        "hit@10": 0.13983050847457626,
+        "item_group_exposure_gap": 0.002088210543678537,
+        "mrr@10": 0.0576657923056228,
+        "ndcg@10": 0.022667758377738916,
+        "novelty@10": 11.236071978729553,
+        "popularity_jsd": 0.1641989595724928,
+        "precision@10": 0.016101694915254247,
+        "recall@10": 0.01984010587896625,
+        "tail_recall": 0.00799092970521542,
+        "worst_activity_ndcg": 0.012621894371793552
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.23295787870908222,
+          "diversity": 0.1496706688373355,
+          "head_exposure": 0.3346153846153846,
+          "hit@10": 0.0641025641025641,
+          "mrr@10": 0.013568376068376069,
+          "ndcg@10": 0.012621894371793552,
+          "novelty@10": 11.058381764725148,
+          "popularity_jsd": 0.16700366331018368,
+          "precision@10": 0.00641025641025641,
+          "recall@10": 0.023504273504273504,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.25283127899547564,
+          "diversity": 0.16579163213701367,
+          "head_exposure": 0.3216867469879518,
+          "hit@10": 0.08433734939759036,
+          "mrr@10": 0.03666092943201377,
+          "ndcg@10": 0.01748563367863283,
+          "novelty@10": 11.133492804701929,
+          "popularity_jsd": 0.17113128147785628,
+          "precision@10": 0.010843373493975903,
+          "recall@10": 0.018072289156626505,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.27548573979595903,
+          "diversity": 0.15047971781305114,
+          "head_exposure": 0.2306666666666667,
+          "hit@10": 0.28,
+          "mrr@10": 0.12677248677248676,
+          "ndcg@10": 0.03885034161093282,
+          "novelty@10": 11.534390753884699,
+          "popularity_jsd": 0.15361029811002533,
+          "precision@10": 0.032,
+          "recall@10": 0.017985755388036026,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.404433337895342,
+        "gini": 0.9615301124655816,
+        "group_mean_exposure_gap": 0.002088210543678537,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.32420907457136927,
+            "items": 337,
+            "mean_item_exposure": 0.004371107324218774
+          },
+          "tail": {
+            "fraction_total_exposure": 0.6757909254286301,
+            "items": 1345,
+            "mean_item_exposure": 0.002282896780540237
+          }
+        },
+        "normalized_entropy": 0.5976536071814542,
+        "users": 236
+      },
+      "model": "GenreContent",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2027-GenreContent-1",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "genre_idf_power": 1.0,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reproducibility": true,
+        "seed": 2027,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 0.05568879100610502,
+        "inference": {
+          "valid": 0.4324192089843564
+        },
+        "total": 1.2240514580043964
+      }
+    },
+    "ItemKNN": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.15615124048132525,
+        "calibration_jsd": 0.15634105676477383,
+        "coverage@10": 0.14328180737217597,
+        "diversity": 0.804007712312797,
+        "exposure_entropy": 0.6503791206320214,
+        "exposure_gini": 0.9445626862207039,
+        "head_exposure": 0.9838983050847459,
+        "head_exposure_gap": 0.7835415868921181,
+        "head_recall": 0.2873693605432545,
+        "hit@10": 0.7669491525423728,
+        "item_group_exposure_gap": 0.0132505775799562,
+        "mrr@10": 0.36857344632768374,
+        "ndcg@10": 0.21807080845880453,
+        "novelty@10": 8.507276835097242,
+        "popularity_jsd": 0.15039841682746677,
+        "precision@10": 0.16144067796610193,
+        "recall@10": 0.20660126503256426,
+        "tail_recall": 0.013690476190476189,
+        "worst_activity_ndcg": 0.15677573473775994
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.16932371757243933,
+          "diversity": 0.7964858906525574,
+          "head_exposure": 0.9756410256410256,
+          "hit@10": 0.5128205128205128,
+          "mrr@10": 0.1711131461131461,
+          "ndcg@10": 0.15677573473775994,
+          "novelty@10": 8.549297908793214,
+          "popularity_jsd": 0.12258612518266589,
+          "precision@10": 0.0641025641025641,
+          "recall@10": 0.2585470085470085,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.14150506366155866,
+          "diversity": 0.8102540320010198,
+          "head_exposure": 0.9795180722891565,
+          "hit@10": 0.8313253012048193,
+          "mrr@10": 0.3525196022183974,
+          "ndcg@10": 0.18996000416025577,
+          "novelty@10": 8.473980692307423,
+          "popularity_jsd": 0.12423786277387854,
+          "precision@10": 0.13493975903614458,
+          "recall@10": 0.21359116118152266,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.15925758855902644,
+          "diversity": 0.8049178130511464,
+          "head_exposure": 0.9973333333333333,
+          "hit@10": 0.96,
+          "mrr@10": 0.5916984126984127,
+          "ndcg@10": 0.3129269752190852,
+          "novelty@10": 8.500422649807527,
+          "popularity_jsd": 0.2082742132906973,
+          "precision@10": 0.29200000000000004,
+          "recall@10": 0.1448422067060278,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.9694379359483065,
+        "gini": 0.9445626862207039,
+        "group_mean_exposure_gap": 0.0132505775799562,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9862522121239798,
+            "items": 337,
+            "mean_item_exposure": 0.013297019133846275
+          },
+          "tail": {
+            "fraction_total_exposure": 0.013747787876020445,
+            "items": 1345,
+            "mean_item_exposure": 4.644155389007467e-05
+          }
+        },
+        "normalized_entropy": 0.6503791206320214,
+        "users": 236
+      },
+      "model": "ItemKNN",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2027-ItemKNN-2",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 200,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2027,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "LightGCN": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.14919575515149455,
+        "calibration_jsd": 0.15660567135225015,
+        "coverage@10": 0.20868014268727705,
+        "diversity": 0.7867338131109317,
+        "exposure_entropy": 0.6767355843435695,
+        "exposure_gini": 0.9292537420853794,
+        "head_exposure": 0.9559322033898306,
+        "head_exposure_gap": 0.7555754851972029,
+        "head_recall": 0.2912745269208264,
+        "hit@10": 0.7669491525423728,
+        "item_group_exposure_gap": 0.012830177236558556,
+        "mrr@10": 0.38056228140973897,
+        "ndcg@10": 0.2319964261144773,
+        "novelty@10": 8.601348155977737,
+        "popularity_jsd": 0.12567245881239528,
+        "precision@10": 0.16779661016949174,
+        "recall@10": 0.21478848510576798,
+        "tail_recall": 0.02380784019293336,
+        "worst_activity_ndcg": 0.17981842253074184
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.17013942094855322,
+          "diversity": 0.7747144213810879,
+          "head_exposure": 0.9589743589743591,
+          "hit@10": 0.5769230769230769,
+          "mrr@10": 0.2398606023606024,
+          "ndcg@10": 0.1942328739332993,
+          "novelty@10": 8.554638881500159,
+          "popularity_jsd": 0.11172697694065328,
+          "precision@10": 0.06794871794871793,
+          "recall@10": 0.282051282051282,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.14600364818806996,
+          "diversity": 0.7876550647032575,
+          "head_exposure": 0.963855421686747,
+          "hit@10": 0.7710843373493976,
+          "mrr@10": 0.3311675272518646,
+          "ndcg@10": 0.17981842253074184,
+          "novelty@10": 8.523038634219333,
+          "popularity_jsd": 0.1107788344692418,
+          "precision@10": 0.127710843373494,
+          "recall@10": 0.20246049131591298,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.15426347740712093,
+          "diversity": 0.7982144620811288,
+          "head_exposure": 0.9439999999999997,
+          "hit@10": 0.96,
+          "mrr@10": 0.5815555555555556,
+          "ndcg@10": 0.3290141776822364,
+          "novelty@10": 8.736588338847053,
+          "popularity_jsd": 0.15665803756543012,
+          "precision@10": 0.316,
+          "recall@10": 0.1584781560765389,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.251872799278795,
+        "gini": 0.9292537420853794,
+        "group_mean_exposure_gap": 0.012830177236558556,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9613181491724005,
+            "items": 337,
+            "mean_item_exposure": 0.012960848823578838
+          },
+          "tail": {
+            "fraction_total_exposure": 0.03868185082759907,
+            "items": 1345,
+            "mean_item_exposure": 0.00013067158702028116
+          }
+        },
+        "normalized_entropy": 0.6767355843435695,
+        "users": 236
+      },
+      "model": "LightGCN",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2027-LightGCN-200",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 200,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "n_layers": 2,
+        "reg_weight": 1e-05,
+        "reproducibility": true,
+        "seed": 2027,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 302.66346841599443,
+        "inference": {
+          "valid": 0.2306936249951832
+        },
+        "total": 307.8408320839808
+      }
+    },
+    "NGCF": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.1507306818544419,
+        "calibration_jsd": 0.16111502210250192,
+        "coverage@10": 0.14387633769322236,
+        "diversity": 0.7989517756255046,
+        "exposure_entropy": 0.6182234442147219,
+        "exposure_gini": 0.9544942771164883,
+        "head_exposure": 0.9889830508474575,
+        "head_exposure_gap": 0.7886263326548297,
+        "head_recall": 0.2999683714272986,
+        "hit@10": 0.7838983050847458,
+        "item_group_exposure_gap": 0.013314154957323944,
+        "mrr@10": 0.37956517352703806,
+        "ndcg@10": 0.2259606229038849,
+        "novelty@10": 8.378211220378239,
+        "popularity_jsd": 0.1548427247136638,
+        "precision@10": 0.16271186440677993,
+        "recall@10": 0.21290642329597748,
+        "tail_recall": 0.004166666666666667,
+        "worst_activity_ndcg": 0.17343121044119633
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.1783645200254241,
+          "diversity": 0.8003479853479852,
+          "head_exposure": 0.9756410256410257,
+          "hit@10": 0.5769230769230769,
+          "mrr@10": 0.23128306878306878,
+          "ndcg@10": 0.18743300790416262,
+          "novelty@10": 8.380557716462782,
+          "popularity_jsd": 0.12792598682209586,
+          "precision@10": 0.06923076923076922,
+          "recall@10": 0.28632478632478636,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.15543440727601096,
+          "diversity": 0.794499585644164,
+          "head_exposure": 0.9951807228915662,
+          "hit@10": 0.8192771084337349,
+          "mrr@10": 0.3172690763052209,
+          "ndcg@10": 0.17343121044119633,
+          "novelty@10": 8.300360711579247,
+          "popularity_jsd": 0.1342813738261098,
+          "precision@10": 0.12771084337349398,
+          "recall@10": 0.20323501799405416,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.14946209133731278,
+          "diversity": 0.8024268077601411,
+          "head_exposure": 0.9959999999999999,
+          "hit@10": 0.96,
+          "mrr@10": 0.6027195767195768,
+          "ndcg@10": 0.32416189229563824,
+          "novelty@10": 8.46192542752121,
+          "popularity_jsd": 0.20559069376978764,
+          "precision@10": 0.2986666666666667,
+          "recall@10": 0.14725434761347786,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.62485892968958,
+        "gini": 0.9544942771164883,
+        "group_mean_exposure_gap": 0.013314154957323944,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9900230043092849,
+            "items": 337,
+            "mean_item_exposure": 0.013347858356533324
+          },
+          "tail": {
+            "fraction_total_exposure": 0.009976995690715097,
+            "items": 1345,
+            "mean_item_exposure": 3.370339920937976e-05
+          }
+        },
+        "normalized_entropy": 0.6182234442147219,
+        "users": 236
+      },
+      "model": "NGCF",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2027-NGCF-1",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 60,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "hidden_size_list": [
+          64,
+          64,
+          64
+        ],
+        "message_dropout": 0.1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "node_dropout": 0.0,
+        "reg_weight": 1e-05,
+        "reproducibility": true,
+        "seed": 2027,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 96.81003441600478,
+        "inference": {
+          "valid": 0.3079300420067739
+        },
+        "total": 98.36302387499018
+      }
+    },
+    "NeuMF": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.1083464107630146,
+        "calibration_jsd": 0.16403804424499938,
+        "coverage@10": 0.20095124851367419,
+        "diversity": 0.7857506053268766,
+        "exposure_entropy": 0.6856847474550194,
+        "exposure_gini": 0.9259853614149097,
+        "head_exposure": 0.9461864406779662,
+        "head_exposure_gap": 0.7458297224853384,
+        "head_recall": 0.2666460787192555,
+        "hit@10": 0.7542372881355932,
+        "item_group_exposure_gap": 0.01263651616304126,
+        "mrr@10": 0.356170971213344,
+        "ndcg@10": 0.2098875387020506,
+        "novelty@10": 8.704224003654186,
+        "popularity_jsd": 0.1135598647820586,
+        "precision@10": 0.15000000000000016,
+        "recall@10": 0.1927063374084558,
+        "tail_recall": 0.01760637499146816,
+        "worst_activity_ndcg": 0.1731457054555433
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.17899457376086786,
+          "diversity": 0.7869725953059287,
+          "head_exposure": 0.9653846153846154,
+          "hit@10": 0.5,
+          "mrr@10": 0.2353785103785104,
+          "ndcg@10": 0.18013406236515378,
+          "novelty@10": 8.568105073684567,
+          "popularity_jsd": 0.10957111780589575,
+          "precision@10": 0.05769230769230768,
+          "recall@10": 0.2403846153846154,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.15203633868622177,
+          "diversity": 0.7898291579014473,
+          "head_exposure": 0.9566265060240965,
+          "hit@10": 0.8313253012048193,
+          "mrr@10": 0.3196309045706636,
+          "ndcg@10": 0.1731457054555433,
+          "novelty@10": 8.646557470631823,
+          "popularity_jsd": 0.09936265035261986,
+          "precision@10": 0.1253012048192771,
+          "recall@10": 0.20156556963785877,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.1617651410335433,
+          "diversity": 0.7799661375661375,
+          "head_exposure": 0.9146666666666666,
+          "hit@10": 0.9333333333333333,
+          "mrr@10": 0.5222328042328043,
+          "ndcg@10": 0.2814921162185579,
+          "novelty@10": 8.909605320700667,
+          "popularity_jsd": 0.13341974560584682,
+          "precision@10": 0.2733333333333333,
+          "recall@10": 0.1333167113127103,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.347771691025685,
+        "gini": 0.9259853614149097,
+        "group_mean_exposure_gap": 0.01263651616304126,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9498320562750333,
+            "items": 337,
+            "mean_item_exposure": 0.012805989047193128
+          },
+          "tail": {
+            "fraction_total_exposure": 0.050167943724966406,
+            "items": 1345,
+            "mean_item_exposure": 0.0001694728841518676
+          }
+        },
+        "normalized_entropy": 0.6856847474550194,
+        "users": 236
+      },
+      "model": "NeuMF",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2027-NeuMF-0",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "mf_embedding_size": 64,
+        "mlp_embedding_size": 64,
+        "mlp_hidden_size": [
+          128,
+          64
+        ],
+        "reproducibility": true,
+        "seed": 2027,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "use_pretrain": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 16.453593082987936,
+        "inference": {
+          "valid": 2.1700362499977928
+        },
+        "total": 19.474340208020294
+      }
+    },
+    "PositiveEASE:all_observed": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.13220990430947233,
+        "calibration_jsd": 0.1472848461963615,
+        "coverage@10": 0.1403091557669441,
+        "diversity": 0.7965356246076584,
+        "exposure_entropy": 0.6352987490669237,
+        "exposure_gini": 0.9495785712629318,
+        "head_exposure": 0.988135593220339,
+        "head_exposure_gap": 0.7877788750277112,
+        "head_recall": 0.29393975581182585,
+        "hit@10": 0.7838983050847458,
+        "item_group_exposure_gap": 0.01331341940891426,
+        "mrr@10": 0.4089504304546679,
+        "ndcg@10": 0.23597410464068724,
+        "novelty@10": 8.459445040970074,
+        "popularity_jsd": 0.1507182939445761,
+        "precision@10": 0.16398305084745785,
+        "recall@10": 0.21265482889952814,
+        "tail_recall": 0.008772893772893772,
+        "worst_activity_ndcg": 0.19175049061744925
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.16054977507255438,
+          "diversity": 0.7718467643467644,
+          "head_exposure": 0.9794871794871796,
+          "hit@10": 0.5512820512820513,
+          "mrr@10": 0.25966625966625967,
+          "ndcg@10": 0.1984303635183946,
+          "novelty@10": 8.498222908706607,
+          "popularity_jsd": 0.12170878062133247,
+          "precision@10": 0.06794871794871793,
+          "recall@10": 0.27670940170940167,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.13900699930022875,
+          "diversity": 0.7999818320902657,
+          "head_exposure": 0.9951807228915662,
+          "hit@10": 0.8433734939759037,
+          "mrr@10": 0.3530024861350162,
+          "ndcg@10": 0.19175049061744925,
+          "novelty@10": 8.383674629964785,
+          "popularity_jsd": 0.13355636797427686,
+          "precision@10": 0.1325301204819277,
+          "recall@10": 0.21249543629061696,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.1426501373968413,
+          "diversity": 0.8183982363315696,
+          "head_exposure": 0.9893333333333334,
+          "hit@10": 0.96,
+          "mrr@10": 0.6261216931216932,
+          "ndcg@10": 0.3239603949269216,
+          "novelty@10": 8.502968646703277,
+          "popularity_jsd": 0.19988071920788053,
+          "precision@10": 0.2986666666666667,
+          "recall@10": 0.1462144676644545,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.807837247457796,
+        "gini": 0.9495785712629318,
+        "group_mean_exposure_gap": 0.01331341940891426,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9899793787256257,
+            "items": 337,
+            "mean_item_exposure": 0.013347270180189077
+          },
+          "tail": {
+            "fraction_total_exposure": 0.010020621274373873,
+            "items": 1345,
+            "mean_item_exposure": 3.3850771274816484e-05
+          }
+        },
+        "normalized_entropy": 0.6352987490669237,
+        "users": 236
+      },
+      "model": "PositiveEASE",
+      "protocol": "Training ratings >=4 likes, <=2 dislikes, 3 neutral. Training-history masks include every observed rating. Parameters selected only on meta-fit validation users.",
+      "run": "positive_ease-all_observed",
+      "selection": {
+        "model": "positive_ease",
+        "penalty": 250.0,
+        "seed": 2027,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.22609542347285594,
+        "selection_objective": "all_observed"
+      },
+      "settings": {
+        "model": "positive_ease",
+        "penalty": 250.0,
+        "seed": 2027,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.22609542347285594,
+        "selection_objective": "all_observed"
+      },
+      "timing_seconds": null
+    },
+    "Random": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.01310796361702436,
+        "calibration_jsd": 0.24145349254629075,
+        "coverage@10": 0.7740784780023782,
+        "diversity": 0.809287844139539,
+        "exposure_entropy": 0.9386924898369449,
+        "exposure_gini": 0.49725855145547976,
+        "head_exposure": 0.18898305084745767,
+        "head_exposure_gap": 0.011373667345170146,
+        "head_recall": 0.00572934267240365,
+        "hit@10": 0.059322033898305086,
+        "item_group_exposure_gap": 9.022276376412621e-05,
+        "mrr@10": 0.01864911218724778,
+        "ndcg@10": 0.006714191960901441,
+        "novelty@10": 12.108859455293182,
+        "popularity_jsd": 0.26397983361367877,
+        "precision@10": 0.005932203389830509,
+        "recall@10": 0.004754312923199122,
+        "tail_recall": 0.004166666666666667,
+        "worst_activity_ndcg": 0.0
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.2604078895966688,
+          "diversity": 0.807475919142586,
+          "head_exposure": 0.20769230769230768,
+          "hit@10": 0.0,
+          "mrr@10": 0.0,
+          "ndcg@10": 0.0,
+          "novelty@10": 12.013738276050395,
+          "popularity_jsd": 0.2833973011750881,
+          "precision@10": 0.0,
+          "recall@10": 0.0,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.24155139671743356,
+          "diversity": 0.8150548224644611,
+          "head_exposure": 0.1963855421686747,
+          "hit@10": 0.04819277108433735,
+          "mrr@10": 0.018990246701090074,
+          "ndcg@10": 0.0072464100180230475,
+          "novelty@10": 12.083860949480473,
+          "popularity_jsd": 0.2762185742715705,
+          "precision@10": 0.004819277108433735,
+          "recall@10": 0.008132530120481929,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.2216325723311662,
+          "diversity": 0.8047901234567901,
+          "head_exposure": 0.16133333333333336,
+          "hit@10": 0.13333333333333333,
+          "mrr@10": 0.03766666666666666,
+          "ndcg@10": 0.01310796361702436,
+          "novelty@10": 12.235450494805072,
+          "popularity_jsd": 0.23024146102174622,
+          "precision@10": 0.013333333333333334,
+          "recall@10": 0.0059602379983332366,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 10.058993041630664,
+        "gini": 0.49725855145547976,
+        "group_mean_exposure_gap": 9.022276376412621e-05,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.19500558062414033,
+            "items": 337,
+            "mean_item_exposure": 0.002629137765056835
+          },
+          "tail": {
+            "fraction_total_exposure": 0.8049944193758577,
+            "items": 1345,
+            "mean_item_exposure": 0.002719360528820961
+          }
+        },
+        "normalized_entropy": 0.9386924898369449,
+        "users": 236
+      },
+      "model": "Random",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2027-Random-0",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2027,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "SLIMElastic": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.14362009431562361,
+        "calibration_jsd": 0.1343099224237933,
+        "coverage@10": 0.19322235434007135,
+        "diversity": 0.8196047439691507,
+        "exposure_entropy": 0.6859465714895645,
+        "exposure_gini": 0.9259944817730169,
+        "head_exposure": 0.9673728813559322,
+        "head_exposure_gap": 0.7670161631633045,
+        "head_recall": 0.30203673339840653,
+        "hit@10": 0.788135593220339,
+        "item_group_exposure_gap": 0.013018126793945095,
+        "mrr@10": 0.4446092278719396,
+        "ndcg@10": 0.26103729665306774,
+        "novelty@10": 8.593954087874858,
+        "popularity_jsd": 0.12923467531396512,
+        "precision@10": 0.17288135593220352,
+        "recall@10": 0.23062140389413602,
+        "tail_recall": 0.024268707482993195,
+        "worst_activity_ndcg": 0.20424287810131408
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.14884776369030459,
+          "diversity": 0.8071686338353005,
+          "head_exposure": 0.9512820512820513,
+          "hit@10": 0.6153846153846154,
+          "mrr@10": 0.3019892144892145,
+          "ndcg@10": 0.23798615636467452,
+          "novelty@10": 8.637477324555674,
+          "popularity_jsd": 0.09087721173801087,
+          "precision@10": 0.07820512820512819,
+          "recall@10": 0.3269230769230769,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.12256446550173791,
+          "diversity": 0.8244559189137499,
+          "head_exposure": 0.963855421686747,
+          "hit@10": 0.7710843373493976,
+          "mrr@10": 0.3788056989864219,
+          "ndcg@10": 0.20424287810131408,
+          "novelty@10": 8.593663405260333,
+          "popularity_jsd": 0.10453021810281517,
+          "precision@10": 0.13493975903614458,
+          "recall@10": 0.20957075053460594,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.1321888731670296,
+          "diversity": 0.8271696649029983,
+          "head_exposure": 0.9880000000000003,
+          "hit@10": 0.9866666666666667,
+          "mrr@10": 0.6657566137566138,
+          "ndcg@10": 0.3478629724169377,
+          "novelty@10": 8.5490116104869,
+          "popularity_jsd": 0.19646603674663013,
+          "precision@10": 0.3133333333333334,
+          "recall@10": 0.15376372032858387,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.350577387428006,
+        "gini": 0.9259944817730169,
+        "group_mean_exposure_gap": 0.013018126793945095,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9724654904369737,
+            "items": 337,
+            "mean_item_exposure": 0.013111141424461653
+          },
+          "tail": {
+            "fraction_total_exposure": 0.02753450956302596,
+            "items": 1345,
+            "mean_item_exposure": 9.301463051655729e-05
+          }
+        },
+        "normalized_entropy": 0.6859465714895645,
+        "users": 236
+      },
+      "model": "SLIMElastic",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2027-SLIMElastic-1",
+      "selection": null,
+      "settings": {
+        "alpha": 0.01,
+        "dataset": "ml-100k",
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "hide_item": true,
+        "l1_ratio": 0.1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "positive_only": true,
+        "reproducibility": true,
+        "seed": 2027,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 9.442381750006462,
+        "inference": {
+          "valid": 0.5369304170017131
+        },
+        "total": 10.715566541010048
+      }
+    },
+    "SignedChannelsLinear:all_observed": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.136333291196332,
+        "calibration_jsd": 0.1450367698262124,
+        "coverage@10": 0.13912009512485138,
+        "diversity": 0.7987882252712761,
+        "exposure_entropy": 0.6330156996760421,
+        "exposure_gini": 0.9503388245272654,
+        "head_exposure": 0.9889830508474576,
+        "head_exposure_gap": 0.7886263326548298,
+        "head_recall": 0.2895460834412768,
+        "hit@10": 0.7754237288135594,
+        "item_group_exposure_gap": 0.013330308051420742,
+        "mrr@10": 0.4106100349744419,
+        "ndcg@10": 0.23783555057591976,
+        "novelty@10": 8.449160418242418,
+        "popularity_jsd": 0.15232355793841978,
+        "precision@10": 0.1631355932203392,
+        "recall@10": 0.20807209055837694,
+        "tail_recall": 0.008772893772893772,
+        "worst_activity_ndcg": 0.18747109564317102
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.15574353976427127,
+          "diversity": 0.7760453127119793,
+          "head_exposure": 0.9807692307692307,
+          "hit@10": 0.5512820512820513,
+          "mrr@10": 0.2910968660968661,
+          "ndcg@10": 0.2087661536483481,
+          "novelty@10": 8.481019708438579,
+          "popularity_jsd": 0.1248135549985959,
+          "precision@10": 0.06538461538461537,
+          "recall@10": 0.26816239316239315,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.13787755234801333,
+          "diversity": 0.801230318097788,
+          "head_exposure": 0.9939759036144579,
+          "hit@10": 0.8192771084337349,
+          "mrr@10": 0.3512096003059858,
+          "ndcg@10": 0.18747109564317102,
+          "novelty@10": 8.38215097943614,
+          "popularity_jsd": 0.1329101088226757,
+          "precision@10": 0.1289156626506024,
+          "recall@10": 0.20642874528416694,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.14182459643317155,
+          "diversity": 0.8197382716049382,
+          "head_exposure": 0.9919999999999999,
+          "hit@10": 0.96,
+          "mrr@10": 0.6006402116402118,
+          "ndcg@10": 0.323804386839503,
+          "novelty@10": 8.49018386871734,
+          "popularity_jsd": 0.20241817801726003,
+          "precision@10": 0.30266666666666664,
+          "recall@10": 0.14739681128699197,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.7833721769632325,
+        "gini": 0.9503388245272654,
+        "group_mean_exposure_gap": 0.013330308051420742,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9909810488765589,
+            "items": 337,
+            "mean_item_exposure": 0.01336077506970823
+          },
+          "tail": {
+            "fraction_total_exposure": 0.009018951123440868,
+            "items": 1345,
+            "mean_item_exposure": 3.0467018287488614e-05
+          }
+        },
+        "normalized_entropy": 0.6330156996760421,
+        "users": 236
+      },
+      "model": "SignedChannelsLinear",
+      "protocol": "Training ratings >=4 likes, <=2 dislikes, 3 neutral. Training-history masks include every observed rating. Parameters selected only on meta-fit validation users.",
+      "run": "signed_channels-all_observed",
+      "selection": {
+        "model": "signed_channels",
+        "penalty": 250.0,
+        "seed": 2027,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.227317835767006,
+        "selection_objective": "all_observed"
+      },
+      "settings": {
+        "model": "signed_channels",
+        "penalty": 250.0,
+        "seed": 2027,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.227317835767006,
+        "selection_objective": "all_observed"
+      },
+      "timing_seconds": null
+    },
+    "UserKNN": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.11537323029002278,
+        "calibration_jsd": 0.16579469959776794,
+        "coverage@10": 0.12009512485136742,
+        "diversity": 0.8071972244641736,
+        "exposure_entropy": 0.6159435091882521,
+        "exposure_gini": 0.9565997095509854,
+        "head_exposure": 0.9974576271186439,
+        "head_exposure_gap": 0.7971009089260161,
+        "head_recall": 0.29190825586220104,
+        "hit@10": 0.7627118644067796,
+        "item_group_exposure_gap": 0.013449422264658156,
+        "mrr@10": 0.3969918617164379,
+        "ndcg@10": 0.23329298442910634,
+        "novelty@10": 8.358352039823043,
+        "popularity_jsd": 0.15940204945070008,
+        "precision@10": 0.15932203389830532,
+        "recall@10": 0.21208133733430073,
+        "tail_recall": 0.0065306122448979586,
+        "worst_activity_ndcg": 0.190197747370273
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.1770414405946162,
+          "diversity": 0.8078395061728395,
+          "head_exposure": 0.9961538461538462,
+          "hit@10": 0.5512820512820513,
+          "mrr@10": 0.2837505087505088,
+          "ndcg@10": 0.2096526662694132,
+          "novelty@10": 8.339154230340789,
+          "popularity_jsd": 0.13473265767230883,
+          "precision@10": 0.06666666666666665,
+          "recall@10": 0.2799145299145299,
+          "users": 78
+        },
+        "1": {
+          "calibration_jsd": 0.1542210752125523,
+          "diversity": 0.8089233122968063,
+          "head_exposure": 0.9975903614457831,
+          "hit@10": 0.7951807228915663,
+          "mrr@10": 0.34435360489577355,
+          "ndcg@10": 0.190197747370273,
+          "novelty@10": 8.314625045764624,
+          "popularity_jsd": 0.13679244317014264,
+          "precision@10": 0.136144578313253,
+          "recall@10": 0.21618160955510357,
+          "users": 83
+        },
+        "2": {
+          "calibration_jsd": 0.16690623328068435,
+          "diversity": 0.8046190476190477,
+          "head_exposure": 0.9986666666666667,
+          "hit@10": 0.9466666666666667,
+          "mrr@10": 0.573015873015873,
+          "ndcg@10": 0.3055709776602958,
+          "novelty@10": 8.426708968442549,
+          "popularity_jsd": 0.21007951451737722,
+          "precision@10": 0.2813333333333334,
+          "recall@10": 0.13699718245984016,
+          "users": 75
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.600427232605679,
+        "gini": 0.9565997095509854,
+        "group_mean_exposure_gap": 0.013449422264658156,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9980457464628791,
+            "items": 337,
+            "mean_item_exposure": 0.013456023950091298
+          },
+          "tail": {
+            "fraction_total_exposure": 0.0019542535371208573,
+            "items": 1345,
+            "mean_item_exposure": 6.601685433143239e-06
+          }
+        },
+        "normalized_entropy": 0.6159435091882521,
+        "users": 236
+      },
+      "model": "UserKNN",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2027-UserKNN-0",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 50,
+        "knn_method": "user",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reproducibility": true,
+        "seed": 2027,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 2.0078485409903806,
+        "inference": {
+          "valid": 0.47589220901136287
+        },
+        "total": 3.486051125015365
+      }
+    }
+  },
+  "2028": {
+    "BPR": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.09842955287229183,
+        "calibration_jsd": 0.1496280354523454,
+        "coverage@10": 0.2681331747919144,
+        "diversity": 0.7911634606761725,
+        "exposure_entropy": 0.7340499761727088,
+        "exposure_gini": 0.8919374658958306,
+        "head_exposure": 0.9088983050847458,
+        "head_exposure_gap": 0.708541586892118,
+        "head_recall": 0.2409655319800257,
+        "hit@10": 0.7076271186440678,
+        "item_group_exposure_gap": 0.012122212923744102,
+        "mrr@10": 0.32513283562012363,
+        "ndcg@10": 0.1992837661065571,
+        "novelty@10": 8.825373496020399,
+        "popularity_jsd": 0.08947040646395958,
+        "precision@10": 0.14025423728813569,
+        "recall@10": 0.1962340235815638,
+        "tail_recall": 0.034271100865928446,
+        "worst_activity_ndcg": 0.1552828658808682
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.15859445186739035,
+          "diversity": 0.7925705467372134,
+          "head_exposure": 0.9083333333333334,
+          "hit@10": 0.5416666666666666,
+          "mrr@10": 0.24065806878306878,
+          "ndcg@10": 0.20107848597055666,
+          "novelty@10": 8.744217594338663,
+          "popularity_jsd": 0.07153990803493487,
+          "precision@10": 0.07083333333333333,
+          "recall@10": 0.29398148148148145,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.14697278322860577,
+          "diversity": 0.7797325741890957,
+          "head_exposure": 0.9173913043478261,
+          "hit@10": 0.6739130434782609,
+          "mrr@10": 0.27723861283643897,
+          "ndcg@10": 0.1552828658808682,
+          "novelty@10": 8.785792184177458,
+          "popularity_jsd": 0.08401887316093426,
+          "precision@10": 0.11195652173913043,
+          "recall@10": 0.175750909718301,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.14405444132318992,
+          "diversity": 0.8043625073486185,
+          "head_exposure": 0.8986111111111109,
+          "hit@10": 0.9166666666666666,
+          "mrr@10": 0.47080577601410933,
+          "ndcg@10": 0.25371241875316003,
+          "novelty@10": 8.957105518390337,
+          "popularity_jsd": 0.11436675300240556,
+          "precision@10": 0.24583333333333338,
+          "recall@10": 0.12465943339581514,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.866051643614442,
+        "gini": 0.8919374658958306,
+        "group_mean_exposure_gap": 0.012122212923744102,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9193285860799421,
+            "items": 337,
+            "mean_item_exposure": 0.012394729917077386
+          },
+          "tail": {
+            "fraction_total_exposure": 0.08067141392005732,
+            "items": 1345,
+            "mean_item_exposure": 0.0002725169933332843
+          }
+        },
+        "normalized_entropy": 0.7340499761727088,
+        "users": 236
+      },
+      "model": "BPR",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2028-BPR-2",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 128,
+        "epochs": 100,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2028,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "ContrastTransfer:all_observed": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.16234579606386357,
+        "calibration_jsd": 0.19364012648496895,
+        "coverage@10": 0.06420927467300833,
+        "diversity": 0.800686037126715,
+        "exposure_entropy": 0.4838635711382797,
+        "exposure_gini": 0.9837213898748005,
+        "head_exposure": 1.0,
+        "head_exposure_gap": 0.7996432818073722,
+        "head_recall": 0.13147817478581475,
+        "hit@10": 0.4957627118644068,
+        "item_group_exposure_gap": 0.013482371923110815,
+        "mrr@10": 0.2469700026903418,
+        "ndcg@10": 0.12987254339824014,
+        "novelty@10": 8.161762463624633,
+        "popularity_jsd": 0.16656469935494703,
+        "precision@10": 0.09788135593220344,
+        "recall@10": 0.10145992350851143,
+        "tail_recall": 0.0,
+        "worst_activity_ndcg": 0.07743629680191098
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.20753373388025884,
+          "diversity": 0.7908054085831864,
+          "head_exposure": 1.0,
+          "hit@10": 0.2361111111111111,
+          "mrr@10": 0.12242614638447973,
+          "ndcg@10": 0.08696486458157057,
+          "novelty@10": 8.06914188197834,
+          "popularity_jsd": 0.14397953597586724,
+          "precision@10": 0.025000000000000005,
+          "recall@10": 0.11342592592592592,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.18020858877320056,
+          "diversity": 0.806678168852082,
+          "head_exposure": 1.0,
+          "hit@10": 0.40217391304347827,
+          "mrr@10": 0.1630693581780538,
+          "ndcg@10": 0.07743629680191098,
+          "novelty@10": 8.148007580674344,
+          "popularity_jsd": 0.15053620093082698,
+          "precision@10": 0.05217391304347825,
+          "recall@10": 0.08231107660455486,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.19690903949916086,
+          "diversity": 0.8029100529100529,
+          "head_exposure": 1.0,
+          "hit@10": 0.875,
+          "mrr@10": 0.47872023809523806,
+          "ndcg@10": 0.23978209286577457,
+          "novelty@10": 8.271958729040744,
+          "popularity_jsd": 0.20963072183151357,
+          "precision@10": 0.2291666666666667,
+          "recall@10": 0.1139618921350415,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 5.185063636786921,
+        "gini": 0.9837213898748005,
+        "group_mean_exposure_gap": 0.013482371923110815,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 1.0,
+            "items": 337,
+            "mean_item_exposure": 0.013482371923110815
+          },
+          "tail": {
+            "fraction_total_exposure": 0.0,
+            "items": 1345,
+            "mean_item_exposure": 0.0
+          }
+        },
+        "normalized_entropy": 0.4838635711382797,
+        "users": 236
+      },
+      "model": "ContrastTransfer",
+      "protocol": "Training ratings >=4 likes, <=2 dislikes, 3 neutral. Training-history masks include every observed rating. Parameters selected only on meta-fit validation users.",
+      "run": "contrast-all_observed",
+      "selection": {
+        "dislike_weight": 0.0,
+        "model": "contrast_transfer",
+        "neighbors": 80,
+        "seed": 2028,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.13932036250816732,
+        "selection_objective": "all_observed"
+      },
+      "settings": {
+        "dislike_weight": 0.0,
+        "model": "contrast_transfer",
+        "neighbors": 80,
+        "seed": 2028,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.13932036250816732,
+        "selection_objective": "all_observed"
+      },
+      "timing_seconds": null
+    },
+    "EASE": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.1021322183134108,
+        "calibration_jsd": 0.14355927058198595,
+        "coverage@10": 0.16765755053507728,
+        "diversity": 0.8053333781723613,
+        "exposure_entropy": 0.6602435607050096,
+        "exposure_gini": 0.9389762750303517,
+        "head_exposure": 0.9872881355932204,
+        "head_exposure_gap": 0.7869314174005926,
+        "head_recall": 0.30447335253527,
+        "hit@10": 0.75,
+        "item_group_exposure_gap": 0.013315337417796827,
+        "mrr@10": 0.38518966908797425,
+        "ndcg@10": 0.24071573144296224,
+        "novelty@10": 8.486850081905263,
+        "popularity_jsd": 0.15409535915306166,
+        "precision@10": 0.1639830508474578,
+        "recall@10": 0.23018522415070136,
+        "tail_recall": 0.00953293194672505,
+        "worst_activity_ndcg": 0.1967237049591533
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.15467854892688931,
+          "diversity": 0.7984178424456202,
+          "head_exposure": 0.9750000000000001,
+          "hit@10": 0.5833333333333334,
+          "mrr@10": 0.28761574074074076,
+          "ndcg@10": 0.23878757345378285,
+          "novelty@10": 8.504812118318048,
+          "popularity_jsd": 0.1251028702553479,
+          "precision@10": 0.07777777777777778,
+          "recall@10": 0.32870370370370366,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.14192322247711184,
+          "diversity": 0.8026365884518059,
+          "head_exposure": 0.9923913043478261,
+          "hit@10": 0.7391304347826086,
+          "mrr@10": 0.34200741890959285,
+          "ndcg@10": 0.1967237049591533,
+          "novelty@10": 8.438063802618215,
+          "popularity_jsd": 0.14203958347618967,
+          "precision@10": 0.13369565217391305,
+          "recall@10": 0.22118349645523558,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.13453049814886622,
+          "diversity": 0.8156948118753674,
+          "head_exposure": 0.9930555555555556,
+          "hit@10": 0.9305555555555556,
+          "mrr@10": 0.5379409171075838,
+          "ndcg@10": 0.2988559232725641,
+          "novelty@10": 8.53122606902593,
+          "popularity_jsd": 0.1984924503045563,
+          "precision@10": 0.28888888888888886,
+          "recall@10": 0.1431689522085714,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.075144900825597,
+        "gini": 0.9389762750303517,
+        "group_mean_exposure_gap": 0.013315337417796827,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9900931363734744,
+            "items": 337,
+            "mean_item_exposure": 0.013348803903106467
+          },
+          "tail": {
+            "fraction_total_exposure": 0.009906863626525228,
+            "items": 1345,
+            "mean_item_exposure": 3.3466485309640545e-05
+          }
+        },
+        "normalized_entropy": 0.6602435607050096,
+        "users": 236
+      },
+      "model": "EASE",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2028-EASE-1",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2028,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "ExactPop": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.04799378658470614,
+        "calibration_jsd": 0.19926846866955897,
+        "coverage@10": 0.023781212841854936,
+        "diversity": 0.8320677517711416,
+        "exposure_entropy": 0.40284713860078536,
+        "exposure_gini": 0.9910277156791787,
+        "head_exposure": 1.0,
+        "head_exposure_gap": 0.7996432818073722,
+        "head_recall": 0.16291007899423068,
+        "hit@10": 0.5550847457627118,
+        "item_group_exposure_gap": 0.01348237192311081,
+        "mrr@10": 0.21097491256389575,
+        "ndcg@10": 0.12015737499988575,
+        "novelty@10": 7.854026301307568,
+        "popularity_jsd": 0.16656469935494703,
+        "precision@10": 0.08559322033898308,
+        "recall@10": 0.12232396683060874,
+        "tail_recall": 0.0,
+        "worst_activity_ndcg": 0.09698082085537975
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.23773655366847646,
+          "diversity": 0.8423394326866549,
+          "head_exposure": 1.0,
+          "hit@10": 0.375,
+          "mrr@10": 0.15918761022927688,
+          "ndcg@10": 0.12495462841099868,
+          "novelty@10": 7.7914177503010045,
+          "popularity_jsd": 0.14397953597586724,
+          "precision@10": 0.04305555555555556,
+          "recall@10": 0.18518518518518517,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.1818139925644203,
+          "diversity": 0.8324703818725558,
+          "head_exposure": 1.0,
+          "hit@10": 0.5,
+          "mrr@10": 0.17277432712215324,
+          "ndcg@10": 0.09698082085537975,
+          "novelty@10": 7.8490768317114075,
+          "popularity_jsd": 0.15053620093082698,
+          "precision@10": 0.07282608695652174,
+          "recall@10": 0.1129744651483782,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.18310332536054091,
+          "diversity": 0.8212815990593768,
+          "head_exposure": 1.0,
+          "hit@10": 0.8055555555555556,
+          "mrr@10": 0.31157407407407406,
+          "ndcg@10": 0.1449746074400859,
+          "novelty@10": 7.922959174575883,
+          "popularity_jsd": 0.20963072183151357,
+          "precision@10": 0.14444444444444446,
+          "recall@10": 0.07140933395888237,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 4.316894625129062,
+        "gini": 0.9910277156791787,
+        "group_mean_exposure_gap": 0.01348237192311081,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 1.0,
+            "items": 337,
+            "mean_item_exposure": 0.01348237192311081
+          },
+          "tail": {
+            "fraction_total_exposure": 0.0,
+            "items": 1345,
+            "mean_item_exposure": 0.0
+          }
+        },
+        "normalized_entropy": 0.40284713860078536,
+        "users": 236
+      },
+      "model": "ExactPop",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2028-ExactPop-0",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2028,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "FISMCorrected": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.08232135187610692,
+        "calibration_jsd": 0.15116537343354486,
+        "coverage@10": 0.2294887039239001,
+        "diversity": 0.7949554972648193,
+        "exposure_entropy": 0.6802991709261159,
+        "exposure_gini": 0.9240271131501875,
+        "head_exposure": 0.9199152542372883,
+        "head_exposure_gap": 0.7195585360446605,
+        "head_recall": 0.2672746326034579,
+        "hit@10": 0.7330508474576272,
+        "item_group_exposure_gap": 0.012213195648192345,
+        "mrr@10": 0.3502707156308854,
+        "ndcg@10": 0.21609647541670768,
+        "novelty@10": 8.67802929328102,
+        "popularity_jsd": 0.10343205778322961,
+        "precision@10": 0.14788135593220356,
+        "recall@10": 0.21179983984533324,
+        "tail_recall": 0.02648789831136158,
+        "worst_activity_ndcg": 0.17779511741757523
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.1586865060942099,
+          "diversity": 0.794567166372722,
+          "head_exposure": 0.9291666666666667,
+          "hit@10": 0.5833333333333334,
+          "mrr@10": 0.28542768959435627,
+          "ndcg@10": 0.22101710564973553,
+          "novelty@10": 8.601354308165106,
+          "popularity_jsd": 0.10356306733686492,
+          "precision@10": 0.07222222222222222,
+          "recall@10": 0.31134259259259256,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.14267350921590333,
+          "diversity": 0.7954807913503564,
+          "head_exposure": 0.9500000000000001,
+          "hit@10": 0.6847826086956522,
+          "mrr@10": 0.2916882332643202,
+          "ndcg@10": 0.17779511741757523,
+          "novelty@10": 8.543511695317406,
+          "popularity_jsd": 0.1082160921306514,
+          "precision@10": 0.12826086956521737,
+          "recall@10": 0.20279581529581528,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.15449495616208844,
+          "diversity": 0.794672619047619,
+          "head_exposure": 0.8722222222222222,
+          "hit@10": 0.9444444444444444,
+          "mrr@10": 0.48996913580246904,
+          "ndcg@10": 0.26011646929368215,
+          "novelty@10": 8.926587875794878,
+          "popularity_jsd": 0.09718811545233305,
+          "precision@10": 0.2486111111111111,
+          "recall@10": 0.12376222957801288,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.290060057646345,
+        "gini": 0.9240271131501875,
+        "group_mean_exposure_gap": 0.012213195648192345,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.924724797130971,
+            "items": 337,
+            "mean_item_exposure": 0.012467483641442954
+          },
+          "tail": {
+            "fraction_total_exposure": 0.0752752028690286,
+            "items": 1345,
+            "mean_item_exposure": 0.00025428799325060965
+          }
+        },
+        "normalized_entropy": 0.6802991709261159,
+        "users": 236
+      },
+      "model": "FISMCorrected",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2028-FISMCorrected-0",
+      "selection": null,
+      "settings": {
+        "alpha": 0.0,
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weights": [
+          0.001,
+          0.001
+        ],
+        "reproducibility": true,
+        "seed": 2028,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 240.54189249998308,
+        "inference": {
+          "valid": 0.6189178329950664
+        },
+        "total": 244.38613441598136
+      }
+    },
+    "GenreContent": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.037496780315367934,
+        "calibration_jsd": 0.24831567727685414,
+        "coverage@10": 0.15576694411414982,
+        "diversity": 0.15352262876274175,
+        "exposure_entropy": 0.615121380945007,
+        "exposure_gini": 0.9557948223808801,
+        "head_exposure": 0.325,
+        "head_exposure_gap": 0.12464328180737219,
+        "head_recall": 0.01648086233102643,
+        "hit@10": 0.15677966101694915,
+        "item_group_exposure_gap": 0.002359559569230295,
+        "mrr@10": 0.05885290556900726,
+        "ndcg@10": 0.02546797498764632,
+        "novelty@10": 11.10266628553402,
+        "popularity_jsd": 0.15419123209795205,
+        "precision@10": 0.01991525423728814,
+        "recall@10": 0.020686309878411142,
+        "tail_recall": 0.027075877506911986,
+        "worst_activity_ndcg": 0.013265410047592137
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.22620590406227825,
+          "diversity": 0.15980305702527925,
+          "head_exposure": 0.40138888888888885,
+          "hit@10": 0.041666666666666664,
+          "mrr@10": 0.02199074074074074,
+          "ndcg@10": 0.015765925924623996,
+          "novelty@10": 10.734680594780237,
+          "popularity_jsd": 0.1464470812929989,
+          "precision@10": 0.005555555555555556,
+          "recall@10": 0.02083333333333333,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.24323299671622928,
+          "diversity": 0.17117408557625952,
+          "head_exposure": 0.34130434782608693,
+          "hit@10": 0.09782608695652174,
+          "mrr@10": 0.024607487922705312,
+          "ndcg@10": 0.013265410047592137,
+          "novelty@10": 11.081027822809535,
+          "popularity_jsd": 0.1570861732116991,
+          "precision@10": 0.010869565217391304,
+          "recall@10": 0.017848516218081433,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.2769199867633396,
+          "diversity": 0.12468756123848718,
+          "head_exposure": 0.22777777777777775,
+          "hit@10": 0.3472222222222222,
+          "mrr@10": 0.13947310405643737,
+          "ndcg@10": 0.05076219036296007,
+          "novelty@10": 11.49830112310243,
+          "popularity_jsd": 0.15823629147978385,
+          "precision@10": 0.04583333333333334,
+          "recall@10": 0.024165356100576893,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.59161733759995,
+        "gini": 0.9557948223808801,
+        "group_mean_exposure_gap": 0.002359559569230295,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.3403028618177734,
+            "items": 337,
+            "mean_item_exposure": 0.004588089749526215
+          },
+          "tail": {
+            "fraction_total_exposure": 0.6596971381822254,
+            "items": 1345,
+            "mean_item_exposure": 0.0022285301802959195
+          }
+        },
+        "normalized_entropy": 0.615121380945007,
+        "users": 236
+      },
+      "model": "GenreContent",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2028-GenreContent-1",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "genre_idf_power": 1.0,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reproducibility": true,
+        "seed": 2028,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 0.05624687499948777,
+        "inference": {
+          "valid": 0.3256491670035757
+        },
+        "total": 1.1019966249878053
+      }
+    },
+    "ItemKNN": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.1137434419961503,
+        "calibration_jsd": 0.15455672189244837,
+        "coverage@10": 0.16171224732461356,
+        "diversity": 0.8026520043045468,
+        "exposure_entropy": 0.6574234451686692,
+        "exposure_gini": 0.9414480748280357,
+        "head_exposure": 0.976271186440678,
+        "head_exposure_gap": 0.7759144682480502,
+        "head_recall": 0.24589733957038432,
+        "hit@10": 0.7203389830508474,
+        "item_group_exposure_gap": 0.01313471044972217,
+        "mrr@10": 0.35651398977670173,
+        "ndcg@10": 0.2051245811286856,
+        "novelty@10": 8.54855813574384,
+        "popularity_jsd": 0.14743411137746662,
+        "precision@10": 0.14279661016949174,
+        "recall@10": 0.19070240750445416,
+        "tail_recall": 0.021551724137931036,
+        "worst_activity_ndcg": 0.16577628190696717
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.16298114837423325,
+          "diversity": 0.7864293062904174,
+          "head_exposure": 0.9597222222222221,
+          "hit@10": 0.5416666666666666,
+          "mrr@10": 0.21708002645502644,
+          "ndcg@10": 0.1810078206931158,
+          "novelty@10": 8.649431577222856,
+          "popularity_jsd": 0.1193646257607357,
+          "precision@10": 0.06527777777777777,
+          "recall@10": 0.2708333333333333,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.1469962075504545,
+          "diversity": 0.8110613641591901,
+          "head_exposure": 0.9739130434782609,
+          "hit@10": 0.6739130434782609,
+          "mrr@10": 0.32358091787439613,
+          "ndcg@10": 0.16577628190696717,
+          "novelty@10": 8.504189643397698,
+          "popularity_jsd": 0.1261470944394024,
+          "precision@10": 0.10978260869565216,
+          "recall@10": 0.1770535322165757,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.15579295262543344,
+          "diversity": 0.8081294091710759,
+          "head_exposure": 0.9958333333333331,
+          "hit@10": 0.9583333333333334,
+          "mrr@10": 0.5380291005291006,
+          "ndcg@10": 0.27951972390311747,
+          "novelty@10": 8.504377767818225,
+          "popularity_jsd": 0.2027036741928352,
+          "precision@10": 0.26249999999999996,
+          "recall@10": 0.12801171121008578,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.044924649930046,
+        "gini": 0.9414480748280357,
+        "group_mean_exposure_gap": 0.01313471044972217,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9793800999465128,
+            "items": 337,
+            "mean_item_exposure": 0.013204366761572333
+          },
+          "tail": {
+            "fraction_total_exposure": 0.02061990005348699,
+            "items": 1345,
+            "mean_item_exposure": 6.965631185016299e-05
+          }
+        },
+        "normalized_entropy": 0.6574234451686692,
+        "users": 236
+      },
+      "model": "ItemKNN",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2028-ItemKNN-2",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 200,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2028,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "LightGCN": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.10093403562366898,
+        "calibration_jsd": 0.15915140418361154,
+        "coverage@10": 0.21284185493460167,
+        "diversity": 0.7785884674020268,
+        "exposure_entropy": 0.6944963988326033,
+        "exposure_gini": 0.9193520371661359,
+        "head_exposure": 0.9364406779661016,
+        "head_exposure_gap": 0.7360839597734739,
+        "head_recall": 0.249644498270569,
+        "hit@10": 0.7203389830508474,
+        "item_group_exposure_gap": 0.012511962261754748,
+        "mrr@10": 0.3345002690341674,
+        "ndcg@10": 0.20333881306737492,
+        "novelty@10": 8.69322391280634,
+        "popularity_jsd": 0.11498817550765106,
+        "precision@10": 0.14449152542372898,
+        "recall@10": 0.20134555797668624,
+        "tail_recall": 0.032395802251499406,
+        "worst_activity_ndcg": 0.1626719297716674
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.1729169868055397,
+          "diversity": 0.7804971340388006,
+          "head_exposure": 0.9402777777777777,
+          "hit@10": 0.5833333333333334,
+          "mrr@10": 0.22669753086419753,
+          "ndcg@10": 0.19503490050615097,
+          "novelty@10": 8.655850829607658,
+          "popularity_jsd": 0.10288707243858115,
+          "precision@10": 0.07361111111111113,
+          "recall@10": 0.30671296296296297,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.15329906943662724,
+          "diversity": 0.7772854842420059,
+          "head_exposure": 0.9369565217391305,
+          "hit@10": 0.6630434782608695,
+          "mrr@10": 0.2996161145617668,
+          "ndcg@10": 0.1626719297716674,
+          "novelty@10": 8.648861220027431,
+          "popularity_jsd": 0.10064466333821262,
+          "precision@10": 0.1152173913043478,
+          "recall@10": 0.17856789949181254,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.1528638048494966,
+          "diversity": 0.7783447236919459,
+          "head_exposure": 0.9319444444444444,
+          "hit@10": 0.9305555555555556,
+          "mrr@10": 0.486877204585538,
+          "ndcg@10": 0.2636059653953364,
+          "novelty@10": 8.787282659000285,
+          "popularity_jsd": 0.14541709968211447,
+          "precision@10": 0.2527777777777778,
+          "recall@10": 0.1250829388321922,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.442197012259253,
+        "gini": 0.9193520371661359,
+        "group_mean_exposure_gap": 0.012511962261754748,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9424447292561182,
+            "items": 337,
+            "mean_item_exposure": 0.01270639035680647
+          },
+          "tail": {
+            "fraction_total_exposure": 0.05755527074388152,
+            "items": 1345,
+            "mean_item_exposure": 0.0001944280950517219
+          }
+        },
+        "normalized_entropy": 0.6944963988326033,
+        "users": 236
+      },
+      "model": "LightGCN",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2028-LightGCN-200",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 200,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "n_layers": 2,
+        "reg_weight": 1e-05,
+        "reproducibility": true,
+        "seed": 2028,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 114.20156366701121,
+        "inference": {
+          "valid": 0.15863029100000858
+        },
+        "total": 115.07470833297702
+      }
+    },
+    "NGCF": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.07381781856170794,
+        "calibration_jsd": 0.16159340457423552,
+        "coverage@10": 0.16587395957193818,
+        "diversity": 0.7996436044599886,
+        "exposure_entropy": 0.6312436265657451,
+        "exposure_gini": 0.9498828967767493,
+        "head_exposure": 0.9728813559322035,
+        "head_exposure_gap": 0.7725246377395757,
+        "head_recall": 0.2457896798617784,
+        "hit@10": 0.7076271186440678,
+        "item_group_exposure_gap": 0.013087185000615054,
+        "mrr@10": 0.3376631019639496,
+        "ndcg@10": 0.2015376327856622,
+        "novelty@10": 8.433345277372053,
+        "popularity_jsd": 0.14422937796418386,
+        "precision@10": 0.14025423728813569,
+        "recall@10": 0.20022055316678947,
+        "tail_recall": 0.02146927146927147,
+        "worst_activity_ndcg": 0.17309474532199656
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.17951125017639744,
+          "diversity": 0.793099647266314,
+          "head_exposure": 0.9597222222222221,
+          "hit@10": 0.5694444444444444,
+          "mrr@10": 0.23484347442680775,
+          "ndcg@10": 0.19250639122452595,
+          "novelty@10": 8.471058689576516,
+          "popularity_jsd": 0.1225503654982069,
+          "precision@10": 0.06944444444444445,
+          "recall@10": 0.29398148148148145,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.15748866957163132,
+          "diversity": 0.7955606356874475,
+          "head_exposure": 0.9771739130434783,
+          "hit@10": 0.6739130434782609,
+          "mrr@10": 0.30506815044858526,
+          "ndcg@10": 0.17309474532199656,
+          "novelty@10": 8.387492112558332,
+          "popularity_jsd": 0.12602922589350296,
+          "precision@10": 0.12282608695652175,
+          "recall@10": 0.1956309994353473,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.14892049814206787,
+          "diversity": 0.8114046884185773,
+          "head_exposure": 0.9805555555555555,
+          "hit@10": 0.8888888888888888,
+          "mrr@10": 0.48213183421516753,
+          "ndcg@10": 0.2469125638837045,
+          "novelty@10": 8.454222020207336,
+          "popularity_jsd": 0.18916414029825313,
+          "precision@10": 0.23333333333333334,
+          "recall@10": 0.11232405462005077,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.764382708869336,
+        "gini": 0.9498828967767493,
+        "group_mean_exposure_gap": 0.013087185000615054,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9765613521542015,
+            "items": 337,
+            "mean_item_exposure": 0.01316636335547895
+          },
+          "tail": {
+            "fraction_total_exposure": 0.023438647845798032,
+            "items": 1345,
+            "mean_item_exposure": 7.9178354863896e-05
+          }
+        },
+        "normalized_entropy": 0.6312436265657451,
+        "users": 236
+      },
+      "model": "NGCF",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2028-NGCF-1",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 60,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "hidden_size_list": [
+          64,
+          64,
+          64
+        ],
+        "message_dropout": 0.1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "node_dropout": 0.0,
+        "reg_weight": 1e-05,
+        "reproducibility": true,
+        "seed": 2028,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 63.29665295800078,
+        "inference": {
+          "valid": 0.16448783400119282
+        },
+        "total": 64.01071254198905
+      }
+    },
+    "NeuMF": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.09574380779950706,
+        "calibration_jsd": 0.16656235365105834,
+        "coverage@10": 0.2051129607609988,
+        "diversity": 0.7867711042357936,
+        "exposure_entropy": 0.6827634918556055,
+        "exposure_gini": 0.9259982061517934,
+        "head_exposure": 0.9351694915254238,
+        "head_exposure_gap": 0.734812773332796,
+        "head_recall": 0.24008714800284148,
+        "hit@10": 0.6949152542372882,
+        "item_group_exposure_gap": 0.012539398158325851,
+        "mrr@10": 0.32691350551520076,
+        "ndcg@10": 0.1976908594957828,
+        "novelty@10": 8.700296890548294,
+        "popularity_jsd": 0.1101268431237377,
+        "precision@10": 0.1381355932203391,
+        "recall@10": 0.19003166550165287,
+        "tail_recall": 0.019538036994933543,
+        "worst_activity_ndcg": 0.15668104301794075
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.1769896653841293,
+          "diversity": 0.7883127572016462,
+          "head_exposure": 0.9527777777777777,
+          "hit@10": 0.5416666666666666,
+          "mrr@10": 0.250380291005291,
+          "ndcg@10": 0.1953583003402495,
+          "novelty@10": 8.617958454786775,
+          "popularity_jsd": 0.10698649048247783,
+          "precision@10": 0.06666666666666667,
+          "recall@10": 0.2824074074074074,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.15858824771152386,
+          "diversity": 0.7842755540219308,
+          "head_exposure": 0.9260869565217393,
+          "hit@10": 0.6521739130434783,
+          "mrr@10": 0.30366200828157347,
+          "ndcg@10": 0.15668104301794075,
+          "novelty@10": 8.690431154193915,
+          "popularity_jsd": 0.08753853949432991,
+          "precision@10": 0.10869565217391304,
+          "recall@10": 0.17074314574314575,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.1663241772851703,
+          "diversity": 0.7884182098765432,
+          "head_exposure": 0.9291666666666667,
+          "hit@10": 0.9027777777777778,
+          "mrr@10": 0.43315696649029983,
+          "ndcg@10": 0.2524248508174478,
+          "novelty@10": 8.795241544984858,
+          "popularity_jsd": 0.14213002818035195,
+          "precision@10": 0.24722222222222223,
+          "recall@10": 0.12230236550954615,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.316467627058546,
+        "gini": 0.9259982061517934,
+        "group_mean_exposure_gap": 0.012539398158325851,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9440719600207466,
+            "items": 337,
+            "mean_item_exposure": 0.012728329287179914
+          },
+          "tail": {
+            "fraction_total_exposure": 0.05592803997925316,
+            "items": 1345,
+            "mean_item_exposure": 0.00018893112885406263
+          }
+        },
+        "normalized_entropy": 0.6827634918556055,
+        "users": 236
+      },
+      "model": "NeuMF",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2028-NeuMF-0",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "mf_embedding_size": 64,
+        "mlp_embedding_size": 64,
+        "mlp_hidden_size": [
+          128,
+          64
+        ],
+        "reproducibility": true,
+        "seed": 2028,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "use_pretrain": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 12.048402250016807,
+        "inference": {
+          "valid": 1.8476210839871783
+        },
+        "total": 14.603920624998864
+      }
+    },
+    "PositiveEASE:all_observed": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.11030481226798552,
+        "calibration_jsd": 0.1522163850189423,
+        "coverage@10": 0.14090368608799048,
+        "diversity": 0.7955703524347593,
+        "exposure_entropy": 0.6447413569608091,
+        "exposure_gini": 0.9459814857621764,
+        "head_exposure": 0.9927966101694916,
+        "head_exposure_gap": 0.7924398919768638,
+        "head_recall": 0.26525857924171836,
+        "hit@10": 0.7033898305084746,
+        "item_group_exposure_gap": 0.01339355578483026,
+        "mrr@10": 0.3985640301318267,
+        "ndcg@10": 0.22685327949537426,
+        "novelty@10": 8.495760821005637,
+        "popularity_jsd": 0.15738798643131954,
+        "precision@10": 0.14957627118644085,
+        "recall@10": 0.20040903835132756,
+        "tail_recall": 0.011494252873563218,
+        "worst_activity_ndcg": 0.1879932674028583
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.1696399447094893,
+          "diversity": 0.7765112433862433,
+          "head_exposure": 0.9833333333333333,
+          "hit@10": 0.5277777777777778,
+          "mrr@10": 0.27489528218694886,
+          "ndcg@10": 0.20506293921589752,
+          "novelty@10": 8.538396650777031,
+          "popularity_jsd": 0.12476642762706033,
+          "precision@10": 0.06666666666666667,
+          "recall@10": 0.2743055555555556,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.14007769136661063,
+          "diversity": 0.7916790315159881,
+          "head_exposure": 0.9956521739130434,
+          "hit@10": 0.6847826086956522,
+          "mrr@10": 0.3770445134575569,
+          "ndcg@10": 0.1879932674028583,
+          "novelty@10": 8.460150187274968,
+          "popularity_jsd": 0.1438365076076207,
+          "precision@10": 0.11304347826086956,
+          "recall@10": 0.18885438233264323,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.15030337832859686,
+          "diversity": 0.8196017048794827,
+          "head_exposure": 0.9986111111111112,
+          "hit@10": 0.9027777777777778,
+          "mrr@10": 0.549729938271605,
+          "ndcg@10": 0.2982980796708438,
+          "novelty@10": 8.498627467667868,
+          "popularity_jsd": 0.20732532373252727,
+          "precision@10": 0.2791666666666667,
+          "recall@10": 0.14127680383764,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.909023874737555,
+        "gini": 0.9459814857621764,
+        "group_mean_exposure_gap": 0.01339355578483026,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9947322897857173,
+            "items": 337,
+            "mean_item_exposure": 0.013411350694818695
+          },
+          "tail": {
+            "fraction_total_exposure": 0.005267710214282433,
+            "items": 1345,
+            "mean_item_exposure": 1.7794909988435922e-05
+          }
+        },
+        "normalized_entropy": 0.6447413569608091,
+        "users": 236
+      },
+      "model": "PositiveEASE",
+      "protocol": "Training ratings >=4 likes, <=2 dislikes, 3 neutral. Training-history masks include every observed rating. Parameters selected only on meta-fit validation users.",
+      "run": "positive_ease-all_observed",
+      "selection": {
+        "model": "positive_ease",
+        "penalty": 250.0,
+        "seed": 2028,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.2303421817031676,
+        "selection_objective": "all_observed"
+      },
+      "settings": {
+        "model": "positive_ease",
+        "penalty": 250.0,
+        "seed": 2028,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.2303421817031676,
+        "selection_objective": "all_observed"
+      },
+      "timing_seconds": null
+    },
+    "Random": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.01596228196726593,
+        "calibration_jsd": 0.24067718299355195,
+        "coverage@10": 0.7562425683709869,
+        "diversity": 0.8253756389561474,
+        "exposure_entropy": 0.9376748606863813,
+        "exposure_gini": 0.5004694374972289,
+        "head_exposure": 0.16864406779661018,
+        "head_exposure_gap": 0.031712650396017644,
+        "head_recall": 0.007157984126086164,
+        "hit@10": 0.06779661016949153,
+        "item_group_exposure_gap": 0.00048597226911629553,
+        "mrr@10": 0.019614272262577347,
+        "ndcg@10": 0.007675090396078186,
+        "novelty@10": 12.148035499272481,
+        "popularity_jsd": 0.28226961959408975,
+        "precision@10": 0.006779661016949154,
+        "recall@10": 0.006834578441459817,
+        "tail_recall": 0.0031195177746901883,
+        "worst_activity_ndcg": 0.0020842034245078583
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.25466326211864004,
+          "diversity": 0.8389767048794827,
+          "head_exposure": 0.2027777777777778,
+          "hit@10": 0.027777777777777776,
+          "mrr@10": 0.002932098765432099,
+          "ndcg@10": 0.004447606530722443,
+          "novelty@10": 11.875398556753076,
+          "popularity_jsd": 0.27636375437962096,
+          "precision@10": 0.002777777777777778,
+          "recall@10": 0.011574074074074073,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.23883729438678528,
+          "diversity": 0.8148280423280423,
+          "head_exposure": 0.17282608695652174,
+          "hit@10": 0.021739130434782608,
+          "mrr@10": 0.004270186335403727,
+          "ndcg@10": 0.0020842034245078583,
+          "novelty@10": 12.199454789138535,
+          "popularity_jsd": 0.3037187347311419,
+          "precision@10": 0.002173913043478261,
+          "recall@10": 0.002639751552795031,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.22904207264377685,
+          "diversity": 0.8252520576131688,
+          "head_exposure": 0.12916666666666668,
+          "hit@10": 0.16666666666666666,
+          "mrr@10": 0.05590277777777778,
+          "ndcg@10": 0.018046485391773788,
+          "novelty@10": 12.35497001585194,
+          "popularity_jsd": 0.2607682821334365,
+          "precision@10": 0.01666666666666667,
+          "recall@10": 0.007455139388806118,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 10.048088166333049,
+        "gini": 0.5004694374972289,
+        "group_mean_exposure_gap": 0.00048597226911629553,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.17153356583043797,
+            "items": 337,
+            "mean_item_exposure": 0.0023126793318233815
+          },
+          "tail": {
+            "fraction_total_exposure": 0.8284664341695614,
+            "items": 1345,
+            "mean_item_exposure": 0.002798651600939677
+          }
+        },
+        "normalized_entropy": 0.9376748606863813,
+        "users": 236
+      },
+      "model": "Random",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2028-Random-0",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "embedding_size": 64,
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "item",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reg_weight": 250.0,
+        "reproducibility": true,
+        "seed": 2028,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": null
+    },
+    "SLIMElastic": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.08316190180809255,
+        "calibration_jsd": 0.13507850381086556,
+        "coverage@10": 0.21343638525564804,
+        "diversity": 0.8123266971572056,
+        "exposure_entropy": 0.6933589780429918,
+        "exposure_gini": 0.9205876033150923,
+        "head_exposure": 0.9559322033898306,
+        "head_exposure_gap": 0.7555754851972029,
+        "head_recall": 0.2920773470170133,
+        "hit@10": 0.7796610169491526,
+        "item_group_exposure_gap": 0.012849762492600513,
+        "mrr@10": 0.3994350282485877,
+        "ndcg@10": 0.2433318451269234,
+        "novelty@10": 8.64040013269844,
+        "popularity_jsd": 0.1228647658252889,
+        "precision@10": 0.1618644067796613,
+        "recall@10": 0.23668431123032013,
+        "tail_recall": 0.04818919905126801,
+        "worst_activity_ndcg": 0.20733293973930503
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.15295809091906987,
+          "diversity": 0.7988741916519694,
+          "head_exposure": 0.9208333333333333,
+          "hit@10": 0.5972222222222222,
+          "mrr@10": 0.2725418871252205,
+          "ndcg@10": 0.24216745003507226,
+          "novelty@10": 8.778006508091895,
+          "popularity_jsd": 0.08210848477191283,
+          "precision@10": 0.08333333333333333,
+          "recall@10": 0.3518518518518518,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.1273652171516971,
+          "diversity": 0.809200885668277,
+          "head_exposure": 0.9652173913043478,
+          "hit@10": 0.782608695652174,
+          "mrr@10": 0.3839328847481022,
+          "ndcg@10": 0.20733293973930503,
+          "novelty@10": 8.577429022758583,
+          "popularity_jsd": 0.1098547485522312,
+          "precision@10": 0.13804347826086957,
+          "recall@10": 0.22353386347951568,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.12705478298937653,
+          "diversity": 0.8297732951205172,
+          "head_exposure": 0.9791666666666666,
+          "hit@10": 0.9583333333333334,
+          "mrr@10": 0.5461364638447972,
+          "ndcg@10": 0.2904948415473976,
+          "novelty@10": 8.583256842228128,
+          "popularity_jsd": 0.18024495783868308,
+          "precision@10": 0.2708333333333333,
+          "recall@10": 0.1383201205125937,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 7.430008454310852,
+        "gini": 0.9205876033150923,
+        "group_mean_exposure_gap": 0.012849762492600513,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9624797562327712,
+            "items": 337,
+            "mean_item_exposure": 0.012976510041995265
+          },
+          "tail": {
+            "fraction_total_exposure": 0.0375202437672284,
+            "items": 1345,
+            "mean_item_exposure": 0.0001267475493947522
+          }
+        },
+        "normalized_entropy": 0.6933589780429918,
+        "users": 236
+      },
+      "model": "SLIMElastic",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2028-SLIMElastic-1",
+      "selection": null,
+      "settings": {
+        "alpha": 0.01,
+        "dataset": "ml-100k",
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "hide_item": true,
+        "l1_ratio": 0.1,
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "positive_only": true,
+        "reproducibility": true,
+        "seed": 2028,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 9.422883791994536,
+        "inference": {
+          "valid": 0.5303834160149563
+        },
+        "total": 11.033867874997668
+      }
+    },
+    "SignedChannelsLinear:all_observed": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.096217650910431,
+        "calibration_jsd": 0.1533875606642929,
+        "coverage@10": 0.13912009512485138,
+        "diversity": 0.793198704152094,
+        "exposure_entropy": 0.6424992024927662,
+        "exposure_gini": 0.9468868083644993,
+        "head_exposure": 0.9936440677966102,
+        "head_exposure_gap": 0.7932873496039824,
+        "head_recall": 0.2667399918093465,
+        "hit@10": 0.7203389830508474,
+        "item_group_exposure_gap": 0.013401132261300807,
+        "mrr@10": 0.3912647968792036,
+        "ndcg@10": 0.22368868264066497,
+        "novelty@10": 8.488130326071571,
+        "popularity_jsd": 0.15807997306951935,
+        "precision@10": 0.14830508474576287,
+        "recall@10": 0.19828140719178736,
+        "tail_recall": 0.005747126436781609,
+        "worst_activity_ndcg": 0.19130511006766343
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.1758903665416654,
+          "diversity": 0.7739939741328631,
+          "head_exposure": 0.9833333333333333,
+          "hit@10": 0.5277777777777778,
+          "mrr@10": 0.275,
+          "ndcg@10": 0.20123361370207046,
+          "novelty@10": 8.511582218080008,
+          "popularity_jsd": 0.12313227124032193,
+          "precision@10": 0.06527777777777778,
+          "recall@10": 0.2673611111111111,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.14128272146205176,
+          "diversity": 0.7884725097768578,
+          "head_exposure": 0.9978260869565218,
+          "hit@10": 0.717391304347826,
+          "mrr@10": 0.37831694271911664,
+          "ndcg@10": 0.19130511006766343,
+          "novelty@10": 8.459537596122118,
+          "popularity_jsd": 0.14689050876479803,
+          "precision@10": 0.11739130434782609,
+          "recall@10": 0.1923524844720497,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.14635204932311752,
+          "diversity": 0.8184424603174603,
+          "head_exposure": 0.9986111111111112,
+          "hit@10": 0.9166666666666666,
+          "mrr@10": 0.5240740740740741,
+          "ndcg@10": 0.2875227609780944,
+          "novelty@10": 8.501213588998572,
+          "popularity_jsd": 0.20732532373252727,
+          "precision@10": 0.2708333333333333,
+          "recall@10": 0.1367775489699058,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.884997032681725,
+        "gini": 0.9468868083644993,
+        "group_mean_exposure_gap": 0.013401132261300807,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9951816527423243,
+            "items": 337,
+            "mean_item_exposure": 0.01341740917332814
+          },
+          "tail": {
+            "fraction_total_exposure": 0.004818347257675352,
+            "items": 1345,
+            "mean_item_exposure": 1.6276912027333244e-05
+          }
+        },
+        "normalized_entropy": 0.6424992024927662,
+        "users": 236
+      },
+      "model": "SignedChannelsLinear",
+      "protocol": "Training ratings >=4 likes, <=2 dislikes, 3 neutral. Training-history masks include every observed rating. Parameters selected only on meta-fit validation users.",
+      "run": "signed_channels-all_observed",
+      "selection": {
+        "model": "signed_channels",
+        "penalty": 250.0,
+        "seed": 2028,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.22965335272262902,
+        "selection_objective": "all_observed"
+      },
+      "settings": {
+        "model": "signed_channels",
+        "penalty": 250.0,
+        "seed": 2028,
+        "selection_cohort": "meta_fit",
+        "selection_ndcg": 0.22965335272262902,
+        "selection_objective": "all_observed"
+      },
+      "timing_seconds": null
+    },
+    "UserKNN": {
+      "aggregate": {
+        "activity_ndcg_gap": 0.11626882997440688,
+        "calibration_jsd": 0.17431794941428297,
+        "coverage@10": 0.10166468489892984,
+        "diversity": 0.8105700161420499,
+        "exposure_entropy": 0.5876136951068804,
+        "exposure_gini": 0.9650712809203206,
+        "head_exposure": 0.9991525423728814,
+        "head_exposure_gap": 0.7987958241802536,
+        "head_recall": 0.25976047038072264,
+        "hit@10": 0.711864406779661,
+        "item_group_exposure_gap": 0.013473093298448615,
+        "mrr@10": 0.3627892117298897,
+        "ndcg@10": 0.21268231966257137,
+        "novelty@10": 8.292373723026884,
+        "popularity_jsd": 0.1656544559050908,
+        "precision@10": 0.14449152542372895,
+        "recall@10": 0.1940325845437145,
+        "tail_recall": 0.0,
+        "worst_activity_ndcg": 0.16354244630781342
+      },
+      "groups": {
+        "0": {
+          "calibration_jsd": 0.19541192639300936,
+          "diversity": 0.8082429453262787,
+          "head_exposure": 1.0,
+          "hit@10": 0.5277777777777778,
+          "mrr@10": 0.2735670194003527,
+          "ndcg@10": 0.2083432012184462,
+          "novelty@10": 8.260562332429158,
+          "popularity_jsd": 0.14397953597586724,
+          "precision@10": 0.06527777777777778,
+          "recall@10": 0.2754629629629629,
+          "users": 72
+        },
+        "1": {
+          "calibration_jsd": 0.15879689072373362,
+          "diversity": 0.8131958822176216,
+          "head_exposure": 1.0,
+          "hit@10": 0.6630434782608695,
+          "mrr@10": 0.31177104899930985,
+          "ndcg@10": 0.16354244630781342,
+          "novelty@10": 8.265945963701224,
+          "popularity_jsd": 0.15053620093082698,
+          "precision@10": 0.10869565217391304,
+          "recall@10": 0.1774805508501161,
+          "users": 92
+        },
+        "2": {
+          "calibration_jsd": 0.17305643631792517,
+          "diversity": 0.8095418136390359,
+          "head_exposure": 0.9972222222222222,
+          "hit@10": 0.9583333333333334,
+          "mrr@10": 0.517201278659612,
+          "ndcg@10": 0.2798112762822203,
+          "novelty@10": 8.357953917207405,
+          "popularity_jsd": 0.2066471460792071,
+          "precision@10": 0.26944444444444443,
+          "recall@10": 0.13375202695517455,
+          "users": 72
+        }
+      },
+      "item_exposure": {
+        "catalogue_items": 1682,
+        "entropy_bits": 6.296846021718705,
+        "gini": 0.9650712809203206,
+        "group_mean_exposure_gap": 0.013473093298448615,
+        "groups": {
+          "head": {
+            "fraction_total_exposure": 0.9994496821540112,
+            "items": 337,
+            "mean_item_exposure": 0.013474952333235276
+          },
+          "tail": {
+            "fraction_total_exposure": 0.0005503178459887318,
+            "items": 1345,
+            "mean_item_exposure": 1.8590347866607938e-06
+          }
+        },
+        "normalized_entropy": 0.5876136951068804,
+        "users": 236
+      },
+      "model": "UserKNN",
+      "protocol": "All observed ratings are positives. Full catalog; padding/seen items excluded. Validation selects models.",
+      "run": "2028-UserKNN-1",
+      "selection": null,
+      "settings": {
+        "dataset": "ml-100k",
+        "epochs": 20,
+        "eval_args": {
+          "group_by": "user",
+          "mode": "full",
+          "order": "RO",
+          "split": {
+            "RS": [
+              0.8,
+              0.1,
+              0.1
+            ]
+          }
+        },
+        "eval_step": 1,
+        "k": 100,
+        "knn_method": "user",
+        "metrics": [
+          "Recall",
+          "MRR",
+          "NDCG",
+          "Hit",
+          "Precision"
+        ],
+        "reproducibility": true,
+        "seed": 2028,
+        "show_progress": false,
+        "stopping_step": 5,
+        "topk": [
+          10
+        ],
+        "train_batch_size": 2048,
+        "use_gpu": false,
+        "valid_metric": "MRR@10",
+        "worker": 0
+      },
+      "timing_seconds": {
+        "fit": 1.348331709014019,
+        "inference": {
+          "valid": 0.3074395000003278
+        },
+        "total": 2.373659916978795
+      }
+    }
+  }
+}

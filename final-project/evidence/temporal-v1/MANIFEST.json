@@ -1,0 +1,78 @@
+{
+  "chronology": "Per-user ordered 80/10/10 split; not a global timestamp cutoff.",
+  "confounds": "Validation labels and candidate histories change across split protocols; absolute metric differences are sensitivity, not improvement.",
+  "curation_source_sha256": "cda2b790000945a74d48c17b8e40798003d5b9f37c175425566a8039b9549944",
+  "dataset_and_sizes_and_ids_matched": true,
+  "grids": {
+    "EASE": [
+      {
+        "reg_weight": 50.0
+      },
+      {
+        "reg_weight": 250.0
+      },
+      {
+        "reg_weight": 1000.0
+      }
+    ],
+    "ExactPop": [
+      {}
+    ],
+    "ItemKNN": [
+      {
+        "k": 50,
+        "knn_method": "item"
+      },
+      {
+        "k": 100,
+        "knn_method": "item"
+      },
+      {
+        "k": 200,
+        "knn_method": "item"
+      }
+    ],
+    "Random": [
+      {}
+    ]
+  },
+  "matched_cohorts": {
+    "calibration": 236,
+    "development": 236,
+    "meta_fit": 471
+  },
+  "models": [
+    "ExactPop",
+    "Random",
+    "EASE",
+    "ItemKNN"
+  ],
+  "random_control_sources": [
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/research-v2/2026-ExactPop-0",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/research-v2/2026-Random-0",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/research-v2/2026-EASE-1",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/research-v2/2026-ItemKNN-2"
+  ],
+  "random_source_grids_verified": true,
+  "resume": {
+    "control_seconds": 16.050401832995703,
+    "interrupted_artifact": "random-control-study-interrupted",
+    "reason": "Concurrent numerical-library contention; control interrupted before coefficient export and restarted unchanged with one numerical thread.",
+    "temporal_seconds": 19.48112954100361
+  },
+  "scientific_test_read": false,
+  "seed": 2026,
+  "selection": "Individual hyperparameters selected by meta-fit NDCG@10; hybrid settings by disjoint development users.",
+  "source_sha256": {
+    "experiment.py": "2c2897ac2cd342ed139a1850ccb9ff9289f0ed0118d0efd427fae0fd1197ad89",
+    "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50",
+    "study.py": "c5db3e1555b5e13a820f2f1af15eb7a4aab9f447e11be60829ac2efe67447c32",
+    "temporal_experiment.py": "2887e03d71af3dd5bb9aaf04020ec059d620c7dd5b4645ff1c10e361c8d47103"
+  },
+  "status": "complete",
+  "test_evaluated": false,
+  "timestamp_semantics": {
+    "caveat": "MovieLens timestamps record rating entries, which may be submitted long after viewing or backfilled in batches. This experiment orders rating activity and cannot establish viewing order or changing taste.",
+    "source": "https://files.grouplens.org/papers/harper-tiis2015.pdf"
+  }
+}

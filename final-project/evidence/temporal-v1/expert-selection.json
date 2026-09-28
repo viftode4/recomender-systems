@@ -1,0 +1,98 @@
+{
+  "EASE": {
+    "candidates": [
+      {
+        "meta_fit_ndcg": 0.14724947891598716,
+        "path": "/Users/vliftode/personal/recomender-systems/final-project/runs/temporal-v1/2026-EASE-0",
+        "settings": {
+          "reg_weight": 50.0
+        }
+      },
+      {
+        "meta_fit_ndcg": 0.14385103934667584,
+        "path": "/Users/vliftode/personal/recomender-systems/final-project/runs/temporal-v1/2026-EASE-1",
+        "settings": {
+          "reg_weight": 250.0
+        }
+      },
+      {
+        "meta_fit_ndcg": 0.13544644713346443,
+        "path": "/Users/vliftode/personal/recomender-systems/final-project/runs/temporal-v1/2026-EASE-2",
+        "settings": {
+          "reg_weight": 1000.0
+        }
+      }
+    ],
+    "selected": {
+      "meta_fit_ndcg": 0.14724947891598716,
+      "path": "/Users/vliftode/personal/recomender-systems/final-project/runs/temporal-v1/2026-EASE-0",
+      "settings": {
+        "reg_weight": 50.0
+      }
+    }
+  },
+  "ExactPop": {
+    "candidates": [
+      {
+        "meta_fit_ndcg": 0.08130305490241951,
+        "path": "/Users/vliftode/personal/recomender-systems/final-project/runs/temporal-v1/2026-ExactPop-0",
+        "settings": {}
+      }
+    ],
+    "selected": {
+      "meta_fit_ndcg": 0.08130305490241951,
+      "path": "/Users/vliftode/personal/recomender-systems/final-project/runs/temporal-v1/2026-ExactPop-0",
+      "settings": {}
+    }
+  },
+  "ItemKNN": {
+    "candidates": [
+      {
+        "meta_fit_ndcg": 0.13065280223943485,
+        "path": "/Users/vliftode/personal/recomender-systems/final-project/runs/temporal-v1/2026-ItemKNN-0",
+        "settings": {
+          "k": 50,
+          "knn_method": "item"
+        }
+      },
+      {
+        "meta_fit_ndcg": 0.12644821722312272,
+        "path": "/Users/vliftode/personal/recomender-systems/final-project/runs/temporal-v1/2026-ItemKNN-1",
+        "settings": {
+          "k": 100,
+          "knn_method": "item"
+        }
+      },
+      {
+        "meta_fit_ndcg": 0.13628733222085107,
+        "path": "/Users/vliftode/personal/recomender-systems/final-project/runs/temporal-v1/2026-ItemKNN-2",
+        "settings": {
+          "k": 200,
+          "knn_method": "item"
+        }
+      }
+    ],
+    "selected": {
+      "meta_fit_ndcg": 0.13628733222085107,
+      "path": "/Users/vliftode/personal/recomender-systems/final-project/runs/temporal-v1/2026-ItemKNN-2",
+      "settings": {
+        "k": 200,
+        "knn_method": "item"
+      }
+    }
+  },
+  "Random": {
+    "candidates": [
+      {
+        "meta_fit_ndcg": 0.0067129546239269745,
+        "path": "/Users/vliftode/personal/recomender-systems/final-project/runs/temporal-v1/2026-Random-0",
+        "settings": {}
+      }
+    ],
+    "selected": {
+      "meta_fit_ndcg": 0.0067129546239269745,
+      "path": "/Users/vliftode/personal/recomender-systems/final-project/runs/temporal-v1/2026-Random-0",
+      "settings": {}
+    }
+  }
+}

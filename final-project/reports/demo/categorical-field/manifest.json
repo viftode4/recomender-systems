@@ -1,0 +1,18 @@
+{
+  "files_sha256": {
+    "index.html": "2b7dcf47cc13866bd650a53882bd7ef9af7906fe6397c3bb4002f361268d9d72",
+    "predictions.json": "1beddc13f3c244d287802b8d507ca4e381760f5af1017c042af8c2dab38dfd89"
+  },
+  "generator_sha256": "0dc0a0eeb7e0055c227ffbedcbc126788cad6c23d9b252ca49f8a787bbf68f2a",
+  "profile_kind": "hand_authored_synthetic",
+  "provenance": {
+    "catalog_sha256": "c6ea5f226bed6474bbd2bfb16552e67575ae033adc2eba6c7a215b310e37ee02",
+    "checkpoint_sha256": "b6410dbf05eb3d46af91112307a1d97fc79be38761047510cab86639b9c59725",
+    "epoch": 60,
+    "metadata_sha256": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+    "model_source_sha256": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+    "seed": 2026
+  },
+  "real_user_history_read": false,
+  "test_read": false
+}

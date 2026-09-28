@@ -1,0 +1,271 @@
+{
+  "aggregate_validator_sha256": "71a1565ae649118931641944e4a4c5c0cf521d2d350785b0278f04c053a43843",
+  "batch_completion_sha256": "922a33bdd68c1f44be082f37198023a7299a06e6b3aacdaa4ad892857e07cd4e",
+  "batch_plan_sha256": "a3a562b1a48365236c8224c6740204f196892974083d38ad1a1efbd263aed372",
+  "copy_policy": "Aggregate and evaluation manifest bytes preserved exactly; raw individual metrics and recommendation files excluded.",
+  "curation_source_sha256": "4c1db36d75ebec54c6cdc36bea3705b0e8833ff86e843f0de4df73af56ace6b3",
+  "evaluation_manifest_sha256": "15afd16a4de31462c79f8379f91832287d0cf32d00dd6d3005387fc6f848e1f2",
+  "frozen_bundle_sha256": {
+    "2026": "789d16b2b80bbfc2ebea35615921c37d6f75143e5ee2c3e6aa3c62b4d14a2bd7",
+    "2027": "a8ede0d84a2291d2c92cfc885f509ce4c24ef05f4081214a9ecee5e86d553e15",
+    "2028": "f8f84df588311d625a952fcabcedbecffadaea0e33f323ff4b71904fcf9a1138"
+  },
+  "frozen_manifest_sha256": "e19b2663f08e85a16c015e4c571fe0e1fa99dfb56c5b681f19a9904592f2d76f",
+  "individual_user_data_exported": false,
+  "post_test_model_selection": false,
+  "protocols": {
+    "2026": {
+      "baselines": {
+        "event_count_pseudocount": 1.0,
+        "global_category_pseudocount": 1.0,
+        "item_user_category_smoothing_mass": 10.0,
+        "names": [
+          "event_global_category",
+          "event_item_category",
+          "event_item_user_tilt"
+        ],
+        "validation_tuning": false
+      },
+      "batch_size": 16,
+      "checkpoints": [
+        10,
+        30,
+        60,
+        100
+      ],
+      "claims": "No novelty, psychological interpretation, unbiased exposure, independent confirmation, or SOTA claim.",
+      "cohorts": "Original user partition: meta-fit selection; disjoint development evaluation. Reused validation is exploratory.",
+      "conditional_rating_adapter": "softmax over each item's five rating logits",
+      "context_fraction": 0.8,
+      "controls": "Identical allocated parameters, initial weights, episodes and batch order; fixed_flow caches initial routes and gates jointly within each query.",
+      "decomposition": "joint NLL = conditional category NLL + item-event NLL, unit coefficients; only query-global logit shift remains invariant.",
+      "epochs": 100,
+      "inference": "Original TRAIN ratings only; validation labels never enter context.",
+      "learning_rate": 0.001,
+      "likelihood_scope": "One exchangeable recorded event conditional on eligible catalog, not binary ever-rated probability or chronological next event.",
+      "model_config": {
+        "damping": 0.5,
+        "dim": 8,
+        "ports": 16,
+        "steps": 4
+      },
+      "negative_assumption": "Missing pairs compete as possible recorded outcomes in the denominator; they are not observed dislikes. Selection/exposure biases remain.",
+      "normalizer": "All catalog items except padding and context observations, times five categories; all probes remain eligible.",
+      "numerical_threads": 1,
+      "optimizer": "Adam",
+      "ranking_adapters": {
+        "all_observed": "logsumexp(all five rating logits)",
+        "liked_record": "logsumexp(rating 4 and 5 logits)"
+      },
+      "schema_version": 1,
+      "seeds": [
+        2026
+      ],
+      "selection_direction": "minimize; exact ties retain earlier checkpoint",
+      "selection_metric": "meta_fit_macro_joint_nll",
+      "source_sha256": {
+        "JOINT_FIELD_PROTOCOL.md": "fa4fdae864004de9dc4fa2ccab6e6b48f4738e79ffb277fda4f3544472a93694",
+        "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+        "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+        "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+        "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+        "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+        "joint_field_experiment.py": "e2228dd51c4ac909c587eb98cff795872d23232dd68e3790ce97957c40e28c0f",
+        "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+        "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+      },
+      "stage": "development",
+      "status": "written_before_fitting",
+      "test_evaluated": false,
+      "test_read": false,
+      "training_categories": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "training_objective": "joint_recorded_item_rating_multinomial",
+      "training_reduction": "Mean masked-probe joint NLL per user, then mean across users.",
+      "variants": [
+        "adaptive",
+        "fixed_flow"
+      ]
+    },
+    "2027": {
+      "baselines": {
+        "event_count_pseudocount": 1.0,
+        "global_category_pseudocount": 1.0,
+        "item_user_category_smoothing_mass": 10.0,
+        "names": [
+          "event_global_category",
+          "event_item_category",
+          "event_item_user_tilt"
+        ],
+        "validation_tuning": false
+      },
+      "batch_size": 16,
+      "checkpoints": [
+        10,
+        30,
+        60,
+        100
+      ],
+      "claims": "No novelty, psychological interpretation, unbiased exposure, independent confirmation, or SOTA claim.",
+      "cohorts": "Original user partition: meta-fit selection; disjoint development evaluation. Reused validation is exploratory.",
+      "conditional_rating_adapter": "softmax over each item's five rating logits",
+      "context_fraction": 0.8,
+      "controls": "Identical allocated parameters, initial weights, episodes and batch order; fixed_flow caches initial routes and gates jointly within each query.",
+      "decomposition": "joint NLL = conditional category NLL + item-event NLL, unit coefficients; only query-global logit shift remains invariant.",
+      "epochs": 100,
+      "inference": "Original TRAIN ratings only; validation labels never enter context.",
+      "learning_rate": 0.001,
+      "likelihood_scope": "One exchangeable recorded event conditional on eligible catalog, not binary ever-rated probability or chronological next event.",
+      "model_config": {
+        "damping": 0.5,
+        "dim": 8,
+        "ports": 16,
+        "steps": 4
+      },
+      "negative_assumption": "Missing pairs compete as possible recorded outcomes in the denominator; they are not observed dislikes. Selection/exposure biases remain.",
+      "normalizer": "All catalog items except padding and context observations, times five categories; all probes remain eligible.",
+      "numerical_threads": 1,
+      "optimizer": "Adam",
+      "ranking_adapters": {
+        "all_observed": "logsumexp(all five rating logits)",
+        "liked_record": "logsumexp(rating 4 and 5 logits)"
+      },
+      "schema_version": 1,
+      "seeds": [
+        2027
+      ],
+      "selection_direction": "minimize; exact ties retain earlier checkpoint",
+      "selection_metric": "meta_fit_macro_joint_nll",
+      "source_sha256": {
+        "JOINT_FIELD_PROTOCOL.md": "fa4fdae864004de9dc4fa2ccab6e6b48f4738e79ffb277fda4f3544472a93694",
+        "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+        "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+        "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+        "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+        "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+        "joint_field_experiment.py": "e2228dd51c4ac909c587eb98cff795872d23232dd68e3790ce97957c40e28c0f",
+        "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+        "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+      },
+      "stage": "development",
+      "status": "written_before_fitting",
+      "test_evaluated": false,
+      "test_read": false,
+      "training_categories": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "training_objective": "joint_recorded_item_rating_multinomial",
+      "training_reduction": "Mean masked-probe joint NLL per user, then mean across users.",
+      "variants": [
+        "adaptive",
+        "fixed_flow"
+      ]
+    },
+    "2028": {
+      "baselines": {
+        "event_count_pseudocount": 1.0,
+        "global_category_pseudocount": 1.0,
+        "item_user_category_smoothing_mass": 10.0,
+        "names": [
+          "event_global_category",
+          "event_item_category",
+          "event_item_user_tilt"
+        ],
+        "validation_tuning": false
+      },
+      "batch_size": 16,
+      "checkpoints": [
+        10,
+        30,
+        60,
+        100
+      ],
+      "claims": "No novelty, psychological interpretation, unbiased exposure, independent confirmation, or SOTA claim.",
+      "cohorts": "Original user partition: meta-fit selection; disjoint development evaluation. Reused validation is exploratory.",
+      "conditional_rating_adapter": "softmax over each item's five rating logits",
+      "context_fraction": 0.8,
+      "controls": "Identical allocated parameters, initial weights, episodes and batch order; fixed_flow caches initial routes and gates jointly within each query.",
+      "decomposition": "joint NLL = conditional category NLL + item-event NLL, unit coefficients; only query-global logit shift remains invariant.",
+      "epochs": 100,
+      "inference": "Original TRAIN ratings only; validation labels never enter context.",
+      "learning_rate": 0.001,
+      "likelihood_scope": "One exchangeable recorded event conditional on eligible catalog, not binary ever-rated probability or chronological next event.",
+      "model_config": {
+        "damping": 0.5,
+        "dim": 8,
+        "ports": 16,
+        "steps": 4
+      },
+      "negative_assumption": "Missing pairs compete as possible recorded outcomes in the denominator; they are not observed dislikes. Selection/exposure biases remain.",
+      "normalizer": "All catalog items except padding and context observations, times five categories; all probes remain eligible.",
+      "numerical_threads": 1,
+      "optimizer": "Adam",
+      "ranking_adapters": {
+        "all_observed": "logsumexp(all five rating logits)",
+        "liked_record": "logsumexp(rating 4 and 5 logits)"
+      },
+      "schema_version": 1,
+      "seeds": [
+        2028
+      ],
+      "selection_direction": "minimize; exact ties retain earlier checkpoint",
+      "selection_metric": "meta_fit_macro_joint_nll",
+      "source_sha256": {
+        "JOINT_FIELD_PROTOCOL.md": "fa4fdae864004de9dc4fa2ccab6e6b48f4738e79ffb277fda4f3544472a93694",
+        "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+        "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+        "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+        "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+        "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+        "joint_field_experiment.py": "e2228dd51c4ac909c587eb98cff795872d23232dd68e3790ce97957c40e28c0f",
+        "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+        "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+      },
+      "stage": "development",
+      "status": "written_before_fitting",
+      "test_evaluated": false,
+      "test_read": false,
+      "training_categories": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "training_objective": "joint_recorded_item_rating_multinomial",
+      "training_reduction": "Mean masked-probe joint NLL per user, then mean across users.",
+      "variants": [
+        "adaptive",
+        "fixed_flow"
+      ]
+    }
+  },
+  "source_sha256": {
+    "JOINT_FIELD_PROTOCOL.md": "fa4fdae864004de9dc4fa2ccab6e6b48f4738e79ffb277fda4f3544472a93694",
+    "categorical_evaluation.py": "1488bd6b3c216a224300b001ad942369477fe8568575416fe54f24f0d04e232f",
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+    "exception_evaluation.py": "3bfa0e5f23a58a77a9833b0fb866e48acb60e910ba31b27d6b351158083794a0",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "joint_evaluation.py": "a716834830558f97611fe0e77fa95045451ee7ade8ec0aa836adea1fb554af78",
+    "joint_field_experiment.py": "e2228dd51c4ac909c587eb98cff795872d23232dd68e3790ce97957c40e28c0f",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "stage": "test",
+  "status": "complete",
+  "test_read": true,
+  "test_split_files_read_by_curator": false,
+  "track": "joint100"
+}

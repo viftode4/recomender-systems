@@ -1,0 +1,69 @@
+{
+  "baselines": {
+    "event_count_pseudocount": 1.0,
+    "global_category_pseudocount": 1.0,
+    "item_user_category_smoothing_mass": 10.0,
+    "names": [
+      "event_global_category",
+      "event_item_category",
+      "event_item_user_tilt"
+    ],
+    "validation_tuning": false
+  },
+  "batch_size": 16,
+  "checkpoints": [
+    10,
+    30,
+    60,
+    100
+  ],
+  "claims": "No novelty, psychological interpretation, unbiased exposure, independent confirmation, or SOTA claim.",
+  "cohorts": "Original user partition: meta-fit selection; disjoint development evaluation. Reused validation is exploratory.",
+  "conditional_rating_adapter": "softmax over each item's five rating logits",
+  "context_fraction": 0.8,
+  "controls": "Identical allocated parameters, initial weights, episodes and batch order; fixed_flow caches initial routes and gates jointly within each query.",
+  "decomposition": "joint NLL = conditional category NLL + item-event NLL, unit coefficients; only query-global logit shift remains invariant.",
+  "epochs": 100,
+  "inference": "Original TRAIN ratings only; validation labels never enter context.",
+  "learning_rate": 0.001,
+  "likelihood_scope": "One exchangeable recorded event conditional on eligible catalog, not binary ever-rated probability or chronological next event.",
+  "model_config": {
+    "damping": 0.5,
+    "dim": 8,
+    "ports": 16,
+    "steps": 4
+  },
+  "negative_assumption": "Missing pairs compete as possible recorded outcomes in the denominator; they are not observed dislikes. Selection/exposure biases remain.",
+  "normalizer": "All catalog items except padding and context observations, times five categories; all probes remain eligible.",
+  "numerical_threads": 1,
+  "optimizer": "Adam",
+  "ranking_adapters": {
+    "all_observed": "logsumexp(all five rating logits)",
+    "liked_record": "logsumexp(rating 4 and 5 logits)"
+  },
+  "schema_version": 1,
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "selection_direction": "minimize; exact ties retain earlier checkpoint",
+  "selection_metric": "meta_fit_macro_joint_nll",
+  "stage": "development",
+  "status": "written_before_fitting",
+  "test_evaluated": false,
+  "test_read": false,
+  "training_categories": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "training_objective": "joint_recorded_item_rating_multinomial",
+  "training_reduction": "Mean masked-probe joint NLL per user, then mean across users.",
+  "variants": [
+    "adaptive",
+    "fixed_flow"
+  ]
+}

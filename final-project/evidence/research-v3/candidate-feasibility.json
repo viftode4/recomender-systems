@@ -1,0 +1,218 @@
+{
+  "2026": [
+    {
+      "fraction_quota_feasible": 0.00847457627118644,
+      "mean_lower_bound_head_exposure": 0.9491525423728816,
+      "model": "2026-EASE-1",
+      "pool": 20,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.24152542372881355,
+      "mean_lower_bound_head_exposure": 0.5970338983050847,
+      "model": "2026-EASE-1",
+      "pool": 50,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.847457627118644,
+      "mean_lower_bound_head_exposure": 0.09110169491525423,
+      "model": "2026-EASE-1",
+      "pool": 100,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 1.0,
+      "mean_lower_bound_head_exposure": 0.0,
+      "model": "2026-EASE-1",
+      "pool": 300,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 1.0,
+      "mean_lower_bound_head_exposure": 0.0,
+      "model": "2026-EASE-1",
+      "pool": 1000,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.00423728813559322,
+      "mean_lower_bound_head_exposure": 0.9741525423728815,
+      "model": "context-ridge-1",
+      "pool": 20,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.16101694915254236,
+      "mean_lower_bound_head_exposure": 0.7135593220338985,
+      "model": "context-ridge-1",
+      "pool": 50,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.6822033898305084,
+      "mean_lower_bound_head_exposure": 0.23474576271186443,
+      "model": "context-ridge-1",
+      "pool": 100,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 1.0,
+      "mean_lower_bound_head_exposure": 0.0,
+      "model": "context-ridge-1",
+      "pool": 300,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 1.0,
+      "mean_lower_bound_head_exposure": 0.0,
+      "model": "context-ridge-1",
+      "pool": 1000,
+      "quota_checks": "head_and_tail"
+    }
+  ],
+  "2027": [
+    {
+      "fraction_quota_feasible": 0.00423728813559322,
+      "mean_lower_bound_head_exposure": 0.8800847457627119,
+      "model": "2027-SLIMElastic-1",
+      "pool": 20,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.3855932203389831,
+      "mean_lower_bound_head_exposure": 0.4194915254237288,
+      "model": "2027-SLIMElastic-1",
+      "pool": 50,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.9830508474576272,
+      "mean_lower_bound_head_exposure": 0.01822033898305085,
+      "model": "2027-SLIMElastic-1",
+      "pool": 100,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 1.0,
+      "mean_lower_bound_head_exposure": 0.0,
+      "model": "2027-SLIMElastic-1",
+      "pool": 300,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 1.0,
+      "mean_lower_bound_head_exposure": 0.0,
+      "model": "2027-SLIMElastic-1",
+      "pool": 1000,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.012711864406779662,
+      "mean_lower_bound_head_exposure": 0.926271186440678,
+      "model": "context-ridge-0.001",
+      "pool": 20,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.2754237288135593,
+      "mean_lower_bound_head_exposure": 0.5851694915254239,
+      "model": "context-ridge-0.001",
+      "pool": 50,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.7669491525423728,
+      "mean_lower_bound_head_exposure": 0.1669491525423729,
+      "model": "context-ridge-0.001",
+      "pool": 100,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 1.0,
+      "mean_lower_bound_head_exposure": 0.0,
+      "model": "context-ridge-0.001",
+      "pool": 300,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 1.0,
+      "mean_lower_bound_head_exposure": 0.0,
+      "model": "context-ridge-0.001",
+      "pool": 1000,
+      "quota_checks": "head_and_tail"
+    }
+  ],
+  "2028": [
+    {
+      "fraction_quota_feasible": 0.01694915254237288,
+      "mean_lower_bound_head_exposure": 0.8542372881355933,
+      "model": "2028-SLIMElastic-1",
+      "pool": 20,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.3940677966101695,
+      "mean_lower_bound_head_exposure": 0.4025423728813559,
+      "model": "2028-SLIMElastic-1",
+      "pool": 50,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.9491525423728814,
+      "mean_lower_bound_head_exposure": 0.02627118644067797,
+      "model": "2028-SLIMElastic-1",
+      "pool": 100,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 1.0,
+      "mean_lower_bound_head_exposure": 0.0,
+      "model": "2028-SLIMElastic-1",
+      "pool": 300,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 1.0,
+      "mean_lower_bound_head_exposure": 0.0,
+      "model": "2028-SLIMElastic-1",
+      "pool": 1000,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.01694915254237288,
+      "mean_lower_bound_head_exposure": 0.9313559322033899,
+      "model": "context-ridge-0.1",
+      "pool": 20,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.2754237288135593,
+      "mean_lower_bound_head_exposure": 0.6033898305084745,
+      "model": "context-ridge-0.1",
+      "pool": 50,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 0.7330508474576272,
+      "mean_lower_bound_head_exposure": 0.19406779661016949,
+      "model": "context-ridge-0.1",
+      "pool": 100,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 1.0,
+      "mean_lower_bound_head_exposure": 0.0,
+      "model": "context-ridge-0.1",
+      "pool": 300,
+      "quota_checks": "head_and_tail"
+    },
+    {
+      "fraction_quota_feasible": 1.0,
+      "mean_lower_bound_head_exposure": 0.0,
+      "model": "context-ridge-0.1",
+      "pool": 1000,
+      "quota_checks": "head_and_tail"
+    }
+  ]
+}

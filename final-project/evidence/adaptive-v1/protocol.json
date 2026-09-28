@@ -1,0 +1,67 @@
+{
+  "baselines": {
+    "global_category_pseudocount_each": 1.0,
+    "item_user_smoothing_mass": 10.0,
+    "names": [
+      "global_histogram",
+      "item_histogram",
+      "item_user_product"
+    ],
+    "selection": "Fixed formulas; no validation-fitted parameter or grid."
+  },
+  "batch_size": 16,
+  "checkpoints": [
+    10,
+    30,
+    60,
+    100
+  ],
+  "claims": "Exploratory reused validation evidence; no novelty, independent replication, causal, psychological or deployment claim.",
+  "cohorts": "Original seed-based user half for meta-fit selection; other half for development. Same previously inspected validation splits, exploratory reuse.",
+  "context_fraction": 0.8,
+  "control_interpretation": "Adaptive versus fixed-flow jointly tests recurrent routing and fidelity changes. Hard-clamp fixes observed source states, so observed-only pooling also fixes upward routing and port states; only candidate downward queries can change. It does not isolate gates alone.",
+  "effective_capacity": "Equal allocated shapes do not mean equal active capacity: hard-clamp source-gate parameters are inactive; fixed-flow computes initial routes and gates only once.",
+  "epochs": 100,
+  "inference": "All original TRAIN ratings supplied; TRAIN observations of every category excluded from ranking.",
+  "initialization": "Identical allocated parameter shapes and seed across variants; initialization hashes must match.",
+  "labels": "Only original TRAIN and validation pair IDs authorize rating parsing. No final TEST split is opened or its rating values parsed.",
+  "learning_rate": 0.001,
+  "mode": "experiment",
+  "model_config": {
+    "damping": 0.5,
+    "dim": 8,
+    "ports": 16,
+    "steps": 4
+  },
+  "numerical_threads": 1,
+  "optimizer": "Adam",
+  "ranking_adapter": "P(rating>=4)",
+  "ranking_scope": "Liked and all-observed ranking are diagnostics with a different target; CE is not ranking accuracy.",
+  "rating_categories": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "schema_version": 1,
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "selection_direction": "minimize; exact ties retain earliest checkpoint",
+  "selection_metric": "meta_fit_macro_cross_entropy",
+  "stage": "development",
+  "status": "written_before_fitting",
+  "test_evaluated": false,
+  "test_read": false,
+  "training_masks": "Every epoch uses deterministic identity-only per-user masking with at least one context and one probe; identical across variants.",
+  "training_objective": "categorical_cross_entropy",
+  "training_reduction": "mean probe CE per user, then mean across batch users",
+  "variants": [
+    "adaptive",
+    "fixed_flow",
+    "hard_clamp"
+  ]
+}

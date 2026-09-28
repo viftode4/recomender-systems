@@ -1,0 +1,32 @@
+{
+  "2026": {
+    "fraction_expanded": 0.3177966101694915,
+    "max_pool": 207,
+    "mean_pool": 110.44067796610169,
+    "median_pool": 100.0,
+    "quota_checks": "head_and_tail",
+    "same_topk_as_full": 1.0,
+    "target_head_items": 2,
+    "target_tail_items": 8
+  },
+  "2027": {
+    "fraction_expanded": 0.2330508474576271,
+    "max_pool": 209,
+    "mean_pool": 107.32203389830508,
+    "median_pool": 100.0,
+    "quota_checks": "head_and_tail",
+    "same_topk_as_full": 1.0,
+    "target_head_items": 2,
+    "target_tail_items": 8
+  },
+  "2028": {
+    "fraction_expanded": 0.2669491525423729,
+    "max_pool": 224,
+    "mean_pool": 110.55508474576271,
+    "median_pool": 100.0,
+    "quota_checks": "head_and_tail",
+    "same_topk_as_full": 1.0,
+    "target_head_items": 2,
+    "target_tail_items": 8
+  }
+}

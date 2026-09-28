@@ -1,0 +1,51 @@
+{
+  "artifact_sha256": {
+    "report-content.json": "8a298335e8a0bd9c472af2120e2331445f1c8edae5a368f1108f3185b4f5e2fb",
+    "report.md": "e24b4a610ec35235772b815c6935a284d298aba96296ede52d7fdbc3ffe90fb9",
+    "report.pdf": "c058c48089722190665195ffa794c3189434fb1ac20e86f5d331cb978cb9c081"
+  },
+  "contributors_supplied": false,
+  "discussion_words": {
+    "1": 98,
+    "2": 97,
+    "3": 119,
+    "appendix-negative": 131
+  },
+  "final_evaluation": null,
+  "generator_sha256": "fe388a69b8abddba439ab540a32d0170140bab59de2b56ffb78683360427258a",
+  "group": "24",
+  "layout": {
+    "appendix_pages": 1,
+    "font": "Times New Roman",
+    "font_sha256": {
+      "bold": "50f5b1f27b7d34621090e437e8b1dd4510a22d2823fc876b3286bed327b64bbb",
+      "regular": "f3b4ffff71c2a0c7227d37497683b2498fb2d0a4e8beae26f022e3ccfcaabfa3"
+    },
+    "font_size": 12,
+    "line_spacing": 1.15,
+    "main_task_pages": 3,
+    "page_bottoms_pt": [
+      241.89,
+      116.89,
+      79.09,
+      266.89,
+      273.09
+    ],
+    "pages": 5
+  },
+  "schema_version": 1,
+  "source_sha256": {
+    "2026-coefficients.json": "75de1391f1d680ae8c25900c0992aec7824c307e820e32340a705dbfe8c077e0",
+    "2027-coefficients.json": "28dd00c0c97a57cf34d1b78ecc403457b4af8aca9a1aec6bce2d7f643d77789b",
+    "2028-coefficients.json": "eb7277d2db67f000c83f73c15079603a5e2d434ff1a4d75e59fbf259d579fdf4",
+    "aggregates.json": "e021bcbeec018e5752f8623d920045b376e773ac1b03e646cd260e337b4936ff",
+    "candidate-budgets.json": "51fb5fc6bfd6f6a0099497efff8b7214c31219a99739f51b56e3ced0ff367668",
+    "code/NEGATIVE_INFORMATION_PROTOCOL.md": "47db1af1fdc0190d76151ef13fe6ce6349add4ba858761227560720dd5632d33",
+    "exception-v2/aggregates.json": "bd51966ef88d73928934bbd5e460c0b8066ff11e686d71a7f45e93f2073e8308",
+    "group-policies.json": "fc73b0013bbddf38a5a32716c2994b88a45518093a559d282ed01f9aa97d56fa",
+    "negative-information-v2/aggregate.json": "bc36bc216cc994b6ee88e6d3bba7f4d68d82c67fec07dacc81d16e264a5fa5e0",
+    "provenance.json": "9c76b28a33635af7775d5632fde86b5d5cc48f7ebc05404b2ec4f0f503b84e6c",
+    "selected.json": "dbd2b4d65bb197c320145652ea8776da96d2191ee7fcdca21bb1c5844a123996"
+  },
+  "status": "DRAFT"
+}

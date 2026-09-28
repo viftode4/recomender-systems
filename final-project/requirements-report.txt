@@ -1,0 +1,4 @@
+# Separate rendering environment, verified locally with Python 3.9.
+# Times New Roman regular and bold fonts must be installed separately.
+matplotlib==3.9.4
+pypdf==6.10.2

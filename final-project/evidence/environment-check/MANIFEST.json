@@ -1,0 +1,36 @@
+{
+  "artifact_sha256": {
+    "README.md": "4146f655dc985eeab19516a211bf825a88f5f0b4afb2b8b895ff9d4a81325f17",
+    "isolated-source-snapshot.json": "55a55776e3f332b29ca05c1f55e554f8058cb0bc78d5450efb6390e1c3e5ab78",
+    "isolated-tests.log": "97bb4d44fa6d397bc414ea256d8dea08f129d0b9bf80b52f677d6dcbbdcb488a",
+    "source-snapshot.json": "a1ee900190d806e87bcc59faf99004cc505596f6e6e0e0d094971ff6d5d7a025",
+    "tests.log": "6235005cae4f1f99fe21be441150819c471a2d25e83af3ece515852df950d5c0",
+    "verified-environment.json": "1f1d9e06f42801ad524c8ea801acd935e7695754e99e49dabf4c7326670aa55d"
+  },
+  "core_versions_match_existing_environment": true,
+  "fresh_virtual_environment": true,
+  "imported_source_files_matching": 38,
+  "installed_distributions": 59,
+  "isolated_source_copy_tests": {
+    "failures": 0,
+    "run": 80,
+    "skipped": 2
+  },
+  "locked_distributions": 58,
+  "optional_plot_install": "Not performed: offline cache lacks matplotlib. No network retry.",
+  "package_source": "Offline personal coursework UV cache, explicit public PyPI index, no extra indexes or config",
+  "platform_scope": "macOS arm64 only",
+  "python": "3.11.15",
+  "recbole_source": "Snapshot of actual locally imported instructor fork; not a pristine fresh upstream checkout",
+  "recbole_source_bytes": 7130382,
+  "recbole_source_files": 274,
+  "requirements_sha256": "34fc9509e462fea922bf53dfa99b3c485948890bcbb4dc85306d718cf45ebbce",
+  "skipped_tests": "Two PDF/render checks require matplotlib/pypdf absent from this training lock",
+  "status": "verified-with-limits",
+  "test_labels_read": false,
+  "working_tree_tests": {
+    "failures": 0,
+    "run": 80,
+    "skipped": 2
+  }
+}

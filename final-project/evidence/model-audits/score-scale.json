@@ -1,0 +1,329 @@
+{
+  "audit_source_sha256": "086bf853a43d43186fd784dc0b4b5bb5f3000235e70b80a766619cbb49b0e01b",
+  "calibration": {
+    "2026-BPR-1": {
+      "offset": 0.11999614692085125,
+      "slope": 0.18088156011028694
+    },
+    "2026-EASE-1": {
+      "offset": 0.10512785155359779,
+      "slope": 0.14665132051026164
+    },
+    "2026-ExactPop-0": {
+      "offset": 0.12982169453251333,
+      "slope": 0.13955391523871197
+    },
+    "2026-FISMCorrected-0": {
+      "offset": 0.11779405248439521,
+      "slope": 0.1799982518943113
+    },
+    "2026-GenreContent-1": {
+      "offset": 0.1649247488465477,
+      "slope": 0.03932006345539804
+    },
+    "2026-ItemKNN-2": {
+      "offset": 0.1099250295374678,
+      "slope": 0.17220453756051626
+    },
+    "2026-LightGCN-200": {
+      "offset": 0.12062603877931975,
+      "slope": 0.17976689524120595
+    },
+    "2026-NGCF-1": {
+      "offset": 0.11311266980539486,
+      "slope": 0.1845004819774578
+    },
+    "2026-NeuMF-0": {
+      "offset": 0.1063721767547684,
+      "slope": 0.18178193580672314
+    },
+    "2026-SLIMElastic-2": {
+      "offset": 0.10852466549189874,
+      "slope": 0.13499026387931173
+    },
+    "2026-UserKNN-0": {
+      "offset": 0.11054318932243191,
+      "slope": 0.14694630171302944
+    },
+    "contrast-all_observed": {
+      "offset": 0.1300064415388244,
+      "slope": 0.12980076445525213
+    },
+    "positive_ease-all_observed": {
+      "offset": 0.11711748911903248,
+      "slope": 0.12766083642530882
+    },
+    "signed_channels-all_observed": {
+      "offset": 0.11697566062055972,
+      "slope": 0.12775784778677976
+    }
+  },
+  "calibration_source_sha256": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+  "cohort_users": 471,
+  "development_metrics_computed": false,
+  "diagnostics": [
+    {
+      "largest_weight": 0.4315738089705312,
+      "largest_weight_expert": "2026-GenreContent-1",
+      "meta_fit_mse": 0.4477080290037513,
+      "negative_weights": 4,
+      "penalty": 1e-06,
+      "prediction_std": 0.7692275432003548,
+      "variant": "raw_sum_to_one",
+      "weight_sum": 1.0000000000000002
+    },
+    {
+      "largest_weight": 0.431578218930903,
+      "largest_weight_expert": "2026-GenreContent-1",
+      "meta_fit_mse": 0.447708087266408,
+      "negative_weights": 4,
+      "penalty": 0.0001,
+      "prediction_std": 0.7692413744217326,
+      "variant": "raw_sum_to_one",
+      "weight_sum": 0.9999999999999998
+    },
+    {
+      "largest_weight": 0.43161406794662344,
+      "largest_weight_expert": "2026-GenreContent-1",
+      "meta_fit_mse": 0.44771359084074625,
+      "negative_weights": 4,
+      "penalty": 0.001,
+      "prediction_std": 0.7693685590073042,
+      "variant": "raw_sum_to_one",
+      "weight_sum": 0.9999999999999998
+    },
+    {
+      "largest_weight": 0.43163721439829134,
+      "largest_weight_expert": "2026-GenreContent-1",
+      "meta_fit_mse": 0.44807781137922953,
+      "negative_weights": 4,
+      "penalty": 0.01,
+      "prediction_std": 0.77070180045266,
+      "variant": "raw_sum_to_one",
+      "weight_sum": 1.0000000000000002
+    },
+    {
+      "largest_weight": 0.4225369514956653,
+      "largest_weight_expert": "2026-GenreContent-1",
+      "meta_fit_mse": 0.45299153510761037,
+      "negative_weights": 4,
+      "penalty": 0.1,
+      "prediction_std": 0.780913581069508,
+      "variant": "raw_sum_to_one",
+      "weight_sum": 1.0
+    },
+    {
+      "largest_weight": 0.3311234868379034,
+      "largest_weight_expert": "2026-GenreContent-1",
+      "meta_fit_mse": 0.4941028524576238,
+      "negative_weights": 3,
+      "penalty": 1.0,
+      "prediction_std": 0.8458551023324931,
+      "variant": "raw_sum_to_one",
+      "weight_sum": 1.0
+    },
+    {
+      "largest_weight": 0.46880626735206665,
+      "largest_weight_expert": "2026-NeuMF-0",
+      "meta_fit_mse": 0.07917016207964486,
+      "negative_weights": 5,
+      "penalty": 0.001,
+      "prediction_std": 0.24058068458512316,
+      "variant": "affine_calibrated_sum_to_one",
+      "weight_sum": 1.0000000000000002
+    },
+    {
+      "largest_weight": 0.27804545080581833,
+      "largest_weight_expert": "2026-NeuMF-0",
+      "meta_fit_mse": 0.08006784725679784,
+      "negative_weights": 3,
+      "penalty": 0.01,
+      "prediction_std": 0.22897688258194276,
+      "variant": "affine_calibrated_sum_to_one",
+      "weight_sum": 1.0
+    },
+    {
+      "largest_weight": 0.11532414792909586,
+      "largest_weight_expert": "2026-NeuMF-0",
+      "meta_fit_mse": 0.08329479776855986,
+      "negative_weights": 0,
+      "penalty": 0.1,
+      "prediction_std": 0.19774616710927664,
+      "variant": "affine_calibrated_sum_to_one",
+      "weight_sum": 0.9999999999999998
+    },
+    {
+      "largest_weight": 0.07673159916729197,
+      "largest_weight_expert": "2026-NeuMF-0",
+      "meta_fit_mse": 0.085606918665703,
+      "negative_weights": 0,
+      "penalty": 1.0,
+      "prediction_std": 0.18170382633970833,
+      "variant": "affine_calibrated_sum_to_one",
+      "weight_sum": 1.0000000000000002
+    },
+    {
+      "largest_weight": 0.028643354991446792,
+      "largest_weight_expert": "2026-NeuMF-0",
+      "meta_fit_mse": 0.08084291050414155,
+      "negative_weights": 0,
+      "penalty": 1.0,
+      "prediction_std": 0.22757598379561825,
+      "variant": "raw_unconstrained",
+      "weight_sum": 0.1777308012355812
+    }
+  ],
+  "expert_feature_std_range": [
+    1.0010189660657325,
+    1.6903048575653528
+  ],
+  "limitations": [
+    "Meta-fit loss is not ranking accuracy or generalization evidence.",
+    "Affine responses are unbounded and are not calibrated probabilities.",
+    "Sampled-negative prevalence affects the transform.",
+    "Calibration and combination coefficients reuse meta-fit labels; final evaluation remains necessary."
+  ],
+  "motivation": "Development inspection raised a scale-confounding concern for sum-to-one weights on z-scores. This exploratory diagnostic motivated retaining that baseline and adding monotone affine response calibration before constrained regression.",
+  "negative_ratio": 5,
+  "observations": 29646,
+  "original_study_source_sha256": "c5db3e1555b5e13a820f2f1af15eb7a4aab9f447e11be60829ac2efe67447c32",
+  "saved_coefficient_reproduction": {
+    "constrained": true,
+    "static": true
+  },
+  "scope": "Meta-fit regression diagnostic only; no development or test metric computed.",
+  "seed": 2026,
+  "source_runs": {
+    "2026-BPR-1": {
+      "manifest_sha256": "99c5ac029f42cfa956b7b09155df3b62a5ea9559915c634aad843d69caa4f859",
+      "scores_sha256": "7639ca9960c1ad14193942dc45060cad80e1ee4bd3d487bd1acd573ad1c20dae",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2026-EASE-1": {
+      "manifest_sha256": "1a5d389c0928fbe3aa11177efc7408a139a9447e88973de5068db156971b47d9",
+      "scores_sha256": "9f7807608f9e7bc00d5b2ab61d629e5d417b1dfd37f4ec13ea44796bf2d458bc",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2026-ExactPop-0": {
+      "manifest_sha256": "7a5165e7e5f907fad83a86717d5d3e0471933f69ce823c8a739810a0bba96790",
+      "scores_sha256": "dbcc83b0127f1b65361e1bc956aefec27256c63af188d3650275b428fe2d0825",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2026-FISMCorrected-0": {
+      "manifest_sha256": "63cca65e76728899131e97beb10df926313bd7600fa2a359781901da382d429e",
+      "scores_sha256": "897d22d0a77bd4af301761c1606c20c5eace1cf459846db6ed87d1f99fc17040",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2026-GenreContent-1": {
+      "manifest_sha256": "0806adffd03c7351eaa446a4c4487a7df41f7742dd1c5f0f9591bc3981a6d4eb",
+      "scores_sha256": "526a17872b7f52686d1c0ae224015c7de6ea8f038ff5b383fa0ca5ec8b7d98e9",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2026-ItemKNN-2": {
+      "manifest_sha256": "99bf24013a6342459c18eeacff84dc7f9a4788da4669a3c096136ceadab3934e",
+      "scores_sha256": "d1c0ee65d64913d0623628859205321faf6df2fe30d3696ee659f30fd60d5178",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2026-LightGCN-200": {
+      "manifest_sha256": "e472babd074277a231eef0b0d7764a5f4204077ac9709fb5f4a28b87a3de4e62",
+      "scores_sha256": "089eed1edd493fcc680b0d39ddcb89c9f453cbf462cdb1eaa80a5beaaa82f9aa",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2026-NGCF-1": {
+      "manifest_sha256": "2d0367d3ba76a50c9fad1ec511d23480504abd87bf0265688f9ef3a8863fb2f2",
+      "scores_sha256": "caf2a1506e44c7a6889a515e9dedab68546193a3a3ce217e57d9d7a0729ce7c2",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2026-NeuMF-0": {
+      "manifest_sha256": "05967567587ff41f1e88d60569a3fb6250acd6ecafb71bb45fa10810f540e566",
+      "scores_sha256": "f364087e47cda5145c7b91932a7978c4bb7ea256c7087752ac681e461d75b447",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2026-Random-0": {
+      "manifest_sha256": "d5ef32fe5358ec370eae22b990403499008918fa0b5b57ca22cfe020f8f65b96",
+      "scores_sha256": "416a4fdd5ba22895548fb564b0077baaaa90f28f035d59fffa76415329718ce3",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2026-SLIMElastic-2": {
+      "manifest_sha256": "70c2fb6d9d9be21abe7dc769aa6599f78e00d0f8c5bf6c4bcad58afd058a4597",
+      "scores_sha256": "acbb0506ffad43000e7105bfbcefcf49b172b457646ad117d9fd6f823e876214",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2026-UserKNN-0": {
+      "manifest_sha256": "476c0accc2b682fcdaff4d836a6e7ab9b3c2d9a60f94cd4a3c13fe8af83be750",
+      "scores_sha256": "05d7d8583bb59b57efc7335657aaf627a006e0bfec12f91e52b7a34be12944f9",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "contrast-all_observed": {
+      "manifest_sha256": "9d405a3348e6434df7fb6aba48f7ca08b7c58c71a4ccff892f26a113b6712899",
+      "scores_sha256": "d09ad6b8eee932d33595309b26eb86692cfb43919d5da0a94136e25a457fdb8a",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "positive_ease-all_observed": {
+      "manifest_sha256": "2fac56cfd9da14009b3a5b2fc38ed49d7796e370dc6589c45459aa3befd33a09",
+      "scores_sha256": "a3c75ce087aae01bd9671ec06273183da5f76a5d78f7e4b6965bc9b6e796a31d",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "signed_channels-all_observed": {
+      "manifest_sha256": "5751222fd0092b137c2a41242dd991fcb7c59167464eccc1978b15496e486b4d",
+      "scores_sha256": "2b43fee43efca333b4e882b589d98261b17f897388f58601c18a0a7c92612c1c",
+      "split_sha256": {
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    }
+  },
+  "study_artifact_sha256": {
+    "assembly.json": "cb9d0836e9760bb7d781cb9d342a3701d85a8e4ac5113a99987804443b2414ac",
+    "coefficients.json": "3c69dc9ee8c3d4a7f93a1dd0e83278b0599e8dbb88f61ccbeb780fe6d83ce4b8",
+    "cohorts.json": "9bc7998e78b234d8f4cb23bd9127369e665406fca9d708123163fdecec4f9c86",
+    "manifest.json": "4fae28aecb080f169b8df81a84cae228e2ea1073153efa8b579d38e4751c3387",
+    "selection.json": "0c43068f7948879f53dc4d8c4365465a80d8f0b7d89eacdbcc43cb724935d574"
+  },
+  "study_name": "study-2026",
+  "target_mean": 0.16666666666666666,
+  "target_std": 0.37267799624996495,
+  "test_labels_read": false
+}

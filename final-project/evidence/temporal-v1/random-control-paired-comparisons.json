@@ -1,0 +1,90 @@
+{
+  "constrained": {
+    "candidate": "constrained-ridge-1",
+    "descriptive_95_percent_interval": [
+      -0.03556844644506292,
+      -0.006968636819446003
+    ],
+    "fraction_users_harmed": 0.461864406779661,
+    "fraction_users_improved": 0.2796610169491525,
+    "mean_difference": -0.021126665962081317,
+    "reference": "2026-EASE-1"
+  },
+  "context": {
+    "candidate": "context-ridge-0.01",
+    "descriptive_95_percent_interval": [
+      -0.0006914721718329562,
+      0.012300276350435716
+    ],
+    "fraction_users_harmed": 0.23728813559322035,
+    "fraction_users_improved": 0.3305084745762712,
+    "mean_difference": 0.005680878510718567,
+    "reference": "2026-EASE-1"
+  },
+  "context-pairwise": {
+    "candidate": "context-pairwise-1",
+    "descriptive_95_percent_interval": [
+      -0.0067897358535587374,
+      0.010686797350035932
+    ],
+    "fraction_users_harmed": 0.2754237288135593,
+    "fraction_users_improved": 0.3686440677966102,
+    "mean_difference": 0.001965148128931669,
+    "reference": "2026-EASE-1"
+  },
+  "disagreement": {
+    "candidate": "disagreement-ridge-0.001",
+    "descriptive_95_percent_interval": [
+      -0.002302090422031478,
+      0.008008685565345675
+    ],
+    "fraction_users_harmed": 0.2033898305084746,
+    "fraction_users_improved": 0.288135593220339,
+    "mean_difference": 0.0028977910395953962,
+    "reference": "2026-EASE-1"
+  },
+  "item": {
+    "candidate": "item-ridge-0.1",
+    "descriptive_95_percent_interval": [
+      -0.0011069180303438428,
+      0.009630909704898034
+    ],
+    "fraction_users_harmed": 0.22033898305084745,
+    "fraction_users_improved": 0.2923728813559322,
+    "mean_difference": 0.004271409188875848,
+    "reference": "2026-EASE-1"
+  },
+  "static": {
+    "candidate": "static-ridge-0.01",
+    "descriptive_95_percent_interval": [
+      -0.0010908085137799604,
+      0.009530000335478019
+    ],
+    "fraction_users_harmed": 0.19491525423728814,
+    "fraction_users_improved": 0.3050847457627119,
+    "mean_difference": 0.004251100237057335,
+    "reference": "2026-EASE-1"
+  },
+  "static-pairwise": {
+    "candidate": "static-pairwise-1",
+    "descriptive_95_percent_interval": [
+      -0.00445143250518854,
+      0.012586071681762756
+    ],
+    "fraction_users_harmed": 0.2923728813559322,
+    "fraction_users_improved": 0.326271186440678,
+    "mean_difference": 0.004114315354033426,
+    "reference": "2026-EASE-1"
+  },
+  "user": {
+    "candidate": "user-ridge-0.01",
+    "descriptive_95_percent_interval": [
+      -0.00045826978866789745,
+      0.012636989534223955
+    ],
+    "fraction_users_harmed": 0.2245762711864407,
+    "fraction_users_improved": 0.3135593220338983,
+    "mean_difference": 0.005968486740359065,
+    "reference": "2026-EASE-1"
+  }
+}

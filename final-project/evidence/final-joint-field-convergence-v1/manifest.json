@@ -1,0 +1,33 @@
+{
+  "code_sha256": {
+    "JOINT_FIELD_CONVERGENCE_PROTOCOL.md": "b8dd35b370341074c6cc5ca3384587e2992e9a34286ac2376d574d5e9a895dfa",
+    "JOINT_FIELD_PROTOCOL.md": "fa4fdae864004de9dc4fa2ccab6e6b48f4738e79ffb277fda4f3544472a93694",
+    "categorical_evaluation.py": "1488bd6b3c216a224300b001ad942369477fe8568575416fe54f24f0d04e232f",
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+    "exception_evaluation.py": "3bfa0e5f23a58a77a9833b0fb866e48acb60e910ba31b27d6b351158083794a0",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "joint_convergence_evaluation.py": "b7479715dffe99e6882c10e3693ca0cf63fa56b1a6a6b390d3879f1ce75271b1",
+    "joint_evaluation.py": "a716834830558f97611fe0e77fa95045451ee7ade8ec0aa836adea1fb554af78",
+    "joint_field_convergence.py": "808aff438a208c4cab6bf1c69095ec240b95c5ec43554212cbbba02d6a4a3a75",
+    "joint_field_experiment.py": "e2228dd51c4ac909c587eb98cff795872d23232dd68e3790ce97957c40e28c0f",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "frozen_manifest_sha256": "52c48953b37a61952151183e73baf5e47127ad4899fd3813ba76c060caa99db7",
+  "output_sha256": {
+    "2026/metrics.json": "09664016fb9672e8490ffec3143dd0f47ca9f489fce8afbc9d26c2b4d9aa5a13",
+    "2026/recommendations.json": "754318e4ca3e99722f36f54c2c9e2e5a5ce5e14edad14151ea5d20fe5a8177d1",
+    "2027/metrics.json": "d945c5f75e08183b7d03b8f7c1620038bbc1e3c785472a01a03640be44e509a0",
+    "2027/recommendations.json": "65689d503e9af9332a4c0213b509eb392adff7c540ed1b28dab7a5eb0027533b",
+    "2028/metrics.json": "98b66ecabbc0ee0b942488a3799f67c3bad06526fe7e76469f3ae979de3e1986",
+    "2028/recommendations.json": "b19e8a9af533865d7455036b76b87cfb0f96a4e168edb502bdbcc6ee488c9d74",
+    "aggregates.json": "fc024265edb9ec4a0a845d7e273ed7fd43eccdd3c88ccdec7d0320197e864281"
+  },
+  "selection_after_test": false,
+  "status": "complete",
+  "test_evaluated": true,
+  "test_read": true
+}

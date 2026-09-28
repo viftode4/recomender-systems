@@ -1,0 +1,30 @@
+{
+  "code_sha256": {
+    "JOINT_FIELD_PROTOCOL.md": "fa4fdae864004de9dc4fa2ccab6e6b48f4738e79ffb277fda4f3544472a93694",
+    "categorical_evaluation.py": "1488bd6b3c216a224300b001ad942369477fe8568575416fe54f24f0d04e232f",
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+    "exception_evaluation.py": "3bfa0e5f23a58a77a9833b0fb866e48acb60e910ba31b27d6b351158083794a0",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "joint_evaluation.py": "a716834830558f97611fe0e77fa95045451ee7ade8ec0aa836adea1fb554af78",
+    "joint_field_experiment.py": "e2228dd51c4ac909c587eb98cff795872d23232dd68e3790ce97957c40e28c0f",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "frozen_manifest_sha256": "e19b2663f08e85a16c015e4c571fe0e1fa99dfb56c5b681f19a9904592f2d76f",
+  "output_sha256": {
+    "2026/metrics.json": "7c1949f4f4ca899db924ca8807f8a7d0f36d4f61a7b900dff3f3325f2ab9ba58",
+    "2026/recommendations.json": "67ae180a46abefb5ebe0e6bfee6a6c878af27165cccf2330e1331743f0eb43ea",
+    "2027/metrics.json": "938111123889b3391f77d637c3f7b5dba1fafce9d0cb3b4f49c745b8cc5e44af",
+    "2027/recommendations.json": "d1a5f4f2bda651e96f7206f1a87be460353faa0c28237023665b92d77cfa6036",
+    "2028/metrics.json": "8c4f12dc6affda21d8cd4a5b7413a82efba80232d7c32212709640f71fc6d1b0",
+    "2028/recommendations.json": "3774f2470cba628ded66c39989d4519b18f379e922c2aceccca6010154a55d4a",
+    "aggregates.json": "c072c1158dfc9f208c2ca06343a17935bbcab189d7afce088a3eab23b57f516e"
+  },
+  "selection_after_test": false,
+  "status": "complete",
+  "test_evaluated": true,
+  "test_read": true
+}

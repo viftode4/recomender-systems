@@ -1,0 +1,43 @@
+{
+  "field_tracks": [
+    "conditional",
+    "joint"
+  ],
+  "frequency_cohort": "all development users, no outcome-conditioned subgroup",
+  "frequency_diagnostics": [
+    "slot mean training count",
+    "slot median training count",
+    "zero-training-count slot share",
+    "head slot share"
+  ],
+  "head_definition": "Top ceil(20% of nonpadding catalog) by observed-TRAIN count; original item-token lexical tie-break.",
+  "k": 10,
+  "metrics": [
+    "all_observed",
+    "liked_ratings"
+  ],
+  "references": [
+    "EASE",
+    "SLIMElastic",
+    "PositiveEASE"
+  ],
+  "scope": "Exploratory comparison of already selected models; reused validation users, unequal objectives and tuning budgets, no causal interpretation.",
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "source_sha256": {
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "field_reference_comparison.py": "60fa86b8adedd10705aea9073437f35e6252d4703bd8da7fd4ed7a95f3be78fd",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "stage": "validation_development",
+  "status": "written_before_comparison",
+  "test_evaluated": false,
+  "test_read": false,
+  "training_or_selection_performed": false
+}

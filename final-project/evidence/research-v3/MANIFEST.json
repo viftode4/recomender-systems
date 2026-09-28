@@ -1,0 +1,43 @@
+{
+  "artifact_sha256": {
+    "2026-coefficients.json": "75de1391f1d680ae8c25900c0992aec7824c307e820e32340a705dbfe8c077e0",
+    "2026-paired-comparisons.json": "208b09dc0a8e02b5843d6f1a0e109e3c686ed5ce3d472549d0933a4a8b3fe2a7",
+    "2026-selection.json": "697347437da0a9701419dda1429d0a2a283949e6049f6b1eac1475a9324535d9",
+    "2026-switching.json": "715c0bef1cda6310dc4f3597dedf326eb034172d8f81dfe62831ddc25c064b88",
+    "2027-coefficients.json": "28dd00c0c97a57cf34d1b78ecc403457b4af8aca9a1aec6bce2d7f643d77789b",
+    "2027-paired-comparisons.json": "172cf8cc23fce2ade94651b1f2b39e674c5238cb77c0f1bac27c621601dadaaf",
+    "2027-selection.json": "1198b28dd009e521411f4320081f77bb37057aa9d54e1dacc1c17035ab774b56",
+    "2027-switching.json": "5e61ad36341062801c8a9953342b2da10f82bb31b936db6220237ce0a440862f",
+    "2028-coefficients.json": "eb7277d2db67f000c83f73c15079603a5e2d434ff1a4d75e59fbf259d579fdf4",
+    "2028-paired-comparisons.json": "a693903eb2712c7f2c33d63bc490fe32ab1c4921553b17e16a9c95df4f207900",
+    "2028-selection.json": "d104aa0757a625d52308c891e41eedf7752a3911bb8bdb293c967b0def0a3d06",
+    "2028-switching.json": "54d5fa608c58e897f74cbaa0b8575e4b108473783a30d325cd56f73c24a44dfc",
+    "RESULTS.md": "aca3b788b9318830c544909f446717e2171aee31d38d18e53a6545f877973b60",
+    "aggregates.json": "e021bcbeec018e5752f8623d920045b376e773ac1b03e646cd260e337b4936ff",
+    "candidate-budgets.json": "51fb5fc6bfd6f6a0099497efff8b7214c31219a99739f51b56e3ced0ff367668",
+    "candidate-feasibility.json": "b3ec371c632217d76cee33c34ef64044d2bbc823b1bd3e3be473638a7437f8e7",
+    "cohort-counts.json": "f0144a9edfa7566246846014b954222867893e95d7cc697fa050157e7c9e1760",
+    "group-policies.json": "fc73b0013bbddf38a5a32716c2994b88a45518093a559d282ed01f9aa97d56fa",
+    "individual-models.json": "422e077c4ab36e960176cdaf03e351728e9394bed0f9f387f4c418b7e34e6bc4",
+    "provenance.json": "9c76b28a33635af7775d5632fde86b5d5cc48f7ebc05404b2ec4f0f503b84e6c",
+    "reranker-tradeoffs.pdf": "2ff06ea3dd41759571f2f001a7c1580215a5ac7adaf75e92ca85f59eef8adefe",
+    "reranker-tradeoffs.png": "935c4642c5e176d90b00157f61a08e0bbea9ca05711ced224807c6ac4ee89ea3",
+    "research-figures.pdf": "c8519c8de2f1f3da07b55a87fd98cc575ce5628f0bd168c29d2e7e58f7683754",
+    "research-figures.png": "1da778a17389f46165b75108a7b28ae6c7b34ed5350e334c2d5e0a1430b78fec",
+    "selected.json": "dbd2b4d65bb197c320145652ea8776da96d2191ee7fcdca21bb1c5844a123996"
+  },
+  "generator_sha256": "b220a0b47ac6538ce7720e30c2925226b91fa9c4a1405f6711e2672c946365fe",
+  "plan": {
+    "models": 15,
+    "numerical_library_threads": 1,
+    "protocol": "471 meta-fit, 236 development, 236 policy calibration users; fixed models and four reranker objectives; response-aligned constrained regression after meta-fit scale audit.",
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "standard_model_fits": 90,
+    "status": "complete",
+    "test_evaluated": false
+  }
+}

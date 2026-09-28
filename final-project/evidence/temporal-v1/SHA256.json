@@ -1,0 +1,15 @@
+{
+  "MANIFEST.json": "f9aa31ec1861e7c9120c9754a3020d91585ceffba77c49ca943631b904306e24",
+  "RESULTS.md": "3c315a65d226f835bd9eafc18bc646d2cc873d43ecd2cd5c905b055646462884",
+  "comparison.json": "cfef4b4a0d4fc75684df94dbb2e5fe4b314d01b5f2d052a56ac63e0d18c968dd",
+  "expert-selection.json": "96334fbb46eaa19b7498c1c7363ec6a7c29f176315cd51ebee1bba373f534aef",
+  "random-control-coefficients.json": "0e1eb613d4db248e2d2873cb6f7a3f112eb7ad3f352df4d34ae9129309295e54",
+  "random-control-group-policy.json": "250cc8d054679001c4c7ee4bc2622b38bd4477715ae3af5d0b7886b87c96ae65",
+  "random-control-paired-comparisons.json": "e56f7d601b80b3dfeb1c43000f76a06248c0c2f89dcf7c26ef4d6e5474a2c887",
+  "random-control-selection.json": "effc4aaa2114f82d0a3ee4f4104eead6e15a5e378a19faa4b1ae2eaad0041b0c",
+  "split-diagnostics.json": "0475f5d7acfb8c960a24d0e9ac15b766e608035990341f5f0f6d00a1f1d36fd1",
+  "temporal-coefficients.json": "26752828dd45d934c18293b0658336aaae8cd6f392f397f322a1f3089ef2e097",
+  "temporal-group-policy.json": "4afc369774bd613f623b6f46f6b427b92e39e878c88cc42fefcff417185ef285",
+  "temporal-paired-comparisons.json": "8ed546fafafb4942c8355cd530fd8e19dc19bf3eb012cdd3ad5fca4b2ef169a6",
+  "temporal-selection.json": "2697231bdcfb8343b2449580d0a2074e04595d5c9757e42455e9a1f80363aa90"
+}

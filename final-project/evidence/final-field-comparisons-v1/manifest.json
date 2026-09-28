@@ -1,0 +1,52 @@
+{
+  "bootstrap_seed": 2026,
+  "code_sha256": "d1b74f724ba2ef7388b870d41edf287f94d18385d9f9ccf9ecb66e4fc57498b6",
+  "comparisons_per_seed": 24,
+  "inference_performed": false,
+  "inputs": {
+    "conditional": {
+      "completed_marker_sha256": "dedaa80be441b8a08a5002226e7a31f4f3c2eedfd6fd931089524c6594541576",
+      "evaluation_manifest_sha256": "f3da5c6b90d65cdd0cd17eb30f4895264050218dde77bd6570e1798a9ef3877c",
+      "frozen_manifest_sha256": "c7c985f1b8b8bf1b68e8fb82c84c159b17b0cec815d394950184595cdb3a7d4d"
+    },
+    "joint100": {
+      "completed_marker_sha256": "3c35592be18cd4528ad0739c378b9445f94daac9cf12bc94202770a001a9d1f6",
+      "evaluation_manifest_sha256": "15afd16a4de31462c79f8379f91832287d0cf32d00dd6d3005387fc6f848e1f2",
+      "frozen_manifest_sha256": "e19b2663f08e85a16c015e4c571fe0e1fa99dfb56c5b681f19a9904592f2d76f"
+    },
+    "joint400": {
+      "completed_marker_sha256": "22c371066177c6ef942018e693f067b9530532c32cdfdc1326e448578fba9356",
+      "evaluation_manifest_sha256": "552206f3ca89632e4c5df346924c03d16bc6b35f6e36058946822ac87a3dd700",
+      "frozen_manifest_sha256": "52c48953b37a61952151183e73baf5e47127ad4899fd3813ba76c060caa99db7"
+    },
+    "references": {
+      "completed_marker_sha256": "7ddca22f86dc8ffbfce683f0630caf81a1925de33a79dc8f718153a32abc4ef8",
+      "evaluation_manifest_sha256": "f3ae8bb61e10de0e98ed3a4986964fd601dccc29451604039aa247ea9c80562b",
+      "frozen_manifest_sha256": "ace0324d10859b5997a637ab81efba32186f1353eda887d80d03144c6a2b44ff"
+    }
+  },
+  "output_sha256": {
+    "RESULTS.md": "bdf1b86dbbf2752ad515317958a848b7cf552be37ff5016e77060be264acdc14",
+    "aggregate.json": "67af298a27e13af6ba7f7093cacb04f45ec4716eb6a266105c5bfcefcc8b8fff",
+    "per-seed-comparisons.json": "eee47bd6f71a225a6f124e2eb17b6a921b6bbb47ddff8f11a67134d1eac1534f"
+  },
+  "predeclared_references": [
+    "EASE",
+    "SLIMElastic",
+    "PositiveEASE"
+  ],
+  "predeclared_tracks": [
+    "conditional",
+    "joint100",
+    "joint400"
+  ],
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "selection_performed": false,
+  "status": "complete",
+  "test_derived_metrics_read": true,
+  "test_interactions_opened": false
+}

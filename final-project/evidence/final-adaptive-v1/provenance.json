@@ -1,0 +1,260 @@
+{
+  "aggregate_validator_sha256": "71a1565ae649118931641944e4a4c5c0cf521d2d350785b0278f04c053a43843",
+  "batch_completion_sha256": "922a33bdd68c1f44be082f37198023a7299a06e6b3aacdaa4ad892857e07cd4e",
+  "batch_plan_sha256": "a3a562b1a48365236c8224c6740204f196892974083d38ad1a1efbd263aed372",
+  "copy_policy": "Aggregate and evaluation manifest bytes preserved exactly; raw individual metrics and recommendation files excluded.",
+  "curation_source_sha256": "4c1db36d75ebec54c6cdc36bea3705b0e8833ff86e843f0de4df73af56ace6b3",
+  "evaluation_manifest_sha256": "f3da5c6b90d65cdd0cd17eb30f4895264050218dde77bd6570e1798a9ef3877c",
+  "frozen_bundle_sha256": {
+    "2026": "3cf3e8d7cde8387cdef71c7b4e5725802feaae343e33c997a58329e589724be5",
+    "2027": "bebcfe56f2137448c24655dac7915f11a2d8f9c1659e545cb1790c7800ef6984",
+    "2028": "5613417045afbcd9c4278c9c2ef0bdcef77aee3156c386d45e4ab206d1f2f6e2"
+  },
+  "frozen_manifest_sha256": "c7c985f1b8b8bf1b68e8fb82c84c159b17b0cec815d394950184595cdb3a7d4d",
+  "individual_user_data_exported": false,
+  "post_test_model_selection": false,
+  "protocols": {
+    "2026": {
+      "baselines": {
+        "global_category_pseudocount_each": 1.0,
+        "item_user_smoothing_mass": 10.0,
+        "names": [
+          "global_histogram",
+          "item_histogram",
+          "item_user_product"
+        ],
+        "selection": "Fixed formulas; no validation-fitted parameter or grid."
+      },
+      "batch_size": 16,
+      "checkpoints": [
+        10,
+        30,
+        60,
+        100
+      ],
+      "claims": "Exploratory reused validation evidence; no novelty, independent replication, causal, psychological or deployment claim.",
+      "cohorts": "Original seed-based user half for meta-fit selection; other half for development. Same previously inspected validation splits, exploratory reuse.",
+      "context_fraction": 0.8,
+      "control_interpretation": "Adaptive versus fixed-flow jointly tests recurrent routing and fidelity changes. Hard-clamp fixes observed source states, so observed-only pooling also fixes upward routing and port states; only candidate downward queries can change. It does not isolate gates alone.",
+      "effective_capacity": "Equal allocated shapes do not mean equal active capacity: hard-clamp source-gate parameters are inactive; fixed-flow computes initial routes and gates only once.",
+      "epochs": 100,
+      "inference": "All original TRAIN ratings supplied; TRAIN observations of every category excluded from ranking.",
+      "initialization": "Identical allocated parameter shapes and seed across variants; initialization hashes must match.",
+      "labels": "Only original TRAIN and validation pair IDs authorize rating parsing. No final TEST split is opened or its rating values parsed.",
+      "learning_rate": 0.001,
+      "mode": "experiment",
+      "model_config": {
+        "damping": 0.5,
+        "dim": 8,
+        "ports": 16,
+        "steps": 4
+      },
+      "numerical_threads": 1,
+      "optimizer": "Adam",
+      "ranking_adapter": "P(rating>=4)",
+      "ranking_scope": "Liked and all-observed ranking are diagnostics with a different target; CE is not ranking accuracy.",
+      "rating_categories": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "schema_version": 1,
+      "seeds": [
+        2026
+      ],
+      "selection_direction": "minimize; exact ties retain earliest checkpoint",
+      "selection_metric": "meta_fit_macro_cross_entropy",
+      "source_run": "/Users/vliftode/personal/recomender-systems/final-project/runs/research-v2/2026-EASE-1",
+      "source_sha256": {
+        "ADAPTIVE_RESEARCH.md": "4e709088012bb7bc474ac0c7e310ea2774eb54a5770605b30a01c96c68c7390f",
+        "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+        "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+        "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+        "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+        "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+        "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+      },
+      "stage": "development",
+      "status": "written_before_fitting",
+      "test_evaluated": false,
+      "test_read": false,
+      "training_masks": "Every epoch uses deterministic identity-only per-user masking with at least one context and one probe; identical across variants.",
+      "training_objective": "categorical_cross_entropy",
+      "training_reduction": "mean probe CE per user, then mean across batch users",
+      "variants": [
+        "adaptive",
+        "fixed_flow",
+        "hard_clamp"
+      ]
+    },
+    "2027": {
+      "baselines": {
+        "global_category_pseudocount_each": 1.0,
+        "item_user_smoothing_mass": 10.0,
+        "names": [
+          "global_histogram",
+          "item_histogram",
+          "item_user_product"
+        ],
+        "selection": "Fixed formulas; no validation-fitted parameter or grid."
+      },
+      "batch_size": 16,
+      "checkpoints": [
+        10,
+        30,
+        60,
+        100
+      ],
+      "claims": "Exploratory reused validation evidence; no novelty, independent replication, causal, psychological or deployment claim.",
+      "cohorts": "Original seed-based user half for meta-fit selection; other half for development. Same previously inspected validation splits, exploratory reuse.",
+      "context_fraction": 0.8,
+      "control_interpretation": "Adaptive versus fixed-flow jointly tests recurrent routing and fidelity changes. Hard-clamp fixes observed source states, so observed-only pooling also fixes upward routing and port states; only candidate downward queries can change. It does not isolate gates alone.",
+      "effective_capacity": "Equal allocated shapes do not mean equal active capacity: hard-clamp source-gate parameters are inactive; fixed-flow computes initial routes and gates only once.",
+      "epochs": 100,
+      "inference": "All original TRAIN ratings supplied; TRAIN observations of every category excluded from ranking.",
+      "initialization": "Identical allocated parameter shapes and seed across variants; initialization hashes must match.",
+      "labels": "Only original TRAIN and validation pair IDs authorize rating parsing. No final TEST split is opened or its rating values parsed.",
+      "learning_rate": 0.001,
+      "mode": "experiment",
+      "model_config": {
+        "damping": 0.5,
+        "dim": 8,
+        "ports": 16,
+        "steps": 4
+      },
+      "numerical_threads": 1,
+      "optimizer": "Adam",
+      "ranking_adapter": "P(rating>=4)",
+      "ranking_scope": "Liked and all-observed ranking are diagnostics with a different target; CE is not ranking accuracy.",
+      "rating_categories": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "schema_version": 1,
+      "seeds": [
+        2027
+      ],
+      "selection_direction": "minimize; exact ties retain earliest checkpoint",
+      "selection_metric": "meta_fit_macro_cross_entropy",
+      "source_run": "/Users/vliftode/personal/recomender-systems/final-project/runs/research-v2/2027-EASE-1",
+      "source_sha256": {
+        "ADAPTIVE_RESEARCH.md": "4e709088012bb7bc474ac0c7e310ea2774eb54a5770605b30a01c96c68c7390f",
+        "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+        "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+        "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+        "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+        "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+        "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+      },
+      "stage": "development",
+      "status": "written_before_fitting",
+      "test_evaluated": false,
+      "test_read": false,
+      "training_masks": "Every epoch uses deterministic identity-only per-user masking with at least one context and one probe; identical across variants.",
+      "training_objective": "categorical_cross_entropy",
+      "training_reduction": "mean probe CE per user, then mean across batch users",
+      "variants": [
+        "adaptive",
+        "fixed_flow",
+        "hard_clamp"
+      ]
+    },
+    "2028": {
+      "baselines": {
+        "global_category_pseudocount_each": 1.0,
+        "item_user_smoothing_mass": 10.0,
+        "names": [
+          "global_histogram",
+          "item_histogram",
+          "item_user_product"
+        ],
+        "selection": "Fixed formulas; no validation-fitted parameter or grid."
+      },
+      "batch_size": 16,
+      "checkpoints": [
+        10,
+        30,
+        60,
+        100
+      ],
+      "claims": "Exploratory reused validation evidence; no novelty, independent replication, causal, psychological or deployment claim.",
+      "cohorts": "Original seed-based user half for meta-fit selection; other half for development. Same previously inspected validation splits, exploratory reuse.",
+      "context_fraction": 0.8,
+      "control_interpretation": "Adaptive versus fixed-flow jointly tests recurrent routing and fidelity changes. Hard-clamp fixes observed source states, so observed-only pooling also fixes upward routing and port states; only candidate downward queries can change. It does not isolate gates alone.",
+      "effective_capacity": "Equal allocated shapes do not mean equal active capacity: hard-clamp source-gate parameters are inactive; fixed-flow computes initial routes and gates only once.",
+      "epochs": 100,
+      "inference": "All original TRAIN ratings supplied; TRAIN observations of every category excluded from ranking.",
+      "initialization": "Identical allocated parameter shapes and seed across variants; initialization hashes must match.",
+      "labels": "Only original TRAIN and validation pair IDs authorize rating parsing. No final TEST split is opened or its rating values parsed.",
+      "learning_rate": 0.001,
+      "mode": "experiment",
+      "model_config": {
+        "damping": 0.5,
+        "dim": 8,
+        "ports": 16,
+        "steps": 4
+      },
+      "numerical_threads": 1,
+      "optimizer": "Adam",
+      "ranking_adapter": "P(rating>=4)",
+      "ranking_scope": "Liked and all-observed ranking are diagnostics with a different target; CE is not ranking accuracy.",
+      "rating_categories": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "schema_version": 1,
+      "seeds": [
+        2028
+      ],
+      "selection_direction": "minimize; exact ties retain earliest checkpoint",
+      "selection_metric": "meta_fit_macro_cross_entropy",
+      "source_run": "/Users/vliftode/personal/recomender-systems/final-project/runs/research-v2/2028-EASE-1",
+      "source_sha256": {
+        "ADAPTIVE_RESEARCH.md": "4e709088012bb7bc474ac0c7e310ea2774eb54a5770605b30a01c96c68c7390f",
+        "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+        "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+        "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+        "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+        "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+        "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+      },
+      "stage": "development",
+      "status": "written_before_fitting",
+      "test_evaluated": false,
+      "test_read": false,
+      "training_masks": "Every epoch uses deterministic identity-only per-user masking with at least one context and one probe; identical across variants.",
+      "training_objective": "categorical_cross_entropy",
+      "training_reduction": "mean probe CE per user, then mean across batch users",
+      "variants": [
+        "adaptive",
+        "fixed_flow",
+        "hard_clamp"
+      ]
+    }
+  },
+  "source_sha256": {
+    "ADAPTIVE_RESEARCH.md": "4e709088012bb7bc474ac0c7e310ea2774eb54a5770605b30a01c96c68c7390f",
+    "categorical_evaluation.py": "1488bd6b3c216a224300b001ad942369477fe8568575416fe54f24f0d04e232f",
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+    "exception_evaluation.py": "3bfa0e5f23a58a77a9833b0fb866e48acb60e910ba31b27d6b351158083794a0",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "stage": "test",
+  "status": "complete",
+  "test_read": true,
+  "test_split_files_read_by_curator": false,
+  "track": "conditional"
+}

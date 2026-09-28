@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "seeds": {
+    "2026": {
+      "EASE": {
+        "all_observed": {
+          "coverage@10": 0.23959571938168847,
+          "hit@10": 0.8335100742311771,
+          "mrr@10": 0.5226038983992317,
+          "ndcg@10": 0.32397512544944346,
+          "novelty@10": 8.56039437745563,
+          "precision@10": 0.2198303287380686,
+          "recall@10": 0.27745387573703156
+        },
+        "denominators": {
+          "all_observed_users": 943,
+          "liked_ratings_users": 882,
+          "recommendation_slots": 9430,
+          "recommended_items_with_test_rating": 2073,
+          "recommended_known_dislikes": 207,
+          "test_dislikes": 1673,
+          "test_likes": 5335,
+          "test_observations": 9596,
+          "users_without_liked_test_excluded_from_liked_metrics": 61
+        },
+        "known_dislike_rate_per_slot": 0.02195121951219512,
+        "liked_ratings": {
+          "coverage@10": 0.23662306777645659,
+          "hit@10": 0.7494331065759637,
+          "mrr@10": 0.43276598999388094,
+          "ndcg@10": 0.29085062779662946,
+          "novelty@10": 8.55901609980358,
+          "precision@10": 0.1607709750566882,
+          "recall@10": 0.3283733554786673
+        }
+      },
+      "PositiveEASE": {
+        "all_observed": {
+          "coverage@10": 0.19797859690844233,
+          "hit@10": 0.7868504772004242,
+          "mrr@10": 0.498293187900823,
+          "ndcg@10": 0.2887618530444909,
+          "novelty@10": 8.548881532313654,
+          "precision@10": 0.1916224814422047,
+          "recall@10": 0.23752235495082247
+        },
+        "denominators": {
+          "all_observed_users": 943,
+          "liked_ratings_users": 882,
+          "recommendation_slots": 9430,
+          "recommended_items_with_test_rating": 1807,
+          "recommended_known_dislikes": 97,
+          "test_dislikes": 1673,
+          "test_likes": 5335,
+          "test_observations": 9596,
+          "users_without_liked_test_excluded_from_liked_metrics": 61
+        },
+        "known_dislike_rate_per_slot": 0.010286320254506893,
+        "liked_ratings": {
+          "coverage@10": 0.19441141498216408,
+          "hit@10": 0.7414965986394558,
+          "mrr@10": 0.4594491235647693,
+          "ndcg@10": 0.29986593052335037,
+          "novelty@10": 8.544029919304831,
+          "precision@10": 0.1612244897959173,
+          "recall@10": 0.3221253086826166
+        }
+      },
+      "SLIMElastic": {
+        "all_observed": {
+          "coverage@10": 0.2806183115338882,
+          "hit@10": 0.8144220572640509,
+          "mrr@10": 0.5227953677052293,
+          "ndcg@10": 0.31580052015587523,
+          "novelty@10": 8.683737725977831,
+          "precision@10": 0.21081654294803678,
+          "recall@10": 0.2606859199841723
+        },
+        "denominators": {
+          "all_observed_users": 943,
+          "liked_ratings_users": 882,
+          "recommendation_slots": 9430,
+          "recommended_items_with_test_rating": 1988,
+          "recommended_known_dislikes": 192,
+          "test_dislikes": 1673,
+          "test_likes": 5335,
+          "test_observations": 9596,
+          "users_without_liked_test_excluded_from_liked_metrics": 61
+        },
+        "known_dislike_rate_per_slot": 0.020360551431601273,
+        "liked_ratings": {
+          "coverage@10": 0.27824019024970276,
+          "hit@10": 0.7290249433106576,
+          "mrr@10": 0.4319943850556093,
+          "ndcg@10": 0.2876910167264998,
+          "novelty@10": 8.679354476846791,
+          "precision@10": 0.15430839002267466,
+          "recall@10": 0.31385225220663515
+        }
+      }
+    },
+    "2027": {
+      "EASE": {
+        "all_observed": {
+          "coverage@10": 0.2413793103448276,
+          "hit@10": 0.8016967126193001,
+          "mrr@10": 0.5220046625932091,
+          "ndcg@10": 0.32163088873648493,
+          "novelty@10": 8.560275845923238,
+          "precision@10": 0.21346765641569315,
+          "recall@10": 0.2674416960712015
+        },
+        "denominators": {
+          "all_observed_users": 943,
+          "liked_ratings_users": 882,
+          "recommendation_slots": 9430,
+          "recommended_items_with_test_rating": 2013,
+          "recommended_known_dislikes": 222,
+          "test_dislikes": 1709,
+          "test_likes": 5316,
+          "test_observations": 9596,
+          "users_without_liked_test_excluded_from_liked_metrics": 61
+        },
+        "known_dislike_rate_per_slot": 0.02354188759278897,
+        "liked_ratings": {
+          "coverage@10": 0.23602853745541022,
+          "hit@10": 0.7086167800453514,
+          "mrr@10": 0.43130961379260657,
+          "ndcg@10": 0.2816283402457799,
+          "novelty@10": 8.55394237031153,
+          "precision@10": 0.15260770975056606,
+          "recall@10": 0.3013346771590424
+        }
+      },
+      "PositiveEASE": {
+        "all_observed": {
+          "coverage@10": 0.1902497027348395,
+          "hit@10": 0.7592788971367974,
+          "mrr@10": 0.47512498106347495,
+          "ndcg@10": 0.28143116073258706,
+          "novelty@10": 8.54346642790045,
+          "precision@10": 0.18822905620360428,
+          "recall@10": 0.23412351137568552
+        },
+        "denominators": {
+          "all_observed_users": 943,
+          "liked_ratings_users": 882,
+          "recommendation_slots": 9430,
+          "recommended_items_with_test_rating": 1775,
+          "recommended_known_dislikes": 103,
+          "test_dislikes": 1709,
+          "test_likes": 5316,
+          "test_observations": 9596,
+          "users_without_liked_test_excluded_from_liked_metrics": 61
+        },
+        "known_dislike_rate_per_slot": 0.010922587486744432,
+        "liked_ratings": {
+          "coverage@10": 0.1848989298454221,
+          "hit@10": 0.7142857142857143,
+          "mrr@10": 0.43748695245293867,
+          "ndcg@10": 0.28865355250628694,
+          "novelty@10": 8.531675522930783,
+          "precision@10": 0.15782312925169983,
+          "recall@10": 0.30989881606496716
+        }
+      },
+      "SLIMElastic": {
+        "all_observed": {
+          "coverage@10": 0.29488703923900117,
+          "hit@10": 0.8038176033934252,
+          "mrr@10": 0.5118256493123934,
+          "ndcg@10": 0.31332869100881605,
+          "novelty@10": 8.701220914429978,
+          "precision@10": 0.209756097560974,
+          "recall@10": 0.262757675267557
+        },
+        "denominators": {
+          "all_observed_users": 943,
+          "liked_ratings_users": 882,
+          "recommendation_slots": 9430,
+          "recommended_items_with_test_rating": 1978,
+          "recommended_known_dislikes": 217,
+          "test_dislikes": 1709,
+          "test_likes": 5316,
+          "test_observations": 9596,
+          "users_without_liked_test_excluded_from_liked_metrics": 61
+        },
+        "known_dislike_rate_per_slot": 0.023011664899257687,
+        "liked_ratings": {
+          "coverage@10": 0.28953626634958385,
+          "hit@10": 0.7097505668934241,
+          "mrr@10": 0.4179966166360719,
+          "ndcg@10": 0.27803546253308975,
+          "novelty@10": 8.693010538124486,
+          "precision@10": 0.15113378684807166,
+          "recall@10": 0.3042698994990886
+        }
+      }
+    },
+    "2028": {
+      "EASE": {
+        "all_observed": {
+          "coverage@10": 0.23721759809750298,
+          "hit@10": 0.7974549310710498,
+          "mrr@10": 0.5198711474692383,
+          "ndcg@10": 0.31904389249812204,
+          "novelty@10": 8.55152919962007,
+          "precision@10": 0.21728525980911848,
+          "recall@10": 0.26551766364086743
+        },
+        "denominators": {
+          "all_observed_users": 943,
+          "liked_ratings_users": 884,
+          "recommendation_slots": 9430,
+          "recommended_items_with_test_rating": 2049,
+          "recommended_known_dislikes": 183,
+          "test_dislikes": 1712,
+          "test_likes": 5255,
+          "test_observations": 9596,
+          "users_without_liked_test_excluded_from_liked_metrics": 59
+        },
+        "known_dislike_rate_per_slot": 0.019406150583244963,
+        "liked_ratings": {
+          "coverage@10": 0.23067776456599287,
+          "hit@10": 0.7138009049773756,
+          "mrr@10": 0.4444978632478625,
+          "ndcg@10": 0.28786408089991394,
+          "novelty@10": 8.543941001381533,
+          "precision@10": 0.15814479638008955,
+          "recall@10": 0.30738818127924716
+        }
+      },
+      "PositiveEASE": {
+        "all_observed": {
+          "coverage@10": 0.187871581450654,
+          "hit@10": 0.7741251325556734,
+          "mrr@10": 0.48834604184551095,
+          "ndcg@10": 0.28385542452946533,
+          "novelty@10": 8.551232080653026,
+          "precision@10": 0.1885471898197235,
+          "recall@10": 0.23301999904300855
+        },
+        "denominators": {
+          "all_observed_users": 943,
+          "liked_ratings_users": 884,
+          "recommendation_slots": 9430,
+          "recommended_items_with_test_rating": 1778,
+          "recommended_known_dislikes": 65,
+          "test_dislikes": 1712,
+          "test_likes": 5255,
+          "test_observations": 9596,
+          "users_without_liked_test_excluded_from_liked_metrics": 59
+        },
+        "known_dislike_rate_per_slot": 0.006892895015906681,
+        "liked_ratings": {
+          "coverage@10": 0.1789536266349584,
+          "hit@10": 0.7285067873303167,
+          "mrr@10": 0.4535224987430863,
+          "ndcg@10": 0.2946525269021675,
+          "novelty@10": 8.54098244202175,
+          "precision@10": 0.15916289592760086,
+          "recall@10": 0.31198384230383547
+        }
+      },
+      "SLIMElastic": {
+        "all_observed": {
+          "coverage@10": 0.3085612366230678,
+          "hit@10": 0.7974549310710498,
+          "mrr@10": 0.5101125250382935,
+          "ndcg@10": 0.31109505474001353,
+          "novelty@10": 8.704722916908644,
+          "precision@10": 0.21092258748674333,
+          "recall@10": 0.2567585806853003
+        },
+        "denominators": {
+          "all_observed_users": 943,
+          "liked_ratings_users": 884,
+          "recommendation_slots": 9430,
+          "recommended_items_with_test_rating": 1989,
+          "recommended_known_dislikes": 196,
+          "test_dislikes": 1712,
+          "test_likes": 5255,
+          "test_observations": 9596,
+          "users_without_liked_test_excluded_from_liked_metrics": 59
+        },
+        "known_dislike_rate_per_slot": 0.020784729586426298,
+        "liked_ratings": {
+          "coverage@10": 0.29964328180737215,
+          "hit@10": 0.7036199095022625,
+          "mrr@10": 0.42578826402355757,
+          "ndcg@10": 0.2748500189874049,
+          "novelty@10": 8.69355928735626,
+          "precision@10": 0.15214932126696754,
+          "recall@10": 0.2952570162914062
+        }
+      }
+    }
+  },
+  "stage": "test",
+  "test_read": true
+}

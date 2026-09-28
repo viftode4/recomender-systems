@@ -1,0 +1,36 @@
+{
+  "archive_sha256": "7e1d86708471b0d70a4be375ff7211f69a12505802d626e951f2a0fdbc4fd0bb",
+  "bytes": 2913268,
+  "crc_valid": true,
+  "entries": 225,
+  "environment_scope": "Existing verified local macOS runtimes; not a fresh network installation.",
+  "group": "24",
+  "indexed_hashes_verified": 224,
+  "post_package_changes": {
+    "AUDIT.md": {
+      "archive_sha256": "9ce993a92568676aafaf47f547f30ee10f66b1321089bce044f0ed67db92ecb9",
+      "current_sha256": "d24fb3e014d1caac6a4686756cc622ae775960ffdcc7da04b2a0012fc87c94eb",
+      "description": "Only a later 17-line editorial clearance was appended; all executable code and source tests match the ZIP exactly."
+    }
+  },
+  "remote_push_performed": false,
+  "report_pdf_sha256": "08888a2ce58b6fe9ae8200c785e185bdaa0acba247c26f8e719123a8759d2fe0",
+  "report_tests": {
+    "covers_five_pdf_skips": true,
+    "failures": 0,
+    "log_sha256": "60eae79253056eef576354173506ee0391333af3e41be0b6f3a749b24786e65e",
+    "passed": 23,
+    "skipped": 0
+  },
+  "reviewer_clearance": "No numerical, scientific or layout blocker found; report is DRAFT pending real contributor metadata and individual peer feedback.",
+  "status": "DRAFT",
+  "submission_performed": false,
+  "training_tests": {
+    "discovered": 216,
+    "failures": 0,
+    "log_sha256": "1e96ced6a6414172d7c3f959e1fa1d56e8425e4b69c5d2bfcc24285d08633e41",
+    "passed": 211,
+    "skipped_pdf_tests": 5
+  },
+  "verification_status": "PASS"
+}

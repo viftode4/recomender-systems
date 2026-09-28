@@ -1,0 +1,243 @@
+{
+  "contrast_transfer": {
+    "label": "Contrast-transfer neighbors",
+    "mean_known_dislike_rate_per_slot": 0.006002824858757062,
+    "mean_liked_ndcg": 0.13592251721774032,
+    "per_seed": {
+      "2026": {
+        "all_ndcg": 0.12970422222585298,
+        "known_dislike_rate_per_slot": 0.006567796610169491,
+        "like_ndcg": 0.13141600161456263,
+        "liked_users": 444
+      },
+      "2027": {
+        "all_ndcg": 0.13604346383315416,
+        "known_dislike_rate_per_slot": 0.0038135593220338985,
+        "like_ndcg": 0.1464286808770322,
+        "liked_users": 434
+      },
+      "2028": {
+        "all_ndcg": 0.1274834957130677,
+        "known_dislike_rate_per_slot": 0.007627118644067797,
+        "like_ndcg": 0.12992286916162613,
+        "liked_users": 433
+      }
+    }
+  },
+  "observed_ease": {
+    "label": "All-observed EASE (equal tuning grid)",
+    "mean_known_dislike_rate_per_slot": 0.01617231638418079,
+    "mean_liked_ndcg": 0.24499420729344915,
+    "per_seed": {
+      "2026": {
+        "all_ndcg": 0.2595629655329887,
+        "known_dislike_rate_per_slot": 0.015677966101694914,
+        "like_ndcg": 0.24043865828779315
+      },
+      "2027": {
+        "all_ndcg": 0.2620414838303138,
+        "known_dislike_rate_per_slot": 0.013135593220338982,
+        "like_ndcg": 0.2420793660377152
+      },
+      "2028": {
+        "all_ndcg": 0.26387803543652555,
+        "known_dislike_rate_per_slot": 0.019703389830508476,
+        "like_ndcg": 0.2524645975548391
+      }
+    }
+  },
+  "pair_anchor": {
+    "label": "Pair-anchor kernel",
+    "mean_known_dislike_rate_per_slot": 0.0019774011299435027,
+    "mean_liked_ndcg": 0.07813385930198442,
+    "per_seed": {
+      "2026": {
+        "all_ndcg": 0.07569320255252045,
+        "known_dislike_rate_per_slot": 0.001694915254237288,
+        "like_ndcg": 0.0803985833245508,
+        "liked_users": 444
+      },
+      "2027": {
+        "all_ndcg": 0.06709715334842496,
+        "known_dislike_rate_per_slot": 0.0019067796610169492,
+        "like_ndcg": 0.0697349386337732,
+        "liked_users": 434
+      },
+      "2028": {
+        "all_ndcg": 0.07588892122826509,
+        "known_dislike_rate_per_slot": 0.0023305084745762713,
+        "like_ndcg": 0.0842680559476293,
+        "liked_users": 433
+      }
+    }
+  },
+  "pair_gate": {
+    "label": "Matched pair gate",
+    "mean_known_dislike_rate_per_slot": 0.0014124293785310734,
+    "mean_liked_ndcg": 0.09082054802580602,
+    "per_seed": {
+      "2026": {
+        "all_ndcg": 0.08959186581108337,
+        "known_dislike_rate_per_slot": 0.001694915254237288,
+        "like_ndcg": 0.09678605359375148,
+        "liked_users": 444
+      },
+      "2027": {
+        "all_ndcg": 0.07824166644714237,
+        "known_dislike_rate_per_slot": 0.0014830508474576272,
+        "like_ndcg": 0.08216295917140828,
+        "liked_users": 434
+      },
+      "2028": {
+        "all_ndcg": 0.08440898996490667,
+        "known_dislike_rate_per_slot": 0.001059322033898305,
+        "like_ndcg": 0.09351263131225833,
+        "liked_users": 433
+      }
+    }
+  },
+  "pair_gate_permuted": {
+    "label": "Permuted counterpart gate",
+    "mean_known_dislike_rate_per_slot": 0.0013418079096045197,
+    "mean_liked_ndcg": 0.0868272532137488,
+    "per_seed": {
+      "2026": {
+        "known_dislike_rate_per_slot": 0.001694915254237288,
+        "like_ndcg": 0.09172713369576933
+      },
+      "2027": {
+        "known_dislike_rate_per_slot": 0.001271186440677966,
+        "like_ndcg": 0.07624586811877167
+      },
+      "2028": {
+        "known_dislike_rate_per_slot": 0.001059322033898305,
+        "like_ndcg": 0.09250875782670541
+      }
+    }
+  },
+  "pair_gate_random": {
+    "label": "Random dislike-pool gate",
+    "mean_known_dislike_rate_per_slot": 0.0013418079096045197,
+    "mean_liked_ndcg": 0.08454532048744685,
+    "per_seed": {
+      "2026": {
+        "all_ndcg": 0.08082138752756382,
+        "known_dislike_rate_per_slot": 0.001694915254237288,
+        "like_ndcg": 0.08689407548284225,
+        "liked_users": 444
+      },
+      "2027": {
+        "all_ndcg": 0.07302177908488472,
+        "known_dislike_rate_per_slot": 0.0014830508474576272,
+        "like_ndcg": 0.07735386250157707,
+        "liked_users": 434
+      },
+      "2028": {
+        "all_ndcg": 0.07899805458882851,
+        "known_dislike_rate_per_slot": 0.000847457627118644,
+        "like_ndcg": 0.08938802347792127,
+        "liked_users": 433
+      }
+    }
+  },
+  "pair_signed": {
+    "label": "Pair-signed kernel",
+    "mean_known_dislike_rate_per_slot": 0.0012711864406779662,
+    "mean_liked_ndcg": 0.06967177930515113,
+    "per_seed": {
+      "2026": {
+        "all_ndcg": 0.0670129346491153,
+        "known_dislike_rate_per_slot": 0.0019067796610169492,
+        "like_ndcg": 0.06659489522072977,
+        "liked_users": 444
+      },
+      "2027": {
+        "all_ndcg": 0.06513590999798276,
+        "known_dislike_rate_per_slot": 0.001271186440677966,
+        "like_ndcg": 0.06631607542966865,
+        "liked_users": 434
+      },
+      "2028": {
+        "all_ndcg": 0.06532280877509668,
+        "known_dislike_rate_per_slot": 0.000635593220338983,
+        "like_ndcg": 0.076104367265055,
+        "liked_users": 433
+      }
+    }
+  },
+  "positive_ease": {
+    "label": "Positive EASE",
+    "mean_known_dislike_rate_per_slot": 0.00847457627118644,
+    "mean_liked_ndcg": 0.2574891210197759,
+    "per_seed": {
+      "2026": {
+        "all_ndcg": 0.23017997229069315,
+        "known_dislike_rate_per_slot": 0.00826271186440678,
+        "like_ndcg": 0.24824668446108383,
+        "liked_users": 444
+      },
+      "2027": {
+        "all_ndcg": 0.242724731987586,
+        "known_dislike_rate_per_slot": 0.00614406779661017,
+        "like_ndcg": 0.26781023107750634,
+        "liked_users": 434
+      },
+      "2028": {
+        "all_ndcg": 0.23798738497788077,
+        "known_dislike_rate_per_slot": 0.011016949152542373,
+        "like_ndcg": 0.2564104475207375,
+        "liked_users": 433
+      }
+    }
+  },
+  "signed_channels": {
+    "label": "Likes/dislikes channel ridge",
+    "mean_known_dislike_rate_per_slot": 0.008968926553672317,
+    "mean_liked_ndcg": 0.2579408627673846,
+    "per_seed": {
+      "2026": {
+        "all_ndcg": 0.23344670685639327,
+        "known_dislike_rate_per_slot": 0.009745762711864408,
+        "like_ndcg": 0.24840984242991845,
+        "liked_users": 444
+      },
+      "2027": {
+        "all_ndcg": 0.24361746683932595,
+        "known_dislike_rate_per_slot": 0.006779661016949152,
+        "like_ndcg": 0.2657743621510778,
+        "liked_users": 434
+      },
+      "2028": {
+        "all_ndcg": 0.2372936429453747,
+        "known_dislike_rate_per_slot": 0.01038135593220339,
+        "like_ndcg": 0.25963838372115755,
+        "liked_users": 433
+      }
+    }
+  },
+  "signed_ease": {
+    "label": "Signed EASE",
+    "mean_known_dislike_rate_per_slot": 0.005367231638418079,
+    "mean_liked_ndcg": 0.2264480481779798,
+    "per_seed": {
+      "2026": {
+        "all_ndcg": 0.20604917251453006,
+        "known_dislike_rate_per_slot": 0.005508474576271186,
+        "like_ndcg": 0.22837379269095262,
+        "liked_users": 444
+      },
+      "2027": {
+        "all_ndcg": 0.20966892735477433,
+        "known_dislike_rate_per_slot": 0.004872881355932204,
+        "like_ndcg": 0.23608535731615107,
+        "liked_users": 434
+      },
+      "2028": {
+        "all_ndcg": 0.1951700818561656,
+        "known_dislike_rate_per_slot": 0.0057203389830508475,
+        "like_ndcg": 0.2148849945268358,
+        "liked_users": 433
+      }
+    }
+  }
+}
