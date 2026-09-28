@@ -1,0 +1,103 @@
+{
+  "arms": [
+    "full_pattern",
+    "no_pattern",
+    "marginal_only"
+  ],
+  "batch_seed_offset": 43001,
+  "batch_size": 64,
+  "checkpoints": [
+    0,
+    10,
+    30,
+    60,
+    100
+  ],
+  "claims": "Descriptive reused-development evidence; overlapping seeds are not independent datasets. No fresh confirmation or architectural priority claim.",
+  "controls": "Identical allocated width, initialization, batch order, optimizer, steps and checkpoint budget. no_pattern zeros standardized pattern channels; marginal_only retains context count and marginal donor support. analytic_donor is unfitted weighted support fraction.",
+  "dataset_test_previously_evaluated": true,
+  "donors": "Original binary TRAIN bank. Exclude the query user full row from every donor statistic, including marginal counts and denominators.",
+  "episodes": "For each retention then original user order, randomly retain floor(retention*history_size), clipped to [1,n-1]; all remaining original TRAIN observations are targets. RNG seed+41001.",
+  "feature_names": [
+    "log_context_count",
+    "log_donor_support",
+    "donor_support_fraction",
+    "log_weighted_support",
+    "weighted_support_fraction",
+    "mean_supporter_weight",
+    "log_kish_count",
+    "log_pattern_count",
+    "pattern_coverage"
+  ],
+  "fresh_confirmation": false,
+  "groups": "Original full-population TRAIN activity terciles and top20% TRAIN-frequency item head; diagnostics only, never selection.",
+  "initialization_seed_offset": 42001,
+  "intervention": "full_zero_pattern uses selected full_pattern weights with standardized pattern channels zeroed at inference; no refit or checkpoint choice. This shifts the learned feature distribution and is not the trained no_pattern control.",
+  "learning_rate": 0.001,
+  "mask_seed_offset": 41001,
+  "models": [
+    "full_pattern",
+    "no_pattern",
+    "marginal_only",
+    "analytic_donor",
+    "full_zero_pattern"
+  ],
+  "normalization": "One shared feature mean/scale fitted only on eligible TRAIN-episode candidate cells; reused for every arm and inference.",
+  "optimizer": "Adam",
+  "ranking": "Original TRAIN query histories, never assimilate VALID; exclude PAD and original TRAIN observations; one score ranking for all-observed and liked endpoints, k=10.",
+  "references": [
+    "locked_binary"
+  ],
+  "retentions": [
+    0.8,
+    0.9
+  ],
+  "runtime": {
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "machine": "arm64",
+    "model_dtype": "float32",
+    "numerical_threads": 1,
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.17.1",
+    "system": "Darwin",
+    "torch": "2.14.0"
+  },
+  "schema_version": 1,
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "selection_boundary": "All seed selections, feature/episode hashes, normalizer, model states and predictions are sealed before development rating parsing or new development metrics.",
+  "selection_metric": "meta_fit_all_observed_ndcg@10",
+  "selection_rule": "Maximum over checkpoints in declared order; exact ties retain the earlier checkpoint. Each trainable arm has the same checkpoint budget.",
+  "source_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "exploratory/categorical_reconstruction/PROTOCOL.md": "1f65576ce366fe0e6e337aa66652d01671247384b20d07cdbbe9ff835a10ef54",
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "exploratory/categorical_reconstruction/hybrid.py": "154807a25f7946251fec21aa3697a5af929aa74bce53c9796ad3018be6007079",
+    "exploratory/categorical_reconstruction/model.py": "fac13a6303e50c10cc975a04155e0bc6f8b8cb6837880aa61fdd5eaf5eb4a0ee",
+    "exploratory/categorical_reconstruction/run_experiment.py": "0cfcd87f84b2003461cc7393c1849b44009ce63a5ef06c7de65f343d5d7b217a",
+    "exploratory/context_interactions/run_experiment.py": "5114943ca22425625b1bd8cde8cb016e6b6c752fba8379169474f91d15987c73",
+    "exploratory/evidence_transfer/PROTOCOL.md": "deabe975dcb4e9e8d1c1da73ff17b1f1f46e176826a8fef440e16ec42d527f07",
+    "exploratory/evidence_transfer/model.py": "58eab1d33dfe0df84b4418ffd0f90175a663f5dd3e76718cce2889af9223ccc8",
+    "exploratory/evidence_transfer/run_experiment.py": "fbb9843aeddbabe5343a7933e21c89cd0d9e7ea385a7712a602e869aa7beac42",
+    "field_reference_comparison.py": "60fa86b8adedd10705aea9073437f35e6252d4703bd8da7fd4ed7a95f3be78fd",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "package_project.py": "1c43860d30dd33894ac283f1bb2c1aa75c3488ae33839d54b9516dbe0b684052",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "stage": "reused_development",
+  "study_kind": "post_final_test_exploratory",
+  "test_evaluated": false,
+  "test_read": false,
+  "training": "All original TRAIN users; fixed episodes; full-catalog eligible candidates exclude PAD and episode context. Uniform target mass over hidden TRAIN items; equal episode/user weight. Missing candidates are softmax alternatives, not labeled dislikes.",
+  "weight_decay": 0.0001,
+  "width": 16
+}

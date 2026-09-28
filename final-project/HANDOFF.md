@@ -111,7 +111,16 @@ absence of defects or establishes a particular grade.
 The completed assignment artifacts above remain unchanged. New work is indexed
 in [exploratory/README.md](exploratory/README.md).
 
-The latest [categorical reconstruction study](exploratory/categorical_reconstruction/FINDINGS.md)
+The [requirements correction](exploratory/ASSIGNMENT_AND_RESEARCH.md) distinguishes
+the actual assignment constraints from our adopted relevance/split/metric choices.
+The latest [shared evidence interpreter](exploratory/evidence_transfer/FINDINGS.md)
+learns one rule for query-relative donor evidence across movies. Adding pattern
+diversity and coverage improves its matched control by 2.73% in mean development
+nDCG, but the complete model remains 6.30% below EASE. Its research target was
+not met, and final-checkpoint selections leave optimization unresolved. This
+pilot does not complete the user's request for a substantial original advance.
+
+The earlier [categorical reconstruction study](exploratory/categorical_reconstruction/FINDINGS.md)
 is complete: an exact custom solver, 243 predeclared candidate fits, shuffled
 rating controls, three hybrid arms and user/item group analysis. Mean development
 nDCG@10 is 0.263154 versus 0.261688 for expanded-grid binary EASE, a 0.56%

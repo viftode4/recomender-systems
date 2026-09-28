@@ -1,0 +1,62 @@
+{
+  "batch": "all 64 training instances",
+  "differing_candidate_channels": [
+    "log_pattern_count",
+    "pattern_coverage"
+  ],
+  "equal_candidate_channels": [
+    "log_context_count",
+    "log_donor_support",
+    "donor_support_fraction",
+    "log_weighted_support",
+    "weighted_support_fraction",
+    "mean_supporter_weight",
+    "log_kish_count"
+  ],
+  "experiment": "synthetic_pattern_capacity",
+  "feature_names": [
+    "log_context_count",
+    "log_donor_support",
+    "donor_support_fraction",
+    "log_weighted_support",
+    "weighted_support_fraction",
+    "mean_supporter_weight",
+    "log_kish_count",
+    "log_pattern_count",
+    "pattern_coverage"
+  ],
+  "interpretation": "Capacity sanity check of a constructed two-feature relation. Probe cases are permutations of the same structural template, not new relational structures or real recommendation generalization.",
+  "learning_rate": 0.01,
+  "model_selection": false,
+  "normalization": "Eligible synthetic training candidates only; frozen for probe instances",
+  "optimizer": "Adam",
+  "permutations": "Independent donor/item permutations; every instance paired with candidate-ID swap, giving exactly balanced catalog tie order in both splits",
+  "probe_instances": 64,
+  "real_data_read": false,
+  "runtime": {
+    "numerical_threads": 1,
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "torch": "2.14.0"
+  },
+  "schema_version": 1,
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "source_sha256": {
+    "exploratory/evidence_transfer/model.py": "58eab1d33dfe0df84b4418ffd0f90175a663f5dd3e76718cce2889af9223ccc8",
+    "exploratory/evidence_transfer/synthetic_capacity.py": "902a9f562738875378427f35b331d07410ba7082143501783e24fdcabc6c99c6"
+  },
+  "steps": 300,
+  "synthetic_structure": "Four context items; two candidates; four donor rows of length three. Each candidate has two donors with overlap two. Query is external to donors and candidates are hidden from context.",
+  "target": "Candidate with two disjoint supporter overlaps rather than repeated identical overlap",
+  "test_read": false,
+  "train_instances": 64,
+  "variants": [
+    "full_pattern",
+    "no_pattern"
+  ],
+  "width": 16
+}

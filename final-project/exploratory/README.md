@@ -5,6 +5,14 @@ and structural learning after the original final test was already opened.
 MovieLens100K development results here are exploratory. The original report,
 code freeze and review archive remain unchanged.
 
+- [Assignment requirements versus our choices](ASSIGNMENT_AND_RESEARCH.md):
+  the actual brief leaves more protocol and model freedom than previously stated.
+- [Shared evidence interpreter](evidence_transfer/FINDINGS.md): a custom
+  177-parameter predictor transfers a common rule across items. Pattern features
+  improve nDCG by 2.73% over its matched control, but the full model remains
+  6.30% below locked EASE. Nine trajectories completed; the substantial-gain
+  research target was not met. The useful feature effect, optimization limits
+  and established prior art are kept distinct.
 - [Why the gains remain small](research_diagnosis/README.md): prediction overlap,
   error locations, item support, comparison with published evaluation protocols,
   and a controlled data-volume experiment. With fixed query histories, increasing

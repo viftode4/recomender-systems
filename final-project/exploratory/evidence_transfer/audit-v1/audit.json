@@ -1,0 +1,1445 @@
+{
+  "artifact_sha256": {
+    "aggregates.json": "230c4f28f21a4f80c8e3957a29b08a33fc10769f2a4da579876033be94e3560d",
+    "protocol.json": "88bed74a83d66de1914e53da290addd9c98071df7e9745048264bc32b3143b87",
+    "provenance.json": "deb9e5cbdee23f1a07417924466545a83b3d70085db3b6cb3d630eecec4cd832"
+  },
+  "checkpoint_predictions_replayed": 45,
+  "completed_manifest_sha256": "52a9af7370e0e75bb70bd18c6b773fa45fda5b2cd4c073bbe44f2189f53c30b1",
+  "elapsed_seconds": 88.1493690420175,
+  "fresh_confirmation": false,
+  "limits": [
+    "Weights are replayed, not retrained; all15 checkpoint predictions per seed are checked.",
+    "TRAIN features reuse the separately algebra-tested extractor; episode generation, scaling, network operations and metrics are separately implemented.",
+    "Original TEST is not opened; results remain exploratory reused development."
+  ],
+  "schema_version": 1,
+  "seeds": {
+    "2026": {
+      "comparisons_verified": 12,
+      "maximum_metric_absolute_error": 1.3322676295501878e-14,
+      "replay": {
+        "analytic_replay_exact": true,
+        "common_updates_per_arm": 3000,
+        "feature_checks": {
+          "episode_replay_exact": true,
+          "episodes": 1886,
+          "excluded_training_users": 0,
+          "feature_hashes_sha256": "c4cf1ce7d0e97ca7fffc1863e25d7f0543f98b4528d838f173aac563d6f778ef",
+          "normalization_replay_exact": true,
+          "raw_features_replay_exact": true
+        },
+        "frozen_weight_intervention_replay_exact": true,
+        "trained_arms": {
+          "full_pattern": {
+            "checkpoint_predictions_replayed": 5,
+            "exact_selected_score_replay": true,
+            "maximum_meta_metric_error": 8.326672684688674e-17,
+            "selected_epoch": 100
+          },
+          "marginal_only": {
+            "checkpoint_predictions_replayed": 5,
+            "exact_selected_score_replay": true,
+            "maximum_meta_metric_error": 1.0842021724855044e-19,
+            "selected_epoch": 10
+          },
+          "no_pattern": {
+            "checkpoint_predictions_replayed": 5,
+            "exact_selected_score_replay": true,
+            "maximum_meta_metric_error": 2.7755575615628914e-17,
+            "selected_epoch": 100
+          }
+        }
+      },
+      "verified_development_metrics": {
+        "analytic_donor": {
+          "all_observed": {
+            "coverage@10": 0.06777645659928656,
+            "hit@10": 0.6970338983050848,
+            "mrr@10": 0.37603325934893717,
+            "ndcg@10": 0.21224662719753085,
+            "novelty@10": 8.120761152448985,
+            "precision@10": 0.13728813559322076,
+            "recall@10": 0.1958319230738889,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 444,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 648,
+            "recommended_known_dislikes": 68,
+            "users_without_liked_validation_excluded_from_liked_metrics": 28,
+            "validation_dislikes": 795,
+            "validation_likes": 2607,
+            "validation_observations": 4655
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.10493827160493827,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 462,
+              "tail": 335
+            },
+            "maximum_absolute_error": 2.6645352591003757e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 148,
+              "medium": 155,
+              "sparse": 169
+            }
+          },
+          "known_dislike_rate_per_slot": 0.01440677966101695,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 424,
+              "tail": 252
+            },
+            "maximum_absolute_error": 4.440892098500626e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 148,
+              "medium": 153,
+              "sparse": 143
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.06718192627824018,
+            "hit@10": 0.6081081081081081,
+            "mrr@10": 0.31926480051480055,
+            "ndcg@10": 0.1993760752129593,
+            "novelty@10": 8.122180640102417,
+            "precision@10": 0.10180180180180215,
+            "recall@10": 0.23462239903820212,
+            "users": 444
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 1.0,
+            "mean_training_count": 306.14915254237286,
+            "median_training_count": 309.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "full_pattern": {
+          "all_observed": {
+            "coverage@10": 0.19262782401902498,
+            "hit@10": 0.7648305084745762,
+            "mrr@10": 0.4290002017756253,
+            "ndcg@10": 0.24983824366879515,
+            "novelty@10": 8.473622964666793,
+            "precision@10": 0.16906779661016946,
+            "recall@10": 0.2282810812169371,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 444,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 798,
+            "recommended_known_dislikes": 80,
+            "users_without_liked_validation_excluded_from_liked_metrics": 28,
+            "validation_dislikes": 795,
+            "validation_likes": 2607,
+            "validation_observations": 4655
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.10025062656641603,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 462,
+              "tail": 335
+            },
+            "maximum_absolute_error": 7.105427357601002e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 148,
+              "medium": 155,
+              "sparse": 169
+            }
+          },
+          "known_dislike_rate_per_slot": 0.01694915254237288,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 424,
+              "tail": 252
+            },
+            "maximum_absolute_error": 7.105427357601002e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 148,
+              "medium": 153,
+              "sparse": 143
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.19203329369797859,
+            "hit@10": 0.6734234234234234,
+            "mrr@10": 0.36611075361075357,
+            "ndcg@10": 0.23343806059712335,
+            "novelty@10": 8.472076676632538,
+            "precision@10": 0.12522522522522556,
+            "recall@10": 0.26725854545825284,
+            "users": 444
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 0.9777542372881356,
+            "mean_training_count": 252.475,
+            "median_training_count": 238.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "full_zero_pattern": {
+          "all_observed": {
+            "coverage@10": 0.291319857312723,
+            "hit@10": 0.7055084745762712,
+            "mrr@10": 0.3829003564702717,
+            "ndcg@10": 0.22584912384401704,
+            "novelty@10": 8.996751618556646,
+            "precision@10": 0.1508474576271187,
+            "recall@10": 0.21038687931630434,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 444,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 712,
+            "recommended_known_dislikes": 69,
+            "users_without_liked_validation_excluded_from_liked_metrics": 28,
+            "validation_dislikes": 795,
+            "validation_likes": 2607,
+            "validation_observations": 4655
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.09691011235955056,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 462,
+              "tail": 335
+            },
+            "maximum_absolute_error": 4.440892098500626e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 148,
+              "medium": 155,
+              "sparse": 169
+            }
+          },
+          "known_dislike_rate_per_slot": 0.01461864406779661,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 424,
+              "tail": 252
+            },
+            "maximum_absolute_error": 1.3322676295501878e-14,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 148,
+              "medium": 153,
+              "sparse": 143
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.28715814506539833,
+            "hit@10": 0.6463963963963963,
+            "mrr@10": 0.3313822751322751,
+            "ndcg@10": 0.21485006543606974,
+            "novelty@10": 9.002405778883876,
+            "precision@10": 0.11306306306306341,
+            "recall@10": 0.2564903811650515,
+            "users": 444
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 0.8875,
+            "mean_training_count": 227.92351694915254,
+            "median_training_count": 234.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "locked_binary": {
+          "all_observed": {
+            "coverage@10": 0.18668252080856124,
+            "hit@10": 0.777542372881356,
+            "mrr@10": 0.4248234463276836,
+            "ndcg@10": 0.2590042800377164,
+            "novelty@10": 8.48643037019352,
+            "precision@10": 0.17033898305084735,
+            "recall@10": 0.2433279621729653,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 444,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 804,
+            "recommended_known_dislikes": 78,
+            "users_without_liked_validation_excluded_from_liked_metrics": 28,
+            "validation_dislikes": 795,
+            "validation_likes": 2607,
+            "validation_observations": 4655
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.09701492537313433,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 462,
+              "tail": 335
+            },
+            "maximum_absolute_error": 5.329070518200751e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 148,
+              "medium": 155,
+              "sparse": 169
+            }
+          },
+          "known_dislike_rate_per_slot": 0.01652542372881356,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 424,
+              "tail": 252
+            },
+            "maximum_absolute_error": 1.7763568394002505e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 148,
+              "medium": 153,
+              "sparse": 143
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.1807372175980975,
+            "hit@10": 0.6914414414414415,
+            "mrr@10": 0.3593942156442155,
+            "ndcg@10": 0.23970188120762492,
+            "novelty@10": 8.482376966336766,
+            "precision@10": 0.12409909909909952,
+            "recall@10": 0.2833146560199328,
+            "users": 444
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 0.9891949152542373,
+            "mean_training_count": 246.67203389830507,
+            "median_training_count": 234.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "marginal_only": {
+          "all_observed": {
+            "coverage@10": 0.027348394768133173,
+            "hit@10": 0.5550847457627118,
+            "mrr@10": 0.21618829028786657,
+            "ndcg@10": 0.11840040228355547,
+            "novelty@10": 7.856405202729848,
+            "precision@10": 0.08834745762711897,
+            "recall@10": 0.11609471804429687,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 444,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 417,
+            "recommended_known_dislikes": 43,
+            "users_without_liked_validation_excluded_from_liked_metrics": 28,
+            "validation_dislikes": 795,
+            "validation_likes": 2607,
+            "validation_observations": 4655
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.10311750599520383,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 462,
+              "tail": 335
+            },
+            "maximum_absolute_error": 2.6645352591003757e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 148,
+              "medium": 155,
+              "sparse": 169
+            }
+          },
+          "known_dislike_rate_per_slot": 0.009110169491525424,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 424,
+              "tail": 252
+            },
+            "maximum_absolute_error": 4.440892098500626e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 148,
+              "medium": 153,
+              "sparse": 143
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.027348394768133173,
+            "hit@10": 0.4572072072072072,
+            "mrr@10": 0.17504200629200642,
+            "ndcg@10": 0.10745154257397921,
+            "novelty@10": 7.860462971781555,
+            "precision@10": 0.06621621621621634,
+            "recall@10": 0.13862470131104887,
+            "users": 444
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 1.0,
+            "mean_training_count": 358.6875,
+            "median_training_count": 351.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "no_pattern": {
+          "all_observed": {
+            "coverage@10": 0.1450653983353151,
+            "hit@10": 0.7563559322033898,
+            "mrr@10": 0.4075026903416733,
+            "ndcg@10": 0.23805363592504314,
+            "novelty@10": 8.391232560658661,
+            "precision@10": 0.15974576271186441,
+            "recall@10": 0.22044000848561593,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 444,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 754,
+            "recommended_known_dislikes": 81,
+            "users_without_liked_validation_excluded_from_liked_metrics": 28,
+            "validation_dislikes": 795,
+            "validation_likes": 2607,
+            "validation_observations": 4655
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.10742705570291777,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 462,
+              "tail": 335
+            },
+            "maximum_absolute_error": 5.329070518200751e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 148,
+              "medium": 155,
+              "sparse": 169
+            }
+          },
+          "known_dislike_rate_per_slot": 0.017161016949152542,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 424,
+              "tail": 252
+            },
+            "maximum_absolute_error": 3.552713678800501e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 148,
+              "medium": 153,
+              "sparse": 143
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.14447086801426873,
+            "hit@10": 0.6711711711711712,
+            "mrr@10": 0.349464643214643,
+            "ndcg@10": 0.2244864637316296,
+            "novelty@10": 8.387606826117658,
+            "precision@10": 0.11801801801801845,
+            "recall@10": 0.26740086175188493,
+            "users": 444
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 0.9834745762711864,
+            "mean_training_count": 263.49639830508477,
+            "median_training_count": 244.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        }
+      }
+    },
+    "2027": {
+      "comparisons_verified": 12,
+      "maximum_metric_absolute_error": 1.509903313490213e-14,
+      "replay": {
+        "analytic_replay_exact": true,
+        "common_updates_per_arm": 3000,
+        "feature_checks": {
+          "episode_replay_exact": true,
+          "episodes": 1886,
+          "excluded_training_users": 0,
+          "feature_hashes_sha256": "d466a9cc2964e9c6292338603df913bc5230b280146e783d373d44c89383f33f",
+          "normalization_replay_exact": true,
+          "raw_features_replay_exact": true
+        },
+        "frozen_weight_intervention_replay_exact": true,
+        "trained_arms": {
+          "full_pattern": {
+            "checkpoint_predictions_replayed": 5,
+            "exact_selected_score_replay": true,
+            "maximum_meta_metric_error": 1.3877787807814457e-16,
+            "selected_epoch": 100
+          },
+          "marginal_only": {
+            "checkpoint_predictions_replayed": 5,
+            "exact_selected_score_replay": true,
+            "maximum_meta_metric_error": 2.7755575615628914e-17,
+            "selected_epoch": 10
+          },
+          "no_pattern": {
+            "checkpoint_predictions_replayed": 5,
+            "exact_selected_score_replay": true,
+            "maximum_meta_metric_error": 1.3877787807814457e-16,
+            "selected_epoch": 100
+          }
+        }
+      },
+      "verified_development_metrics": {
+        "analytic_donor": {
+          "all_observed": {
+            "coverage@10": 0.06777645659928656,
+            "hit@10": 0.7266949152542372,
+            "mrr@10": 0.3869703389830506,
+            "ndcg@10": 0.2165289305044566,
+            "novelty@10": 8.106479267778361,
+            "precision@10": 0.14237288135593257,
+            "recall@10": 0.1956572770137814,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 434,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 672,
+            "recommended_known_dislikes": 60,
+            "users_without_liked_validation_excluded_from_liked_metrics": 38,
+            "validation_dislikes": 724,
+            "validation_likes": 2626,
+            "validation_observations": 4584
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.08928571428571429,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 462,
+              "tail": 352
+            },
+            "maximum_absolute_error": 1.7763568394002505e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 151,
+              "medium": 166,
+              "sparse": 155
+            }
+          },
+          "known_dislike_rate_per_slot": 0.012711864406779662,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 413,
+              "tail": 257
+            },
+            "maximum_absolute_error": 1.7763568394002505e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 151,
+              "medium": 161,
+              "sparse": 122
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.06718192627824018,
+            "hit@10": 0.6474654377880185,
+            "mrr@10": 0.335631994733377,
+            "ndcg@10": 0.19727231934910028,
+            "novelty@10": 8.095215636019356,
+            "precision@10": 0.1078341013824889,
+            "recall@10": 0.2253164410350009,
+            "users": 434
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 1.0,
+            "mean_training_count": 308.5449152542373,
+            "median_training_count": 303.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "full_pattern": {
+          "all_observed": {
+            "coverage@10": 0.19441141498216408,
+            "hit@10": 0.7902542372881356,
+            "mrr@10": 0.4376311541565778,
+            "ndcg@10": 0.24602096321330474,
+            "novelty@10": 8.485173792414214,
+            "precision@10": 0.16165254237288162,
+            "recall@10": 0.2206318285876197,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 434,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 763,
+            "recommended_known_dislikes": 62,
+            "users_without_liked_validation_excluded_from_liked_metrics": 38,
+            "validation_dislikes": 724,
+            "validation_likes": 2626,
+            "validation_observations": 4584
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.08125819134993446,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 462,
+              "tail": 352
+            },
+            "maximum_absolute_error": 5.329070518200751e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 151,
+              "medium": 166,
+              "sparse": 155
+            }
+          },
+          "known_dislike_rate_per_slot": 0.013135593220338982,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 413,
+              "tail": 257
+            },
+            "maximum_absolute_error": 5.329070518200751e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 151,
+              "medium": 161,
+              "sparse": 122
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.19203329369797859,
+            "hit@10": 0.6912442396313364,
+            "mrr@10": 0.3741149147831175,
+            "ndcg@10": 0.2249126369289823,
+            "novelty@10": 8.475562752437428,
+            "precision@10": 0.1225806451612907,
+            "recall@10": 0.24627111467220505,
+            "users": 434
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 0.9739406779661017,
+            "mean_training_count": 251.3502118644068,
+            "median_training_count": 243.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "full_zero_pattern": {
+          "all_observed": {
+            "coverage@10": 0.2734839476813318,
+            "hit@10": 0.711864406779661,
+            "mrr@10": 0.34294121603443634,
+            "ndcg@10": 0.20083040932118476,
+            "novelty@10": 9.403670863949976,
+            "precision@10": 0.13516949152542412,
+            "recall@10": 0.19508464964558547,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 434,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 638,
+            "recommended_known_dislikes": 48,
+            "users_without_liked_validation_excluded_from_liked_metrics": 38,
+            "validation_dislikes": 724,
+            "validation_likes": 2626,
+            "validation_observations": 4584
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.07523510971786834,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 462,
+              "tail": 352
+            },
+            "maximum_absolute_error": 5.329070518200751e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 151,
+              "medium": 166,
+              "sparse": 155
+            }
+          },
+          "known_dislike_rate_per_slot": 0.010169491525423728,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 413,
+              "tail": 257
+            },
+            "maximum_absolute_error": 1.509903313490213e-14,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 151,
+              "medium": 161,
+              "sparse": 122
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.2621878715814506,
+            "hit@10": 0.6129032258064516,
+            "mrr@10": 0.29979792992465815,
+            "ndcg@10": 0.1882242562480459,
+            "novelty@10": 9.396029684990898,
+            "precision@10": 0.10368663594470073,
+            "recall@10": 0.2184606599035676,
+            "users": 434
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 0.825635593220339,
+            "mean_training_count": 223.65572033898306,
+            "median_training_count": 240.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "locked_binary": {
+          "all_observed": {
+            "coverage@10": 0.178359096313912,
+            "hit@10": 0.7860169491525424,
+            "mrr@10": 0.44589975114339503,
+            "ndcg@10": 0.2621796166264255,
+            "novelty@10": 8.460405735720867,
+            "precision@10": 0.17542372881355925,
+            "recall@10": 0.23577020597318213,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 434,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 828,
+            "recommended_known_dislikes": 62,
+            "users_without_liked_validation_excluded_from_liked_metrics": 38,
+            "validation_dislikes": 724,
+            "validation_likes": 2626,
+            "validation_observations": 4584
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.0748792270531401,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 462,
+              "tail": 352
+            },
+            "maximum_absolute_error": 3.552713678800501e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 151,
+              "medium": 166,
+              "sparse": 155
+            }
+          },
+          "known_dislike_rate_per_slot": 0.013135593220338982,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 413,
+              "tail": 257
+            },
+            "maximum_absolute_error": 4.440892098500626e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 151,
+              "medium": 161,
+              "sparse": 122
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.17538644470868014,
+            "hit@10": 0.7258064516129032,
+            "mrr@10": 0.38853686635944673,
+            "ndcg@10": 0.24421123562380684,
+            "novelty@10": 8.454120800822272,
+            "precision@10": 0.1361751152073737,
+            "recall@10": 0.27938704779446766,
+            "users": 434
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 0.9921610169491526,
+            "mean_training_count": 250.77118644067798,
+            "median_training_count": 240.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "marginal_only": {
+          "all_observed": {
+            "coverage@10": 0.029131985731272295,
+            "hit@10": 0.5444915254237288,
+            "mrr@10": 0.23667019774011316,
+            "ndcg@10": 0.12111259927253004,
+            "novelty@10": 7.854627678989769,
+            "precision@10": 0.08898305084745796,
+            "recall@10": 0.11083035573966288,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 434,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 420,
+            "recommended_known_dislikes": 45,
+            "users_without_liked_validation_excluded_from_liked_metrics": 38,
+            "validation_dislikes": 724,
+            "validation_likes": 2626,
+            "validation_observations": 4584
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.10714285714285714,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 462,
+              "tail": 352
+            },
+            "maximum_absolute_error": 2.6645352591003757e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 151,
+              "medium": 166,
+              "sparse": 155
+            }
+          },
+          "known_dislike_rate_per_slot": 0.009533898305084746,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 413,
+              "tail": 257
+            },
+            "maximum_absolute_error": 2.6645352591003757e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 151,
+              "medium": 161,
+              "sparse": 122
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.029131985731272295,
+            "hit@10": 0.45622119815668205,
+            "mrr@10": 0.2012179065174458,
+            "ndcg@10": 0.11245332766932938,
+            "novelty@10": 7.859662379180858,
+            "precision@10": 0.06751152073732729,
+            "recall@10": 0.1276217814292371,
+            "users": 434
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 1.0,
+            "mean_training_count": 359.0148305084746,
+            "median_training_count": 353.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "no_pattern": {
+          "all_observed": {
+            "coverage@10": 0.16587395957193818,
+            "hit@10": 0.7754237288135594,
+            "mrr@10": 0.4258617500672584,
+            "ndcg@10": 0.2439006619714481,
+            "novelty@10": 8.423735488016344,
+            "precision@10": 0.16250000000000012,
+            "recall@10": 0.220964696810532,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 434,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 767,
+            "recommended_known_dislikes": 59,
+            "users_without_liked_validation_excluded_from_liked_metrics": 38,
+            "validation_dislikes": 724,
+            "validation_likes": 2626,
+            "validation_observations": 4584
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.07692307692307693,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 462,
+              "tail": 352
+            },
+            "maximum_absolute_error": 6.217248937900877e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 151,
+              "medium": 166,
+              "sparse": 155
+            }
+          },
+          "known_dislike_rate_per_slot": 0.0125,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 413,
+              "tail": 257
+            },
+            "maximum_absolute_error": 2.6645352591003757e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 151,
+              "medium": 161,
+              "sparse": 122
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.15992865636147444,
+            "hit@10": 0.6866359447004609,
+            "mrr@10": 0.3617740106795406,
+            "ndcg@10": 0.22483710679948624,
+            "novelty@10": 8.411549336342667,
+            "precision@10": 0.12511520737327225,
+            "recall@10": 0.2560194169091841,
+            "users": 434
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 0.9786016949152543,
+            "mean_training_count": 259.5165254237288,
+            "median_training_count": 247.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        }
+      }
+    },
+    "2028": {
+      "comparisons_verified": 12,
+      "maximum_metric_absolute_error": 1.4210854715202004e-14,
+      "replay": {
+        "analytic_replay_exact": true,
+        "common_updates_per_arm": 3000,
+        "feature_checks": {
+          "episode_replay_exact": true,
+          "episodes": 1886,
+          "excluded_training_users": 0,
+          "feature_hashes_sha256": "83e5d7d04d9ba2d4e91585b3f842f02078a72ea3ae3e17852fa3f473eedb46df",
+          "normalization_replay_exact": true,
+          "raw_features_replay_exact": true
+        },
+        "frozen_weight_intervention_replay_exact": true,
+        "trained_arms": {
+          "full_pattern": {
+            "checkpoint_predictions_replayed": 5,
+            "exact_selected_score_replay": true,
+            "maximum_meta_metric_error": 1.942890293094024e-16,
+            "selected_epoch": 100
+          },
+          "marginal_only": {
+            "checkpoint_predictions_replayed": 5,
+            "exact_selected_score_replay": true,
+            "maximum_meta_metric_error": 2.7755575615628914e-17,
+            "selected_epoch": 0
+          },
+          "no_pattern": {
+            "checkpoint_predictions_replayed": 5,
+            "exact_selected_score_replay": true,
+            "maximum_meta_metric_error": 8.326672684688674e-17,
+            "selected_epoch": 100
+          }
+        }
+      },
+      "verified_development_metrics": {
+        "analytic_donor": {
+          "all_observed": {
+            "coverage@10": 0.06777645659928656,
+            "hit@10": 0.7288135593220338,
+            "mrr@10": 0.3574867164379876,
+            "ndcg@10": 0.21710069839639556,
+            "novelty@10": 8.125025234373918,
+            "precision@10": 0.14470338983050868,
+            "recall@10": 0.20752452233193697,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 433,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 683,
+            "recommended_known_dislikes": 87,
+            "users_without_liked_validation_excluded_from_liked_metrics": 39,
+            "validation_dislikes": 842,
+            "validation_likes": 2582,
+            "validation_observations": 4620
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.1273792093704246,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 467,
+              "tail": 343
+            },
+            "maximum_absolute_error": 7.105427357601002e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 147,
+              "medium": 167,
+              "sparse": 158
+            }
+          },
+          "known_dislike_rate_per_slot": 0.01843220338983051,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 408,
+              "tail": 257
+            },
+            "maximum_absolute_error": 5.329070518200751e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 147,
+              "medium": 162,
+              "sparse": 124
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.06539833531510107,
+            "hit@10": 0.6327944572748267,
+            "mrr@10": 0.3068743355694856,
+            "ndcg@10": 0.19894288686155906,
+            "novelty@10": 8.111085589929557,
+            "precision@10": 0.10831408775981555,
+            "recall@10": 0.23417746052494823,
+            "users": 433
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 1.0,
+            "mean_training_count": 305.67118644067796,
+            "median_training_count": 309.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "full_pattern": {
+          "all_observed": {
+            "coverage@10": 0.18192627824019025,
+            "hit@10": 0.7690677966101694,
+            "mrr@10": 0.3951254371805214,
+            "ndcg@10": 0.23970886547717238,
+            "novelty@10": 8.46580488297694,
+            "precision@10": 0.15974576271186441,
+            "recall@10": 0.23071259426309654,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 433,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 754,
+            "recommended_known_dislikes": 75,
+            "users_without_liked_validation_excluded_from_liked_metrics": 39,
+            "validation_dislikes": 842,
+            "validation_likes": 2582,
+            "validation_observations": 4620
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.09946949602122016,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 467,
+              "tail": 343
+            },
+            "maximum_absolute_error": 1.7763568394002505e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 147,
+              "medium": 167,
+              "sparse": 158
+            }
+          },
+          "known_dislike_rate_per_slot": 0.015889830508474576,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 408,
+              "tail": 257
+            },
+            "maximum_absolute_error": 4.440892098500626e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 147,
+              "medium": 162,
+              "sparse": 124
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.17657550535077288,
+            "hit@10": 0.6905311778290993,
+            "mrr@10": 0.33679387074306216,
+            "ndcg@10": 0.22522041359653946,
+            "novelty@10": 8.449638803608016,
+            "precision@10": 0.1228637413394924,
+            "recall@10": 0.2705153175625132,
+            "users": 433
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 0.9764830508474577,
+            "mean_training_count": 254.0572033898305,
+            "median_training_count": 241.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "full_zero_pattern": {
+          "all_observed": {
+            "coverage@10": 0.23959571938168847,
+            "hit@10": 0.7097457627118644,
+            "mrr@10": 0.3403383104654289,
+            "ndcg@10": 0.20249298087307108,
+            "novelty@10": 9.055946759936427,
+            "precision@10": 0.13220338983050892,
+            "recall@10": 0.20145837676582018,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 433,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 624,
+            "recommended_known_dislikes": 66,
+            "users_without_liked_validation_excluded_from_liked_metrics": 39,
+            "validation_dislikes": 842,
+            "validation_likes": 2582,
+            "validation_observations": 4620
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.10576923076923077,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 467,
+              "tail": 343
+            },
+            "maximum_absolute_error": 1.0658141036401503e-14,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 147,
+              "medium": 167,
+              "sparse": 158
+            }
+          },
+          "known_dislike_rate_per_slot": 0.013983050847457627,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 408,
+              "tail": 257
+            },
+            "maximum_absolute_error": 1.4210854715202004e-14,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 147,
+              "medium": 162,
+              "sparse": 124
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.2259215219976219,
+            "hit@10": 0.6235565819861432,
+            "mrr@10": 0.29580721434070156,
+            "ndcg@10": 0.19319400029389758,
+            "novelty@10": 9.049210734636695,
+            "precision@10": 0.10184757505773703,
+            "recall@10": 0.23363697063427574,
+            "users": 433
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 0.8788135593220339,
+            "mean_training_count": 240.91016949152544,
+            "median_training_count": 245.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "locked_binary": {
+          "all_observed": {
+            "coverage@10": 0.18549346016646848,
+            "hit@10": 0.777542372881356,
+            "mrr@10": 0.4245586158192088,
+            "ndcg@10": 0.26387933034573496,
+            "novelty@10": 8.471023270240487,
+            "precision@10": 0.17860169491525402,
+            "recall@10": 0.24613977666575004,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 433,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 843,
+            "recommended_known_dislikes": 93,
+            "users_without_liked_validation_excluded_from_liked_metrics": 39,
+            "validation_dislikes": 842,
+            "validation_likes": 2582,
+            "validation_observations": 4620
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.1103202846975089,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 467,
+              "tail": 343
+            },
+            "maximum_absolute_error": 7.105427357601002e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 147,
+              "medium": 167,
+              "sparse": 158
+            }
+          },
+          "known_dislike_rate_per_slot": 0.019703389830508476,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 408,
+              "tail": 257
+            },
+            "maximum_absolute_error": 7.993605777301127e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 147,
+              "medium": 162,
+              "sparse": 124
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.1789536266349584,
+            "hit@10": 0.7066974595842956,
+            "mrr@10": 0.36705799332820116,
+            "ndcg@10": 0.25198931298449495,
+            "novelty@10": 8.458771280843719,
+            "precision@10": 0.13972286374133996,
+            "recall@10": 0.2914726271940854,
+            "users": 433
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 0.9872881355932204,
+            "mean_training_count": 250.10381355932202,
+            "median_training_count": 238.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "marginal_only": {
+          "all_observed": {
+            "coverage@10": 0.02794292508917955,
+            "hit@10": 0.5529661016949152,
+            "mrr@10": 0.22964672450901272,
+            "ndcg@10": 0.1254428766598364,
+            "novelty@10": 7.855764107771085,
+            "precision@10": 0.0868644067796613,
+            "recall@10": 0.12173879621731874,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 433,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 410,
+            "recommended_known_dislikes": 48,
+            "users_without_liked_validation_excluded_from_liked_metrics": 39,
+            "validation_dislikes": 842,
+            "validation_likes": 2582,
+            "validation_observations": 4620
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.11707317073170732,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 467,
+              "tail": 343
+            },
+            "maximum_absolute_error": 7.993605777301127e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 147,
+              "medium": 167,
+              "sparse": 158
+            }
+          },
+          "known_dislike_rate_per_slot": 0.010169491525423728,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 408,
+              "tail": 257
+            },
+            "maximum_absolute_error": 7.993605777301127e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 147,
+              "medium": 162,
+              "sparse": 124
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.02794292508917955,
+            "hit@10": 0.47344110854503463,
+            "mrr@10": 0.19700135635470514,
+            "ndcg@10": 0.11798888604754844,
+            "novelty@10": 7.8604974833094925,
+            "precision@10": 0.06651270207852207,
+            "recall@10": 0.14178334970540546,
+            "users": 433
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 1.0,
+            "mean_training_count": 358.7074152542373,
+            "median_training_count": 348.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        },
+        "no_pattern": {
+          "all_observed": {
+            "coverage@10": 0.15992865636147444,
+            "hit@10": 0.7669491525423728,
+            "mrr@10": 0.3949682203389828,
+            "ndcg@10": 0.23408081853873444,
+            "novelty@10": 8.424372258264352,
+            "precision@10": 0.1578389830508475,
+            "recall@10": 0.22455128771831315,
+            "users": 472
+          },
+          "denominators": {
+            "all_observed_users": 472,
+            "liked_ratings_users": 433,
+            "recommendation_slots": 4720,
+            "recommended_items_with_validation_rating": 745,
+            "recommended_known_dislikes": 80,
+            "users_without_liked_validation_excluded_from_liked_metrics": 39,
+            "validation_dislikes": 842,
+            "validation_likes": 2582,
+            "validation_observations": 4620
+          },
+          "dislike_rate_among_validation_rated_recommendations": 0.10738255033557047,
+          "groups": {
+            "item_group_positive_users": {
+              "head": 467,
+              "tail": 343
+            },
+            "maximum_absolute_error": 3.552713678800501e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 147,
+              "medium": 167,
+              "sparse": 158
+            }
+          },
+          "known_dislike_rate_per_slot": 0.01694915254237288,
+          "liked_groups": {
+            "item_group_positive_users": {
+              "head": 408,
+              "tail": 257
+            },
+            "maximum_absolute_error": 3.552713678800501e-15,
+            "numeric_fields_verified": 86,
+            "user_group_counts": {
+              "dense": 147,
+              "medium": 162,
+              "sparse": 124
+            }
+          },
+          "liked_ratings": {
+            "coverage@10": 0.15041617122473247,
+            "hit@10": 0.6859122401847575,
+            "mrr@10": 0.33553191099380447,
+            "ndcg@10": 0.21984383272025923,
+            "novelty@10": 8.404506035530696,
+            "precision@10": 0.12078521939953847,
+            "recall@10": 0.26122708013917184,
+            "users": 433
+          },
+          "training_frequency": {
+            "catalog_items": 1682,
+            "head_catalog_size": 337,
+            "head_slot_share": 0.9771186440677966,
+            "mean_training_count": 259.3069915254237,
+            "median_training_count": 245.0,
+            "recommendation_slots": 4720,
+            "users": 472,
+            "zero_training_count_slot_share": 0.0
+          }
+        }
+      }
+    }
+  },
+  "selection_freeze_sha256": "e0745014a8d3aae671c757f2073019c66d11a692366c723f203e5241ab6f863e",
+  "source_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "exploratory/categorical_reconstruction/PROTOCOL.md": "1f65576ce366fe0e6e337aa66652d01671247384b20d07cdbbe9ff835a10ef54",
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "exploratory/categorical_reconstruction/hybrid.py": "154807a25f7946251fec21aa3697a5af929aa74bce53c9796ad3018be6007079",
+    "exploratory/categorical_reconstruction/model.py": "fac13a6303e50c10cc975a04155e0bc6f8b8cb6837880aa61fdd5eaf5eb4a0ee",
+    "exploratory/categorical_reconstruction/run_experiment.py": "0cfcd87f84b2003461cc7393c1849b44009ce63a5ef06c7de65f343d5d7b217a",
+    "exploratory/context_interactions/run_experiment.py": "5114943ca22425625b1bd8cde8cb016e6b6c752fba8379169474f91d15987c73",
+    "exploratory/evidence_transfer/PROTOCOL.md": "deabe975dcb4e9e8d1c1da73ff17b1f1f46e176826a8fef440e16ec42d527f07",
+    "exploratory/evidence_transfer/model.py": "58eab1d33dfe0df84b4418ffd0f90175a663f5dd3e76718cce2889af9223ccc8",
+    "exploratory/evidence_transfer/run_experiment.py": "fbb9843aeddbabe5343a7933e21c89cd0d9e7ea385a7712a602e869aa7beac42",
+    "field_reference_comparison.py": "60fa86b8adedd10705aea9073437f35e6252d4703bd8da7fd4ed7a95f3be78fd",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "package_project.py": "1c43860d30dd33894ac283f1bb2c1aa75c3488ae33839d54b9516dbe0b684052",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "stage": "reused_development",
+  "status": "complete",
+  "test_evaluated": false,
+  "test_read": false,
+  "verifier_source_sha256": {
+    "exploratory/categorical_reconstruction/verify_groups.py": "4536bec36cca9e09ebcc44614d256c627841f7cd32f9a09f7ad00b27b1e1a50b",
+    "exploratory/categorical_reconstruction/verify_results.py": "c10b39407ae5e31962a2c634174914f2fd880341b0e39e126a43607d34e08eab",
+    "exploratory/context_interactions/verify_results.py": "998d078d74f950556abd7a93d8a284b71088f4b8b8229016c703b661fbb97929",
+    "exploratory/evidence_transfer/verify_results.py": "2eee82812823280172ce02d4c2e39824b01e11a6f0404f7152f79b245b35b597"
+  }
+}
