@@ -1,0 +1,70 @@
+{
+  "runtime": {
+    "machine": "arm64",
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.17.1",
+    "system": "Darwin",
+    "torch": "2.14.0"
+  },
+  "seeds": {
+    "2026": {
+      "data_sha256": {
+        "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+        "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+        "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+      },
+      "manifest_sha256": "4b5b8c0272a741b1be93c46a9516662e08c04a3c519a3ae509ca84f8f2add779",
+      "protocol_sha256": "423bddb6e765da55eab5f1da589575fa86527a8accdf2f8c96ea2afa3569b6c9",
+      "source_manifest_sha256": "1a5d389c0928fbe3aa11177efc7408a139a9447e88973de5068db156971b47d9",
+      "split_sha256": {
+        "test": "35a26a905e9a559e4badca9a241df49f0a88c044a0dbcadb200dfbe5dd6a98bc",
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    "2027": {
+      "data_sha256": {
+        "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+        "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+        "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+      },
+      "manifest_sha256": "f2431100940f8d2a4c03f8a468163207a69188ca68a76d5e387687e4ca877b15",
+      "protocol_sha256": "ded40f88e5f298a0e7f9c470e36b0288003feb92a1a883dd02087f345a7d5b9d",
+      "source_manifest_sha256": "f8742f1f7783c61d3eba430075ff9f8be57b0a47bbf6e5a7818d5364f9f179ee",
+      "split_sha256": {
+        "test": "49af66f7b495e82553c4861522d416002b5a0129934951f94f29709fa701bb7d",
+        "train": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+        "valid": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+      }
+    },
+    "2028": {
+      "data_sha256": {
+        "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+        "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+        "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+      },
+      "manifest_sha256": "2a16983f096b9ba44df8afeb49efc43c838235bb7617340b8067e440056b76a3",
+      "protocol_sha256": "75c3b7f8cf9bb53e477f8db273ee572906ee8dd7df115eac0286e0c948386c66",
+      "source_manifest_sha256": "f57ee23ce094b51ab774ca5b4bc228f89480d053e49e128264628ec285075cd3",
+      "split_sha256": {
+        "test": "832ef7b818dfb816b1449c00590114b356b20e8c12e1352c365e00e2cb93e571",
+        "train": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+        "valid": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+      }
+    }
+  },
+  "source_sha256": {
+    "categorical_experiment.py": "2d836a4acdab2bf09fdb54140ee98f2eeb3cf2be98607c21fe8911c59130ad1d",
+    "categorical_field.py": "40c27f8f0f901f9b6cf6792be22cddf6918f3ba7d11e3add199138640d650bc0",
+    "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+    "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b",
+    "exploratory/addressed_evidence/PROTOCOL.md": "5c869a9b6772c4816006e80a05687155bab0d978da7749f8b7f4fc98cf23618c",
+    "exploratory/addressed_evidence/model.py": "7677a451e9eeb2b197ab9312b2fa744ae3b211131dbff2329c88402e01214a1d",
+    "exploratory/addressed_evidence/run_experiment.py": "8abeb6fb5cde0048f250b0f83b2f8446cd2e2f35edad488550c7f14a1645c6f1",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "joint_field_experiment.py": "e2228dd51c4ac909c587eb98cff795872d23232dd68e3790ce97957c40e28c0f",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  }
+}

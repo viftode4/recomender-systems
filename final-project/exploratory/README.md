@@ -13,8 +13,9 @@ code freeze and review archive remain unchanged.
   scratch. [Protocol](addressed_evidence/PROTOCOL.md),
   [launch receipt](addressed_evidence/LAUNCH.json), and
   [run, progress and recovery instructions](addressed_evidence/RUN.md).
-  The receipt records a launch, not a completed result. The runner writes its
-  final comparison automatically after every seed finishes.
+  [Completed results](addressed_evidence/results-v1/RESULTS.md): both variants
+  remain substantially below the matched EASE reference; the pair extension
+  worsens the primary joint likelihood. All six fits completed.
 - [Optimization geometry](addressed_evidence/GEOMETRY.md): convex additive
   training, nonconvex pair interactions and exact representational restrictions,
   with a concrete future optimization experiment.
@@ -29,6 +30,13 @@ code freeze and review archive remain unchanged.
 - [Supplementary dataset plan](DATASET_EXPANSION.md): MovieLens1M first, with
   a genuinely unopened assessment and a later distinct-domain option. The
   official archive has not been acquired in this restricted environment.
+- [Deeper research map](deeper_research/RESEARCH_MAP.md): learning operation
+  contents, their composition and which evidence to acquire; distinguishes
+  implemented experiments from proposed extensions and known prior art.
+- [Completed learned-operation query study](library_queries/README.md): exact
+  inference, 170 training worlds, unseen-function transfer and a no-sharing
+  control. Focused acquisition helps earlier in the shared fixture but exposes
+  an assumption the current learner cannot repair in the no-sharing fixture.
 
 The current files establish implementations, diagnostics and a running research
 process. Novelty and a real-data advantage remain questions to answer.

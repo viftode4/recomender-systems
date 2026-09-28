@@ -104,6 +104,24 @@ every platform or an entirely new network installation has been tested.
 No experiment identifies human feelings, proves novelty priority, guarantees an
 absence of defects or establishes a particular grade.
 
+## Subsequent exploratory research
+
+The completed assignment artifacts above remain unchanged. New work is indexed
+in [exploratory/README.md](exploratory/README.md).
+
+The addressed-evidence training study has completed all six fits. Its pair
+extension fails the primary joint-NLL comparison and both variants remain below
+the matched development ranking references. The [postmortem](exploratory/addressed_evidence/POSTMORTEM.md)
+preserves those results, verifies the original seals and diagnoses scale growth
+using TRAIN-only forward passes. An independent replay reproduced its aggregate
+diagnostics exactly.
+
+The [deeper research map](exploratory/deeper_research/RESEARCH_MAP.md) separates
+a finite learned-operation/query experiment from a proposed continuous neural
+operator architecture. The finite experiment uses synthetic inputs only. It
+does not turn the exposed MovieLens test into new confirmatory evidence and
+does not establish conceptual novelty or a recommender improvement.
+
 ## Local and publishing state
 
 Work is under `final-project/` on branch `project/starter`. Raw runs and

@@ -122,15 +122,15 @@ The recorded-item ranking score is logsumexp over all five logits; the liked
 record score is logsumexp over categories four and five. These are different
 quantities from conditional rating probabilities.
 
-From the project root, using the existing course Python environment:
+From the project root, using the verified training environment:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
-  /Users/vliftode/personal/recommender-systems/assignment-3/RecBole_DSAIT4335/.venv/bin/python \
+  runs/environment-check/.venv/bin/python \
   -m unittest exploratory.addressed_evidence.test_model -v
 
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
-  /Users/vliftode/personal/recommender-systems/assignment-3/RecBole_DSAIT4335/.venv/bin/python \
+  runs/environment-check/.venv/bin/python \
   exploratory/addressed_evidence/diagnose_initialization.py --out /tmp/addressed-initialization-replay.json
 ```
 

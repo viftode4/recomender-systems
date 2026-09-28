@@ -1,0 +1,19 @@
+{
+  "archive_bytes": 767503,
+  "archive_sha256": "0afde7ef7771586e0cc487976ae4e2d5959ab11a30db9b1de79fc88fe2478d68",
+  "contains": "Complete synthetic observations, queried labels, predictions, summary, failures, provenance and sealed source copies. No MovieLens records.",
+  "entry_sha256": {
+    "run/failures.jsonl": "25e7ed9a578241d5b14bfbef562d7032b8638956b6a1fd26a103837b7174548b",
+    "run/manifest.json": "5db91e2949510c2028e344546772f1514e31863fddb6200678e1820d0ec12334",
+    "run/records.jsonl": "2c3525a6a7b777c0eb401c464a0d68e2579a92e26b2bc8396fd7423390f7eb0c",
+    "run/sourcehashes.json": "fcf15c94a0cec4bec48cc21254b3f2fc22e4a4b6408f8b05d768cae16ffd92fd",
+    "run/summary.json": "03387ec44c0ed74d1f6a64a6bbecd136ca2e9944533859b49f693cdfe4b04457",
+    "run/worlds.jsonl": "6cd84dd382e560d478316d59e5ca38dd6cc336a9df634cb69fe220469b0f51c7",
+    "source/PROTOCOL.md": "a25a95fd6237be8fd24ca7e4e6984904c75ef9daa1d9b788cf223b393c58d934",
+    "source/core.py": "e97e30078d5b39960f844bec00f95840bdabf22839a5383b56c72a07e9127740",
+    "source/run_experiment.py": "ff1f4d9c10bac77c4caf321b38f6ad7ea480baf11ea31f37fa0e66924aed3560"
+  },
+  "result_records": 4800,
+  "source_manifest_sha256": "5db91e2949510c2028e344546772f1514e31863fddb6200678e1820d0ec12334",
+  "training_worlds": 170
+}

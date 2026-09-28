@@ -1,0 +1,25 @@
+{
+  "confidence_intervals": false,
+  "created_at": "2026-09-28T15:37:10.323094+00:00",
+  "experiment_source_sha256": {
+    "PROTOCOL.md": "a25a95fd6237be8fd24ca7e4e6984904c75ef9daa1d9b788cf223b393c58d934",
+    "core.py": "e97e30078d5b39960f844bec00f95840bdabf22839a5383b56c72a07e9127740",
+    "run_experiment.py": "ff1f4d9c10bac77c4caf321b38f6ad7ea480baf11ea31f37fa0e66924aed3560"
+  },
+  "fitting": false,
+  "input_sha256": {
+    "manifest.json": "5db91e2949510c2028e344546772f1514e31863fddb6200678e1820d0ec12334",
+    "records.jsonl": "2c3525a6a7b777c0eb401c464a0d68e2579a92e26b2bc8396fd7423390f7eb0c",
+    "summary.json": "03387ec44c0ed74d1f6a64a6bbecd136ca2e9944533859b49f693cdfe4b04457"
+  },
+  "matplotlib": "3.9.4",
+  "oracle_access": false,
+  "output_sha256": {
+    "RESULTS.md": "2910d0330bd7ad819515cd585c24d1efbc19c87087801b08f928ccb252f13965",
+    "query-transfer.pdf": "57b14d01fd16bbaf372ebe063bb8f553d9cd9418dbf93c46a27a3f023f8740a8",
+    "query-transfer.png": "bc2709d5d41cd55ca34c8fc387e4e19269fe4568d4314276e2e8a6cc50386428"
+  },
+  "python": "3.9.6",
+  "renderer_sha256": "47ea5170f400e601e1e80ea0fc831371689db1a02149e40a07fcdc26c18964b9",
+  "status": "complete"
+}

@@ -100,7 +100,18 @@ that the additive model's joint loss is convex under fixed features and
 parameter-independent masks. The pair extension introduces nonconvexity and
 restrictive algebraic ties. A separately declared full-gradient optimization
 study can therefore help distinguish an optimization failure from insufficient
-representation; it is not part of the running Adam experiment.
+representation; it was not part of the completed Adam experiment.
+
+The [completed addressed-evidence experiment](addressed_evidence/results-v1/RESULTS.md)
+does not establish a useful new recommender. Across three seeds, the additive
+variant reaches development all-observed nDCG@10 0.18544 and the pair variant
+0.18983, against matched EASE 0.26183. The primary joint NLL worsens from
+7.80988 to 8.64587 with pair interactions. The pair variant selects epoch 10
+in every seed and stops at epoch 220; the additive variant selects epoch 100
+and stops at epoch 300. More interaction capacity did not produce better
+likelihood in this study. The new [research map](deeper_research/RESEARCH_MAP.md)
+investigates reusable computation in a setting where the learning question can
+be inspected exactly; it is not a claimed fix for these MovieLens results.
 
 ## Gates for a real personal-program recommender
 
