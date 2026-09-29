@@ -1,0 +1,9 @@
+{
+  "reason": "Root visual review: presentation-only wording corrections; no scientific source, data, model selection or result changed.",
+  "changes": [
+    "Scope now explicitly says original VALID/TEST were not accessed in this experiment; historical evaluation remains acknowledged.",
+    "Citation uses the exact published Steck\u2013Liang title."
+  ],
+  "previous_archive_sha256": "9059b5b8b549d4b2f215139379f404f34159cb4bde46ed3709e872c37f4093a4",
+  "previous_report_sha256": "81c576b5172eac4b887ede8b4055d5d5fa84bb0985a6c25248161247648abcc7"
+}

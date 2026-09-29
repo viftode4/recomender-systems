@@ -5,11 +5,23 @@ regression hybrids, explicit-rating contrast experiments, societal reranking,
 frozen inference and a task-formatted report builder. Group 24 has five seats;
 actual member names and contributions must be supplied before final submission.
 
-Start with [the handoff and held-out findings](HANDOFF.md),
-[seven-page review report](reports/final-review-v1/report.pdf), and
-[review ZIP](packages/final-review-v1/24.zip). The implementation and the single
-frozen test batch are complete. The report remains a draft while real contributor
-information and individual peer feedback are pending.
+Start with [the handoff and findings](HANDOFF.md),
+[five-page review report](reports/framing-review-v1/report.pdf), and
+[current review ZIP](packages/framing-review-v1/24.zip). The report covers the
+three required tasks and a separate exploratory grouping experiment. It corrects
+the cross-model user/item-group comparison and preserves the original frozen
+study in the archive. Real contributor information and individual peer feedback
+remain deferred human inputs; no course submission has been made.
+
+The [grouping experiment](exploratory/framing_search/predictive/README.md) tested
+whether equal-timestamp rating groups improve prediction without revealing a
+missing target's timestamp. All 39 declared fits completed. On its nested
+TRAIN-derived assessment, the grouped model scores 0.172555 nDCG@10, versus
+0.172956 for newly fitted EASE (-0.23% relative), 0.172721 for the ungrouped pair
+control, and 0.172819 averaged over three shuffled-group controls. The experiment
+does not support the proposed predictive advantage or the requested substantial
+advance. These are different data partitions from the original results below;
+they must not be compared as a performance trend.
 
 The disagreement hybrid's mean held-out nDCG@10 is 0.33701, versus 0.31613 for
 the standalone expert selected on validation (+6.6% relative); EASE separately

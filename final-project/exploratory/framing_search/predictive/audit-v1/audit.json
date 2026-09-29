@@ -1,0 +1,39 @@
+{
+  "audit_source_sha256": "296d92807edcf5a8417dea2b91fcfa4bb4cab87ebde467cc284d127d415ad7d9",
+  "checks": {
+    "assessment_endpoints_per_role": 4,
+    "complete_selection_seal": "PASS",
+    "declared_candidates_and_selection_choices": 39,
+    "fit_only_timestamp_context": "PASS",
+    "independent_nested_partition": "PASS",
+    "maximum_metric_error": 7.105427357601002e-15,
+    "numeric_metric_checks": 2105,
+    "paired_bootstrap_comparisons": 6,
+    "raw_artifact_manifest": "PASS",
+    "selected_ease_item_space_maximum_score_error": 6.5503158452884236e-15,
+    "selected_score_roles": 6,
+    "source_and_input_hashes": "PASS"
+  },
+  "elapsed_seconds": 6.842893292021472,
+  "fresh_population_test": false,
+  "grouped_models_refitted": false,
+  "limits": [
+    "Candidate selection ordering checked for all 39 rows; only selected D metrics replayed.",
+    "Grouped saved scores evaluated but not refitted; independent primal solver tests cover their algebra.",
+    "No novelty, causal effect, untouched population or universal performance claim."
+  ],
+  "new_model_search": false,
+  "original_test_read": false,
+  "original_validation_read": false,
+  "primary_ndcg": {
+    "EASE": 0.1729560628306874,
+    "bag": 0.17272067302329933,
+    "shuffle_0": 0.17278668348701234,
+    "shuffle_1": 0.17303747504579878,
+    "shuffle_2": 0.17263200120513325,
+    "true_group": 0.172555418660509
+  },
+  "run_manifest_sha256": "7e7d4fd6ecae57ea13cc028f4e61c616f047912f424c0b9faf77ae57b35a0d15",
+  "selection_seal_sha256": "16288a8c70d90ff3f7addd050a5a0f7b5122b51a8f096289b7d6ce96d82a157e",
+  "status": "PASS"
+}

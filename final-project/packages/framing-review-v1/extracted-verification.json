@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "archive_sha256": "c4933e0338bec15d2b03bcfbac27d66de9a47abff8192fbf9d3bd4b835c4d639",
+  "hashed_artifacts": 296,
+  "checks": [
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "exploratory/framing_search/predictive",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "packages/framing-review-v1/extracted-check-0.log"
+    },
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "exploratory.framing_search.recording_audit.test_audit",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "packages/framing-review-v1/extracted-check-1.log"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "exploratory/framing_search/build_review.py",
+        "--render-packaged",
+        "..",
+        "--report-dir",
+        "../rerendered"
+      ],
+      "exit_code": 0,
+      "log": "packages/framing-review-v1/extracted-check-2.log"
+    }
+  ],
+  "report_replay_byte_identical": true,
+  "report_sha256": "491ae63f52423d0678daafe8451d1a42913b46da8ec053521d739b3e12103399",
+  "replayed_report_sha256": "491ae63f52423d0678daafe8451d1a42913b46da8ec053521d739b3e12103399",
+  "extracted_dir": "/var/folders/4z/q1r8_58566b6g0bmk8mpcs7m0000gn/T/framing-review-final-pfiiki7p",
+  "raw_data_available_to_extracted_tests": false
+}

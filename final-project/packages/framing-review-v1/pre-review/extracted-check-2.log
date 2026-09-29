@@ -1,0 +1,36 @@
+{
+  "status": "complete",
+  "pages": 5,
+  "core": {
+    "pages": 4,
+    "main_task_pages": 3,
+    "appendix_pages": 0,
+    "font": "Times New Roman",
+    "font_size": 12,
+    "line_spacing": 1.15,
+    "page_bottoms_pt": [
+      165.99,
+      165.19,
+      129.59,
+      146.29
+    ],
+    "font_sha256": {
+      "regular": "f3b4ffff71c2a0c7227d37497683b2498fb2d0a4e8beae26f022e3ccfcaabfa3",
+      "bold": "50f5b1f27b7d34621090e437e8b1dd4510a22d2823fc876b3286bed327b64bbb"
+    }
+  },
+  "grouping": {
+    "pages": 1,
+    "font": "Times New Roman",
+    "font_size": 12,
+    "line_spacing": 1.15,
+    "bottom_pt": 278.49,
+    "font_sha256": {
+      "regular": "f3b4ffff71c2a0c7227d37497683b2498fb2d0a4e8beae26f022e3ccfcaabfa3",
+      "bold": "50f5b1f27b7d34621090e437e8b1dd4510a22d2823fc876b3286bed327b64bbb"
+    }
+  },
+  "original_report_pdf_sha256": "81c576b5172eac4b887ede8b4055d5d5fa84bb0985a6c25248161247648abcc7",
+  "replayed_report_pdf_sha256": "81c576b5172eac4b887ede8b4055d5d5fa84bb0985a6c25248161247648abcc7",
+  "data_access": false
+}

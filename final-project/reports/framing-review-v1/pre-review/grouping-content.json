@@ -1,0 +1,123 @@
+{
+  "discussion": "Recording groups did not meet the declared research-priority rule: at least 10% relative nDCG gain over tuned EASE and higher means than unordered pairs and shuffled groups. The measured EASE-relative change was -0.23%. Coherent recording groups alone do not establish predictive value. The unordered control tests the grouping restriction; timestamp shuffles retain each user's movies and group sizes. They do not identify exposure, interface design, or watching sessions. Pairwise linear recommendation is established; the contribution here is a controlled input-structure test. This single nested split follows earlier dataset exploration. Its assessment is separated from model selection, but is not fresh population confirmation or directly comparable with the preceding test tables.",
+  "evaluation": "Known constrained ridge, singleton + pair features; own-target features excluded. F/D/A = 65,518/7,645/7,645 records; 943 users. All 39 candidates use F context; D selects, A assesses after sealing. All 1,682 items eligible except F observations; no refit or target timestamps.",
+  "evidence_stage": "exploratory nested original TRAIN assessment",
+  "method": "Motivation: 70.14% of original TRAIN ratings share a user's timestamp. Within-group genre Jaccard is 0.234 versus 0.184 across 100 within-user shuffles. This is descriptive evidence.",
+  "note": "Intervals: 2,000 paired-user resamples, descriptive and not multiplicity adjusted. Shuffle comparison averages metrics, never scores. Full subgroup/secondary metrics remain in aggregate evidence.",
+  "predictive_audit_sha256": {
+    "SHA256.json": "f974a926ce90ee30c0ff807df38b407f8652e3331ad47526253e81029106e637",
+    "audit.json": "56a4aabcf7553b085a7a221fc408c89a4397cfc5fbe8503aa73950e5d25ffcdb"
+  },
+  "predictive_evidence_sha256": {
+    "SHA256.json": "736995aa54105e60c6ccbb0d5b6a9f92a624f44f45a07c6c12f76979347dcffc",
+    "aggregates.json": "89f1d14696cc3d524eef60299de96a6ef753df7cc3c1a041897892bdfef9b556",
+    "protocol.json": "eceadbacbfd16256fbc45dbcd13f65202724426399717486c486876890125d71",
+    "provenance.json": "7e7d4fd6ecae57ea13cc028f4e61c616f047912f424c0b9faf77ae57b35a0d15"
+  },
+  "recording_evidence_sha256": {
+    "RESULTS.md": "043fedbac0a435f7282fbdc11d56f6ee1792db4cf9c10323a003665861e0f157",
+    "SHA256.json": "9b7e578417108d997f00124aba225bb22748c453eaf448625978926a05d90eac",
+    "aggregates.json": "002eddeda09e42a235c1a22e9101fc234ab7beedab847e6e5a56d8e190920733",
+    "provenance.json": "69a93b65b7a714dd5d81532b95a16230f09cddc16cbcdda54311c264a6e7f74a"
+  },
+  "schema_version": 1,
+  "scope": "REVIEW DRAFT | Exploratory nested split of original TRAIN; original validation/test unopened.",
+  "source_note": "Prior: Steck & Liang (2021), Higher-Order Interactions in Linear CF. doi:10.1145/3460231.3474273. Protocol, source hashes and all candidates accompany this report.",
+  "source_sha256": {
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "exploratory/framing_search/predictive/PROTOCOL.md": "ea7609dd74b8401a69faf08ef5f345f13257d47200ba6f4012c3711dc5256bae",
+    "exploratory/framing_search/predictive/model.py": "94472908c4dda1ffad79e8df416eb7df26e27ff39423676afa4313b30b19d954",
+    "exploratory/framing_search/predictive/run.py": "0474a7135dba887cb8d254fac8e9c56265b1a6b8e5f77e8b6ec3219b154e6aa9",
+    "exploratory/framing_search/predictive/verify_results.py": "296d92807edcf5a8417dea2b91fcfa4bb4cab87ebde467cc284d127d415ad7d9",
+    "exploratory/framing_search/recording_audit/PROTOCOL.md": "7aaa05cd06f778d699680fcd3fe188b876bca7e78e699560c28ed06c8187d072",
+    "exploratory/framing_search/recording_audit/audit.py": "b767819d740abb87633f7ac30c8a4f86dd7e729edab9499a7acf400ac4928bfd",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc"
+  },
+  "tables": [
+    {
+      "caption": "All-recorded assessment at ten (every selected arm)",
+      "columns": [
+        "Model",
+        "lambda / beta",
+        "nDCG",
+        "Recall"
+      ],
+      "rows": [
+        [
+          "Tuned EASE",
+          "300 / 0",
+          "0.1730",
+          "0.2043"
+        ],
+        [
+          "Unordered pairs",
+          "250 / 0.1",
+          "0.1727",
+          "0.2027"
+        ],
+        [
+          "Recording groups",
+          "250 / 0.1",
+          "0.1726",
+          "0.2035"
+        ],
+        [
+          "Shuffle 1",
+          "250 / 0.1",
+          "0.1728",
+          "0.2031"
+        ],
+        [
+          "Shuffle 2",
+          "250 / 0.1",
+          "0.1730",
+          "0.2039"
+        ],
+        [
+          "Shuffle 3",
+          "250 / 0.1",
+          "0.1726",
+          "0.2035"
+        ]
+      ],
+      "widths": [
+        0.36,
+        0.22,
+        0.21,
+        0.21
+      ]
+    },
+    {
+      "caption": "Recording groups minus control: paired nDCG",
+      "columns": [
+        "Control",
+        "Mean change",
+        "95% interval"
+      ],
+      "rows": [
+        [
+          "vs EASE",
+          "-0.0004",
+          "[-0.0020, +0.0013]"
+        ],
+        [
+          "vs unordered",
+          "-0.0002",
+          "[-0.0014, +0.0012]"
+        ],
+        [
+          "vs shuffle mean",
+          "-0.0003",
+          "[-0.0012, +0.0006]"
+        ]
+      ],
+      "widths": [
+        0.36,
+        0.25,
+        0.39
+      ]
+    }
+  ],
+  "title": "Appendix: do rating-recording groups improve ranking?"
+}

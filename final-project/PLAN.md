@@ -93,7 +93,7 @@ No submission is automated by this plan.
 |---|---|
 | 1.1–1.2 individual recommenders and tuning | Twelve class-related models/baselines; fixed grids, extended LightGCN budgets and model corrections documented |
 | 1.3 weighted hybrid learned by regression | Sum-to-one constrained ridge matches lecture equation; unconstrained variants explicit extensions |
-| 1.4–1.5 other hybrids and tuning | Lecture-verified switching and cascade; additional RRF/contextual/pairwise variants |
+| 1.4–1.5 other hybrids and tuning | Activity-group switching, RRF and contextual/pairwise regression variants; regression penalties are tuned, while switching groups and the RRF offset are declared fixed choices |
 | 2.1 independent accuracy/beyond-accuracy metrics | Precision, Recall, nDCG, MRR, Hit, novelty, coverage, diversity, calibration and group diagnostics |
 | 2.2 model comparisons | Controlled final evaluation complete for the frozen methods; paired comparisons and matched strong references reported |
 | 2.3–2.4 coefficient and insightful analysis | Feature/loss ablations, paired intervals, harm fractions, candidate feasibility and retained negative results; team interpretation review remains |

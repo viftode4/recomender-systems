@@ -1,0 +1,29 @@
+{
+  "all_artifact_hashes_valid": true,
+  "archive": "/Users/vliftode/personal/recomender-systems/final-project/packages/framing-review-v1/24.zip",
+  "archive_sha256": "9059b5b8b549d4b2f215139379f404f34159cb4bde46ed3709e872c37f4093a4",
+  "bytes": 4163668,
+  "categorical_supplement_unchanged": true,
+  "entries": 297,
+  "original_report_unchanged": true,
+  "raw_data_included": false,
+  "report_manifest_sha256": "79ed796c45c8dc6f320638893f6df4ffe207dd517546997027c1b14bd42979de",
+  "report_pages": 5,
+  "schema_version": 1,
+  "source_import_verification": {
+    "dataset_access": false,
+    "modules": [
+      "exploratory.framing_search.build_review",
+      "exploratory.framing_search.predictive.model",
+      "exploratory.framing_search.predictive.run",
+      "exploratory.framing_search.predictive.verify_results",
+      "exploratory.framing_search.recording_audit.audit"
+    ],
+    "python": "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+    "status": "complete"
+  },
+  "status": "complete",
+  "status_of_submission": "REVIEW DRAFT; not submitted",
+  "verification_limits": "Public hashes/grid/aggregate arithmetic and isolated imports; no model refit or raw-label audit by this builder.",
+  "zip_crc_valid": true
+}

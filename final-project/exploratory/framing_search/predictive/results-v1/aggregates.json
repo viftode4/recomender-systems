@@ -1,0 +1,5014 @@
+{
+  "assessment": {
+    "EASE": {
+      "all_recorded": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.03086039655520098,
+          "calibration_jsd": 0.15037966303783842,
+          "coverage@10": 0.1807372175980975,
+          "diversity": 0.8077022561115881,
+          "exposure_entropy": 0.6358230930744012,
+          "exposure_gini": 0.9492515574684031,
+          "head_exposure": 0.9933191940615059,
+          "head_exposure_gap": 0.7929624758688781,
+          "head_recall": 0.274027650190666,
+          "hit@10": 0.6606574761399788,
+          "item_group_exposure_gap": 0.013389889840674522,
+          "mrr@10": 0.2784203571849382,
+          "ndcg@10": 0.17295606283068735,
+          "novelty@10": 8.386523075575857,
+          "popularity_jsd": 0.1628503096743342,
+          "precision@10": 0.10371155885471867,
+          "recall@10": 0.20431074043680544,
+          "tail_recall": 0.004809670781893004,
+          "worst_activity_ndcg": 0.16085528969947424
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "all_recorded",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "all_recorded",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.813456097911741,
+          "gini": 0.9492515574684031,
+          "group_mean_exposure_gap": 0.013389889840674522,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9945148616037681,
+              "items": 337,
+              "mean_item_exposure": 0.013408419247203077
+            },
+            "tail": {
+              "fraction_total_exposure": 0.0054851383962318985,
+              "items": 1345,
+              "mean_item_exposure": 1.8529406528554918e-05
+            }
+          },
+          "normalized_entropy": 0.6358230930744012,
+          "users": 943
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9945148616037681,
+            "exposure": 0.9933191940615058,
+            "heldout_positive_pairs": 4920,
+            "hits": 971,
+            "items": 337,
+            "mean_item_exposure": 0.013408419247203077,
+            "recall@10": 0.274027650190666,
+            "users_with_positives": 902
+          },
+          "tail": {
+            "discounted_exposure": 0.0054851383962318985,
+            "exposure": 0.0066808059384941675,
+            "heldout_positive_pairs": 2725,
+            "hits": 7,
+            "items": 1345,
+            "mean_item_exposure": 1.8529406528554918e-05,
+            "recall@10": 0.004809670781893004,
+            "users_with_positives": 648
+          }
+        },
+        "positive_pairs": 7645,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13869451425296916,
+            "diversity": 0.8117160605451745,
+            "head_exposure": 0.9990506329113925,
+            "hit@10": 0.8607594936708861,
+            "mrr@10": 0.3618545308418726,
+            "ndcg@10": 0.16085528969947424,
+            "novelty@10": 8.394299615750192,
+            "popularity_jsd": 0.21246007122331034,
+            "precision@10": 0.1566455696202532,
+            "recall@10": 0.1006804690883145,
+            "status": "evaluated",
+            "users": 316
+          },
+          "medium": {
+            "calibration_jsd": 0.1423125882538861,
+            "diversity": 0.8069170626495468,
+            "head_exposure": 0.9929936305732484,
+            "hit@10": 0.6496815286624203,
+            "mrr@10": 0.2764899909008189,
+            "ndcg@10": 0.16643403154965292,
+            "novelty@10": 8.35545759671974,
+            "popularity_jsd": 0.147550025841649,
+            "precision@10": 0.09777070063694267,
+            "recall@10": 0.2028131634819533,
+            "status": "evaluated",
+            "users": 314
+          },
+          "sparse": {
+            "calibration_jsd": 0.1702696582396906,
+            "diversity": 0.8044376827763409,
+            "head_exposure": 0.9878594249201279,
+            "hit@10": 0.4696485623003195,
+            "mrr@10": 0.19612302855114358,
+            "ndcg@10": 0.19171568625467522,
+            "novelty@10": 8.40983672945998,
+            "popularity_jsd": 0.12811422173179965,
+            "precision@10": 0.05623003194888179,
+            "recall@10": 0.3104366347177848,
+            "status": "evaluated",
+            "users": 313
+          }
+        },
+        "users": 943
+      },
+      "liked_ge4": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.05001266158466447,
+          "calibration_jsd": 0.1482778188150381,
+          "coverage@10": 0.17360285374554102,
+          "diversity": 0.8074525935932555,
+          "exposure_entropy": 0.6369647263257936,
+          "exposure_gini": 0.9488930869987857,
+          "head_exposure": 0.9937352245862885,
+          "head_exposure_gap": 0.7933785063936607,
+          "head_recall": 0.2908693164250844,
+          "hit@10": 0.5768321513002365,
+          "item_group_exposure_gap": 0.013395437042916984,
+          "mrr@10": 0.2430475815227586,
+          "ndcg@10": 0.16760439009199296,
+          "novelty@10": 8.379980487358043,
+          "popularity_jsd": 0.16656677999516245,
+          "precision@10": 0.08274231678487025,
+          "recall@10": 0.22526904705442918,
+          "tail_recall": 0.0057324840764331215,
+          "worst_activity_ndcg": 0.14389906020928267
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "liked_ge4",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "liked_ge4",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.825689796440474,
+          "gini": 0.9488930869987857,
+          "group_mean_exposure_gap": 0.013395437042916984,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9948438677334985,
+              "items": 337,
+              "mean_item_exposure": 0.013412855030209088
+            },
+            "tail": {
+              "fraction_total_exposure": 0.005156132266501412,
+              "items": 1345,
+              "mean_item_exposure": 1.7417987292104905e-05
+            }
+          },
+          "normalized_entropy": 0.6369647263257936,
+          "users": 846
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9948438677334985,
+            "exposure": 0.9937352245862884,
+            "heldout_positive_pairs": 3074,
+            "hits": 695,
+            "items": 337,
+            "mean_item_exposure": 0.013412855030209088,
+            "recall@10": 0.2908693164250844,
+            "users_with_positives": 796
+          },
+          "tail": {
+            "discounted_exposure": 0.005156132266501412,
+            "exposure": 0.006264775413711584,
+            "heldout_positive_pairs": 1158,
+            "hits": 5,
+            "items": 1345,
+            "mean_item_exposure": 1.7417987292104905e-05,
+            "recall@10": 0.0057324840764331215,
+            "users_with_positives": 471
+          }
+        },
+        "positive_pairs": 4232,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.1387657183629962,
+            "diversity": 0.8116804435654277,
+            "head_exposure": 0.9993610223642173,
+            "hit@10": 0.7220447284345048,
+            "mrr@10": 0.30629849383842994,
+            "ndcg@10": 0.14389906020928267,
+            "novelty@10": 8.394107763398402,
+            "popularity_jsd": 0.2119919501252225,
+            "precision@10": 0.1172523961661342,
+            "recall@10": 0.13379429331644488,
+            "status": "evaluated",
+            "users": 313
+          },
+          "medium": {
+            "calibration_jsd": 0.141774024552801,
+            "diversity": 0.8069192077415762,
+            "head_exposure": 0.9927631578947369,
+            "hit@10": 0.5361842105263158,
+            "mrr@10": 0.2266512635756057,
+            "ndcg@10": 0.1721944864523243,
+            "novelty@10": 8.357057478030708,
+            "popularity_jsd": 0.14734116661184105,
+            "precision@10": 0.07302631578947368,
+            "recall@10": 0.23969298245614032,
+            "status": "evaluated",
+            "users": 304
+          },
+          "sparse": {
+            "calibration_jsd": 0.16991293190328793,
+            "diversity": 0.8023819920981494,
+            "head_exposure": 0.9873362445414847,
+            "hit@10": 0.43231441048034935,
+            "mrr@10": 0.17836175227004922,
+            "ndcg@10": 0.19391172179394714,
+            "novelty@10": 8.39110169886408,
+            "popularity_jsd": 0.13000131369743728,
+            "precision@10": 0.048471615720524025,
+            "recall@10": 0.3311499272197962,
+            "status": "evaluated",
+            "users": 229
+          }
+        },
+        "users": 846
+      },
+      "timestamp_seen_in_fit": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.07463639578545252,
+          "calibration_jsd": 0.14906472376564633,
+          "coverage@10": 0.17717003567181927,
+          "diversity": 0.8075901287950182,
+          "exposure_entropy": 0.6383117828270641,
+          "exposure_gini": 0.9484678795284827,
+          "head_exposure": 0.9932479627473807,
+          "head_exposure_gap": 0.7928912445547529,
+          "head_recall": 0.2807309699291526,
+          "hit@10": 0.5715948777648429,
+          "item_group_exposure_gap": 0.013388045368515367,
+          "mrr@10": 0.22706589426612686,
+          "ndcg@10": 0.15526616986796088,
+          "novelty@10": 8.3902523545964,
+          "popularity_jsd": 0.16678582232599395,
+          "precision@10": 0.08055878928987228,
+          "recall@10": 0.21159804988529501,
+          "tail_recall": 0.005269607843137255,
+          "worst_activity_ndcg": 0.12439103849923074
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "timestamp_seen_in_fit",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "timestamp_seen_in_fit",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.840124802706815,
+          "gini": 0.9484678795284827,
+          "group_mean_exposure_gap": 0.013388045368515367,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9944054654397283,
+              "items": 337,
+              "mean_item_exposure": 0.013406944327432528
+            },
+            "tail": {
+              "fraction_total_exposure": 0.005594534560272043,
+              "items": 1345,
+              "mean_item_exposure": 1.8898958917161334e-05
+            }
+          },
+          "normalized_entropy": 0.6383117828270641,
+          "users": 859
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9944054654397283,
+            "exposure": 0.9932479627473807,
+            "heldout_positive_pairs": 3223,
+            "hits": 686,
+            "items": 337,
+            "mean_item_exposure": 0.013406944327432528,
+            "recall@10": 0.2807309699291526,
+            "users_with_positives": 807
+          },
+          "tail": {
+            "discounted_exposure": 0.005594534560272043,
+            "exposure": 0.0067520372526193246,
+            "heldout_positive_pairs": 1740,
+            "hits": 6,
+            "items": 1345,
+            "mean_item_exposure": 1.8898958917161334e-05,
+            "recall@10": 0.005269607843137255,
+            "users_with_positives": 544
+          }
+        },
+        "positive_pairs": 4963,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13869451425296916,
+            "diversity": 0.8117160605451745,
+            "head_exposure": 0.9990506329113925,
+            "hit@10": 0.7088607594936709,
+            "mrr@10": 0.27443364476592325,
+            "ndcg@10": 0.12439103849923074,
+            "novelty@10": 8.394299615750192,
+            "popularity_jsd": 0.21246007122331034,
+            "precision@10": 0.11044303797468354,
+            "recall@10": 0.10850545839072277,
+            "status": "evaluated",
+            "users": 316
+          },
+          "medium": {
+            "calibration_jsd": 0.1425800140367592,
+            "diversity": 0.8069478161635024,
+            "head_exposure": 0.9928104575163399,
+            "hit@10": 0.5228758169934641,
+            "mrr@10": 0.2155008299616143,
+            "ndcg@10": 0.15325676413513586,
+            "novelty@10": 8.361967894905696,
+            "popularity_jsd": 0.14820776383810955,
+            "precision@10": 0.07352941176470588,
+            "recall@10": 0.21560457516339868,
+            "status": "evaluated",
+            "users": 306
+          },
+          "sparse": {
+            "calibration_jsd": 0.17126433297680846,
+            "diversity": 0.8029182015046995,
+            "head_exposure": 0.9860759493670886,
+            "hit@10": 0.45147679324894513,
+            "mrr@10": 0.17884100194226776,
+            "ndcg@10": 0.19902743428468325,
+            "novelty@10": 8.421375182194549,
+            "popularity_jsd": 0.12987368412236794,
+            "precision@10": 0.049789029535864976,
+            "recall@10": 0.3438818565400844,
+            "status": "evaluated",
+            "users": 237
+          }
+        },
+        "users": 859
+      },
+      "timestamp_unseen_in_fit": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.07972411372559969,
+          "calibration_jsd": 0.14651715946848887,
+          "coverage@10": 0.16468489892984542,
+          "diversity": 0.8087763634231779,
+          "exposure_entropy": 0.6350546428099002,
+          "exposure_gini": 0.9497485259214128,
+          "head_exposure": 0.9969529085872576,
+          "head_exposure_gap": 0.7965961903946298,
+          "head_recall": 0.20287454509152622,
+          "hit@10": 0.3254847645429363,
+          "item_group_exposure_gap": 0.013443670186448665,
+          "mrr@10": 0.11862001494965485,
+          "ndcg@10": 0.09299917192006343,
+          "novelty@10": 8.367926937104276,
+          "popularity_jsd": 0.16985193618790825,
+          "precision@10": 0.03961218836565106,
+          "recall@10": 0.1448322722214689,
+          "tail_recall": 0.0011792452830188679,
+          "worst_activity_ndcg": 0.06663466867191832
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "timestamp_unseen_in_fit",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "timestamp_unseen_in_fit",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.805221414085948,
+          "gini": 0.9497485259214128,
+          "group_mean_exposure_gap": 0.013443670186448665,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9977045890817539,
+              "items": 337,
+              "mean_item_exposure": 0.013451424339394648
+            },
+            "tail": {
+              "fraction_total_exposure": 0.002295410918246251,
+              "items": 1345,
+              "mean_item_exposure": 7.754152945983416e-06
+            }
+          },
+          "normalized_entropy": 0.6350546428099002,
+          "users": 722
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9977045890817539,
+            "exposure": 0.9969529085872576,
+            "heldout_positive_pairs": 1697,
+            "hits": 285,
+            "items": 337,
+            "mean_item_exposure": 0.013451424339394648,
+            "recall@10": 0.20287454509152622,
+            "users_with_positives": 636
+          },
+          "tail": {
+            "discounted_exposure": 0.002295410918246251,
+            "exposure": 0.0030470914127423824,
+            "heldout_positive_pairs": 985,
+            "hits": 1,
+            "items": 1345,
+            "mean_item_exposure": 7.754152945983416e-06,
+            "recall@10": 0.0011792452830188679,
+            "users_with_positives": 424
+          }
+        },
+        "positive_pairs": 2682,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13852550671515537,
+            "diversity": 0.8116253414946226,
+            "head_exposure": 0.9993464052287582,
+            "hit@10": 0.369281045751634,
+            "mrr@10": 0.12729665940450252,
+            "ndcg@10": 0.06663466867191832,
+            "novelty@10": 8.392803480789288,
+            "popularity_jsd": 0.211532978035336,
+            "precision@10": 0.0477124183006536,
+            "recall@10": 0.08170664665762704,
+            "status": "evaluated",
+            "users": 306
+          },
+          "medium": {
+            "calibration_jsd": 0.14126565228820756,
+            "diversity": 0.8089402994666152,
+            "head_exposure": 0.9951417004048584,
+            "hit@10": 0.27530364372469635,
+            "mrr@10": 0.10120654199601568,
+            "ndcg@10": 0.08915206189270565,
+            "novelty@10": 8.329213863038332,
+            "popularity_jsd": 0.14567700464857766,
+            "precision@10": 0.03319838056680162,
+            "recall@10": 0.14871794871794872,
+            "status": "evaluated",
+            "users": 247
+          },
+          "sparse": {
+            "calibration_jsd": 0.1686625323445217,
+            "diversity": 0.8033782599167214,
+            "head_exposure": 0.995266272189349,
+            "hit@10": 0.31952662721893493,
+            "mrr@10": 0.1283601014370245,
+            "ndcg@10": 0.146358782397518,
+            "novelty@10": 8.37946484791298,
+            "popularity_jsd": 0.12971471302164633,
+            "precision@10": 0.03431952662721894,
+            "recall@10": 0.2534516765285996,
+            "status": "evaluated",
+            "users": 169
+          }
+        },
+        "users": 722
+      }
+    },
+    "bag": {
+      "all_recorded": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.030844813722758407,
+          "calibration_jsd": 0.14781304649092372,
+          "coverage@10": 0.19203329369797859,
+          "diversity": 0.808618699748074,
+          "exposure_entropy": 0.6416592526024072,
+          "exposure_gini": 0.9469755644785339,
+          "head_exposure": 0.9924708377518557,
+          "head_exposure_gap": 0.792114119559228,
+          "head_recall": 0.27074715774932184,
+          "hit@10": 0.6521739130434783,
+          "item_group_exposure_gap": 0.013378832138685553,
+          "mrr@10": 0.27922621151677346,
+          "ndcg@10": 0.1727206730232994,
+          "novelty@10": 8.404555255681611,
+          "popularity_jsd": 0.16170876793226616,
+          "precision@10": 0.10328738069989366,
+          "recall@10": 0.20268546603507392,
+          "tail_recall": 0.004809670781893004,
+          "worst_activity_ndcg": 0.16201733091410364
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "all_recorded",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "all_recorded",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.875996161582919,
+          "gini": 0.9469755644785339,
+          "group_mean_exposure_gap": 0.013378832138685553,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9938590261796943,
+              "items": 337,
+              "mean_item_exposure": 0.01339957703009537
+            },
+            "tail": {
+              "fraction_total_exposure": 0.006140973820305357,
+              "items": 1345,
+              "mean_item_exposure": 2.074489140981743e-05
+            }
+          },
+          "normalized_entropy": 0.6416592526024072,
+          "users": 943
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9938590261796943,
+            "exposure": 0.9924708377518557,
+            "heldout_positive_pairs": 4920,
+            "hits": 967,
+            "items": 337,
+            "mean_item_exposure": 0.01339957703009537,
+            "recall@10": 0.27074715774932184,
+            "users_with_positives": 902
+          },
+          "tail": {
+            "discounted_exposure": 0.006140973820305357,
+            "exposure": 0.00752916224814422,
+            "heldout_positive_pairs": 2725,
+            "hits": 7,
+            "items": 1345,
+            "mean_item_exposure": 2.074489140981743e-05,
+            "recall@10": 0.004809670781893004,
+            "users_with_positives": 648
+          }
+        },
+        "positive_pairs": 7645,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.1358734486031248,
+            "diversity": 0.8133773692317996,
+            "head_exposure": 0.9981012658227847,
+            "hit@10": 0.8544303797468354,
+            "mrr@10": 0.36489476592324693,
+            "ndcg@10": 0.16201733091410364,
+            "novelty@10": 8.419543417045661,
+            "popularity_jsd": 0.21090527608850657,
+            "precision@10": 0.15727848101265823,
+            "recall@10": 0.10110462385361148,
+            "status": "evaluated",
+            "users": 316
+          },
+          "medium": {
+            "calibration_jsd": 0.1396995107141903,
+            "diversity": 0.8076821521248273,
+            "head_exposure": 0.9920382165605095,
+            "hit@10": 0.6305732484076433,
+            "mrr@10": 0.27331665150136486,
+            "ndcg@10": 0.16341486248654996,
+            "novelty@10": 8.372888194907716,
+            "popularity_jsd": 0.14662847121532796,
+            "precision@10": 0.09585987261146497,
+            "recall@10": 0.1975053078556263,
+            "status": "evaluated",
+            "users": 314
+          },
+          "sparse": {
+            "calibration_jsd": 0.1680065390354566,
+            "diversity": 0.8047539598018831,
+            "head_exposure": 0.987220447284345,
+            "hit@10": 0.4696485623003195,
+            "mrr@10": 0.19866499315381106,
+            "ndcg@10": 0.19286214463686205,
+            "novelty@10": 8.421191671310869,
+            "popularity_jsd": 0.12716920432762277,
+            "precision@10": 0.05623003194888179,
+            "recall@10": 0.3104366347177848,
+            "status": "evaluated",
+            "users": 313
+          }
+        },
+        "users": 943
+      },
+      "liked_ge4": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.051071019971921816,
+          "calibration_jsd": 0.1458651007997321,
+          "coverage@10": 0.18370986920332938,
+          "diversity": 0.8084988805083367,
+          "exposure_entropy": 0.6429447143274041,
+          "exposure_gini": 0.9465630140465136,
+          "head_exposure": 0.9930260047281323,
+          "head_exposure_gap": 0.7926692865355045,
+          "head_recall": 0.2851881693337614,
+          "hit@10": 0.566193853427896,
+          "item_group_exposure_gap": 0.013385586009998172,
+          "mrr@10": 0.2424673533716084,
+          "ndcg@10": 0.16651076726567632,
+          "novelty@10": 8.398322328921275,
+          "popularity_jsd": 0.16554509544492788,
+          "precision@10": 0.08144208037825092,
+          "recall@10": 0.22244524179789552,
+          "tail_recall": 0.0057324840764331215,
+          "worst_activity_ndcg": 0.14358485611056632
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "liked_ge4",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "liked_ge4",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.8897711205679135,
+          "gini": 0.9465630140465136,
+          "group_mean_exposure_gap": 0.013385586009998172,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9942596001923484,
+              "items": 337,
+              "mean_item_exposure": 0.013404977717916699
+            },
+            "tail": {
+              "fraction_total_exposure": 0.005740399807651856,
+              "items": 1345,
+              "mean_item_exposure": 1.9391707918525735e-05
+            }
+          },
+          "normalized_entropy": 0.6429447143274041,
+          "users": 846
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9942596001923484,
+            "exposure": 0.9930260047281324,
+            "heldout_positive_pairs": 3074,
+            "hits": 684,
+            "items": 337,
+            "mean_item_exposure": 0.013404977717916699,
+            "recall@10": 0.2851881693337614,
+            "users_with_positives": 796
+          },
+          "tail": {
+            "discounted_exposure": 0.005740399807651856,
+            "exposure": 0.006973995271867612,
+            "heldout_positive_pairs": 1158,
+            "hits": 5,
+            "items": 1345,
+            "mean_item_exposure": 1.9391707918525735e-05,
+            "recall@10": 0.0057324840764331215,
+            "users_with_positives": 471
+          }
+        },
+        "positive_pairs": 4232,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.1358437448886391,
+            "diversity": 0.8131411329174908,
+            "head_exposure": 0.9984025559105432,
+            "hit@10": 0.7092651757188498,
+            "mrr@10": 0.3089482225264973,
+            "ndcg@10": 0.14358485611056632,
+            "novelty@10": 8.41869876395567,
+            "popularity_jsd": 0.21042225280062823,
+            "precision@10": 0.11565495207667732,
+            "recall@10": 0.13260872748842462,
+            "status": "evaluated",
+            "users": 313
+          },
+          "medium": {
+            "calibration_jsd": 0.13911086115632726,
+            "diversity": 0.8079712301587302,
+            "head_exposure": 0.9917763157894737,
+            "hit@10": 0.5197368421052632,
+            "mrr@10": 0.22192460317460316,
+            "ndcg@10": 0.16891399184626638,
+            "novelty@10": 8.374845534827465,
+            "popularity_jsd": 0.14638929768860157,
+            "precision@10": 0.07105263157894737,
+            "recall@10": 0.23305529448621554,
+            "status": "evaluated",
+            "users": 304
+          },
+          "sparse": {
+            "calibration_jsd": 0.16852873945373728,
+            "diversity": 0.8028542547538181,
+            "head_exposure": 0.9873362445414848,
+            "hit@10": 0.43231441048034935,
+            "mrr@10": 0.17887121369654121,
+            "ndcg@10": 0.19465587608248813,
+            "novelty@10": 8.40163726882847,
+            "popularity_jsd": 0.12963597870077492,
+            "precision@10": 0.048471615720524025,
+            "recall@10": 0.3311499272197962,
+            "status": "evaluated",
+            "users": 229
+          }
+        },
+        "users": 846
+      },
+      "timestamp_seen_in_fit": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.07379071266914045,
+          "calibration_jsd": 0.14634239309614067,
+          "coverage@10": 0.187871581450654,
+          "diversity": 0.8087298815529316,
+          "exposure_entropy": 0.6443119492128342,
+          "exposure_gini": 0.9461078944201087,
+          "head_exposure": 0.9924330616996506,
+          "head_exposure_gap": 0.7920763435070228,
+          "head_recall": 0.2750767779831391,
+          "hit@10": 0.5669383003492433,
+          "item_group_exposure_gap": 0.013377357298363615,
+          "mrr@10": 0.2259618049781028,
+          "ndcg@10": 0.1540886062790404,
+          "novelty@10": 8.408961808893753,
+          "popularity_jsd": 0.1656954592335572,
+          "precision@10": 0.08020954598370234,
+          "recall@10": 0.2091727736968321,
+          "tail_recall": 0.005269607843137255,
+          "worst_activity_ndcg": 0.12405973990125599
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "timestamp_seen_in_fit",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "timestamp_seen_in_fit",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.904422357631934,
+          "gini": 0.9461078944201087,
+          "group_mean_exposure_gap": 0.013377357298363615,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9937715529841842,
+              "items": 337,
+              "mean_item_exposure": 0.013398397683940194
+            },
+            "tail": {
+              "fraction_total_exposure": 0.006228447015815845,
+              "items": 1345,
+              "mean_item_exposure": 2.1040385576578856e-05
+            }
+          },
+          "normalized_entropy": 0.6443119492128342,
+          "users": 859
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9937715529841842,
+            "exposure": 0.9924330616996507,
+            "heldout_positive_pairs": 3223,
+            "hits": 683,
+            "items": 337,
+            "mean_item_exposure": 0.013398397683940194,
+            "recall@10": 0.2750767779831391,
+            "users_with_positives": 807
+          },
+          "tail": {
+            "discounted_exposure": 0.006228447015815845,
+            "exposure": 0.007566938300349243,
+            "heldout_positive_pairs": 1740,
+            "hits": 6,
+            "items": 1345,
+            "mean_item_exposure": 2.1040385576578856e-05,
+            "recall@10": 0.005269607843137255,
+            "users_with_positives": 544
+          }
+        },
+        "positive_pairs": 4963,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.1358734486031248,
+            "diversity": 0.8133773692317996,
+            "head_exposure": 0.9981012658227847,
+            "hit@10": 0.7056962025316456,
+            "mrr@10": 0.2730610809724734,
+            "ndcg@10": 0.12405973990125599,
+            "novelty@10": 8.419543417045661,
+            "popularity_jsd": 0.21090527608850657,
+            "precision@10": 0.11075949367088607,
+            "recall@10": 0.10808358419486948,
+            "status": "evaluated",
+            "users": 316
+          },
+          "medium": {
+            "calibration_jsd": 0.13981573995612187,
+            "diversity": 0.8078188435868174,
+            "head_exposure": 0.9918300653594772,
+            "hit@10": 0.5163398692810458,
+            "mrr@10": 0.21386035895839817,
+            "ndcg@10": 0.1512048291690028,
+            "novelty@10": 8.379599628257102,
+            "popularity_jsd": 0.14726211628038147,
+            "precision@10": 0.07254901960784314,
+            "recall@10": 0.21250000000000002,
+            "status": "evaluated",
+            "users": 306
+          },
+          "sparse": {
+            "calibration_jsd": 0.16872780373174726,
+            "diversity": 0.803709508182082,
+            "head_exposure": 0.9856540084388187,
+            "hit@10": 0.4472573839662447,
+            "mrr@10": 0.17878742214185256,
+            "ndcg@10": 0.19785045257039643,
+            "novelty@10": 8.432763661631348,
+            "popularity_jsd": 0.12921571584751398,
+            "precision@10": 0.049367088607594936,
+            "recall@10": 0.339662447257384,
+            "status": "evaluated",
+            "users": 237
+          }
+        },
+        "users": 859
+      },
+      "timestamp_unseen_in_fit": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.08141049520471337,
+          "calibration_jsd": 0.14362531984310062,
+          "coverage@10": 0.17419738406658739,
+          "diversity": 0.8101370751440004,
+          "exposure_entropy": 0.6414905164383826,
+          "exposure_gini": 0.947265966355675,
+          "head_exposure": 0.9961218836565098,
+          "head_exposure_gap": 0.795765165463882,
+          "head_recall": 0.20110130959187564,
+          "hit@10": 0.32271468144044324,
+          "item_group_exposure_gap": 0.013434016510310983,
+          "mrr@10": 0.12169019038825139,
+          "ndcg@10": 0.09384506405832588,
+          "novelty@10": 8.387489780626876,
+          "popularity_jsd": 0.16869445740824587,
+          "precision@10": 0.039473684210526404,
+          "recall@10": 0.14368241792064507,
+          "tail_recall": 0.0011792452830188679,
+          "worst_activity_ndcg": 0.06861617082622713
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "timestamp_unseen_in_fit",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "timestamp_unseen_in_fit",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.8741879912628505,
+          "gini": 0.947265966355675,
+          "group_mean_exposure_gap": 0.013434016510310983,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9971320268269614,
+              "items": 337,
+              "mean_item_exposure": 0.013443704842126408
+            },
+            "tail": {
+              "fraction_total_exposure": 0.002867973173038438,
+              "items": 1345,
+              "mean_item_exposure": 9.688331815424281e-06
+            }
+          },
+          "normalized_entropy": 0.6414905164383826,
+          "users": 722
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9971320268269614,
+            "exposure": 0.9961218836565097,
+            "heldout_positive_pairs": 1697,
+            "hits": 284,
+            "items": 337,
+            "mean_item_exposure": 0.013443704842126408,
+            "recall@10": 0.20110130959187564,
+            "users_with_positives": 636
+          },
+          "tail": {
+            "discounted_exposure": 0.002867973173038438,
+            "exposure": 0.003878116343490305,
+            "heldout_positive_pairs": 985,
+            "hits": 1,
+            "items": 1345,
+            "mean_item_exposure": 9.688331815424281e-06,
+            "recall@10": 0.0011792452830188679,
+            "users_with_positives": 424
+          }
+        },
+        "positive_pairs": 2682,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.135580273340915,
+            "diversity": 0.8131914617698932,
+            "head_exposure": 0.9983660130718954,
+            "hit@10": 0.37254901960784315,
+            "mrr@10": 0.13318290279074593,
+            "ndcg@10": 0.06861617082622713,
+            "novelty@10": 8.418177917806394,
+            "popularity_jsd": 0.20992737260200922,
+            "precision@10": 0.04803921568627452,
+            "recall@10": 0.08204370067115165,
+            "status": "evaluated",
+            "users": 306
+          },
+          "medium": {
+            "calibration_jsd": 0.13861755781429222,
+            "diversity": 0.8104444872865925,
+            "head_exposure": 0.9943319838056681,
+            "hit@10": 0.2591093117408907,
+            "mrr@10": 0.09982970246128141,
+            "ndcg@10": 0.08666024865610063,
+            "novelty@10": 8.347207603636278,
+            "popularity_jsd": 0.14484893804958482,
+            "precision@10": 0.031983805668016195,
+            "recall@10": 0.1408906882591093,
+            "status": "evaluated",
+            "users": 247
+          },
+          "sparse": {
+            "calibration_jsd": 0.16551112724419223,
+            "diversity": 0.8041573526188912,
+            "head_exposure": 0.9946745562130177,
+            "hit@10": 0.3254437869822485,
+            "mrr@10": 0.13283084436930592,
+            "ndcg@10": 0.1500266660309405,
+            "novelty@10": 8.390798228791017,
+            "popularity_jsd": 0.12888718659343937,
+            "precision@10": 0.034911242603550295,
+            "recall@10": 0.2593688362919132,
+            "status": "evaluated",
+            "users": 169
+          }
+        },
+        "users": 722
+      }
+    },
+    "shuffle_0": {
+      "all_recorded": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.031465026714359495,
+          "calibration_jsd": 0.1482987162372396,
+          "coverage@10": 0.19143876337693222,
+          "diversity": 0.8081531137257543,
+          "exposure_entropy": 0.6413528455314628,
+          "exposure_gini": 0.9471146538594225,
+          "head_exposure": 0.9923647932131495,
+          "head_exposure_gap": 0.7920080750205217,
+          "head_recall": 0.2714749840619597,
+          "hit@10": 0.6532343584305408,
+          "item_group_exposure_gap": 0.013376889280894526,
+          "mrr@10": 0.2791959130771431,
+          "ndcg@10": 0.17278668348701234,
+          "novelty@10": 8.403977104271986,
+          "popularity_jsd": 0.1616306246719223,
+          "precision@10": 0.10318133616118738,
+          "recall@10": 0.20309876161607832,
+          "tail_recall": 0.004809670781893004,
+          "worst_activity_ndcg": 0.16132456159048422
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "all_recorded",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "all_recorded",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.872712715057133,
+          "gini": 0.9471146538594225,
+          "group_mean_exposure_gap": 0.013376889280894526,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.993743794736076,
+              "items": 337,
+              "mean_item_exposure": 0.013398023436915268
+            },
+            "tail": {
+              "fraction_total_exposure": 0.006256205263923856,
+              "items": 1345,
+              "mean_item_exposure": 2.1134156020742517e-05
+            }
+          },
+          "normalized_entropy": 0.6413528455314628,
+          "users": 943
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.993743794736076,
+            "exposure": 0.9923647932131495,
+            "heldout_positive_pairs": 4920,
+            "hits": 966,
+            "items": 337,
+            "mean_item_exposure": 0.013398023436915268,
+            "recall@10": 0.2714749840619597,
+            "users_with_positives": 902
+          },
+          "tail": {
+            "discounted_exposure": 0.006256205263923856,
+            "exposure": 0.007635206786850477,
+            "heldout_positive_pairs": 2725,
+            "hits": 7,
+            "items": 1345,
+            "mean_item_exposure": 2.1134156020742517e-05,
+            "recall@10": 0.004809670781893004,
+            "users_with_positives": 648
+          }
+        },
+        "positive_pairs": 7645,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13859838483942064,
+            "diversity": 0.811815852923448,
+            "head_exposure": 0.9981012658227847,
+            "hit@10": 0.8544303797468354,
+            "mrr@10": 0.3625828812537673,
+            "ndcg@10": 0.16132456159048422,
+            "novelty@10": 8.411335309761464,
+            "popularity_jsd": 0.21090527608850657,
+            "precision@10": 0.15664556962025317,
+            "recall@10": 0.10101940570873962,
+            "status": "evaluated",
+            "users": 316
+          },
+          "medium": {
+            "calibration_jsd": 0.13906089195537857,
+            "diversity": 0.8078862939372493,
+            "head_exposure": 0.9920382165605095,
+            "hit@10": 0.6337579617834395,
+            "mrr@10": 0.275494136083308,
+            "ndcg@10": 0.16438261123007503,
+            "novelty@10": 8.375018269927299,
+            "popularity_jsd": 0.14662847121532796,
+            "precision@10": 0.09617834394904458,
+            "recall@10": 0.19883227176220805,
+            "status": "evaluated",
+            "users": 314
+          },
+          "sparse": {
+            "calibration_jsd": 0.1673593601548599,
+            "diversity": 0.8047229406494583,
+            "head_exposure": 0.9869009584664536,
+            "hit@10": 0.4696485623003195,
+            "mrr@10": 0.1987233125412039,
+            "ndcg@10": 0.19278958830484372,
+            "novelty@10": 8.425599727433507,
+            "popularity_jsd": 0.1269337759106763,
+            "precision@10": 0.05623003194888179,
+            "recall@10": 0.3104366347177848,
+            "status": "evaluated",
+            "users": 313
+          }
+        },
+        "users": 943
+      },
+      "liked_ge4": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.05037569256107999,
+          "calibration_jsd": 0.1461806267734189,
+          "coverage@10": 0.18252080856123662,
+          "diversity": 0.8079954219670532,
+          "exposure_entropy": 0.6424969346104596,
+          "exposure_gini": 0.9467576059040953,
+          "head_exposure": 0.9929078014184397,
+          "head_exposure_gap": 0.7925510832258119,
+          "head_recall": 0.2885530943790994,
+          "hit@10": 0.5673758865248227,
+          "item_group_exposure_gap": 0.013383420389552618,
+          "mrr@10": 0.24344253067657298,
+          "ndcg@10": 0.16777593532654142,
+          "novelty@10": 8.397769357767553,
+          "popularity_jsd": 0.16545799249634127,
+          "precision@10": 0.08226950354609962,
+          "recall@10": 0.22429243037676258,
+          "tail_recall": 0.0057324840764331215,
+          "worst_activity_ndcg": 0.1445056225905962
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "liked_ge4",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "liked_ge4",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.88497273014113,
+          "gini": 0.9467576059040953,
+          "group_mean_exposure_gap": 0.013383420389552618,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9941311566328538,
+              "items": 337,
+              "mean_item_exposure": 0.013403245994076465
+            },
+            "tail": {
+              "fraction_total_exposure": 0.005868843367146237,
+              "items": 1345,
+              "mean_item_exposure": 1.9825604523847668e-05
+            }
+          },
+          "normalized_entropy": 0.6424969346104596,
+          "users": 846
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9941311566328538,
+            "exposure": 0.9929078014184397,
+            "heldout_positive_pairs": 3074,
+            "hits": 691,
+            "items": 337,
+            "mean_item_exposure": 0.013403245994076465,
+            "recall@10": 0.2885530943790994,
+            "users_with_positives": 796
+          },
+          "tail": {
+            "discounted_exposure": 0.005868843367146237,
+            "exposure": 0.0070921985815602835,
+            "heldout_positive_pairs": 1158,
+            "hits": 5,
+            "items": 1345,
+            "mean_item_exposure": 1.9825604523847668e-05,
+            "recall@10": 0.0057324840764331215,
+            "users_with_positives": 471
+          }
+        },
+        "positive_pairs": 4232,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13861425706370384,
+            "diversity": 0.8115989654647802,
+            "head_exposure": 0.9984025559105432,
+            "hit@10": 0.7092651757188498,
+            "mrr@10": 0.3068119580100411,
+            "ndcg@10": 0.1445056225905962,
+            "novelty@10": 8.410804887937601,
+            "popularity_jsd": 0.21042225280062823,
+            "precision@10": 0.11725239616613417,
+            "recall@10": 0.13451305614994177,
+            "status": "evaluated",
+            "users": 313
+          },
+          "medium": {
+            "calibration_jsd": 0.13843207254836196,
+            "diversity": 0.8080273600668338,
+            "head_exposure": 0.9917763157894737,
+            "hit@10": 0.5230263157894737,
+            "mrr@10": 0.22646720969089393,
+            "ndcg@10": 0.17131697449231395,
+            "novelty@10": 8.376876410613207,
+            "popularity_jsd": 0.14638929768860157,
+            "precision@10": 0.07171052631578947,
+            "recall@10": 0.23623511904761904,
+            "status": "evaluated",
+            "users": 304
+          },
+          "sparse": {
+            "calibration_jsd": 0.16680872373218797,
+            "diversity": 0.803027656477438,
+            "head_exposure": 0.9868995633187773,
+            "hit@10": 0.43231441048034935,
+            "mrr@10": 0.1793633465030845,
+            "ndcg@10": 0.1948813151516762,
+            "novelty@10": 8.407687851181086,
+            "popularity_jsd": 0.12931419226189178,
+            "precision@10": 0.048471615720524025,
+            "recall@10": 0.3311499272197962,
+            "status": "evaluated",
+            "users": 229
+          }
+        },
+        "users": 846
+      },
+      "timestamp_seen_in_fit": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.07352208445212974,
+          "calibration_jsd": 0.14706147509852463,
+          "coverage@10": 0.18668252080856124,
+          "diversity": 0.808181255428054,
+          "exposure_entropy": 0.6438617142885383,
+          "exposure_gini": 0.9463047330311051,
+          "head_exposure": 0.9923166472642606,
+          "head_exposure_gap": 0.7919599290716328,
+          "head_recall": 0.27540959313390745,
+          "hit@10": 0.5669383003492433,
+          "item_group_exposure_gap": 0.013375224452150648,
+          "mrr@10": 0.22662749228523368,
+          "ndcg@10": 0.1542122493597354,
+          "novelty@10": 8.407888745405593,
+          "popularity_jsd": 0.16560967449024605,
+          "precision@10": 0.08009313154831232,
+          "recall@10": 0.2092325645865083,
+          "tail_recall": 0.005269607843137255,
+          "worst_activity_ndcg": 0.1243937631372107
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "timestamp_seen_in_fit",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "timestamp_seen_in_fit",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.8995976572964945,
+          "gini": 0.9463047330311051,
+          "group_mean_exposure_gap": 0.013375224452150648,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9936450532736694,
+              "items": 337,
+              "mean_item_exposure": 0.013396692167794867
+            },
+            "tail": {
+              "fraction_total_exposure": 0.006354946726330685,
+              "items": 1345,
+              "mean_item_exposure": 2.1467715644218388e-05
+            }
+          },
+          "normalized_entropy": 0.6438617142885383,
+          "users": 859
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9936450532736694,
+            "exposure": 0.9923166472642607,
+            "heldout_positive_pairs": 3223,
+            "hits": 682,
+            "items": 337,
+            "mean_item_exposure": 0.013396692167794867,
+            "recall@10": 0.27540959313390745,
+            "users_with_positives": 807
+          },
+          "tail": {
+            "discounted_exposure": 0.006354946726330685,
+            "exposure": 0.007683352735739232,
+            "heldout_positive_pairs": 1740,
+            "hits": 6,
+            "items": 1345,
+            "mean_item_exposure": 2.1467715644218388e-05,
+            "recall@10": 0.005269607843137255,
+            "users_with_positives": 544
+          }
+        },
+        "positive_pairs": 4963,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13859838483942064,
+            "diversity": 0.811815852923448,
+            "head_exposure": 0.9981012658227847,
+            "hit@10": 0.7088607594936709,
+            "mrr@10": 0.27360232067510554,
+            "ndcg@10": 0.1243937631372107,
+            "novelty@10": 8.411335309761464,
+            "popularity_jsd": 0.21090527608850657,
+            "precision@10": 0.11075949367088607,
+            "recall@10": 0.10877354318505476,
+            "status": "evaluated",
+            "users": 316
+          },
+          "medium": {
+            "calibration_jsd": 0.13904252951104398,
+            "diversity": 0.8079072863713387,
+            "head_exposure": 0.9918300653594772,
+            "hit@10": 0.5130718954248366,
+            "mrr@10": 0.21494708994708994,
+            "ndcg@10": 0.15115633062085126,
+            "novelty@10": 8.38175861320741,
+            "popularity_jsd": 0.14726211628038147,
+            "precision@10": 0.07222222222222223,
+            "recall@10": 0.21195533769063177,
+            "status": "evaluated",
+            "users": 306
+          },
+          "sparse": {
+            "calibration_jsd": 0.16869917075947796,
+            "diversity": 0.8036888576340053,
+            "head_exposure": 0.9852320675105485,
+            "hit@10": 0.4472573839662447,
+            "mrr@10": 0.17907541356908446,
+            "ndcg@10": 0.19791584758934044,
+            "novelty@10": 8.437030965305134,
+            "popularity_jsd": 0.128904791398129,
+            "precision@10": 0.049367088607594936,
+            "recall@10": 0.339662447257384,
+            "status": "evaluated",
+            "users": 237
+          }
+        },
+        "users": 859
+      },
+      "timestamp_unseen_in_fit": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.083791395726105,
+          "calibration_jsd": 0.14426892001102093,
+          "coverage@10": 0.1724137931034483,
+          "diversity": 0.8095642248897097,
+          "exposure_entropy": 0.6407377370918625,
+          "exposure_gini": 0.9475769426360118,
+          "head_exposure": 0.9961218836565098,
+          "head_exposure_gap": 0.795765165463882,
+          "head_recall": 0.20301430749543956,
+          "hit@10": 0.32132963988919666,
+          "item_group_exposure_gap": 0.013433985830182916,
+          "mrr@10": 0.12043375983819203,
+          "ndcg@10": 0.09416575170597997,
+          "novelty@10": 8.386061669911756,
+          "popularity_jsd": 0.16869445740824587,
+          "precision@10": 0.039473684210526404,
+          "recall@10": 0.14536590294900545,
+          "tail_recall": 0.0011792452830188679,
+          "worst_activity_ndcg": 0.0670228826608755
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "timestamp_unseen_in_fit",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "timestamp_unseen_in_fit",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.8661212363984925,
+          "gini": 0.9475769426360118,
+          "group_mean_exposure_gap": 0.013433985830182916,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9971302071799115,
+              "items": 337,
+              "mean_item_exposure": 0.013443680308968115
+            },
+            "tail": {
+              "fraction_total_exposure": 0.002869792820088269,
+              "items": 1345,
+              "mean_item_exposure": 9.69447878519772e-06
+            }
+          },
+          "normalized_entropy": 0.6407377370918625,
+          "users": 722
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9971302071799115,
+            "exposure": 0.9961218836565097,
+            "heldout_positive_pairs": 1697,
+            "hits": 284,
+            "items": 337,
+            "mean_item_exposure": 0.013443680308968115,
+            "recall@10": 0.20301430749543956,
+            "users_with_positives": 636
+          },
+          "tail": {
+            "discounted_exposure": 0.002869792820088269,
+            "exposure": 0.003878116343490305,
+            "heldout_positive_pairs": 985,
+            "hits": 1,
+            "items": 1345,
+            "mean_item_exposure": 9.69447878519772e-06,
+            "recall@10": 0.0011792452830188679,
+            "users_with_positives": 424
+          }
+        },
+        "positive_pairs": 2682,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13832742350379015,
+            "diversity": 0.8116715081094166,
+            "head_exposure": 0.9983660130718954,
+            "hit@10": 0.3627450980392157,
+            "mrr@10": 0.12936118892001244,
+            "ndcg@10": 0.0670228826608755,
+            "novelty@10": 8.410160047533768,
+            "popularity_jsd": 0.20992737260200922,
+            "precision@10": 0.047385620915032685,
+            "recall@10": 0.08067815445266426,
+            "status": "evaluated",
+            "users": 306
+          },
+          "medium": {
+            "calibration_jsd": 0.1380917822700701,
+            "diversity": 0.8108464537411906,
+            "head_exposure": 0.9943319838056681,
+            "hit@10": 0.26720647773279355,
+            "mrr@10": 0.10104909710172869,
+            "ndcg@10": 0.08903262182222653,
+            "novelty@10": 8.34872707262695,
+            "popularity_jsd": 0.14484893804958482,
+            "precision@10": 0.032793522267206485,
+            "recall@10": 0.1475033738191633,
+            "status": "evaluated",
+            "users": 247
+          },
+          "sparse": {
+            "calibration_jsd": 0.16405502032597646,
+            "diversity": 0.8038746438746438,
+            "head_exposure": 0.9946745562130177,
+            "hit@10": 0.3254437869822485,
+            "mrr@10": 0.1326007326007326,
+            "ndcg@10": 0.1508142783869805,
+            "novelty@10": 8.396993870959152,
+            "popularity_jsd": 0.12888718659343937,
+            "precision@10": 0.034911242603550295,
+            "recall@10": 0.2593688362919132,
+            "status": "evaluated",
+            "users": 169
+          }
+        },
+        "users": 722
+      }
+    },
+    "shuffle_1": {
+      "all_recorded": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.03200929228596833,
+          "calibration_jsd": 0.14783300860463003,
+          "coverage@10": 0.19143876337693222,
+          "diversity": 0.8084226856761322,
+          "exposure_entropy": 0.6415310306947242,
+          "exposure_gini": 0.9470708609496152,
+          "head_exposure": 0.9923647932131495,
+          "head_exposure_gap": 0.7920080750205217,
+          "head_recall": 0.27226221311480764,
+          "hit@10": 0.6532343584305408,
+          "item_group_exposure_gap": 0.013376660024005007,
+          "mrr@10": 0.27965081048325996,
+          "ndcg@10": 0.1730374750457988,
+          "novelty@10": 8.404832375341254,
+          "popularity_jsd": 0.1616306246719223,
+          "precision@10": 0.10318133616118737,
+          "recall@10": 0.20388882011505755,
+          "tail_recall": 0.004809670781893004,
+          "worst_activity_ndcg": 0.1615569759437219
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "all_recorded",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "all_recorded",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.87462214049387,
+          "gini": 0.9470708609496152,
+          "group_mean_exposure_gap": 0.013376660024005007,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9937301974452906,
+              "items": 337,
+              "mean_item_exposure": 0.013397840113183755
+            },
+            "tail": {
+              "fraction_total_exposure": 0.006269802554708916,
+              "items": 1345,
+              "mean_item_exposure": 2.1180089178749353e-05
+            }
+          },
+          "normalized_entropy": 0.6415310306947242,
+          "users": 943
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9937301974452906,
+            "exposure": 0.9923647932131495,
+            "heldout_positive_pairs": 4920,
+            "hits": 966,
+            "items": 337,
+            "mean_item_exposure": 0.013397840113183755,
+            "recall@10": 0.27226221311480764,
+            "users_with_positives": 902
+          },
+          "tail": {
+            "discounted_exposure": 0.006269802554708916,
+            "exposure": 0.007635206786850477,
+            "heldout_positive_pairs": 2725,
+            "hits": 7,
+            "items": 1345,
+            "mean_item_exposure": 2.1180089178749353e-05,
+            "recall@10": 0.004809670781893004,
+            "users_with_positives": 648
+          }
+        },
+        "positive_pairs": 7645,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13735241571687964,
+            "diversity": 0.8129052809590784,
+            "head_exposure": 0.9981012658227847,
+            "hit@10": 0.8544303797468354,
+            "mrr@10": 0.36453059071729954,
+            "ndcg@10": 0.1615569759437219,
+            "novelty@10": 8.41153589131056,
+            "popularity_jsd": 0.21090527608850657,
+            "precision@10": 0.15664556962025317,
+            "recall@10": 0.10063948735259402,
+            "status": "evaluated",
+            "users": 316
+          },
+          "medium": {
+            "calibration_jsd": 0.13911259326936176,
+            "diversity": 0.8075042968355071,
+            "head_exposure": 0.9920382165605095,
+            "hit@10": 0.6305732484076433,
+            "mrr@10": 0.27500252755029825,
+            "ndcg@10": 0.16412768348432838,
+            "novelty@10": 8.377064743461757,
+            "popularity_jsd": 0.14662847121532796,
+            "precision@10": 0.09585987261146497,
+            "recall@10": 0.1984025882115054,
+            "status": "evaluated",
+            "users": 314
+          },
+          "sparse": {
+            "calibration_jsd": 0.16716233054649376,
+            "diversity": 0.8048184492114205,
+            "head_exposure": 0.9869009584664536,
+            "hit@10": 0.4728434504792332,
+            "mrr@10": 0.19862061970688166,
+            "ndcg@10": 0.19356626822969022,
+            "novelty@10": 8.42592095477851,
+            "popularity_jsd": 0.1269337759106763,
+            "precision@10": 0.05654952076677316,
+            "recall@10": 0.3136315228966986,
+            "status": "evaluated",
+            "users": 313
+          }
+        },
+        "users": 943
+      },
+      "liked_ge4": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.05179881736830791,
+          "calibration_jsd": 0.14576847976881155,
+          "coverage@10": 0.18311533888228299,
+          "diversity": 0.8082221659349318,
+          "exposure_entropy": 0.6427454006439797,
+          "exposure_gini": 0.9466793971742409,
+          "head_exposure": 0.9929078014184397,
+          "head_exposure_gap": 0.7925510832258119,
+          "head_recall": 0.28844868603648915,
+          "hit@10": 0.5697399527186762,
+          "item_group_exposure_gap": 0.013383357073088362,
+          "mrr@10": 0.2436329693421889,
+          "ndcg@10": 0.16769648164640755,
+          "novelty@10": 8.398540567851395,
+          "popularity_jsd": 0.16545799249634127,
+          "precision@10": 0.08203309692671427,
+          "recall@10": 0.2247597712400845,
+          "tail_recall": 0.0057324840764331215,
+          "worst_activity_ndcg": 0.14388656355888868
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "liked_ge4",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "liked_ge4",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.887635282712201,
+          "gini": 0.9466793971742409,
+          "group_mean_exposure_gap": 0.013383357073088362,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9941274013154987,
+              "items": 337,
+              "mean_item_exposure": 0.013403195363491195
+            },
+            "tail": {
+              "fraction_total_exposure": 0.005872598684501309,
+              "items": 1345,
+              "mean_item_exposure": 1.9838290402833622e-05
+            }
+          },
+          "normalized_entropy": 0.6427454006439797,
+          "users": 846
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9941274013154987,
+            "exposure": 0.9929078014184397,
+            "heldout_positive_pairs": 3074,
+            "hits": 689,
+            "items": 337,
+            "mean_item_exposure": 0.013403195363491195,
+            "recall@10": 0.28844868603648915,
+            "users_with_positives": 796
+          },
+          "tail": {
+            "discounted_exposure": 0.005872598684501309,
+            "exposure": 0.0070921985815602835,
+            "heldout_positive_pairs": 1158,
+            "hits": 5,
+            "items": 1345,
+            "mean_item_exposure": 1.9838290402833622e-05,
+            "recall@10": 0.0057324840764331215,
+            "users_with_positives": 471
+          }
+        },
+        "positive_pairs": 4232,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.1373563457451002,
+            "diversity": 0.8126988353026692,
+            "head_exposure": 0.9984025559105432,
+            "hit@10": 0.7124600638977636,
+            "mrr@10": 0.308162178609463,
+            "ndcg@10": 0.14388656355888868,
+            "novelty@10": 8.411007391993557,
+            "popularity_jsd": 0.21042225280062823,
+            "precision@10": 0.11629392971246005,
+            "recall@10": 0.133189882222934,
+            "status": "evaluated",
+            "users": 313
+          },
+          "medium": {
+            "calibration_jsd": 0.1384456690330103,
+            "diversity": 0.8076327972709552,
+            "head_exposure": 0.9917763157894737,
+            "hit@10": 0.5230263157894737,
+            "mrr@10": 0.225703581871345,
+            "ndcg@10": 0.17112755541644875,
+            "novelty@10": 8.378763058714105,
+            "popularity_jsd": 0.14638929768860157,
+            "precision@10": 0.07171052631578949,
+            "recall@10": 0.23560855263157895,
+            "status": "evaluated",
+            "users": 304
+          },
+          "sparse": {
+            "calibration_jsd": 0.16698739860333225,
+            "diversity": 0.8028857928421246,
+            "head_exposure": 0.9868995633187773,
+            "hit@10": 0.4366812227074236,
+            "mrr@10": 0.17923511471546408,
+            "ndcg@10": 0.1956853809271966,
+            "novelty@10": 8.407755619472521,
+            "popularity_jsd": 0.12931419226189178,
+            "precision@10": 0.04890829694323144,
+            "recall@10": 0.33551673944687044,
+            "status": "evaluated",
+            "users": 229
+          }
+        },
+        "users": 846
+      },
+      "timestamp_seen_in_fit": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.07481545502781432,
+          "calibration_jsd": 0.1464917579369618,
+          "coverage@10": 0.18668252080856124,
+          "diversity": 0.8083857814241981,
+          "exposure_entropy": 0.6440796940124196,
+          "exposure_gini": 0.9462433287851473,
+          "head_exposure": 0.9923166472642606,
+          "head_exposure_gap": 0.7919599290716328,
+          "head_recall": 0.2760719075508687,
+          "hit@10": 0.5669383003492433,
+          "item_group_exposure_gap": 0.013374972776659597,
+          "mrr@10": 0.22753432377995803,
+          "ndcg@10": 0.15462044381146436,
+          "novelty@10": 8.40891744670877,
+          "popularity_jsd": 0.16560967449024605,
+          "precision@10": 0.08009313154831234,
+          "recall@10": 0.2100613244955942,
+          "tail_recall": 0.005269607843137255,
+          "worst_activity_ndcg": 0.12430330655677098
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "timestamp_seen_in_fit",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "timestamp_seen_in_fit",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.901933519732252,
+          "gini": 0.9462433287851473,
+          "group_mean_exposure_gap": 0.013374972776659597,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9936301263293033,
+              "items": 337,
+              "mean_item_exposure": 0.013396490917179251
+            },
+            "tail": {
+              "fraction_total_exposure": 0.006369873670696594,
+              "items": 1345,
+              "mean_item_exposure": 2.1518140519655458e-05
+            }
+          },
+          "normalized_entropy": 0.6440796940124196,
+          "users": 859
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9936301263293033,
+            "exposure": 0.9923166472642607,
+            "heldout_positive_pairs": 3223,
+            "hits": 682,
+            "items": 337,
+            "mean_item_exposure": 0.013396490917179251,
+            "recall@10": 0.2760719075508687,
+            "users_with_positives": 807
+          },
+          "tail": {
+            "discounted_exposure": 0.006369873670696594,
+            "exposure": 0.007683352735739232,
+            "heldout_positive_pairs": 1740,
+            "hits": 6,
+            "items": 1345,
+            "mean_item_exposure": 2.1518140519655458e-05,
+            "recall@10": 0.005269607843137255,
+            "users_with_positives": 544
+          }
+        },
+        "positive_pairs": 4963,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13735241571687964,
+            "diversity": 0.8129052809590784,
+            "head_exposure": 0.9981012658227847,
+            "hit@10": 0.7056962025316456,
+            "mrr@10": 0.2754621257785815,
+            "ndcg@10": 0.12430330655677098,
+            "novelty@10": 8.41153589131056,
+            "popularity_jsd": 0.21090527608850657,
+            "precision@10": 0.11044303797468356,
+            "recall@10": 0.10786184939361415,
+            "status": "evaluated",
+            "users": 316
+          },
+          "medium": {
+            "calibration_jsd": 0.13911208333380118,
+            "diversity": 0.8076121312722621,
+            "head_exposure": 0.9918300653594772,
+            "hit@10": 0.5130718954248366,
+            "mrr@10": 0.215359477124183,
+            "ndcg@10": 0.1514639538122927,
+            "novelty@10": 8.38375261806455,
+            "popularity_jsd": 0.14726211628038147,
+            "precision@10": 0.07222222222222222,
+            "recall@10": 0.21195533769063182,
+            "status": "evaluated",
+            "users": 306
+          },
+          "sparse": {
+            "calibration_jsd": 0.16820573502604655,
+            "diversity": 0.8033586721139464,
+            "head_exposure": 0.9852320675105485,
+            "hit@10": 0.45147679324894513,
+            "mrr@10": 0.17935001004621257,
+            "ndcg@10": 0.1991187615845853,
+            "novelty@10": 8.437917484982894,
+            "popularity_jsd": 0.128904791398129,
+            "precision@10": 0.049789029535864976,
+            "recall@10": 0.3438818565400844,
+            "status": "evaluated",
+            "users": 237
+          }
+        },
+        "users": 859
+      },
+      "timestamp_unseen_in_fit": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.08246372079848674,
+          "calibration_jsd": 0.1437927416763774,
+          "coverage@10": 0.1718192627824019,
+          "diversity": 0.8099123539843761,
+          "exposure_entropy": 0.6408531101594903,
+          "exposure_gini": 0.9475511477890591,
+          "head_exposure": 0.9961218836565098,
+          "head_exposure_gap": 0.795765165463882,
+          "head_recall": 0.20275225298810204,
+          "hit@10": 0.32132963988919666,
+          "item_group_exposure_gap": 0.013433985830182916,
+          "mrr@10": 0.11988963637163091,
+          "ndcg@10": 0.09364361506612649,
+          "novelty@10": 8.386514202667325,
+          "popularity_jsd": 0.16869445740824587,
+          "precision@10": 0.039473684210526404,
+          "recall@10": 0.14495039048363148,
+          "tail_recall": 0.0011792452830188679,
+          "worst_activity_ndcg": 0.06722602005534203
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "timestamp_unseen_in_fit",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "timestamp_unseen_in_fit",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.867357569805891,
+          "gini": 0.9475511477890591,
+          "group_mean_exposure_gap": 0.013433985830182916,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9971302071799116,
+              "items": 337,
+              "mean_item_exposure": 0.013443680308968115
+            },
+            "tail": {
+              "fraction_total_exposure": 0.0028697928200882663,
+              "items": 1345,
+              "mean_item_exposure": 9.69447878519772e-06
+            }
+          },
+          "normalized_entropy": 0.6408531101594903,
+          "users": 722
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9971302071799116,
+            "exposure": 0.9961218836565097,
+            "heldout_positive_pairs": 1697,
+            "hits": 284,
+            "items": 337,
+            "mean_item_exposure": 0.013443680308968115,
+            "recall@10": 0.20275225298810204,
+            "users_with_positives": 636
+          },
+          "tail": {
+            "discounted_exposure": 0.0028697928200882663,
+            "exposure": 0.003878116343490305,
+            "heldout_positive_pairs": 985,
+            "hits": 1,
+            "items": 1345,
+            "mean_item_exposure": 9.69447878519772e-06,
+            "recall@10": 0.0011792452830188679,
+            "users_with_positives": 424
+          }
+        },
+        "positive_pairs": 2682,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13704073643606807,
+            "diversity": 0.8127965383684338,
+            "head_exposure": 0.9983660130718954,
+            "hit@10": 0.3660130718954248,
+            "mrr@10": 0.12945715323166304,
+            "ndcg@10": 0.06722602005534203,
+            "novelty@10": 8.410367184035449,
+            "popularity_jsd": 0.20992737260200922,
+            "precision@10": 0.0477124183006536,
+            "recall@10": 0.08133174922390608,
+            "status": "evaluated",
+            "users": 306
+          },
+          "medium": {
+            "calibration_jsd": 0.1379871749871869,
+            "diversity": 0.8101779020200073,
+            "head_exposure": 0.9943319838056681,
+            "hit@10": 0.2631578947368421,
+            "mrr@10": 0.09957586273375747,
+            "ndcg@10": 0.08802413658506723,
+            "novelty@10": 8.350438657884654,
+            "popularity_jsd": 0.14484893804958482,
+            "precision@10": 0.032388663967611336,
+            "recall@10": 0.14547908232118759,
+            "status": "evaluated",
+            "users": 247
+          },
+          "sparse": {
+            "calibration_jsd": 0.164503324964926,
+            "diversity": 0.8043019943019944,
+            "head_exposure": 0.9946745562130177,
+            "hit@10": 0.3254437869822485,
+            "mrr@10": 0.13225556494787263,
+            "ndcg@10": 0.14968974085382877,
+            "novelty@10": 8.396050577002653,
+            "popularity_jsd": 0.12888718659343937,
+            "precision@10": 0.034911242603550295,
+            "recall@10": 0.2593688362919132,
+            "status": "evaluated",
+            "users": 169
+          }
+        },
+        "users": 722
+      }
+    },
+    "shuffle_2": {
+      "all_recorded": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.03273202245885809,
+          "calibration_jsd": 0.1478204366184741,
+          "coverage@10": 0.19203329369797859,
+          "diversity": 0.8084182811807414,
+          "exposure_entropy": 0.641689624861521,
+          "exposure_gini": 0.9469886973747145,
+          "head_exposure": 0.9923647932131495,
+          "head_exposure_gap": 0.7920080750205217,
+          "head_recall": 0.27168633235600004,
+          "hit@10": 0.6521739130434783,
+          "item_group_exposure_gap": 0.013376832477364556,
+          "mrr@10": 0.27840773283509224,
+          "ndcg@10": 0.17263200120513325,
+          "novelty@10": 8.405133305099412,
+          "popularity_jsd": 0.1616306246719223,
+          "precision@10": 0.10296924708377485,
+          "recall@10": 0.20353954643598532,
+          "tail_recall": 0.004809670781893004,
+          "worst_activity_ndcg": 0.16106435613290906
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "all_recorded",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "all_recorded",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.876321629557141,
+          "gini": 0.9469886973747145,
+          "group_mean_exposure_gap": 0.013376832477364556,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9937404257026906,
+              "items": 337,
+              "mean_item_exposure": 0.013397978014354144
+            },
+            "tail": {
+              "fraction_total_exposure": 0.006259574297309205,
+              "items": 1345,
+              "mean_item_exposure": 2.114553698958888e-05
+            }
+          },
+          "normalized_entropy": 0.641689624861521,
+          "users": 943
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9937404257026906,
+            "exposure": 0.9923647932131495,
+            "heldout_positive_pairs": 4920,
+            "hits": 964,
+            "items": 337,
+            "mean_item_exposure": 0.013397978014354144,
+            "recall@10": 0.27168633235600004,
+            "users_with_positives": 902
+          },
+          "tail": {
+            "discounted_exposure": 0.006259574297309205,
+            "exposure": 0.007635206786850477,
+            "heldout_positive_pairs": 2725,
+            "hits": 7,
+            "items": 1345,
+            "mean_item_exposure": 2.114553698958888e-05,
+            "recall@10": 0.004809670781893004,
+            "users_with_positives": 648
+          }
+        },
+        "positive_pairs": 7645,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.1373900942733848,
+            "diversity": 0.8132489451476793,
+            "head_exposure": 0.9981012658227847,
+            "hit@10": 0.8512658227848101,
+            "mrr@10": 0.3624686055856942,
+            "ndcg@10": 0.16106435613290906,
+            "novelty@10": 8.410962132006606,
+            "popularity_jsd": 0.21090527608850657,
+            "precision@10": 0.15632911392405066,
+            "recall@10": 0.10041344756959222,
+            "status": "evaluated",
+            "users": 316
+          },
+          "medium": {
+            "calibration_jsd": 0.13964001191135245,
+            "diversity": 0.8075021062919152,
+            "head_exposure": 0.9920382165605095,
+            "hit@10": 0.6305732484076433,
+            "mrr@10": 0.27279976746537254,
+            "ndcg@10": 0.16317635063445313,
+            "novelty@10": 8.376314030691198,
+            "popularity_jsd": 0.14662847121532796,
+            "precision@10": 0.09554140127388536,
+            "recall@10": 0.19758113436457386,
+            "status": "evaluated",
+            "users": 314
+          },
+          "sparse": {
+            "calibration_jsd": 0.16655731054526138,
+            "diversity": 0.804460418885339,
+            "head_exposure": 0.9869009584664536,
+            "hit@10": 0.4728434504792332,
+            "mrr@10": 0.19916704701049748,
+            "ndcg@10": 0.19379637859176715,
+            "novelty@10": 8.428159959609,
+            "popularity_jsd": 0.1269337759106763,
+            "precision@10": 0.05654952076677316,
+            "recall@10": 0.3136315228966986,
+            "status": "evaluated",
+            "users": 313
+          }
+        },
+        "users": 943
+      },
+      "liked_ge4": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.052471595294686674,
+          "calibration_jsd": 0.14594408160240216,
+          "coverage@10": 0.18370986920332938,
+          "diversity": 0.8083135702402843,
+          "exposure_entropy": 0.642874382556634,
+          "exposure_gini": 0.9466150469954574,
+          "head_exposure": 0.9929078014184397,
+          "head_exposure_gap": 0.7925510832258119,
+          "head_recall": 0.28526610647200007,
+          "hit@10": 0.5650118203309693,
+          "item_group_exposure_gap": 0.013383420389552618,
+          "mrr@10": 0.24199782355810698,
+          "ndcg@10": 0.16673419705154244,
+          "novelty@10": 8.398783211511637,
+          "popularity_jsd": 0.16545799249634127,
+          "precision@10": 0.0815602836879436,
+          "recall@10": 0.22321187075601384,
+          "tail_recall": 0.0057324840764331215,
+          "worst_activity_ndcg": 0.14334385688295131
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "liked_ge4",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "liked_ge4",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.889017447985634,
+          "gini": 0.9466150469954574,
+          "group_mean_exposure_gap": 0.013383420389552618,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9941311566328539,
+              "items": 337,
+              "mean_item_exposure": 0.013403245994076465
+            },
+            "tail": {
+              "fraction_total_exposure": 0.005868843367146238,
+              "items": 1345,
+              "mean_item_exposure": 1.9825604523847668e-05
+            }
+          },
+          "normalized_entropy": 0.642874382556634,
+          "users": 846
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9941311566328539,
+            "exposure": 0.9929078014184397,
+            "heldout_positive_pairs": 3074,
+            "hits": 685,
+            "items": 337,
+            "mean_item_exposure": 0.013403245994076465,
+            "recall@10": 0.28526610647200007,
+            "users_with_positives": 796
+          },
+          "tail": {
+            "discounted_exposure": 0.005868843367146238,
+            "exposure": 0.0070921985815602835,
+            "heldout_positive_pairs": 1158,
+            "hits": 5,
+            "items": 1345,
+            "mean_item_exposure": 1.9825604523847668e-05,
+            "recall@10": 0.0057324840764331215,
+            "users_with_positives": 471
+          }
+        },
+        "positive_pairs": 4232,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13739438543792964,
+            "diversity": 0.8130457933972312,
+            "head_exposure": 0.9984025559105432,
+            "hit@10": 0.7092651757188498,
+            "mrr@10": 0.3064087935493686,
+            "ndcg@10": 0.14334385688295131,
+            "novelty@10": 8.41042813339915,
+            "popularity_jsd": 0.21042225280062823,
+            "precision@10": 0.11597444089456868,
+            "recall@10": 0.1326574008597817,
+            "status": "evaluated",
+            "users": 313
+          },
+          "medium": {
+            "calibration_jsd": 0.13903024250288756,
+            "diversity": 0.8076305346700083,
+            "head_exposure": 0.9917763157894737,
+            "hit@10": 0.5131578947368421,
+            "mrr@10": 0.22288011695906434,
+            "ndcg@10": 0.16891041102816393,
+            "novelty@10": 8.378214795086445,
+            "popularity_jsd": 0.14638929768860157,
+            "precision@10": 0.07072368421052631,
+            "recall@10": 0.23184915413533835,
+            "status": "evaluated",
+            "users": 304
+          },
+          "sparse": {
+            "calibration_jsd": 0.16680810774097135,
+            "diversity": 0.8027522469443867,
+            "head_exposure": 0.9868995633187773,
+            "hit@10": 0.4366812227074236,
+            "mrr@10": 0.1793390864351563,
+            "ndcg@10": 0.195815452177638,
+            "novelty@10": 8.410171587242928,
+            "popularity_jsd": 0.12931419226189178,
+            "precision@10": 0.04890829694323144,
+            "recall@10": 0.33551673944687044,
+            "status": "evaluated",
+            "users": 229
+          }
+        },
+        "users": 846
+      },
+      "timestamp_seen_in_fit": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.07544245114028261,
+          "calibration_jsd": 0.1465485280680731,
+          "coverage@10": 0.1872770511296076,
+          "diversity": 0.8084001022475993,
+          "exposure_entropy": 0.6442345586253345,
+          "exposure_gini": 0.9461589511169586,
+          "head_exposure": 0.9923166472642606,
+          "head_exposure_gap": 0.7919599290716328,
+          "head_recall": 0.2766157599534572,
+          "hit@10": 0.5669383003492433,
+          "item_group_exposure_gap": 0.013375224452150648,
+          "mrr@10": 0.22635031505811465,
+          "ndcg@10": 0.15426919641532869,
+          "novelty@10": 8.409214471293,
+          "popularity_jsd": 0.16560967449024605,
+          "precision@10": 0.07997671711292234,
+          "recall@10": 0.21006132449559417,
+          "tail_recall": 0.005269607843137255,
+          "worst_activity_ndcg": 0.12380174224738108
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "timestamp_seen_in_fit",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "timestamp_seen_in_fit",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.903593043037883,
+          "gini": 0.9461589511169586,
+          "group_mean_exposure_gap": 0.013375224452150648,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9936450532736695,
+              "items": 337,
+              "mean_item_exposure": 0.013396692167794867
+            },
+            "tail": {
+              "fraction_total_exposure": 0.006354946726330681,
+              "items": 1345,
+              "mean_item_exposure": 2.1467715644218388e-05
+            }
+          },
+          "normalized_entropy": 0.6442345586253345,
+          "users": 859
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9936450532736695,
+            "exposure": 0.9923166472642607,
+            "heldout_positive_pairs": 3223,
+            "hits": 681,
+            "items": 337,
+            "mean_item_exposure": 0.013396692167794867,
+            "recall@10": 0.2766157599534572,
+            "users_with_positives": 807
+          },
+          "tail": {
+            "discounted_exposure": 0.006354946726330681,
+            "exposure": 0.007683352735739232,
+            "heldout_positive_pairs": 1740,
+            "hits": 6,
+            "items": 1345,
+            "mean_item_exposure": 2.1467715644218388e-05,
+            "recall@10": 0.005269607843137255,
+            "users_with_positives": 544
+          }
+        },
+        "positive_pairs": 4963,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.1373900942733848,
+            "diversity": 0.8132489451476793,
+            "head_exposure": 0.9981012658227847,
+            "hit@10": 0.7025316455696202,
+            "mrr@10": 0.27343530239099856,
+            "ndcg@10": 0.12380174224738108,
+            "novelty@10": 8.410962132006606,
+            "popularity_jsd": 0.21090527608850657,
+            "precision@10": 0.110126582278481,
+            "recall@10": 0.10759813631344536,
+            "status": "evaluated",
+            "users": 316
+          },
+          "medium": {
+            "calibration_jsd": 0.1396367898580237,
+            "diversity": 0.8075130546045579,
+            "head_exposure": 0.9918300653594772,
+            "hit@10": 0.5163398692810458,
+            "mrr@10": 0.21396540097520486,
+            "ndcg@10": 0.15089874293372113,
+            "novelty@10": 8.383088250069713,
+            "popularity_jsd": 0.14726211628038147,
+            "precision@10": 0.07222222222222223,
+            "recall@10": 0.21222766884531588,
+            "status": "evaluated",
+            "users": 306
+          },
+          "sparse": {
+            "calibration_jsd": 0.16768378955075927,
+            "diversity": 0.8030802804009555,
+            "head_exposure": 0.9852320675105485,
+            "hit@10": 0.45147679324894513,
+            "mrr@10": 0.1795609805103476,
+            "ndcg@10": 0.1992441933876637,
+            "novelty@10": 8.440616846435727,
+            "popularity_jsd": 0.128904791398129,
+            "precision@10": 0.049789029535864976,
+            "recall@10": 0.3438818565400844,
+            "status": "evaluated",
+            "users": 237
+          }
+        },
+        "users": 859
+      },
+      "timestamp_unseen_in_fit": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.08268576386885657,
+          "calibration_jsd": 0.14382958421291442,
+          "coverage@10": 0.1724137931034483,
+          "diversity": 0.8099386624455878,
+          "exposure_entropy": 0.64087993309327,
+          "exposure_gini": 0.947526286339039,
+          "head_exposure": 0.9961218836565098,
+          "head_exposure_gap": 0.795765165463882,
+          "head_recall": 0.20196608946608946,
+          "hit@10": 0.31994459833795014,
+          "item_group_exposure_gap": 0.01343391163942286,
+          "mrr@10": 0.11982862858901648,
+          "ndcg@10": 0.09346356049280531,
+          "novelty@10": 8.386539900849728,
+          "popularity_jsd": 0.16869445740824587,
+          "precision@10": 0.03933518005540175,
+          "recall@10": 0.14448870996654928,
+          "tail_recall": 0.0011792452830188679,
+          "worst_activity_ndcg": 0.06724999192251335
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "timestamp_unseen_in_fit",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "timestamp_unseen_in_fit",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.86764500334474,
+          "gini": 0.947526286339039,
+          "group_mean_exposure_gap": 0.01343391163942286,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9971258069050053,
+              "items": 337,
+              "mean_item_exposure": 0.013443620982825262
+            },
+            "tail": {
+              "fraction_total_exposure": 0.0028741930949946204,
+              "items": 1345,
+              "mean_item_exposure": 9.709343402402868e-06
+            }
+          },
+          "normalized_entropy": 0.64087993309327,
+          "users": 722
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9971258069050053,
+            "exposure": 0.9961218836565097,
+            "heldout_positive_pairs": 1697,
+            "hits": 283,
+            "items": 337,
+            "mean_item_exposure": 0.013443620982825262,
+            "recall@10": 0.20196608946608946,
+            "users_with_positives": 636
+          },
+          "tail": {
+            "discounted_exposure": 0.0028741930949946204,
+            "exposure": 0.003878116343490305,
+            "heldout_positive_pairs": 985,
+            "hits": 1,
+            "items": 1345,
+            "mean_item_exposure": 9.709343402402868e-06,
+            "recall@10": 0.0011792452830188679,
+            "users_with_positives": 424
+          }
+        },
+        "positive_pairs": 2682,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13716638605963374,
+            "diversity": 0.8130939412802158,
+            "head_exposure": 0.9983660130718954,
+            "hit@10": 0.3660130718954248,
+            "mrr@10": 0.12946623093681917,
+            "ndcg@10": 0.06724999192251335,
+            "novelty@10": 8.409718089818844,
+            "popularity_jsd": 0.20992737260200922,
+            "precision@10": 0.0477124183006536,
+            "recall@10": 0.08133174922390608,
+            "status": "evaluated",
+            "users": 306
+          },
+          "medium": {
+            "calibration_jsd": 0.13844315354359843,
+            "diversity": 0.8102858642332327,
+            "head_exposure": 0.9943319838056681,
+            "hit@10": 0.2591093117408907,
+            "mrr@10": 0.09904247798984642,
+            "ndcg@10": 0.08729979926629493,
+            "novelty@10": 8.350201295607514,
+            "popularity_jsd": 0.14484893804958482,
+            "precision@10": 0.031983805668016195,
+            "recall@10": 0.14412955465587043,
+            "status": "evaluated",
+            "users": 247
+          },
+          "sparse": {
+            "calibration_jsd": 0.16376678545684897,
+            "diversity": 0.8037181052565668,
+            "head_exposure": 0.9946745562130177,
+            "hit@10": 0.3254437869822485,
+            "mrr@10": 0.13275805391190007,
+            "ndcg@10": 0.14993575579136992,
+            "novelty@10": 8.397682561620593,
+            "popularity_jsd": 0.12888718659343937,
+            "precision@10": 0.034911242603550295,
+            "recall@10": 0.2593688362919132,
+            "status": "evaluated",
+            "users": 169
+          }
+        },
+        "users": 722
+      }
+    },
+    "true_group": {
+      "all_recorded": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.03138916273337525,
+          "calibration_jsd": 0.14829122938788405,
+          "coverage@10": 0.19203329369797859,
+          "diversity": 0.8077616466640857,
+          "exposure_entropy": 0.641734861150392,
+          "exposure_gini": 0.9469782041735723,
+          "head_exposure": 0.9922587486744433,
+          "head_exposure_gap": 0.7919020304818155,
+          "head_recall": 0.2717108254563377,
+          "hit@10": 0.6542948038176034,
+          "item_group_exposure_gap": 0.01337615165398807,
+          "mrr@10": 0.2786749482401655,
+          "ndcg@10": 0.172555418660509,
+          "novelty@10": 8.405056738417043,
+          "popularity_jsd": 0.16144332352448176,
+          "precision@10": 0.10318133616118737,
+          "recall@10": 0.2035100171924731,
+          "tail_recall": 0.004809670781893004,
+          "worst_activity_ndcg": 0.16114953759888515
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "all_recorded",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "all_recorded",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.876806379909263,
+          "gini": 0.9469782041735723,
+          "group_mean_exposure_gap": 0.01337615165398807,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9937000458761874,
+              "items": 337,
+              "mean_item_exposure": 0.01339743359851504
+            },
+            "tail": {
+              "fraction_total_exposure": 0.006299954123812203,
+              "items": 1345,
+              "mean_item_exposure": 2.128194452697036e-05
+            }
+          },
+          "normalized_entropy": 0.641734861150392,
+          "users": 943
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9937000458761874,
+            "exposure": 0.9922587486744433,
+            "heldout_positive_pairs": 4920,
+            "hits": 966,
+            "items": 337,
+            "mean_item_exposure": 0.01339743359851504,
+            "recall@10": 0.2717108254563377,
+            "users_with_positives": 902
+          },
+          "tail": {
+            "discounted_exposure": 0.006299954123812203,
+            "exposure": 0.007741251325556734,
+            "heldout_positive_pairs": 2725,
+            "hits": 7,
+            "items": 1345,
+            "mean_item_exposure": 2.128194452697036e-05,
+            "recall@10": 0.004809670781893004,
+            "users_with_positives": 648
+          }
+        },
+        "positive_pairs": 7645,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13749987331678978,
+            "diversity": 0.8125892438550666,
+            "head_exposure": 0.9981012658227847,
+            "hit@10": 0.8544303797468354,
+            "mrr@10": 0.362289029535865,
+            "ndcg@10": 0.16114953759888515,
+            "novelty@10": 8.410382010178584,
+            "popularity_jsd": 0.21090527608850657,
+            "precision@10": 0.1566455696202532,
+            "recall@10": 0.10105995636867725,
+            "status": "evaluated",
+            "users": 316
+          },
+          "medium": {
+            "calibration_jsd": 0.14040735507291185,
+            "diversity": 0.8070845549826442,
+            "head_exposure": 0.9917197452229298,
+            "hit@10": 0.6369426751592356,
+            "mrr@10": 0.27590612678192294,
+            "ndcg@10": 0.1641143079987733,
+            "novelty@10": 8.377879302078941,
+            "popularity_jsd": 0.1460659712725368,
+            "precision@10": 0.09617834394904458,
+            "recall@10": 0.19843418259023357,
+            "status": "evaluated",
+            "users": 314
+          },
+          "sparse": {
+            "calibration_jsd": 0.1670950793986414,
+            "diversity": 0.8035670334871613,
+            "head_exposure": 0.9869009584664536,
+            "hit@10": 0.4696485623003195,
+            "mrr@10": 0.19703712155788833,
+            "ndcg@10": 0.1925387003322604,
+            "novelty@10": 8.426944690920285,
+            "popularity_jsd": 0.1269337759106763,
+            "precision@10": 0.05623003194888179,
+            "recall@10": 0.3120340788072417,
+            "status": "evaluated",
+            "users": 313
+          }
+        },
+        "users": 943
+      },
+      "liked_ge4": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.05118984353901673,
+          "calibration_jsd": 0.1462088199282622,
+          "coverage@10": 0.18311533888228299,
+          "diversity": 0.8075675760191127,
+          "exposure_entropy": 0.6428985482523446,
+          "exposure_gini": 0.9466137683922774,
+          "head_exposure": 0.992789598108747,
+          "head_exposure_gap": 0.7924328799161192,
+          "head_recall": 0.2870211615090903,
+          "hit@10": 0.5697399527186762,
+          "item_group_exposure_gap": 0.013382790414783432,
+          "mrr@10": 0.24188993958497476,
+          "ndcg@10": 0.1670396829868488,
+          "novelty@10": 8.398826377538331,
+          "popularity_jsd": 0.16524921592183017,
+          "precision@10": 0.08215130023640696,
+          "recall@10": 0.22435450274970958,
+          "tail_recall": 0.0057324840764331215,
+          "worst_activity_ndcg": 0.14365700845077817
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "liked_ge4",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "liked_ge4",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.889276406662337,
+          "gini": 0.9466137683922774,
+          "group_mean_exposure_gap": 0.013382790414783432,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9940937926515928,
+              "items": 337,
+              "mean_item_exposure": 0.013402742238984577
+            },
+            "tail": {
+              "fraction_total_exposure": 0.005906207348407216,
+              "items": 1345,
+              "mean_item_exposure": 1.9951824201146164e-05
+            }
+          },
+          "normalized_entropy": 0.6428985482523446,
+          "users": 846
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9940937926515928,
+            "exposure": 0.992789598108747,
+            "heldout_positive_pairs": 3074,
+            "hits": 690,
+            "items": 337,
+            "mean_item_exposure": 0.013402742238984577,
+            "recall@10": 0.2870211615090903,
+            "users_with_positives": 796
+          },
+          "tail": {
+            "discounted_exposure": 0.005906207348407216,
+            "exposure": 0.007210401891252955,
+            "heldout_positive_pairs": 1158,
+            "hits": 5,
+            "items": 1345,
+            "mean_item_exposure": 1.9951824201146164e-05,
+            "recall@10": 0.0057324840764331215,
+            "users_with_positives": 471
+          }
+        },
+        "positive_pairs": 4232,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13750521667663881,
+            "diversity": 0.8123797690890343,
+            "head_exposure": 0.9984025559105432,
+            "hit@10": 0.7124600638977636,
+            "mrr@10": 0.3059168821948375,
+            "ndcg@10": 0.14365700845077817,
+            "novelty@10": 8.409842451298015,
+            "popularity_jsd": 0.21042225280062823,
+            "precision@10": 0.11661341853035144,
+            "recall@10": 0.13358543980698998,
+            "status": "evaluated",
+            "users": 313
+          },
+          "medium": {
+            "calibration_jsd": 0.13982728897093183,
+            "diversity": 0.8071224937343359,
+            "head_exposure": 0.9914473684210527,
+            "hit@10": 0.5230263157894737,
+            "mrr@10": 0.2246671365914787,
+            "ndcg@10": 0.17016776005301737,
+            "novelty@10": 8.379740725268103,
+            "popularity_jsd": 0.14580829445821858,
+            "precision@10": 0.07171052631578947,
+            "recall@10": 0.2340734649122807,
+            "status": "evaluated",
+            "users": 304
+          },
+          "sparse": {
+            "calibration_jsd": 0.1665765632854088,
+            "diversity": 0.80158106328412,
+            "head_exposure": 0.9868995633187773,
+            "hit@10": 0.4366812227074236,
+            "mrr@10": 0.17724059055936783,
+            "ndcg@10": 0.1948468519897949,
+            "novelty@10": 8.409105884976613,
+            "popularity_jsd": 0.12931419226189178,
+            "precision@10": 0.04890829694323144,
+            "recall@10": 0.33551673944687044,
+            "status": "evaluated",
+            "users": 229
+          }
+        },
+        "users": 846
+      },
+      "timestamp_seen_in_fit": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.07383231830213087,
+          "calibration_jsd": 0.1471611012009195,
+          "coverage@10": 0.1872770511296076,
+          "diversity": 0.8078312729826118,
+          "exposure_entropy": 0.6442626417150022,
+          "exposure_gini": 0.9461518694141638,
+          "head_exposure": 0.9922002328288707,
+          "head_exposure_gap": 0.7918435146362429,
+          "head_recall": 0.2761711211313856,
+          "hit@10": 0.5692665890570431,
+          "item_group_exposure_gap": 0.01337460401134188,
+          "mrr@10": 0.2263138200565439,
+          "ndcg@10": 0.15411371236649052,
+          "novelty@10": 8.409215805941658,
+          "popularity_jsd": 0.16540405751465073,
+          "precision@10": 0.08009313154831232,
+          "recall@10": 0.20990547530016407,
+          "tail_recall": 0.005269607843137255,
+          "worst_activity_ndcg": 0.12387165518176664
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "timestamp_seen_in_fit",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "timestamp_seen_in_fit",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.9038939803593316,
+          "gini": 0.9461518694141638,
+          "group_mean_exposure_gap": 0.01337460401134188,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.99360825475429,
+              "items": 337,
+              "mean_item_exposure": 0.013396196036470376
+            },
+            "tail": {
+              "fraction_total_exposure": 0.0063917452457099445,
+              "items": 1345,
+              "mean_item_exposure": 2.159202512849606e-05
+            }
+          },
+          "normalized_entropy": 0.6442626417150022,
+          "users": 859
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.99360825475429,
+            "exposure": 0.9922002328288708,
+            "heldout_positive_pairs": 3223,
+            "hits": 682,
+            "items": 337,
+            "mean_item_exposure": 0.013396196036470376,
+            "recall@10": 0.2761711211313856,
+            "users_with_positives": 807
+          },
+          "tail": {
+            "discounted_exposure": 0.0063917452457099445,
+            "exposure": 0.00779976717112922,
+            "heldout_positive_pairs": 1740,
+            "hits": 6,
+            "items": 1345,
+            "mean_item_exposure": 2.159202512849606e-05,
+            "recall@10": 0.005269607843137255,
+            "users_with_positives": 544
+          }
+        },
+        "positive_pairs": 4963,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.13749987331678978,
+            "diversity": 0.8125892438550666,
+            "head_exposure": 0.9981012658227847,
+            "hit@10": 0.7088607594936709,
+            "mrr@10": 0.2726177918424754,
+            "ndcg@10": 0.12387165518176664,
+            "novelty@10": 8.410382010178584,
+            "popularity_jsd": 0.21090527608850657,
+            "precision@10": 0.11044303797468354,
+            "recall@10": 0.10838756313135323,
+            "status": "evaluated",
+            "users": 316
+          },
+          "medium": {
+            "calibration_jsd": 0.14061091089723013,
+            "diversity": 0.8071269495452501,
+            "head_exposure": 0.9915032679738564,
+            "hit@10": 0.5196078431372549,
+            "mrr@10": 0.21653568834941384,
+            "ndcg@10": 0.1515829874826581,
+            "novelty@10": 8.384735547385038,
+            "popularity_jsd": 0.146684910456733,
+            "precision@10": 0.07254901960784313,
+            "recall@10": 0.21260893246187365,
+            "status": "evaluated",
+            "users": 306
+          },
+          "sparse": {
+            "calibration_jsd": 0.16849994611363647,
+            "diversity": 0.8023966914473243,
+            "head_exposure": 0.9852320675105485,
+            "hit@10": 0.4472573839662447,
+            "mrr@10": 0.17720012055455092,
+            "ndcg@10": 0.1977039734838975,
+            "novelty@10": 8.439268289399283,
+            "popularity_jsd": 0.128904791398129,
+            "precision@10": 0.049367088607594936,
+            "recall@10": 0.34177215189873417,
+            "status": "evaluated",
+            "users": 237
+          }
+        },
+        "users": 859
+      },
+      "timestamp_unseen_in_fit": {
+        "aggregate": {
+          "activity_ndcg_gap": 0.08202252167589216,
+          "calibration_jsd": 0.14419469209370794,
+          "coverage@10": 0.1724137931034483,
+          "diversity": 0.8093262762168579,
+          "exposure_entropy": 0.6408759361350643,
+          "exposure_gini": 0.9475349471853357,
+          "head_exposure": 0.9959833795013849,
+          "head_exposure_gap": 0.7956266613087571,
+          "head_recall": 0.2032239511013096,
+          "hit@10": 0.32132963988919666,
+          "item_group_exposure_gap": 0.013431868299454216,
+          "mrr@10": 0.11996658312447794,
+          "ndcg@10": 0.09374003215320777,
+          "novelty@10": 8.386315502039748,
+          "popularity_jsd": 0.16844982446913725,
+          "precision@10": 0.039473684210526404,
+          "recall@10": 0.14548901775356068,
+          "tail_recall": 0.0011792452830188679,
+          "worst_activity_ndcg": 0.06768446455043509
+        },
+        "definitions": {
+          "activity_groups": "TRAIN history size; linear quantiles 1/3,2/3; searchsorted side=right",
+          "activity_thresholds": [
+            28.0,
+            74.0
+          ],
+          "catalog_items": 1682,
+          "diversity": "Mean pairwise Jaccard distance among recommended genre sets",
+          "exposure_scope": "Allocation diagnostics; catalog parity is not a claim about item merit",
+          "genre_calibration": "Jensen-Shannon divergence in bits from mean fractional TRAIN genre profile",
+          "grouping_population_users": 943,
+          "head_definition": "Top ceil(20% of real catalog), descending TRAIN count then lexicographic token",
+          "head_items": 337,
+          "item_recall": "Macro conditional recall over users with held-out positives in that item group",
+          "relevance": "timestamp_unseen_in_fit",
+          "user_averaging": "Macro averages over evaluation users in each TRAIN-defined group"
+        },
+        "endpoint": "timestamp_unseen_in_fit",
+        "item_exposure": {
+          "catalogue_items": 1682,
+          "entropy_bits": 6.867602172092533,
+          "gini": 0.9475349471853357,
+          "group_mean_exposure_gap": 0.013431868299454216,
+          "groups": {
+            "head": {
+              "fraction_total_exposure": 0.9970046158350891,
+              "items": 337,
+              "mean_item_exposure": 0.013441987039746889
+            },
+            "tail": {
+              "fraction_total_exposure": 0.0029953841649110412,
+              "items": 1345,
+              "mean_item_exposure": 1.011874029267176e-05
+            }
+          },
+          "normalized_entropy": 0.6408759361350643,
+          "users": 722
+        },
+        "item_groups": {
+          "head": {
+            "discounted_exposure": 0.9970046158350891,
+            "exposure": 0.995983379501385,
+            "heldout_positive_pairs": 1697,
+            "hits": 284,
+            "items": 337,
+            "mean_item_exposure": 0.013441987039746889,
+            "recall@10": 0.2032239511013096,
+            "users_with_positives": 636
+          },
+          "tail": {
+            "discounted_exposure": 0.0029953841649110412,
+            "exposure": 0.004016620498614959,
+            "heldout_positive_pairs": 985,
+            "hits": 1,
+            "items": 1345,
+            "mean_item_exposure": 1.011874029267176e-05,
+            "recall@10": 0.0011792452830188679,
+            "users_with_positives": 424
+          }
+        },
+        "positive_pairs": 2682,
+        "schema_version": 1,
+        "user_groups": {
+          "dense": {
+            "calibration_jsd": 0.1371984791272703,
+            "diversity": 0.8124157070235503,
+            "head_exposure": 0.9983660130718954,
+            "hit@10": 0.3660130718954248,
+            "mrr@10": 0.13021060275962237,
+            "ndcg@10": 0.06768446455043509,
+            "novelty@10": 8.408668372844645,
+            "popularity_jsd": 0.20992737260200922,
+            "precision@10": 0.0477124183006536,
+            "recall@10": 0.08205796563639702,
+            "status": "evaluated",
+            "users": 306
+          },
+          "medium": {
+            "calibration_jsd": 0.13924202633886745,
+            "diversity": 0.8099853265642739,
+            "head_exposure": 0.9939271255060729,
+            "hit@10": 0.2631578947368421,
+            "mrr@10": 0.09888503309555942,
+            "ndcg@10": 0.0877262202021603,
+            "novelty@10": 8.352122950129623,
+            "popularity_jsd": 0.14413385715065188,
+            "precision@10": 0.032388663967611336,
+            "recall@10": 0.14615384615384613,
+            "status": "evaluated",
+            "users": 247
+          },
+          "sparse": {
+            "calibration_jsd": 0.1641009027988886,
+            "diversity": 0.8027691681537835,
+            "head_exposure": 0.9946745562130177,
+            "hit@10": 0.3254437869822485,
+            "mrr@10": 0.13222973607588992,
+            "ndcg@10": 0.14970698622632725,
+            "novelty@10": 8.39581598639185,
+            "popularity_jsd": 0.12888718659343937,
+            "precision@10": 0.034911242603550295,
+            "recall@10": 0.2593688362919132,
+            "status": "evaluated",
+            "users": 169
+          }
+        },
+        "users": 722
+      }
+    }
+  },
+  "candidates": [
+    {
+      "beta": 0.1,
+      "candidate_id": "true_group-lambda-50-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.2562425683709869,
+          "hit@10": 0.6341463414634146,
+          "mrr@10": 0.262583531114814,
+          "ndcg@10": 0.16074732626856203,
+          "novelty@10": 8.571398887206431,
+          "precision@10": 0.09777306468716843,
+          "recall@10": 0.191251804684192
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 50.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 1.4077606369970391e-14,
+        "minimum_whitened_diagonal": 0.9669997574733461,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 32429,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.841792916005943,
+      "lambda": 50.0,
+      "normalizer": 0.6627949571110229,
+      "role": "true_group"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "true_group-lambda-50-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.2164090368608799,
+          "hit@10": 0.6288441145281018,
+          "mrr@10": 0.26671968893601977,
+          "ndcg@10": 0.16008817242061255,
+          "novelty@10": 8.49449364246345,
+          "precision@10": 0.09650053022269336,
+          "recall@10": 0.18434134221904183
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 50.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 8.415046045670724e-15,
+        "minimum_whitened_diagonal": 0.8843343092013296,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 32429,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.835299041995313,
+      "lambda": 50.0,
+      "normalizer": 0.6627949571110229,
+      "role": "true_group"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "true_group-lambda-250-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.19203329369797859,
+          "hit@10": 0.6521739130434783,
+          "mrr@10": 0.28714588698681986,
+          "ndcg@10": 0.17436357318058213,
+          "novelty@10": 8.405056738417043,
+          "precision@10": 0.10551431601272511,
+          "recall@10": 0.19950219853527648
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.322097545835878e-15,
+        "minimum_whitened_diagonal": 0.9921038886373891,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 32429,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8308925830060616,
+      "lambda": 250.0,
+      "normalizer": 0.6627949571110229,
+      "role": "true_group"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "true_group-lambda-250-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.17776456599286564,
+          "hit@10": 0.6415694591728526,
+          "mrr@10": 0.28571807301923935,
+          "ndcg@10": 0.17070874085992643,
+          "novelty@10": 8.369106081761124,
+          "precision@10": 0.10201484623541862,
+          "recall@10": 0.19380307507602398
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.956156891594561e-15,
+        "minimum_whitened_diagonal": 0.9613346691942393,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 32429,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8386722920113243,
+      "lambda": 250.0,
+      "normalizer": 0.6627949571110229,
+      "role": "true_group"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "true_group-lambda-1000-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.133769322235434,
+          "hit@10": 0.6352067868504772,
+          "mrr@10": 0.28372258412025086,
+          "ndcg@10": 0.16933157677640742,
+          "novelty@10": 8.243830473352524,
+          "precision@10": 0.1010604453870624,
+          "recall@10": 0.19058158091693855
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 1000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 3.962991377012584e-15,
+        "minimum_whitened_diagonal": 0.9977926547295732,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 32429,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8371653330104891,
+      "lambda": 1000.0,
+      "normalizer": 0.6627949571110229,
+      "role": "true_group"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "true_group-lambda-1000-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.12901307966706302,
+          "hit@10": 0.6320254506892895,
+          "mrr@10": 0.2807221969735224,
+          "ndcg@10": 0.16765464372961553,
+          "novelty@10": 8.23533532554736,
+          "precision@10": 0.09957582184517484,
+          "recall@10": 0.18794828570138492
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 1000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 5.417074877510031e-15,
+        "minimum_whitened_diagonal": 0.9871594858391765,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 32429,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8334564170218073,
+      "lambda": 1000.0,
+      "normalizer": 0.6627949571110229,
+      "role": "true_group"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "shuffle_0-lambda-50-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.2568370986920333,
+          "hit@10": 0.6299045599151644,
+          "mrr@10": 0.26037090339847474,
+          "ndcg@10": 0.15987486988783878,
+          "novelty@10": 8.570441633277193,
+          "precision@10": 0.09745493107104972,
+          "recall@10": 0.19113302818979133
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 50.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 1.3521970737775086e-14,
+        "minimum_whitened_diagonal": 0.9676852042886981,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38237,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8436594999802765,
+      "lambda": 50.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_0"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "shuffle_0-lambda-50-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.21284185493460167,
+          "hit@10": 0.6394485683987274,
+          "mrr@10": 0.2684029355821506,
+          "ndcg@10": 0.16446788153606873,
+          "novelty@10": 8.481066221597574,
+          "precision@10": 0.09936373276776228,
+          "recall@10": 0.19285561826870226
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 50.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 7.432396680342305e-15,
+        "minimum_whitened_diagonal": 0.8863245394792953,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38237,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8392994579917286,
+      "lambda": 50.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_0"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "shuffle_0-lambda-250-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.19143876337693222,
+          "hit@10": 0.647932131495228,
+          "mrr@10": 0.2872195290275881,
+          "ndcg@10": 0.17372280070711918,
+          "novelty@10": 8.403977104271986,
+          "precision@10": 0.1048780487804876,
+          "recall@10": 0.19847294732435541
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 7.277397768972657e-15,
+        "minimum_whitened_diagonal": 0.9923250448400407,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38237,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8363125000032596,
+      "lambda": 250.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_0"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "shuffle_0-lambda-250-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.17300832342449465,
+          "hit@10": 0.6542948038176034,
+          "mrr@10": 0.28576099580871556,
+          "ndcg@10": 0.17276070228519372,
+          "novelty@10": 8.361150003844044,
+          "precision@10": 0.10402969247083747,
+          "recall@10": 0.2002240142437278
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 5.069064705680408e-15,
+        "minimum_whitened_diagonal": 0.9621311945396531,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38237,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8371651659836061,
+      "lambda": 250.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_0"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "shuffle_0-lambda-1000-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.13436385255648037,
+          "hit@10": 0.6352067868504772,
+          "mrr@10": 0.2835349021192072,
+          "ndcg@10": 0.16917095907763402,
+          "novelty@10": 8.242640893323586,
+          "precision@10": 0.10106044538706241,
+          "recall@10": 0.19014319418012998
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 1000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.282693173831299e-15,
+        "minimum_whitened_diagonal": 0.9978393949507973,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38237,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8376060420123395,
+      "lambda": 1000.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_0"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "shuffle_0-lambda-1000-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.12960760998810938,
+          "hit@10": 0.6362672322375398,
+          "mrr@10": 0.2790364254574221,
+          "ndcg@10": 0.16721383381169883,
+          "novelty@10": 8.228879666140088,
+          "precision@10": 0.1001060445387061,
+          "recall@10": 0.18801782914188897
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 1000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.340791791631963e-15,
+        "minimum_whitened_diagonal": 0.9872476087052109,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38237,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8349257920053788,
+      "lambda": 1000.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_0"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "shuffle_1-lambda-50-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.2556480380499406,
+          "hit@10": 0.6288441145281018,
+          "mrr@10": 0.2608422124593915,
+          "ndcg@10": 0.16021588118647975,
+          "novelty@10": 8.569652004674898,
+          "precision@10": 0.09809119830328729,
+          "recall@10": 0.19039762951083622
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 50.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 1.5606281529409425e-14,
+        "minimum_whitened_diagonal": 0.9670541994583817,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38038,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8329594999959227,
+      "lambda": 50.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_1"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "shuffle_1-lambda-50-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.21343638525564804,
+          "hit@10": 0.630965005302227,
+          "mrr@10": 0.2728715346159671,
+          "ndcg@10": 0.16408235063246512,
+          "novelty@10": 8.486340492667656,
+          "precision@10": 0.09862142099681857,
+          "recall@10": 0.18776714331818536
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 50.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 6.53158624801878e-15,
+        "minimum_whitened_diagonal": 0.8860858562399209,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38038,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8350470830046106,
+      "lambda": 50.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_1"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "shuffle_1-lambda-250-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.19143876337693222,
+          "hit@10": 0.6511134676564156,
+          "mrr@10": 0.2870402632597751,
+          "ndcg@10": 0.17395082102746282,
+          "novelty@10": 8.404832375341254,
+          "precision@10": 0.10519618239660637,
+          "recall@10": 0.19889200320938355
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 6.170480072905657e-15,
+        "minimum_whitened_diagonal": 0.9921347592688616,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38038,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8445663749880623,
+      "lambda": 250.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_1"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "shuffle_1-lambda-250-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.17122473246135553,
+          "hit@10": 0.6468716861081655,
+          "mrr@10": 0.2855749970543181,
+          "ndcg@10": 0.1714949703398461,
+          "novelty@10": 8.364515917766159,
+          "precision@10": 0.10392364793213128,
+          "recall@10": 0.1957930552174353
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.668346825166985e-15,
+        "minimum_whitened_diagonal": 0.9613784903009704,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38038,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8457848750113044,
+      "lambda": 250.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_1"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "shuffle_1-lambda-1000-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.13436385255648037,
+          "hit@10": 0.6352067868504772,
+          "mrr@10": 0.28401084010840083,
+          "ndcg@10": 0.16933429923877938,
+          "novelty@10": 8.243298365568856,
+          "precision@10": 0.10106044538706241,
+          "recall@10": 0.19037884871058836
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 1000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 3.424657717483774e-15,
+        "minimum_whitened_diagonal": 0.997784628117264,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38038,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8353144169959705,
+      "lambda": 1000.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_1"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "shuffle_1-lambda-1000-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.1278240190249703,
+          "hit@10": 0.6341463414634146,
+          "mrr@10": 0.27878435927216394,
+          "ndcg@10": 0.1670016634871225,
+          "novelty@10": 8.229213176444762,
+          "precision@10": 0.09968186638388109,
+          "recall@10": 0.18730451291293115
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 1000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 3.922493154583887e-15,
+        "minimum_whitened_diagonal": 0.9871420032234953,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38038,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8348052920191549,
+      "lambda": 1000.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_1"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "shuffle_2-lambda-50-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.25743162901307964,
+          "hit@10": 0.6320254506892895,
+          "mrr@10": 0.2621521991617429,
+          "ndcg@10": 0.16067816253395267,
+          "novelty@10": 8.57108295325101,
+          "precision@10": 0.09809119830328723,
+          "recall@10": 0.19054201058798206
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 50.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 1.3465439881834995e-14,
+        "minimum_whitened_diagonal": 0.9670599745637066,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38341,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8321521669859067,
+      "lambda": 50.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_2"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "shuffle_2-lambda-50-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.21521997621878716,
+          "hit@10": 0.6256627783669141,
+          "mrr@10": 0.2670559174535845,
+          "ndcg@10": 0.1624918512424586,
+          "novelty@10": 8.48342334581215,
+          "precision@10": 0.09819724284199348,
+          "recall@10": 0.18907167476133754
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 50.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 7.0281640671342e-15,
+        "minimum_whitened_diagonal": 0.8867381548552937,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38341,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8385094580007717,
+      "lambda": 50.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_2"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "shuffle_2-lambda-250-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.19203329369797859,
+          "hit@10": 0.6489925768822906,
+          "mrr@10": 0.28742404349509293,
+          "ndcg@10": 0.17406629748619037,
+          "novelty@10": 8.405133305099412,
+          "precision@10": 0.10530222693531263,
+          "recall@10": 0.19891646458926035
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.029465007005982e-15,
+        "minimum_whitened_diagonal": 0.9921449662976677,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38341,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8471502909960691,
+      "lambda": 250.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_2"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "shuffle_2-lambda-250-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.17063020214030916,
+          "hit@10": 0.6394485683987274,
+          "mrr@10": 0.28381095456917277,
+          "ndcg@10": 0.17158181985148435,
+          "novelty@10": 8.36216526048697,
+          "precision@10": 0.10318133616118746,
+          "recall@10": 0.19633750299506458
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.693332573678335e-15,
+        "minimum_whitened_diagonal": 0.9614600130532823,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38341,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8352712919877376,
+      "lambda": 250.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_2"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "shuffle_2-lambda-1000-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.13436385255648037,
+          "hit@10": 0.6352067868504772,
+          "mrr@10": 0.28325884966924175,
+          "ndcg@10": 0.16920055125294284,
+          "novelty@10": 8.243519040893801,
+          "precision@10": 0.1010604453870624,
+          "recall@10": 0.19034960848851862
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 1000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 3.4496962465848846e-15,
+        "minimum_whitened_diagonal": 0.9977858977218375,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38341,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8354248339892365,
+      "lambda": 1000.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_2"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "shuffle_2-lambda-1000-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.1272294887039239,
+          "hit@10": 0.6362672322375398,
+          "mrr@10": 0.27836018111733885,
+          "ndcg@10": 0.16786538425068637,
+          "novelty@10": 8.22907472676044,
+          "precision@10": 0.1003181336161186,
+          "recall@10": 0.19014933786001934
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 1000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 3.575540665178375e-15,
+        "minimum_whitened_diagonal": 0.9871554083992421,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38341,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8365865839878097,
+      "lambda": 1000.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_2"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "bag-lambda-50-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.25921521997621877,
+          "hit@10": 0.6299045599151644,
+          "mrr@10": 0.2593256072312274,
+          "ndcg@10": 0.15916146700048606,
+          "novelty@10": 8.578563299379223,
+          "precision@10": 0.0972428419936372,
+          "recall@10": 0.18919118702148846
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 50.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 1.611832348904021e-14,
+        "minimum_whitened_diagonal": 0.9816156588809648,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.7592022089811508,
+      "lambda": 50.0,
+      "normalizer": 64.27566470282976,
+      "role": "bag"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "bag-lambda-50-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.2348394768133175,
+          "hit@10": 0.6256627783669141,
+          "mrr@10": 0.268958406975374,
+          "ndcg@10": 0.16182912882119976,
+          "novelty@10": 8.540305120743238,
+          "precision@10": 0.09671261930010591,
+          "recall@10": 0.18833412193277774
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 50.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 1.1297175338363895e-14,
+        "minimum_whitened_diagonal": 0.9780882362833515,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.7591529999917839,
+      "lambda": 50.0,
+      "normalizer": 64.27566470282976,
+      "role": "bag"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "bag-lambda-250-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.19203329369797859,
+          "hit@10": 0.6468716861081655,
+          "mrr@10": 0.2853927856048743,
+          "ndcg@10": 0.1729716191804251,
+          "novelty@10": 8.404555255681611,
+          "precision@10": 0.1041357370095438,
+          "recall@10": 0.1976368089053273
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.211058555463059e-15,
+        "minimum_whitened_diagonal": 0.9960426104819242,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.7608552500023507,
+      "lambda": 250.0,
+      "normalizer": 64.27566470282976,
+      "role": "bag"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "bag-lambda-250-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.18014268727705113,
+          "hit@10": 0.6489925768822906,
+          "mrr@10": 0.28214538201282596,
+          "ndcg@10": 0.17077197717575415,
+          "novelty@10": 8.383843494365502,
+          "precision@10": 0.10381760339342504,
+          "recall@10": 0.1956799511139951
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.460948298252459e-15,
+        "minimum_whitened_diagonal": 0.9928513833602627,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.7584837499889545,
+      "lambda": 250.0,
+      "normalizer": 64.27566470282976,
+      "role": "bag"
+    },
+    {
+      "beta": 0.1,
+      "candidate_id": "bag-lambda-1000-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.13436385255648037,
+          "hit@10": 0.6362672322375398,
+          "mrr@10": 0.2842940463566123,
+          "ndcg@10": 0.16927310744875051,
+          "novelty@10": 8.244382227581088,
+          "precision@10": 0.10095440084835614,
+          "recall@10": 0.18982723763119325
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 1000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 3.459562815590307e-15,
+        "minimum_whitened_diagonal": 0.9988153696914367,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.7597496669914108,
+      "lambda": 1000.0,
+      "normalizer": 64.27566470282976,
+      "role": "bag"
+    },
+    {
+      "beta": 1.0,
+      "candidate_id": "bag-lambda-1000-beta-1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.1313912009512485,
+          "hit@10": 0.6320254506892895,
+          "mrr@10": 0.28081814203235167,
+          "ndcg@10": 0.16829356847408816,
+          "novelty@10": 8.241591232117822,
+          "precision@10": 0.10074231177094362,
+          "recall@10": 0.18879482926952626
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 1000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.1059519536521215e-15,
+        "minimum_whitened_diagonal": 0.9968288089585525,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 1.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.7577513750002254,
+      "lambda": 1000.0,
+      "normalizer": 64.27566470282976,
+      "role": "bag"
+    },
+    {
+      "beta": 0.0,
+      "candidate_id": "EASE-lambda-10-beta-0",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.3055885850178359,
+          "hit@10": 0.5737009544008483,
+          "mrr@10": 0.23082150852564412,
+          "ndcg@10": 0.13878964963485843,
+          "novelty@10": 8.709375207145353,
+          "precision@10": 0.08356309650053022,
+          "recall@10": 0.16604067947486403
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 10.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 1.2114335564624072e-13,
+        "minimum_whitened_diagonal": 1.0,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.44358633301453665,
+      "lambda": 10.0,
+      "normalizer": 64.27566470282976,
+      "role": "EASE"
+    },
+    {
+      "beta": 0.0,
+      "candidate_id": "EASE-lambda-30-beta-0",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.2835909631391201,
+          "hit@10": 0.6097560975609756,
+          "mrr@10": 0.2501447592115672,
+          "ndcg@10": 0.15092416161617772,
+          "novelty@10": 8.636527284596893,
+          "precision@10": 0.09215270413573692,
+          "recall@10": 0.17751156167146293
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 30.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.2807385719551025e-14,
+        "minimum_whitened_diagonal": 1.0,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.4408624579955358,
+      "lambda": 30.0,
+      "normalizer": 64.27566470282976,
+      "role": "EASE"
+    },
+    {
+      "beta": 0.0,
+      "candidate_id": "EASE-lambda-50-beta-0",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.26516052318668254,
+          "hit@10": 0.6299045599151644,
+          "mrr@10": 0.26109638270295715,
+          "ndcg@10": 0.1590512031868309,
+          "novelty@10": 8.589590199927393,
+          "precision@10": 0.09660657476139967,
+          "recall@10": 0.1882147964807748
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 50.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 1.7533121000743506e-14,
+        "minimum_whitened_diagonal": 1.0,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.4417026250157505,
+      "lambda": 50.0,
+      "normalizer": 64.27566470282976,
+      "role": "EASE"
+    },
+    {
+      "beta": 0.0,
+      "candidate_id": "EASE-lambda-100-beta-0",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.23543400713436385,
+          "hit@10": 0.6458112407211029,
+          "mrr@10": 0.2731496911242402,
+          "ndcg@10": 0.16658060917697692,
+          "novelty@10": 8.516182408226562,
+          "precision@10": 0.1008483563096499,
+          "recall@10": 0.19602120823308292
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 100.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 1.3099987839809294e-14,
+        "minimum_whitened_diagonal": 1.0,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.4418293749913573,
+      "lambda": 100.0,
+      "normalizer": 64.27566470282976,
+      "role": "EASE"
+    },
+    {
+      "beta": 0.0,
+      "candidate_id": "EASE-lambda-250-beta-0",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.19441141498216408,
+          "hit@10": 0.6521739130434783,
+          "mrr@10": 0.28471569964146815,
+          "ndcg@10": 0.1723459472198974,
+          "novelty@10": 8.411495031703998,
+          "precision@10": 0.10413573700954379,
+          "recall@10": 0.19779574640294892
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 5.370604747007222e-15,
+        "minimum_whitened_diagonal": 1.0,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.4417437499796506,
+      "lambda": 250.0,
+      "normalizer": 64.27566470282976,
+      "role": "EASE"
+    },
+    {
+      "beta": 0.0,
+      "candidate_id": "EASE-lambda-300-beta-0",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.1807372175980975,
+          "hit@10": 0.6500530222693531,
+          "mrr@10": 0.2896408793280475,
+          "ndcg@10": 0.17479598736989818,
+          "novelty@10": 8.386523075575857,
+          "precision@10": 0.10572640509013759,
+          "recall@10": 0.19891969020459163
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 300.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.201895058306029e-15,
+        "minimum_whitened_diagonal": 1.0,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.44461579201743007,
+      "lambda": 300.0,
+      "normalizer": 64.27566470282976,
+      "role": "EASE"
+    },
+    {
+      "beta": 0.0,
+      "candidate_id": "EASE-lambda-1000-beta-0",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.13436385255648037,
+          "hit@10": 0.6362672322375398,
+          "mrr@10": 0.2842174586342133,
+          "ndcg@10": 0.16981595467387067,
+          "novelty@10": 8.245322017802945,
+          "precision@10": 0.10148462354188742,
+          "recall@10": 0.19115967093696926
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 1000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 3.730105037801106e-15,
+        "minimum_whitened_diagonal": 1.0,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.4436906249902677,
+      "lambda": 1000.0,
+      "normalizer": 64.27566470282976,
+      "role": "EASE"
+    },
+    {
+      "beta": 0.0,
+      "candidate_id": "EASE-lambda-3000-beta-0",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.09155766944114149,
+          "hit@10": 0.6108165429480382,
+          "mrr@10": 0.2695046205120432,
+          "ndcg@10": 0.16098633119169656,
+          "novelty@10": 8.13106944606991,
+          "precision@10": 0.09650053022269338,
+          "recall@10": 0.1811745495232879
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 3000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 5.486452357940463e-15,
+        "minimum_whitened_diagonal": 1.0,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.44395587500184774,
+      "lambda": 3000.0,
+      "normalizer": 64.27566470282976,
+      "role": "EASE"
+    },
+    {
+      "beta": 0.0,
+      "candidate_id": "EASE-lambda-10000-beta-0",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.05648038049940547,
+          "hit@10": 0.574761399787911,
+          "mrr@10": 0.25339595010856913,
+          "ndcg@10": 0.14926934704800549,
+          "novelty@10": 8.03732822541328,
+          "precision@10": 0.08907741251325556,
+          "recall@10": 0.16601866832689655
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 10000.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 3.801694350836178e-15,
+        "minimum_whitened_diagonal": 1.0,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.4423712909920141,
+      "lambda": 10000.0,
+      "normalizer": 64.27566470282976,
+      "role": "EASE"
+    }
+  ],
+  "fresh_population_test": false,
+  "limitations": [
+    "Nested exploration after prior dataset use, not a fresh population test.",
+    "Timestamp equality marks rating recording, not consumption or identified screen exposure.",
+    "Timestamp subset endpoints overlap users and are not independent replications.",
+    "Different families have declared unequal hyperparameter grid sizes.",
+    "Paired intervals are descriptive and do not correct prior model exploration."
+  ],
+  "original_test_read": false,
+  "original_validation_read": false,
+  "paired_comparisons": {
+    "true_minus_EASE": {
+      "ndcg@10": {
+        "bootstrap_seed": 2026092901,
+        "ci95": [
+          -0.0020163598283285075,
+          0.0012912927907447489
+        ],
+        "interpretation": "descriptive paired-user percentile interval in this explored dataset",
+        "mean_delta": -0.00040064417017837575,
+        "replicates": 2000,
+        "users": 943
+      },
+      "recall@10": {
+        "bootstrap_seed": 2026092901,
+        "ci95": [
+          -0.003928918610577961,
+          0.0026295183308920923
+        ],
+        "interpretation": "descriptive paired-user percentile interval in this explored dataset",
+        "mean_delta": -0.0008007232443323144,
+        "replicates": 2000,
+        "users": 943
+      }
+    },
+    "true_minus_bag": {
+      "ndcg@10": {
+        "bootstrap_seed": 2026092901,
+        "ci95": [
+          -0.0014021757327347805,
+          0.0011733581578778764
+        ],
+        "interpretation": "descriptive paired-user percentile interval in this explored dataset",
+        "mean_delta": -0.00016525436279028925,
+        "replicates": 2000,
+        "users": 943
+      },
+      "recall@10": {
+        "bootstrap_seed": 2026092901,
+        "ci95": [
+          -0.0013422785487702297,
+          0.003727738079667543
+        ],
+        "interpretation": "descriptive paired-user percentile interval in this explored dataset",
+        "mean_delta": 0.0008245511573992079,
+        "replicates": 2000,
+        "users": 943
+      }
+    },
+    "true_minus_mean_shuffle": {
+      "ndcg@10": {
+        "bootstrap_seed": 2026092901,
+        "ci95": [
+          -0.0012220554763649311,
+          0.0005900470154903755
+        ],
+        "interpretation": "descriptive paired-user percentile interval in this explored dataset",
+        "mean_delta": -0.00026330125213910936,
+        "replicates": 2000,
+        "users": 943
+      },
+      "recall@10": {
+        "bootstrap_seed": 2026092901,
+        "ci95": [
+          -0.0014869105340093358,
+          0.0013444894946415134
+        ],
+        "interpretation": "descriptive paired-user percentile interval in this explored dataset",
+        "mean_delta": 9.744700994129491e-07,
+        "replicates": 2000,
+        "users": 943
+      }
+    }
+  },
+  "schema_version": 1,
+  "selected": {
+    "EASE": {
+      "beta": 0.0,
+      "candidate_id": "EASE-lambda-300-beta-0",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.1807372175980975,
+          "hit@10": 0.6500530222693531,
+          "mrr@10": 0.2896408793280475,
+          "ndcg@10": 0.17479598736989818,
+          "novelty@10": 8.386523075575857,
+          "precision@10": 0.10572640509013759,
+          "recall@10": 0.19891969020459163
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 300.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.201895058306029e-15,
+        "minimum_whitened_diagonal": 1.0,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.0,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.44461579201743007,
+      "lambda": 300.0,
+      "normalizer": 64.27566470282976,
+      "role": "EASE",
+      "scores_file": "selected-scores/EASE.npy",
+      "scores_file_sha256": "d74d3e008c6e95498fdf17c76c468291aaf74831eed8e6735a3ccd3d0aa9a607"
+    },
+    "bag": {
+      "beta": 0.1,
+      "candidate_id": "bag-lambda-250-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.19203329369797859,
+          "hit@10": 0.6468716861081655,
+          "mrr@10": 0.2853927856048743,
+          "ndcg@10": 0.1729716191804251,
+          "novelty@10": 8.404555255681611,
+          "precision@10": 0.1041357370095438,
+          "recall@10": 0.1976368089053273
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.211058555463059e-15,
+        "minimum_whitened_diagonal": 0.9960426104819242,
+        "mode": "bag",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 4211213.0,
+        "pair_normalizer": 64.27566470282976,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": null,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.7608552500023507,
+      "lambda": 250.0,
+      "normalizer": 64.27566470282976,
+      "role": "bag",
+      "scores_file": "selected-scores/bag.npy",
+      "scores_file_sha256": "2bf08341aecb97c62fbffba503a003f3dd8ed6a9576757c58bc58bb1eb7891b8"
+    },
+    "shuffle_0": {
+      "beta": 0.1,
+      "candidate_id": "shuffle_0-lambda-250-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.19143876337693222,
+          "hit@10": 0.647932131495228,
+          "mrr@10": 0.2872195290275881,
+          "ndcg@10": 0.17372280070711918,
+          "novelty@10": 8.403977104271986,
+          "precision@10": 0.1048780487804876,
+          "recall@10": 0.19847294732435541
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 7.277397768972657e-15,
+        "minimum_whitened_diagonal": 0.9923250448400407,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38237,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8363125000032596,
+      "lambda": 250.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_0",
+      "scores_file": "selected-scores/shuffle_0.npy",
+      "scores_file_sha256": "2a8320bf5a8e19660eb25b28ebb051d730bccb65a8db22296e727a54b666332d"
+    },
+    "shuffle_1": {
+      "beta": 0.1,
+      "candidate_id": "shuffle_1-lambda-250-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.19143876337693222,
+          "hit@10": 0.6511134676564156,
+          "mrr@10": 0.2870402632597751,
+          "ndcg@10": 0.17395082102746282,
+          "novelty@10": 8.404832375341254,
+          "precision@10": 0.10519618239660637,
+          "recall@10": 0.19889200320938355
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 6.170480072905657e-15,
+        "minimum_whitened_diagonal": 0.9921347592688616,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38038,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8445663749880623,
+      "lambda": 250.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_1",
+      "scores_file": "selected-scores/shuffle_1.npy",
+      "scores_file_sha256": "58f864bd30ad30230dd9d11dcd3d7d408d07fbec8fe3857dad6ad87d06910efc"
+    },
+    "shuffle_2": {
+      "beta": 0.1,
+      "candidate_id": "shuffle_2-lambda-250-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.19203329369797859,
+          "hit@10": 0.6489925768822906,
+          "mrr@10": 0.28742404349509293,
+          "ndcg@10": 0.17406629748619037,
+          "novelty@10": 8.405133305099412,
+          "precision@10": 0.10530222693531263,
+          "recall@10": 0.19891646458926035
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.029465007005982e-15,
+        "minimum_whitened_diagonal": 0.9921449662976677,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 38341,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8471502909960691,
+      "lambda": 250.0,
+      "normalizer": 0.6627949571110229,
+      "role": "shuffle_2",
+      "scores_file": "selected-scores/shuffle_2.npy",
+      "scores_file_sha256": "6caf501888f070bd61496a7668f3bfa97b4a7dc3f2f17ed19a99afe8d5fc9ee4"
+    },
+    "true_group": {
+      "beta": 0.1,
+      "candidate_id": "true_group-lambda-250-beta-0.1",
+      "development": {
+        "aggregate": {
+          "coverage@10": 0.19203329369797859,
+          "hit@10": 0.6521739130434783,
+          "mrr@10": 0.28714588698681986,
+          "ndcg@10": 0.17436357318058213,
+          "novelty@10": 8.405056738417043,
+          "precision@10": 0.10551431601272511,
+          "recall@10": 0.19950219853527648
+        },
+        "users": 943
+      },
+      "diagnostics": {
+        "fallback_count": 0,
+        "implicit_pair_features": 1415403,
+        "implicit_singleton_features": 1683,
+        "lambda_binary": 250.0,
+        "largest_target_support": 374,
+        "maximum_fallback_relative_residual": 0.0,
+        "maximum_regular_relative_residual": 4.322097545835878e-15,
+        "minimum_whitened_diagonal": 0.9921038886373891,
+        "mode": "grouped",
+        "n_items": 1683,
+        "n_users": 943,
+        "pair_mass": 43425.0,
+        "pair_normalizer": 0.6627949571110229,
+        "pair_weight": 0.1,
+        "solver": "shared user-space Cholesky and target-observer block downdates",
+        "stored_pair_features": 32429,
+        "sum_target_support_cubes": 1232434150
+      },
+      "fit_seconds": 0.8308925830060616,
+      "lambda": 250.0,
+      "normalizer": 0.6627949571110229,
+      "role": "true_group",
+      "scores_file": "selected-scores/true_group.npy",
+      "scores_file_sha256": "e9d015f5e408bebcaaf38052dec3b4bd5edf77da77286d66f1a7067c2c122706"
+    }
+  },
+  "split_counts": {
+    "assessment": 7645,
+    "catalog": 1682,
+    "development": 7645,
+    "fit": 65518,
+    "users": 943
+  },
+  "status": "complete",
+  "study": "nested_original_train_exploratory",
+  "success": {
+    "beats_bag": false,
+    "beats_shuffle_mean": false,
+    "declared_success": false,
+    "mean_shuffle_ndcg": 0.1728187199126481,
+    "mechanism_support_descriptive_intervals": false,
+    "relative_gain_over_ease": -0.0023164505691283255,
+    "threshold_relative_gain": 0.1
+  },
+  "timing": {
+    "selection_seconds": 34.96728662500391,
+    "total_seconds": 38.556905334000476
+  }
+}

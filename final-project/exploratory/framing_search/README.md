@@ -3,6 +3,13 @@
 Research decision, 29 September 2026. This is a framing investigation, not a
 new model, an accuracy result, or an established original contribution.
 
+**Follow-up:** the [predictive experiment](predictive/README.md) is now complete.
+All 39 declared fits used a nested split of the original TRAIN data. True-group
+nDCG@10 is 0.172555, versus EASE 0.172956 and mean shuffled-group 0.172819.
+This implementation did not support the proposed ranking advantage. The text
+below preserves the preceding framing decision and its falsifiable hypothesis;
+its descriptive coherence finding is not a successful predictive result.
+
 The user's priority is a simple explanatory principle with the potential for a
 substantial advance. Model size, number of experiments and new terminology are
 not substitutes. The next implementation must follow from a distinct prediction

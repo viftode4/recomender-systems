@@ -1,0 +1,107 @@
+{
+  "betas": [
+    0.1,
+    1.0
+  ],
+  "candidate_count": 39,
+  "command": [
+    "/Users/vliftode/personal/recomender-systems/final-project/exploratory/framing_search/predictive/run.py",
+    "--source",
+    "runs/research-v2/2026-EASE-1",
+    "--signature",
+    "runs/categorical-reconstruction-v1/2026/input-signature.json",
+    "--train",
+    "runs/categorical-reconstruction-v1/2026/train.tsv",
+    "--ratings",
+    "/Users/vliftode/personal/recommender-systems/assignment-3/RecBole_DSAIT4335/dataset/ml-100k/ml-100k.inter",
+    "--metadata",
+    "/Users/vliftode/personal/recommender-systems/assignment-3/RecBole_DSAIT4335/dataset/ml-100k/ml-100k.item",
+    "--run-dir",
+    "runs/framing-predictive-v1",
+    "--evidence",
+    "exploratory/framing_search/predictive/results-v1"
+  ],
+  "ease_lambdas": [
+    10.0,
+    30.0,
+    50.0,
+    100.0,
+    250.0,
+    300.0,
+    1000.0,
+    3000.0,
+    10000.0
+  ],
+  "fresh_population_test": false,
+  "input_shape_correction": "Explicit [PAD] source user removed before split/value parsing; real user and item order preserved.",
+  "inputs": {
+    "categorical_input_signature": {
+      "path": "runs/categorical-reconstruction-v1/2026/input-signature.json",
+      "sha256": "4ddc123234a7fda7da3ed2f436d3556cdaa9486f9d24df1dc2e6065844396b91"
+    },
+    "copied_train_pairs": {
+      "path": "runs/categorical-reconstruction-v1/2026/train.tsv",
+      "sha256": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec"
+    },
+    "original_source_manifest": {
+      "path": "runs/research-v2/2026-EASE-1/manifest.json",
+      "sha256": "1a5d389c0928fbe3aa11177efc7408a139a9447e88973de5068db156971b47d9"
+    },
+    "original_train_pairs": {
+      "path": "runs/research-v2/2026-EASE-1/train.tsv",
+      "sha256": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec"
+    },
+    "raw_interactions": {
+      "path": "/Users/vliftode/personal/recommender-systems/assignment-3/RecBole_DSAIT4335/dataset/ml-100k/ml-100k.inter",
+      "sha256": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff"
+    },
+    "source_catalog_ids": {
+      "path": "runs/research-v2/2026-EASE-1/ids.json",
+      "sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6"
+    },
+    "static_item_metadata": {
+      "path": "/Users/vliftode/personal/recommender-systems/assignment-3/RecBole_DSAIT4335/dataset/ml-100k/ml-100k.item",
+      "sha256": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532"
+    }
+  },
+  "nested_split_seed": 20260929,
+  "original_test_read": false,
+  "original_validation_read": false,
+  "pair_lambdas": [
+    50.0,
+    250.0,
+    1000.0
+  ],
+  "roles": [
+    "true_group",
+    "shuffle_0",
+    "shuffle_1",
+    "shuffle_2",
+    "bag",
+    "EASE"
+  ],
+  "runtime": {
+    "numerical_threads": 1,
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.17.1"
+  },
+  "schema_version": 1,
+  "source_sha256": {
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "exploratory/framing_search/predictive/PROTOCOL.md": "ea7609dd74b8401a69faf08ef5f345f13257d47200ba6f4012c3711dc5256bae",
+    "exploratory/framing_search/predictive/model.py": "94472908c4dda1ffad79e8df416eb7df26e27ff39423676afa4313b30b19d954",
+    "exploratory/framing_search/predictive/run.py": "0474a7135dba887cb8d254fac8e9c56265b1a6b8e5f77e8b6ec3219b154e6aa9",
+    "exploratory/framing_search/recording_audit/audit.py": "b767819d740abb87633f7ac30c8a4f86dd7e729edab9499a7acf400ac4928bfd",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc"
+  },
+  "split_counts": {
+    "assessment": 7645,
+    "catalog": 1682,
+    "development": 7645,
+    "fit": 65518,
+    "users": 943
+  },
+  "study": "nested_original_train_exploratory"
+}

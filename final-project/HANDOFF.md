@@ -1,16 +1,30 @@
 # Start here
 
-The implementation, three-split frozen test evaluation and seven-page review
-report are complete. The report contains a cover, one page for each required
-task and three research appendices. It remains a **review draft** because four
-member names and the group's actual contributions have not been supplied.
+The current deliverable is a [five-page review report](reports/framing-review-v1/report.pdf)
+and [Group 24 review archive](packages/framing-review-v1/24.zip). It contains a
+cover, one page for each required task, and a separately labelled exploratory
+grouping appendix. The original seven-page report remains in the archive as
+historical evidence. Four member names and the group's actual contributions
+remain deferred; individual peer feedback is still personal human work.
+
+The latest research test is complete: 39 declared fits, with true timestamp
+groups, three shuffled controls, ungrouped pairs, and a newly fitted EASE.
+Grouped nDCG@10 is 0.172555 versus EASE 0.172956, a -0.23% relative difference.
+Both grouping comparisons have paired descriptive intervals crossing zero.
+Observable genre coherence did not produce a measured ranking advantage in
+this model. This does not establish a breakthrough or rule out every other
+use of timestamps. See [the protocol and findings](exploratory/framing_search/predictive/README.md).
+The assessment is nested within previously used TRAIN data; it is explicitly
+exploratory and does not replace the original frozen test tables below.
 
 ## Read in this order
 
-1. [Held-out report](reports/final-review-v1/report.pdf) and
-   [review archive](packages/final-review-v1/24.zip).
-   The newer [research review bundle](packages/categorical-reconstruction-v1/24-review.zip)
-   preserves that report and adds a [measured categorical-reconstruction supplement](reports/categorical-reconstruction-v1/research-supplement.pdf).
+1. [Current report](reports/framing-review-v1/report.pdf) and
+   [current review archive](packages/framing-review-v1/24.zip).
+   The [assignment completion check](exploratory/framing_search/COMPLETION_CHECK.md)
+   maps the downloaded brief to the deliverables. The archive also preserves the
+   [original frozen report](reports/final-review-v1/report.pdf) and
+   [categorical-reconstruction supplement](reports/categorical-reconstruction-v1/research-supplement.pdf).
 2. [Primary paired comparisons](evidence/final-comparisons-v3/SUMMARY.md) and
    [custom models against strong references](evidence/final-field-comparisons-v1/RESULTS.md).
 3. [Research questions](RESEARCH.md), [categorical model](ADAPTIVE_RESEARCH.md),
