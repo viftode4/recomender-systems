@@ -5,6 +5,11 @@ and structural learning after the original final test was already opened.
 MovieLens100K development results here are exploratory. The original report,
 code freeze and review archive remain unchanged.
 
+- [Framing investigation](framing_search/README.md): examines what produced each
+  rating before selecting another model. The leading untested input is the
+  grouping of equal-timestamp submissions. The notes distinguish this hypothesis
+  from established Gaussian conditioning, interaction and choice models; a
+  TRAIN-only recording audit checks the premise without another ranking fit.
 - [Assignment requirements versus our choices](ASSIGNMENT_AND_RESEARCH.md):
   the actual brief leaves more protocol and model freedom than previously stated.
 - [Shared evidence interpreter](evidence_transfer/FINDINGS.md): a custom
