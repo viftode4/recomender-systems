@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "layout": {
+    "core": {
+      "pages": 4,
+      "main_task_pages": 3,
+      "appendix_pages": 0,
+      "font": "Times New Roman",
+      "font_size": 12,
+      "line_spacing": 1.15,
+      "page_bottoms_pt": [
+        103.89,
+        55.49,
+        115.79,
+        118.69
+      ],
+      "font_sha256": {
+        "regular": "f3b4ffff71c2a0c7227d37497683b2498fb2d0a4e8beae26f022e3ccfcaabfa3",
+        "bold": "50f5b1f27b7d34621090e437e8b1dd4510a22d2823fc876b3286bed327b64bbb"
+      }
+    },
+    "grouping": {
+      "pages": 1,
+      "font": "Times New Roman",
+      "font_size": 12,
+      "line_spacing": 1.15,
+      "bottom_pt": 250.89,
+      "font_sha256": {
+        "regular": "f3b4ffff71c2a0c7227d37497683b2498fb2d0a4e8beae26f022e3ccfcaabfa3",
+        "bold": "50f5b1f27b7d34621090e437e8b1dd4510a22d2823fc876b3286bed327b64bbb"
+      }
+    },
+    "merged_pages": 5
+  },
+  "discussion_words": {
+    "1": 78,
+    "2": 166,
+    "3": 137,
+    "grouping": 110
+  },
+  "source_report_sha256": "2e4ebcfd8290f2e4c16b8187f3cf65e43a27ade282ed9338ef8148c9ba4e74c9",
+  "replayed_report_sha256": "2e4ebcfd8290f2e4c16b8187f3cf65e43a27ade282ed9338ef8148c9ba4e74c9",
+  "dataset_access": false
+}

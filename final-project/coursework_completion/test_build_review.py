@@ -78,6 +78,13 @@ class ReviewPackagingTests(unittest.TestCase):
         self.assertIn("236 previously exposed", " ".join(result["sections"][0]["paragraphs"]))
         self.assertIn("constrained weights sum to one", " ".join(result["sections"][0]["paragraphs"]))
         self.assertLessEqual(len(result["sections"][0]["discussion"].split()), 200)
+        self.assertEqual(result["sections"][2]["tables"], original["sections"][2]["tables"])
+        policy_discussion = result["sections"][2]["discussion"]
+        self.assertIn("TRAIN-activity group, independent calibration selects exposure strength", policy_discussion)
+        self.assertIn("minimize the catalog-share gap", policy_discussion)
+        self.assertIn("nonnegative Bonferroni-bootstrap lower bound on mean nDCG minus 95%", policy_discussion)
+        self.assertIn("not a held-out guarantee", policy_discussion)
+        self.assertLessEqual(len(policy_discussion.split()), 200)
         if importlib.util.find_spec("matplotlib") is None:
             return
         import report
@@ -92,6 +99,7 @@ class ReviewPackagingTests(unittest.TestCase):
 
     def test_navigation_maps_to_archive_and_labels_unbundled_history(self):
         original = ("[current](reports/coursework-complete-v1/report.pdf) "
+                    "[completed](reports/coursework-complete-v2/report.pdf) "
                     "[old](reports/framing-review-v1/report.pdf#page=2) "
                     "[evidence](evidence/example/aggregates.json) "
                     "[external](https://example.org/a) "
@@ -101,11 +109,12 @@ class ReviewPackagingTests(unittest.TestCase):
         output, changes = builder.portable_document(original, "README.md", payload)
         text = output.decode()
         self.assertIn("[current](../report.pdf)", text)
+        self.assertIn("[completed](../report.pdf)", text)
         self.assertIn("[old](../archive/framing-review/report.pdf#page=2)", text)
         self.assertIn("[evidence](../evidence/example/aggregates.json)", text)
         self.assertIn("[external](https://example.org/a)", text)
         self.assertIn("missing (source-checkout reference:", text)
-        self.assertEqual(len(changes), 4)
+        self.assertEqual(len(changes), 5)
         payload["code/README.md"] = output
         self.assertEqual(builder.check_document_links(payload, ["code/README.md"])["unresolved_internal_links"], 0)
         self.assertNotEqual(original, output)
@@ -218,6 +227,38 @@ class ReviewPackagingTests(unittest.TestCase):
         self.assertEqual(copied["evidence/results.json"], b"aggregate")
         self.assertEqual(original["report.pdf"], b"prior pdf")
         self.assertNotIn("report.pdf", copied)
+
+    def test_quick_check_payload_uses_fixed_public_allowlist(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root/"operations").mkdir()
+            for name in ("operations/__init__.py", "operations/team_smoke_check.py", "requirements-smoke.txt"):
+                (root/name).write_text("# public fixture\n")
+            (root/"operations/private.json").write_text('{"private": true}')
+            payload = {}
+            snapshot = builder.operational_payload(payload, root)
+            self.assertEqual(set(snapshot), {"operations/__init__.py", "operations/team_smoke_check.py",
+                                             "requirements-smoke.txt"})
+            self.assertEqual(set(payload), {"code/"+name for name in snapshot})
+
+    def test_navigation_includes_current_team_docs_but_not_historical_archives(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            names = ("README.md", "HANDOFF.md", "PLAN.md", "REPRODUCE.md", "docs/COMPLETION.md",
+                     "coursework_completion/README.md", "coursework_completion/COVERAGE.md",
+                     "coursework_completion/TEAM_REVIEW.md", "docs/PROGRESS.md",
+                     "docs/team-meeting-2026-10-01/QUICKSTART.md")
+            for name in names:
+                (root/name).parent.mkdir(parents=True, exist_ok=True)
+                (root/name).write_text("# public navigation\n")
+            (root/"README.md").write_text("[progress](docs/PROGRESS.md) [done](docs/COMPLETION.md)")
+            (root/"docs/archive").mkdir()
+            (root/"docs/archive/private.md").write_text("excluded history\n")
+            payload = {}
+            _, documents, snapshot = builder.add_navigation(payload, root)
+            self.assertEqual(set(snapshot), set(names))
+            self.assertEqual(set(documents), {"code/"+name for name in names})
+            self.assertEqual(builder.check_document_links(payload, documents)["unresolved_internal_links"], 0)
 
     def test_unverified_base_and_unsafe_paths_are_rejected(self):
         with tempfile.TemporaryDirectory() as temporary:

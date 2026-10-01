@@ -45,9 +45,12 @@ def checked_path(root: Path, relative: str) -> Path:
 
 
 def check_artifacts(project: Path) -> dict:
-    if (project / "reports/coursework-complete-v1/report.pdf").is_file():
+    current_report = next((project / "reports" / version for version in
+                           ("coursework-complete-v2", "coursework-complete-v1")
+                           if (project / "reports" / version / "report.pdf").is_file()), None)
+    if current_report is not None:
         layout = "repository"
-        report_root = project / "reports/coursework-complete-v1"
+        report_root = current_report
         evidence_root = project / "coursework_completion/results-v1"
     elif project.name == "code" and (project.parent / "PACKAGE-MANIFEST.json").is_file():
         layout = "extracted_coursework_archive"

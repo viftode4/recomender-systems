@@ -6,15 +6,17 @@ Seats are proposed, not assigned or completed contributions.
 
 | Seat | Responsibility | First output |
 | --- | --- | --- |
-| 1 · Vlad suggested | Integration and evaluation protocol | Explain one complete path from training to final evaluation |
-| 2 · To agree | Individual recommenders | Check two models, their settings and reported behavior |
-| 3 · To agree | Hybrid methods | Map the seven lecture families and verify one selected setting |
-| 4 · To agree | Metrics and societal effects | Work one metric by hand and explain one reranking trade-off |
-| 5 · To agree | Report and reproduction | Run the small check and review report claims and clarity |
+| 1 · Vlad suggested | Integration and evaluation protocol | A data-partition diagram, linked audit findings and an integration checklist |
+| 2 · To agree | Deeper user-group analysis | A table showing which user groups gain or lose, with counts and limitations |
+| 3 · To agree | Hybrid failure explanations | Two traced success/failure examples and an explanation grounded in model scores |
+| 4 · To agree | Societal trade-off visualization | An accuracy/objective plot with the affected groups and exact evidence source |
+| 5 · To agree | Report and reproduction | A fresh-machine check receipt and a revised report section/caption |
 
 Everyone reads the report, owns their section's corrections, and reviews a
-partner's evidence. The next check-in and any optional research experiment are
-decisions for the group. Training is currently paused.
+partner's evidence. These follow-ups extend the implemented coursework core.
+The next check-in is a group decision. Conditional-evidence research resumed
+on 1 October at 12:23 UTC with six workers and monitoring; its final results
+remain pending. Feedback-revision models are design-only.
 
 The [assignment checklist](docs/team-meeting-2026-10-01/ASSIGNMENT_CHECKLIST.md)
 tracks remaining deliverables. Previous detailed planning is preserved in

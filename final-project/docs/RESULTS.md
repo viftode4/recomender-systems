@@ -2,7 +2,7 @@
 
 The existing implementation covers the assignment's main technical work.
 The team still needs to review the findings and agree the final explanation.
-The [five-page report](../reports/coursework-complete-v1/report.pdf) contains
+The [five-page report](../reports/coursework-complete-v2/report.pdf) contains
 the task tables; this page gives the few facts worth starting with.
 
 ## Ranking: the original frozen coursework evaluation
@@ -39,7 +39,8 @@ These are declared operational metrics, not proof of causal fairness.
 The later hybrid-family completion study uses previously exposed validation
 users. Its scores belong in a separate table. Custom-model and grouping
 experiments have not established a breakthrough. The conditional-evidence run
-is paused and incomplete; the newer feedback-revision ideas are design only.
+resumed on 1 October 2026 at 12:23 UTC and is still incomplete; the newer
+feedback-revision ideas are design only. No final research gain is established.
 
 Choose the next task from the [three proposals](PROPOSALS.md). Read the
 [research index](RESEARCH_INDEX.md) only when taking on an optional experiment.

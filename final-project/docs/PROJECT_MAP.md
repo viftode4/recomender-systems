@@ -19,7 +19,7 @@ That is different from predicting enjoyment. An unrated movie is not a known dis
 ```
 
 The pipeline is already implemented. Do not start by running every script or
-retraining every model. Begin with the [report](../reports/coursework-complete-v1/report.pdf),
+retraining every model. Begin with the [report](../reports/coursework-complete-v2/report.pdf),
 then trace one result to its evidence and code.
 
 ## Where the required work lives
@@ -65,7 +65,8 @@ Three overlapping data splits are not three independent datasets.
 
 The [research index](RESEARCH_INDEX.md) links implemented studies and their
 findings, including unsuccessful ideas. They add depth but do not establish a
-broad performance breakthrough. The conditional-evidence training run is paused.
+broad performance breakthrough. Conditional-evidence training resumed on
+1 October at 12:23 UTC; its selection and assessment are still incomplete.
 
 Two newer directions are **design only, not implemented or trained**:
 

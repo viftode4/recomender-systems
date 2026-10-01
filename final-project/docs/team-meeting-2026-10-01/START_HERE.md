@@ -6,7 +6,7 @@ For the team meeting on 1 October 2026. Code and report are review drafts.
 ## Three things to open
 
 1. [Three project proposals](../PROPOSALS.md): agree the main story and optional extension.
-2. [Five-page report](../../reports/coursework-complete-v1/report.pdf): the actual coursework output.
+2. [Five-page report](../../reports/coursework-complete-v2/report.pdf): the actual coursework output.
 3. [Five-person work proposal](TEAM_PLAN.md): choose a part and a first deliverable.
 
 ## The project in one line
@@ -27,11 +27,11 @@ local environment. It needs Python 3.11 and NumPy, not a dataset download or tra
 
 | Proposed seat | Own this area | Bring to the next check-in |
 | --- | --- | --- |
-| Vlad, if agreed | Integration and evaluation protocol | A clear diagram from training to final evaluation |
-| Teammate 2 | Individual recommenders | Two checked model/settings examples |
-| Teammate 3 | Hybrid methods | The family-to-code mapping and one checked setting |
-| Teammate 4 | Metrics and societal effects | A hand-worked metric and one explained trade-off |
-| Teammate 5 | Report and reproduction | A successful check or precise setup issue, plus report edits |
+| Vlad, if agreed | Integration and evaluation protocol | A partition diagram, audit findings and integration checklist |
+| Teammate 2 | Deeper user-group analysis | A group gain/loss table with counts and limitations |
+| Teammate 3 | Hybrid failure explanations | Two worked success/failure cases grounded in component scores |
+| Teammate 4 | Societal trade-off visualization | A labelled accuracy/objective plot and affected-group analysis |
+| Teammate 5 | Report and reproduction | A fresh-machine check receipt and reviewed report edits |
 
 These are proposed future responsibilities. Pick names and review partners in
 the meeting; each person owns their section's corrections and explanation.
@@ -49,5 +49,6 @@ earlier custom model; it is not evidence that the new research proposal works.
 - Passing the small check is not reproducing every training run.
 - The draft still needs genuine team review, contributor names and personal peer feedback.
 
-The experimental training remains paused. AI assistance was used in preparing
+Conditional-evidence training resumed on 1 October at 12:23 UTC with six workers
+and monitoring; final results remain pending. AI assistance was used in preparing
 the code and report. No submission or automatic message to teammates was made.

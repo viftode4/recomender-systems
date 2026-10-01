@@ -34,5 +34,6 @@ frozen study or tune models against its already observed test results. Start
 with the fixed-data split reproduction in [REPRODUCE.md](../REPRODUCE.md), then
 agree on a bounded training command and compute budget with the team.
 
-The paused conditional-evidence study is a separate research workflow. Reading
-these instructions or running the quick check does not restart it.
+The conditional-evidence study resumed on 1 October 2026 at 12:23 UTC as a
+separate research workflow. Reading these instructions or running the quick
+check does not start or alter that study.

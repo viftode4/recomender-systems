@@ -1,18 +1,28 @@
 {
   "status": "passed",
   "source": "Git index exported to an empty temporary directory",
+  "source_tree_before_receipt_update": "f05a9cc9a71141ec334696eed45df4602e8d2197",
   "checks": [
     {
       "command": "make check",
-      "exit_code": 0
+      "exit_code": 0,
+      "synthetic_tests": {
+        "errors": 0,
+        "failures": 0,
+        "numpy": "1.26.4",
+        "skipped": 0,
+        "tests": 45
+      }
     },
     {
       "command": "make handoff",
-      "exit_code": 0
+      "exit_code": 0,
+      "original_artifacts_preserved": 361,
+      "zip_crc_valid": true
     }
   ],
-  "navigation_documents_checked": 17,
+  "navigation_documents_checked": 16,
   "missing_local_navigation_links": [],
   "ignored_runtime_directories_required": false,
-  "limitations": "Uses already installed Python3.11, NumPy and Markdown; no network installation or training performed."
+  "limitations": "Uses already installed Python 3.11, NumPy and Markdown; no network installation or training by these checks."
 }

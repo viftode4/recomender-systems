@@ -48,7 +48,7 @@ its rating-prediction endpoint differs from the main recorded-interaction rankin
 we rerank recommendations, and which user groups lose accuracy?
 **Start:** trace one result through [societal.py](../societal.py) and the saved
 [societal audit](../evidence/final-societal-2026/societal-audit.json).
-Use the [report](../reports/coursework-complete-v1/report.pdf) to locate its context.
+Use the [report](../reports/coursework-complete-v2/report.pdf) to locate its context.
 
 **First deliverable:** one small trade-off table or plot with accuracy and one
 societal metric, plus the worst affected user group. State the metric direction,

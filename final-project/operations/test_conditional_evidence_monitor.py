@@ -56,6 +56,60 @@ class MonitorTests(unittest.TestCase):
         self.assertEqual(result['trajectories']['2026/raw-lr0']['state'], 'stale')
         self.assertEqual(result['trajectories']['2026/raw-lr1']['state'], 'active')
 
+    def test_recent_resume_excludes_stopped_time_from_checkpoint_stall_age(self):
+        self.checkpoint(modified=100)
+        self.write(self.root/'runs/study-progress.json', {
+            'stage': 'training', 'updated_utc': monitor.utc(9900)})
+        result = self.snapshot()
+        trajectory = result['trajectories']['2026/raw-lr0']
+        self.assertEqual(result['status'], 'healthy')
+        self.assertEqual(trajectory['state'], 'active')
+        self.assertEqual(trajectory['checkpoint_age_seconds'], 9900)
+        self.assertEqual(trajectory['active_checkpoint_idle_seconds'], 100)
+
+    def test_resume_does_not_hide_stall_after_threshold(self):
+        self.checkpoint(modified=100)
+        self.write(self.root/'runs/study-progress.json', {
+            'stage': 'training', 'updated_utc': monitor.utc(8000)})
+        result = self.snapshot()
+        trajectory = result['trajectories']['2026/raw-lr0']
+        self.assertEqual(result['status'], 'attention_required')
+        self.assertEqual(trajectory['state'], 'stale')
+        self.assertEqual(trajectory['active_checkpoint_idle_seconds'], 2000)
+
+    def test_checkpoint_written_after_resume_starts_its_own_stall_clock(self):
+        self.checkpoint(modified=9800)
+        self.write(self.root/'runs/study-progress.json', {
+            'stage': 'training', 'updated_utc': monitor.utc(8000)})
+        result = self.snapshot()
+        self.assertEqual(result['status'], 'healthy')
+        self.assertEqual(result['trajectories']['2026/raw-lr0']['active_checkpoint_idle_seconds'], 200)
+
+    def test_invalid_resume_timestamp_never_suppresses_checkpoint_stall(self):
+        self.checkpoint(modified=100)
+        for value in ('bad date', '1970-01-01T02:45:00', monitor.utc(11000), None, 9900):
+            with self.subTest(updated_utc=value):
+                self.write(self.root/'runs/study-progress.json', {
+                    'stage': 'training', 'updated_utc': value})
+                result = self.snapshot()
+                trajectory = result['trajectories']['2026/raw-lr0']
+                self.assertEqual(result['status'], 'attention_required')
+                self.assertEqual(trajectory['state'], 'stale')
+                self.assertEqual(trajectory['active_checkpoint_idle_seconds'], 9900)
+
+    def test_resume_timestamp_requires_live_workflow_lock_and_training_stage(self):
+        self.checkpoint(modified=100)
+        self.write(self.root/'runs/study-progress.json', {
+            'stage': 'training', 'updated_utc': monitor.utc(9900)})
+        with patch.object(monitor, 'lock_held', return_value=False):
+            stopped = self.snapshot()
+        self.assertEqual(stopped['status'], 'stopped')
+        self.assertEqual(stopped['trajectories']['2026/raw-lr0']['active_checkpoint_idle_seconds'], 9900)
+        self.write(self.root/'runs/study-progress.json', {
+            'stage': 'retrieval', 'updated_utc': monitor.utc(9900)})
+        retrieving = self.snapshot()
+        self.assertEqual(retrieving['trajectories']['2026/raw-lr0']['active_checkpoint_idle_seconds'], 9900)
+
     def test_completed_and_queued_extension_are_not_stale(self):
         self.checkpoint(modified=100)
         self.write(self.study/'2026/raw-lr0/result.json', {'completed_epoch': 300})

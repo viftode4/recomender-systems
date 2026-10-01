@@ -232,6 +232,13 @@ def build_main_content(original, completion):
     old_sentence = "It motivates the separately declared grouping study while keeping hidden target timestamps unavailable."
     new_sentence = "The separately declared grouping study kept target timestamps hidden and found no ranking advantage (appendix)."
     core["sections"][1]["discussion"] = core["sections"][1]["discussion"].replace(old_sentence, new_sentence)
+    old_policy_sentence = "The independent calibration target is not a held-out guarantee."
+    policy_description = (
+        "Per TRAIN-activity group, independent calibration selects exposure strength to minimize the catalog-share gap, "
+        "requiring a nonnegative Bonferroni-bootstrap lower bound on mean nDCG minus 95% of baseline nDCG. "
+        "This is not a held-out guarantee.")
+    core["sections"][2]["discussion"] = core["sections"][2]["discussion"].replace(
+        old_policy_sentence, policy_description)
     for table in core["sections"][1]["tables"]:
         if table["columns"] == ["Model", "Sparse", "Medium", "Dense", "Head", "Tail"]:
             # Separate user-activity columns from the item-popularity columns.
@@ -259,6 +266,7 @@ def resolve_packaged_target(source_document, destination, payload):
         return destination
     original = posixpath.normpath(posixpath.join(posixpath.dirname(source_document), target))
     mappings = (
+        ("reports/coursework-complete-v2/", ""),
         ("reports/coursework-complete-v1/", ""),
         ("reports/framing-review-v1/", "archive/framing-review/"),
         ("reports/final-review-v1/", "archive/original-coursework/"),
@@ -440,6 +448,15 @@ def reproduction_payload(payload, root=ROOT):
     return snapshots
 
 
+def operational_payload(payload, root=ROOT):
+    """Copy the small public quick-check entry point and its dependency list."""
+    names = ("operations/__init__.py", "operations/team_smoke_check.py", "requirements-smoke.txt")
+    snapshot = {name: read_safe(root, name) for name in names}
+    for name, raw in snapshot.items():
+        payload["code/"+name] = raw
+    return snapshot
+
+
 def initial_payload(base):
     payload = {}
     for name, raw in base.items():
@@ -453,6 +470,8 @@ def initial_payload(base):
 def add_navigation(payload, root=ROOT, sealed_sources=()):
     names = ["README.md", "HANDOFF.md", "PLAN.md", "REPRODUCE.md",
              STUDY+"/README.md", STUDY+"/COVERAGE.md", STUDY+"/TEAM_REVIEW.md"]
+    for directory in (root/"docs", root/"docs/team-meeting-2026-10-01"):
+        names.extend(str(path.relative_to(root)) for path in sorted(directory.glob("*.md")))
     names += [str(path.relative_to(root)) for path in (root/STUDY).rglob("*.md")
               if str(path.relative_to(root)) not in names and
               str(path.relative_to(root)) not in sealed_sources and
@@ -588,6 +607,7 @@ def build(args):
     included_sources = scientific_source_payload(payload, names | set(sources), sources)
     source_snapshot = {name: read_safe(ROOT, name) for name in included_sources}
     reproduction_snapshot = reproduction_payload(payload)
+    operational_snapshot = operational_payload(payload)
     for label, public in (("coursework-completion-v1", study["payload"]),
                            ("coursework-completion-audit-v1", study["audit_payload"])):
         for name, raw in public.items():
@@ -622,7 +642,7 @@ def build(args):
     payload["PACKAGE-MANIFEST.json"] = json_bytes(package)
     verification, logs = verify_extracted(payload, args.runtime_python.absolute(), Path(sys.executable).absolute())
     check_sources(sources)
-    for name, raw in {**source_snapshot, **reproduction_snapshot}.items():
+    for name, raw in {**source_snapshot, **reproduction_snapshot, **operational_snapshot}.items():
         if read_safe(ROOT, name) != raw:
             raise ValueError(f"Packaged source or reproduction receipt changed during verification: {name}")
     for name, raw in source_navigation.items():

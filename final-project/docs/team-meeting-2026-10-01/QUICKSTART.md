@@ -108,6 +108,7 @@ In the meeting pack, those same guides are `coursework/code/README.md` and
 `coursework/code/REPRODUCE.md`. Raw ratings and saved user predictions are not
 included. The report and public aggregate evidence are available without them.
 
-The separate conditional-evidence training study was stopped at the user's
-request. This quickstart does not resume it. Choose any next research experiment
+The separate conditional-evidence study resumed on 1 October at 12:23 UTC with
+six workers and monitoring; final results remain pending. This quickstart does
+not start or alter it. Choose any next research experiment
 after agreeing on the hypothesis, evaluation split, compute budget and owner.

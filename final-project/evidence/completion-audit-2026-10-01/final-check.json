@@ -1,0 +1,244 @@
+{
+  "checked_utc": "2026-10-01T12:32:08.273430+00:00",
+  "status": "technical_draft_complete",
+  "technical_subtasks_verified": 15,
+  "report": "reports/coursework-complete-v2/report.pdf",
+  "archive": "packages/coursework-complete-v2/24.zip",
+  "report_sha256": "2e4ebcfd8290f2e4c16b8187f3cf65e43a27ade282ed9338ef8148c9ba4e74c9",
+  "archive_sha256": "a93da12661bd5140cfa354bcde47b4175bcb55749634543f9850456919368cf0",
+  "report_pages": 5,
+  "font": "Times New Roman, embedded regular and bold",
+  "all_text_font_size_pt": 12,
+  "discussion_words": [
+    78,
+    166,
+    137
+  ],
+  "appendix_discussion_words": 110,
+  "scientific_tables_and_evidence_unchanged_from_v1": true,
+  "independent_report_value_checks": 142,
+  "independent_completion_numerical_checks": 43239,
+  "completion_numerical_maximum_error": 7.105427357601002e-15,
+  "current_package_artifacts_verified": 361,
+  "current_package_checks": [
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "coursework_completion",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-0.log"
+    },
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "exploratory/categorical_reconstruction",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-1.log"
+    },
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "exploratory/framing_search/predictive",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-2.log"
+    },
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "exploratory/framing_search/recording_audit",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-3.log"
+    },
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-4.log"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_report.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-5.log"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "coursework_completion",
+        "-p",
+        "test_build_review.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-6.log"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "coursework_completion/build_review.py",
+        "--render-packaged",
+        "..",
+        "--report-dir",
+        "../rerendered"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-7.log"
+    }
+  ],
+  "repository_smoke": {
+    "completion_assessment": "exploratory reused validation calibration cohort",
+    "completion_evidence_files_verified": 3,
+    "completion_fresh_holdout": false,
+    "completion_seeds": [
+      "2026",
+      "2027",
+      "2028"
+    ],
+    "elapsed_seconds": 0.148,
+    "project_layout": "repository",
+    "python": "3.11.15",
+    "raw_dataset_required": false,
+    "report_pages_recorded_in_manifest": 5,
+    "report_sha256": "2e4ebcfd8290f2e4c16b8187f3cf65e43a27ade282ed9338ef8148c9ba4e74c9",
+    "status": "passed",
+    "synthetic_tests": {
+      "errors": 0,
+      "failures": 0,
+      "numpy": "1.26.4",
+      "skipped": 0,
+      "tests": 45
+    },
+    "training_started": false
+  },
+  "extracted_archive_smoke": {
+    "completion_assessment": "exploratory reused validation calibration cohort",
+    "completion_evidence_files_verified": 3,
+    "completion_fresh_holdout": false,
+    "completion_seeds": [
+      "2026",
+      "2027",
+      "2028"
+    ],
+    "elapsed_seconds": 0.163,
+    "project_layout": "extracted_coursework_archive",
+    "python": "3.11.15",
+    "raw_dataset_required": false,
+    "report_pages_recorded_in_manifest": 5,
+    "report_sha256": "2e4ebcfd8290f2e4c16b8187f3cf65e43a27ade282ed9338ef8148c9ba4e74c9",
+    "status": "passed",
+    "synthetic_tests": {
+      "errors": 0,
+      "failures": 0,
+      "numpy": "1.26.4",
+      "skipped": 0,
+      "tests": 45
+    },
+    "training_started": false
+  },
+  "monitor_regression_tests": 13,
+  "active_documents_checked": 16,
+  "broken_document_paths": [],
+  "research_snapshot": {
+    "checked_utc": "2026-10-01T12:32:08.261208+00:00",
+    "stage": "training",
+    "status": "healthy",
+    "workflow_lock_held": true,
+    "active_trajectories": {
+      "2026/raw-lr0": {
+        "epoch": 276,
+        "checkpoint_age_seconds": 18.0
+      },
+      "2026/raw-lr1": {
+        "epoch": 276,
+        "checkpoint_age_seconds": 19.0
+      },
+      "2026/scrambled-lr0": {
+        "epoch": 139,
+        "checkpoint_age_seconds": 62.5
+      },
+      "2026/scrambled-lr1": {
+        "epoch": 138,
+        "checkpoint_age_seconds": 65.2
+      },
+      "2027/raw-lr0": {
+        "epoch": 230,
+        "checkpoint_age_seconds": 19.3
+      },
+      "2027/raw-lr1": {
+        "epoch": 229,
+        "checkpoint_age_seconds": 17.8
+      }
+    },
+    "complete_trajectories": 2,
+    "queued_trajectories": 10,
+    "source_files_changed": false,
+    "final_research_results_available": false
+  },
+  "submitted": false,
+  "remaining_human_inputs": [
+    "four remaining names and actual contributions",
+    "team review and agreement",
+    "individual peer feedback",
+    "course submission"
+  ],
+  "limitations": [
+    "Local installed environments; no fresh network installation or full cross-platform certification",
+    "Historical NGCF numerical differences remain documented",
+    "Five PDF-dependent general-suite tests skipped in training environment; separate renderer suites pass and PDF regenerates byte-for-byte",
+    "Research continues separately; not a completed breakthrough or guaranteed grade"
+  ]
+}

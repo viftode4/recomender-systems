@@ -1,10 +1,11 @@
 {
   "status": "passed",
-  "archive_sha256": "558f9ae80c1d957c33f862d2e15564c6c8890f00bd1eb528abd7310dfce599f1",
-  "archive_bytes": 5372026,
-  "new_artifact_hashes_checked": 378,
-  "original_artifacts_preserved": 346,
-  "html_pages_checked": 15,
+  "checked_utc": "2026-10-01T12:33:22.135252+00:00",
+  "archive_sha256": "bdaab64b454e10842300a7467b09d33a96d59938054361550a652525376247d1",
+  "archive_bytes": 5396981,
+  "new_artifact_hashes_checked": 395,
+  "original_artifacts_preserved": 361,
+  "html_pages_checked": 16,
   "broken_html_links_or_fragments": 0,
   "private_runtime_artifacts_included": [],
   "smoke": {
@@ -16,12 +17,12 @@
       "2027",
       "2028"
     ],
-    "elapsed_seconds": 0.154,
+    "elapsed_seconds": 0.163,
     "project_layout": "extracted_coursework_archive",
     "python": "3.11.15",
     "raw_dataset_required": false,
     "report_pages_recorded_in_manifest": 5,
-    "report_sha256": "343cfc595db940d7289ff0ea5a11b85f8ab1021de7a14ed41d763e722515c2ee",
+    "report_sha256": "2e4ebcfd8290f2e4c16b8187f3cf65e43a27ade282ed9338ef8148c9ba4e74c9",
     "status": "passed",
     "synthetic_tests": {
       "errors": 0,
@@ -33,8 +34,9 @@
     "training_started": false
   },
   "frozen_training_sources_unchanged": 21,
-  "training_stage": "interrupted",
-  "training_lock_held": false,
-  "training_started": false,
-  "limits": "Existing local Python and NumPy; no clean dependency installation, full retraining, or browser visual render verified."
+  "training_stage": "training",
+  "training_lock_held": true,
+  "training_status": "healthy",
+  "training_started_by_package_builder": false,
+  "limits": "Existing local Python and NumPy; no clean dependency installation or full model retraining claimed. Research was resumed separately at user request."
 }

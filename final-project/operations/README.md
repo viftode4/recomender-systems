@@ -24,7 +24,12 @@ selection, checkpoints, or the experimental protocol.
 It checks the workflow lock, source hashes, log errors, finite losses and each
 active trajectory's checkpoint age. A checkpoint is flagged after the greater of
 30 minutes or six times its recent epoch plus validation duration. Completed and
-queued runs are excluded. The monitor records warnings; it never kills or
+queued runs are excluded. After a resume, the stall timer begins at the later of
+the last checkpoint and the current training stage's start time. That start time
+is accepted only while the workflow lock is held and the progress timestamp is
+valid, timezone-aware, and not in the future. The full checkpoint age remains
+visible separately, so time spent intentionally stopped is not called a stall.
+The monitor records warnings; it never kills or
 restarts a worker based on age alone. Retrieval label construction lacks a
 per-query heartbeat, so its duration is displayed without a false stall claim.
 
@@ -44,9 +49,9 @@ runs/environment-check/.venv/bin/python -u -m operations.conditional_evidence_mo
 ```
 
 Add `--once` for a single snapshot when another monitor is not already running.
-The monitor's own lock prevents duplicates. Eight synthetic tests cover healthy,
+The monitor's own lock prevents duplicates. Thirteen synthetic tests cover healthy,
 stale, queued, extended, failed-integrity and completed states, partial log lines,
-non-finite values and stopped processes:
+non-finite values, stopped processes, resumed checkpoints, and invalid resume timestamps:
 
 ```sh
 runs/environment-check/.venv/bin/python -m unittest operations.test_conditional_evidence_monitor -v

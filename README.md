@@ -29,12 +29,15 @@ Use the [code map](final-project/docs/PROJECT_MAP.md) to find your part,
 **Progress as of 1 October 2026:** the coursework implementation, saved results,
 five-page report draft and 45-test starter check are complete. Team review,
 contributor details, final report edits and submission remain open. See the
+[completion checklist](final-project/docs/COMPLETION.md),
 [current handoff](final-project/HANDOFF.md) for artifact status and the
 [work plan](final-project/PLAN.md) for proposed next tasks.
 
 The existing report is a draft prepared with AI assistance. Everyone should
 understand, verify and improve their own part. Contributor details and submission
 remain open; optional research is separate from the required coursework.
-The experimental training is stopped; feedback-revision models are designs only.
+Conditional-evidence research resumed on 1 October at 12:23 UTC with six workers
+and monitoring; it is in progress, with no final result yet. Feedback-revision
+models remain designs only. See the [research status](final-project/docs/RESEARCH_INDEX.md).
 
 `assignment1/` contains separate individual coursework. Leave it outside group-project changes.

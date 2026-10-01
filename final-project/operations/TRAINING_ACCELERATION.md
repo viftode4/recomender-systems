@@ -1,10 +1,11 @@
 # Conditional-evidence training acceleration
 
-Prepared 29 September 2026. The original experiment's scientific source files,
-model, data, optimizer, episode schedule, candidate chunks and evaluation rules
-are unchanged. Activation requires restarting the workflow from its durable
-checkpoints. The preparation session's sandbox cannot signal the existing worker
-parent; it has not activated this change in the running study.
+Activated on 1 October 2026 at 12:23 UTC after the user requested resumption.
+The study continued from its durable checkpoints with six workers; subsequent
+completed epochs and new checkpoints were observed. The original experiment's
+scientific source files, model, data, optimizer, episode schedule, candidate
+chunks and evaluation rules are unchanged. This is a dated execution record;
+the local progress and monitor files show current process state.
 
 ## What changes
 
@@ -87,7 +88,7 @@ The environment reports 16 logical CPUs, MPS compiled in but unavailable, and
 CUDA unavailable. No GPU speedup has been benchmarked. This change retains the
 original CPU backend, one numerical thread per worker and six-worker schedule.
 
-## Activate from a personal terminal
+## Resume from a personal terminal
 
 The launcher preflights the original inputs, source hashes, runtime and tested
 accelerator before any interruption. It verifies the recorded workflow command,
@@ -100,12 +101,13 @@ From the project directory:
 
 ```sh
 cd /Users/vliftode/personal/recomender-systems/final-project
-runs/environment-check/.venv/bin/python -u -m operations.accelerated_conditional_evidence --takeover --background --resume --workers 6
+runs/environment-check/.venv/bin/python -u -m operations.accelerated_conditional_evidence --background --resume --workers 6
 ```
 
-This command has been prepared and tested but was not activated from the sandbox.
-The existing study continues at its original speed until it is run successfully.
-Check the returned startup status and `runs/conditional-evidence-v1.log`.
+Run this only after the study has stopped; the study lock prevents duplicate
+workers. `--takeover` is only for replacing the original, non-accelerated workflow
+whose identity matches its recorded launch. Check the returned startup status
+and `runs/conditional-evidence-v1.log`.
 `runs/conditional-evidence-v1-acceleration-active.json` records installation;
 `runs/conditional-evidence-v1-acceleration-launch.json` records the observed
 background startup status. A process merely starting is not proof of training.

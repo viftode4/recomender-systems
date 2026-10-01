@@ -1,0 +1,36 @@
+test_allowed_aggregate_filename_cannot_hide_individual_ids (test_report.PackageTests) ... ok
+test_draft_tampering_group_and_symlink_rejections (test_report.PackageTests) ... ok
+test_explicit_whitelist_hashes_and_determinism (test_report.PackageTests) ... ok
+test_matching_report_sources_required (test_report.PackageTests) ... ok
+test_optional_demo_is_synthetic_source_bound_and_copies_only_four_files (test_report.PackageTests) ... ok
+test_supplemental_source_protocol_hash_and_aggregate_whitelist (test_report.PackageTests) ... ok
+test_adaptive_appendix_keeps_main_results_and_rejects_wrong_endpoint_or_records (test_report.ReportTests) ... ok
+test_complete_final_comparison_report_fits_seven_pages (test_report.ReportTests) ... /Users/vliftode/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/Users/vliftode/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/Users/vliftode/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/Users/vliftode/Library/Python/3.9/lib/python/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+ok
+test_convergence_is_separate_and_cannot_replace_original_joint_comparison (test_report.ReportTests) ... ok
+test_default_evidence_is_described_as_development (test_report.ReportTests) ... ok
+test_discussion_limit_and_task_coverage (test_report.ReportTests) ... ok
+test_exception_findings_are_separate_and_preserve_negative_result (test_report.ReportTests) ... ok
+test_final_field_comparisons_match_frozen_roles_and_keep_liked_endpoint_separate (test_report.ReportTests) ... ok
+test_final_field_readers_verify_seals_without_reading_labels_and_keep_stage_explicit (test_report.ReportTests) ... ok
+test_final_reader_checks_freeze_hash_and_removes_individual_metrics (test_report.ReportTests) ... ok
+test_joint_objective_readouts_remain_distinct_and_combine_only_matching_seeds (test_report.ReportTests) ... ok
+test_model_table_uses_source_types_and_actual_cohort_counts (test_report.ReportTests) ... ok
+test_multi_primary_final_main_pages_fit_at_required_font (test_report.ReportTests) ... ok
+test_multi_primary_final_preserves_all_manifests_and_rejects_missing_or_swapped_roles (test_report.ReportTests) ... ok
+test_negative_appendix_reports_primary_and_secondary_without_replacing_main (test_report.ReportTests) ... ok
+test_page_overflow_is_rejected_without_font_shrink (test_report.ReportTests) ... ok
+test_pdf_four_pages_embeds_tnr_and_is_deterministic (test_report.ReportTests) ... ok
+test_supplemental_pdf_preserves_three_task_pages_and_separate_page_limits (test_report.ReportTests) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 4.295s
+
+OK

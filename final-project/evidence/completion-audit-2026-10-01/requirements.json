@@ -1,0 +1,274 @@
+{
+  "archive": {
+    "entries": 347,
+    "hash_mismatches": [],
+    "manifested_artifacts": 346,
+    "path": "packages/coursework-complete-v1/24.zip",
+    "report_matches_current_pdf": true,
+    "sha256": "799819d24950dde22c72293f7ddae5a5d2c6ab94ff3949f96a13d3880dfd802e",
+    "zip_crc_valid": true
+  },
+  "assignment_pdf": {
+    "pages": 19,
+    "path": "reference/Project-RecSys.pdf",
+    "sha256": "bb56a889d5af915d85027f3f7e5cb3338a41c11100ded8ae19aa18ff76a02c93"
+  },
+  "audited_at_utc": "2026-10-01T12:28:42.158615+00:00",
+  "clarification": {
+    "description": "Defines per TRAIN-activity-group exposure strength selection minimizing catalog-share gap under adjusted bootstrap 95-percent baseline nDCG retention; explicitly no held-out guarantee",
+    "file": "coursework_completion/build_review.py",
+    "scientific_tables_preserved": true,
+    "sealed_research_sources_edited": false,
+    "status": "generator_ready_not_rebuilt"
+  },
+  "generator_sha256": "d8a549ef3ac715f8b49de1fb40832872a124c64e4c599ad3928d7b7cc674b147",
+  "generator_test_sha256": "ab6a0d95245f63b744d782bb89b578a1bc78f77da3ba56365a32d472773c1298",
+  "limitations": [
+    "No formal bonus task in brief",
+    "No fresh training or numerical replay in this audit",
+    "Clean cross-platform installation not certified",
+    "Existing NGCF reproduction discrepancies remain disclosed",
+    "No submission performed"
+  ],
+  "remaining_human_inputs": [
+    "four contributor names",
+    "each student individual honest peer-evaluation workbook",
+    "final group review",
+    "approved external submission"
+  ],
+  "report": {
+    "appendix_discussion_words": 110,
+    "discussion_words": {
+      "1": 78,
+      "2": 166,
+      "3": 113
+    },
+    "page_count": 5,
+    "page_structure": [
+      "group cover",
+      "Task 1",
+      "Task 2",
+      "Task 3",
+      "grouping appendix"
+    ],
+    "pages": [
+      {
+        "adjacent_distinct_text_baselines_13_8pt": 17,
+        "font_sizes_pt": [
+          12.0
+        ],
+        "fonts": [
+          "/CNAJXZ+TimesNewRomanPS-BoldMT",
+          "/CNAJXZ+TimesNewRomanPSMT"
+        ],
+        "page": 1
+      },
+      {
+        "adjacent_distinct_text_baselines_13_8pt": 12,
+        "font_sizes_pt": [
+          12.0
+        ],
+        "fonts": [
+          "/CNAJXZ+TimesNewRomanPS-BoldMT",
+          "/CNAJXZ+TimesNewRomanPSMT"
+        ],
+        "page": 2
+      },
+      {
+        "adjacent_distinct_text_baselines_13_8pt": 14,
+        "font_sizes_pt": [
+          12.0
+        ],
+        "fonts": [
+          "/CNAJXZ+TimesNewRomanPS-BoldMT",
+          "/CNAJXZ+TimesNewRomanPSMT"
+        ],
+        "page": 3
+      },
+      {
+        "adjacent_distinct_text_baselines_13_8pt": 5,
+        "font_sizes_pt": [
+          12.0
+        ],
+        "fonts": [
+          "/CNAJXZ+TimesNewRomanPS-BoldMT",
+          "/CNAJXZ+TimesNewRomanPSMT"
+        ],
+        "page": 4
+      },
+      {
+        "adjacent_distinct_text_baselines_13_8pt": 13,
+        "font_sizes_pt": [
+          12.0
+        ],
+        "fonts": [
+          "/CNAJXZ+TimesNewRomanPS-BoldMT",
+          "/CNAJXZ+TimesNewRomanPSMT"
+        ],
+        "page": 5
+      }
+    ],
+    "path": "reports/coursework-complete-v1/report.pdf",
+    "sha256": "343cfc595db940d7289ff0ea5a11b85f8ab1021de7a14ed41d763e722515c2ee",
+    "typography": "PDF text spans all 12 pt; embedded Times New Roman regular and bold; 13.8 pt multiline baselines observed; renderer fixes 1.15 spacing"
+  },
+  "requirements": [
+    {
+      "evidence": [
+        "run.py:27",
+        "run.py:89",
+        "run.py:111",
+        "reports/coursework-complete-v1/report.md:41"
+      ],
+      "requirement": "Build individual models",
+      "status": "implemented_and_reported",
+      "task_id": "1.1"
+    },
+    {
+      "evidence": [
+        "experiment.py:28",
+        "evidence/research-v3/individual-models.json"
+      ],
+      "requirement": "Tune individual models",
+      "status": "implemented_and_reported",
+      "task_id": "1.2"
+    },
+    {
+      "evidence": [
+        "study.py:116",
+        "study.py:128",
+        "reports/coursework-complete-v1/report.md:86"
+      ],
+      "requirement": "Learn weighted-hybrid coefficients by regression",
+      "status": "implemented_and_reported",
+      "task_id": "1.3"
+    },
+    {
+      "evidence": [
+        "coursework_completion/models.py:27",
+        "coursework_completion/models.py:103",
+        "coursework_completion/models.py:122",
+        "study.py:154",
+        "coursework_completion/COVERAGE.md"
+      ],
+      "requirement": "Implement other class hybrid families",
+      "status": "implemented_and_reported",
+      "task_id": "1.4"
+    },
+    {
+      "evidence": [
+        "coursework_completion/PROTOCOL.md",
+        "coursework_completion/results-v1/aggregates.json",
+        "study.py"
+      ],
+      "requirement": "Tune hybrid models",
+      "status": "implemented_and_reported",
+      "task_id": "1.5"
+    },
+    {
+      "evidence": [
+        "metrics.py:5",
+        "metrics.py:26",
+        "societal.py"
+      ],
+      "requirement": "Independently implement accuracy and beyond-accuracy metrics",
+      "status": "implemented_and_reported",
+      "task_id": "2.1"
+    },
+    {
+      "evidence": [
+        "reports/coursework-complete-v1/report.md:53",
+        "evidence/research-v3/aggregates.json"
+      ],
+      "requirement": "Compare models with random and popularity baselines",
+      "status": "implemented_and_reported",
+      "task_id": "2.2"
+    },
+    {
+      "evidence": [
+        "reports/coursework-complete-v1/report.md:86",
+        "reports/coursework-complete-v1/report.md:114"
+      ],
+      "requirement": "Analyze regression coefficients",
+      "status": "implemented_and_reported",
+      "task_id": "2.3"
+    },
+    {
+      "evidence": [
+        "reports/coursework-complete-v1/report.md:78",
+        "reports/coursework-complete-v1/report.md:114",
+        "exploratory/framing_search/predictive/results-v1"
+      ],
+      "requirement": "Perform insightful model analysis",
+      "status": "implemented_and_reported",
+      "task_id": "2.4"
+    },
+    {
+      "evidence": [
+        "reports/coursework-complete-v1/report.md:97",
+        "reports/coursework-complete-v1/report.md:105",
+        "societal.py:156"
+      ],
+      "requirement": "Analyze user/item groups on accuracy and beyond-accuracy",
+      "status": "implemented_and_reported",
+      "task_id": "2.5"
+    },
+    {
+      "evidence": [
+        "reports/coursework-complete-v1/report.md:114",
+        "reports/coursework-complete-v1/report.md:157"
+      ],
+      "requirement": "Discuss insights and possible improved hybrids",
+      "status": "implemented_and_reported",
+      "task_id": "2.6"
+    },
+    {
+      "evidence": [
+        "study.py:154",
+        "study.py:489",
+        "societal.py:350",
+        "societal.py:457"
+      ],
+      "requirement": "Implement diversity, calibration and user/item fairness rerankers",
+      "status": "implemented_and_reported",
+      "task_id": "3.1"
+    },
+    {
+      "evidence": [
+        "reports/coursework-complete-v1/report.md:126",
+        "evidence/research-v3/aggregates.json"
+      ],
+      "requirement": "Evaluate accuracy and beyond-accuracy trade-offs",
+      "status": "implemented_and_reported",
+      "task_id": "3.2"
+    },
+    {
+      "evidence": [
+        "reports/coursework-complete-v1/report.md:136",
+        "study.py"
+      ],
+      "requirement": "Compare reranking before and after hybridization",
+      "status": "implemented_and_reported",
+      "task_id": "3.3"
+    },
+    {
+      "evidence": [
+        "reports/coursework-complete-v1/report.md:145",
+        "reports/coursework-complete-v1/report.md:153"
+      ],
+      "requirement": "Analyze reranking impacts on user/item groups",
+      "status": "implemented_and_reported",
+      "task_id": "3.4"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Independent direct brief, code, report and archive audit; pre-v2-build artifact snapshot",
+  "technical_status": "all_15_numbered_subtasks_implemented_and_reported",
+  "tests": {
+    "command": "python3 -m unittest coursework_completion.test_build_review -v",
+    "failed": 0,
+    "includes_temporary_pdf_layout_render": true,
+    "passed": 12,
+    "tests": 12
+  }
+}

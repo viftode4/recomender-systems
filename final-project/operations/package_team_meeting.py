@@ -67,7 +67,7 @@ class Links(HTMLParser):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    original = ROOT / 'packages/coursework-complete-v1/24.zip'
+    original = ROOT / 'packages/coursework-complete-v2/24.zip'
     receipt = json.loads(original.with_name('verification.json').read_text())
     original_hash = sha(original.read_bytes())
     if original_hash != receipt['archive_sha256']:
@@ -98,7 +98,7 @@ def main():
                 elif name.startswith('evidence/'):
                     mapping[(ROOT / name).resolve()] = target
             for name in ('report.pdf', 'report.md', 'main-report.pdf', 'grouping-supplement.pdf', 'REPORT-MANIFEST.json'):
-                mapping[(ROOT / 'reports/coursework-complete-v1' / name).resolve()] = base / 'coursework' / name
+                mapping[(ROOT / 'reports/coursework-complete-v2' / name).resolve()] = base / 'coursework' / name
             for source, packaged in [('coursework_completion/results-v1', 'coursework-completion-v1'),
                                      ('coursework_completion/audit-v1', 'coursework-completion-audit-v1')]:
                 target = base / 'coursework/evidence' / packaged
@@ -108,7 +108,7 @@ def main():
 
         copies = [(path, base / 'meeting' / path.name) for path in sorted(DOCS.glob('*.md'))]
         copies += [(ROOT / 'docs' / name, base / 'meeting' / name)
-                   for name in ('PROJECT_MAP.md', 'SETUP.md', 'RESEARCH_INDEX.md', 'PROPOSALS.md', 'RESULTS.md')]
+                   for name in ('PROJECT_MAP.md', 'SETUP.md', 'RESEARCH_INDEX.md', 'PROPOSALS.md', 'RESULTS.md', 'COMPLETION.md')]
         copies += [(path, base / 'research' / path.name) for path in sorted((ROOT / 'docs/plans').glob('*.md'))]
         for source, destination in copies:
             mapping[source.resolve()] = destination
@@ -151,14 +151,14 @@ def main():
             quick = Path(os.path.relpath(base / 'meeting/QUICKSTART.html', dest.parent)).as_posix()
             report = Path(os.path.relpath(base / 'coursework/report.pdf', dest.parent)).as_posix()
             body = markdown.markdown(content, extensions=['tables', 'fenced_code', 'toc'])
-            dest.write_text(f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)}</title><style>{CSS}</style><nav aria-label="Project navigation"><a href="{start}">Start here</a><a href="{plan}">Five-person plan</a><a href="{quick}">Run the check</a><a href="{report}">Report draft</a></nav><main>{body}</main><footer>Group 24 · 1 October 2026 · review draft · training remains paused</footer></html>')
+            dest.write_text(f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)}</title><style>{CSS}</style><nav aria-label="Project navigation"><a href="{start}">Start here</a><a href="{plan}">Five-person plan</a><a href="{quick}">Run the check</a><a href="{report}">Report draft</a></nav><main>{body}</main><footer>Group 24 · 1 October 2026 · review draft · dated research status in the research index</footer></html>')
 
         for source, destination in copies:
             destination.parent.mkdir(parents=True, exist_ok=True)
             destination.write_text(rewrite(source.read_text(), source, destination))
             render(source, destination.with_suffix('.html'))
         render(DOCS / 'START_HERE.md', base / 'START_HERE.html')
-        (base / 'README.md').write_text('# Group 24 team starting point\n\nOpen **START_HERE.html** in a browser. Begin with the brief, report and five-person plan.\n\n- `meeting/`: concise notes and runnable quickstart.\n- `coursework/`: unchanged, verified code/report/evidence snapshot. Start in `coursework/code/`.\n- `demo/`: offline fictional-profile demonstration.\n- `research/`: optional design documents, not implementations.\n- `tools/`: fast synthetic smoke check.\n- `verification/`: previous archive check receipt.\n\nThe new HTML navigation is the team entry point; older snapshot navigation is retained for provenance.\nNo raw ratings, personal recommendation histories, environments or checkpoints are included.\nTraining remains paused. Review draft; not submitted.\n')
+        (base / 'README.md').write_text('# Group 24 team starting point\n\nOpen **START_HERE.html** in a browser. Begin with the brief, report and five-person plan.\n\n- `meeting/`: concise notes and runnable quickstart.\n- `coursework/`: unchanged, verified code/report/evidence snapshot. Start in `coursework/code/`.\n- `demo/`: offline fictional-profile demonstration.\n- `research/`: optional design documents, not implementations.\n- `tools/`: fast synthetic smoke check.\n- `verification/`: original archive check receipt.\n\nThe HTML navigation is the team entry point; older snapshot navigation is retained for provenance.\nNo raw ratings, personal recommendation histories, environments or checkpoints are included.\nSee `meeting/RESEARCH_INDEX.md` for dated research progress. Building this pack starts no training. Review draft; not submitted.\n')
 
         # Every original snapshot byte must survive the packaging unchanged.
         for name, digest in expected.items():

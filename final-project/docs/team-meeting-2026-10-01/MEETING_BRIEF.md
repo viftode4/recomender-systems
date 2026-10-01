@@ -25,7 +25,7 @@ ownership is future work, not a claim that teammates wrote or reviewed it alread
 | Report | Five-page draft: cover, one page for each task, grouping appendix | Review explanations, choose emphasis, supply actual contributor details |
 | Reproduction | Pinned setup, public aggregate evidence and packaged tests | Run the short check on another member’s machine; record any setup problem |
 | Demonstration | Offline interactive example: change one fictional rating and inspect six forecasts | Use it to explain evidence-sensitive prediction, not as a performance result |
-| Research | Custom models, ablations, negative findings and a paused conditional-evidence study | Choose whether one bounded follow-up is worth doing after the core review |
+| Research | Custom models, ablations, negative findings and a resumed conditional-evidence study | Review its final assessment when ready; agree any separate follow-up |
 
 ## Three findings worth discussing
 
@@ -42,12 +42,12 @@ In the report’s fixed-strength comparison, diversity reranking raises genre
 diversity from about **0.798 to 0.895**, while nDCG@10 falls from about
 **0.333 to 0.307**. The useful discussion is what objective we chose, who benefits,
 and what accuracy cost we measured. These operational metrics do not prove
-causal fairness. See [Task 3 in the report](../../reports/coursework-complete-v1/report.pdf).
+causal fairness. See [Task 3 in the report](../../reports/coursework-complete-v2/report.pdf).
 
 **3. A better idea must earn its place through a test.**
 The custom models have not established a breakthrough. The conditional-evidence
-study is **paused and incomplete**; it has eight saved latest checkpoints and
-has not completed its selection/assessment pipeline. The newer revisable-state
+study **resumed on 1 October at 12:23 UTC** with six workers and monitoring.
+It remains incomplete, with selection/assessment results pending. The newer revisable-state
 and useful-evidence models are **design documents only**. The interactive demo
 illustrates an earlier model’s response on a fictional profile; it does not
 validate those newer designs.

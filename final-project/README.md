@@ -2,7 +2,8 @@
 
 A working DSAIT4335 coursework base: individual recommenders and hybrids,
 independent evaluation, and societal reranking. The code and five-page report
-are ready for team review. Contributor details and final submission remain open.
+are ready for team review. Contributor details, individual peer feedback and final
+submission remain open. See the [completion checklist](docs/COMPLETION.md).
 
 ## Start here
 
@@ -11,7 +12,7 @@ are ready for team review. Contributor details and final submission remain open.
 2. **Prepare for today's meeting:** [meeting brief](docs/team-meeting-2026-10-01/MEETING_BRIEF.md)
    and [five-person work proposal](docs/team-meeting-2026-10-01/TEAM_PLAN.md).
 3. **Run something small:** [quickstart](docs/team-meeting-2026-10-01/QUICKSTART.md).
-4. **Read the output:** [report draft](reports/coursework-complete-v1/report.pdf)
+4. **Read the output:** [report draft](reports/coursework-complete-v2/report.pdf)
    and [assignment checklist](docs/team-meeting-2026-10-01/ASSIGNMENT_CHECKLIST.md).
 
 The quick check runs 45 existing synthetic tests and checks saved evidence.
@@ -39,15 +40,17 @@ assignment to the implementation and evidence.
 ## Research and current state
 
 The custom-model experiments are collected in the [research index](docs/RESEARCH_INDEX.md).
-Some are complete with negative results; the conditional-evidence training is
-paused. The newer feedback-revision models are design documents only.
+Some are complete with negative results. Conditional-evidence training resumed
+on 1 October 2026 at 12:23 UTC with six workers and monitoring; the study remains
+in progress, with no final result yet. The newer feedback-revision models are
+design documents only.
 
 The main report separates original frozen evaluation from later exploratory
 studies. The work does not establish a breakthrough or a universal best model.
 AI assistance was used; each member should understand and verify their part.
 
 This is a review draft, not a submitted assignment. The verified code/report
-snapshot is tracked at `packages/coursework-complete-v1/24.zip`. To rebuild the
+snapshot is tracked at `packages/coursework-complete-v2/24.zip`. To rebuild the
 meeting pack, install `requirements-handoff.txt` in the same environment and run
 `make handoff` from the repository root. Generated previews and meeting ZIPs
 stay outside Git. The [contribution guide](../CONTRIBUTING.md) explains the team workflow.

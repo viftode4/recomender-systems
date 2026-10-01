@@ -1,0 +1,10 @@
+test_descriptive_counts_and_denominators (test_audit.RecordingAuditTests.test_descriptive_counts_and_denominators) ... ok
+test_hash_gate_precedes_raw_value_access (test_audit.RecordingAuditTests.test_hash_gate_precedes_raw_value_access) ... ok
+test_literal_pairs_match_matrix_for_observed_and_shuffles (test_audit.RecordingAuditTests.test_literal_pairs_match_matrix_for_observed_and_shuffles) ... ok
+test_missing_duplicate_and_invalid_train_records_rejected (test_audit.RecordingAuditTests.test_missing_duplicate_and_invalid_train_records_rejected) ... ok
+test_non_train_values_are_not_interpreted (test_audit.RecordingAuditTests.test_non_train_values_are_not_interpreted) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.011s
+
+OK

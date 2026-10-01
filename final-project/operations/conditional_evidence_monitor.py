@@ -50,6 +50,24 @@ def lock_held(path):
         return False
 
 
+def training_started(progress, held, now):
+    """Bound stale detection by a valid, currently locked training invocation.
+
+    The workflow writes this timestamp once when entering training. A historical,
+    malformed or future timestamp must not conceal a stopped or stalled worker.
+    """
+    if not held or progress.get('stage') != 'training':
+        return None
+    try:
+        started = datetime.fromisoformat(progress.get('updated_utc'))
+        if started.tzinfo is None or started.utcoffset() is None:
+            return None
+        timestamp = started.timestamp()
+    except (TypeError, ValueError, OverflowError, OSError):
+        return None
+    return timestamp if math.isfinite(timestamp) and 0 <= timestamp <= now else None
+
+
 def scan_log(path):
     training, validation, errors = {}, {}, []
     if not path.exists():
@@ -110,6 +128,7 @@ def snapshot(study, *, now=None, stale_seconds=1800):
     alerts = []
     stage = progress.get('stage', 'unknown')
     held = lock_held(Path(str(prefix) + '.lock'))
+    started = training_started(progress, held, now)
     training, validation, errors = scan_log(Path(str(prefix) + '.log'))
     alerts.extend(errors[-10:])
     if not plan:
@@ -131,6 +150,9 @@ def snapshot(study, *, now=None, stale_seconds=1800):
                 latest = directory / 'latest.pt'
                 completed = read_json(directory / 'result.json', {}).get('completed_epoch', 0)
                 age = max(0., now - latest.stat().st_mtime) if latest.exists() else None
+                # Keep the full checkpoint age visible, while excluding a user-
+                # requested pause from the current invocation's stall timer.
+                idle = min(age, now-started) if age is not None and started is not None else age
                 if completed >= target:
                     state = 'complete'
                 elif not latest.exists() or (extension_started and latest.stat().st_mtime < extension_started):
@@ -139,13 +161,15 @@ def snapshot(study, *, now=None, stale_seconds=1800):
                     state = 'active'
                 duration = training.get(key, {}).get('seconds', 0) + validation.get(key, {}).get('seconds', 0)
                 threshold = max(stale_seconds, 6*duration)
-                if stage == 'training' and state == 'active' and age > threshold:
+                if stage == 'training' and state == 'active' and idle > threshold:
                     state = 'stale'
-                    alerts.append(f'{key}: checkpoint unchanged for {age:.0f}s (threshold {threshold:.0f}s)')
+                    scope = ' of current training' if started is not None else ''
+                    alerts.append(f'{key}: checkpoint unchanged for {idle:.0f}s{scope} (threshold {threshold:.0f}s)')
                 trajectories[key] = {'state': state, 'target_epoch': target,
                     'last_logged_training_epoch': training.get(key, {}).get('epoch', 0),
                     'last_selection_epoch': validation.get(key, {}).get('epoch'),
-                    'checkpoint_age_seconds': age, 'stale_threshold_seconds': threshold,
+                    'checkpoint_age_seconds': age, 'active_checkpoint_idle_seconds': idle,
+                    'stale_threshold_seconds': threshold,
                     'latest_training': training.get(key)}
     if stage == 'assessment_complete':
         verify_completion(root, study, alerts)
@@ -163,6 +187,7 @@ def snapshot(study, *, now=None, stale_seconds=1800):
     # is retained, without guessing that a long label-construction pass has hung.
     return {'checked_utc': utc(now), 'monitor_pid': os.getpid(), 'status': status,
         'stage': stage, 'workflow_lock_held': held,
+        'training_started_utc': utc(started) if started is not None else None,
         'log_age_seconds': max(0., now-log.stat().st_mtime) if log.exists() else None,
         'trajectories': trajectories, 'alerts': alerts,
         'monitor_scope': 'Source integrity, log errors, finite training values, base-training checkpoint freshness, final public artifact hashes',

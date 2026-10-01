@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "date": "2026-10-01",
+  "report_sha256": "343cfc595db940d7289ff0ea5a11b85f8ab1021de7a14ed41d763e722515c2ee",
+  "archive_sha256": "799819d24950dde22c72293f7ddae5a5d2c6ab94ff3949f96a13d3880dfd802e",
+  "report_actual_pages": 5,
+  "page_format": "A4",
+  "embedded_fonts": [
+    "Times New Roman regular",
+    "Times New Roman bold"
+  ],
+  "visual_inspection": "All five pages rendered with pdftoppm and inspected; no clipping, footer collision or illegible tables found. Text extraction includes covered old footer strings, but rendered footers are clean.",
+  "independent_numerical_replay": {
+    "checks": 43239,
+    "maximum_absolute_error": 7.105427357601002e-15,
+    "seconds": 84.19199741701595,
+    "receipt": "independent-completion-replay.json"
+  },
+  "independent_report_checks": 142,
+  "report_numerical_receipt": "original-report-values.json",
+  "report_replay_byte_identical": true,
+  "tests": {
+    "repository_smoke": {
+      "tests": 45,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0
+    },
+    "extracted_coursework_completion": {
+      "tests": 38,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0
+    },
+    "extracted_general": {
+      "tests": 216,
+      "skipped": 5,
+      "failures": 0,
+      "errors": 0
+    }
+  },
+  "zip": {
+    "crc_valid": true,
+    "entries": 347,
+    "hashed_artifacts_valid": 346,
+    "scientific_source_digests_match_repository": true
+  },
+  "required_human_finalization": [
+    "four remaining contributor names and actual contribution details",
+    "individual peer evaluations",
+    "submission action after review"
+  ],
+  "limitations": [
+    "No fresh dependency installation or full model training was rerun in this audit.",
+    "Only recorded completion-study assessment predictions were independently replayed; report main numerical cells were checked against existing frozen results.",
+    "Historical source archive navigation is intentionally immutable and partly rewritten for standalone layout; active outer handoff owns current project and training status."
+  ],
+  "artifact_version": "coursework-complete-v1, checked before the v2 narrative refresh"
+}
