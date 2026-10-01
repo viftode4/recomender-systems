@@ -1,0 +1,21 @@
+{
+  "status": "team_review_draft",
+  "training_started": false,
+  "submitted": false,
+  "original_archive_sha256": "799819d24950dde22c72293f7ddae5a5d2c6ab94ff3949f96a13d3880dfd802e",
+  "original_artifacts_unchanged": 346,
+  "new_navigation_html_files_checked": 15,
+  "source_only_references_labelled": [
+    "docs/archive/2026-10-01/INDEX.md",
+    "exploratory/DESIGN.md",
+    "exploratory/addressed_evidence/POSTMORTEM.md",
+    "exploratory/conditional_evidence/README.md",
+    "operations/TRAINING_ACCELERATION.md",
+    "packages/coursework-complete-v1/24.zip",
+    "reference/ASSIGNMENT.md"
+  ],
+  "archive_sha256": "558f9ae80c1d957c33f862d2e15564c6c8890f00bd1eb528abd7310dfce599f1",
+  "archive_bytes": 5372026,
+  "zip_crc_valid": true,
+  "artifact_count": 379
+}

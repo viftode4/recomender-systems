@@ -1,0 +1,27 @@
+{
+  "all_39_candidate_development_metrics_identical": true,
+  "all_6_selected_specs_and_score_arrays_identical": true,
+  "all_assessment_endpoints_groups_and_paired_intervals_identical": true,
+  "bootstrap_source_sha256": "db7bf551678bc35fd12c40ecffad931dbd1356a65545d9adedb9c124100df0c4",
+  "execution": "fresh source ZIP extraction, pinned instructor data, regenerated original TRAIN/catalog; no oldrun input artifacts",
+  "original_test_evaluated": false,
+  "original_train_and_catalog_sha256_identical": true,
+  "reference_aggregate_sha256": "89f1d14696cc3d524eef60299de96a6ef753df7cc3c1a041897892bdfef9b556",
+  "replay_aggregate_sha256": "963b0c3204cfc28cf131e00d89f640103ab5d3b9b6b42d87ed2945e4f0dd1bd4",
+  "replay_timing_seconds": {
+    "selection_seconds": 68.90142904201639,
+    "total_seconds": 75.4982376669941
+  },
+  "source_archive_sha256": "426c2c02805f792a15b5e6bff340ed703d91fcebe8cd71bc6a6a1334fd099965",
+  "source_files": {
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "exploratory/framing_search/predictive/PROTOCOL.md": "ea7609dd74b8401a69faf08ef5f345f13257d47200ba6f4012c3711dc5256bae",
+    "exploratory/framing_search/predictive/model.py": "94472908c4dda1ffad79e8df416eb7df26e27ff39423676afa4313b30b19d954",
+    "exploratory/framing_search/predictive/run.py": "0474a7135dba887cb8d254fac8e9c56265b1a6b8e5f77e8b6ec3219b154e6aa9",
+    "exploratory/framing_search/recording_audit/audit.py": "b767819d740abb87633f7ac30c8a4f86dd7e729edab9499a7acf400ac4928bfd",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc"
+  },
+  "status": "PASS",
+  "study": "recording_groups"
+}

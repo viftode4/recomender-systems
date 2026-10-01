@@ -1,0 +1,309 @@
+{
+  "conclusion": "Current twelve-thread CPU NGCF training is not repeatable under identical initial parameters and seeds. The one-thread four-epoch prefixes repeat exactly and match the rebuilt run. This supports parallel numerical sensitivity as an explanation of historical drift, but historical thread state was not recorded and its exact cause cannot be certified. No full-60-epoch repeatability claim.",
+  "default_twelve_thread_repeat_loss_exact": false,
+  "evidence_sha256": {
+    "ngcf_probe.py": "0f3e57bf9140a74ed53a5b57769c0ca2280dbbfd50bc914da005031bd8c3150a",
+    "private_initial_probe_source": "e42c424124693e9741a3cb5ba92f3f0126c5dc3d043b5f6f24a516417aaead96",
+    "private_probe_result/default": "f778f34d435d62890db7ce7a6194e1176ff6492411ee2e1ce0fff25c6292852c",
+    "private_probe_result/default-repeat": "c188114171033dad44bbc2182a289c2e7fd764f403d4a1ae0e964806e5720c7b",
+    "private_probe_result/omp-only": "7c7c15b52615d91ecd82fbcdc28e42ca7eb84f9041b242893caaae2443998122",
+    "private_probe_result/one": "796ebbd040ea17f2112075c22bcf3f0cf9b12eceb5cfa9805a85a21a972e0173",
+    "private_probe_result/portable-one": "000ba325ca832d0377b391b3b7d3c22afb12170c9c4b83e2913cebe0cc64e854",
+    "source-scores-replay-v1.json": "1cbdf5a3254b0ec94dec450d7e0d0decce5f0c2201292e4aa7c658fc0aa58615"
+  },
+  "historical_and_rebuilt_references": [
+    {
+      "all_score_difference": {
+        "different_cells": 1587065,
+        "max_absolute_error": 0.2161942720413208,
+        "root_mean_squared_error": 0.023215411335024683
+      },
+      "checkpoint_config_different_fields": [
+        "checkpoint_dir"
+      ],
+      "checkpoint_epoch": 59,
+      "historical_checkpoint_sha256": "ed4c0fa0975fc51f50f12dd0cea2648c0f9dd1dd033804f15245ba5254263d3b",
+      "historical_logged_train_loss_first_four": [
+        18.320947647094727,
+        13.485491752624512,
+        12.073302268981934,
+        11.509258270263672
+      ],
+      "historical_manifest_sha256": "2d0367d3ba76a50c9fad1ec511d23480504abd87bf0265688f9ef3a8863fb2f2",
+      "rebuilt_checkpoint_sha256": "b77e06d044273067223b0a41a5727ff3048a4e2b3c0377bc99f16d9596dd7c07",
+      "rebuilt_logged_train_loss_first_four": [
+        18.3209171295166,
+        13.485529899597168,
+        12.072690963745117,
+        11.507431030273438
+      ],
+      "rebuilt_manifest_sha256": "023f139209711130931afe3d97a302be1077a875c498a92b6f847a808b6244f2",
+      "seed": 2026,
+      "settings_versions_model_source_equal": true,
+      "top10_difference": {
+        "all_users_order_identical": false,
+        "different_order_positions": 1404,
+        "total_item_substitutions": 151,
+        "users_with_order_difference": 537,
+        "users_with_set_difference": 148
+      }
+    },
+    {
+      "all_score_difference": {
+        "different_cells": 1587064,
+        "max_absolute_error": 0.2768554091453552,
+        "root_mean_squared_error": 0.019902234743581323
+      },
+      "checkpoint_config_different_fields": [
+        "checkpoint_dir"
+      ],
+      "checkpoint_epoch": 59,
+      "historical_checkpoint_sha256": "a7399b0ed0e17b163c7c3023cb135352e791cfabd2101938eff810ee75214bad",
+      "historical_logged_train_loss_first_four": [
+        18.120155334472656,
+        13.577136039733887,
+        12.10562515258789,
+        11.439484596252441
+      ],
+      "historical_manifest_sha256": "36b678d2998fa0878a57750f2054b1e1ff3d27077ff878b360c4402e781dba1b",
+      "rebuilt_checkpoint_sha256": "8bae5f6822e45cc6b46b9845b4ded2dc1f93c4252c1c27b3b43bced190ae0df3",
+      "rebuilt_logged_train_loss_first_four": [
+        18.120155334472656,
+        13.577136039733887,
+        12.105599403381348,
+        11.43992805480957
+      ],
+      "rebuilt_manifest_sha256": "8aa891bfdd86abe342dc62a292896fb16adb6d01f7f50c01b8aa2e7c9a28626c",
+      "seed": 2027,
+      "settings_versions_model_source_equal": true,
+      "top10_difference": {
+        "all_users_order_identical": false,
+        "different_order_positions": 1138,
+        "total_item_substitutions": 104,
+        "users_with_order_difference": 448,
+        "users_with_set_difference": 101
+      }
+    },
+    {
+      "all_score_difference": {
+        "different_cells": 1587063,
+        "max_absolute_error": 0.3869660794734955,
+        "root_mean_squared_error": 0.022807669674161615
+      },
+      "checkpoint_config_different_fields": [
+        "checkpoint_dir"
+      ],
+      "checkpoint_epoch": 59,
+      "historical_checkpoint_sha256": "5fa581375c0ad61fa427f100cd117f52d359578165ef33ef7440324ad4fc3863",
+      "historical_logged_train_loss_first_four": [
+        18.205242156982422,
+        13.388800621032715,
+        11.977384567260742,
+        11.47531795501709
+      ],
+      "historical_manifest_sha256": "45f14f0a3938e5e1642156bf0ad10a0bd745abd24839982f21a3e5beaf1be8b0",
+      "rebuilt_checkpoint_sha256": "96e7bfbaa69c40bd0953a91acd14668671f86ae7c8c4d7ee0775b5ef57b68d86",
+      "rebuilt_logged_train_loss_first_four": [
+        18.205242156982422,
+        13.388812065124512,
+        11.977201461791992,
+        11.475078582763672
+      ],
+      "rebuilt_manifest_sha256": "c4334c72f1d9bda3858f3896dbb930cc50b5ca994f9d2427fb2368279fa1009b",
+      "seed": 2028,
+      "settings_versions_model_source_equal": true,
+      "top10_difference": {
+        "all_users_order_identical": false,
+        "different_order_positions": 1391,
+        "total_item_substitutions": 147,
+        "users_with_order_difference": 520,
+        "users_with_set_difference": 146
+      }
+    }
+  ],
+  "historical_bit_reproduction_repaired": false,
+  "historical_cause_certified": false,
+  "historical_thread_environment_recorded": false,
+  "initial_parameters_identical_all_five_probes": true,
+  "no_original_test_metric_or_raw_test_file_read": true,
+  "probe_epochs": 4,
+  "probe_results": {
+    "default": {
+      "environment": {
+        "MKL_NUM_THREADS": null,
+        "NUMEXPR_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null
+      },
+      "epochs": 4,
+      "initial_state_sha256": {
+        "GNNlayers.0.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.0.interActTransform.weight": "35d92727e879425439ad0aa96ecb841f8c3d263e5f0cb5a7be012c31a1af5f31",
+        "GNNlayers.0.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.0.linear.weight": "25dc7044fc3c6b3a81887a251d22108a0884360422caaecffa538fad8d9e1ba4",
+        "GNNlayers.1.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.1.interActTransform.weight": "5e1a66ff9423bc35938cb51ba8e89d7a05d2ffaebf0ebc3941bf799f3722be1d",
+        "GNNlayers.1.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.1.linear.weight": "95bef8f3f2778e1a055cb1c5f03b6521e368c19a4eb0fff10f535ef20d8a0c43",
+        "GNNlayers.2.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.2.interActTransform.weight": "ab0df47bca06b3a5e3efeb3cb3666eff2e2f11a8c816e96a0c58dd6fbbbd4d4f",
+        "GNNlayers.2.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.2.linear.weight": "09ec6debc3cb57cc65020db48febeaa443f680902dc05296dc73b02af98ef991",
+        "item_embedding.weight": "7fd240a0c3db0fae9c789c1759efe29c4578a976fcb6d0b04a554f7da516f236",
+        "user_embedding.weight": "b0f6f39af0ecca460b9bf1600ad20cea371735e5f45064cc425a1e79fdcc50ca"
+      },
+      "interop_threads": 16,
+      "loss": {
+        "0": 18.320919007062912,
+        "1": 13.485437005758286,
+        "2": 12.073810815811157,
+        "3": 11.507607847452164
+      },
+      "threads": 12
+    },
+    "default-repeat": {
+      "environment": {
+        "MKL_NUM_THREADS": null,
+        "NUMEXPR_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null
+      },
+      "epochs": 4,
+      "initial_state_sha256": {
+        "GNNlayers.0.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.0.interActTransform.weight": "35d92727e879425439ad0aa96ecb841f8c3d263e5f0cb5a7be012c31a1af5f31",
+        "GNNlayers.0.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.0.linear.weight": "25dc7044fc3c6b3a81887a251d22108a0884360422caaecffa538fad8d9e1ba4",
+        "GNNlayers.1.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.1.interActTransform.weight": "5e1a66ff9423bc35938cb51ba8e89d7a05d2ffaebf0ebc3941bf799f3722be1d",
+        "GNNlayers.1.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.1.linear.weight": "95bef8f3f2778e1a055cb1c5f03b6521e368c19a4eb0fff10f535ef20d8a0c43",
+        "GNNlayers.2.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.2.interActTransform.weight": "ab0df47bca06b3a5e3efeb3cb3666eff2e2f11a8c816e96a0c58dd6fbbbd4d4f",
+        "GNNlayers.2.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.2.linear.weight": "09ec6debc3cb57cc65020db48febeaa443f680902dc05296dc73b02af98ef991",
+        "item_embedding.weight": "7fd240a0c3db0fae9c789c1759efe29c4578a976fcb6d0b04a554f7da516f236",
+        "user_embedding.weight": "b0f6f39af0ecca460b9bf1600ad20cea371735e5f45064cc425a1e79fdcc50ca"
+      },
+      "interop_threads": 16,
+      "loss": {
+        "0": 18.320947974920273,
+        "1": 13.485450267791748,
+        "2": 12.073255449533463,
+        "3": 11.50830864906311
+      },
+      "threads": 12
+    },
+    "omp-only": {
+      "environment": {
+        "MKL_NUM_THREADS": null,
+        "NUMEXPR_NUM_THREADS": null,
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null
+      },
+      "epochs": 4,
+      "initial_state_sha256": {
+        "GNNlayers.0.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.0.interActTransform.weight": "35d92727e879425439ad0aa96ecb841f8c3d263e5f0cb5a7be012c31a1af5f31",
+        "GNNlayers.0.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.0.linear.weight": "25dc7044fc3c6b3a81887a251d22108a0884360422caaecffa538fad8d9e1ba4",
+        "GNNlayers.1.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.1.interActTransform.weight": "5e1a66ff9423bc35938cb51ba8e89d7a05d2ffaebf0ebc3941bf799f3722be1d",
+        "GNNlayers.1.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.1.linear.weight": "95bef8f3f2778e1a055cb1c5f03b6521e368c19a4eb0fff10f535ef20d8a0c43",
+        "GNNlayers.2.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.2.interActTransform.weight": "ab0df47bca06b3a5e3efeb3cb3666eff2e2f11a8c816e96a0c58dd6fbbbd4d4f",
+        "GNNlayers.2.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.2.linear.weight": "09ec6debc3cb57cc65020db48febeaa443f680902dc05296dc73b02af98ef991",
+        "item_embedding.weight": "7fd240a0c3db0fae9c789c1759efe29c4578a976fcb6d0b04a554f7da516f236",
+        "user_embedding.weight": "b0f6f39af0ecca460b9bf1600ad20cea371735e5f45064cc425a1e79fdcc50ca"
+      },
+      "interop_threads": 16,
+      "loss": {
+        "0": 18.320917397737503,
+        "1": 13.485529750585556,
+        "2": 12.072691351175308,
+        "3": 11.50743094086647
+      },
+      "threads": 1
+    },
+    "one": {
+      "environment": {
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      },
+      "epochs": 4,
+      "initial_state_sha256": {
+        "GNNlayers.0.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.0.interActTransform.weight": "35d92727e879425439ad0aa96ecb841f8c3d263e5f0cb5a7be012c31a1af5f31",
+        "GNNlayers.0.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.0.linear.weight": "25dc7044fc3c6b3a81887a251d22108a0884360422caaecffa538fad8d9e1ba4",
+        "GNNlayers.1.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.1.interActTransform.weight": "5e1a66ff9423bc35938cb51ba8e89d7a05d2ffaebf0ebc3941bf799f3722be1d",
+        "GNNlayers.1.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.1.linear.weight": "95bef8f3f2778e1a055cb1c5f03b6521e368c19a4eb0fff10f535ef20d8a0c43",
+        "GNNlayers.2.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.2.interActTransform.weight": "ab0df47bca06b3a5e3efeb3cb3666eff2e2f11a8c816e96a0c58dd6fbbbd4d4f",
+        "GNNlayers.2.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.2.linear.weight": "09ec6debc3cb57cc65020db48febeaa443f680902dc05296dc73b02af98ef991",
+        "item_embedding.weight": "7fd240a0c3db0fae9c789c1759efe29c4578a976fcb6d0b04a554f7da516f236",
+        "user_embedding.weight": "b0f6f39af0ecca460b9bf1600ad20cea371735e5f45064cc425a1e79fdcc50ca"
+      },
+      "interop_threads": 16,
+      "loss": {
+        "0": 18.320917397737503,
+        "1": 13.485529750585556,
+        "2": 12.072691351175308,
+        "3": 11.50743094086647
+      },
+      "threads": 1
+    },
+    "portable-one": {
+      "environment": {
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      },
+      "epochs": 4,
+      "initial_state_sha256": {
+        "GNNlayers.0.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.0.interActTransform.weight": "35d92727e879425439ad0aa96ecb841f8c3d263e5f0cb5a7be012c31a1af5f31",
+        "GNNlayers.0.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.0.linear.weight": "25dc7044fc3c6b3a81887a251d22108a0884360422caaecffa538fad8d9e1ba4",
+        "GNNlayers.1.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.1.interActTransform.weight": "5e1a66ff9423bc35938cb51ba8e89d7a05d2ffaebf0ebc3941bf799f3722be1d",
+        "GNNlayers.1.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.1.linear.weight": "95bef8f3f2778e1a055cb1c5f03b6521e368c19a4eb0fff10f535ef20d8a0c43",
+        "GNNlayers.2.interActTransform.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.2.interActTransform.weight": "ab0df47bca06b3a5e3efeb3cb3666eff2e2f11a8c816e96a0c58dd6fbbbd4d4f",
+        "GNNlayers.2.linear.bias": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "GNNlayers.2.linear.weight": "09ec6debc3cb57cc65020db48febeaa443f680902dc05296dc73b02af98ef991",
+        "item_embedding.weight": "7fd240a0c3db0fae9c789c1759efe29c4578a976fcb6d0b04a554f7da516f236",
+        "user_embedding.weight": "b0f6f39af0ecca460b9bf1600ad20cea371735e5f45064cc425a1e79fdcc50ca"
+      },
+      "interop_threads": 16,
+      "loss": {
+        "0": 18.320917397737503,
+        "1": 13.485529750585556,
+        "2": 12.072691351175308,
+        "3": 11.50743094086647
+      },
+      "threads": 1
+    }
+  },
+  "raw_split_processing_disclosure": "RecBole processes all raw rows to regenerate its standard partition. Only TRAIN was consumed by the probes; validation and test loaders were neither iterated nor evaluated.",
+  "scope": "Bounded NGCF numerical reproducibility diagnosis; no source changes, model selection, or validation/test evaluation.",
+  "seed": 2026,
+  "single_thread_logged_prefix_matches_rebuilt_60_epoch_run": true,
+  "single_thread_three_probes_final_parameters_exact": true,
+  "single_thread_three_probes_loss_exact": true,
+  "status": "complete"
+}

@@ -1,0 +1,2899 @@
+{
+  "prediction_digest_scope": "Expected prediction digests identify original valid-scores.npz file bytes, not separately hashed numeric arrays; no prediction arrays were opened to create this recipe.",
+  "purpose": "Rebuild the already selected expert inputs; do not rerun model selection or original TEST evaluation.",
+  "schema_version": 1,
+  "scope": "Fixed historical configurations, not a promise of bit-identical historical predictions under changed source or runtime.",
+  "seeds": [
+    {
+      "data_sha256": {
+        "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+        "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+        "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+      },
+      "expected_ids_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+      "expected_train_sha256": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+      "expert_order": [
+        "2026-ExactPop-0",
+        "2026-Random-0",
+        "2026-EASE-1",
+        "2026-ItemKNN-2",
+        "2026-BPR-1",
+        "2026-UserKNN-0",
+        "2026-SLIMElastic-2",
+        "2026-FISMCorrected-0",
+        "2026-GenreContent-1",
+        "2026-LightGCN-200",
+        "2026-NeuMF-0",
+        "2026-NGCF-1",
+        "positive_ease-all_observed",
+        "signed_channels-all_observed",
+        "contrast-all_observed"
+      ],
+      "experts": [
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "7a5165e7e5f907fad83a86717d5d3e0471933f69ce823c8a739810a0bba96790",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "dbcc83b0127f1b65361e1bc956aefec27256c63af188d3650275b428fe2d0825",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "standard",
+          "model": "ExactPop",
+          "name": "2026-ExactPop-0",
+          "run_directory_basename": "2026-ExactPop-0",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2026,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "d5ef32fe5358ec370eae22b990403499008918fa0b5b57ca22cfe020f8f65b96",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "416a4fdd5ba22895548fb564b0077baaaa90f28f035d59fffa76415329718ce3",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "standard",
+          "model": "Random",
+          "name": "2026-Random-0",
+          "run_directory_basename": "2026-Random-0",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2026,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "1a5d389c0928fbe3aa11177efc7408a139a9447e88973de5068db156971b47d9",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "9f7807608f9e7bc00d5b2ab61d629e5d417b1dfd37f4ec13ea44796bf2d458bc",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "standard",
+          "model": "EASE",
+          "name": "2026-EASE-1",
+          "run_directory_basename": "2026-EASE-1",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2026,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "99bf24013a6342459c18eeacff84dc7f9a4788da4669a3c096136ceadab3934e",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "d1c0ee65d64913d0623628859205321faf6df2fe30d3696ee659f30fd60d5178",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "standard",
+          "model": "ItemKNN",
+          "name": "2026-ItemKNN-2",
+          "run_directory_basename": "2026-ItemKNN-2",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 200,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2026,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "99c5ac029f42cfa956b7b09155df3b62a5ea9559915c634aad843d69caa4f859",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "7639ca9960c1ad14193942dc45060cad80e1ee4bd3d487bd1acd573ad1c20dae",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "standard",
+          "model": "BPR",
+          "name": "2026-BPR-1",
+          "run_directory_basename": "2026-BPR-1",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 60,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2026,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "476c0accc2b682fcdaff4d836a6e7ab9b3c2d9a60f94cd4a3c13fe8af83be750",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "05d7d8583bb59b57efc7335657aaf627a006e0bfec12f91e52b7a34be12944f9",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "standard",
+          "model": "UserKNN",
+          "name": "2026-UserKNN-0",
+          "run_directory_basename": "2026-UserKNN-0",
+          "settings": {
+            "dataset": "ml-100k",
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 50,
+            "knn_method": "user",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reproducibility": true,
+            "seed": 2026,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "70c2fb6d9d9be21abe7dc769aa6599f78e00d0f8c5bf6c4bcad58afd058a4597",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "acbb0506ffad43000e7105bfbcefcf49b172b457646ad117d9fd6f823e876214",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "standard",
+          "model": "SLIMElastic",
+          "name": "2026-SLIMElastic-2",
+          "run_directory_basename": "2026-SLIMElastic-2",
+          "settings": {
+            "alpha": 0.01,
+            "dataset": "ml-100k",
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "hide_item": true,
+            "l1_ratio": 0.5,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "positive_only": true,
+            "reproducibility": true,
+            "seed": 2026,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "63cca65e76728899131e97beb10df926313bd7600fa2a359781901da382d429e",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "897d22d0a77bd4af301761c1606c20c5eace1cf459846db6ed87d1f99fc17040",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "standard",
+          "model": "FISMCorrected",
+          "name": "2026-FISMCorrected-0",
+          "run_directory_basename": "2026-FISMCorrected-0",
+          "settings": {
+            "alpha": 0.0,
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weights": [
+              0.001,
+              0.001
+            ],
+            "reproducibility": true,
+            "seed": 2026,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "0806adffd03c7351eaa446a4c4487a7df41f7742dd1c5f0f9591bc3981a6d4eb",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "526a17872b7f52686d1c0ae224015c7de6ea8f038ff5b383fa0ca5ec8b7d98e9",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "standard",
+          "model": "GenreContent",
+          "name": "2026-GenreContent-1",
+          "run_directory_basename": "2026-GenreContent-1",
+          "settings": {
+            "dataset": "ml-100k",
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "genre_idf_power": 1.0,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reproducibility": true,
+            "seed": 2026,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "e472babd074277a231eef0b0d7764a5f4204077ac9709fb5f4a28b87a3de4e62",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "089eed1edd493fcc680b0d39ddcb89c9f453cbf462cdb1eaa80a5beaaa82f9aa",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "standard",
+          "model": "LightGCN",
+          "name": "2026-LightGCN-200",
+          "run_directory_basename": "2026-LightGCN-200",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 200,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "n_layers": 2,
+            "reg_weight": 1e-05,
+            "reproducibility": true,
+            "seed": 2026,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "05967567587ff41f1e88d60569a3fb6250acd6ecafb71bb45fa10810f540e566",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "f364087e47cda5145c7b91932a7978c4bb7ea256c7087752ac681e461d75b447",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "standard",
+          "model": "NeuMF",
+          "name": "2026-NeuMF-0",
+          "run_directory_basename": "2026-NeuMF-0",
+          "settings": {
+            "dataset": "ml-100k",
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "mf_embedding_size": 64,
+            "mlp_embedding_size": 64,
+            "mlp_hidden_size": [
+              128,
+              64
+            ],
+            "reproducibility": true,
+            "seed": 2026,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "use_pretrain": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "2d0367d3ba76a50c9fad1ec511d23480504abd87bf0265688f9ef3a8863fb2f2",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "caf2a1506e44c7a6889a515e9dedab68546193a3a3ce217e57d9d7a0729ce7c2",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "standard",
+          "model": "NGCF",
+          "name": "2026-NGCF-1",
+          "run_directory_basename": "2026-NGCF-1",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 60,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "hidden_size_list": [
+              64,
+              64,
+              64
+            ],
+            "message_dropout": 0.1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "node_dropout": 0.0,
+            "reg_weight": 1e-05,
+            "reproducibility": true,
+            "seed": 2026,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+            "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "2fac56cfd9da14009b3a5b2fc38ed49d7796e370dc6589c45459aa3befd33a09",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "a3c75ce087aae01bd9671ec06273183da5f76a5d78f7e4b6965bc9b6e796a31d",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "research",
+          "model": "PositiveEASE",
+          "name": "positive_ease-all_observed",
+          "run_directory_basename": "positive_ease-all_observed",
+          "settings": {
+            "model": "positive_ease",
+            "penalty": 250.0,
+            "seed": 2026,
+            "selection_cohort": "meta_fit",
+            "selection_objective": "all_observed"
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "exception_experiment.py": "e6071150a01d7dfd35b96bfb14db9703b5cac4505f356f7ca77f25c5a11eca06",
+            "exception_model.py": "d2c69c66fab57ea78dfbd242599ade35228fd1c8990606ace42250cea6588dc6"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+            "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "5751222fd0092b137c2a41242dd991fcb7c59167464eccc1978b15496e486b4d",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "2b43fee43efca333b4e882b589d98261b17f897388f58601c18a0a7c92612c1c",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "research",
+          "model": "SignedChannelsLinear",
+          "name": "signed_channels-all_observed",
+          "run_directory_basename": "signed_channels-all_observed",
+          "settings": {
+            "model": "signed_channels",
+            "penalty": 250.0,
+            "seed": 2026,
+            "selection_cohort": "meta_fit",
+            "selection_objective": "all_observed"
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "exception_experiment.py": "e6071150a01d7dfd35b96bfb14db9703b5cac4505f356f7ca77f25c5a11eca06",
+            "exception_model.py": "d2c69c66fab57ea78dfbd242599ade35228fd1c8990606ace42250cea6588dc6"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+            "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "9d405a3348e6434df7fb6aba48f7ca08b7c58c71a4ccff892f26a113b6712899",
+            "train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+            "valid-scores.npz": "d09ad6b8eee932d33595309b26eb86692cfb43919d5da0a94136e25a457fdb8a",
+            "valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+          },
+          "kind": "research",
+          "model": "ContrastTransfer",
+          "name": "contrast-all_observed",
+          "run_directory_basename": "contrast-all_observed",
+          "settings": {
+            "dislike_weight": 0.0,
+            "model": "contrast_transfer",
+            "neighbors": 80,
+            "seed": 2026,
+            "selection_cohort": "meta_fit",
+            "selection_objective": "all_observed"
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "exception_experiment.py": "e6071150a01d7dfd35b96bfb14db9703b5cac4505f356f7ca77f25c5a11eca06",
+            "exception_model.py": "d2c69c66fab57ea78dfbd242599ade35228fd1c8990606ace42250cea6588dc6"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        }
+      ],
+      "freeze_sha256": "a9c1516e60519d54861b393899d48657a5edf294aa04b849019eea3334aa9f47",
+      "seed": 2026,
+      "split_sha256": {
+        "test": "35a26a905e9a559e4badca9a241df49f0a88c044a0dbcadb200dfbe5dd6a98bc",
+        "train": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+        "valid": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0"
+      }
+    },
+    {
+      "data_sha256": {
+        "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+        "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+        "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+      },
+      "expected_ids_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+      "expected_train_sha256": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+      "expert_order": [
+        "2027-ExactPop-0",
+        "2027-Random-0",
+        "2027-EASE-1",
+        "2027-ItemKNN-2",
+        "2027-BPR-1",
+        "2027-UserKNN-0",
+        "2027-SLIMElastic-1",
+        "2027-FISMCorrected-0",
+        "2027-GenreContent-1",
+        "2027-LightGCN-200",
+        "2027-NeuMF-0",
+        "2027-NGCF-1",
+        "positive_ease-all_observed",
+        "signed_channels-all_observed",
+        "contrast-all_observed"
+      ],
+      "experts": [
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "636a0b03cd655ff2fc580e5959c981d15621c83d44ae51fe0456ebf41ec66909",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "b373caa7f9219be56f1cd1e45675cc16ddca9a21dc66066defa74fe6ea18d4f4",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "standard",
+          "model": "ExactPop",
+          "name": "2027-ExactPop-0",
+          "run_directory_basename": "2027-ExactPop-0",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2027,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "1838c18977b5d241f5cac4b066254022126834ea460e15aa096384bc28361867",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "cbbcd40428a6ba5ba1d5357608ae80a4319566f69ca7ce5cbf3f51f716a5eb65",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "standard",
+          "model": "Random",
+          "name": "2027-Random-0",
+          "run_directory_basename": "2027-Random-0",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2027,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "f8742f1f7783c61d3eba430075ff9f8be57b0a47bbf6e5a7818d5364f9f179ee",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "cc5e61cf3f61d7e1ff7e19fc381ae8d04458280cf16149e2ae2aeb0990cd9ac0",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "standard",
+          "model": "EASE",
+          "name": "2027-EASE-1",
+          "run_directory_basename": "2027-EASE-1",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2027,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "6dfd7cee110e8ddb8ce2afa66a59b4c8b99e1f0c1ded09418ce759f052a18035",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "6e3e40ca80ef5d92a0f8e217d3e0d85dcad26a97fe4dc225cd87bd02a70bd9b3",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "standard",
+          "model": "ItemKNN",
+          "name": "2027-ItemKNN-2",
+          "run_directory_basename": "2027-ItemKNN-2",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 200,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2027,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "a85b45fbdadcb67866f114db6f9c1da6da53208598dfd12093a0dd3cd5147b7a",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "3fb1b5cab3836b918706e756f25c23e7aa6bea691f1c54618c78e7f0e4cb62a3",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "standard",
+          "model": "BPR",
+          "name": "2027-BPR-1",
+          "run_directory_basename": "2027-BPR-1",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 60,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2027,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "3768ea1f84a3a8696d614d4344eca5c2b0acbe8244a62ce433af2b6c85a482ca",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "5625d8052dcd5182f0c2078eebeea377109b9fedc459535c7f025dd35e966419",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "standard",
+          "model": "UserKNN",
+          "name": "2027-UserKNN-0",
+          "run_directory_basename": "2027-UserKNN-0",
+          "settings": {
+            "dataset": "ml-100k",
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 50,
+            "knn_method": "user",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reproducibility": true,
+            "seed": 2027,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "5699498619508f92279c640548c0e93ea24ab850142282cf047be677671002ab",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "f5a587e1d7f4a7a030ead98f41c672d83194d91f1447946b07a3651d043fbbc5",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "standard",
+          "model": "SLIMElastic",
+          "name": "2027-SLIMElastic-1",
+          "run_directory_basename": "2027-SLIMElastic-1",
+          "settings": {
+            "alpha": 0.01,
+            "dataset": "ml-100k",
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "hide_item": true,
+            "l1_ratio": 0.1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "positive_only": true,
+            "reproducibility": true,
+            "seed": 2027,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "3eec81d3f6761ff649a63aa0b325c7ea5be0da0fc91174d01fc9354e335d6f78",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "4d4ce18d6cd76d30747a51f6a90bf7de577b4101540b5c7750dee27e9596399b",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "standard",
+          "model": "FISMCorrected",
+          "name": "2027-FISMCorrected-0",
+          "run_directory_basename": "2027-FISMCorrected-0",
+          "settings": {
+            "alpha": 0.0,
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weights": [
+              0.001,
+              0.001
+            ],
+            "reproducibility": true,
+            "seed": 2027,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "33c7d263653574942532805dfddbb7d278946cb49ed22f7656f5c00c773d8590",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "e2bfc086247d7020994381d5a4308feb314e2b34d7205ef4fcbd106b5aa5bc1f",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "standard",
+          "model": "GenreContent",
+          "name": "2027-GenreContent-1",
+          "run_directory_basename": "2027-GenreContent-1",
+          "settings": {
+            "dataset": "ml-100k",
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "genre_idf_power": 1.0,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reproducibility": true,
+            "seed": 2027,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "ffcbf26d94930ed6e55c49801e549112d4ac6580f7bf943ba588c3862e798c42",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "3561cf6243d483baac6ab52262f7a670eca3864c7f695054c269038815d8fae2",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "standard",
+          "model": "LightGCN",
+          "name": "2027-LightGCN-200",
+          "run_directory_basename": "2027-LightGCN-200",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 200,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "n_layers": 2,
+            "reg_weight": 1e-05,
+            "reproducibility": true,
+            "seed": 2027,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "410898179c18a6d1d75c434d73033d74d79fc228395e8dc7644bedd13fe6e70b",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "e6b21d1bf15beb07cf9cccf38dce8f5b18f7ccb93ca9241dbd702037a8e07700",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "standard",
+          "model": "NeuMF",
+          "name": "2027-NeuMF-0",
+          "run_directory_basename": "2027-NeuMF-0",
+          "settings": {
+            "dataset": "ml-100k",
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "mf_embedding_size": 64,
+            "mlp_embedding_size": 64,
+            "mlp_hidden_size": [
+              128,
+              64
+            ],
+            "reproducibility": true,
+            "seed": 2027,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "use_pretrain": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "36b678d2998fa0878a57750f2054b1e1ff3d27077ff878b360c4402e781dba1b",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "6d27095330bdc1a613a146511197ea33af871ff0b59730a44ef8e9563b9efb95",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "standard",
+          "model": "NGCF",
+          "name": "2027-NGCF-1",
+          "run_directory_basename": "2027-NGCF-1",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 60,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "hidden_size_list": [
+              64,
+              64,
+              64
+            ],
+            "message_dropout": 0.1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "node_dropout": 0.0,
+            "reg_weight": 1e-05,
+            "reproducibility": true,
+            "seed": 2027,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+            "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "515c821581ff6a2250533d7847b77821907ed5d1f1cf4b6484a9298ab199f877",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "6e28e5b5d15ab87aaf6a0756abb7d8f793cb7b78a3dec3a474332a1207f9d57c",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "research",
+          "model": "PositiveEASE",
+          "name": "positive_ease-all_observed",
+          "run_directory_basename": "positive_ease-all_observed",
+          "settings": {
+            "model": "positive_ease",
+            "penalty": 250.0,
+            "seed": 2027,
+            "selection_cohort": "meta_fit",
+            "selection_objective": "all_observed"
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "exception_experiment.py": "e6071150a01d7dfd35b96bfb14db9703b5cac4505f356f7ca77f25c5a11eca06",
+            "exception_model.py": "d2c69c66fab57ea78dfbd242599ade35228fd1c8990606ace42250cea6588dc6"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+            "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "2233c59e0f51ab72ace6588b5f2fce1e6dadce7638483cccaa05755f6895fbf3",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "b2b5487bb6a8e641911fb92c9f4709c5720ca542c6f45750a5c142664199955a",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "research",
+          "model": "SignedChannelsLinear",
+          "name": "signed_channels-all_observed",
+          "run_directory_basename": "signed_channels-all_observed",
+          "settings": {
+            "model": "signed_channels",
+            "penalty": 250.0,
+            "seed": 2027,
+            "selection_cohort": "meta_fit",
+            "selection_objective": "all_observed"
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "exception_experiment.py": "e6071150a01d7dfd35b96bfb14db9703b5cac4505f356f7ca77f25c5a11eca06",
+            "exception_model.py": "d2c69c66fab57ea78dfbd242599ade35228fd1c8990606ace42250cea6588dc6"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+            "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "0e759e7fbee24be70097d1f84590a785fe0ae17c99807b36f090a083dd2c4b35",
+            "train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+            "valid-scores.npz": "b0d60e6bbc4cc696388dc6732d7f8ec998932f1a4813a61c9d21163df07962c4",
+            "valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+          },
+          "kind": "research",
+          "model": "ContrastTransfer",
+          "name": "contrast-all_observed",
+          "run_directory_basename": "contrast-all_observed",
+          "settings": {
+            "dislike_weight": 0.0,
+            "model": "contrast_transfer",
+            "neighbors": 80,
+            "seed": 2027,
+            "selection_cohort": "meta_fit",
+            "selection_objective": "all_observed"
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "exception_experiment.py": "e6071150a01d7dfd35b96bfb14db9703b5cac4505f356f7ca77f25c5a11eca06",
+            "exception_model.py": "d2c69c66fab57ea78dfbd242599ade35228fd1c8990606ace42250cea6588dc6"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        }
+      ],
+      "freeze_sha256": "7b2fc4cc8a4dd74fd8296d953855168f2e245fe05508cdcfd2811e654d716788",
+      "seed": 2027,
+      "split_sha256": {
+        "test": "49af66f7b495e82553c4861522d416002b5a0129934951f94f29709fa701bb7d",
+        "train": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+        "valid": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7"
+      }
+    },
+    {
+      "data_sha256": {
+        "ml-100k.inter": "4edb74e2a81178c2ba9ff381495f754f996c4aea351b1272ca36b43da0935eff",
+        "ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532",
+        "ml-100k.user": "4f670007d9cfbeb9807e757209af1555b9bcc186bde25e767f67cb67c6dd5972"
+      },
+      "expected_ids_sha256": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+      "expected_train_sha256": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+      "expert_order": [
+        "2028-ExactPop-0",
+        "2028-Random-0",
+        "2028-EASE-1",
+        "2028-ItemKNN-2",
+        "2028-BPR-2",
+        "2028-UserKNN-1",
+        "2028-SLIMElastic-1",
+        "2028-FISMCorrected-0",
+        "2028-GenreContent-1",
+        "2028-LightGCN-200",
+        "2028-NeuMF-0",
+        "2028-NGCF-1",
+        "positive_ease-all_observed",
+        "signed_channels-all_observed",
+        "contrast-all_observed"
+      ],
+      "experts": [
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "78b46790f35140a2913908e1a022e5acc4707cd2cfb8bf1e77556428e10fd703",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "6765eb78819d32903f070172e730c9b62def86942beab5f6762b54585babea2a",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "standard",
+          "model": "ExactPop",
+          "name": "2028-ExactPop-0",
+          "run_directory_basename": "2028-ExactPop-0",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2028,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "8baa7da16839722082f8201f709a9edc1113fcadac4290aa8a103470c22d2660",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "fc45c5a3b241ffbc2d9ce29e61994cea52d56b5e4574bcae78ce320849f6976c",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "standard",
+          "model": "Random",
+          "name": "2028-Random-0",
+          "run_directory_basename": "2028-Random-0",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2028,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "f57ee23ce094b51ab774ca5b4bc228f89480d053e49e128264628ec285075cd3",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "c65952e320a6bac5e87b1c640b53d0cb8c14cf69853316e15930569f9c0a8db8",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "standard",
+          "model": "EASE",
+          "name": "2028-EASE-1",
+          "run_directory_basename": "2028-EASE-1",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2028,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "7f5bf62bcbe5ba740f25bb015fa718551ff1c213f753147c2600fade918b6869",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "da1d2c4309703db4ffd698ba54631bf863e6053efa682cb58cdf64b43d93928b",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "standard",
+          "model": "ItemKNN",
+          "name": "2028-ItemKNN-2",
+          "run_directory_basename": "2028-ItemKNN-2",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 200,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2028,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "9c916beffd62d301cc93151de4865136c441ae537a7373ac14ed487652c6cf90",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "bdad4c9bf4063fe60a6de800bb4a89c64f50e1c5a37e87c7f3320b26f4fdf228",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "standard",
+          "model": "BPR",
+          "name": "2028-BPR-2",
+          "run_directory_basename": "2028-BPR-2",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 128,
+            "epochs": 100,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "item",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weight": 250.0,
+            "reproducibility": true,
+            "seed": 2028,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "3c6688fd88f905cb0e36c2ea213857bb62a7dca4b9fd959b57f81bb6a5b3574b"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "5877f5a2ea1f958130f94bf3a1677d8232c9eef790da029c41433edf76bba146",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "f6b0f1a29492976f135a78b8a22769f169fc74cb618b2ea2a679178902d49307",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "standard",
+          "model": "UserKNN",
+          "name": "2028-UserKNN-1",
+          "run_directory_basename": "2028-UserKNN-1",
+          "settings": {
+            "dataset": "ml-100k",
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "k": 100,
+            "knn_method": "user",
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reproducibility": true,
+            "seed": 2028,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "e119d1a826ceec8b6e13e6ec02d62312e8e84d9a648c0bf82f7b9997d2060dd2",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "866ac4be47f1f1bdc5e124014128353fc052623850c5617550ea3ed9d73fceea",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "standard",
+          "model": "SLIMElastic",
+          "name": "2028-SLIMElastic-1",
+          "run_directory_basename": "2028-SLIMElastic-1",
+          "settings": {
+            "alpha": 0.01,
+            "dataset": "ml-100k",
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "hide_item": true,
+            "l1_ratio": 0.1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "positive_only": true,
+            "reproducibility": true,
+            "seed": 2028,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "bc2b1de04cf5e9d6530b00fdf4e4dc2caec83063b2bb09de6ee31fdb5c7adb6a",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "54b196596a70d1e1cd05df5190a77061ae661e610bfbb0f65aed5685db8169bd",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "standard",
+          "model": "FISMCorrected",
+          "name": "2028-FISMCorrected-0",
+          "run_directory_basename": "2028-FISMCorrected-0",
+          "settings": {
+            "alpha": 0.0,
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reg_weights": [
+              0.001,
+              0.001
+            ],
+            "reproducibility": true,
+            "seed": 2028,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "233a5cdc8e05faef4f42d8083595b19b71045894c0748685c6f02986c97764d8",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "9c6ce54892d6889130b7555058dcaa7566c94db9f1705ce65e1e4b6e95205dea",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "standard",
+          "model": "GenreContent",
+          "name": "2028-GenreContent-1",
+          "run_directory_basename": "2028-GenreContent-1",
+          "settings": {
+            "dataset": "ml-100k",
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "genre_idf_power": 1.0,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "reproducibility": true,
+            "seed": 2028,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "202e75d74461300cf02a07e68ef6cf06f8e0932c6244d928191bc97658c9382f",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "8568fcc1f36acbb5ddae256adcb9a18a08dd9750ddd4dc9a8352bf8e4b4d0f7c",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "standard",
+          "model": "LightGCN",
+          "name": "2028-LightGCN-200",
+          "run_directory_basename": "2028-LightGCN-200",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 200,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "n_layers": 2,
+            "reg_weight": 1e-05,
+            "reproducibility": true,
+            "seed": 2028,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "21ee284b8806b105aceec51b54838818b71a55b1bb957142178311386dfda267",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "aedc621677100f80398cf1c9a70292ce3cc293a7a39993cca2b48e0a7bc06490",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "standard",
+          "model": "NeuMF",
+          "name": "2028-NeuMF-0",
+          "run_directory_basename": "2028-NeuMF-0",
+          "settings": {
+            "dataset": "ml-100k",
+            "epochs": 20,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "mf_embedding_size": 64,
+            "mlp_embedding_size": 64,
+            "mlp_hidden_size": [
+              128,
+              64
+            ],
+            "reproducibility": true,
+            "seed": 2028,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "use_pretrain": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "45f14f0a3938e5e1642156bf0ad10a0bd745abd24839982f21a3e5beaf1be8b0",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "24bea09608b0f603b8a253eca831266763201bebae1c2350c74f09979d42c096",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "standard",
+          "model": "NGCF",
+          "name": "2028-NGCF-1",
+          "run_directory_basename": "2028-NGCF-1",
+          "settings": {
+            "dataset": "ml-100k",
+            "embedding_size": 64,
+            "epochs": 60,
+            "eval_args": {
+              "group_by": "user",
+              "mode": "full",
+              "order": "RO",
+              "split": {
+                "RS": [
+                  0.8,
+                  0.1,
+                  0.1
+                ]
+              }
+            },
+            "eval_step": 1,
+            "hidden_size_list": [
+              64,
+              64,
+              64
+            ],
+            "message_dropout": 0.1,
+            "metrics": [
+              "Recall",
+              "MRR",
+              "NDCG",
+              "Hit",
+              "Precision"
+            ],
+            "node_dropout": 0.0,
+            "reg_weight": 1e-05,
+            "reproducibility": true,
+            "seed": 2028,
+            "show_progress": false,
+            "stopping_step": 5,
+            "topk": [
+              10
+            ],
+            "train_batch_size": 2048,
+            "use_gpu": false,
+            "valid_metric": "MRR@10",
+            "worker": 0
+          },
+          "source_hashes_match_current": true,
+          "source_sha256": {
+            "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+            "run.py": "5d6dca67ac5fa724583aa039047ea0d0089e51b9117b518f0fb62fee60ceac50"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "pandas": "3.0.6",
+            "recbole": "1.2.1",
+            "scikit-learn": "1.9.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+            "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "5e87fcbd8c2b5511c17c55fbdb93fd4a5f90fa31dfc45b56479e54af46f376e1",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "c8f760f8628b54e7d51bc20e6cdf1e79b949c1107b67db8884cce1ad3a6ad34c",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "research",
+          "model": "PositiveEASE",
+          "name": "positive_ease-all_observed",
+          "run_directory_basename": "positive_ease-all_observed",
+          "settings": {
+            "model": "positive_ease",
+            "penalty": 250.0,
+            "seed": 2028,
+            "selection_cohort": "meta_fit",
+            "selection_objective": "all_observed"
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "exception_experiment.py": "e6071150a01d7dfd35b96bfb14db9703b5cac4505f356f7ca77f25c5a11eca06",
+            "exception_model.py": "d2c69c66fab57ea78dfbd242599ade35228fd1c8990606ace42250cea6588dc6"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+            "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "38b151af6124a9ccf3488a596b9c70037e1970ed1ca87d7ea1c16ecaef221e09",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "5f36f4146f4c8d54ee663fa27aa254252877b530341101d3d3167c48484b763b",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "research",
+          "model": "SignedChannelsLinear",
+          "name": "signed_channels-all_observed",
+          "run_directory_basename": "signed_channels-all_observed",
+          "settings": {
+            "model": "signed_channels",
+            "penalty": 250.0,
+            "seed": 2028,
+            "selection_cohort": "meta_fit",
+            "selection_objective": "all_observed"
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "exception_experiment.py": "e6071150a01d7dfd35b96bfb14db9703b5cac4505f356f7ca77f25c5a11eca06",
+            "exception_model.py": "d2c69c66fab57ea78dfbd242599ade35228fd1c8990606ace42250cea6588dc6"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        },
+        {
+          "current_source_sha256": {
+            "exception_experiment.py": "80a0c058594871a397bcbbf4c06568d8c2cdb06809539b97042b5a66ffe61ce9",
+            "exception_model.py": "c3159aca374584207697dab0806f22c0ac7ecf488a0ae2db4fe0294fd84f734b"
+          },
+          "expected_artifacts_sha256": {
+            "ids.json": "780252f4f0511dea952a45628c94dc1f6f8d357fa1064ed66ed1044d960a0cb6",
+            "manifest.json": "bfc8a26d86300d6e39ff75e3a02542d692d60ffa1286a9917f4dad53ff2df7db",
+            "train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+            "valid-scores.npz": "4eb4e72511fce3fd3b5f0f3cda4673dcbc95956b134fdd1e3a59bc8fd8368d78",
+            "valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+          },
+          "kind": "research",
+          "model": "ContrastTransfer",
+          "name": "contrast-all_observed",
+          "run_directory_basename": "contrast-all_observed",
+          "settings": {
+            "dislike_weight": 0.0,
+            "model": "contrast_transfer",
+            "neighbors": 80,
+            "seed": 2028,
+            "selection_cohort": "meta_fit",
+            "selection_objective": "all_observed"
+          },
+          "source_hashes_match_current": false,
+          "source_sha256": {
+            "exception_experiment.py": "e6071150a01d7dfd35b96bfb14db9703b5cac4505f356f7ca77f25c5a11eca06",
+            "exception_model.py": "d2c69c66fab57ea78dfbd242599ade35228fd1c8990606ace42250cea6588dc6"
+          },
+          "versions": {
+            "numpy": "1.26.4",
+            "recbole": "1.2.1",
+            "scipy": "1.17.1",
+            "torch": "2.14.0"
+          }
+        }
+      ],
+      "freeze_sha256": "f9e3b71968c9496d06c01a013ab12f9bcb7e934f8b71f90cc04e1f2d2cab572d",
+      "seed": 2028,
+      "split_sha256": {
+        "test": "832ef7b818dfb816b1449c00590114b356b20e8c12e1352c365e00e2cb93e571",
+        "train": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+        "valid": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae"
+      }
+    }
+  ],
+  "settings_policy": "Preserve embedded historical settings except selection_ndcg, which is an outcome and is intentionally omitted.",
+  "source_hash_policy": "Preserve original recorded source hashes and separately report current-source matches. Mismatches require an explicit compatibility decision before claiming exact replay."
+}

@@ -1,0 +1,127 @@
+{
+  "assessment_stage": "exploratory reused validation calibration cohort",
+  "candidate_count": 39,
+  "command": [
+    "/Users/vliftode/personal/recomender-systems/final-project/coursework_completion/run.py",
+    "--source-root",
+    "runs/frozen-v3",
+    "--items",
+    "/Users/vliftode/personal/recommender-systems/assignment-3/RecBole_DSAIT4335/dataset/ml-100k/ml-100k.item",
+    "--out",
+    "runs/coursework-completion-v1",
+    "--evidence",
+    "coursework_completion/results-v1"
+  ],
+  "fresh_holdout": false,
+  "grids": {
+    "meta": [
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "mixed": [
+      [
+        6,
+        2,
+        2
+      ],
+      [
+        4,
+        4,
+        2
+      ],
+      [
+        4,
+        2,
+        4
+      ]
+    ],
+    "tuned_rrf": [
+      10,
+      60,
+      100
+    ],
+    "tuned_switch": [
+      2,
+      3,
+      4
+    ]
+  },
+  "input_artifacts_sha256": {
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2026/freeze.json": "a9c1516e60519d54861b393899d48657a5edf294aa04b849019eea3334aa9f47",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2026/frozen.npz": "62d3eb9f276a999bed97926aa162c51f740c33c8c6a582fc0349d63fb1546486",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2026/provenance/coefficients.json": "75de1391f1d680ae8c25900c0992aec7824c307e820e32340a705dbfe8c077e0",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2026/provenance/cohorts.json": "9bc7998e78b234d8f4cb23bd9127369e665406fca9d708123163fdecec4f9c86",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2026/provenance/group-policy.json": "0d30cb6e2ce4acd14d04741f347b9ca1451dbc79957515593c0701755870143f",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2026/provenance/manifest.json": "78607379ef653f3f0700b53c67803a6b45701a4f367fad490b298e8d4fd2c639",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2026/provenance/selection.json": "697347437da0a9701419dda1429d0a2a283949e6049f6b1eac1475a9324535d9",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2026/provenance/switching.json": "715c0bef1cda6310dc4f3597dedf326eb034172d8f81dfe62831ddc25c064b88",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2026/train.tsv": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2026/valid.tsv": "bdb1568ba1c4df1fe8ce4823e5e6801cd5b1fbd29f9d1a8dcda5a39d39ca13a0",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/freeze.json": "7b2fc4cc8a4dd74fd8296d953855168f2e245fe05508cdcfd2811e654d716788",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/frozen.npz": "73b4c6c0cfb872c3eb1338b2b681ae9334c9f64129e1983d19b7b87635611870",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/provenance/coefficients.json": "28dd00c0c97a57cf34d1b78ecc403457b4af8aca9a1aec6bce2d7f643d77789b",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/provenance/cohorts.json": "9dd43814fd12e50055bf2e6eaf186b30317002f273366f18cea9571d4c2bda35",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/provenance/group-policy.json": "3135ab2f3f4ccf31f64ca1deb9df1e335b4ce8b3f6698b04a9f545b64793dcf8",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/provenance/manifest.json": "48365ddcac540ddd22c8ab23885aec87b73918b128a8a43500a75096c934376a",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/provenance/selection.json": "1198b28dd009e521411f4320081f77bb37057aa9d54e1dacc1c17035ab774b56",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/provenance/switching.json": "5e61ad36341062801c8a9953342b2da10f82bb31b936db6220237ce0a440862f",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/train.tsv": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2027/valid.tsv": "117c700fe5e9c80be346fa98954f0d97422c7c52950cb428fc0bcba6f464a1b7",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2028/freeze.json": "f9e3b71968c9496d06c01a013ab12f9bcb7e934f8b71f90cc04e1f2d2cab572d",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2028/frozen.npz": "4d5275d7147a5de37a910bf0696d230882f1a37ac68534bd66fecc4cc5b7ff4c",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2028/provenance/coefficients.json": "eb7277d2db67f000c83f73c15079603a5e2d434ff1a4d75e59fbf259d579fdf4",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2028/provenance/cohorts.json": "269167ab769426c6f581b99e2febafccbc905a8426d87523b373c209072eadf5",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2028/provenance/group-policy.json": "d7e1d302548a5bcbfbd7dc62ab019846359e9973dd441e5dc098b3037cbccfde",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2028/provenance/manifest.json": "00ac46f500387d2a286ba1a2f9214e943c3c05acb128101e8a1945d61f9e53ae",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2028/provenance/selection.json": "d104aa0757a625d52308c891e41eedf7752a3911bb8bdb293c967b0def0a3d06",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2028/provenance/switching.json": "54d5fa608c58e897f74cbaa0b8575e4b108473783a30d325cd56f73c24a44dfc",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2028/train.tsv": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/2028/valid.tsv": "ce906b211e23f245325839506aa30a5f8f0d6f9d30454fa2a9303339ce47d5ae",
+    "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3/manifest.json": "53db9e60af96e192ca24a0fdd77b7bf9ebc4b54519e783688ce9063f1ce583bb",
+    "/Users/vliftode/personal/recommender-systems/assignment-3/RecBole_DSAIT4335/dataset/ml-100k/ml-100k.item": "51d7cdf777ce5c0f5b32c1d947a4a81fe07d75e78abbe761e0cd4d0756064532"
+  },
+  "items": "/Users/vliftode/personal/recommender-systems/assignment-3/RecBole_DSAIT4335/dataset/ml-100k/ml-100k.item",
+  "original_test_read": false,
+  "prior_exposure": "These labels previously fit societal policies and were reused in exploratory studies.",
+  "roles": [
+    "EASE",
+    "SLIM",
+    "context",
+    "fixed_switch",
+    "fixed_rrf",
+    "mixed",
+    "meta",
+    "tuned_switch",
+    "tuned_rrf"
+  ],
+  "runtime": {
+    "machine": "arm64",
+    "numerical_threads": 1,
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.17.1",
+    "system": "Darwin"
+  },
+  "schema_version": 1,
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "source_root": "/Users/vliftode/personal/recomender-systems/final-project/runs/frozen-v3",
+  "source_sha256": {
+    "coursework_completion/PROTOCOL.md": "ba29795bcad01384e2f3dcf49a17351efc211538753d7e81a3bf89945d9cd1f4",
+    "coursework_completion/__init__.py": "29501f9c624a213cd81d4e46f3e2508159bd5b084c6b8205a0e84516f6bce457",
+    "coursework_completion/models.py": "18ebd6e94f9db9c032d2a61f33e81a000fd818607f2c11b32cd8b60f9d40e835",
+    "coursework_completion/run.py": "48c57af681584383aed10d20e356e7e68cd0c9697f107a5253c06a6d293a8600",
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "freeze.py": "915c8c05a35f780b2544f789a8920877e0c0292bf35833b00878b0f9a1d8a79f",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "study": "coursework_hybrid_completion_reused_calibration"
+}

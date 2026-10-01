@@ -1,0 +1,2 @@
+# Optional: rebuild the offline meeting handoff. No model training dependencies.
+Markdown==3.10.3

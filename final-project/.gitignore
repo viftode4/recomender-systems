@@ -3,3 +3,9 @@ __pycache__/
 runs/
 vendor/
 *.egg-info/
+
+# Derived unpacked previews duplicate the verified source/evidence snapshot.
+packages/*/preview/
+
+# Intentional immutable input for the portable handoff builder (about 5 MB).
+!packages/coursework-complete-v1/24.zip

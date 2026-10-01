@@ -1,0 +1,3807 @@
+{
+  "all_12_selected_candidates_identical": true,
+  "all_mean_metrics_identical": false,
+  "comparator_sha256": "afa11a5cb7caa36f23c77053208144bd8378c949e1b6aada77bdf8cafe00f8d0",
+  "fresh_population_assessment": false,
+  "limitations": [
+    "Material NGCF score/ranking drift is independently documented in source-scores-replay-v1.json; its cause is not established here.",
+    "Changing file hashes, identical score arrays, identical recommendations and identical metrics are distinct claims.",
+    "Switch settings contain fitted group means; equality of chosen candidate IDs does not imply equality of all fitted diagnostics.",
+    "This retrains fixed historical expert configurations, not their earlier full search grids.",
+    "The original calibration labels were previously exposed; no fresh generalization or breakthrough claim follows."
+  ],
+  "mean_metrics": [
+    {
+      "metric": "activity_ndcg_gap",
+      "reference": 0.11862799060000921,
+      "replay": 0.11862799060000921,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "calibration_jsd",
+      "reference": 0.1448620887893073,
+      "replay": 0.1448620887893073,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "coverage@10",
+      "reference": 0.1636940150614348,
+      "replay": 0.1636940150614348,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "diversity",
+      "reference": 0.8053659611992945,
+      "replay": 0.8053659611992945,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "exposure_entropy",
+      "reference": 0.6595840231593907,
+      "replay": 0.6595840231593907,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "exposure_gini",
+      "reference": 0.9396237670263341,
+      "replay": 0.9396237670263341,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "head_exposure",
+      "reference": 0.9874293785310734,
+      "replay": 0.9874293785310734,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "head_exposure_gap",
+      "reference": 0.7870726603384458,
+      "replay": 0.7870726603384458,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "head_recall",
+      "reference": 0.349201400574608,
+      "replay": 0.349201400574608,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "hit@10",
+      "reference": 0.7994350282485875,
+      "replay": 0.7994350282485875,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "item_group_exposure_gap",
+      "reference": 0.013319716885797014,
+      "replay": 0.013319716885797014,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "mrr@10",
+      "reference": 0.4523742265267689,
+      "replay": 0.4523742265267689,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "ndcg@10",
+      "reference": 0.2737647955041658,
+      "replay": 0.2737647955041658,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "novelty@10",
+      "reference": 8.501349202940434,
+      "replay": 8.501349202940434,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "popularity_jsd",
+      "reference": 0.15341027789059047,
+      "replay": 0.15341027789059047,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "precision@10",
+      "reference": 0.1776836158192093,
+      "replay": 0.1776836158192093,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "recall@10",
+      "reference": 0.2560337429890704,
+      "replay": 0.2560337429890704,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "tail_recall",
+      "reference": 0.010240401571495921,
+      "replay": 0.010240401571495921,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "worst_activity_ndcg",
+      "reference": 0.2265286244030417,
+      "replay": 0.2265286244030417,
+      "replay_minus_reference": 0.0,
+      "role": "EASE"
+    },
+    {
+      "metric": "activity_ndcg_gap",
+      "reference": 0.10423798483312273,
+      "replay": 0.10423798483312273,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "calibration_jsd",
+      "reference": 0.14192722625896695,
+      "replay": 0.14192722625896695,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "coverage@10",
+      "reference": 0.20531113753468092,
+      "replay": 0.20531113753468092,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "diversity",
+      "reference": 0.8088582488864975,
+      "replay": 0.8088582488864975,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "exposure_entropy",
+      "reference": 0.6913992305457284,
+      "replay": 0.6913992305457284,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "exposure_gini",
+      "reference": 0.9230626918449981,
+      "replay": 0.9230626918449981,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "head_exposure",
+      "reference": 0.9588983050847458,
+      "replay": 0.9588983050847458,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "head_exposure_gap",
+      "reference": 0.7585415868921181,
+      "replay": 0.7585415868921181,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "head_recall",
+      "reference": 0.3431272124926847,
+      "replay": 0.3431272124926847,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "hit@10",
+      "reference": 0.7838983050847457,
+      "replay": 0.7838983050847457,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "item_group_exposure_gap",
+      "reference": 0.0128962442478283,
+      "replay": 0.0128962442478283,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "mrr@10",
+      "reference": 0.43321450990942506,
+      "replay": 0.43321450990942506,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "ndcg@10",
+      "reference": 0.26574161880903324,
+      "replay": 0.26574161880903324,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "novelty@10",
+      "reference": 8.64212273733481,
+      "replay": 8.64212273733481,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "popularity_jsd",
+      "reference": 0.12774448896655624,
+      "replay": 0.12774448896655624,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "precision@10",
+      "reference": 0.17203389830508495,
+      "replay": 0.17203389830508495,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "recall@10",
+      "reference": 0.25369258524483,
+      "replay": 0.25369258524483,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "tail_recall",
+      "reference": 0.032317825068225274,
+      "replay": 0.032317825068225274,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "worst_activity_ndcg",
+      "reference": 0.22292145998479773,
+      "replay": 0.22292145998479773,
+      "replay_minus_reference": 0.0,
+      "role": "SLIM"
+    },
+    {
+      "metric": "activity_ndcg_gap",
+      "reference": 0.11429967575255208,
+      "replay": 0.1142605874464833,
+      "replay_minus_reference": -3.9088306068774115e-05,
+      "role": "context"
+    },
+    {
+      "metric": "calibration_jsd",
+      "reference": 0.14093368038537404,
+      "replay": 0.1409290749360309,
+      "replay_minus_reference": -4.6054493431368915e-06,
+      "role": "context"
+    },
+    {
+      "metric": "coverage@10",
+      "reference": 0.16706302021403094,
+      "replay": 0.16706302021403094,
+      "replay_minus_reference": 0.0,
+      "role": "context"
+    },
+    {
+      "metric": "diversity",
+      "reference": 0.7919941036678324,
+      "replay": 0.791956962006397,
+      "replay_minus_reference": -3.7141661435424744e-05,
+      "role": "context"
+    },
+    {
+      "metric": "exposure_entropy",
+      "reference": 0.6605658877313668,
+      "replay": 0.6605501298742574,
+      "replay_minus_reference": -1.5757857109388596e-05,
+      "role": "context"
+    },
+    {
+      "metric": "exposure_gini",
+      "reference": 0.9388713007210135,
+      "replay": 0.9388775147906302,
+      "replay_minus_reference": 6.214069616650164e-06,
+      "role": "context"
+    },
+    {
+      "metric": "head_exposure",
+      "reference": 0.9820621468926554,
+      "replay": 0.9820621468926554,
+      "replay_minus_reference": 0.0,
+      "role": "context"
+    },
+    {
+      "metric": "head_exposure_gap",
+      "reference": 0.7817054287000276,
+      "replay": 0.7817054287000276,
+      "replay_minus_reference": 0.0,
+      "role": "context"
+    },
+    {
+      "metric": "head_recall",
+      "reference": 0.35926116530638,
+      "replay": 0.35926116530638,
+      "replay_minus_reference": 0.0,
+      "role": "context"
+    },
+    {
+      "metric": "hit@10",
+      "reference": 0.8135593220338982,
+      "replay": 0.8135593220338982,
+      "replay_minus_reference": 0.0,
+      "role": "context"
+    },
+    {
+      "metric": "item_group_exposure_gap",
+      "reference": 0.013241536991727714,
+      "replay": 0.013241474278464666,
+      "replay_minus_reference": -6.271326304790881e-08,
+      "role": "context"
+    },
+    {
+      "metric": "mrr@10",
+      "reference": 0.45405793202403366,
+      "replay": 0.4540775490987355,
+      "replay_minus_reference": 1.9617074701827608e-05,
+      "role": "context"
+    },
+    {
+      "metric": "ndcg@10",
+      "reference": 0.27813261719557975,
+      "replay": 0.2781667011861451,
+      "replay_minus_reference": 3.408399056537004e-05,
+      "role": "context"
+    },
+    {
+      "metric": "novelty@10",
+      "reference": 8.504927222218443,
+      "replay": 8.504910563848759,
+      "replay_minus_reference": -1.6658369684563468e-05,
+      "role": "context"
+    },
+    {
+      "metric": "popularity_jsd",
+      "reference": 0.14853502949483174,
+      "replay": 0.14853502949483174,
+      "replay_minus_reference": 0.0,
+      "role": "context"
+    },
+    {
+      "metric": "precision@10",
+      "reference": 0.18036723163841825,
+      "replay": 0.18036723163841825,
+      "replay_minus_reference": 0.0,
+      "role": "context"
+    },
+    {
+      "metric": "recall@10",
+      "reference": 0.26276015305968786,
+      "replay": 0.26276015305968786,
+      "replay_minus_reference": 0.0,
+      "role": "context"
+    },
+    {
+      "metric": "tail_recall",
+      "reference": 0.012105227892117466,
+      "replay": 0.012105227892117466,
+      "replay_minus_reference": 0.0,
+      "role": "context"
+    },
+    {
+      "metric": "worst_activity_ndcg",
+      "reference": 0.23481374688803935,
+      "replay": 0.23486453935079896,
+      "replay_minus_reference": 5.0792462759602364e-05,
+      "role": "context"
+    },
+    {
+      "metric": "activity_ndcg_gap",
+      "reference": 0.12198358609163366,
+      "replay": 0.12227077117985548,
+      "replay_minus_reference": 0.0002871850882218141,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "calibration_jsd",
+      "reference": 0.1463010274482269,
+      "replay": 0.14605019791884727,
+      "replay_minus_reference": -0.00025082952937963143,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "coverage@10",
+      "reference": 0.1311930241775664,
+      "replay": 0.1313912009512485,
+      "replay_minus_reference": 0.00019817677368211273,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "diversity",
+      "reference": 0.7980725196544406,
+      "replay": 0.7981108570232864,
+      "replay_minus_reference": 3.833736884584216e-05,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "exposure_entropy",
+      "reference": 0.6237920590299021,
+      "replay": 0.6238070852058756,
+      "replay_minus_reference": 1.50261759734871e-05,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "exposure_gini",
+      "reference": 0.9538870364105154,
+      "replay": 0.9538839596457076,
+      "replay_minus_reference": -3.0767648078189325e-06,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "head_exposure",
+      "reference": 0.9909604519774011,
+      "replay": 0.9911016949152542,
+      "replay_minus_reference": 0.00014124293785311437,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "head_exposure_gap",
+      "reference": 0.7906037337847733,
+      "replay": 0.7907449767226264,
+      "replay_minus_reference": 0.00014124293785311437,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "head_recall",
+      "reference": 0.35223905957007523,
+      "replay": 0.3520503912779587,
+      "replay_minus_reference": -0.0001886682921165561,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "hit@10",
+      "reference": 0.8036723163841808,
+      "replay": 0.8036723163841808,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "item_group_exposure_gap",
+      "reference": 0.013360543903697356,
+      "replay": 0.01336205898450953,
+      "replay_minus_reference": 1.515080812175204e-06,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "mrr@10",
+      "reference": 0.4487445072190835,
+      "replay": 0.4475635593220339,
+      "replay_minus_reference": -0.001180947897049589,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "ndcg@10",
+      "reference": 0.2706118274966375,
+      "replay": 0.2703309474784883,
+      "replay_minus_reference": -0.0002808800181491877,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "novelty@10",
+      "reference": 8.391051231790897,
+      "replay": 8.39087089031551,
+      "replay_minus_reference": -0.0001803414753869248,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "popularity_jsd",
+      "reference": 0.15746263213011577,
+      "replay": 0.15749475788977843,
+      "replay_minus_reference": 3.212575966266007e-05,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "precision@10",
+      "reference": 0.17485875706214707,
+      "replay": 0.17500000000000018,
+      "replay_minus_reference": 0.00014124293785311437,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "recall@10",
+      "reference": 0.25717589630925536,
+      "replay": 0.25691433531323105,
+      "replay_minus_reference": -0.0002615609960243126,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "tail_recall",
+      "reference": 0.006846082794212116,
+      "replay": 0.006846082794212116,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "worst_activity_ndcg",
+      "reference": 0.22180578307990048,
+      "replay": 0.22153306558442698,
+      "replay_minus_reference": -0.0002727174954735012,
+      "role": "fixed_rrf"
+    },
+    {
+      "metric": "activity_ndcg_gap",
+      "reference": 0.1168545836005404,
+      "replay": 0.1168545836005404,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "calibration_jsd",
+      "reference": 0.14376791917202617,
+      "replay": 0.14376791917202617,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "coverage@10",
+      "reference": 0.17419738406658739,
+      "replay": 0.17419738406658739,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "diversity",
+      "reference": 0.8054459241323647,
+      "replay": 0.8054459241323647,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "exposure_entropy",
+      "reference": 0.6708747423950246,
+      "replay": 0.6708747423950246,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "exposure_gini",
+      "reference": 0.9341950145656552,
+      "replay": 0.9341950145656552,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "head_exposure",
+      "reference": 0.978954802259887,
+      "replay": 0.978954802259887,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "head_exposure_gap",
+      "reference": 0.7785980840672592,
+      "replay": 0.7785980840672592,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "head_recall",
+      "reference": 0.35434986800755824,
+      "replay": 0.35434986800755824,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "hit@10",
+      "reference": 0.8022598870056498,
+      "replay": 0.8022598870056498,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "item_group_exposure_gap",
+      "reference": 0.013196595831470826,
+      "replay": 0.013196595831470826,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "mrr@10",
+      "reference": 0.4523002421307505,
+      "replay": 0.4523002421307505,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "ndcg@10",
+      "reference": 0.274640728050849,
+      "replay": 0.274640728050849,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "novelty@10",
+      "reference": 8.55147229319277,
+      "replay": 8.55147229319277,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "popularity_jsd",
+      "reference": 0.14587924179236675,
+      "replay": 0.14587924179236675,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "precision@10",
+      "reference": 0.17838983050847482,
+      "replay": 0.17838983050847482,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "recall@10",
+      "reference": 0.25827008950507785,
+      "replay": 0.25827008950507785,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "tail_recall",
+      "reference": 0.017058204141283045,
+      "replay": 0.017058204141283045,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "worst_activity_ndcg",
+      "reference": 0.2283020314025105,
+      "replay": 0.2283020314025105,
+      "replay_minus_reference": 0.0,
+      "role": "fixed_switch"
+    },
+    {
+      "metric": "activity_ndcg_gap",
+      "reference": 0.12331564390583473,
+      "replay": 0.12331564390583473,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "calibration_jsd",
+      "reference": 0.14179050818959213,
+      "replay": 0.14179050818959213,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "coverage@10",
+      "reference": 0.15358699960364647,
+      "replay": 0.15358699960364647,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "diversity",
+      "reference": 0.7729923574368018,
+      "replay": 0.7729923574368018,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "exposure_entropy",
+      "reference": 0.649178056438469,
+      "replay": 0.649178056438469,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "exposure_gini",
+      "reference": 0.9436516917352152,
+      "replay": 0.9436516917352152,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "head_exposure",
+      "reference": 0.9817796610169491,
+      "replay": 0.9817796610169491,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "head_exposure_gap",
+      "reference": 0.7814229428243213,
+      "replay": 0.7814229428243213,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "head_recall",
+      "reference": 0.25225009345614324,
+      "replay": 0.25225009345614324,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "hit@10",
+      "reference": 0.6836158192090397,
+      "replay": 0.6836158192090397,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "item_group_exposure_gap",
+      "reference": 0.013230961238718577,
+      "replay": 0.013230961238718577,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "mrr@10",
+      "reference": 0.3369680970316564,
+      "replay": 0.3369680970316564,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "ndcg@10",
+      "reference": 0.19874849962375327,
+      "replay": 0.19874849962375327,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "novelty@10",
+      "reference": 8.480115992285318,
+      "replay": 8.480115992285318,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "popularity_jsd",
+      "reference": 0.15373327919705437,
+      "replay": 0.15373327919705437,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "precision@10",
+      "reference": 0.13997175141242948,
+      "replay": 0.13997175141242948,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "recall@10",
+      "reference": 0.18783851921645367,
+      "replay": 0.18783851921645367,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "tail_recall",
+      "reference": 0.010983558837271312,
+      "replay": 0.010983558837271312,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "worst_activity_ndcg",
+      "reference": 0.15671859142975889,
+      "replay": 0.15671859142975889,
+      "replay_minus_reference": 0.0,
+      "role": "meta"
+    },
+    {
+      "metric": "activity_ndcg_gap",
+      "reference": 0.0813269093799694,
+      "replay": 0.0813269093799694,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "calibration_jsd",
+      "reference": 0.125201224855209,
+      "replay": 0.125201224855209,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "coverage@10",
+      "reference": 0.1581450653983353,
+      "replay": 0.1581450653983353,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "diversity",
+      "reference": 0.7726722690540958,
+      "replay": 0.7726722690540958,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "exposure_entropy",
+      "reference": 0.6265006402737886,
+      "replay": 0.6265006402737886,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "exposure_gini",
+      "reference": 0.9496277961506886,
+      "replay": 0.9496277961506886,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "head_exposure",
+      "reference": 0.8700564971751414,
+      "replay": 0.8700564971751414,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "head_exposure_gap",
+      "reference": 0.6696997789825136,
+      "replay": 0.6696997789825136,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "head_recall",
+      "reference": 0.2856882825321568,
+      "replay": 0.2856882825321568,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "hit@10",
+      "reference": 0.7471751412429378,
+      "replay": 0.7471751412429378,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "item_group_exposure_gap",
+      "reference": 0.011265196762402853,
+      "replay": 0.011265196762402853,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "mrr@10",
+      "reference": 0.3982832257196664,
+      "replay": 0.3982832257196664,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "ndcg@10",
+      "reference": 0.21683978689611305,
+      "replay": 0.21683978689611305,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "novelty@10",
+      "reference": 8.714152084859807,
+      "replay": 8.714152084859807,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "popularity_jsd",
+      "reference": 0.050461947164629574,
+      "replay": 0.050461947164629574,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "precision@10",
+      "reference": 0.13728813559322053,
+      "replay": 0.13728813559322053,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "recall@10",
+      "reference": 0.20793578201671856,
+      "replay": 0.20793578201671856,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "tail_recall",
+      "reference": 0.007752760196318033,
+      "replay": 0.007752760196318033,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "worst_activity_ndcg",
+      "reference": 0.18064541333309705,
+      "replay": 0.18064541333309705,
+      "replay_minus_reference": 0.0,
+      "role": "mixed"
+    },
+    {
+      "metric": "activity_ndcg_gap",
+      "reference": 0.12468371913641946,
+      "replay": 0.1255034517988348,
+      "replay_minus_reference": 0.0008197326624153345,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "calibration_jsd",
+      "reference": 0.1454526773504593,
+      "replay": 0.1455395341065047,
+      "replay_minus_reference": 8.685675604538923e-05,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "coverage@10",
+      "reference": 0.13258026159334127,
+      "replay": 0.1327784383670234,
+      "replay_minus_reference": 0.00019817677368214048,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "diversity",
+      "reference": 0.7967214450124055,
+      "replay": 0.7966083759304099,
+      "replay_minus_reference": -0.00011306908199559818,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "exposure_entropy",
+      "reference": 0.6247692283956411,
+      "replay": 0.6249058014201563,
+      "replay_minus_reference": 0.00013657302451519637,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "exposure_gini",
+      "reference": 0.9534471687957554,
+      "replay": 0.9533950483643031,
+      "replay_minus_reference": -5.212043145230716e-05,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "head_exposure",
+      "reference": 0.9906779661016949,
+      "replay": 0.9906779661016949,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "head_exposure_gap",
+      "reference": 0.7903212479090671,
+      "replay": 0.7903212479090671,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "head_recall",
+      "reference": 0.35078518670618847,
+      "replay": 0.3510453033456155,
+      "replay_minus_reference": 0.00026011663942704377,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "hit@10",
+      "reference": 0.806497175141243,
+      "replay": 0.8079096045197739,
+      "replay_minus_reference": 0.0014124293785309217,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "item_group_exposure_gap",
+      "reference": 0.013352354845229513,
+      "replay": 0.013352537447644747,
+      "replay_minus_reference": 1.826024152336292e-07,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "mrr@10",
+      "reference": 0.44838243206887274,
+      "replay": 0.4489860774818401,
+      "replay_minus_reference": 0.0006036454129673685,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "ndcg@10",
+      "reference": 0.2712939097451847,
+      "replay": 0.2714641240758992,
+      "replay_minus_reference": 0.0001702143307145132,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "novelty@10",
+      "reference": 8.39205318558861,
+      "replay": 8.39244738140935,
+      "replay_minus_reference": 0.0003941958207391849,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "popularity_jsd",
+      "reference": 0.1574955394539509,
+      "replay": 0.1574955394539509,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "precision@10",
+      "reference": 0.17542372881355958,
+      "replay": 0.1757062146892658,
+      "replay_minus_reference": 0.00028248587570622874,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "recall@10",
+      "reference": 0.2564814494352264,
+      "replay": 0.25662203847058945,
+      "replay_minus_reference": 0.0001405890353630701,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "tail_recall",
+      "reference": 0.008649942679863628,
+      "replay": 0.008649942679863628,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "worst_activity_ndcg",
+      "reference": 0.2204787091592922,
+      "replay": 0.22050971133244923,
+      "replay_minus_reference": 3.10021731570187e-05,
+      "role": "tuned_rrf"
+    },
+    {
+      "metric": "activity_ndcg_gap",
+      "reference": 0.1168545836005404,
+      "replay": 0.1168545836005404,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "calibration_jsd",
+      "reference": 0.14376791917202617,
+      "replay": 0.14376791917202617,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "coverage@10",
+      "reference": 0.17419738406658739,
+      "replay": 0.17419738406658739,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "diversity",
+      "reference": 0.8054459241323647,
+      "replay": 0.8054459241323647,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "exposure_entropy",
+      "reference": 0.6708747423950246,
+      "replay": 0.6708747423950246,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "exposure_gini",
+      "reference": 0.9341950145656552,
+      "replay": 0.9341950145656552,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "head_exposure",
+      "reference": 0.978954802259887,
+      "replay": 0.978954802259887,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "head_exposure_gap",
+      "reference": 0.7785980840672592,
+      "replay": 0.7785980840672592,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "head_recall",
+      "reference": 0.35434986800755824,
+      "replay": 0.35434986800755824,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "hit@10",
+      "reference": 0.8022598870056498,
+      "replay": 0.8022598870056498,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "item_group_exposure_gap",
+      "reference": 0.013196595831470826,
+      "replay": 0.013196595831470826,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "mrr@10",
+      "reference": 0.4523002421307505,
+      "replay": 0.4523002421307505,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "ndcg@10",
+      "reference": 0.274640728050849,
+      "replay": 0.274640728050849,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "novelty@10",
+      "reference": 8.55147229319277,
+      "replay": 8.55147229319277,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "popularity_jsd",
+      "reference": 0.14587924179236675,
+      "replay": 0.14587924179236675,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "precision@10",
+      "reference": 0.17838983050847482,
+      "replay": 0.17838983050847482,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "recall@10",
+      "reference": 0.25827008950507785,
+      "replay": 0.25827008950507785,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "tail_recall",
+      "reference": 0.017058204141283045,
+      "replay": 0.017058204141283045,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    },
+    {
+      "metric": "worst_activity_ndcg",
+      "reference": 0.2283020314025105,
+      "replay": 0.2283020314025105,
+      "replay_minus_reference": 0.0,
+      "role": "tuned_switch"
+    }
+  ],
+  "original_test_evaluated": false,
+  "prediction_file_agreement": {
+    "identical": 37,
+    "total": 45
+  },
+  "rebuild_receipt_sha256": "5364ec13c0d3091185d888470038cebce3786933d5e1e50943a5633af6af170c",
+  "reference_aggregate_sha256": "592e374ec9216771538333200e277db023d6c506a051b313798107179bf791a5",
+  "reference_manifest_sha256": "041308b82cf2c67952be9dba0d2557e876f7905623d53bae6d529cfffe52d170",
+  "reference_used_only_after_replay_completed": true,
+  "replay_aggregate_sha256": "310af2c51be3f250126fe8ead73417f80818870429b92e15807b89e3d509c1a5",
+  "replay_manifest_sha256": "28a273f54d280b5e24af4786e281dc0e8a60995c443ec3a1a75e6ce00691ba6b",
+  "schema_version": 1,
+  "scientific_source_sha256": {
+    "coursework_completion/PROTOCOL.md": "ba29795bcad01384e2f3dcf49a17351efc211538753d7e81a3bf89945d9cd1f4",
+    "coursework_completion/__init__.py": "29501f9c624a213cd81d4e46f3e2508159bd5b084c6b8205a0e84516f6bce457",
+    "coursework_completion/models.py": "18ebd6e94f9db9c032d2a61f33e81a000fd818607f2c11b32cd8b60f9d40e835",
+    "coursework_completion/run.py": "48c57af681584383aed10d20e356e7e68cd0c9697f107a5253c06a6d293a8600",
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "freeze.py": "915c8c05a35f780b2544f789a8920877e0c0292bf35833b00878b0f9a1d8a79f",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "scientific_sources_identical": true,
+  "seconds": {
+    "completion_replay": 37.57944766699802,
+    "source_rebuild": 543.9776972920226
+  },
+  "seeds": {
+    "2026": {
+      "all_candidates": [
+        {
+          "candidate_id": "mixed-0",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "mixed-1",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "mixed-2",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "meta-0",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "meta-1",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "meta-2",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "meta-3",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "tuned_switch-0",
+          "development_differences": [],
+          "settings_differences": [
+            {
+              "field": "/meta_fit_group_means/0/2026-NGCF-1",
+              "reference": 0.2006939647969114,
+              "replay": 0.2000738063416767,
+              "replay_minus_reference": -0.0006201584552346928
+            },
+            {
+              "field": "/meta_fit_group_means/1/2026-NGCF-1",
+              "reference": 0.2795018030467645,
+              "replay": 0.2777434808377134,
+              "replay_minus_reference": -0.0017583222090510886
+            }
+          ]
+        },
+        {
+          "candidate_id": "tuned_switch-1",
+          "development_differences": [],
+          "settings_differences": [
+            {
+              "field": "/meta_fit_group_means/0/2026-NGCF-1",
+              "reference": 0.19918566102631552,
+              "replay": 0.19867271029088698,
+              "replay_minus_reference": -0.0005129507354285356
+            },
+            {
+              "field": "/meta_fit_group_means/1/2026-NGCF-1",
+              "reference": 0.20343763948429885,
+              "replay": 0.20295438896412635,
+              "replay_minus_reference": -0.0004832505201725068
+            },
+            {
+              "field": "/meta_fit_group_means/2/2026-NGCF-1",
+              "reference": 0.31431820193313265,
+              "replay": 0.31181675542425524,
+              "replay_minus_reference": -0.002501446508877403
+            }
+          ]
+        },
+        {
+          "candidate_id": "tuned_switch-2",
+          "development_differences": [],
+          "settings_differences": [
+            {
+              "field": "/meta_fit_group_means/0/2026-NGCF-1",
+              "reference": 0.21293312213071489,
+              "replay": 0.21234876469778405,
+              "replay_minus_reference": -0.0005843574329308376
+            },
+            {
+              "field": "/meta_fit_group_means/1/2026-NGCF-1",
+              "reference": 0.18949202418631153,
+              "replay": 0.1888390986937141,
+              "replay_minus_reference": -0.0006529254925974337
+            },
+            {
+              "field": "/meta_fit_group_means/2/2026-NGCF-1",
+              "reference": 0.2142583386183513,
+              "replay": 0.21388559671347052,
+              "replay_minus_reference": -0.0003727419048807912
+            },
+            {
+              "field": "/meta_fit_group_means/3/2026-NGCF-1",
+              "reference": 0.34528004997049233,
+              "replay": 0.3421247902416628,
+              "replay_minus_reference": -0.003155259728829518
+            }
+          ]
+        },
+        {
+          "candidate_id": "tuned_rrf-0",
+          "development_differences": [
+            {
+              "field": "/aggregate/mrr@10",
+              "reference": 0.4616474979822436,
+              "replay": 0.4615466101694914,
+              "replay_minus_reference": -0.00010088781275219283
+            },
+            {
+              "field": "/aggregate/ndcg@10",
+              "reference": 0.2637536025123908,
+              "replay": 0.26374052255320374,
+              "replay_minus_reference": -1.3079959187034529e-05
+            },
+            {
+              "field": "/aggregate/novelty@10",
+              "reference": 8.403818243420345,
+              "replay": 8.404090052691911,
+              "replay_minus_reference": 0.0002718092715667808
+            }
+          ],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "tuned_rrf-1",
+          "development_differences": [
+            {
+              "field": "/aggregate/coverage@10",
+              "reference": 0.13436385255648037,
+              "replay": 0.133769322235434,
+              "replay_minus_reference": -0.0005945303210463659
+            },
+            {
+              "field": "/aggregate/mrr@10",
+              "reference": 0.43658023944040897,
+              "replay": 0.4366390906645144,
+              "replay_minus_reference": 5.885122410542731e-05
+            },
+            {
+              "field": "/aggregate/ndcg@10",
+              "reference": 0.2595246833318186,
+              "replay": 0.25943979775514814,
+              "replay_minus_reference": -8.488557667046814e-05
+            },
+            {
+              "field": "/aggregate/novelty@10",
+              "reference": 8.392837920722787,
+              "replay": 8.392615825191674,
+              "replay_minus_reference": -0.0002220955311127426
+            }
+          ],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "tuned_rrf-2",
+          "development_differences": [
+            {
+              "field": "/aggregate/coverage@10",
+              "reference": 0.1313912009512485,
+              "replay": 0.13079667063020214,
+              "replay_minus_reference": -0.0005945303210463659
+            },
+            {
+              "field": "/aggregate/mrr@10",
+              "reference": 0.43675679311272536,
+              "replay": 0.43668112725316116,
+              "replay_minus_reference": -7.566585956420013e-05
+            },
+            {
+              "field": "/aggregate/ndcg@10",
+              "reference": 0.2574081456707279,
+              "replay": 0.25707677772721843,
+              "replay_minus_reference": -0.0003313679435094641
+            },
+            {
+              "field": "/aggregate/novelty@10",
+              "reference": 8.390071613481414,
+              "replay": 8.39038128710652,
+              "replay_minus_reference": 0.0003096736251055887
+            },
+            {
+              "field": "/aggregate/precision@10",
+              "reference": 0.18135593220338994,
+              "replay": 0.1809322033898306,
+              "replay_minus_reference": -0.0004237288135593431
+            },
+            {
+              "field": "/aggregate/recall@10",
+              "reference": 0.2238053963252091,
+              "replay": 0.2236687096111577,
+              "replay_minus_reference": -0.00013668671405139832
+            }
+          ],
+          "settings_differences": []
+        }
+      ],
+      "all_user_top10_comparison": {
+        "EASE": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "SLIM": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "context": {
+          "different_order_positions": 44,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 24,
+          "users_with_set_difference": 4
+        },
+        "fixed_rrf": {
+          "different_order_positions": 255,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 130,
+          "users_with_set_difference": 26
+        },
+        "fixed_switch": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "meta": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "mixed": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "tuned_rrf": {
+          "different_order_positions": 242,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 118,
+          "users_with_set_difference": 15
+        },
+        "tuned_switch": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        }
+      },
+      "assessment_differences": [
+        {
+          "field": "/context/aggregate/exposure_entropy",
+          "reference": 0.6412586170875403,
+          "replay": 0.6412491049130421,
+          "replay_minus_reference": -9.51217449818298e-06
+        },
+        {
+          "field": "/context/aggregate/exposure_gini",
+          "reference": 0.947347978122095,
+          "replay": 0.9473517353941078,
+          "replay_minus_reference": 3.757272012738788e-06
+        },
+        {
+          "field": "/context/aggregate/item_group_exposure_gap",
+          "reference": 0.013368530141285579,
+          "replay": 0.013368342001496435,
+          "replay_minus_reference": -1.8813978914372642e-07
+        },
+        {
+          "field": "/context/item_exposure/entropy_bits",
+          "reference": 6.871702966633659,
+          "replay": 6.871601034533292,
+          "replay_minus_reference": -0.00010193210036746336
+        },
+        {
+          "field": "/context/item_exposure/gini",
+          "reference": 0.947347978122095,
+          "replay": 0.9473517353941078,
+          "replay_minus_reference": 3.757272012738788e-06
+        },
+        {
+          "field": "/context/item_exposure/group_mean_exposure_gap",
+          "reference": 0.013368530141285579,
+          "replay": 0.013368342001496435,
+          "replay_minus_reference": -1.8813978914372642e-07
+        },
+        {
+          "field": "/context/item_exposure/groups/head/fraction_total_exposure",
+          "reference": 0.9932480118079601,
+          "replay": 0.9932368531839966,
+          "replay_minus_reference": -1.115862396350309e-05
+        },
+        {
+          "field": "/context/item_exposure/groups/head/mean_item_exposure",
+          "reference": 0.013391339107085285,
+          "replay": 0.013391188662366856,
+          "replay_minus_reference": -1.5044471842959317e-07
+        },
+        {
+          "field": "/context/item_exposure/groups/tail/fraction_total_exposure",
+          "reference": 0.0067519881920398445,
+          "replay": 0.006763146816003564,
+          "replay_minus_reference": 1.1158623963719062e-05
+        },
+        {
+          "field": "/context/item_exposure/groups/tail/mean_item_exposure",
+          "reference": 2.2808965799706227e-05,
+          "replay": 2.2846660870420404e-05,
+          "replay_minus_reference": 3.7695070714177295e-08
+        },
+        {
+          "field": "/context/item_exposure/normalized_entropy",
+          "reference": 0.6412586170875403,
+          "replay": 0.6412491049130421,
+          "replay_minus_reference": -9.51217449818298e-06
+        },
+        {
+          "field": "/context/item_groups/head/discounted_exposure",
+          "reference": 0.9932480118079601,
+          "replay": 0.9932368531839966,
+          "replay_minus_reference": -1.115862396350309e-05
+        },
+        {
+          "field": "/context/item_groups/head/mean_item_exposure",
+          "reference": 0.013391339107085285,
+          "replay": 0.013391188662366856,
+          "replay_minus_reference": -1.5044471842959317e-07
+        },
+        {
+          "field": "/context/item_groups/tail/discounted_exposure",
+          "reference": 0.0067519881920398445,
+          "replay": 0.006763146816003564,
+          "replay_minus_reference": 1.1158623963719062e-05
+        },
+        {
+          "field": "/context/item_groups/tail/mean_item_exposure",
+          "reference": 2.2808965799706227e-05,
+          "replay": 2.2846660870420404e-05,
+          "replay_minus_reference": 3.7695070714177295e-08
+        },
+        {
+          "field": "/fixed_rrf/aggregate/activity_ndcg_gap",
+          "reference": 0.11271685452477853,
+          "replay": 0.11333719385358737,
+          "replay_minus_reference": 0.0006203393288088388
+        },
+        {
+          "field": "/fixed_rrf/aggregate/calibration_jsd",
+          "reference": 0.15311070391535725,
+          "replay": 0.15298768714208352,
+          "replay_minus_reference": -0.0001230167732737264
+        },
+        {
+          "field": "/fixed_rrf/aggregate/diversity",
+          "reference": 0.7947810734463276,
+          "replay": 0.794743857053179,
+          "replay_minus_reference": -3.7216393148686855e-05
+        },
+        {
+          "field": "/fixed_rrf/aggregate/exposure_entropy",
+          "reference": 0.6261676743928405,
+          "replay": 0.6260344949026445,
+          "replay_minus_reference": -0.0001331794901959782
+        },
+        {
+          "field": "/fixed_rrf/aggregate/exposure_gini",
+          "reference": 0.9528838713924168,
+          "replay": 0.952935237956841,
+          "replay_minus_reference": 5.13665644241712e-05
+        },
+        {
+          "field": "/fixed_rrf/aggregate/head_exposure",
+          "reference": 0.9898305084745763,
+          "replay": 0.9902542372881357,
+          "replay_minus_reference": 0.0004237288135593431
+        },
+        {
+          "field": "/fixed_rrf/aggregate/head_exposure_gap",
+          "reference": 0.7894737902819485,
+          "replay": 0.7898975190955079,
+          "replay_minus_reference": 0.0004237288135593431
+        },
+        {
+          "field": "/fixed_rrf/aggregate/head_recall",
+          "reference": 0.3633835045548983,
+          "replay": 0.3624256501487681,
+          "replay_minus_reference": -0.0009578544061302208
+        },
+        {
+          "field": "/fixed_rrf/aggregate/hit@10",
+          "reference": 0.7966101694915254,
+          "replay": 0.7923728813559322,
+          "replay_minus_reference": -0.004237288135593209
+        },
+        {
+          "field": "/fixed_rrf/aggregate/item_group_exposure_gap",
+          "reference": 0.01334277932910437,
+          "replay": 0.013347324571540899,
+          "replay_minus_reference": 4.545242436529082e-06
+        },
+        {
+          "field": "/fixed_rrf/aggregate/mrr@10",
+          "reference": 0.43801116491794456,
+          "replay": 0.4349744417541027,
+          "replay_minus_reference": -0.003036723163841848
+        },
+        {
+          "field": "/fixed_rrf/aggregate/ndcg@10",
+          "reference": 0.2666656949702718,
+          "replay": 0.26575089997952805,
+          "replay_minus_reference": -0.0009147949907437614
+        },
+        {
+          "field": "/fixed_rrf/aggregate/novelty@10",
+          "reference": 8.39594208576883,
+          "replay": 8.395067857453178,
+          "replay_minus_reference": -0.0008742283156522035
+        },
+        {
+          "field": "/fixed_rrf/aggregate/popularity_jsd",
+          "reference": 0.16018419446975402,
+          "replay": 0.16028057174874208,
+          "replay_minus_reference": 9.637727898806348e-05
+        },
+        {
+          "field": "/fixed_rrf/aggregate/recall@10",
+          "reference": 0.2610913039745212,
+          "replay": 0.2601496843888338,
+          "replay_minus_reference": -0.0009416195856873921
+        },
+        {
+          "field": "/fixed_rrf/aggregate/worst_activity_ndcg",
+          "reference": 0.21577512934436843,
+          "replay": 0.21490870100298726,
+          "replay_minus_reference": -0.0008664283413811757
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/entropy_bits",
+          "reference": 6.709988998320138,
+          "replay": 6.708561851965316,
+          "replay_minus_reference": -0.0014271463548221064
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/gini",
+          "reference": 0.9528838713924168,
+          "replay": 0.952935237956841,
+          "replay_minus_reference": 5.13665644241712e-05
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/group_mean_exposure_gap",
+          "reference": 0.01334277932910437,
+          "replay": 0.013347324571540899,
+          "replay_minus_reference": 4.545242436529082e-06
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/groups/head/fraction_total_exposure",
+          "reference": 0.9917207238738174,
+          "replay": 0.9919903034848301,
+          "replay_minus_reference": 0.00026957961101270467
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/groups/head/mean_item_exposure",
+          "reference": 0.013370747643123498,
+          "replay": 0.013374382215702054,
+          "replay_minus_reference": 3.634572578556372e-06
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/groups/tail/fraction_total_exposure",
+          "reference": 0.008279276126182265,
+          "replay": 0.008009696515169761,
+          "replay_minus_reference": -0.00026957961101250344
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/groups/tail/mean_item_exposure",
+          "reference": 2.7968314019128145e-05,
+          "replay": 2.705764416115484e-05,
+          "replay_minus_reference": -9.106698579733059e-07
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/normalized_entropy",
+          "reference": 0.6261676743928405,
+          "replay": 0.6260344949026445,
+          "replay_minus_reference": -0.0001331794901959782
+        },
+        {
+          "field": "/fixed_rrf/item_groups/head/discounted_exposure",
+          "reference": 0.9917207238738174,
+          "replay": 0.9919903034848301,
+          "replay_minus_reference": 0.00026957961101270467
+        },
+        {
+          "field": "/fixed_rrf/item_groups/head/exposure",
+          "reference": 0.9898305084745763,
+          "replay": 0.9902542372881356,
+          "replay_minus_reference": 0.0004237288135592321
+        },
+        {
+          "field": "/fixed_rrf/item_groups/head/mean_item_exposure",
+          "reference": 0.013370747643123498,
+          "replay": 0.013374382215702054,
+          "replay_minus_reference": 3.634572578556372e-06
+        },
+        {
+          "field": "/fixed_rrf/item_groups/head/recall@10",
+          "reference": 0.3633835045548983,
+          "replay": 0.3624256501487681,
+          "replay_minus_reference": -0.0009578544061302208
+        },
+        {
+          "field": "/fixed_rrf/item_groups/tail/discounted_exposure",
+          "reference": 0.008279276126182265,
+          "replay": 0.008009696515169761,
+          "replay_minus_reference": -0.00026957961101250344
+        },
+        {
+          "field": "/fixed_rrf/item_groups/tail/exposure",
+          "reference": 0.010169491525423728,
+          "replay": 0.009745762711864408,
+          "replay_minus_reference": -0.00042372881355932056
+        },
+        {
+          "field": "/fixed_rrf/item_groups/tail/mean_item_exposure",
+          "reference": 2.7968314019128145e-05,
+          "replay": 2.705764416115484e-05,
+          "replay_minus_reference": -9.106698579733059e-07
+        },
+        {
+          "field": "/fixed_rrf/user_groups/dense/mrr@10",
+          "reference": 0.5829941116231439,
+          "replay": 0.5816500256016385,
+          "replay_minus_reference": -0.0013440860215053752
+        },
+        {
+          "field": "/fixed_rrf/user_groups/dense/ndcg@10",
+          "reference": 0.32849198386914696,
+          "replay": 0.3282458948565746,
+          "replay_minus_reference": -0.00024608901257233695
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/calibration_jsd",
+          "reference": 0.14360156150109937,
+          "replay": 0.14330497308018192,
+          "replay_minus_reference": -0.0002965884209174541
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/diversity",
+          "reference": 0.787037389770723,
+          "replay": 0.7871410934744267,
+          "replay_minus_reference": 0.00010370370370371695
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/mrr@10",
+          "reference": 0.457899470899471,
+          "replay": 0.45078835978835985,
+          "replay_minus_reference": -0.007111111111111124
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/ndcg@10",
+          "reference": 0.21577512934436843,
+          "replay": 0.21490870100298726,
+          "replay_minus_reference": -0.0008664283413811757
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/novelty@10",
+          "reference": 8.375640599100036,
+          "replay": 8.375384959937689,
+          "replay_minus_reference": -0.00025563916234716544
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/precision@10",
+          "reference": 0.14266666666666666,
+          "replay": 0.144,
+          "replay_minus_reference": 0.0013333333333333253
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/recall@10",
+          "reference": 0.2208956228956229,
+          "replay": 0.22237710437710434,
+          "replay_minus_reference": 0.0014814814814814448
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/calibration_jsd",
+          "reference": 0.16468116286487627,
+          "replay": 0.16461259895655517,
+          "replay_minus_reference": -6.856390832110648e-05
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/diversity",
+          "reference": 0.7944206616428837,
+          "replay": 0.7942533803644913,
+          "replay_minus_reference": -0.00016728127839238383
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/head_exposure",
+          "reference": 0.9868686868686869,
+          "replay": 0.987878787878788,
+          "replay_minus_reference": 0.0010101010101011276
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/hit@10",
+          "reference": 0.6363636363636364,
+          "replay": 0.6262626262626263,
+          "replay_minus_reference": -0.010101010101010055
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/mrr@10",
+          "reference": 0.33214686548019884,
+          "replay": 0.3311367644700978,
+          "replay_minus_reference": -0.0010101010101010166
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/ndcg@10",
+          "reference": 0.26649965971989276,
+          "replay": 0.2651294377660296,
+          "replay_minus_reference": -0.00137022195386316
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/novelty@10",
+          "reference": 8.373312233640995,
+          "replay": 8.371421880657984,
+          "replay_minus_reference": -0.001890352983011212
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/popularity_jsd",
+          "reference": 0.13166508901206958,
+          "replay": 0.13189483686905126,
+          "replay_minus_reference": 0.00022974785698168243
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/precision@10",
+          "reference": 0.08686868686868686,
+          "replay": 0.08585858585858584,
+          "replay_minus_reference": -0.0010101010101010166
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/recall@10",
+          "reference": 0.3619528619528619,
+          "replay": 0.35858585858585856,
+          "replay_minus_reference": -0.0033670033670033517
+        },
+        {
+          "field": "/tuned_rrf/aggregate/activity_ndcg_gap",
+          "reference": 0.12504781925886707,
+          "replay": 0.12493385685379685,
+          "replay_minus_reference": -0.0001139624050702226
+        },
+        {
+          "field": "/tuned_rrf/aggregate/calibration_jsd",
+          "reference": 0.15525249702383517,
+          "replay": 0.1550899715855,
+          "replay_minus_reference": -0.0001625254383351704
+        },
+        {
+          "field": "/tuned_rrf/aggregate/coverage@10",
+          "reference": 0.13971462544589774,
+          "replay": 0.1403091557669441,
+          "replay_minus_reference": 0.0005945303210463659
+        },
+        {
+          "field": "/tuned_rrf/aggregate/diversity",
+          "reference": 0.801397744596897,
+          "replay": 0.8015282261680566,
+          "replay_minus_reference": 0.0001304815711595797
+        },
+        {
+          "field": "/tuned_rrf/aggregate/exposure_entropy",
+          "reference": 0.6275989105798986,
+          "replay": 0.6276474082173755,
+          "replay_minus_reference": 4.84976374769408e-05
+        },
+        {
+          "field": "/tuned_rrf/aggregate/exposure_gini",
+          "reference": 0.9518100668040014,
+          "replay": 0.9517778823535201,
+          "replay_minus_reference": -3.218445048125407e-05
+        },
+        {
+          "field": "/tuned_rrf/aggregate/item_group_exposure_gap",
+          "reference": 0.01329558985557812,
+          "replay": 0.013296137662823827,
+          "replay_minus_reference": 5.478072457060917e-07
+        },
+        {
+          "field": "/tuned_rrf/aggregate/mrr@10",
+          "reference": 0.44345069948883503,
+          "replay": 0.44274448479956946,
+          "replay_minus_reference": -0.0007062146892655718
+        },
+        {
+          "field": "/tuned_rrf/aggregate/ndcg@10",
+          "reference": 0.26934094103388684,
+          "replay": 0.2690248266830452,
+          "replay_minus_reference": -0.000316114350841612
+        },
+        {
+          "field": "/tuned_rrf/aggregate/novelty@10",
+          "reference": 8.40267873953259,
+          "replay": 8.402789281023601,
+          "replay_minus_reference": 0.00011054149101141775
+        },
+        {
+          "field": "/tuned_rrf/aggregate/worst_activity_ndcg",
+          "reference": 0.21219477480698326,
+          "replay": 0.21228778132645434,
+          "replay_minus_reference": 9.300651947108385e-05
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/entropy_bits",
+          "reference": 6.7253260708997304,
+          "replay": 6.72584576973955,
+          "replay_minus_reference": 0.0005196988398195046
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/gini",
+          "reference": 0.9518100668040014,
+          "replay": 0.9517778823535201,
+          "replay_minus_reference": -3.218445048125407e-05
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/group_mean_exposure_gap",
+          "reference": 0.01329558985557812,
+          "replay": 0.013296137662823827,
+          "replay_minus_reference": 5.478072457060917e-07
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/groups/head/fraction_total_exposure",
+          "reference": 0.9889219028879783,
+          "replay": 0.9889543934902445,
+          "replay_minus_reference": 3.2490602266177504e-05
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/groups/head/mean_item_exposure",
+          "reference": 0.013333012897646206,
+          "replay": 0.01333345094802996,
+          "replay_minus_reference": 4.3805038375463456e-07
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/groups/tail/fraction_total_exposure",
+          "reference": 0.011078097112021559,
+          "replay": 0.011045606509755663,
+          "replay_minus_reference": -3.249060226589648e-05
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/groups/tail/mean_item_exposure",
+          "reference": 3.74230420680856e-05,
+          "replay": 3.731328520613367e-05,
+          "replay_minus_reference": -1.0975686195193151e-07
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/normalized_entropy",
+          "reference": 0.6275989105798986,
+          "replay": 0.6276474082173755,
+          "replay_minus_reference": 4.84976374769408e-05
+        },
+        {
+          "field": "/tuned_rrf/item_groups/head/discounted_exposure",
+          "reference": 0.9889219028879783,
+          "replay": 0.9889543934902445,
+          "replay_minus_reference": 3.2490602266177504e-05
+        },
+        {
+          "field": "/tuned_rrf/item_groups/head/mean_item_exposure",
+          "reference": 0.013333012897646206,
+          "replay": 0.01333345094802996,
+          "replay_minus_reference": 4.3805038375463456e-07
+        },
+        {
+          "field": "/tuned_rrf/item_groups/tail/discounted_exposure",
+          "reference": 0.011078097112021559,
+          "replay": 0.011045606509755663,
+          "replay_minus_reference": -3.249060226589648e-05
+        },
+        {
+          "field": "/tuned_rrf/item_groups/tail/mean_item_exposure",
+          "reference": 3.74230420680856e-05,
+          "replay": 3.731328520613367e-05,
+          "replay_minus_reference": -1.0975686195193151e-07
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/calibration_jsd",
+          "reference": 0.14727682850802265,
+          "replay": 0.14730250938460285,
+          "replay_minus_reference": 2.5680876580197465e-05
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/diversity",
+          "reference": 0.8114196108550947,
+          "replay": 0.8113001365420722,
+          "replay_minus_reference": -0.00011947431302250511
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/ndcg@10",
+          "reference": 0.33724259406585033,
+          "replay": 0.3372216381802512,
+          "replay_minus_reference": -2.0955885599138746e-05
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/novelty@10",
+          "reference": 8.461320165120323,
+          "replay": 8.463837447304961,
+          "replay_minus_reference": 0.002517282184637537
+        },
+        {
+          "field": "/tuned_rrf/user_groups/medium/calibration_jsd",
+          "reference": 0.14507801616921395,
+          "replay": 0.14448876549916434,
+          "replay_minus_reference": -0.0005892506700496125
+        },
+        {
+          "field": "/tuned_rrf/user_groups/medium/diversity",
+          "reference": 0.7940656084656084,
+          "replay": 0.7942292768959435,
+          "replay_minus_reference": 0.00016366843033510659
+        },
+        {
+          "field": "/tuned_rrf/user_groups/medium/ndcg@10",
+          "reference": 0.21219477480698326,
+          "replay": 0.21228778132645434,
+          "replay_minus_reference": 9.300651947108385e-05
+        },
+        {
+          "field": "/tuned_rrf/user_groups/medium/novelty@10",
+          "reference": 8.385145571738576,
+          "replay": 8.38492274092078,
+          "replay_minus_reference": -0.00022283081779583824
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/calibration_jsd",
+          "reference": 0.16795530017612778,
+          "replay": 0.16799818484742723,
+          "replay_minus_reference": 4.28846712994535e-05
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/diversity",
+          "reference": 0.8006760728982949,
+          "replay": 0.8009379509379508,
+          "replay_minus_reference": 0.00026187803965593837
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/mrr@10",
+          "reference": 0.3444644861311528,
+          "replay": 0.3427809844476511,
+          "replay_minus_reference": -0.0016835016835017313
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/ndcg@10",
+          "reference": 0.2701092236504125,
+          "replay": 0.26929832253069724,
+          "replay_minus_reference": -0.0008109011197152682
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/novelty@10",
+          "reference": 8.379236509210486,
+          "replay": 8.37809235373337,
+          "replay_minus_reference": -0.0011441554771156603
+        }
+      ],
+      "cohort_sizes_identical": true,
+      "ordered_ids_identical": true,
+      "selected_candidates": {
+        "meta": {
+          "candidate_identical": true,
+          "development_differences": [],
+          "reference_candidate": "meta-1",
+          "replay_candidate": "meta-1",
+          "settings_differences": []
+        },
+        "mixed": {
+          "candidate_identical": true,
+          "development_differences": [],
+          "reference_candidate": "mixed-0",
+          "replay_candidate": "mixed-0",
+          "settings_differences": []
+        },
+        "tuned_rrf": {
+          "candidate_identical": true,
+          "development_differences": [
+            {
+              "field": "/aggregate/mrr@10",
+              "reference": 0.4616474979822436,
+              "replay": 0.4615466101694914,
+              "replay_minus_reference": -0.00010088781275219283
+            },
+            {
+              "field": "/aggregate/ndcg@10",
+              "reference": 0.2637536025123908,
+              "replay": 0.26374052255320374,
+              "replay_minus_reference": -1.3079959187034529e-05
+            },
+            {
+              "field": "/aggregate/novelty@10",
+              "reference": 8.403818243420345,
+              "replay": 8.404090052691911,
+              "replay_minus_reference": 0.0002718092715667808
+            }
+          ],
+          "reference_candidate": "tuned_rrf-0",
+          "replay_candidate": "tuned_rrf-0",
+          "settings_differences": []
+        },
+        "tuned_switch": {
+          "candidate_identical": true,
+          "development_differences": [],
+          "reference_candidate": "tuned_switch-1",
+          "replay_candidate": "tuned_switch-1",
+          "settings_differences": [
+            {
+              "field": "/meta_fit_group_means/0/2026-NGCF-1",
+              "reference": 0.19918566102631552,
+              "replay": 0.19867271029088698,
+              "replay_minus_reference": -0.0005129507354285356
+            },
+            {
+              "field": "/meta_fit_group_means/1/2026-NGCF-1",
+              "reference": 0.20343763948429885,
+              "replay": 0.20295438896412635,
+              "replay_minus_reference": -0.0004832505201725068
+            },
+            {
+              "field": "/meta_fit_group_means/2/2026-NGCF-1",
+              "reference": 0.31431820193313265,
+              "replay": 0.31181675542425524,
+              "replay_minus_reference": -0.002501446508877403
+            }
+          ]
+        }
+      }
+    },
+    "2027": {
+      "all_candidates": [
+        {
+          "candidate_id": "mixed-0",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "mixed-1",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "mixed-2",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "meta-0",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "meta-1",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "meta-2",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "meta-3",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "tuned_switch-0",
+          "development_differences": [],
+          "settings_differences": [
+            {
+              "field": "/meta_fit_group_means/0/2027-NGCF-1",
+              "reference": 0.22674019519576388,
+              "replay": 0.22562619426300404,
+              "replay_minus_reference": -0.0011140009327598455
+            },
+            {
+              "field": "/meta_fit_group_means/1/2027-NGCF-1",
+              "reference": 0.2519656642413868,
+              "replay": 0.25335176895701766,
+              "replay_minus_reference": 0.001386104715630887
+            }
+          ]
+        },
+        {
+          "candidate_id": "tuned_switch-1",
+          "development_differences": [],
+          "settings_differences": [
+            {
+              "field": "/meta_fit_group_means/0/2027-NGCF-1",
+              "reference": 0.22630112762338545,
+              "replay": 0.22457223215397254,
+              "replay_minus_reference": -0.0017288954694129055
+            },
+            {
+              "field": "/meta_fit_group_means/1/2027-NGCF-1",
+              "reference": 0.20161890763297716,
+              "replay": 0.203212090133876,
+              "replay_minus_reference": 0.0015931825008988487
+            },
+            {
+              "field": "/meta_fit_group_means/2/2027-NGCF-1",
+              "reference": 0.28562085253788266,
+              "replay": 0.28622815473228364,
+              "replay_minus_reference": 0.0006073021944009716
+            }
+          ]
+        },
+        {
+          "candidate_id": "tuned_switch-2",
+          "development_differences": [],
+          "settings_differences": [
+            {
+              "field": "/meta_fit_group_means/0/2027-NGCF-1",
+              "reference": 0.21138291399762216,
+              "replay": 0.20910242643456578,
+              "replay_minus_reference": -0.002280487563056377
+            },
+            {
+              "field": "/meta_fit_group_means/1/2027-NGCF-1",
+              "reference": 0.24183937082755014,
+              "replay": 0.241872251707771,
+              "replay_minus_reference": 3.288088022085356e-05
+            },
+            {
+              "field": "/meta_fit_group_means/2/2027-NGCF-1",
+              "reference": 0.1777238561234334,
+              "replay": 0.1803524973443066,
+              "replay_minus_reference": 0.0026286412208732235
+            },
+            {
+              "field": "/meta_fit_group_means/3/2027-NGCF-1",
+              "reference": 0.3172984553851857,
+              "replay": 0.3175911279762033,
+              "replay_minus_reference": 0.00029267259101761756
+            }
+          ]
+        },
+        {
+          "candidate_id": "tuned_rrf-0",
+          "development_differences": [
+            {
+              "field": "/aggregate/coverage@10",
+              "reference": 0.1313912009512485,
+              "replay": 0.13198573127229488,
+              "replay_minus_reference": 0.0005945303210463659
+            },
+            {
+              "field": "/aggregate/mrr@10",
+              "reference": 0.42965933548560664,
+              "replay": 0.42887745493677687,
+              "replay_minus_reference": -0.000781880548829772
+            },
+            {
+              "field": "/aggregate/ndcg@10",
+              "reference": 0.2561769071244725,
+              "replay": 0.2554798178583496,
+              "replay_minus_reference": -0.0006970892661228856
+            },
+            {
+              "field": "/aggregate/novelty@10",
+              "reference": 8.344147532910977,
+              "replay": 8.345505779180316,
+              "replay_minus_reference": 0.001358246269338892
+            },
+            {
+              "field": "/aggregate/precision@10",
+              "reference": 0.1766949152542375,
+              "replay": 0.17627118644067818,
+              "replay_minus_reference": -0.00042372881355931535
+            },
+            {
+              "field": "/aggregate/recall@10",
+              "reference": 0.2334509347911439,
+              "replay": 0.23330969185329076,
+              "replay_minus_reference": -0.00014124293785314213
+            }
+          ],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "tuned_rrf-1",
+          "development_differences": [
+            {
+              "field": "/aggregate/coverage@10",
+              "reference": 0.12366230677764566,
+              "replay": 0.12306777645659929,
+              "replay_minus_reference": -0.0005945303210463659
+            },
+            {
+              "field": "/aggregate/ndcg@10",
+              "reference": 0.2541938981868179,
+              "replay": 0.25368519176396503,
+              "replay_minus_reference": -0.0005087064228528893
+            },
+            {
+              "field": "/aggregate/novelty@10",
+              "reference": 8.334970208372287,
+              "replay": 8.334572662533036,
+              "replay_minus_reference": -0.0003975458392506681
+            },
+            {
+              "field": "/aggregate/precision@10",
+              "reference": 0.17457627118644098,
+              "replay": 0.17415254237288166,
+              "replay_minus_reference": -0.00042372881355931535
+            },
+            {
+              "field": "/aggregate/recall@10",
+              "reference": 0.22785244551933248,
+              "replay": 0.22761704062291063,
+              "replay_minus_reference": -0.00023540489642184803
+            }
+          ],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "tuned_rrf-2",
+          "development_differences": [
+            {
+              "field": "/aggregate/ndcg@10",
+              "reference": 0.25904565345828406,
+              "replay": 0.2589900522178039,
+              "replay_minus_reference": -5.5601240480152025e-05
+            }
+          ],
+          "settings_differences": []
+        }
+      ],
+      "all_user_top10_comparison": {
+        "EASE": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "SLIM": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "context": {
+          "different_order_positions": 156,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 83,
+          "users_with_set_difference": 14
+        },
+        "fixed_rrf": {
+          "different_order_positions": 139,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 71,
+          "users_with_set_difference": 13
+        },
+        "fixed_switch": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "meta": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "mixed": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "tuned_rrf": {
+          "different_order_positions": 140,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 71,
+          "users_with_set_difference": 10
+        },
+        "tuned_switch": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        }
+      },
+      "assessment_differences": [
+        {
+          "field": "/context/aggregate/activity_ndcg_gap",
+          "reference": 0.08804337021824274,
+          "replay": 0.08789099282996388,
+          "replay_minus_reference": -0.0001523773882788626
+        },
+        {
+          "field": "/context/aggregate/calibration_jsd",
+          "reference": 0.1314049544565767,
+          "replay": 0.13139113810854725,
+          "replay_minus_reference": -1.3816348029466186e-05
+        },
+        {
+          "field": "/context/aggregate/diversity",
+          "reference": 0.7898829701372074,
+          "replay": 0.789771545152901,
+          "replay_minus_reference": -0.00011142498430638526
+        },
+        {
+          "field": "/context/aggregate/exposure_entropy",
+          "reference": 0.6775759333486566,
+          "replay": 0.6775336561617097,
+          "replay_minus_reference": -4.2277186946937384e-05
+        },
+        {
+          "field": "/context/aggregate/exposure_gini",
+          "reference": 0.9308486175305096,
+          "replay": 0.930865461149219,
+          "replay_minus_reference": 1.684361870935014e-05
+        },
+        {
+          "field": "/context/aggregate/item_group_exposure_gap",
+          "reference": 0.013146676487624435,
+          "replay": 0.013146676487624433,
+          "replay_minus_reference": -1.734723475976807e-18
+        },
+        {
+          "field": "/context/aggregate/ndcg@10",
+          "reference": 0.2723773092251144,
+          "replay": 0.2724308995777718,
+          "replay_minus_reference": 5.3590352657395535e-05
+        },
+        {
+          "field": "/context/aggregate/novelty@10",
+          "reference": 8.553811887754403,
+          "replay": 8.553761912645347,
+          "replay_minus_reference": -4.997510905546676e-05
+        },
+        {
+          "field": "/context/aggregate/worst_activity_ndcg",
+          "reference": 0.2426414336993767,
+          "replay": 0.24279381108765558,
+          "replay_minus_reference": 0.0001523773882788626
+        },
+        {
+          "field": "/context/item_exposure/entropy_bits",
+          "reference": 7.260877947275858,
+          "replay": 7.260424906547479,
+          "replay_minus_reference": -0.00045304072837826226
+        },
+        {
+          "field": "/context/item_exposure/gini",
+          "reference": 0.9308486175305096,
+          "replay": 0.930865461149219,
+          "replay_minus_reference": 1.684361870935014e-05
+        },
+        {
+          "field": "/context/item_exposure/group_mean_exposure_gap",
+          "reference": 0.013146676487624435,
+          "replay": 0.013146676487624433,
+          "replay_minus_reference": -1.734723475976807e-18
+        },
+        {
+          "field": "/context/item_exposure/groups/head/mean_item_exposure",
+          "reference": 0.013213935323390732,
+          "replay": 0.01321393532339073,
+          "replay_minus_reference": -1.734723475976807e-18
+        },
+        {
+          "field": "/context/item_exposure/normalized_entropy",
+          "reference": 0.6775759333486566,
+          "replay": 0.6775336561617097,
+          "replay_minus_reference": -4.2277186946937384e-05
+        },
+        {
+          "field": "/context/item_groups/head/mean_item_exposure",
+          "reference": 0.013213935323390732,
+          "replay": 0.01321393532339073,
+          "replay_minus_reference": -1.734723475976807e-18
+        },
+        {
+          "field": "/context/user_groups/medium/ndcg@10",
+          "reference": 0.2426414336993767,
+          "replay": 0.24279381108765558,
+          "replay_minus_reference": 0.0001523773882788626
+        },
+        {
+          "field": "/context/user_groups/sparse/calibration_jsd",
+          "reference": 0.14236809169891293,
+          "replay": 0.14232574548936802,
+          "replay_minus_reference": -4.2346209544907865e-05
+        },
+        {
+          "field": "/context/user_groups/sparse/diversity",
+          "reference": 0.7825637325637326,
+          "replay": 0.7822222222222222,
+          "replay_minus_reference": -0.00034151034151042037
+        },
+        {
+          "field": "/context/user_groups/sparse/novelty@10",
+          "reference": 8.462620235323808,
+          "replay": 8.462467064859691,
+          "replay_minus_reference": -0.0001531704641166698
+        },
+        {
+          "field": "/fixed_rrf/aggregate/activity_ndcg_gap",
+          "reference": 0.1095054620057496,
+          "replay": 0.11005216037597829,
+          "replay_minus_reference": 0.0005466983702286932
+        },
+        {
+          "field": "/fixed_rrf/aggregate/calibration_jsd",
+          "reference": 0.13937181010454688,
+          "replay": 0.13940757361124212,
+          "replay_minus_reference": 3.5763506695235536e-05
+        },
+        {
+          "field": "/fixed_rrf/aggregate/diversity",
+          "reference": 0.7992848175051566,
+          "replay": 0.7990227333871401,
+          "replay_minus_reference": -0.0002620841180164257
+        },
+        {
+          "field": "/fixed_rrf/aggregate/exposure_entropy",
+          "reference": 0.6247600939206763,
+          "replay": 0.6247651260114288,
+          "replay_minus_reference": 5.032090752421503e-06
+        },
+        {
+          "field": "/fixed_rrf/aggregate/exposure_gini",
+          "reference": 0.9535971737389639,
+          "replay": 0.9535921513677594,
+          "replay_minus_reference": -5.022371204477238e-06
+        },
+        {
+          "field": "/fixed_rrf/aggregate/head_recall",
+          "reference": 0.33707598586234155,
+          "replay": 0.33746783539212205,
+          "replay_minus_reference": 0.0003918495297804969
+        },
+        {
+          "field": "/fixed_rrf/aggregate/hit@10",
+          "reference": 0.788135593220339,
+          "replay": 0.7923728813559322,
+          "replay_minus_reference": 0.004237288135593209
+        },
+        {
+          "field": "/fixed_rrf/aggregate/mrr@10",
+          "reference": 0.4408494753833737,
+          "replay": 0.44056698950766754,
+          "replay_minus_reference": -0.00028248587570617323
+        },
+        {
+          "field": "/fixed_rrf/aggregate/ndcg@10",
+          "reference": 0.2603023809539947,
+          "replay": 0.2604784363613565,
+          "replay_minus_reference": 0.00017605540736176373
+        },
+        {
+          "field": "/fixed_rrf/aggregate/novelty@10",
+          "reference": 8.386401800983407,
+          "replay": 8.386230525361036,
+          "replay_minus_reference": -0.00017127562237106986
+        },
+        {
+          "field": "/fixed_rrf/aggregate/precision@10",
+          "reference": 0.17330508474576292,
+          "replay": 0.17372881355932224,
+          "replay_minus_reference": 0.00042372881355931535
+        },
+        {
+          "field": "/fixed_rrf/aggregate/recall@10",
+          "reference": 0.24566069980105348,
+          "replay": 0.24581763639866805,
+          "replay_minus_reference": 0.00015693659761456535
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/entropy_bits",
+          "reference": 6.694905419482201,
+          "replay": 6.6949593431754355,
+          "replay_minus_reference": 5.392369323420354e-05
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/gini",
+          "reference": 0.9535971737389639,
+          "replay": 0.9535921513677594,
+          "replay_minus_reference": -5.022371204477238e-06
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/groups/tail/fraction_total_exposure",
+          "reference": 0.004838299745052862,
+          "replay": 0.004838299745052861,
+          "replay_minus_reference": -8.673617379884035e-19
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/normalized_entropy",
+          "reference": 0.6247600939206763,
+          "replay": 0.6247651260114288,
+          "replay_minus_reference": 5.032090752421503e-06
+        },
+        {
+          "field": "/fixed_rrf/item_groups/head/hits",
+          "reference": 408,
+          "replay": 409,
+          "replay_minus_reference": 1
+        },
+        {
+          "field": "/fixed_rrf/item_groups/head/recall@10",
+          "reference": 0.33707598586234155,
+          "replay": 0.33746783539212205,
+          "replay_minus_reference": 0.0003918495297804969
+        },
+        {
+          "field": "/fixed_rrf/item_groups/tail/discounted_exposure",
+          "reference": 0.004838299745052862,
+          "replay": 0.004838299745052861,
+          "replay_minus_reference": -8.673617379884035e-19
+        },
+        {
+          "field": "/fixed_rrf/user_groups/dense/calibration_jsd",
+          "reference": 0.1373748982922259,
+          "replay": 0.13761268071706528,
+          "replay_minus_reference": 0.00023778242483937784
+        },
+        {
+          "field": "/fixed_rrf/user_groups/dense/diversity",
+          "reference": 0.8125410749094959,
+          "replay": 0.8122020328599275,
+          "replay_minus_reference": -0.00033904204956836104
+        },
+        {
+          "field": "/fixed_rrf/user_groups/dense/hit@10",
+          "reference": 0.9473684210526315,
+          "replay": 0.9605263157894737,
+          "replay_minus_reference": 0.013157894736842146
+        },
+        {
+          "field": "/fixed_rrf/user_groups/dense/mrr@10",
+          "reference": 0.6243786549707603,
+          "replay": 0.6235014619883041,
+          "replay_minus_reference": -0.0008771929824561431
+        },
+        {
+          "field": "/fixed_rrf/user_groups/dense/ndcg@10",
+          "reference": 0.3312864502015392,
+          "replay": 0.3318331485717679,
+          "replay_minus_reference": 0.0005466983702286932
+        },
+        {
+          "field": "/fixed_rrf/user_groups/dense/novelty@10",
+          "reference": 8.376762734668347,
+          "replay": 8.376521490566763,
+          "replay_minus_reference": -0.00024124410158421483
+        },
+        {
+          "field": "/fixed_rrf/user_groups/dense/precision@10",
+          "reference": 0.3013157894736842,
+          "replay": 0.30263157894736836,
+          "replay_minus_reference": 0.001315789473684159
+        },
+        {
+          "field": "/fixed_rrf/user_groups/dense/recall@10",
+          "reference": 0.1673656894331031,
+          "replay": 0.16785301886780096,
+          "replay_minus_reference": 0.0004873294346978696
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/calibration_jsd",
+          "reference": 0.12858674286930896,
+          "replay": 0.1285350387148805,
+          "replay_minus_reference": -5.170415442845577e-05
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/diversity",
+          "reference": 0.7947112258558043,
+          "replay": 0.7942388602027158,
+          "replay_minus_reference": -0.0004723656530885023
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/novelty@10",
+          "reference": 8.412439977019543,
+          "replay": 8.412644705936943,
+          "replay_minus_reference": 0.00020472891739942156
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/calibration_jsd",
+          "reference": 0.15296825008196424,
+          "replay": 0.15289890161585848,
+          "replay_minus_reference": -6.934846610576195e-05
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/diversity",
+          "reference": 0.7911306947021233,
+          "replay": 0.7911712361712362,
+          "replay_minus_reference": 4.0541469112920225e-05
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/novelty@10",
+          "reference": 8.36784855980088,
+          "replay": 8.367341040381357,
+          "replay_minus_reference": -0.0005075194195232058
+        },
+        {
+          "field": "/tuned_rrf/aggregate/activity_ndcg_gap",
+          "reference": 0.09802851553296621,
+          "replay": 0.09993443804116992,
+          "replay_minus_reference": 0.0019059225082037057
+        },
+        {
+          "field": "/tuned_rrf/aggregate/calibration_jsd",
+          "reference": 0.1369871999118579,
+          "replay": 0.1371257795040393,
+          "replay_minus_reference": 0.0001385795921814148
+        },
+        {
+          "field": "/tuned_rrf/aggregate/diversity",
+          "reference": 0.7931959017128509,
+          "replay": 0.7927862971930769,
+          "replay_minus_reference": -0.00040960451977400947
+        },
+        {
+          "field": "/tuned_rrf/aggregate/exposure_entropy",
+          "reference": 0.6255022578480282,
+          "replay": 0.6255792230786634,
+          "replay_minus_reference": 7.696523063527305e-05
+        },
+        {
+          "field": "/tuned_rrf/aggregate/exposure_gini",
+          "reference": 0.9534669117864885,
+          "replay": 0.9534390120144985,
+          "replay_minus_reference": -2.7899771989914335e-05
+        },
+        {
+          "field": "/tuned_rrf/aggregate/head_recall",
+          "reference": 0.34125436112447644,
+          "replay": 0.34164621065425693,
+          "replay_minus_reference": 0.0003918495297804969
+        },
+        {
+          "field": "/tuned_rrf/aggregate/hit@10",
+          "reference": 0.8008474576271186,
+          "replay": 0.8050847457627118,
+          "replay_minus_reference": 0.004237288135593209
+        },
+        {
+          "field": "/tuned_rrf/aggregate/mrr@10",
+          "reference": 0.4325564971751413,
+          "replay": 0.43507364810330906,
+          "replay_minus_reference": 0.0025171509281677884
+        },
+        {
+          "field": "/tuned_rrf/aggregate/ndcg@10",
+          "reference": 0.2599499630338193,
+          "replay": 0.26056467443905695,
+          "replay_minus_reference": 0.0006147114052376668
+        },
+        {
+          "field": "/tuned_rrf/aggregate/novelty@10",
+          "reference": 8.387241684910085,
+          "replay": 8.387198876263717,
+          "replay_minus_reference": -4.280864636818649e-05
+        },
+        {
+          "field": "/tuned_rrf/aggregate/precision@10",
+          "reference": 0.17372881355932226,
+          "replay": 0.1741525423728816,
+          "replay_minus_reference": 0.0004237288135593431
+        },
+        {
+          "field": "/tuned_rrf/aggregate/recall@10",
+          "reference": 0.24897890693647284,
+          "replay": 0.2491358435340874,
+          "replay_minus_reference": 0.00015693659761456535
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/entropy_bits",
+          "reference": 6.7028584199182415,
+          "replay": 6.703683176404301,
+          "replay_minus_reference": 0.000824756486059286
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/gini",
+          "reference": 0.9534669117864885,
+          "replay": 0.9534390120144985,
+          "replay_minus_reference": -2.7899771989914335e-05
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/normalized_entropy",
+          "reference": 0.6255022578480282,
+          "replay": 0.6255792230786634,
+          "replay_minus_reference": 7.696523063527305e-05
+        },
+        {
+          "field": "/tuned_rrf/item_groups/head/hits",
+          "reference": 409,
+          "replay": 410,
+          "replay_minus_reference": 1
+        },
+        {
+          "field": "/tuned_rrf/item_groups/head/recall@10",
+          "reference": 0.34125436112447644,
+          "replay": 0.34164621065425693,
+          "replay_minus_reference": 0.0003918495297804969
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/calibration_jsd",
+          "reference": 0.13445173129258725,
+          "replay": 0.13468951371742657,
+          "replay_minus_reference": 0.00023778242483932233
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/diversity",
+          "reference": 0.8073231690336953,
+          "replay": 0.8069841269841268,
+          "replay_minus_reference": -0.00033904204956847206
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/hit@10",
+          "reference": 0.9473684210526315,
+          "replay": 0.9605263157894737,
+          "replay_minus_reference": 0.013157894736842146
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/mrr@10",
+          "reference": 0.586017126148705,
+          "replay": 0.5939118629908103,
+          "replay_minus_reference": 0.007894736842105288
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/ndcg@10",
+          "reference": 0.32240169969669036,
+          "replay": 0.32430762220489406,
+          "replay_minus_reference": 0.0019059225082037057
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/novelty@10",
+          "reference": 8.375997622139403,
+          "replay": 8.375756378037817,
+          "replay_minus_reference": -0.0002412441015859912
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/precision@10",
+          "reference": 0.29736842105263156,
+          "replay": 0.2986842105263158,
+          "replay_minus_reference": 0.0013157894736842146
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/recall@10",
+          "reference": 0.1662295373214519,
+          "replay": 0.16671686675614975,
+          "replay_minus_reference": 0.00048732943469784185
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/calibration_jsd",
+          "reference": 0.14955697459802333,
+          "replay": 0.14974701770798468,
+          "replay_minus_reference": 0.00019004310996134643
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/diversity",
+          "reference": 0.7851288394145537,
+          "replay": 0.7842080670652098,
+          "replay_minus_reference": -0.0009207723493438458
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/mrr@10",
+          "reference": 0.2572459286745001,
+          "replay": 0.2571686250257678,
+          "replay_minus_reference": -7.730364873226314e-05
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/ndcg@10",
+          "reference": 0.23665828329147784,
+          "replay": 0.23666116356436875,
+          "replay_minus_reference": 2.88027289091497e-06
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/novelty@10",
+          "reference": 8.366265075195397,
+          "replay": 8.366371980535366,
+          "replay_minus_reference": 0.00010690533996893237
+        }
+      ],
+      "cohort_sizes_identical": true,
+      "ordered_ids_identical": true,
+      "selected_candidates": {
+        "meta": {
+          "candidate_identical": true,
+          "development_differences": [],
+          "reference_candidate": "meta-1",
+          "replay_candidate": "meta-1",
+          "settings_differences": []
+        },
+        "mixed": {
+          "candidate_identical": true,
+          "development_differences": [],
+          "reference_candidate": "mixed-0",
+          "replay_candidate": "mixed-0",
+          "settings_differences": []
+        },
+        "tuned_rrf": {
+          "candidate_identical": true,
+          "development_differences": [
+            {
+              "field": "/aggregate/ndcg@10",
+              "reference": 0.25904565345828406,
+              "replay": 0.2589900522178039,
+              "replay_minus_reference": -5.5601240480152025e-05
+            }
+          ],
+          "reference_candidate": "tuned_rrf-2",
+          "replay_candidate": "tuned_rrf-2",
+          "settings_differences": []
+        },
+        "tuned_switch": {
+          "candidate_identical": true,
+          "development_differences": [],
+          "reference_candidate": "tuned_switch-1",
+          "replay_candidate": "tuned_switch-1",
+          "settings_differences": [
+            {
+              "field": "/meta_fit_group_means/0/2027-NGCF-1",
+              "reference": 0.22630112762338545,
+              "replay": 0.22457223215397254,
+              "replay_minus_reference": -0.0017288954694129055
+            },
+            {
+              "field": "/meta_fit_group_means/1/2027-NGCF-1",
+              "reference": 0.20161890763297716,
+              "replay": 0.203212090133876,
+              "replay_minus_reference": 0.0015931825008988487
+            },
+            {
+              "field": "/meta_fit_group_means/2/2027-NGCF-1",
+              "reference": 0.28562085253788266,
+              "replay": 0.28622815473228364,
+              "replay_minus_reference": 0.0006073021944009716
+            }
+          ]
+        }
+      }
+    },
+    "2028": {
+      "all_candidates": [
+        {
+          "candidate_id": "mixed-0",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "mixed-1",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "mixed-2",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "meta-0",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "meta-1",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "meta-2",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "meta-3",
+          "development_differences": [],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "tuned_switch-0",
+          "development_differences": [],
+          "settings_differences": [
+            {
+              "field": "/meta_fit_group_means/0/2028-NGCF-1",
+              "reference": 0.206476002704089,
+              "replay": 0.20709748078665824,
+              "replay_minus_reference": 0.0006214780825692379
+            },
+            {
+              "field": "/meta_fit_group_means/1/2028-NGCF-1",
+              "reference": 0.2589374249701178,
+              "replay": 0.25918645050109107,
+              "replay_minus_reference": 0.0002490255309732792
+            }
+          ]
+        },
+        {
+          "candidate_id": "tuned_switch-1",
+          "development_differences": [],
+          "settings_differences": [
+            {
+              "field": "/meta_fit_group_means/0/2028-NGCF-1",
+              "reference": 0.1983213036636149,
+              "replay": 0.19889435194747832,
+              "replay_minus_reference": 0.0005730482838634254
+            },
+            {
+              "field": "/meta_fit_group_means/1/2028-NGCF-1",
+              "reference": 0.19308796077633536,
+              "replay": 0.19426879836553665,
+              "replay_minus_reference": 0.001180837589201289
+            },
+            {
+              "field": "/meta_fit_group_means/2/2028-NGCF-1",
+              "reference": 0.3004122351346585,
+              "replay": 0.30006045704201967,
+              "replay_minus_reference": -0.0003517780926388103
+            }
+          ]
+        },
+        {
+          "candidate_id": "tuned_switch-2",
+          "development_differences": [],
+          "settings_differences": [
+            {
+              "field": "/meta_fit_group_means/0/2028-NGCF-1",
+              "reference": 0.1999038293522874,
+              "replay": 0.20070012552215072,
+              "replay_minus_reference": 0.0007962961698633197
+            },
+            {
+              "field": "/meta_fit_group_means/1/2028-NGCF-1",
+              "reference": 0.2128234863686496,
+              "replay": 0.21327612305066962,
+              "replay_minus_reference": 0.00045263668202003005
+            },
+            {
+              "field": "/meta_fit_group_means/2/2028-NGCF-1",
+              "reference": 0.20302688184020762,
+              "replay": 0.20591108882335202,
+              "replay_minus_reference": 0.0028842069831443995
+            },
+            {
+              "field": "/meta_fit_group_means/3/2028-NGCF-1",
+              "reference": 0.3153138892927774,
+              "replay": 0.31290577352614496,
+              "replay_minus_reference": -0.002408115766632468
+            }
+          ]
+        },
+        {
+          "candidate_id": "tuned_rrf-0",
+          "development_differences": [
+            {
+              "field": "/aggregate/mrr@10",
+              "reference": 0.39045937584073165,
+              "replay": 0.38859295130481564,
+              "replay_minus_reference": -0.0018664245359160114
+            },
+            {
+              "field": "/aggregate/ndcg@10",
+              "reference": 0.24183749700392104,
+              "replay": 0.24067286426163076,
+              "replay_minus_reference": -0.0011646327422902836
+            },
+            {
+              "field": "/aggregate/novelty@10",
+              "reference": 8.394335086831788,
+              "replay": 8.394280000424365,
+              "replay_minus_reference": -5.5086407423132755e-05
+            },
+            {
+              "field": "/aggregate/precision@10",
+              "reference": 0.16144067796610193,
+              "replay": 0.16101694915254258,
+              "replay_minus_reference": -0.0004237288135593431
+            },
+            {
+              "field": "/aggregate/recall@10",
+              "reference": 0.2230476370351959,
+              "replay": 0.22281223213877405,
+              "replay_minus_reference": -0.00023540489642184803
+            }
+          ],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "tuned_rrf-1",
+          "development_differences": [
+            {
+              "field": "/aggregate/coverage@10",
+              "reference": 0.13793103448275862,
+              "replay": 0.13852556480380498,
+              "replay_minus_reference": 0.0005945303210463659
+            },
+            {
+              "field": "/aggregate/mrr@10",
+              "reference": 0.3938004439063761,
+              "replay": 0.3933716707021792,
+              "replay_minus_reference": -0.00042877320419687504
+            },
+            {
+              "field": "/aggregate/ndcg@10",
+              "reference": 0.24206896188693725,
+              "replay": 0.24216994698039024,
+              "replay_minus_reference": 0.00010098509345299322
+            },
+            {
+              "field": "/aggregate/novelty@10",
+              "reference": 8.37891558158214,
+              "replay": 8.37921089000568,
+              "replay_minus_reference": 0.0002953084235404191
+            },
+            {
+              "field": "/aggregate/precision@10",
+              "reference": 0.1610169491525426,
+              "replay": 0.16144067796610193,
+              "replay_minus_reference": 0.00042372881355931535
+            },
+            {
+              "field": "/aggregate/recall@10",
+              "reference": 0.22451069408396299,
+              "replay": 0.22465680746794897,
+              "replay_minus_reference": 0.00014611338398598517
+            }
+          ],
+          "settings_differences": []
+        },
+        {
+          "candidate_id": "tuned_rrf-2",
+          "development_differences": [
+            {
+              "field": "/aggregate/coverage@10",
+              "reference": 0.133769322235434,
+              "replay": 0.13436385255648037,
+              "replay_minus_reference": 0.0005945303210463659
+            },
+            {
+              "field": "/aggregate/mrr@10",
+              "reference": 0.39918112725316096,
+              "replay": 0.39893899650255565,
+              "replay_minus_reference": -0.0002421307506053072
+            },
+            {
+              "field": "/aggregate/ndcg@10",
+              "reference": 0.24209059666416713,
+              "replay": 0.2423645299556294,
+              "replay_minus_reference": 0.00027393329146227496
+            },
+            {
+              "field": "/aggregate/novelty@10",
+              "reference": 8.372605042619368,
+              "replay": 8.372823304645337,
+              "replay_minus_reference": 0.00021826202596919586
+            },
+            {
+              "field": "/aggregate/precision@10",
+              "reference": 0.1610169491525426,
+              "replay": 0.16144067796610195,
+              "replay_minus_reference": 0.0004237288135593431
+            },
+            {
+              "field": "/aggregate/recall@10",
+              "reference": 0.22395101126258307,
+              "replay": 0.22409712464656906,
+              "replay_minus_reference": 0.00014611338398598517
+            }
+          ],
+          "settings_differences": []
+        }
+      ],
+      "all_user_top10_comparison": {
+        "EASE": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "SLIM": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "context": {
+          "different_order_positions": 48,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 24,
+          "users_with_set_difference": 2
+        },
+        "fixed_rrf": {
+          "different_order_positions": 173,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 87,
+          "users_with_set_difference": 18
+        },
+        "fixed_switch": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "meta": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "mixed": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        },
+        "tuned_rrf": {
+          "different_order_positions": 191,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 97,
+          "users_with_set_difference": 22
+        },
+        "tuned_switch": {
+          "different_order_positions": 0,
+          "positions": 9430,
+          "users": 943,
+          "users_with_order_difference": 0,
+          "users_with_set_difference": 0
+        }
+      },
+      "assessment_differences": [
+        {
+          "field": "/context/aggregate/activity_ndcg_gap",
+          "reference": 0.12583612061209745,
+          "replay": 0.12587123308216994,
+          "replay_minus_reference": 3.511247007248475e-05
+        },
+        {
+          "field": "/context/aggregate/exposure_entropy",
+          "reference": 0.6628631127579034,
+          "replay": 0.6628676285480205,
+          "replay_minus_reference": 4.515790117065599e-06
+        },
+        {
+          "field": "/context/aggregate/exposure_gini",
+          "reference": 0.9384173065104359,
+          "replay": 0.9384153478285638,
+          "replay_minus_reference": -1.9586818720274124e-06
+        },
+        {
+          "field": "/context/aggregate/mrr@10",
+          "reference": 0.4567056766209308,
+          "replay": 0.4567645278450363,
+          "replay_minus_reference": 5.8851224105482824e-05
+        },
+        {
+          "field": "/context/aggregate/ndcg@10",
+          "reference": 0.28588377053995867,
+          "replay": 0.2859324321589974,
+          "replay_minus_reference": 4.8661619038714576e-05
+        },
+        {
+          "field": "/context/item_exposure/entropy_bits",
+          "reference": 7.103215921055903,
+          "replay": 7.103264312091153,
+          "replay_minus_reference": 4.83910352500061e-05
+        },
+        {
+          "field": "/context/item_exposure/gini",
+          "reference": 0.9384173065104359,
+          "replay": 0.9384153478285638,
+          "replay_minus_reference": -1.9586818720274124e-06
+        },
+        {
+          "field": "/context/item_exposure/groups/head/fraction_total_exposure",
+          "reference": 0.9838102160202732,
+          "replay": 0.9838102160202734,
+          "replay_minus_reference": 2.220446049250313e-16
+        },
+        {
+          "field": "/context/item_exposure/normalized_entropy",
+          "reference": 0.6628631127579034,
+          "replay": 0.6628676285480205,
+          "replay_minus_reference": 4.515790117065599e-06
+        },
+        {
+          "field": "/context/item_groups/head/discounted_exposure",
+          "reference": 0.9838102160202732,
+          "replay": 0.9838102160202734,
+          "replay_minus_reference": 2.220446049250313e-16
+        },
+        {
+          "field": "/context/user_groups/dense/ndcg@10",
+          "reference": 0.36807424937130356,
+          "replay": 0.36810936184137605,
+          "replay_minus_reference": 3.511247007248475e-05
+        },
+        {
+          "field": "/context/user_groups/sparse/mrr@10",
+          "reference": 0.3073320413436692,
+          "replay": 0.30749354005167956,
+          "replay_minus_reference": 0.0001614987080103547
+        },
+        {
+          "field": "/context/user_groups/sparse/ndcg@10",
+          "reference": 0.252269087065605,
+          "replay": 0.2523720022613922,
+          "replay_minus_reference": 0.00010291519578720099
+        },
+        {
+          "field": "/fixed_rrf/aggregate/activity_ndcg_gap",
+          "reference": 0.14372844174437285,
+          "replay": 0.1434229593100008,
+          "replay_minus_reference": -0.0003054824343720619
+        },
+        {
+          "field": "/fixed_rrf/aggregate/calibration_jsd",
+          "reference": 0.14642056832477657,
+          "replay": 0.14575533300321614,
+          "replay_minus_reference": -0.0006652353215604312
+        },
+        {
+          "field": "/fixed_rrf/aggregate/coverage@10",
+          "reference": 0.12901307966706302,
+          "replay": 0.12960760998810938,
+          "replay_minus_reference": 0.0005945303210463659
+        },
+        {
+          "field": "/fixed_rrf/aggregate/diversity",
+          "reference": 0.8001516680118376,
+          "replay": 0.80056598062954,
+          "replay_minus_reference": 0.000414312617702417
+        },
+        {
+          "field": "/fixed_rrf/aggregate/exposure_entropy",
+          "reference": 0.6204484087761893,
+          "replay": 0.6206216347035536,
+          "replay_minus_reference": 0.00017322592736424003
+        },
+        {
+          "field": "/fixed_rrf/aggregate/exposure_gini",
+          "reference": 0.9551800641001654,
+          "replay": 0.9551244896125224,
+          "replay_minus_reference": -5.557448764303974e-05
+        },
+        {
+          "field": "/fixed_rrf/aggregate/mrr@10",
+          "reference": 0.46737288135593213,
+          "replay": 0.46714924670433144,
+          "replay_minus_reference": -0.0002236346516006904
+        },
+        {
+          "field": "/fixed_rrf/aggregate/ndcg@10",
+          "reference": 0.2848674065656459,
+          "replay": 0.2847635060945803,
+          "replay_minus_reference": -0.00010390047106562106
+        },
+        {
+          "field": "/fixed_rrf/aggregate/novelty@10",
+          "reference": 8.390809808620455,
+          "replay": 8.391314288132314,
+          "replay_minus_reference": 0.0005044795118589462
+        },
+        {
+          "field": "/fixed_rrf/aggregate/worst_activity_ndcg",
+          "reference": 0.22786123169954345,
+          "replay": 0.2279095075545041,
+          "replay_minus_reference": 4.827585496064435e-05
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/entropy_bits",
+          "reference": 6.648701565359931,
+          "replay": 6.650557847813293,
+          "replay_minus_reference": 0.0018562824533621125
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/gini",
+          "reference": 0.9551800641001654,
+          "replay": 0.9551244896125224,
+          "replay_minus_reference": -5.557448764303974e-05
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/groups/head/fraction_total_exposure",
+          "reference": 0.9914406132828756,
+          "replay": 0.9914406132828758,
+          "replay_minus_reference": 2.220446049250313e-16
+        },
+        {
+          "field": "/fixed_rrf/item_exposure/normalized_entropy",
+          "reference": 0.6204484087761893,
+          "replay": 0.6206216347035536,
+          "replay_minus_reference": 0.00017322592736424003
+        },
+        {
+          "field": "/fixed_rrf/item_groups/head/discounted_exposure",
+          "reference": 0.9914406132828756,
+          "replay": 0.9914406132828758,
+          "replay_minus_reference": 2.220446049250313e-16
+        },
+        {
+          "field": "/fixed_rrf/user_groups/dense/mrr@10",
+          "reference": 0.6603703703703704,
+          "replay": 0.6597037037037037,
+          "replay_minus_reference": -0.0006666666666667043
+        },
+        {
+          "field": "/fixed_rrf/user_groups/dense/ndcg@10",
+          "reference": 0.3715896734439163,
+          "replay": 0.3713324668645049,
+          "replay_minus_reference": -0.00025720657941141756
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/mrr@10",
+          "reference": 0.4437195767195767,
+          "replay": 0.44386772486772486,
+          "replay_minus_reference": 0.000148148148148175
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/ndcg@10",
+          "reference": 0.22786123169954345,
+          "replay": 0.2279095075545041,
+          "replay_minus_reference": 4.827585496064435e-05
+        },
+        {
+          "field": "/fixed_rrf/user_groups/medium/novelty@10",
+          "reference": 8.324623128885754,
+          "replay": 8.324590386080095,
+          "replay_minus_reference": -3.274280565968013e-05
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/calibration_jsd",
+          "reference": 0.16304896372887864,
+          "replay": 0.16122343424180582,
+          "replay_minus_reference": -0.001825529487072819
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/diversity",
+          "reference": 0.7949867724867723,
+          "replay": 0.7961237233911649,
+          "replay_minus_reference": 0.0011369509043925863
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/mrr@10",
+          "reference": 0.3196889996308601,
+          "replay": 0.31952750092284976,
+          "replay_minus_reference": -0.0001614987080103547
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/ndcg@10",
+          "reference": 0.2589522100434067,
+          "replay": 0.25884929484761937,
+          "replay_minus_reference": -0.00010291519578731201
+        },
+        {
+          "field": "/fixed_rrf/user_groups/sparse/novelty@10",
+          "reference": 8.416725652731568,
+          "replay": 8.418138593141133,
+          "replay_minus_reference": 0.0014129404095655218
+        },
+        {
+          "field": "/tuned_rrf/aggregate/activity_ndcg_gap",
+          "reference": 0.1509748226174251,
+          "replay": 0.15164206050153764,
+          "replay_minus_reference": 0.0006672378841125481
+        },
+        {
+          "field": "/tuned_rrf/aggregate/calibration_jsd",
+          "reference": 0.14411833511568486,
+          "replay": 0.14440285122997473,
+          "replay_minus_reference": 0.0002845161142898678
+        },
+        {
+          "field": "/tuned_rrf/aggregate/diversity",
+          "reference": 0.7955706887274684,
+          "replay": 0.795510604430096,
+          "replay_minus_reference": -6.008429737236476e-05
+        },
+        {
+          "field": "/tuned_rrf/aggregate/exposure_entropy",
+          "reference": 0.6212065167589965,
+          "replay": 0.6214907729644299,
+          "replay_minus_reference": 0.00028425620543337526
+        },
+        {
+          "field": "/tuned_rrf/aggregate/exposure_gini",
+          "reference": 0.9550645277967764,
+          "replay": 0.9549682507248908,
+          "replay_minus_reference": -9.627707188564205e-05
+        },
+        {
+          "field": "/tuned_rrf/aggregate/head_recall",
+          "reference": 0.35130987194811053,
+          "replay": 0.3516983723366109,
+          "replay_minus_reference": 0.00038850038850035684
+        },
+        {
+          "field": "/tuned_rrf/aggregate/ndcg@10",
+          "reference": 0.28459082516784795,
+          "replay": 0.2848028711055955,
+          "replay_minus_reference": 0.00021204593774754033
+        },
+        {
+          "field": "/tuned_rrf/aggregate/novelty@10",
+          "reference": 8.386239132323155,
+          "replay": 8.387353986940731,
+          "replay_minus_reference": 0.0011148546175760998
+        },
+        {
+          "field": "/tuned_rrf/aggregate/precision@10",
+          "reference": 0.18771186440677998,
+          "replay": 0.18813559322033932,
+          "replay_minus_reference": 0.0004237288135593431
+        },
+        {
+          "field": "/tuned_rrf/aggregate/recall@10",
+          "reference": 0.2582151498533897,
+          "replay": 0.2584799803618643,
+          "replay_minus_reference": 0.00026483050847458944
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/entropy_bits",
+          "reference": 6.656825421688201,
+          "replay": 6.65987150038112,
+          "replay_minus_reference": 0.003046078692919174
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/gini",
+          "reference": 0.9550645277967764,
+          "replay": 0.9549682507248908,
+          "replay_minus_reference": -9.627707188564205e-05
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/groups/head/fraction_total_exposure",
+          "reference": 0.9925214760402581,
+          "replay": 0.9925214760402583,
+          "replay_minus_reference": 2.220446049250313e-16
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/groups/tail/fraction_total_exposure",
+          "reference": 0.007478523959741326,
+          "replay": 0.00747852395974133,
+          "replay_minus_reference": 3.469446951953614e-18
+        },
+        {
+          "field": "/tuned_rrf/item_exposure/normalized_entropy",
+          "reference": 0.6212065167589965,
+          "replay": 0.6214907729644299,
+          "replay_minus_reference": 0.00028425620543337526
+        },
+        {
+          "field": "/tuned_rrf/item_groups/head/discounted_exposure",
+          "reference": 0.9925214760402581,
+          "replay": 0.9925214760402583,
+          "replay_minus_reference": 2.220446049250313e-16
+        },
+        {
+          "field": "/tuned_rrf/item_groups/head/hits",
+          "reference": 437,
+          "replay": 438,
+          "replay_minus_reference": 1
+        },
+        {
+          "field": "/tuned_rrf/item_groups/head/recall@10",
+          "reference": 0.35130987194811053,
+          "replay": 0.3516983723366109,
+          "replay_minus_reference": 0.00038850038850035684
+        },
+        {
+          "field": "/tuned_rrf/item_groups/tail/discounted_exposure",
+          "reference": 0.007478523959741326,
+          "replay": 0.00747852395974133,
+          "replay_minus_reference": 3.469446951953614e-18
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/calibration_jsd",
+          "reference": 0.1380430765865744,
+          "replay": 0.13800201590994626,
+          "replay_minus_reference": -4.106067662812407e-05
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/diversity",
+          "reference": 0.8057964726631394,
+          "replay": 0.8056977072310406,
+          "replay_minus_reference": -9.876543209874633e-05
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/ndcg@10",
+          "reference": 0.37584299112459424,
+          "replay": 0.3765102290087068,
+          "replay_minus_reference": 0.0006672378841125481
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/novelty@10",
+          "reference": 8.429760785506401,
+          "replay": 8.430540735507362,
+          "replay_minus_reference": 0.0007799500009610938
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/precision@10",
+          "reference": 0.35466666666666663,
+          "replay": 0.3559999999999999,
+          "replay_minus_reference": 0.0013333333333332975
+        },
+        {
+          "field": "/tuned_rrf/user_groups/dense/recall@10",
+          "reference": 0.17870603806103247,
+          "replay": 0.1795393713943658,
+          "replay_minus_reference": 0.0008333333333333248
+        },
+        {
+          "field": "/tuned_rrf/user_groups/medium/calibration_jsd",
+          "reference": 0.13379616244436962,
+          "replay": 0.1339117456926264,
+          "replay_minus_reference": 0.00011558324825677868
+        },
+        {
+          "field": "/tuned_rrf/user_groups/medium/diversity",
+          "reference": 0.7907477954144622,
+          "replay": 0.7913058201058202,
+          "replay_minus_reference": 0.0005580246913580167
+        },
+        {
+          "field": "/tuned_rrf/user_groups/medium/novelty@10",
+          "reference": 8.320093966336062,
+          "replay": 8.321733700164156,
+          "replay_minus_reference": 0.0016397338280942364
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/calibration_jsd",
+          "reference": 0.15841842046489332,
+          "replay": 0.1591341950009429,
+          "replay_minus_reference": 0.0007157745360495682
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/diversity",
+          "reference": 0.790858865510028,
+          "replay": 0.7902934662236986,
+          "replay_minus_reference": -0.0005653992863294821
+        },
+        {
+          "field": "/tuned_rrf/user_groups/sparse/novelty@10",
+          "reference": 8.405968940000934,
+          "replay": 8.406918119100565,
+          "replay_minus_reference": 0.0009491790996314364
+        }
+      ],
+      "cohort_sizes_identical": true,
+      "ordered_ids_identical": true,
+      "selected_candidates": {
+        "meta": {
+          "candidate_identical": true,
+          "development_differences": [],
+          "reference_candidate": "meta-0",
+          "replay_candidate": "meta-0",
+          "settings_differences": []
+        },
+        "mixed": {
+          "candidate_identical": true,
+          "development_differences": [],
+          "reference_candidate": "mixed-0",
+          "replay_candidate": "mixed-0",
+          "settings_differences": []
+        },
+        "tuned_rrf": {
+          "candidate_identical": true,
+          "development_differences": [
+            {
+              "field": "/aggregate/coverage@10",
+              "reference": 0.133769322235434,
+              "replay": 0.13436385255648037,
+              "replay_minus_reference": 0.0005945303210463659
+            },
+            {
+              "field": "/aggregate/mrr@10",
+              "reference": 0.39918112725316096,
+              "replay": 0.39893899650255565,
+              "replay_minus_reference": -0.0002421307506053072
+            },
+            {
+              "field": "/aggregate/ndcg@10",
+              "reference": 0.24209059666416713,
+              "replay": 0.2423645299556294,
+              "replay_minus_reference": 0.00027393329146227496
+            },
+            {
+              "field": "/aggregate/novelty@10",
+              "reference": 8.372605042619368,
+              "replay": 8.372823304645337,
+              "replay_minus_reference": 0.00021826202596919586
+            },
+            {
+              "field": "/aggregate/precision@10",
+              "reference": 0.1610169491525426,
+              "replay": 0.16144067796610195,
+              "replay_minus_reference": 0.0004237288135593431
+            },
+            {
+              "field": "/aggregate/recall@10",
+              "reference": 0.22395101126258307,
+              "replay": 0.22409712464656906,
+              "replay_minus_reference": 0.00014611338398598517
+            }
+          ],
+          "reference_candidate": "tuned_rrf-2",
+          "replay_candidate": "tuned_rrf-2",
+          "settings_differences": []
+        },
+        "tuned_switch": {
+          "candidate_identical": true,
+          "development_differences": [],
+          "reference_candidate": "tuned_switch-0",
+          "replay_candidate": "tuned_switch-0",
+          "settings_differences": [
+            {
+              "field": "/meta_fit_group_means/0/2028-NGCF-1",
+              "reference": 0.206476002704089,
+              "replay": 0.20709748078665824,
+              "replay_minus_reference": 0.0006214780825692379
+            },
+            {
+              "field": "/meta_fit_group_means/1/2028-NGCF-1",
+              "reference": 0.2589374249701178,
+              "replay": 0.25918645050109107,
+              "replay_minus_reference": 0.0002490255309732792
+            }
+          ]
+        }
+      }
+    }
+  },
+  "source_archive_sha256": "426c2c02805f792a15b5e6bff340ed703d91fcebe8cd71bc6a6a1334fd099965",
+  "status": "comparison_complete_with_reported_drift"
+}

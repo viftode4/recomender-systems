@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "source": "Git index exported to an empty temporary directory",
+  "checks": [
+    {
+      "command": "make check",
+      "exit_code": 0
+    },
+    {
+      "command": "make handoff",
+      "exit_code": 0
+    }
+  ],
+  "navigation_documents_checked": 17,
+  "missing_local_navigation_links": [],
+  "ignored_runtime_directories_required": false,
+  "limitations": "Uses already installed Python3.11, NumPy and Markdown; no network installation or training performed."
+}

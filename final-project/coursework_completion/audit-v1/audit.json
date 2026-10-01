@@ -1,0 +1,122 @@
+{
+  "assessment_manifest_sha256": "041308b82cf2c67952be9dba0d2557e876f7905623d53bae6d529cfffe52d170",
+  "assessment_role_seed_pairs_replayed": 27,
+  "candidate_development_metrics_replayed": 39,
+  "checks_completed": 43239,
+  "fresh_holdout": false,
+  "limitations": [
+    "The 236 calibration users per seed were used in earlier policy fitting and exploration.",
+    "Seeds reuse people and observations; means are descriptive and are not independent population replications.",
+    "This audit replays saved candidate metrics and selected model equations; it does not repeat the hyperparameter search.",
+    "Original source score models are treated as hash-verified frozen inputs; their training is not rerun.",
+    "The four completion families are established coursework methods, not claimed novel architectures."
+  ],
+  "maximum_absolute_error": 7.105427357601002e-15,
+  "original_test_read": false,
+  "schema_version": 1,
+  "scientific_public_artifacts": {
+    "aggregates.json": "592e374ec9216771538333200e277db023d6c506a051b313798107179bf791a5",
+    "protocol.json": "bca1af0a3d7d760a59217a697dd6bf8d78b3e589534570a3c3436c172b58e4ce",
+    "provenance.json": "041308b82cf2c67952be9dba0d2557e876f7905623d53bae6d529cfffe52d170"
+  },
+  "scientific_source_sha256": {
+    "coursework_completion/PROTOCOL.md": "ba29795bcad01384e2f3dcf49a17351efc211538753d7e81a3bf89945d9cd1f4",
+    "coursework_completion/__init__.py": "29501f9c624a213cd81d4e46f3e2508159bd5b084c6b8205a0e84516f6bce457",
+    "coursework_completion/models.py": "18ebd6e94f9db9c032d2a61f33e81a000fd818607f2c11b32cd8b60f9d40e835",
+    "coursework_completion/run.py": "48c57af681584383aed10d20e356e7e68cd0c9697f107a5253c06a6d293a8600",
+    "exploratory/categorical_reconstruction/group_analysis.py": "ee2ed8533db3827f83e7993c6436f512776e895bdea70bddb331bf8afa4222f3",
+    "freeze.py": "915c8c05a35f780b2544f789a8920877e0c0292bf35833b00878b0f9a1d8a79f",
+    "hybrid_constraints.py": "bf28f7e1ce7b8a4967beb359306422909e849e4e0f019d6963eef21ab936f7b9",
+    "metrics.py": "2edc0f7fc2d1d3d63015ebd01223d7d010db14dca68bd99c123ac8f173acb807",
+    "societal.py": "4a819a364ab6ba3363d87c9960925edde7659ead6fba4f5796b78e5605d40fdc",
+    "study.py": "860859f0f572b24bfb13296a9c1b86bdcd7fe08b79837f0ab90f83b6e1b951a5"
+  },
+  "seconds": 135.1586117919942,
+  "seeds": [
+    {
+      "assessment_positive_pairs": 2136,
+      "assessment_users": 236,
+      "candidate_development_metrics_replayed": 13,
+      "seed": 2026,
+      "selected_candidates": {
+        "meta": "meta-1",
+        "mixed": "mixed-0",
+        "tuned_rrf": "tuned_rrf-0",
+        "tuned_switch": "tuned_switch-1"
+      },
+      "selected_model_rankings_replayed": [
+        "EASE",
+        "SLIM",
+        "context",
+        "fixed_switch",
+        "fixed_rrf",
+        "mixed",
+        "meta",
+        "tuned_switch",
+        "tuned_rrf"
+      ]
+    },
+    {
+      "assessment_positive_pairs": 2214,
+      "assessment_users": 236,
+      "candidate_development_metrics_replayed": 13,
+      "seed": 2027,
+      "selected_candidates": {
+        "meta": "meta-1",
+        "mixed": "mixed-0",
+        "tuned_rrf": "tuned_rrf-2",
+        "tuned_switch": "tuned_switch-1"
+      },
+      "selected_model_rankings_replayed": [
+        "EASE",
+        "SLIM",
+        "context",
+        "fixed_switch",
+        "fixed_rrf",
+        "mixed",
+        "meta",
+        "tuned_switch",
+        "tuned_rrf"
+      ]
+    },
+    {
+      "assessment_positive_pairs": 2317,
+      "assessment_users": 236,
+      "candidate_development_metrics_replayed": 13,
+      "seed": 2028,
+      "selected_candidates": {
+        "meta": "meta-0",
+        "mixed": "mixed-0",
+        "tuned_rrf": "tuned_rrf-2",
+        "tuned_switch": "tuned_switch-0"
+      },
+      "selected_model_rankings_replayed": [
+        "EASE",
+        "SLIM",
+        "context",
+        "fixed_switch",
+        "fixed_rrf",
+        "mixed",
+        "meta",
+        "tuned_switch",
+        "tuned_rrf"
+      ]
+    }
+  ],
+  "selected_model_equations_replayed": [
+    "EASE",
+    "SLIM",
+    "context",
+    "fixed_switch",
+    "fixed_rrf",
+    "mixed",
+    "meta",
+    "tuned_switch",
+    "tuned_rrf"
+  ],
+  "selection_barrier_sha256": "81898c0244dff65ba7fd2b556d53884939e86657b56ddcb5f59c9be8f53ebfe6",
+  "status": "passed",
+  "study": "coursework_hybrid_completion_reused_calibration",
+  "valid_mask_array_read": false,
+  "verifier_source_sha256": "3083c6c2fae4c785261732822f9ae2d411199808998e2596effb38e37c7f20ad"
+}

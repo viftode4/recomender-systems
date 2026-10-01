@@ -1,0 +1,1947 @@
+{
+  "all_fresh_manifests_completed_before_reference_arrays_opened": true,
+  "cause_of_any_numerical_drift": "Not established by this comparison.",
+  "definitions": {
+    "alignment": "Equal user/item token sets, explicitly reordered to the original frozen catalog; no IDs are published.",
+    "canonical_array_hash": "SHA256 of sorted-key JSON shape/dtype metadata, NUL, and C-order little-endian float64 values.",
+    "file_hash_interpretation": "NPZ byte equality is distinct from numerical array equality and recommendation equality.",
+    "full_ranking_difference": "Different positions in the complete eligible ordering, plus per-item absolute rank displacement.",
+    "no_accuracy_claim": "No relevance labels are opened; identical top10 order implies identical top10 rank metrics under any fixed truth.",
+    "numeric_scope": "All saved score cells including PAD and seen items; eligible-only statistics separately exclude both.",
+    "ranking_scope": "All 943 users per expert; candidates exclude TRAIN observations and PAD, retaining VALID eligibility.",
+    "tie_rule": "Descending score then original catalog index, using stable sorting.",
+    "top10_substitution": "Number of original top10 items missing from rebuilt top10, summed over users."
+  },
+  "elapsed_seconds": 13.400270832993556,
+  "experts": [
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2026-ExactPop-0",
+      "kind": "standard",
+      "model": "ExactPop",
+      "original_prediction_file_sha256": "dbcc83b0127f1b65361e1bc956aefec27256c63af188d3650275b428fe2d0825",
+      "original_score_array_canonical_sha256": "5a4f7b6967e599a99f050ee1e609db817809ca3506bddcc344615a555c884473",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "5a4f7b6967e599a99f050ee1e609db817809ca3506bddcc344615a555c884473",
+      "rebuilt_manifest_sha256": "7a5165e7e5f907fad83a86717d5d3e0471933f69ce823c8a739810a0bba96790",
+      "rebuilt_prediction_file_sha256": "dbcc83b0127f1b65361e1bc956aefec27256c63af188d3650275b428fe2d0825",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2026-Random-0",
+      "kind": "standard",
+      "model": "Random",
+      "original_prediction_file_sha256": "416a4fdd5ba22895548fb564b0077baaaa90f28f035d59fffa76415329718ce3",
+      "original_score_array_canonical_sha256": "dc6a273f101139c34f3fe19a9ddaa08e2d5bf60bdccfe381f40ce1419d91ac31",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "dc6a273f101139c34f3fe19a9ddaa08e2d5bf60bdccfe381f40ce1419d91ac31",
+      "rebuilt_manifest_sha256": "d5ef32fe5358ec370eae22b990403499008918fa0b5b57ca22cfe020f8f65b96",
+      "rebuilt_prediction_file_sha256": "416a4fdd5ba22895548fb564b0077baaaa90f28f035d59fffa76415329718ce3",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2026-EASE-1",
+      "kind": "standard",
+      "model": "EASE",
+      "original_prediction_file_sha256": "9f7807608f9e7bc00d5b2ab61d629e5d417b1dfd37f4ec13ea44796bf2d458bc",
+      "original_score_array_canonical_sha256": "99f79eafc5fd610b21c6376c29216bbbc9288fdad1390694e0bb33e826220dba",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "99f79eafc5fd610b21c6376c29216bbbc9288fdad1390694e0bb33e826220dba",
+      "rebuilt_manifest_sha256": "1a5d389c0928fbe3aa11177efc7408a139a9447e88973de5068db156971b47d9",
+      "rebuilt_prediction_file_sha256": "9f7807608f9e7bc00d5b2ab61d629e5d417b1dfd37f4ec13ea44796bf2d458bc",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2026-ItemKNN-2",
+      "kind": "standard",
+      "model": "ItemKNN",
+      "original_prediction_file_sha256": "d1c0ee65d64913d0623628859205321faf6df2fe30d3696ee659f30fd60d5178",
+      "original_score_array_canonical_sha256": "3cc8c579aa3dc7ae7afe25c03efb4947f4433c90bf3d1b8730c390947da283be",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "3cc8c579aa3dc7ae7afe25c03efb4947f4433c90bf3d1b8730c390947da283be",
+      "rebuilt_manifest_sha256": "99bf24013a6342459c18eeacff84dc7f9a4788da4669a3c096136ceadab3934e",
+      "rebuilt_prediction_file_sha256": "d1c0ee65d64913d0623628859205321faf6df2fe30d3696ee659f30fd60d5178",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2026-BPR-1",
+      "kind": "standard",
+      "model": "BPR",
+      "original_prediction_file_sha256": "7639ca9960c1ad14193942dc45060cad80e1ee4bd3d487bd1acd573ad1c20dae",
+      "original_score_array_canonical_sha256": "d0f50df60bf0ee3fad9387701da23628ad48a963614b57895c8e28e60c5353f3",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "d0f50df60bf0ee3fad9387701da23628ad48a963614b57895c8e28e60c5353f3",
+      "rebuilt_manifest_sha256": "99c5ac029f42cfa956b7b09155df3b62a5ea9559915c634aad843d69caa4f859",
+      "rebuilt_prediction_file_sha256": "7639ca9960c1ad14193942dc45060cad80e1ee4bd3d487bd1acd573ad1c20dae",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2026-UserKNN-0",
+      "kind": "standard",
+      "model": "UserKNN",
+      "original_prediction_file_sha256": "05d7d8583bb59b57efc7335657aaf627a006e0bfec12f91e52b7a34be12944f9",
+      "original_score_array_canonical_sha256": "4ebf3713858eb794220f0f7d04c87d9c2f4767d1a994ce3d40b19523b36db8a6",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "4ebf3713858eb794220f0f7d04c87d9c2f4767d1a994ce3d40b19523b36db8a6",
+      "rebuilt_manifest_sha256": "cf905cd56886992d8be6b38746ab13a0484b187823758479b9a808f72d92cd3f",
+      "rebuilt_prediction_file_sha256": "05d7d8583bb59b57efc7335657aaf627a006e0bfec12f91e52b7a34be12944f9",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2026-SLIMElastic-2",
+      "kind": "standard",
+      "model": "SLIMElastic",
+      "original_prediction_file_sha256": "acbb0506ffad43000e7105bfbcefcf49b172b457646ad117d9fd6f823e876214",
+      "original_score_array_canonical_sha256": "b78c7e98e908a5b6cce9582de2f82b0a44df179909d318b57ff97a16c22a50b0",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "b78c7e98e908a5b6cce9582de2f82b0a44df179909d318b57ff97a16c22a50b0",
+      "rebuilt_manifest_sha256": "5f9873369426bf3bb4a52516e7f4c7f4a68bde112ef22476fcf2db71cffe57a0",
+      "rebuilt_prediction_file_sha256": "acbb0506ffad43000e7105bfbcefcf49b172b457646ad117d9fd6f823e876214",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2026-FISMCorrected-0",
+      "kind": "standard",
+      "model": "FISMCorrected",
+      "original_prediction_file_sha256": "897d22d0a77bd4af301761c1606c20c5eace1cf459846db6ed87d1f99fc17040",
+      "original_score_array_canonical_sha256": "ac4bfb958271f094a566c993ed11315568f054ee7b61732545f7d4407706ca31",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "ac4bfb958271f094a566c993ed11315568f054ee7b61732545f7d4407706ca31",
+      "rebuilt_manifest_sha256": "9009f4a9f66f90868c630db91d6e50c51cc22cd9a2fd74ea1a0710543a1d14bb",
+      "rebuilt_prediction_file_sha256": "897d22d0a77bd4af301761c1606c20c5eace1cf459846db6ed87d1f99fc17040",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2026-GenreContent-1",
+      "kind": "standard",
+      "model": "GenreContent",
+      "original_prediction_file_sha256": "526a17872b7f52686d1c0ae224015c7de6ea8f038ff5b383fa0ca5ec8b7d98e9",
+      "original_score_array_canonical_sha256": "0cf447b4e56585b90e78de0ee6e5ec6cb393ac2ec654987c56a6d19eeb6d069f",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "0cf447b4e56585b90e78de0ee6e5ec6cb393ac2ec654987c56a6d19eeb6d069f",
+      "rebuilt_manifest_sha256": "5ecebebdb755ebd7e870617105a8a79da819c2a7708d0c667538b2d152e6a089",
+      "rebuilt_prediction_file_sha256": "526a17872b7f52686d1c0ae224015c7de6ea8f038ff5b383fa0ca5ec8b7d98e9",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 1134088,
+        "max_absolute_error": 3.814697265625e-06,
+        "root_mean_squared_error": 2.8359886149669686e-07
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 66,
+        "maximum_absolute_item_rank_displacement": 1,
+        "mean_absolute_item_rank_displacement": 4.384455643259431e-05,
+        "users_with_any_order_difference": 32
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 1091241,
+        "max_absolute_error": 3.814697265625e-06,
+        "root_mean_squared_error": 2.761579119808463e-07
+      },
+      "expert": "2026-LightGCN-200",
+      "kind": "standard",
+      "model": "LightGCN",
+      "original_prediction_file_sha256": "089eed1edd493fcc680b0d39ddcb89c9f453cbf462cdb1eaa80a5beaaa82f9aa",
+      "original_score_array_canonical_sha256": "bd685b7259b032d3b00ad171b8742fd19cd817da35279da5d096eef59ac4fc99",
+      "prediction_file_bytes_identical": false,
+      "rebuilt_aligned_score_array_canonical_sha256": "dbdf7149988aef490146b7b6fb025907b4085a7650b99f30062e7a52fbbe8f06",
+      "rebuilt_manifest_sha256": "899e1208d782a84c7dec9aac805dddef061c43d7f3fac5d63b6403f3baa7d77d",
+      "rebuilt_prediction_file_sha256": "711006f7675983c3dca036d5f3e77ed9ec2ce31721139c7306feaf089ac1db88",
+      "scores_numerically_identical": false,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2026-NeuMF-0",
+      "kind": "standard",
+      "model": "NeuMF",
+      "original_prediction_file_sha256": "f364087e47cda5145c7b91932a7978c4bb7ea256c7087752ac681e461d75b447",
+      "original_score_array_canonical_sha256": "84052d01c45bd694d7a6b699231aadb73984d210289d5be3aea72ee3c2bf0ea3",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "84052d01c45bd694d7a6b699231aadb73984d210289d5be3aea72ee3c2bf0ea3",
+      "rebuilt_manifest_sha256": "0007355f1a61c0ce6464bd1bd69f69fad6c52d94cf5b81380c3487c125276289",
+      "rebuilt_prediction_file_sha256": "f364087e47cda5145c7b91932a7978c4bb7ea256c7087752ac681e461d75b447",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 1587065,
+        "max_absolute_error": 0.2161942720413208,
+        "root_mean_squared_error": 0.023215411335024683
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 1365716,
+        "maximum_absolute_item_rank_displacement": 180,
+        "mean_absolute_item_rank_displacement": 6.832174995582329,
+        "users_with_any_order_difference": 943
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 1505314,
+        "max_absolute_error": 0.2161942720413208,
+        "root_mean_squared_error": 0.023434940907987024
+      },
+      "expert": "2026-NGCF-1",
+      "kind": "standard",
+      "model": "NGCF",
+      "original_prediction_file_sha256": "caf2a1506e44c7a6889a515e9dedab68546193a3a3ce217e57d9d7a0729ce7c2",
+      "original_score_array_canonical_sha256": "0029f34a92c887e904c509c6cde26a2c910507733a252d2b17e6e735aa6dca88",
+      "prediction_file_bytes_identical": false,
+      "rebuilt_aligned_score_array_canonical_sha256": "7584e07df55116bfcb0a8e6e252632be25e8d4843ae7bb6080e8a2b1772b49d6",
+      "rebuilt_manifest_sha256": "023f139209711130931afe3d97a302be1077a875c498a92b6f847a808b6244f2",
+      "rebuilt_prediction_file_sha256": "e8533f3a018fa1a01889a3a7dcb9000be0d53211a04ba64329fc4200fb7ce555",
+      "scores_numerically_identical": false,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": false,
+        "different_order_positions": 1404,
+        "total_item_substitutions": 151,
+        "users_with_order_difference": 537,
+        "users_with_set_difference": 148
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "positive_ease-all_observed",
+      "kind": "research",
+      "model": "PositiveEASE",
+      "original_prediction_file_sha256": "a3c75ce087aae01bd9671ec06273183da5f76a5d78f7e4b6965bc9b6e796a31d",
+      "original_score_array_canonical_sha256": "203c1ab6b119289fd7769db7373da668470fc2c233c7ace167c7a972baca1397",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "203c1ab6b119289fd7769db7373da668470fc2c233c7ace167c7a972baca1397",
+      "rebuilt_manifest_sha256": "2dc84a8f595124b5064d279405b40d7df35993ba5b56bda25c648c627cee5bbd",
+      "rebuilt_prediction_file_sha256": "a3c75ce087aae01bd9671ec06273183da5f76a5d78f7e4b6965bc9b6e796a31d",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "signed_channels-all_observed",
+      "kind": "research",
+      "model": "SignedChannelsLinear",
+      "original_prediction_file_sha256": "2b43fee43efca333b4e882b589d98261b17f897388f58601c18a0a7c92612c1c",
+      "original_score_array_canonical_sha256": "b086e80d21855c2e40d20499b165882f9b399c24b3962812bb7aecf7cb03ba88",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "b086e80d21855c2e40d20499b165882f9b399c24b3962812bb7aecf7cb03ba88",
+      "rebuilt_manifest_sha256": "a788087d690493db88d55ba683f2182e7724ba102d27f4a6f84436ffcbb8f0a1",
+      "rebuilt_prediction_file_sha256": "2b43fee43efca333b4e882b589d98261b17f897388f58601c18a0a7c92612c1c",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "contrast-all_observed",
+      "kind": "research",
+      "model": "ContrastTransfer",
+      "original_prediction_file_sha256": "d09ad6b8eee932d33595309b26eb86692cfb43919d5da0a94136e25a457fdb8a",
+      "original_score_array_canonical_sha256": "26cdcf7e73a36e47742604827df8c434a6780afffc97786441092b0f17e93512",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "26cdcf7e73a36e47742604827df8c434a6780afffc97786441092b0f17e93512",
+      "rebuilt_manifest_sha256": "a867edbef83ddf4371b59463b59b3e935ddbfad73052aeee30c1aa05053ad558",
+      "rebuilt_prediction_file_sha256": "d09ad6b8eee932d33595309b26eb86692cfb43919d5da0a94136e25a457fdb8a",
+      "scores_numerically_identical": true,
+      "seed": 2026,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2027-ExactPop-0",
+      "kind": "standard",
+      "model": "ExactPop",
+      "original_prediction_file_sha256": "b373caa7f9219be56f1cd1e45675cc16ddca9a21dc66066defa74fe6ea18d4f4",
+      "original_score_array_canonical_sha256": "e15493a3e710d982477af5fda2bb0e4cdeca3cec2f164beb2f2a2115b0409c7c",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "e15493a3e710d982477af5fda2bb0e4cdeca3cec2f164beb2f2a2115b0409c7c",
+      "rebuilt_manifest_sha256": "636a0b03cd655ff2fc580e5959c981d15621c83d44ae51fe0456ebf41ec66909",
+      "rebuilt_prediction_file_sha256": "b373caa7f9219be56f1cd1e45675cc16ddca9a21dc66066defa74fe6ea18d4f4",
+      "scores_numerically_identical": true,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2027-Random-0",
+      "kind": "standard",
+      "model": "Random",
+      "original_prediction_file_sha256": "cbbcd40428a6ba5ba1d5357608ae80a4319566f69ca7ce5cbf3f51f716a5eb65",
+      "original_score_array_canonical_sha256": "fdbe77ffdd91dc33671dd6e22c597a5618cddc0daa72d2f16166bd2c64132388",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "fdbe77ffdd91dc33671dd6e22c597a5618cddc0daa72d2f16166bd2c64132388",
+      "rebuilt_manifest_sha256": "1838c18977b5d241f5cac4b066254022126834ea460e15aa096384bc28361867",
+      "rebuilt_prediction_file_sha256": "cbbcd40428a6ba5ba1d5357608ae80a4319566f69ca7ce5cbf3f51f716a5eb65",
+      "scores_numerically_identical": true,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2027-EASE-1",
+      "kind": "standard",
+      "model": "EASE",
+      "original_prediction_file_sha256": "cc5e61cf3f61d7e1ff7e19fc381ae8d04458280cf16149e2ae2aeb0990cd9ac0",
+      "original_score_array_canonical_sha256": "9e904e68fed1335ba9c2d0902e461dc0e314ce3c9ba57c9a34160686a9d19967",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "9e904e68fed1335ba9c2d0902e461dc0e314ce3c9ba57c9a34160686a9d19967",
+      "rebuilt_manifest_sha256": "f8742f1f7783c61d3eba430075ff9f8be57b0a47bbf6e5a7818d5364f9f179ee",
+      "rebuilt_prediction_file_sha256": "cc5e61cf3f61d7e1ff7e19fc381ae8d04458280cf16149e2ae2aeb0990cd9ac0",
+      "scores_numerically_identical": true,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2027-ItemKNN-2",
+      "kind": "standard",
+      "model": "ItemKNN",
+      "original_prediction_file_sha256": "6e3e40ca80ef5d92a0f8e217d3e0d85dcad26a97fe4dc225cd87bd02a70bd9b3",
+      "original_score_array_canonical_sha256": "dc5266c6151ab85a4ea7acf9491b80d5426cefdf209a59428a3351aa595c1aa9",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "dc5266c6151ab85a4ea7acf9491b80d5426cefdf209a59428a3351aa595c1aa9",
+      "rebuilt_manifest_sha256": "6dfd7cee110e8ddb8ce2afa66a59b4c8b99e1f0c1ded09418ce759f052a18035",
+      "rebuilt_prediction_file_sha256": "6e3e40ca80ef5d92a0f8e217d3e0d85dcad26a97fe4dc225cd87bd02a70bd9b3",
+      "scores_numerically_identical": true,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2027-BPR-1",
+      "kind": "standard",
+      "model": "BPR",
+      "original_prediction_file_sha256": "3fb1b5cab3836b918706e756f25c23e7aa6bea691f1c54618c78e7f0e4cb62a3",
+      "original_score_array_canonical_sha256": "7d5540d70a1d262586bcd40ff3317bc9db21d5f15a95c20e39f4a6d435116bc2",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "7d5540d70a1d262586bcd40ff3317bc9db21d5f15a95c20e39f4a6d435116bc2",
+      "rebuilt_manifest_sha256": "a85b45fbdadcb67866f114db6f9c1da6da53208598dfd12093a0dd3cd5147b7a",
+      "rebuilt_prediction_file_sha256": "3fb1b5cab3836b918706e756f25c23e7aa6bea691f1c54618c78e7f0e4cb62a3",
+      "scores_numerically_identical": true,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2027-UserKNN-0",
+      "kind": "standard",
+      "model": "UserKNN",
+      "original_prediction_file_sha256": "5625d8052dcd5182f0c2078eebeea377109b9fedc459535c7f025dd35e966419",
+      "original_score_array_canonical_sha256": "5f871b3a6a40231ddc4b17d14131f8d5fa861f0d20ddea1e5da538e5afca0b9a",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "5f871b3a6a40231ddc4b17d14131f8d5fa861f0d20ddea1e5da538e5afca0b9a",
+      "rebuilt_manifest_sha256": "f3f1e425db732ad3379addefa86dc83c1355c7de41725dff805734bdfe1facc4",
+      "rebuilt_prediction_file_sha256": "5625d8052dcd5182f0c2078eebeea377109b9fedc459535c7f025dd35e966419",
+      "scores_numerically_identical": true,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2027-SLIMElastic-1",
+      "kind": "standard",
+      "model": "SLIMElastic",
+      "original_prediction_file_sha256": "f5a587e1d7f4a7a030ead98f41c672d83194d91f1447946b07a3651d043fbbc5",
+      "original_score_array_canonical_sha256": "491e149cebd97c7178e98f4c22d8a06d5c5614f13aa307b393365724d82557d1",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "491e149cebd97c7178e98f4c22d8a06d5c5614f13aa307b393365724d82557d1",
+      "rebuilt_manifest_sha256": "cfb7723756b71c9a54a460134625c0e63758e0f65aa9cd4813385bbc049a444d",
+      "rebuilt_prediction_file_sha256": "f5a587e1d7f4a7a030ead98f41c672d83194d91f1447946b07a3651d043fbbc5",
+      "scores_numerically_identical": true,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2027-FISMCorrected-0",
+      "kind": "standard",
+      "model": "FISMCorrected",
+      "original_prediction_file_sha256": "4d4ce18d6cd76d30747a51f6a90bf7de577b4101540b5c7750dee27e9596399b",
+      "original_score_array_canonical_sha256": "d4371333f54c53234bd90a4c7e34d1c2fccfad3f98ec5c1c4aaa22d7e38998f4",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "d4371333f54c53234bd90a4c7e34d1c2fccfad3f98ec5c1c4aaa22d7e38998f4",
+      "rebuilt_manifest_sha256": "27679a41d89109f61adb702b629ab8213dc6c384e534783b7779bd31f6a27094",
+      "rebuilt_prediction_file_sha256": "4d4ce18d6cd76d30747a51f6a90bf7de577b4101540b5c7750dee27e9596399b",
+      "scores_numerically_identical": true,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2027-GenreContent-1",
+      "kind": "standard",
+      "model": "GenreContent",
+      "original_prediction_file_sha256": "e2bfc086247d7020994381d5a4308feb314e2b34d7205ef4fcbd106b5aa5bc1f",
+      "original_score_array_canonical_sha256": "98e34768b460d9ca4dded5428029c7b57aaeceb89db743afaea925ce7d0add27",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "98e34768b460d9ca4dded5428029c7b57aaeceb89db743afaea925ce7d0add27",
+      "rebuilt_manifest_sha256": "bb6420c6039ac0b01bb2506d258fb533bbf67035be3f14252305188be861178f",
+      "rebuilt_prediction_file_sha256": "e2bfc086247d7020994381d5a4308feb314e2b34d7205ef4fcbd106b5aa5bc1f",
+      "scores_numerically_identical": true,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 1113174,
+        "max_absolute_error": 3.814697265625e-06,
+        "root_mean_squared_error": 2.699940581885771e-07
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 90,
+        "maximum_absolute_item_rank_displacement": 1,
+        "mean_absolute_item_rank_displacement": 5.978803149899224e-05,
+        "users_with_any_order_difference": 43
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 1071355,
+        "max_absolute_error": 2.384185791015625e-06,
+        "root_mean_squared_error": 2.619348219590476e-07
+      },
+      "expert": "2027-LightGCN-200",
+      "kind": "standard",
+      "model": "LightGCN",
+      "original_prediction_file_sha256": "3561cf6243d483baac6ab52262f7a670eca3864c7f695054c269038815d8fae2",
+      "original_score_array_canonical_sha256": "44061351c0c9be91748df998530227f4f75949c334fe783af02ce2bb6e0b8817",
+      "prediction_file_bytes_identical": false,
+      "rebuilt_aligned_score_array_canonical_sha256": "183960be8399f7188e0b6de6c6b13c5617e3c2d0579a3abd8c51bcfcaae531dd",
+      "rebuilt_manifest_sha256": "dfc65c754e872f32af7cccc943671519972b2a5450e2e2baa5f69b1ac99ae896",
+      "rebuilt_prediction_file_sha256": "b63535bbae9eb44656867f1c4cb4e53b6e892c7fd8731a835d84b8a032e45346",
+      "scores_numerically_identical": false,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2027-NeuMF-0",
+      "kind": "standard",
+      "model": "NeuMF",
+      "original_prediction_file_sha256": "e6b21d1bf15beb07cf9cccf38dce8f5b18f7ccb93ca9241dbd702037a8e07700",
+      "original_score_array_canonical_sha256": "5e6497a4c4104ca01cda7f689e37a7f06b46c08fc88af07604f90633ef904888",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "5e6497a4c4104ca01cda7f689e37a7f06b46c08fc88af07604f90633ef904888",
+      "rebuilt_manifest_sha256": "c82f4b260740caebaa53ad7031916010f3e570922178f4a92ce29914b44873d5",
+      "rebuilt_prediction_file_sha256": "e6b21d1bf15beb07cf9cccf38dce8f5b18f7ccb93ca9241dbd702037a8e07700",
+      "scores_numerically_identical": true,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 1587064,
+        "max_absolute_error": 0.2768554091453552,
+        "root_mean_squared_error": 0.019902234743581323
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 1335615,
+        "maximum_absolute_item_rank_displacement": 193,
+        "mean_absolute_item_rank_displacement": 5.554563221857442,
+        "users_with_any_order_difference": 943
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 1505313,
+        "max_absolute_error": 0.2768554091453552,
+        "root_mean_squared_error": 0.020110147456215154
+      },
+      "expert": "2027-NGCF-1",
+      "kind": "standard",
+      "model": "NGCF",
+      "original_prediction_file_sha256": "6d27095330bdc1a613a146511197ea33af871ff0b59730a44ef8e9563b9efb95",
+      "original_score_array_canonical_sha256": "b8f47d56f779d60b42b3518b6e2cb494c41f66f7082ec4f2c9e920f112f6c65a",
+      "prediction_file_bytes_identical": false,
+      "rebuilt_aligned_score_array_canonical_sha256": "1f794477514b00f8a975e2a59bf119ba87b58721a26a0ce081c4810e297ebfa7",
+      "rebuilt_manifest_sha256": "8aa891bfdd86abe342dc62a292896fb16adb6d01f7f50c01b8aa2e7c9a28626c",
+      "rebuilt_prediction_file_sha256": "b14dc16a4c055de1707e2c85f5ca7d92c5b7efc7a2fa729ebb86f863f5b9ea61",
+      "scores_numerically_identical": false,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": false,
+        "different_order_positions": 1138,
+        "total_item_substitutions": 104,
+        "users_with_order_difference": 448,
+        "users_with_set_difference": 101
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "positive_ease-all_observed",
+      "kind": "research",
+      "model": "PositiveEASE",
+      "original_prediction_file_sha256": "6e28e5b5d15ab87aaf6a0756abb7d8f793cb7b78a3dec3a474332a1207f9d57c",
+      "original_score_array_canonical_sha256": "2a5a78d123e511bf732c3d2eaa3a19e8bf8ccdb4aee92ee6755b25941805aa80",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "2a5a78d123e511bf732c3d2eaa3a19e8bf8ccdb4aee92ee6755b25941805aa80",
+      "rebuilt_manifest_sha256": "a4cc9bb18b1b48d37f05a8c29961f10356b59a8699b0a3c27a5c4f08f36126f2",
+      "rebuilt_prediction_file_sha256": "6e28e5b5d15ab87aaf6a0756abb7d8f793cb7b78a3dec3a474332a1207f9d57c",
+      "scores_numerically_identical": true,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "signed_channels-all_observed",
+      "kind": "research",
+      "model": "SignedChannelsLinear",
+      "original_prediction_file_sha256": "b2b5487bb6a8e641911fb92c9f4709c5720ca542c6f45750a5c142664199955a",
+      "original_score_array_canonical_sha256": "a3fc30e50d3513fff555963dc08686d939a8aa33e67c4af79992019f7a87b28c",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "a3fc30e50d3513fff555963dc08686d939a8aa33e67c4af79992019f7a87b28c",
+      "rebuilt_manifest_sha256": "0bab45c6f575c13d6a46b3112446eec1ce3d0b08d0d79f4e539a3ecd4cf975d1",
+      "rebuilt_prediction_file_sha256": "b2b5487bb6a8e641911fb92c9f4709c5720ca542c6f45750a5c142664199955a",
+      "scores_numerically_identical": true,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 36,
+        "max_absolute_error": 2.7755575615628914e-17,
+        "root_mean_squared_error": 4.9914880311957085e-20
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 35,
+        "max_absolute_error": 2.7755575615628914e-17,
+        "root_mean_squared_error": 5.117428414992833e-20
+      },
+      "expert": "contrast-all_observed",
+      "kind": "research",
+      "model": "ContrastTransfer",
+      "original_prediction_file_sha256": "b0d60e6bbc4cc696388dc6732d7f8ec998932f1a4813a61c9d21163df07962c4",
+      "original_score_array_canonical_sha256": "f3694cd9d8f5716728a04587c91dfc4bbb8c5ab103bf16f5e531a39769527965",
+      "prediction_file_bytes_identical": false,
+      "rebuilt_aligned_score_array_canonical_sha256": "75314acb8720a50f877433ba99a2010c35562d6c02ddf9f12161d7959c8921cd",
+      "rebuilt_manifest_sha256": "c34af65195327d2b02344522f32c3c6dfd9166611b22abc2789ab84ac35da724",
+      "rebuilt_prediction_file_sha256": "817a24618f7038f0632f7a81926b7ea48500cfcf41c553aa384db7eb215cf8d6",
+      "scores_numerically_identical": false,
+      "seed": 2027,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2028-ExactPop-0",
+      "kind": "standard",
+      "model": "ExactPop",
+      "original_prediction_file_sha256": "6765eb78819d32903f070172e730c9b62def86942beab5f6762b54585babea2a",
+      "original_score_array_canonical_sha256": "07c3b02518c17b05b3d30e17637b676eff78fb09450383ec950aa903495ccb4a",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "07c3b02518c17b05b3d30e17637b676eff78fb09450383ec950aa903495ccb4a",
+      "rebuilt_manifest_sha256": "78b46790f35140a2913908e1a022e5acc4707cd2cfb8bf1e77556428e10fd703",
+      "rebuilt_prediction_file_sha256": "6765eb78819d32903f070172e730c9b62def86942beab5f6762b54585babea2a",
+      "scores_numerically_identical": true,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2028-Random-0",
+      "kind": "standard",
+      "model": "Random",
+      "original_prediction_file_sha256": "fc45c5a3b241ffbc2d9ce29e61994cea52d56b5e4574bcae78ce320849f6976c",
+      "original_score_array_canonical_sha256": "1bf78d4f28678eddc90059536d9aafb5ca61c2354273a6ee1fd29d79c74e0969",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "1bf78d4f28678eddc90059536d9aafb5ca61c2354273a6ee1fd29d79c74e0969",
+      "rebuilt_manifest_sha256": "8baa7da16839722082f8201f709a9edc1113fcadac4290aa8a103470c22d2660",
+      "rebuilt_prediction_file_sha256": "fc45c5a3b241ffbc2d9ce29e61994cea52d56b5e4574bcae78ce320849f6976c",
+      "scores_numerically_identical": true,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2028-EASE-1",
+      "kind": "standard",
+      "model": "EASE",
+      "original_prediction_file_sha256": "c65952e320a6bac5e87b1c640b53d0cb8c14cf69853316e15930569f9c0a8db8",
+      "original_score_array_canonical_sha256": "7c1187a579baf95d278de4df3a548a96396620ee5896daa17387dc1a161ac2f0",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "7c1187a579baf95d278de4df3a548a96396620ee5896daa17387dc1a161ac2f0",
+      "rebuilt_manifest_sha256": "f57ee23ce094b51ab774ca5b4bc228f89480d053e49e128264628ec285075cd3",
+      "rebuilt_prediction_file_sha256": "c65952e320a6bac5e87b1c640b53d0cb8c14cf69853316e15930569f9c0a8db8",
+      "scores_numerically_identical": true,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2028-ItemKNN-2",
+      "kind": "standard",
+      "model": "ItemKNN",
+      "original_prediction_file_sha256": "da1d2c4309703db4ffd698ba54631bf863e6053efa682cb58cdf64b43d93928b",
+      "original_score_array_canonical_sha256": "37389025a7513e63c5c9cf68eb8f6852550b0cbf176191ccae85c885684e89fe",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "37389025a7513e63c5c9cf68eb8f6852550b0cbf176191ccae85c885684e89fe",
+      "rebuilt_manifest_sha256": "7f5bf62bcbe5ba740f25bb015fa718551ff1c213f753147c2600fade918b6869",
+      "rebuilt_prediction_file_sha256": "da1d2c4309703db4ffd698ba54631bf863e6053efa682cb58cdf64b43d93928b",
+      "scores_numerically_identical": true,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 1158324,
+        "max_absolute_error": 2.384185791015625e-06,
+        "root_mean_squared_error": 3.3715687837027403e-07
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 122,
+        "maximum_absolute_item_rank_displacement": 1,
+        "mean_absolute_item_rank_displacement": 8.104599825418948e-05,
+        "users_with_any_order_difference": 60
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 1110869,
+        "max_absolute_error": 2.384185791015625e-06,
+        "root_mean_squared_error": 3.338457819238263e-07
+      },
+      "expert": "2028-BPR-2",
+      "kind": "standard",
+      "model": "BPR",
+      "original_prediction_file_sha256": "bdad4c9bf4063fe60a6de800bb4a89c64f50e1c5a37e87c7f3320b26f4fdf228",
+      "original_score_array_canonical_sha256": "7e5183377bfddb4a07f429b1c6c0f3fa2e6e7a0b208b4f2fca21fd63ed5fce09",
+      "prediction_file_bytes_identical": false,
+      "rebuilt_aligned_score_array_canonical_sha256": "01b30e6ddd724c11af970988e319985309251327a9651ed2f33de42c15c1b7d8",
+      "rebuilt_manifest_sha256": "9c916beffd62d301cc93151de4865136c441ae537a7373ac14ed487652c6cf90",
+      "rebuilt_prediction_file_sha256": "5a8ea39a924e62c01b89da3bfd8a3cac0ee6911f9760616c4af470e42392d66a",
+      "scores_numerically_identical": false,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2028-UserKNN-1",
+      "kind": "standard",
+      "model": "UserKNN",
+      "original_prediction_file_sha256": "f6b0f1a29492976f135a78b8a22769f169fc74cb618b2ea2a679178902d49307",
+      "original_score_array_canonical_sha256": "505d6076d083c08945a62d12fc99adc87114d3b128af698af0a10fe566f3b329",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "505d6076d083c08945a62d12fc99adc87114d3b128af698af0a10fe566f3b329",
+      "rebuilt_manifest_sha256": "ebd8ef954e14902390e0830da25b495eb417b52f6feb849268b1a73b26cdf8ef",
+      "rebuilt_prediction_file_sha256": "f6b0f1a29492976f135a78b8a22769f169fc74cb618b2ea2a679178902d49307",
+      "scores_numerically_identical": true,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2028-SLIMElastic-1",
+      "kind": "standard",
+      "model": "SLIMElastic",
+      "original_prediction_file_sha256": "866ac4be47f1f1bdc5e124014128353fc052623850c5617550ea3ed9d73fceea",
+      "original_score_array_canonical_sha256": "c3296e5f0ab639624a1e29260182b25a233a3b76c22f3c08bac44d0ee79bb6bf",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "c3296e5f0ab639624a1e29260182b25a233a3b76c22f3c08bac44d0ee79bb6bf",
+      "rebuilt_manifest_sha256": "880bef36748bcc891e68d862ced716a68c9219229faa708ad48354170a199a60",
+      "rebuilt_prediction_file_sha256": "866ac4be47f1f1bdc5e124014128353fc052623850c5617550ea3ed9d73fceea",
+      "scores_numerically_identical": true,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2028-FISMCorrected-0",
+      "kind": "standard",
+      "model": "FISMCorrected",
+      "original_prediction_file_sha256": "54b196596a70d1e1cd05df5190a77061ae661e610bfbb0f65aed5685db8169bd",
+      "original_score_array_canonical_sha256": "a916553a3a15d4a33f561b88275288551cf7d8b88c962ef88b58215405fb8d19",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "a916553a3a15d4a33f561b88275288551cf7d8b88c962ef88b58215405fb8d19",
+      "rebuilt_manifest_sha256": "1cc83afa08570427f6bdad6827a7c32b99e3810a8e87c14402f943f4e46c419c",
+      "rebuilt_prediction_file_sha256": "54b196596a70d1e1cd05df5190a77061ae661e610bfbb0f65aed5685db8169bd",
+      "scores_numerically_identical": true,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2028-GenreContent-1",
+      "kind": "standard",
+      "model": "GenreContent",
+      "original_prediction_file_sha256": "9c6ce54892d6889130b7555058dcaa7566c94db9f1705ce65e1e4b6e95205dea",
+      "original_score_array_canonical_sha256": "c76b5af61a400e70eb015b5471fe8f5c45912ac57940a978902dee97fc9331e6",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "c76b5af61a400e70eb015b5471fe8f5c45912ac57940a978902dee97fc9331e6",
+      "rebuilt_manifest_sha256": "eaa68e164ae886414e79c52f92d243d90c9dd54a5a92c58b6adc22292ba566c6",
+      "rebuilt_prediction_file_sha256": "9c6ce54892d6889130b7555058dcaa7566c94db9f1705ce65e1e4b6e95205dea",
+      "scores_numerically_identical": true,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 1147751,
+        "max_absolute_error": 2.86102294921875e-06,
+        "root_mean_squared_error": 2.911685212446294e-07
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 78,
+        "maximum_absolute_item_rank_displacement": 1,
+        "mean_absolute_item_rank_displacement": 5.1816293965793277e-05,
+        "users_with_any_order_difference": 39
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 1104167,
+        "max_absolute_error": 2.86102294921875e-06,
+        "root_mean_squared_error": 2.8374785322307934e-07
+      },
+      "expert": "2028-LightGCN-200",
+      "kind": "standard",
+      "model": "LightGCN",
+      "original_prediction_file_sha256": "8568fcc1f36acbb5ddae256adcb9a18a08dd9750ddd4dc9a8352bf8e4b4d0f7c",
+      "original_score_array_canonical_sha256": "c454b767a30d268d150d18ca8015d8264c1d03887a23ad002d2c5ef3ac16986f",
+      "prediction_file_bytes_identical": false,
+      "rebuilt_aligned_score_array_canonical_sha256": "c185b01c378417270afad46c1d7cbe9206dc4a55466f857af1afb17a36980056",
+      "rebuilt_manifest_sha256": "dd8a67edca130875638cfce55122180aa3a4f021ec168b90366d0865660c61e2",
+      "rebuilt_prediction_file_sha256": "38869bb80f8ad94acafe1b91798cef4f35c402f7f4a8f0ff37eeb3777495b07c",
+      "scores_numerically_identical": false,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "2028-NeuMF-0",
+      "kind": "standard",
+      "model": "NeuMF",
+      "original_prediction_file_sha256": "aedc621677100f80398cf1c9a70292ce3cc293a7a39993cca2b48e0a7bc06490",
+      "original_score_array_canonical_sha256": "547ba8fc9b350fe7f454da9b8f6b9db422d4b69904db0bced895d3f5e5ab5d72",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "547ba8fc9b350fe7f454da9b8f6b9db422d4b69904db0bced895d3f5e5ab5d72",
+      "rebuilt_manifest_sha256": "5003944a7d3824799e304316267a1cc8ee23f46c95840fe642c8dadc16d0d45c",
+      "rebuilt_prediction_file_sha256": "aedc621677100f80398cf1c9a70292ce3cc293a7a39993cca2b48e0a7bc06490",
+      "scores_numerically_identical": true,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 1587063,
+        "max_absolute_error": 0.3869660794734955,
+        "root_mean_squared_error": 0.022807669674161615
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 1354593,
+        "maximum_absolute_item_rank_displacement": 222,
+        "mean_absolute_item_rank_displacement": 6.413737163841793,
+        "users_with_any_order_difference": 943
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 1505312,
+        "max_absolute_error": 0.3869660794734955,
+        "root_mean_squared_error": 0.0230491931008372
+      },
+      "expert": "2028-NGCF-1",
+      "kind": "standard",
+      "model": "NGCF",
+      "original_prediction_file_sha256": "24bea09608b0f603b8a253eca831266763201bebae1c2350c74f09979d42c096",
+      "original_score_array_canonical_sha256": "58751e5657bad11e613ecf31ffbc25ccb22063cc09247cf2ea1a23a780f14d93",
+      "prediction_file_bytes_identical": false,
+      "rebuilt_aligned_score_array_canonical_sha256": "442e5525d46bea2b1754f9339d3ad92d35cad41703a108b3c46e6154beb8e337",
+      "rebuilt_manifest_sha256": "c4334c72f1d9bda3858f3896dbb930cc50b5ca994f9d2427fb2368279fa1009b",
+      "rebuilt_prediction_file_sha256": "d6faa4e1d27468deebc1ce584e46d50f52ac72961aa4e86f223e84f844bec31f",
+      "scores_numerically_identical": false,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": false,
+        "different_order_positions": 1391,
+        "total_item_substitutions": 147,
+        "users_with_order_difference": 520,
+        "users_with_set_difference": 146
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "positive_ease-all_observed",
+      "kind": "research",
+      "model": "PositiveEASE",
+      "original_prediction_file_sha256": "c8f760f8628b54e7d51bc20e6cdf1e79b949c1107b67db8884cce1ad3a6ad34c",
+      "original_score_array_canonical_sha256": "8600786853cb14e84832b7f1ae8b07a527a7ac1e04cee7131caf234fb8813ac0",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "8600786853cb14e84832b7f1ae8b07a527a7ac1e04cee7131caf234fb8813ac0",
+      "rebuilt_manifest_sha256": "2f0eae950f6d69020139ff54e03b97b9a86e8f7e6f439c31ccb324a6d9f7e912",
+      "rebuilt_prediction_file_sha256": "c8f760f8628b54e7d51bc20e6cdf1e79b949c1107b67db8884cce1ad3a6ad34c",
+      "scores_numerically_identical": true,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "signed_channels-all_observed",
+      "kind": "research",
+      "model": "SignedChannelsLinear",
+      "original_prediction_file_sha256": "5f36f4146f4c8d54ee663fa27aa254252877b530341101d3d3167c48484b763b",
+      "original_score_array_canonical_sha256": "2a79fbae8d2ea2e1509afa4ce99176cee02df719401e0781a08e3c95025ee7b5",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "2a79fbae8d2ea2e1509afa4ce99176cee02df719401e0781a08e3c95025ee7b5",
+      "rebuilt_manifest_sha256": "3dd744aafdbf6d3fe03a12b9283ea07ac876ec779ebdd22ff6b27228b430ab66",
+      "rebuilt_prediction_file_sha256": "5f36f4146f4c8d54ee663fa27aa254252877b530341101d3d3167c48484b763b",
+      "scores_numerically_identical": true,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    },
+    {
+      "all_score_cells": 1587069,
+      "all_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "catalog_items_including_padding": 1683,
+      "eligible_full_ranking": {
+        "different_order_positions": 0,
+        "maximum_absolute_item_rank_displacement": 0,
+        "mean_absolute_item_rank_displacement": 0.0,
+        "users_with_any_order_difference": 0
+      },
+      "eligible_score_cells": 1505318,
+      "eligible_scores": {
+        "different_cells": 0,
+        "max_absolute_error": 0.0,
+        "root_mean_squared_error": 0.0
+      },
+      "expert": "contrast-all_observed",
+      "kind": "research",
+      "model": "ContrastTransfer",
+      "original_prediction_file_sha256": "4eb4e72511fce3fd3b5f0f3cda4673dcbc95956b134fdd1e3a59bc8fd8368d78",
+      "original_score_array_canonical_sha256": "08f2813f10268ed7649e00700561a8cc759e9e0a3cc0c2c3a2005a32e5724e40",
+      "prediction_file_bytes_identical": true,
+      "rebuilt_aligned_score_array_canonical_sha256": "08f2813f10268ed7649e00700561a8cc759e9e0a3cc0c2c3a2005a32e5724e40",
+      "rebuilt_manifest_sha256": "3f6651d67f48be93ac09b141bd791f928b0220d68595c0dc375f30718ce130ee",
+      "rebuilt_prediction_file_sha256": "4eb4e72511fce3fd3b5f0f3cda4673dcbc95956b134fdd1e3a59bc8fd8368d78",
+      "scores_numerically_identical": true,
+      "seed": 2028,
+      "source_item_order_already_identical": true,
+      "source_user_order_already_identical": true,
+      "top10": {
+        "all_users_order_identical": true,
+        "different_order_positions": 0,
+        "total_item_substitutions": 0,
+        "users_with_order_difference": 0,
+        "users_with_set_difference": 0
+      },
+      "users": 943
+    }
+  ],
+  "original_reference_sha256": {
+    "2026": {
+      "freeze_sha256": "a9c1516e60519d54861b393899d48657a5edf294aa04b849019eea3334aa9f47",
+      "frozen_archive_sha256": "62d3eb9f276a999bed97926aa162c51f740c33c8c6a582fc0349d63fb1546486",
+      "train_sha256": "f4792fba583e3c01a26482f5fe0df62e02738cd8814672eaba32cb136c2fb7ec"
+    },
+    "2027": {
+      "freeze_sha256": "7b2fc4cc8a4dd74fd8296d953855168f2e245fe05508cdcfd2811e654d716788",
+      "frozen_archive_sha256": "73b4c6c0cfb872c3eb1338b2b681ae9334c9f64129e1983d19b7b87635611870",
+      "train_sha256": "4587b0b2d4bb5d666ca1f441b6fdb983546b5920b192d53a4d8e31453ba3e555"
+    },
+    "2028": {
+      "freeze_sha256": "f9e3b71968c9496d06c01a013ab12f9bcb7e934f8b71f90cc04e1f2d2cab572d",
+      "frozen_archive_sha256": "4d5275d7147a5de37a910bf0696d230882f1a37ac68534bd66fecc4cc5b7ff4c",
+      "train_sha256": "1c3a85b3b392d563c185b61bea77f61ff17b1d105657c228249e0ac7acfe3046"
+    }
+  },
+  "original_test_read": false,
+  "rebuild_recipe_sha256": "d434141eb332f130d3ad12b36d8a2fab97a8326bf582ae64d1c8ce99169e5228",
+  "rebuild_started_sha256": "ae66704a85ac614ef6e1ba315428a6f259cc84acda8aa06db3377f074c03ed36",
+  "schema_version": 1,
+  "scope": "Independent numerical and ranking agreement of 45 completed rebuilt experts",
+  "self_check_passed": true,
+  "status": "complete",
+  "summary": {
+    "expert_user_pairs_with_top10_order_difference": 1505,
+    "expert_user_pairs_with_top10_set_difference": 395,
+    "experts_compared": 45,
+    "experts_with_identical_full_eligible_rankings": 38,
+    "experts_with_identical_top10_for_all_users": 42,
+    "largest_absolute_score_difference": 0.3869660794734955,
+    "largest_eligible_score_rmse": 0.023434940907987024,
+    "prediction_files_byte_identical": 37,
+    "score_arrays_numerically_identical": 37,
+    "users_per_expert": 943
+  },
+  "valid_mask_array_read": false,
+  "validation_relevance_read": false,
+  "verifier_source_sha256": "e7a162a72c22900e2ead25fe500c5eee47633f6bcfd8a37a8765bf236b0cd2d7"
+}

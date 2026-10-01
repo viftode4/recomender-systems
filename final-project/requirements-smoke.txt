@@ -1,0 +1,2 @@
+# Python 3.11; only the dependency needed by the fast synthetic team check.
+numpy==1.26.4

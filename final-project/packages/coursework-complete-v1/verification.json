@@ -1,0 +1,139 @@
+{
+  "all_artifact_hashes_valid": true,
+  "archive_sha256": "799819d24950dde22c72293f7ddae5a5d2c6ab94ff3949f96a13d3880dfd802e",
+  "bytes": 5225071,
+  "checks": [
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "coursework_completion",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-0.log"
+    },
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "exploratory/categorical_reconstruction",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-1.log"
+    },
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "exploratory/framing_search/predictive",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-2.log"
+    },
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "exploratory/framing_search/recording_audit",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-3.log"
+    },
+    {
+      "command": [
+        "/Users/vliftode/personal/recomender-systems/final-project/runs/environment-check/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-4.log"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_report.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-5.log"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "coursework_completion",
+        "-p",
+        "test_build_review.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-6.log"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "coursework_completion/build_review.py",
+        "--render-packaged",
+        "..",
+        "--report-dir",
+        "../rerendered"
+      ],
+      "exit_code": 0,
+      "log": "extracted-check-7.log"
+    }
+  ],
+  "entries": 347,
+  "hashed_artifacts": 346,
+  "limitations": "Uses installed local environments; no clean network installation or model training is claimed.",
+  "navigation_links": {
+    "documents": 11,
+    "unresolved_internal_links": 0
+  },
+  "original_report_unchanged": true,
+  "previous_report_unchanged": true,
+  "raw_data_available": false,
+  "report_replay_byte_identical": true,
+  "report_sha256": "343cfc595db940d7289ff0ea5a11b85f8ab1021de7a14ed41d763e722515c2ee",
+  "status": "complete",
+  "status_of_submission": "Review draft; not submitted",
+  "zip_crc_valid": true
+}

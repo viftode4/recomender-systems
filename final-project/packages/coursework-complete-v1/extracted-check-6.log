@@ -1,0 +1,23 @@
+test_completion_audit_binds_exact_sources_barrier_and_public_files (test_build_review.ReviewPackagingTests) ... ok
+test_completion_panel_preserves_original_scientific_tables_and_scope (test_build_review.ReviewPackagingTests) ... /Users/vliftode/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/Users/vliftode/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/Users/vliftode/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/Users/vliftode/Library/Python/3.9/lib/python/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+ok
+test_equal_split_means_canonical_roles_and_grid_selection (test_build_review.ReviewPackagingTests) ... ok
+test_historical_root_artifacts_are_preserved_without_overwriting_nested_evidence (test_build_review.ReviewPackagingTests) ... ok
+test_link_check_rejects_missing_relative_targets (test_build_review.ReviewPackagingTests) ... ok
+test_navigation_maps_to_archive_and_labels_unbundled_history (test_build_review.ReviewPackagingTests) ... ok
+test_public_evidence_requires_exact_hashes_and_rejects_private_rows (test_build_review.ReviewPackagingTests) ... ok
+test_reproduction_payload_includes_recipe_and_safe_receipts_only (test_build_review.ReviewPackagingTests) ... ok
+test_source_closure_includes_local_import_and_refuses_changed_base_code (test_build_review.ReviewPackagingTests) ... ok
+test_unverified_base_and_unsafe_paths_are_rejected (test_build_review.ReviewPackagingTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.257s
+
+OK
