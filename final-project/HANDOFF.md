@@ -23,6 +23,6 @@ scope and known numerical differences.
 
 The next team action is to agree owners and have each person leave a checked,
 explainable artifact. Names and contribution ratings must reflect real work.
-No course submission or new remote publication was performed in this cleanup.
+The assignment has not been submitted.
 Earlier detailed handoff notes are preserved in
 [the navigation archive](docs/archive/2026-10-01/INDEX.md).

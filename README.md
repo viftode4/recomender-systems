@@ -26,9 +26,15 @@ Use the [code map](final-project/docs/PROJECT_MAP.md) to find your part,
 [contribution guide](CONTRIBUTING.md) for the team workflow, and
 [full setup](final-project/docs/SETUP.md) only when you need model training.
 
+**Progress as of 1 October 2026:** the coursework implementation, saved results,
+five-page report draft and 45-test starter check are complete. Team review,
+contributor details, final report edits and submission remain open. See the
+[current handoff](final-project/HANDOFF.md) for artifact status and the
+[work plan](final-project/PLAN.md) for proposed next tasks.
+
 The existing report is a draft prepared with AI assistance. Everyone should
 understand, verify and improve their own part. Contributor details and submission
 remain open; optional research is separate from the required coursework.
-The experimental training is paused.
+The experimental training is stopped; feedback-revision models are designs only.
 
 `assignment1/` contains separate individual coursework. Leave it outside group-project changes.
