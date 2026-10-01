@@ -245,9 +245,10 @@ class ReviewPackagingTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             names = ("README.md", "HANDOFF.md", "PLAN.md", "REPRODUCE.md", "docs/COMPLETION.md",
+                     "tests/README.md", "evidence/README.md", "reports/README.md", "packages/README.md",
                      "coursework_completion/README.md", "coursework_completion/COVERAGE.md",
                      "coursework_completion/TEAM_REVIEW.md", "docs/PROGRESS.md",
-                     "docs/team-meeting-2026-10-01/QUICKSTART.md")
+                     "docs/QUICKSTART.md", "docs/team/TEAM_PLAN.md")
             for name in names:
                 (root/name).parent.mkdir(parents=True, exist_ok=True)
                 (root/name).write_text("# public navigation\n")

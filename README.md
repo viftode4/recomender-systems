@@ -1,43 +1,45 @@
 # Recommender Systems · Group 24
 
-The group project lives in **[final-project/](final-project/README.md)**.
-Start with these three pages:
+We use MovieLens 100K to study **which recommenders work well together** and
+**what accuracy we trade for diversity, calibration and fairer exposure**.
 
-1. [Project proposals](final-project/docs/PROPOSALS.md): two main questions and one optional research extension.
-2. [Five-person plan](final-project/docs/team-meeting-2026-10-01/TEAM_PLAN.md): choose an area, first task and reviewer.
-3. [Results summary](final-project/docs/RESULTS.md): what the existing experiments establish.
+The implementation, saved experiments, five-page report draft and code archive
+are ready for team review. Contributor details and submission are still open.
+
+## Start here
+
+1. [Results](final-project/docs/RESULTS.md): what we tested and what we found.
+2. [Report draft](final-project/reports/coursework-complete-v2/report.pdf): the three assignment tasks.
+3. [Code guide](final-project/docs/PROJECT_MAP.md): which files to read and how they connect.
 
 ## Run the first check
 
-From this repository's root, using Python 3.11:
+From this repository's root, with Python 3.11:
 
 ```sh
 python3.11 -m venv final-project/.venv
 final-project/.venv/bin/python -m pip install --index-url https://pypi.org/simple -r final-project/requirements-smoke.txt
+final-project/.venv/bin/python final-project/operations/check_docs.py
 final-project/.venv/bin/python final-project/operations/team_smoke_check.py
 ```
 
-This runs 45 synthetic tests and checks saved report/evidence files. No dataset
-download or training is required. With `make` installed, the last command is
-also available as `make check`. On Windows use `final-project\.venv\Scripts\python`
-for the environment's interpreter.
+Expect `"status": "passed"` and 45 passing tests. This checks documentation,
+small examples and saved artifacts without downloading data or training models.
+Once installed, `make check` runs both checks. For Windows and the shared ZIP, see the
+[quickstart](final-project/docs/QUICKSTART.md).
 
-Use the [code map](final-project/docs/PROJECT_MAP.md) to find your part,
-[contribution guide](CONTRIBUTING.md) for the team workflow, and
-[full setup](final-project/docs/SETUP.md) only when you need model training.
+## Find what you need
 
-**Progress as of 1 October 2026:** the coursework implementation, saved results,
-five-page report draft and 45-test starter check are complete. Team review,
-contributor details, final report edits and submission remain open. See the
-[completion checklist](final-project/docs/COMPLETION.md),
-[current handoff](final-project/HANDOFF.md) for artifact status and the
-[work plan](final-project/PLAN.md) for proposed next tasks.
+| I want to… | Open |
+| --- | --- |
+| Choose a task and reviewer | [Team plan](final-project/docs/team/TEAM_PLAN.md) |
+| Make a contribution | [Contribution guide](CONTRIBUTING.md) |
+| Check assignment coverage and remaining work | [Completion checklist](final-project/docs/COMPLETION.md) |
+| Train models or reproduce experiments | [Setup](final-project/docs/SETUP.md), then [reproduction guide](final-project/REPRODUCE.md) |
+| Explore optional research | [Research index](final-project/docs/RESEARCH_INDEX.md) |
 
-The existing report is a draft prepared with AI assistance. Everyone should
-understand, verify and improve their own part. Contributor details and submission
-remain open; optional research is separate from the required coursework.
-Conditional-evidence research resumed on 1 October at 12:23 UTC with six workers
-and monitoring; it is in progress, with no final result yet. Feedback-revision
-models remain designs only. See the [research status](final-project/docs/RESEARCH_INDEX.md).
+The [documentation folder](final-project/docs/README.md) groups the guides by purpose.
 
-`assignment1/` contains separate individual coursework. Leave it outside group-project changes.
+All group work is in `final-project/`. `assignment1/` is separate individual
+coursework. AI assistance was used; each teammate should understand and verify
+the part they contribute.

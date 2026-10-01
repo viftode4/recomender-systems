@@ -1,56 +1,37 @@
-# Group 24 · Recommender Systems project
+# Recommender Systems project
 
-A working DSAIT4335 coursework base: individual recommenders and hybrids,
-independent evaluation, and societal reranking. The code and five-page report
-are ready for team review. Contributor details, individual peer feedback and final
-submission remain open. See the [completion checklist](docs/COMPLETION.md).
+**Question:** which recommendation signals work well together, and what happens
+when we rerank their results for diversity, calibration or exposure?
 
-## Start here
+We have implemented the three assignment tasks and saved their results.
+The report is a draft awaiting team review and contributor details.
 
-1. **Pick the direction:** [three proposals](docs/PROPOSALS.md),
-   [short results summary](docs/RESULTS.md), and [code map](docs/PROJECT_MAP.md).
-2. **Prepare for today's meeting:** [meeting brief](docs/team-meeting-2026-10-01/MEETING_BRIEF.md)
-   and [five-person work proposal](docs/team-meeting-2026-10-01/TEAM_PLAN.md).
-3. **Run something small:** [quickstart](docs/team-meeting-2026-10-01/QUICKSTART.md).
-4. **Read the output:** [report draft](reports/coursework-complete-v2/report.pdf)
-   and [assignment checklist](docs/team-meeting-2026-10-01/ASSIGNMENT_CHECKLIST.md).
+## Read in this order
 
-The quick check runs 45 existing synthetic tests and checks saved evidence.
-It needs no dataset and starts no training. From this directory, with Python 3.11:
+1. [Results](docs/RESULTS.md): the main findings, with links to evidence.
+2. [Five-page report](reports/coursework-complete-v2/report.pdf): the current deliverable.
+3. [Code guide](docs/PROJECT_MAP.md): the pipeline, model names and files to read.
+4. [Quickstart](docs/QUICKSTART.md): run 45 small checks without training.
 
-```sh
-python3.11 -m venv .venv
-.venv/bin/python -m pip install --index-url https://pypi.org/simple -r requirements-smoke.txt
-.venv/bin/python operations/team_smoke_check.py
-```
+## Where to work
 
-## Three parts of the assignment
-
-| Part | Main entry points | Question |
+| Assignment part | Main code | Team question |
 | --- | --- | --- |
-| Models and hybrids | `run.py`, `study.py`, `coursework_completion/models.py` | How should several recommendation signals be combined? |
-| Evaluation and analysis | `metrics.py`, `summarize.py` | Which results improve, for which users and items? |
-| Societal reranking | `societal.py` | What accuracy cost accompanies diversity, calibration or exposure goals? |
+| 1. Models and hybrids | [run.py](run.py), [study.py](study.py), [models.py](coursework_completion/models.py) | Which signals should we combine? |
+| 2. Evaluation and analysis | [metrics.py](metrics.py), [final_evaluate.py](final_evaluate.py) | Which users and items benefit? |
+| 3. Societal reranking | [study.py](study.py), [societal.py](societal.py) | Who gains variety or exposure, and who loses accuracy? |
 
-For full installation use [setup](docs/SETUP.md). For exact data partitions,
-replay commands and known numerical differences use [REPRODUCE.md](REPRODUCE.md).
-The [full requirement mapping](coursework_completion/COVERAGE.md) connects the
-assignment to the implementation and evidence.
+Use the [team plan](docs/team/TEAM_PLAN.md) to choose a task.
+The [completion checklist](docs/COMPLETION.md) records what remains before submission.
 
-## Research and current state
+## When you need more detail
 
-The custom-model experiments are collected in the [research index](docs/RESEARCH_INDEX.md).
-Some are complete with negative results. Conditional-evidence training resumed
-on 1 October 2026 at 12:23 UTC with six workers and monitoring; the study remains
-in progress, with no final result yet. The newer feedback-revision models are
-design documents only.
+- **Full experiments:** [setup](docs/SETUP.md) and [reproduction commands](REPRODUCE.md).
+- **Requirement-by-requirement evidence:** [coverage](coursework_completion/COVERAGE.md).
+- **Code/report snapshot:** [24.zip](packages/coursework-complete-v2/24.zip) and its [verification receipt](packages/coursework-complete-v2/verification.json).
+- **Optional experiments and their dated status:** [research index](docs/RESEARCH_INDEX.md).
 
-The main report separates original frozen evaluation from later exploratory
-studies. The work does not establish a breakthrough or a universal best model.
-AI assistance was used; each member should understand and verify their part.
-
-This is a review draft, not a submitted assignment. The verified code/report
-snapshot is tracked at `packages/coursework-complete-v2/24.zip`. To rebuild the
-meeting pack, install `requirements-handoff.txt` in the same environment and run
-`make handoff` from the repository root. Generated previews and meeting ZIPs
-stay outside Git. The [contribution guide](../CONTRIBUTING.md) explains the team workflow.
+The ZIP preserves the verified coursework snapshot; current onboarding docs
+live in this checkout. To create an offline copy of the updated guides, install
+`requirements-handoff.txt` and run `make handoff` from the repository root.
+AI assistance was used in the code and report. Nothing has been submitted.

@@ -8,7 +8,9 @@ environment in [the setup instructions](../README.md):
 ```
 
 It runs the fast synthetic examples and checks the saved report/evidence. It
-does not train a model. The root Makefile provides the equivalent `make check`.
+does not train a model. From the repository root, `make check` also validates
+the active documentation links and headings. Run `make check-docs` for just the
+documentation check; `operations/check_docs.py` uses only the Python standard library.
 
 To regenerate the offline meeting pack, install `requirements-handoff.txt` and
 run `make handoff` from the repository root. The builder reads the tracked,

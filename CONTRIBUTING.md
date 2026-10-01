@@ -1,29 +1,27 @@
 # Working together
 
-1. Agree one of the [five seats](final-project/docs/team-meeting-2026-10-01/TEAM_PLAN.md)
-   and a review partner. Names in that table are proposals, not completed contributions.
-2. Run the [first check](README.md#run-the-first-check), then read the
-   [results summary](final-project/docs/RESULTS.md) and report.
-3. Take one bounded task: a checked result, a clearer explanation, a bug fix,
-   or an agreed experiment. Work on a short branch such as `team/hybrid-example`.
-4. Record what you actually checked using the
-   [review template](final-project/docs/team-meeting-2026-10-01/REVIEW_TEMPLATE.md).
-   Put notes in `final-project/docs/team-meeting-2026-10-01/reviews/`.
-5. Run `make check` from the repo root (or its Python equivalent in the README).
-   For scientific code changes, also run the relevant model/evaluation tests.
-6. Open a focused pull request with the change, its reason, the check performed,
-   and any effect on reported results. Ask the agreed partner to review it.
+1. Pick a task and reviewer in the [team plan](final-project/docs/team/TEAM_PLAN.md).
+2. Run the [first check](README.md#run-the-first-check) and read the [results](final-project/docs/RESULTS.md).
+3. Make one focused change on a branch, such as `team/hybrid-example`.
+4. Record the result or correction using the [review template](final-project/docs/team/REVIEW_TEMPLATE.md).
+5. Run `make check`. If you changed scientific code, also run its relevant tests.
+6. Open a pull request explaining what changed, why, how you checked it and
+   whether it affects reported results. Ask your reviewer to check it.
 
-Everyone writes and reviews their own section; the report owner coordinates
-the document. Preserve existing source/result snapshots and give new experiments
-new output directories. Historical TEST results are already exposed, so new work
-needs a declared evaluation protocol and honest exploratory labels.
+Save review notes in `final-project/docs/team/reviews/`.
+Each person writes and explains their own contribution; the report owner
+coordinates the final document.
 
-Keep ratings, per-user predictions, checkpoints, local environments and credentials
-out of Git. `runs/`, `vendor/`, environments and generated package previews are
-ignored. The single tracked coursework ZIP is an intentionally preserved, verified
-public code/report snapshot, not a place to add new data.
+## Experiments and saved results
 
-Do not restart the paused research as part of onboarding. Agree the hypothesis,
-owner and compute budget first. Each person later completes their own peer
-feedback based on actual contributions.
+Use a new output directory for each experiment. Preserve the frozen source and
+result snapshots. The original test results are already known; new model choices
+need a declared evaluation protocol and reused-data studies must be labelled exploratory.
+
+Keep raw ratings, per-user predictions, checkpoints, environments and credentials
+out of Git. The tracked `24.zip` is a verified code/report snapshot. Build new
+previews with `make handoff`; publishing or submitting them is a separate step.
+
+Optional research has its own [status and protocols](final-project/docs/RESEARCH_INDEX.md).
+Agree the hypothesis, owner and compute budget before starting a new experiment.
+Each member completes their own peer feedback based on actual contributions.

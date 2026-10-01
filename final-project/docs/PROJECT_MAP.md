@@ -1,80 +1,95 @@
-# How this project fits together
+# Code guide
 
-We recommend movies from MovieLens 100K and study how combining recommenders
-and changing their final rankings affects accuracy and societal objectives.
-The assignment's technical core is implemented; the team is reviewing it.
+Start with the [results](RESULTS.md), then follow one result through the code.
+Paths below start at `final-project/` in the checkout or `coursework/code/`
+in the meeting ZIP.
 
-The main ranking task predicts **which movies receive a recorded rating**.
-All recorded ratings count as relevant under this setup, including low ratings.
-That is different from predicting enjoyment. An unrated movie is not a known dislike.
-
-## Three stages
+## Follow the pipeline
 
 ```text
-1. Fit individual recommenders on TRAIN; compare settings using validation
-                         ↓
-2. Combine their scores/lists; apply diversity, calibration or exposure reranking
-                         ↓
-3. Freeze choices; evaluate accuracy and societal effects; build the report
+MovieLens ratings + genres
+    → experiment.py calls run.py: fit and compare individual models
+    → study.py: fit hybrids and compare reranking choices
+    → freeze.py: save the selected settings and model state
+    → final_evaluate.py: measure frozen choices on TEST
+    → coursework_completion/build_review.py: assemble the report and ZIP
 ```
 
-The pipeline is already implemented. Do not start by running every script or
-retraining every model. Begin with the [report](../reports/coursework-complete-v2/report.pdf),
-then trace one result to its evidence and code.
+For a first run, use the [quickstart](QUICKSTART.md).
+The experiment commands and dependencies are in [REPRODUCE.md](../REPRODUCE.md).
+Running `study.py` fits new hybrid weights; it does not just display saved results.
 
-## Where the required work lives
+## Read these files first
 
-Paths below are relative to `final-project/` in the repository, or
-`coursework/code/` in the shared pack.
+| File | Purpose | Functions to start with |
+| --- | --- | --- |
+| [metrics.py](../metrics.py) | Accuracy, novelty and catalog coverage | `ranking_metrics()`, `evaluate()` |
+| [run.py](../run.py) | Individual models, genre content and score export | `genre_content_features()`, `top_k()`, then `main()` |
+| [study.py](../study.py) | Score normalization, hybrid fitting and reranking | `normalize_scores()`, `build_features()`, `fit_ridge()`, `rerank()` |
+| [societal.py](../societal.py) | User groups, calibration, exposure and group policies | `training_taste_groups()`, `discounted_exposure_metrics()`, `fit_group_policy()` |
+| [coursework_completion/models.py](../coursework_completion/models.py) | Mixed lists, meta-level profiles, switching and rank fusion | `mix_lists()`, `fit_meta_level()`, `fit_switch()`, `rrf_scores()` |
 
-| Need | Start here | What it does |
-|---|---|---|
-| Understand assignment coverage | `coursework_completion/COVERAGE.md` | Maps Tasks 1–3 and the seven lecture hybrid families to implementations. |
-| Individual recommenders and tuning | `run.py`, `experiment.py` | Adapts models, records configurations, creates comparable predictions. |
-| Regression and other hybrids | `study.py`, `hybrid_constraints.py` | Learns combinations, selects settings, compares feature/loss variants. |
-| Completed hybrid-family additions | `coursework_completion/models.py`, `coursework_completion/run.py` | Implements mixed/meta-level methods and explicit switching/rank-fusion tuning. |
-| Accuracy and societal evaluation | `metrics.py`, `societal.py` | Implements independent ranking metrics, reranking and group/exposure analysis. |
-| Locked final evaluation | `freeze.py`, `final_evaluate.py` | Saves selected models and verifies them before final-test inference. |
-| Current report and archive | `coursework_completion/build_review.py` | Builds the coursework-complete review deliverables from recorded evidence. |
-| Repeat the work | `REPRODUCE.md` | Documents input reconstruction, model retraining and observed reproduction differences. |
+Read these small functions before the larger experiment `main()` functions.
+Worked examples are in [metric tests](../tests/test_metrics.py),
+[regression tests](../tests/test_hybrid_constraints.py),
+[societal tests](../tests/test_societal.py) and
+[hybrid-family tests](../coursework_completion/test_models.py).
 
-The [team plan](team-meeting-2026-10-01/TEAM_PLAN.md) turns these areas into five
-small first tasks. The [review guide](../coursework_completion/TEAM_REVIEW.md)
-explains the questions everyone should be able to answer.
+## Translate the result names
 
-## Training, validation and test in plain words
+| Name | Meaning |
+| --- | --- |
+| `ExactPop` / `GenreContent` | Popularity baseline / our genre-only content model |
+| `static` | One learned weight per recommender; Daniel's H1 |
+| `group-switch` | Select an expert by TRAIN activity group; Daniel's H2 |
+| `context` | Weight interactions with history size, genre entropy and item popularity, plus disagreement; FWLS-style, as in Daniel's H3 |
+| `user` / `item` | Restrict context interactions to user features / item popularity |
+| `disagreement` | Static score features plus the spread between experts' standardized scores |
+| `constrained` / `calibrated` | Sum-to-one weights before / after aligning scores to the regression target |
+| `rrf` | Reciprocal-rank fusion: combine item ranks |
+| `mixed` / `meta-level` | Combine list slots / use genre profiles as input to a collaborative decoder |
 
-- **TRAIN:** the examples used to learn individual recommenders and construct
-  history/content features.
-- **Validation:** examples used during development. We divide validation users
-  into groups: one fits hybrid combinations, another chooses settings, and a
-  third calibrates the original societal policy. These roles must stay separate.
-- **Original TEST:** held-out outcomes opened after the original choices were
-  frozen. Those results are already known. They must not be used to choose a new
-  model and then presented as an untouched final test.
-- **Later completion/research studies:** separate, labelled experiments. The
-  hybrid-family completion study reuses the former calibration users for its
-  assessment. This is exploratory evidence, not a new independent test.
+## Trace a reported number
 
-Only compare rows with the same users, candidates, relevance definition and
-available information. The original final-test table and the later completion
-table are different evaluations; do not merge their numbers into one leaderboard.
-Three overlapping data splits are not three independent datasets.
+For example, the static hybrid's mean nDCG@10 is **0.33564**:
+
+1. Read its row in the [frozen comparisons](../evidence/final-comparisons-v3/SUMMARY.md).
+2. Find each seed's selected static model in [the frozen aggregates](../evidence/final-primary-v3/aggregates.json).
+3. Read `build_features(..., "static")` and `fit_ridge()` in [study.py](../study.py).
+4. Check `ranking_metrics()` in [metrics.py](../metrics.py) for the nDCG calculation.
+
+The [report content](../reports/coursework-complete-v2/report-content.json)
+contains the report's tables and source evidence. `summarize.py` produces
+**development** summaries; its plots are a different evaluation from the frozen test.
+
+## Data rules to understand
+
+- Each model exports raw user/item scores and their ID ordering. Consumers mask
+  observed items for each evaluation phase before ranking.
+- The main experiment uses a random per-user 80/10/10 split. All recorded ratings
+  count as relevant, including low ratings: we predict recorded interactions.
+- TRAIN supplies histories/features. Separate validation-user cohorts fit hybrid
+  weights, select settings and calibrate the group policy. TEST was opened after
+  freezing choices and is already known.
+- [Later hybrid completion](../coursework_completion/results-v1/aggregates.json)
+  reuses validation-calibration users. Keep its results in their own table.
+
+## Where everything else lives
+
+| Location | Contents |
+| --- | --- |
+| [tests/](../tests/README.md) | Core algorithm and experiment checks |
+| `coursework_completion/` | Additional hybrids, their tests and the current report builder |
+| [evidence/](../evidence/README.md), [reports/](../reports/README.md), [packages/](../packages/README.md) | Saved results, reports and shareable snapshots |
+| `operations/` | Starter check, meeting-pack builder and research monitoring |
+| `runs/`, `vendor/` | Local outputs and instructor code/data; excluded from Git |
+
+The root model scripts retain their paths because frozen runs and reproduction
+recipes refer to them. Use this guide to find the relevant functions; the
+[documentation index](README.md) separates setup, teamwork and research.
 
 ## Optional research
 
-The [research index](RESEARCH_INDEX.md) links implemented studies and their
-findings, including unsuccessful ideas. They add depth but do not establish a
-broad performance breakthrough. Conditional-evidence training resumed on
-1 October at 12:23 UTC; its selection and assessment are still incomplete.
-
-Two newer directions are **design only, not implemented or trained**:
-
-- [Revisable predictive state](plans/2026-09-29-revisable-predictive-state-design.md):
-  learn how a real new observation should update predictions.
-- [Useful evidence](plans/2026-09-29-useful-evidence-design.md): anticipate which
-  feedback might improve a decision, without treating imagined answers as data.
-
-These proposals are optional team decisions. They are not missing coursework
-requirements and do not need a new training sweep before the team can review
-the existing deliverables.
+The [research index](RESEARCH_INDEX.md) explains `exploratory/` and the field,
+negative-information and other research scripts. It separates measured results
+from proposed experiments. Follow it when working on a specific research question.

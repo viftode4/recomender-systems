@@ -469,8 +469,9 @@ def initial_payload(base):
 
 def add_navigation(payload, root=ROOT, sealed_sources=()):
     names = ["README.md", "HANDOFF.md", "PLAN.md", "REPRODUCE.md",
+             "tests/README.md", "evidence/README.md", "reports/README.md", "packages/README.md",
              STUDY+"/README.md", STUDY+"/COVERAGE.md", STUDY+"/TEAM_REVIEW.md"]
-    for directory in (root/"docs", root/"docs/team-meeting-2026-10-01"):
+    for directory in (root/"docs", root/"docs/team"):
         names.extend(str(path.relative_to(root)) for path in sorted(directory.glob("*.md")))
     names += [str(path.relative_to(root)) for path in (root/STUDY).rglob("*.md")
               if str(path.relative_to(root)) not in names and

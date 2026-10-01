@@ -4,7 +4,7 @@
   "submitted": false,
   "original_archive_sha256": "a93da12661bd5140cfa354bcde47b4175bcb55749634543f9850456919368cf0",
   "original_artifacts_unchanged": 361,
-  "new_navigation_html_files_checked": 16,
+  "new_navigation_html_files_checked": 21,
   "source_only_references_labelled": [
     "docs/archive/2026-10-01/INDEX.md",
     "exploratory/DESIGN.md",
@@ -14,8 +14,8 @@
     "packages/coursework-complete-v2/24.zip",
     "reference/ASSIGNMENT.md"
   ],
-  "archive_sha256": "bdaab64b454e10842300a7467b09d33a96d59938054361550a652525376247d1",
-  "archive_bytes": 5396981,
+  "archive_sha256": "84ec26405c495881e441c00ed89a4d0544ae41db05a8cb9ed5cb333747dfdd0d",
+  "archive_bytes": 5400557,
   "zip_crc_valid": true,
-  "artifact_count": 396
+  "artifact_count": 406
 }

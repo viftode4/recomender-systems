@@ -98,7 +98,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project-root", "--root", type=Path,
                         default=Path(__file__).resolve().parents[1],
-                        help="Repository root or extracted coursework archive's code/ directory")
+                        help="Project directory (final-project/ in the repository) or extracted coursework archive's code/ directory")
     args = parser.parse_args()
     start = time.perf_counter()
     receipt = {"status": "failed", "training_started": False,

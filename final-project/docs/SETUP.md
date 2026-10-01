@@ -1,6 +1,6 @@
 # Set up the full coursework environment
 
-For the first team session, use the [quickstart](team-meeting-2026-10-01/QUICKSTART.md).
+For the first team session, use the [quickstart](QUICKSTART.md).
 It needs only Python 3.11 and NumPy and starts no training. These instructions
 are for running the full project later, from the `final-project/` directory or
 the extracted coursework archive's `code/` directory.

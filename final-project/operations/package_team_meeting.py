@@ -20,7 +20,7 @@ from zipfile import ZipFile, ZIP_DEFLATED
 import markdown
 
 ROOT = Path(__file__).resolve().parents[1]
-DOCS = ROOT / 'docs/team-meeting-2026-10-01'
+DOCS = ROOT / 'docs/team'
 OUT = ROOT / 'packages/team-meeting-2026-10-01'
 CSS = '''
 :root { color-scheme: light; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -97,7 +97,7 @@ def main():
                     mapping[(ROOT / name[5:]).resolve()] = target
                 elif name.startswith('evidence/'):
                     mapping[(ROOT / name).resolve()] = target
-            for name in ('report.pdf', 'report.md', 'main-report.pdf', 'grouping-supplement.pdf', 'REPORT-MANIFEST.json'):
+            for name in ('report.pdf', 'report.md', 'report-content.json', 'main-report.pdf', 'grouping-supplement.pdf', 'REPORT-MANIFEST.json'):
                 mapping[(ROOT / 'reports/coursework-complete-v2' / name).resolve()] = base / 'coursework' / name
             for source, packaged in [('coursework_completion/results-v1', 'coursework-completion-v1'),
                                      ('coursework_completion/audit-v1', 'coursework-completion-audit-v1')]:
@@ -108,7 +108,10 @@ def main():
 
         copies = [(path, base / 'meeting' / path.name) for path in sorted(DOCS.glob('*.md'))]
         copies += [(ROOT / 'docs' / name, base / 'meeting' / name)
-                   for name in ('PROJECT_MAP.md', 'SETUP.md', 'RESEARCH_INDEX.md', 'PROPOSALS.md', 'RESULTS.md', 'COMPLETION.md')]
+                   for name in ('README.md', 'QUICKSTART.md', 'PROJECT_MAP.md', 'SETUP.md', 'RESEARCH_INDEX.md', 'PROPOSALS.md', 'RESULTS.md', 'COMPLETION.md')]
+        copies += [(ROOT / folder / 'README.md', base / 'meeting' / title)
+                   for folder, title in (('tests', 'TESTS.md'), ('evidence', 'EVIDENCE.md'),
+                                         ('reports', 'REPORTS.md'), ('packages', 'PACKAGES.md'))]
         copies += [(path, base / 'research' / path.name) for path in sorted((ROOT / 'docs/plans').glob('*.md'))]
         for source, destination in copies:
             mapping[source.resolve()] = destination

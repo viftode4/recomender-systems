@@ -6,9 +6,6 @@ claims**. Vlad is suggested for integration; agree all five owners today.
 
 Start with the [project map](../PROJECT_MAP.md) and
 [current report draft](../../reports/coursework-complete-v2/report.pdf).
-Conditional-evidence research resumed on 1 October at 12:23 UTC with six workers
-and monitoring; final results remain pending. New revisable-state ideas are
-design documents only.
 The [three proposals](../PROPOSALS.md) recommend trust across recommenders and
 societal trade-offs as the main story, with feedback revision as an optional extension.
 
@@ -16,7 +13,7 @@ societal trade-offs as the main story, with feedback revision as an optional ext
 
 Each first task should fit a 45–90 minute work block. Save notes in
 `meeting/reviews/` in the shared pack, or
-`docs/team-meeting-2026-10-01/reviews/` in the checkout; these notes do not exist yet.
+`final-project/docs/team/reviews/` from the checkout root.
 Code paths below start at `coursework/code/` in the pack or `final-project/`
 in the checkout. Use the [review template](REVIEW_TEMPLATE.md).
 
@@ -26,7 +23,7 @@ in the checkout. Use the [review template](REVIEW_TEMPLATE.md).
 | **2. User-group analysis / open** | Read the existing user-group results; compare hybrid gains for sparse versus active histories and identify a weak group. Keep comparisons within one evaluation table. | `02-user-groups.md`: a group table with user counts, gain/loss, exact evidence paths and a limitation or follow-up hypothesis. | Seat 3 |
 | **3. Hybrid failure explanations / open** | Trace two contrasting examples through component scores and the chosen hybrid; explain when combination helps or lets a poor expert dominate. Start from existing predictions where available. | `03-hybrid-failures.md`: two anonymized worked cases, component/combined scores and an explanation checked against the code. | Seat 2 |
 | **4. Societal trade-offs / open** | Turn existing accuracy/diversity, calibration or exposure evidence into a labelled plot; investigate which groups pay the accuracy cost. | `04-tradeoffs.md` and a figure: axes, setting, cohort, evidence source and a short interpretation. Use only measured settings. | Seat 1 |
-| **5. Report and reproduction / open** | Run the [quickstart](QUICKSTART.md) on your machine, record the package receipt, and revise one report section or figure caption using the reviewed findings. | `05-reproduction.md`: exact commands/results, platform and corrected report text; distinguish the small check from trained-model reproduction. | Seat 4 |
+| **5. Report and reproduction / open** | Run the [quickstart](../QUICKSTART.md) on your machine, record the package receipt, and revise one report section or figure caption using the reviewed findings. | `05-reproduction.md`: exact commands/results, platform and corrected report text; distinguish the small check from trained-model reproduction. | Seat 4 |
 
 Record author, date, checked artifact version/hash and unresolved issues in each
 note. Each person explains and edits their own section; Seat 5 coordinates the
@@ -47,15 +44,7 @@ without new training. If a diagnostic needs local predictions, use the recorded
 reproduction path; do not commit personal rating histories. Preserve frozen scientific files
 and original results; make agreed explanation/report changes in a new version.
 
-## Twenty-minute meeting
-
-| Minutes | Outcome |
-|---|---|
-| 0–3 | Open the report and project map; establish what already exists. |
-| 3–7 | Explain one result and one accuracy/societal trade-off. |
-| 7–12 | Choose five owners, review partners and first tasks. |
-| 12–16 | Agree report scope and whether to pursue one optional research question. |
-| 16–20 | Set the next check-in and name the artifact each person will bring. |
+Use the [meeting brief](MEETING_BRIEF.md) for the twenty-minute agenda.
 
 ## Four decisions before leaving
 
@@ -70,8 +59,8 @@ and original results; make agreed explanation/report changes in a new version.
 
 Over the next 48 hours, adjusted to availability: write notes in parallel,
 exchange them with review partners, then each present one checked finding at the
-next meeting. This is a proposed cadence, not a course deadline. The resumed
-research study runs separately; no extra sweep is required for these artifacts.
+next meeting. This is a proposed cadence, not a course deadline. Optional research has its
+own [status and protocols](../RESEARCH_INDEX.md).
 
 The [research designs](../PROJECT_MAP.md#optional-research) are proposals, not
 results. No breakthrough is established. Use the fuller

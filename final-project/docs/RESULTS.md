@@ -1,46 +1,50 @@
-# Results to start from
+# What we found
 
-The existing implementation covers the assignment's main technical work.
-The team still needs to review the findings and agree the final explanation.
-The [five-page report](../reports/coursework-complete-v2/report.pdf) contains
-the task tables; this page gives the few facts worth starting with.
+The [report draft](../reports/coursework-complete-v2/report.pdf) covers all three
+assignment tasks. These are its main findings.
 
-## Ranking: the original frozen coursework evaluation
+## Combining models improves ranking
 
-Mean nDCG@10 across three overlapping MovieLens 100K splits:
+Mean nDCG@10 on the original frozen test, across three overlapping MovieLens
+100K splits. Higher is better.
 
 | Method | nDCG@10 |
 | --- | ---: |
 | Standalone model selected on validation | 0.31613 |
 | Static regression hybrid | 0.33564 |
-| Disagreement regression hybrid | 0.33701 |
+| Context hybrid, using user/item features | 0.33262 |
+| Disagreement hybrid | 0.33701 |
 
-The disagreement hybrid improves 6.6% relative to the validation-selected
-standalone reference. Static regression is already close; the team should
-explain whether the extra complexity adds enough value. These splits share
-users and items. This is not evidence of universal superiority or a new best
-method across datasets. See the [frozen comparison evidence](../evidence/final-comparisons-v3/SUMMARY.md).
+Disagreement fusion gains 6.6% over the selected standalone reference. Static
+regression is already close. Context scores below static, so adaptive weights
+do not improve the average here. See the [comparisons and uncertainty](../evidence/final-comparisons-v3/SUMMARY.md).
+These splits share users and observations; they are evidence from one dataset.
 
-## Societal objectives: show both benefit and cost
+## Reranking has a measurable benefit and cost
 
-In the report's fixed-strength reranking comparison:
+The same context hybrid, with reranking strength 0.5:
 
-| Method | nDCG@10 | Genre diversity |
-| --- | ---: | ---: |
-| Base context hybrid | 0.333 | 0.798 |
-| Diversity reranking | 0.307 | 0.895 |
+| Method | nDCG@10 ↑ | Genre diversity ↑ | Genre JSD ↓ | Head exposure ↓ |
+| --- | ---: | ---: | ---: | ---: |
+| Base context | 0.333 | 0.798 | 0.141 | 0.981 |
+| Diversity | 0.307 | 0.895 | 0.131 | 0.967 |
+| Genre calibration | 0.329 | 0.806 | 0.125 | 0.980 |
+| Item exposure | 0.318 | 0.793 | 0.141 | 0.931 |
 
-More genre diversity comes with lower measured ranking accuracy in this setting.
-Calibration and exposure have their own trade-offs; Task 3 reports them.
-These are declared operational metrics, not proof of causal fairness.
+JSD measures deviation from the user's historical genre proportions. Head
+exposure is the share of slots given to the most popular 20% of catalog items;
+lowering it is our chosen exposure objective. Diversity increases at an accuracy
+cost, while exposure reranking gives more slots to tail items.
 
-## What remains exploratory
+The [saved aggregates](../evidence/final-primary-v3/aggregates.json) contain all
+measured strengths and user/item-group breakdowns. These support the next task:
+explain **which groups benefit and which lose accuracy**.
 
-The later hybrid-family completion study uses previously exposed validation
-users. Its scores belong in a separate table. Custom-model and grouping
-experiments have not established a breakthrough. The conditional-evidence run
-resumed on 1 October 2026 at 12:23 UTC and is still incomplete; the newer
-feedback-revision ideas are design only. No final research gain is established.
+## Keep later studies separate
 
-Choose the next task from the [three proposals](PROPOSALS.md). Read the
-[research index](RESEARCH_INDEX.md) only when taking on an optional experiment.
+The hybrid-completion study reuses validation users. The recording-group study
+uses a nested TRAIN split and found no ranking advantage. Their evaluation data
+differ from the original test, so their scores belong in separate tables.
+
+Choose a review task from the [team plan](team/TEAM_PLAN.md).
+Optional research has its own [index and dated status](RESEARCH_INDEX.md).
